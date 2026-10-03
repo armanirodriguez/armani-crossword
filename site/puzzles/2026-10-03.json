@@ -32,7 +32,7 @@
     "across": [
       {
         "num": 1,
-        "clue": "Only 1 point"
+        "clue": "Smallest chess piece"
       },
       {
         "num": 5,
@@ -172,7 +172,7 @@
       },
       {
         "num": 66,
-        "clue": "The good old boys were drinking this with their whiskey"
+        "clue": "Salinger's catcher's field?"
       },
       {
         "num": 67,
@@ -354,5 +354,5 @@
       }
     ]
   },
-  "publishedAt": "2026-10-03T17:34:37.354Z"
+  "publishedAt": "2026-10-03T17:57:47.988Z"
 }
