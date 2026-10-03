@@ -129,7 +129,11 @@ export function mountSettings(container, app) {
       app.config = await api.saveConfig(c);
       Object.assign(cfg, app.config);
       app.emit('config');
-      toast('Settings saved', { type: 'success' });
+      // site/config.json reaches the live site when it is put online (commit + push).
+      toast('Settings saved', {
+        type: 'success',
+        action: app.goLive?.status?.ready ? { label: 'Put it online', onClick: () => app.goLive.run({ announce: true }) } : null,
+      });
       fill();
       return true;
     } catch (err) {

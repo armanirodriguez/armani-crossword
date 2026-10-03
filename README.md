@@ -70,7 +70,9 @@ There is a sample draft, **Warm-Up**, in the sidebar if you want to try the flow
 3. The included workflow (`.github/workflows/deploy.yml`) publishes the site to
    `https://<you>.github.io/<repo>/`. Put that address in the builder's **Site settings → Share URL** so share
    texts link to it.
-4. After publishing a puzzle (or changing **Site settings**) in the builder, commit and push:
+4. After publishing a puzzle (or unpublishing one, or changing **Site settings** or the **Word list**) in the
+   builder, click **Put it online** ([below](#put-it-online-one-click-no-git-commands)) — no git commands needed.
+   By hand it would be:
    ```bash
    git add site/puzzles site/config.json && git commit -m "Puzzle for 2026-10-05" && git push
    ```
@@ -88,6 +90,27 @@ re-enable it under the repository's **Actions** tab if that happens.
 - The live site gets each puzzle about 3 hours before it unlocks. The site hides it until midnight, but someone
   fetching the file directly could peek. Answers are obfuscated, not encrypted — it's a friendly game.
 - `data/user-words.txt` (your added and banned words) is committed; it holds no answers.
+
+### Put it online (one click, no git commands)
+
+The builder commits what you published and pushes it to GitHub for you; the site updates about a minute later
+(a puzzle dated in the future still unlocks at midnight on its day). You'll find the **Put it online** button:
+
+- in **Review & Publish**, right after **Publish**,
+- at the top of the **Schedule** (with the number of changes waiting — e.g. after **Unpublish**),
+- at the bottom of the sidebar: a status line that says **Online ✓**, **2 changes to put online** (click it to send
+  them) or **GitHub not set up** (step 1 above hasn't been done for this folder yet).
+
+It only ever commits `site/puzzles/`, `site/config.json` and `data/user-words.txt` — never your drafts or clue
+memory, and nothing else you may have staged. It needs the one-time setup above (steps 1–2) and a GitHub login on
+this computer. If it reports a problem, it says what to do:
+
+- **"GitHub did not accept your login"** → run `gh auth login` in a terminal (GitHub.com → HTTPS → yes,
+  authenticate Git), then click again.
+- **"GitHub has changes that this computer does not have yet"** → run `git pull --rebase` in the project folder
+  (or ask Claude), then click again. Your publish is already saved in a commit; nothing is lost.
+- **"Restart npm run dev"** → the dev server was started before this button existed: stop it (Ctrl+C) and run
+  `npm run dev` again.
 
 ### Other hosts
 

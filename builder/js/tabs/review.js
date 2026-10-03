@@ -1,5 +1,5 @@
-// Review & Publish tab: checklist (from draftToPuzzle), summary, publish (with overwrite confirmation),
-// and a live preview of the real player in an iframe.
+// Review & Publish tab: checklist (from draftToPuzzle), summary, publish (with overwrite confirmation), then
+// "Put it online" (commit + push to GitHub), and a live preview of the real player in an iframe.
 
 import { draftToPuzzle, formatDate, isValidDateId } from '../../../site/shared/puzzle.js';
 import { h, icon, plural } from '../dom.js';
@@ -11,6 +11,7 @@ import {
 import { getFillOptions } from '../prefs.js';
 import { recentRepeats, shortDate } from '../recent-answers.js';
 import { PREVIEW_URL, writePreview, siteUrlFor } from '../preview.js';
+import { goLiveControl } from '../go-live.js';
 
 export function mountReview(container, ctx) {
   const { store, app, session } = ctx;
@@ -24,6 +25,9 @@ export function mountReview(container, ctx) {
   const checklist = h('div', { class: 'checklist' });
   const summary = h('dl', { class: 'summary' });
   const publishBox = h('div', { class: 'publish-box' });
+  // "Put it online" button + result, shown in the success box after publishing.
+  const goLive = goLiveControl(app, { date: () => d()?.date || null });
+  goLive.button.classList.add('sm');
   const previewNotes = h('div', { class: 'preview-notes' });
   const frameWrap = h('div', { class: 'frame-wrap' });
   const iframe = h('iframe', { class: 'preview-frame', title: 'Player preview', loading: 'lazy' });
@@ -178,9 +182,10 @@ export function mountReview(container, ctx) {
         h('div', null,
           h('strong', null, `Published as #${lastPublish.number ?? '?'} for ${formatDate(cur.date, 'short')}.`),
           h('div', { class: 'small' },
-            cur.date > app.today() ? `Solvers will see it on ${formatDate(cur.date)}. ` : 'It is live in your local site now. ',
-            'Commit and push site/puzzles/ to put it online.'),
-          h('div', { class: 'row gap-sm' },
+            cur.date > app.today() ? `Solvers will see it on ${formatDate(cur.date)}.` : 'It is live in your local site now.'),
+          h('div', { class: 'row wrap gap-sm' }, goLive.button),
+          goLive.message,
+          h('div', { class: 'row wrap gap-sm' },
             h('a', {
               class: 'btn sm', href: url, target: '_blank', rel: 'noopener',
               title: future ? `Solvers can open it from ${formatDate(cur.date)}; this opens a preview` : 'Open it in the player',
@@ -423,6 +428,7 @@ export function mountReview(container, ctx) {
     destroy() {
       alive = false;
       clearTimeout(previewTimer);
+      goLive.destroy();
     },
   };
 }

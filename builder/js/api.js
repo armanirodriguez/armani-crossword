@@ -66,6 +66,14 @@ export const api = {
   getUserClues: () => request('GET', '/api/user-clues'),
   /** Answers of puzzles published within `days` days before/after `date` (not on it): { date, days, answers: { WORD: [dates] } }. */
   recentAnswers: (date, days) => request('GET', `/api/recent-answers?date=${enc(date)}&days=${enc(days)}`),
+
+  /** "Put it online" status: { git, branch, remote, upstream, pending: [{ path, change }], ahead, siteUrl, pagesUrl, busy, ready, problem }. */
+  goLiveStatus: () => request('GET', '/api/go-live'),
+  /**
+   * Commit the published puzzles / site settings / word list and push them: resolves { ok, upToDate, committed,
+   * pushed, commit, siteUrl, pagesUrl }; rejects with ApiError { error, hint, code, committed? } or 409 { busy }.
+   */
+  goLive: () => request('POST', '/api/go-live', { json: {} }),
 };
 
 /**

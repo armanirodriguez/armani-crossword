@@ -23,10 +23,14 @@
 // The root directory is used for BOTH static files and state (drafts/, site/puzzles/, site/config.json,
 // data/user-words.txt, data/user-clues.json), so tests can run against a temporary copy of the repo.
 //
+// "Put it online" (/api/go-live) runs git in the root: it commits ONLY site/puzzles/, site/config.json and
+// data/user-words.txt and pushes them. git never prompts (no terminal, no askpass) and every call has a timeout.
+//
 // Importing this module does not start a server: use `createServer({ root })` and call `.listen()` yourself.
 
 import http from 'node:http';
 import os from 'node:os';
+import { spawn } from 'node:child_process';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { promises as fsp } from 'node:fs';
@@ -306,6 +310,237 @@ export function editUserWords(text, ops = {}) {
 export function puzzleAnswers(puzzle) {
   const { all, solution } = loadPuzzle(puzzle);
   return all.map((e) => e.cells.map((i) => solution[i]).join('')).filter((a) => /^[A-Z]{2,}$/.test(a));
+}
+
+// ---------------------------------------------------------------------------
+// "Put it online": git helpers (SPEC §4, /api/go-live)
+
+/**
+ * The only paths "Put it online" ever stages or commits (git pathspecs relative to the root). drafts/ and
+ * data/user-clues.json hold plain answers and must never be pushed, even if someone un-ignores them.
+ */
+export const GO_LIVE_PATHS = Object.freeze(['site/puzzles/', 'site/config.json', 'data/user-words.txt']);
+/** Half-written atomic-write temp files are never staged, even if `*.tmp` is dropped from .gitignore. */
+const GO_LIVE_EXCLUDE = ':(exclude,glob)**/*.tmp';
+const GIT_TIMEOUT_MS = 15_000;
+const GIT_PUSH_TIMEOUT_MS = 90_000;
+/** More git output than this is dropped (nothing we run prints much). */
+const GIT_OUTPUT_LIMIT = 16 * 1024 * 1024;
+/** Variables that would point git at another repository than the root (e.g. when started from a git hook). */
+const GIT_LOCATION_VARS = [
+  'GIT_DIR', 'GIT_WORK_TREE', 'GIT_INDEX_FILE', 'GIT_OBJECT_DIRECTORY', 'GIT_ALTERNATE_OBJECT_DIRECTORIES',
+  'GIT_COMMON_DIR', 'GIT_NAMESPACE', 'GIT_PREFIX',
+];
+
+/** Strip credentials from git output and URLs before they reach a response or the log. */
+export function redactSecrets(text) {
+  return String(text ?? '')
+    .replace(/\b(https?:\/\/)[^/\s@'"]*@/gi, '$1') // https://user:token@github.com/… -> https://github.com/…
+    .replace(/\b(gh[pousr]_[A-Za-z0-9]{16,}|github_pat_[A-Za-z0-9_]{16,})/g, '[redacted]')
+    .replace(/(authorization:\s*)\S[^\n]*/gi, '$1[redacted]');
+}
+
+/**
+ * The environment for every git call: never prompt (no terminal prompts, no askpass programs, Git Credential
+ * Manager non-interactive), English messages (errors are recognised by their text), and never look for a
+ * repository above `root`.
+ */
+function gitEnv(root) {
+  const env = { ...process.env };
+  for (const key of GIT_LOCATION_VARS) delete env[key];
+  Object.assign(env, {
+    GIT_CEILING_DIRECTORIES: path.dirname(root),
+    GIT_TERMINAL_PROMPT: '0',
+    GCM_INTERACTIVE: 'never',
+    GIT_ASKPASS: '', // empty (not unset): git then skips core.askPass and SSH_ASKPASS too
+    SSH_ASKPASS: '',
+    SSH_ASKPASS_REQUIRE: 'never',
+    GIT_OPTIONAL_LOCKS: '0', // status must not take index.lock away from the user's own git commands
+    LC_ALL: 'C',
+    LANGUAGE: 'C',
+  });
+  return env;
+}
+
+/**
+ * Run git with an argument array (spawn without a shell: arguments are never parsed by a shell) in `root`. On POSIX
+ * git runs in its own session, so it has no controlling terminal and ssh cannot ask for a passphrase either (it
+ * fails instead); on timeout the whole process group (git, git-remote-https, ssh, credential helpers) is killed.
+ * (execFile cannot start a new session, and after a timeout it would still wait for a helper that holds its pipes.)
+ * Resolves { code, stdout, stderr, timedOut } (a non-zero exit is not an error); rejects only when git cannot be
+ * started (err.code 'ENOENT': git is not installed).
+ */
+export function runGit(root, args, { timeoutMs = GIT_TIMEOUT_MS } = {}) {
+  const posix = process.platform !== 'win32';
+  return new Promise((resolve, reject) => {
+    let child;
+    try {
+      child = spawn('git', args, {
+        cwd: root, env: gitEnv(root), stdio: ['ignore', 'pipe', 'pipe'], shell: false, detached: posix, windowsHide: true,
+      });
+    } catch (err) {
+      reject(err);
+      return;
+    }
+    const out = { stdout: [], stderr: [] };
+    let size = 0;
+    let timedOut = false;
+    let settled = false;
+    let timer = null;
+    let grace = null;
+    const text = (key) => Buffer.concat(out[key]).toString('utf8');
+    const finish = (fn) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      clearTimeout(grace);
+      fn();
+    };
+    for (const key of ['stdout', 'stderr']) {
+      child[key].on('data', (chunk) => {
+        size += chunk.length;
+        if (size <= GIT_OUTPUT_LIMIT) out[key].push(chunk);
+      });
+    }
+    child.on('error', (err) => finish(() => reject(err)));
+    child.on('close', (code) => finish(() => resolve({ code: code ?? 1, stdout: text('stdout'), stderr: text('stderr'), timedOut })));
+    timer = setTimeout(() => {
+      timedOut = true;
+      try {
+        if (posix && child.pid) process.kill(-child.pid, 'SIGKILL');
+        else child.kill('SIGKILL');
+      } catch {
+        child.kill('SIGKILL');
+      }
+      // Something outside the group may still hold the pipes open: answer anyway.
+      grace = setTimeout(() => finish(() => resolve({ code: 1, stdout: text('stdout'), stderr: text('stderr'), timedOut })), 2000);
+    }, timeoutMs);
+  });
+}
+
+/** One `XY path` entry of `git status --porcelain=v1 -z` -> 'added' | 'modified' | 'deleted'. */
+function changeOf(xy) {
+  if (xy === '??' || xy[0] === 'A') return xy.includes('D') ? 'deleted' : 'added';
+  if (xy.includes('D')) return 'deleted';
+  return 'modified';
+}
+
+/** Parse `git status --porcelain=v1 -z --no-renames` -> [{ path, change }]. */
+export function parseStatusZ(out) {
+  const parts = String(out || '').split('\0');
+  const items = [];
+  for (let i = 0; i < parts.length; i++) {
+    const entry = parts[i];
+    if (entry.length < 4) continue;
+    const xy = entry.slice(0, 2);
+    if (xy === '!!') continue;
+    items.push({ path: entry.slice(3), change: changeOf(xy) });
+    if (xy[0] === 'R' || xy[0] === 'C') i++; // (renames are off, but skip a source path just in case)
+  }
+  return items;
+}
+
+/** Parse `git diff --name-status -z --no-renames` -> [{ path, change }]. */
+export function parseNameStatusZ(out) {
+  const parts = String(out || '').split('\0');
+  const items = [];
+  for (let i = 0; i + 1 < parts.length; i += 2) {
+    const status = parts[i];
+    if (!status) continue;
+    if (/^[RC]/.test(status)) { // (renames are off) "R100\0old\0new"
+      items.push({ path: parts[i + 2], change: 'added' });
+      i++;
+      continue;
+    }
+    items.push({ path: parts[i + 1], change: status[0] === 'A' ? 'added' : status[0] === 'D' ? 'deleted' : 'modified' });
+  }
+  return items;
+}
+
+/**
+ * A commit message from what changed, e.g. "Publish puzzle 2026-10-05", "Publish puzzles 2026-10-05, 2026-10-06",
+ * "Unpublish 2026-10-04", "Update site settings", "Publish puzzle 2026-10-05; unpublish 2026-10-04".
+ */
+export function goLiveCommitMessage(changes) {
+  const dates = { added: [], modified: [], deleted: [] };
+  let settings = false;
+  let words = false;
+  let otherPuzzleFiles = false;
+  for (const { path: file, change } of changes || []) {
+    const m = /^site\/puzzles\/(\d{4}-\d{2}-\d{2})\.json$/.exec(file);
+    if (m) dates[change in dates ? change : 'modified'].push(m[1]);
+    else if (file === 'site/config.json') settings = true;
+    else if (file === 'data/user-words.txt') words = true;
+    else otherPuzzleFiles = true; // index.json (renumbering) or other files under site/puzzles/
+  }
+  const list = (ds) => {
+    const sorted = [...ds].sort();
+    return sorted.length <= 3 ? sorted.join(', ') : `${sorted.slice(0, 2).join(', ')} and ${sorted.length - 2} more`;
+  };
+  const parts = [];
+  if (dates.added.length) parts.push(`publish ${dates.added.length === 1 ? 'puzzle' : 'puzzles'} ${list(dates.added)}`);
+  if (dates.modified.length) parts.push(`update ${dates.modified.length === 1 ? 'puzzle' : 'puzzles'} ${list(dates.modified)}`);
+  if (dates.deleted.length) parts.push(`unpublish ${list(dates.deleted)}`);
+  if (settings) parts.push('update site settings');
+  if (words) parts.push('update word list');
+  if (!parts.length && otherPuzzleFiles) parts.push('update published puzzles');
+  const text = parts.join('; ') || 'Update site';
+  return text[0].toUpperCase() + text.slice(1);
+}
+
+/** The GitHub Pages address a GitHub remote publishes to (https://owner.github.io/repo/), or null. */
+export function githubPagesUrl(remote) {
+  const m = /github\.com[:/]+([A-Za-z0-9-]+)\/([A-Za-z0-9._-]+?)(?:\.git)?\/?$/i.exec(String(remote || ''));
+  if (!m) return null;
+  const host = `${m[1].toLowerCase()}.github.io`;
+  return m[2].toLowerCase() === host ? `https://${host}/` : `https://${host}/${m[2]}/`;
+}
+
+const SETUP_HINT = 'Do the one-time GitHub setup in README.md (“Putting the site online”), or ask Claude to set it up.';
+
+/** Friendly { status, error, hint, code } for each way "Put it online" can fail. */
+const GO_LIVE_ERRORS = {
+  'no-git': [409, 'Git is not installed on this computer.', 'Install Git (https://git-scm.com), restart npm run dev, then try again.'],
+  'not-git': [409, 'This project folder is not a git repository yet, so there is nothing to put online.', SETUP_HINT],
+  unsafe: [409, 'Git refuses to work in this folder because it belongs to another user account.', 'Run the "git config --global --add safe.directory …" command git suggests (in a terminal, in the project folder), or ask Claude.'],
+  'no-commits': [409, 'This project has no commits yet, so GitHub has nothing to build the site from.', SETUP_HINT],
+  detached: [409, 'Git is not on a branch right now (a "detached HEAD").', 'Run "git switch main" in the project folder (or ask Claude), then try again.'],
+  'no-remote': [409, 'No GitHub repository is connected to this project (there is no "origin" remote).', SETUP_HINT],
+  identity: [409, 'Git does not know your name and email yet, so it cannot save a commit.', 'In a terminal run: git config --global user.name "Your Name" and git config --global user.email "you@example.com", then try again.'],
+  locked: [409, 'Another git command is busy in this folder (or one crashed and left a lock file behind).', 'Wait a moment and try again. If it keeps happening, close other git programs and delete .git/index.lock.'],
+  auth: [502, 'GitHub did not accept your login.', 'Run "gh auth login" in a terminal (GitHub.com → HTTPS → yes, authenticate Git), then try again.'],
+  'ssh-host': [502, 'Your computer does not trust GitHub’s SSH key yet.', 'Run "ssh -T git@github.com" once in a terminal and answer "yes", then try again.'],
+  'repo-not-found': [502, 'GitHub cannot find the repository, or your account cannot see it.', 'Check the address with "git remote -v" in the project folder, or run "gh auth login" with the account that owns it.'],
+  rejected: [409, 'GitHub has changes that this computer does not have yet, so it refused the update.', 'Run "git pull --rebase" in the project folder (or ask Claude to sort it out), then try again.'],
+  protected: [409, 'GitHub refused the update: the branch is protected.', 'Allow pushes to this branch in the repository settings on GitHub, or ask Claude.'],
+  network: [502, 'Could not reach GitHub.', 'Check your internet connection and try again.'],
+  timeout: [504, 'Git took too long and was stopped.', 'Check your internet connection and try again. If it keeps happening, run "git push" in a terminal to see what it is waiting for.'],
+  'commit-failed': [500, 'Git could not save a commit.', 'Run "git status" in the project folder to see what is wrong, or ask Claude.'],
+  'push-failed': [502, 'Sending to GitHub failed.', 'Run "git push" in the project folder to see the full message, or ask Claude.'],
+  'git-failed': [500, 'A git command failed.', 'Run "git status" in the project folder to see what is wrong, or ask Claude.'],
+};
+
+/** An HttpError-shaped description for a go-live failure (detail: redacted git output, for the curious). */
+function goLiveProblem(code, detail = '') {
+  const [status, error, hint] = GO_LIVE_ERRORS[code] || GO_LIVE_ERRORS['git-failed'];
+  const lines = redactSecrets(detail).split('\n').map((l) => l.trim()).filter(Boolean);
+  return { status, code, error, hint, ...(lines.length ? { detail: lines.slice(-6).join('\n').slice(0, 600) } : {}) };
+}
+
+/** Classify the output of a failed git command ("push" or another step) into a GO_LIVE_ERRORS code. */
+export function classifyGitFailure({ stderr = '', stdout = '', timedOut = false } = {}, step = 'push') {
+  if (timedOut) return 'timeout';
+  const text = `${stderr}\n${stdout}`;
+  if (/Please tell me who you are|unable to auto-detect email address|empty ident name/i.test(text)) return 'identity';
+  if (/index\.lock|Unable to create .*\.lock|another git process/i.test(text)) return 'locked';
+  if (/dubious ownership/i.test(text)) return 'unsafe';
+  if (/Host key verification failed/i.test(text)) return 'ssh-host';
+  if (/Authentication failed|could not read (Username|Password)|terminal prompts disabled|Permission denied \(publickey|Invalid username or password|returned error: 40[13]|denied to |Write access to repository not granted|access denied/i.test(text)) return 'auth';
+  if (/Repository not found|does not appear to be a git repository|returned error: 404/i.test(text)) return 'repo-not-found';
+  if (/protected branch|GH006/i.test(text)) return 'protected';
+  if (/\[rejected\]|\[remote rejected\]|non-fast-forward|fetch first|Updates were rejected/i.test(text)) return 'rejected';
+  if (/Could not resolve host|unable to access|Failed to connect|Connection (timed out|refused|reset)|Network is unreachable|Operation timed out|Could not read from remote repository|ssh: connect to host|SSL|TLS|early EOF|RPC failed/i.test(text)) return 'network';
+  return step === 'push' ? 'push-failed' : step === 'commit' ? 'commit-failed' : 'git-failed';
 }
 
 // ---------------------------------------------------------------------------
@@ -734,6 +969,195 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       return {};
     }
   }
+
+  // ---- "Put it online" (addition to SPEC §4): commit the published content and push it to GitHub ----
+  //
+  // GET  /api/go-live -> { git, branch, remote, upstream, pending: [{ path, change }], ahead, siteUrl, pagesUrl,
+  //                        busy, ready, problem: { code, error, hint } | null }   (local only, no network)
+  // POST /api/go-live {} -> stage + commit ONLY the GO_LIVE_PATHS that changed, then push (also when only earlier
+  //                        commits are waiting). -> { ok, upToDate, committed, pushed, commit: { sha, message, files },
+  //                        branch, remote, siteUrl, pagesUrl }; errors { error, hint, code, detail?, committed? };
+  //                        409 { busy: true } while another one runs.
+  let goLiveBusy = false;
+  const git = (args, opts) => runGit(root, args, opts);
+  const isGoLivePath = (file) => GO_LIVE_PATHS.some((spec) => (spec.endsWith('/') ? file.startsWith(spec) : file === spec));
+
+  /** An HttpError carrying a friendly go-live failure ({ error, hint, code, detail? } + extra). */
+  function goLiveError(code, detail = '', extra = {}) {
+    const { status, error, ...rest } = goLiveProblem(code, detail);
+    return new HttpError(status, error, { ...rest, ...extra });
+  }
+
+  /** Run a git step that must succeed; a failure becomes a friendly error. */
+  async function gitOk(args, step) {
+    let r;
+    try {
+      r = await git(args);
+    } catch (err) {
+      throw goLiveError(err.code === 'ENOENT' ? 'no-git' : 'git-failed', err.message);
+    }
+    if (r.code !== 0 || r.timedOut) throw goLiveError(classifyGitFailure(r, step), r.stderr || r.stdout);
+    return r;
+  }
+
+  /**
+   * Where the repository stands, without touching the network: { git, branch, unborn, remote, upstream, ahead,
+   * problem } — upstream is e.g. 'origin/main' or null; problem = goLiveProblem(…) when "Put it online" cannot
+   * work (yet).
+   */
+  async function inspectRepo() {
+    const out = { git: false, branch: null, unborn: false, remote: null, upstream: null, ahead: 0, problem: null };
+    let top;
+    try {
+      top = await git(['rev-parse', '--show-toplevel']);
+    } catch (err) {
+      out.problem = goLiveProblem(err.code === 'ENOENT' ? 'no-git' : 'git-failed', err.message);
+      return out;
+    }
+    if (top.code !== 0 || top.timedOut) {
+      const code = top.timedOut ? 'timeout' : /dubious ownership/i.test(top.stderr) ? 'unsafe' : 'not-git';
+      out.problem = goLiveProblem(code, code === 'not-git' ? '' : top.stderr);
+      return out;
+    }
+    // The repository must be the root itself (GIT_CEILING_DIRECTORIES already keeps git from looking above it).
+    const [realTop, realRoot] = await Promise.all([
+      fsp.realpath(top.stdout.trim()).catch(() => null),
+      fsp.realpath(root).catch(() => root),
+    ]);
+    const same = process.platform === 'win32' ? realTop?.toLowerCase() === String(realRoot).toLowerCase() : realTop === realRoot;
+    if (!realTop || !same) {
+      out.problem = goLiveProblem('not-git');
+      return out;
+    }
+    out.git = true;
+    const [branch, head, remote] = await Promise.all([
+      git(['symbolic-ref', '--quiet', '--short', 'HEAD']),
+      git(['rev-parse', '--verify', '--quiet', 'HEAD']),
+      git(['remote', 'get-url', 'origin']),
+    ]);
+    out.branch = branch.code === 0 && branch.stdout.trim() ? branch.stdout.trim() : null;
+    out.unborn = head.code !== 0;
+    out.remote = remote.code === 0 && remote.stdout.trim() ? redactSecrets(remote.stdout.trim()) : null;
+    if (out.branch && !out.unborn) {
+      const up = await git(['rev-parse', '--abbrev-ref', '--symbolic-full-name', '@{upstream}']);
+      out.upstream = up.code === 0 && up.stdout.trim() ? up.stdout.trim() : null;
+    }
+    out.ahead = await countAhead(out);
+    if (out.unborn) out.problem = goLiveProblem('no-commits');
+    else if (!out.branch) out.problem = goLiveProblem('detached');
+    else if (!out.remote) out.problem = goLiveProblem('no-remote');
+    return out;
+  }
+
+  /** Commits on this branch that the remote does not have yet, as far as this computer knows (0 when unknown). */
+  async function countAhead({ branch, unborn, remote, upstream }) {
+    if (unborn || !branch || !remote) return 0;
+    let base = upstream;
+    if (!base) {
+      // Never pushed with -u: compare with origin's copy of the branch if we know it, else nothing is on GitHub yet.
+      const tracking = `refs/remotes/origin/${branch}`;
+      base = (await git(['rev-parse', '--verify', '--quiet', tracking])).code === 0 ? tracking : null;
+    }
+    const r = await git(['rev-list', '--count', base ? `${base}..HEAD` : 'HEAD']);
+    return r.code === 0 ? Number(r.stdout.trim()) || 0 : 0;
+  }
+
+  /** Uncommitted changes under GO_LIVE_PATHS (nothing else is ever looked at). */
+  async function pendingChanges() {
+    const r = await gitOk(['status', '--porcelain=v1', '-z', '--no-renames', '--untracked-files=all', '--', ...GO_LIVE_PATHS, GO_LIVE_EXCLUDE], 'status');
+    return parseStatusZ(r.stdout).filter((c) => isGoLivePath(c.path));
+  }
+
+  async function goLiveStatus() {
+    const repo = await inspectRepo();
+    let pending = [];
+    let { problem } = repo;
+    if (repo.git) {
+      try {
+        pending = await pendingChanges();
+      } catch (err) {
+        if (!(err instanceof HttpError)) throw err;
+        problem ||= { code: err.extra.code, error: err.message, hint: err.extra.hint };
+      }
+    }
+    const config = await readConfig().catch(() => ({}));
+    return {
+      git: repo.git,
+      branch: repo.branch,
+      remote: repo.remote,
+      upstream: Boolean(repo.upstream),
+      pending,
+      ahead: repo.ahead,
+      siteUrl: config.shareUrl || null,
+      pagesUrl: githubPagesUrl(repo.remote),
+      busy: goLiveBusy,
+      ready: repo.git && !problem,
+      problem: problem ? { code: problem.code, error: problem.error, hint: problem.hint } : null,
+    };
+  }
+
+  /** Stage and commit the changed GO_LIVE_PATHS. Returns { sha, message, files } or null when nothing changed. */
+  async function commitPublished() {
+    const pending = await pendingChanges();
+    if (!pending.length) return null;
+    // Only allow-listed paths that changed: a pathspec matching no file would make `git add` fail.
+    const specs = GO_LIVE_PATHS.filter((spec) => pending.some((c) => (spec.endsWith('/') ? c.path.startsWith(spec) : c.path === spec)));
+    await gitOk(['add', '-A', '--', ...specs, GO_LIVE_EXCLUDE], 'add');
+    const diff = await gitOk(['diff', '--cached', '--name-status', '-z', '--no-renames', 'HEAD', '--', ...specs], 'diff');
+    const files = parseNameStatusZ(diff.stdout).filter((c) => isGoLivePath(c.path));
+    if (!files.length) return null;
+    const message = goLiveCommitMessage(files);
+    // A commit with paths commits ONLY those paths: whatever else is staged stays staged and out of this commit.
+    await gitOk(['commit', '--quiet', '-m', message, '--', ...specs], 'commit');
+    const sha = (await gitOk(['rev-parse', 'HEAD'], 'rev-parse')).stdout.trim();
+    log(`go-live: committed ${sha.slice(0, 7)} "${message}"`);
+    return { sha, message, files };
+  }
+
+  async function goLive() {
+    const repo = await inspectRepo();
+    if (repo.problem) {
+      const { status, error, ...rest } = repo.problem;
+      throw new HttpError(status, error, rest);
+    }
+    const config = await readConfig().catch(() => ({}));
+    const about = { branch: repo.branch, remote: repo.remote, siteUrl: config.shareUrl || null, pagesUrl: githubPagesUrl(repo.remote) };
+    // Commit while no publish / unpublish / settings save is half-way through writing its files.
+    const commit = await withLock(() => commitPublished());
+    const ahead = await countAhead(repo);
+    if (!commit && ahead === 0) return { ok: true, upToDate: true, committed: false, pushed: false, commit: null, ...about };
+    const args = repo.upstream ? ['push'] : ['push', '-u', 'origin', repo.branch];
+    const committed = { committed: Boolean(commit), commit };
+    let r;
+    try {
+      r = await git(args, { timeoutMs: GIT_PUSH_TIMEOUT_MS });
+    } catch (err) {
+      throw goLiveError(err.code === 'ENOENT' ? 'no-git' : 'push-failed', err.message, committed);
+    }
+    if (r.code !== 0 || r.timedOut) {
+      const code = classifyGitFailure(r, 'push');
+      const last = redactSecrets(r.stderr).trim().split('\n').pop() || '';
+      log(`go-live: push failed (${code})${last ? `: ${last}` : ''}`);
+      throw goLiveError(code, r.stderr || r.stdout, committed);
+    }
+    log(`go-live: pushed ${repo.branch} to ${repo.remote}`);
+    return { ok: true, upToDate: false, committed: Boolean(commit), pushed: true, commit, ...about };
+  }
+
+  route('GET', /^\/api\/go-live$/, async (req, res) => {
+    sendJson(res, 200, await goLiveStatus());
+  });
+
+  route('POST', /^\/api\/go-live$/, async (req, res) => {
+    await readJsonBody(req); // like every API write: same-origin JSON only (the body itself is not used)
+    if (goLiveBusy) throw new HttpError(409, 'Already putting it online — one moment.', { busy: true, code: 'busy' });
+    goLiveBusy = true;
+    try {
+      sendJson(res, 200, await goLive());
+    } finally {
+      goLiveBusy = false;
+    }
+  });
 
   async function handleApi(req, res, pathname) {
     const matching = routes.filter((r) => r.pattern.test(pathname));

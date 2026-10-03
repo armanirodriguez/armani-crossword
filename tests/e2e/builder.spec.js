@@ -877,3 +877,164 @@ test('"Ban word" bans the selected word and refills just its squares', async ({ 
     await dropDrafts(request, id);
   }
 });
+
+// ---------------------------------------------------------------------------- "Put it online"
+// The e2e temp root is not a git repository, so /api/go-live is stubbed (page.route) to drive every button state;
+// the real endpoint is covered by tests/unit/golive.test.js.
+
+/** Stub GET/POST /api/go-live. `state.status` answers GETs; each POST takes the next of `state.posts`. */
+async function stubGoLive(page, status) {
+  const state = { status, posts: [], posted: [] };
+  await page.route('**/api/go-live', async (route) => {
+    const req = route.request();
+    if (req.method() === 'GET') {
+      await route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(state.status) });
+      return;
+    }
+    state.posted.push({ body: req.postData(), type: req.headers()['content-type'] });
+    const next = state.posts.shift() || { status: 500, body: { error: 'unexpected POST' } };
+    if (next.delay) await new Promise((resolve) => setTimeout(resolve, next.delay));
+    if (next.then) next.then();
+    await route.fulfill({ status: next.status, contentType: 'application/json', body: JSON.stringify(next.body) });
+  });
+  return state;
+}
+
+const goLiveStatus = (pending, extra = {}) => ({
+  git: true, branch: 'main', remote: 'https://github.com/friend/xw.git', upstream: true, pending, ahead: 0,
+  siteUrl: 'https://friends.example/xw/', pagesUrl: 'https://friend.github.io/xw/', busy: false, ready: true, problem: null, ...extra,
+});
+
+test('Put it online after publishing: pending count, progress, friendly error with hint, success', async ({ page, request }) => {
+  const id = 'e2e-golive';
+  const date = '2033-05-01';
+  await putDraft(request, draftOf(id, { title: 'Go Live', date }));
+  try {
+    const problems = watch(page);
+    // The real endpoint answers in the (non-git) temp root: not set up, nothing pending.
+    const real = await (await request.get('/api/go-live')).json();
+    expect(real).toMatchObject({ git: false, ready: false, pending: [], problem: { code: 'not-git' } });
+
+    const gl = await stubGoLive(page, goLiveStatus([]));
+    await page.goto(`/builder/#/draft/${id}/review`);
+    const side = page.locator('.golive-status');
+    await expect(side).toHaveText('Online ✓');
+
+    gl.status = goLiveStatus([
+      { path: `site/puzzles/${date}.json`, change: 'added' },
+      { path: 'site/puzzles/index.json', change: 'modified' },
+    ]);
+    await page.locator('.publish-box').getByRole('button', { name: 'Publish', exact: true }).click();
+    const box = page.locator('.publish-done');
+    await expect(box).toContainText('Published as #');
+    const button = box.locator('.golive-btn');
+    await expect(button).toHaveText(/^Put it online\s*2$/);
+    await expect(button).toHaveClass(/\bprimary\b/);
+    await expect(box.locator('.golive-msg')).toHaveText('Only on this computer until you put it online.');
+    await expect(side).toHaveText('2 changes to put online'); // refreshed after publishing
+
+    // GitHub refuses: the friendly message and its hint, in the box and in the sidebar.
+    gl.posts.push({
+      status: 409,
+      body: {
+        error: 'GitHub has changes that this computer does not have yet, so it refused the update.',
+        hint: 'Run "git pull --rebase" in the project folder (or ask Claude to sort it out), then try again.',
+        code: 'rejected', committed: true,
+      },
+      then: () => { gl.status = goLiveStatus([], { ahead: 1 }); },
+    });
+    await button.click();
+    const msg = box.locator('.golive-msg');
+    await expect(msg).toHaveClass(/\berror\b/);
+    await expect(msg).toContainText('GitHub has changes that this computer does not have yet');
+    await expect(msg).toContainText('git pull --rebase');
+    await expect(msg).toContainText('saved in a commit on this computer');
+    await expect(side).toHaveText('Couldn’t put it online');
+    expect(gl.posted).toEqual([{ body: '{}', type: 'application/json' }]);
+
+    // Try again: progress while it runs, then the result with the site link (a future puzzle unlocks at midnight).
+    gl.posts.push({
+      status: 200, delay: 800,
+      body: { ok: true, upToDate: false, committed: false, pushed: true, commit: null, branch: 'main', siteUrl: 'https://friends.example/xw/' },
+      then: () => { gl.status = goLiveStatus([]); },
+    });
+    await button.click();
+    await expect(button).toBeDisabled();
+    await expect(button).toHaveText('Putting it online…');
+    await expect(side).toHaveText('Putting it online…');
+    await expect(msg).toContainText('Online — it unlocks at midnight on Sunday, May 1, 2033.');
+    await expect(msg.getByRole('link', { name: 'Open your site' })).toHaveAttribute('href', 'https://friends.example/xw/');
+    await expect(button).toBeEnabled();
+    await expect(button).not.toHaveClass(/\bprimary\b/);
+    await expect(side).toHaveText('Online ✓');
+    expect(gl.posted).toHaveLength(2);
+    expect(problems).toEqual([]);
+  } finally {
+    await request.delete(`/api/published/${date}`);
+    await dropDrafts(request, id);
+  }
+});
+
+test('Put it online from the Schedule: count after unpublishing, the sidebar line, and "GitHub not set up"', async ({ page, request }) => {
+  const date = '2033-05-02';
+  const published = await request.post('/api/publish', { data: { draft: draftOf('e2e-golive-sched', { title: 'Go Live Schedule', date }) } });
+  expect(published.status()).toBe(200);
+  try {
+    const problems = watch(page);
+    const gl = await stubGoLive(page, goLiveStatus([]));
+    await page.goto('/builder/#/schedule');
+    const head = page.locator('.golive-head');
+    const side = page.locator('.golive-status');
+    await expect(side).toHaveText('Online ✓');
+    await expect(head.locator('.golive-msg')).toHaveText('Everything is online.');
+
+    // Unpublish: the header button gets the number of changes waiting, the toast offers to put it online.
+    gl.status = goLiveStatus([
+      { path: `site/puzzles/${date}.json`, change: 'deleted' },
+      { path: 'site/puzzles/index.json', change: 'modified' },
+    ]);
+    await page.locator('table tr', { hasText: 'Go Live Schedule' }).getByRole('button', { name: 'Unpublish' }).click();
+    await page.locator('.modal-confirm').getByRole('button', { name: 'Unpublish' }).click();
+    await expect(page.locator('.toast', { hasText: 'Unpublished “Go Live Schedule”' }).getByRole('button', { name: 'Put it online' })).toBeVisible();
+    await expect(head.locator('.golive-btn')).toHaveText(/^Put it online\s*2$/);
+    await expect(head.locator('.golive-btn')).toHaveClass(/\bprimary\b/);
+    await expect(side).toHaveText('2 changes to put online');
+
+    // Clicking the sidebar line runs it; the header shows the progress and the result.
+    gl.posts.push({
+      status: 200, delay: 600,
+      body: { ok: true, upToDate: false, committed: true, pushed: true, commit: { sha: 'abc1234', message: `Unpublish ${date}`, files: [] }, siteUrl: 'https://friends.example/xw/' },
+      then: () => { gl.status = goLiveStatus([]); },
+    });
+    await side.click();
+    await expect(head.locator('.golive-btn')).toHaveText('Putting it online…');
+    await expect(head.locator('.golive-msg')).toContainText('Online — your site updates in about a minute.');
+    await expect(side).toHaveText('Online ✓');
+    expect(gl.posted).toHaveLength(1);
+
+    // Not a git repository: the sidebar says so and explains in a custom dialog; the button is not pushed forward.
+    gl.status = {
+      git: false, branch: null, remote: null, upstream: false, pending: [], ahead: 0, siteUrl: null, pagesUrl: null, busy: false, ready: false,
+      problem: {
+        code: 'not-git',
+        error: 'This project folder is not a git repository yet, so there is nothing to put online.',
+        hint: 'Do the one-time GitHub setup in README.md (“Putting the site online”), or ask Claude to set it up.',
+      },
+    };
+    await page.evaluate(() => window.dispatchEvent(new Event('focus'))); // the builder re-checks when it regains focus
+    await expect(side).toHaveText('GitHub not set up');
+    await expect(side).toHaveAttribute('title', /README\.md/);
+    await expect(head.locator('.golive-msg')).toContainText('GitHub is not set up yet');
+    await expect(head.locator('.golive-btn')).not.toHaveClass(/\bprimary\b/);
+    await side.click();
+    const dialog = page.locator('.modal-golive');
+    await expect(dialog).toContainText('not a git repository yet');
+    await expect(dialog).toContainText('README.md');
+    await dialog.getByRole('button', { name: 'Not now' }).click();
+    await expect(dialog).toHaveCount(0);
+    expect(gl.posted).toHaveLength(1);
+    expect(problems).toEqual([]);
+  } finally {
+    await request.delete(`/api/published/${date}`);
+  }
+});

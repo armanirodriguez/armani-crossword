@@ -251,8 +251,32 @@ PATCH  /api/user-words  {add:[[w,s]], ban, unban, remove} -> { ok, text }
 GET    /api/user-clues                       (data/user-clues.json or {}; a damaged file is set aside with a warning)
 GET    /api/recent-answers?date=YYYY-MM-DD&days=N -> { date, days, answers: { WORD: [dates] } }  (published puzzles
                                       within ±N days of date, excluding date itself; used for answer freshness)
+GET    /api/go-live                -> { git, branch, remote, upstream: bool, pending: [{ path, change: 'added'|'modified'|'deleted' }],
+                                      ahead, siteUrl /* config.shareUrl or null */, pagesUrl /* github.io guess from origin */,
+                                      busy, ready, problem: { code, error, hint } | null }   (local git only, no network)
+POST   /api/go-live  body {}        -> "Put it online": commit + push the published content -> { ok, upToDate, committed,
+                                      pushed, commit: { sha, message, files } | null, branch, remote, siteUrl, pagesUrl };
+                                      errors { error, hint, code, detail?, committed?, commit? }; 409 { busy: true } while one runs
 ```
 All file writes are atomic (write temp + rename).
+
+**Put it online** (`/api/go-live`, git run in the root with `child_process.spawn` and an argument array — never a shell):
+- Allow-list: `site/puzzles/`, `site/config.json`, `data/user-words.txt` (`GO_LIVE_PATHS`). Only changed allow-listed
+  paths are staged (`git add -A -- <paths>`, `*.tmp` excluded) and committed with `git commit -m <msg> -- <paths>`, so
+  anything else the user staged stays out of the commit; drafts/ and data/user-clues.json are never staged, even when
+  un-ignored. Message from the changes: "Publish puzzle 2026-10-05", "Publish puzzles 2026-10-05, 2026-10-06",
+  "Update puzzle …", "Unpublish 2026-10-04", "Update site settings", "Update word list", joined with "; ". The repo's
+  own git identity is used. The commit runs under the server's write lock (no half-written publish is committed).
+- Then `git push` (or `git push -u origin <branch>` without an upstream); with nothing to commit but `ahead > 0` it only
+  pushes; with nothing at all -> `{ ok: true, upToDate: true }`. A failed push keeps the commit (`committed: true`).
+- Never prompts: `GIT_TERMINAL_PROMPT=0`, `GCM_INTERACTIVE=never`, empty `GIT_ASKPASS`/`SSH_ASKPASS`, its own session on
+  POSIX (no controlling terminal for ssh), `GIT_CEILING_DIRECTORIES` = the root's parent (a root inside another
+  repository is "not a git repository"); timeouts 90 s for push, 15 s otherwise, killing git's whole process group.
+- One at a time (second POST -> 409 `{ busy: true }`). Error `code`s (with friendly `error` + `hint`): `not-git`,
+  `no-commits`, `detached`, `no-remote`, `no-git`, `unsafe`, `identity`, `locked`, `auth` (hint: `gh auth login`),
+  `ssh-host`, `repo-not-found`, `rejected` (GitHub has commits we lack; hint: `git pull --rebase`), `protected`,
+  `network`, `timeout`, `commit-failed`, `push-failed`, `git-failed`. Credentials are stripped from every URL / git
+  message before they reach a response or the log.
 
 `scripts/build-site.mjs`: copies `site/` → `dist/` (`--out <dir>`); with `--released-only` drops puzzles dated after
 the date in `config.timeZone` at (now + `--lead-hours N`) (null zone: the earliest zone, UTC+14) and rewrites
@@ -297,6 +321,15 @@ Draft editor with steps/tabs: **Setup · Theme & Layout · Grid & Fill · Clues 
 - **Schedule**: published puzzles by date (number, title, size), unpublish, open draft, gaps in the next 14 days.
 - **Word list**: search a word (score / banned / user-added), add words with scores, ban/unban, edit raw user-words.
 - **Site settings**: edit config.json (site name, tagline, time zone, share URL, share grid).
+- **Put it online** (`builder/js/go-live.js`, one shared `app.goLive` controller over `/api/go-live`): a primary
+  "Put it online" button in the Review & Publish success box (after Publish) and in the Schedule header (with the
+  number of pending changes; unpublishing also offers it in its toast). While running: spinner + "Putting it
+  online…"; success: "Online — your site updates in about a minute" (future date: "Online — it unlocks at midnight on
+  <date>") with an "Open your site" link (shareUrl, else the github.io guess); failure: the friendly error + hint.
+  Sidebar footer status line: "Online ✓" / "N changes to put online" (click runs it) / "Couldn’t put it online" /
+  "GitHub not set up" (title + custom dialog point to README "Putting the site online") / "Restart npm run dev" (the
+  running dev server predates the endpoint: 404). Refreshed after publish / unpublish / settings saves, on
+  navigation and when the window regains focus — never polled. Custom dialogs only.
 
 Answer freshness: Fill options "Avoid repeating recent answers" (default on, ±30 days) fetches
 `/api/recent-answers` and passes `penalize` (30 points per recent answer, never theme answers) to fill, layouts and

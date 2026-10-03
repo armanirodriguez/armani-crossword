@@ -1,4 +1,5 @@
-// Left sidebar: new puzzle, drafts list (open / duplicate / delete), site tools, engine status, theme toggle.
+// Left sidebar: new puzzle, drafts list (open / duplicate / delete), site tools, "Put it online" status, engine
+// status, theme toggle.
 
 import { formatDate } from '../../site/shared/puzzle.js';
 import { h, icon, timeAgo } from './dom.js';
@@ -6,6 +7,7 @@ import { confirmDialog, toastError } from './dialogs.js';
 import { getPref, setPref } from './prefs.js';
 import { openNewDraftDialog } from './new-draft.js';
 import { hasUnpublishedChanges } from './draft-utils.js';
+import { goLiveStatusLine } from './go-live.js';
 
 export function mountSidebar(el, app) {
   const list = h('nav', { class: 'draft-list', 'aria-label': 'Drafts' });
@@ -41,7 +43,7 @@ export function mountSidebar(el, app) {
     h('nav', { class: 'side-nav', 'aria-label': 'Site tools' },
       navLinks.schedule, navLinks.words, navLinks.settings,
       h('a', { class: 'side-link', href: '/site/', target: '_blank', rel: 'noopener' }, icon('external'), h('span', null, 'Open player site'))),
-    h('footer', { class: 'side-foot' }, engineStatus, themeBtn),
+    h('footer', { class: 'side-foot' }, goLiveStatusLine(app), engineStatus, themeBtn),
   );
 
   function navLink(href, iconName, label) {

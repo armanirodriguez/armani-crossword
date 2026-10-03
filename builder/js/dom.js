@@ -142,6 +142,7 @@ const ICONS = {
   sparkle: ['M12 3l2 6 6 2-6 2-2 6-2-6-6-2 6-2z'],
   phone: ['M7 3h10v18H7z', 'M11 18h2'],
   monitor: ['M3 4h18v12H3z', 'M8 20h8', 'M12 16v4'],
+  upload: ['M12 15V4', 'M7 9l5-5 5 5', 'M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4'],
 };
 
 /** An inline SVG icon. `name` must be a key of ICONS. */

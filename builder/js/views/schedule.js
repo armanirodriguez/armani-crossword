@@ -1,4 +1,5 @@
-// Schedule: what is published when, gaps in the next 14 days, unpublish, jump to drafts.
+// Schedule: what is published when, gaps in the next 14 days, unpublish, jump to drafts, and "Put it online"
+// (commit + push to GitHub) with the number of changes waiting.
 
 import { addDays, formatDate } from '../../../site/shared/puzzle.js';
 import { h, icon, plural } from '../dom.js';
@@ -6,6 +7,7 @@ import { confirmDialog, toast, toastError } from '../dialogs.js';
 import { api } from '../api.js';
 import { openNewDraftDialog } from '../new-draft.js';
 import { siteUrlFor } from '../preview.js';
+import { goLiveControl } from '../go-live.js';
 
 export function mountSchedule(container, app) {
   const strip = h('div', { class: 'day-strip' });
@@ -13,11 +15,14 @@ export function mountSchedule(container, app) {
   const upcoming = h('div');
   const released = h('div');
   const todayEl = h('p', { class: 'muted' });
+  const goLive = goLiveControl(app);
 
   container.append(h('div', { class: 'page' },
-    h('header', { class: 'page-head' },
-      h('h1', null, 'Schedule'),
-      todayEl),
+    h('header', { class: 'page-head page-head-split' },
+      h('div', { class: 'page-head' },
+        h('h1', null, 'Schedule'),
+        todayEl),
+      h('div', { class: 'golive-head' }, goLive.button, goLive.message)),
     h('section', { class: 'card' },
       h('div', { class: 'card-head' }, h('h2', { class: 'card-title' }, 'Next 14 days'), stripNote),
       strip),
@@ -105,7 +110,11 @@ export function mountSchedule(container, app) {
     try {
       await api.unpublish(p.date);
       await app.refreshPublished();
-      toast(`Unpublished “${p.title}”`, { type: 'success' });
+      // It is still on the live site until the removal is put online.
+      toast(`Unpublished “${p.title}”`, {
+        type: 'success',
+        action: app.goLive.status?.ready ? { label: 'Put it online', onClick: () => app.goLive.run() } : null,
+      });
     } catch (err) {
       toastError(err, 'Unpublish failed: ');
     }
@@ -115,5 +124,10 @@ export function mountSchedule(container, app) {
   app.refreshPublished();
   const onChange = () => render();
   for (const t of ['drafts', 'published', 'config']) app.addEventListener(t, onChange);
-  return { destroy() { for (const t of ['drafts', 'published', 'config']) app.removeEventListener(t, onChange); } };
+  return {
+    destroy() {
+      for (const t of ['drafts', 'published', 'config']) app.removeEventListener(t, onChange);
+      goLive.destroy();
+    },
+  };
 }

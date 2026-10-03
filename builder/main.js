@@ -22,16 +22,19 @@ import { mountHome } from './js/views/home.js';
 import { mountSchedule } from './js/views/schedule.js';
 import { mountWordList } from './js/views/wordlist.js';
 import { mountSettings } from './js/views/settings.js';
+import { GoLive } from './js/go-live.js';
 
 /**
  * Shared application context handed to every view.
  * Events: 'drafts' (draft list changed), 'published' (index changed), 'config', 'wordindex', 'route'.
+ * app.goLive ("Put it online": commit + push the published content) has its own 'change' event.
  */
 class App extends EventTarget {
   store = new DraftStore();
   engine = engine;
   clueBank = clueBank;
   recentAnswers = recentAnswers;
+  goLive = new GoLive();
   wordIndex = null;
   config = { siteName: 'Armani Crossword', timeZone: null };
   published = { format: 'crossword-index/1', puzzles: [] };
@@ -497,6 +500,7 @@ async function boot() {
   await Promise.all([app.loadConfig(), app.refreshDrafts(), app.refreshPublished()]);
   window.addEventListener('hashchange', router);
   await router();
+  app.goLive.watch(app); // "Put it online" status (sidebar and buttons); never blocks booting
 
   // Background work: the word list (for scores / warnings) and the fill engine, then the clue banks.
   loadWordData().then(({ wordlistText, userWordsText }) => {
