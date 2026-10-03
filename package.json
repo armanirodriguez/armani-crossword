@@ -1,0 +1,22 @@
+{
+  "name": "crossword-club",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily crossword toolkit (builder) + static player site for friends",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "wordlist": "node scripts/build-wordlist.mjs",
+    "build": "node scripts/build-site.mjs",
+    "test": "node --test \"tests/unit/**/*.test.js\"",
+    "test:e2e": "playwright test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "wordlist-english": "^1.2.1",
+    "wordnet-db": "^3.1.14"
+  }
+}

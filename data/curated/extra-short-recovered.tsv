@@ -1,0 +1,279 @@
+# extra-short-recovered.tsv: entries the extra-short writer dropped because the base list already had them (base scores were too low)
+AAH	0
+ACT	0
+ADIEU	0
+AHA	0
+AHEM	0
+AHOY	0
+ALA	42	Montgomery's state, abbr.	Southern state, abbr.
+ALOHA	62	Hawaiian hello or goodbye	Greeting with a lei	___ State
+ALPS	0
+AMAZON	0
+AMEN	0
+AMI	46	French friend	Pal, in Paris
+AMIE	44	French girlfriend	Female friend, in Lyon
+AMIGO	0
+ANIME	0
+ANNA	0
+ANOS	0
+APOLLO	58	Greek sun god	Moon landing program
+APPLE	0
+APT	44	Rental unit, abbr.	Building unit, briefly
+ARES	50	Greek god of war	Son of Zeus and Hera
+ARIEL	60	Little Mermaid	Flounder's friend	Sebastian's princess
+ARK	0
+ASPEN	0
+ATLAS	0
+BABE	0
+BACH	56	Baroque composer	Composer Johann Sebastian
+BAH	0
+BARBIE	62	Mattel doll	Ken's girlfriend
+BARNEY	0
+BATMAN	0
+BEAU	0
+BELLE	0
+BELLO	0
+BERLIN	64	German capital	Brandenburg Gate's city
+BILBO	56	Frodo's uncle	The Hobbit hero
+BINGO	0
+BLAH	0
+BOLT	0
+BONNE	38	Good, in French	___ nuit
+BOOM	0
+BRAVO	0
+BUENO	48	Good, in Spanish	Spanish okay
+BUGS	0
+BUZZ	0
+CAFE	0
+CAIN	46	Abel's brother	Firstborn of Adam and Eve
+CASA	52	House, in Spanish	Spanish home
+CHAD	54	Lake ___ (African lake)	Country next to Niger
+CHEERS	0
+CHEZ	46	At the home of, in French	___ moi
+CHINA	0
+CIAO	0
+CIAOS	0
+CIVIC	0
+COKE	0
+CONN	42	Hartford's state, abbr.	Nutmeg State, abbr.
+COO	0
+CREPE	0
+CURLY	0
+DAISY	0
+DEGAS	46	Painter of ballerinas	French Impressionist
+DELL	0
+DER	0
+DIE	0
+DOBBY	56	Free elf in Harry Potter	Sock-loving house-elf
+DODGE	0
+DOLCE	44	Sweet, in Italian	___ vita
+DOLLY	0
+DORY	0
+DOS	0
+DOVE	0
+DRAKE	0
+DUH	50	Obviously!	No kidding, Sherlock
+DUMBO	60	Flying Disney elephant	Big-eared elephant of film
+DUOMO	38	Italian cathedral	Florence landmark
+EAU	48	Water, in Paris	___ de toilette
+EDINA	0
+EEK	50	Mouse sighting shriek	Cry of fright
+EMOJI	0
+ENCORE	0
+ENNUI	0
+ERGO	0
+ERR	0
+ETA	0
+ETNA	58	Sicilian volcano	Europe's most active volcano	Mount near Catania
+EUREKA	0
+EVE	0
+FIAT	0
+FIESTA	0
+FILS	30	French son
+FORD	0
+FROSTY	0
+GAL	0
+GAP	0
+GARTH	46	Country star Brooks	Wayne's World co-host
+GATEAU	0
+GEE	0
+GENEVA	56	Swiss lakeside city	___ Conventions
+GEO	0
+GOAT	0
+GOLLY	0
+GOOFY	0
+GOOGLE	0
+GOSH	0
+GOTCHA	0
+GWB	0
+HABS	0
+HADES	52	Greek underworld god	Ruler of the dead, in myth
+HARRY	0
+HECTOR	0
+HIYA	46	Casual greeting	Hey there!
+HMM	50	Let me think...	Thoughtful murmur
+HMMM	0
+HOMER	0
+HOORAH	0
+HOORAY	0
+HOWDY	0
+HULK	56	Big green Avenger	Incredible ___
+HUZZAH	42	Old-time cheer	Renaissance faire whoop
+IAM	0
+IDEST	0
+ILL	0
+INFO	0
+JAH	0
+JAPAN	66	Land of the Rising Sun	Tokyo's country
+JAVA	0
+JEEP	0
+JEEZ	0
+JUDO	0
+KARATE	0
+KEN	0
+KIEV	0
+KINDER	0
+KRAFT	0
+LASER	0
+LED	0
+LEI	0
+LENO	52	Jay of late-night TV	Former Tonight Show host
+LILO	46	___ & Stitch	Stitch's girl
+LOCO	0
+LOGAN	0
+LUAU	0
+MAMMA	0
+MAMS	0
+MANGA	0
+MANILA	50	Philippine capital	___ envelope
+MAR	0
+MARGE	58	Simpson mom	Homer's blue-haired wife
+MASS	0
+MEDUSA	52	Snake-haired Gorgon	Perseus's foe
+MEH	50	So-so	Unimpressed reaction
+MEMO	0
+MERE	0
+MESA	0
+MICKEY	64	Disney mouse	Minnie's beau
+MIO	0
+MISS	0
+MMS	0
+NACHO	0
+NAH	0
+NEB	40	Omaha's state, abbr.	Cornhusker State, abbr.
+NESTLE	0
+NEW	0
+NEWTON	0
+NIGHTY	0
+NOEL	0
+NON	44	No, in Nice	French refusal
+NOPE	0
+NOWAY	56	Not a chance!	Get out!
+OFTEN	0
+OHHI	0
+OKAY	0
+OKAYS	0
+OOF	50	Ouch!	Sound after a belly flop
+OOH	0
+OOPS	0
+OPRAHS	0
+ORE	0
+OTTO	46	Simpsons bus driver	Palindromic man's name
+OUI	50	Yes, in French	Paris assent
+PANAMA	58	Canal country	___ hat
+PARKER	0
+PASTA	0
+PESO	0
+PETER	0
+PHEW	0
+PIN	0
+PLAYA	48	Spanish beach	Beach, in Baja
+POOF	0
+POOH	58	Honey-loving bear	Winnie-the-___
+PRINCE	0
+PRONTO	0
+PSST	50	Hey, over here!	Whispered attention-getter
+PUMA	0
+RADAR	0
+RAVEL	0
+REM	0
+ROBIN	0
+ROGUE	0
+ROO	46	Kanga's kid	Little one in the Hundred Acre Wood
+ROUGE	0
+RUE	0
+RUTH	0
+SAKE	0
+SALSA	0
+SAN	0
+SAT	0
+SCUBA	0
+SEARS	0
+SEINE	58	River through Paris	Notre-Dame's river
+SENOR	52	Mister, in Madrid	Spanish title for a man
+SENORA	48	Mrs., in Madrid	Spanish title for a married woman
+SEPT	42	Fall month, abbr.	Labor Day month, abbr.
+SERENA	58	Tennis great Williams	Venus's sister
+SHAGGY	0
+SHALOM	52	Hebrew greeting	Peace, in Hebrew
+SHH	50	Quiet!	Library hush
+SIESTA	0
+SIGNOR	0
+SIM	0
+SIMBA	64	Lion King cub	Mufasa's son
+SLINKY	50	Stair-walking toy	Springy toy
+SNOOPY	70	Peanuts beagle	Woodstock's friend	Red Baron chaser in Peanuts
+SOEUR	0
+SONAR	0
+SONIC	0
+SPAM	0
+SPRITE	0
+STARK	0
+STEVE	0
+STING	0
+SUBWAY	0
+SUMO	0
+SUN	0
+SUSHI	0
+TACO	0
+TANG	0
+TARGET	0
+TEDDY	0
+TESLA	62	Electric car brand	Inventor Nikola
+TIDE	0
+TIGER	0
+TONGA	46	Pacific island kingdom	Nuku'alofa's nation
+TONY	0
+TROY	54	City of the Trojan horse	Homer's besieged city
+TUTTI	0
+TWAIN	58	Tom Sawyer author	Mark of literature
+UGH	0
+UPON	0
+UPS	0
+USHER	0
+VANS	0
+VIER	0
+VISA	0
+VITA	36	La dolce ___
+WAHOO	0
+WALES	56	Cardiff's land	Part of the U.K. with dragons on its flag
+WASH	0
+WED	0
+WHEW	0
+WHOA	0
+WIS	0
+WOODY	0
+WUNDER	0
+YAHOO	0
+YANKEE	0
+YEAH	0
+YELP	50	Restaurant review app	Star-rating site for eateries
+YEP	0
+YIKES	0
+YOGI	52	Picnic-basket-loving bear	Baseball's Berra
+YOO	0
+YUM	0
+YUMMY	0
+YUP	0
+ZAP	0
+ZOOM	0

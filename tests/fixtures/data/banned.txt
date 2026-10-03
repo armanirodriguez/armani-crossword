@@ -1,0 +1,3 @@
+# Fixture ban list (tests/unit/data.test.js)
+pizza
+spacedout   # curated words are banned too

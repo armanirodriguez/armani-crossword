@@ -1,0 +1,15 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+.DS_Store
+*.log
+
+# Builder working files. They hold the plain-text answers of puzzles you have scheduled but not released yet:
+# on a public repository anyone could read them (the published site/puzzles/ files are obfuscated, these are not).
+# Remove these lines if your repository is private and you want drafts and your clue memory backed up in git.
+drafts/
+data/user-clues.json*
+
+# Temp files from interrupted atomic writes (they may hold answers too).
+*.tmp

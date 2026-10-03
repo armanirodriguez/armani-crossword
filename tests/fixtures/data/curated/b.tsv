@@ -1,0 +1,5 @@
+# Fixture curated file B: merges with a.tsv (max score, any 0 bans, clues concatenated + deduped)
+ZEBRA	75	Striped animal	Crosswalk namesake
+QUIRKY	0
+FIXTUREWORD	30	Another test clue	test-only entry
+DOG	65	Loyal companion	Hot dog topping?

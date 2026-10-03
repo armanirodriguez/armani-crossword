@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Armani Crossword · Builder</title>
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%233b5bdb'/%3E%3Cpath d='M3 3h4v4H3zM9 9h4v4H9z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="builder.css">
+  <script>
+    // Apply the saved light/dark choice before first paint (no flash).
+    try {
+      const t = JSON.parse(localStorage.getItem('xwb:theme') || 'null');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch { /* storage unavailable */ }
+  </script>
+  <script type="module" src="main.js"></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar" aria-label="Drafts and site tools"></aside>
+    <main class="main" id="main" tabindex="-1">
+      <div class="boot">Loading the builder…</div>
+    </main>
+  </div>
+  <noscript>The builder needs JavaScript.</noscript>
+</body>
+</html>

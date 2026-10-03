@@ -1,0 +1,902 @@
+OHIO	68	Buckeye State	Columbus's state	Lake Erie borders it
+IOWA	66	Hawkeye State	Des Moines's state	Corn-growing Midwest state
+UTAH	66	Beehive State	Salt Lake City's state	Zion National Park's state
+IDAHO	66	Gem State	Boise's state	Potato-growing state
+MAINE	66	Pine Tree State	Lobster-loving New England state	Augusta's state
+TEXAS	70	Lone Star State	Austin's state	Home of the Alamo
+TEX	42	Lone Star State, informally	Dallas's state, for short
+ALASKA	70	Largest U.S. state	Juneau's state	Land of the midnight sun
+HAWAII	72	Aloha State	Honolulu's state	Island state since 1959
+KANSAS	62	Sunflower State	Dorothy's home state	Topeka's state
+NEVADA	62	Silver State	Las Vegas's state	Reno's state
+OREGON	64	Portland's state	Beaver State	___ Trail
+CALIF	44	Golden State, abbr.	L.A.'s state, abbr.
+DEL	40	First state, abbr.	Dover's state, abbr.
+FLA	46	Sunshine State, abbr.	Miami's state, abbr.
+IND	42	Hoosier State, abbr.	Indianapolis's state, abbr.
+MICH	42	Great Lakes State, abbr.	Detroit's state, abbr.
+MINN	42	Land of 10,000 Lakes, abbr.	St. Paul's state, abbr.
+MONT	40	Big Sky State, abbr.	Helena's state, abbr.
+NEV	42	Silver State, abbr.	Las Vegas's state, abbr.
+OKLA	42	Tulsa's state, abbr.	Sooner State, abbr.
+TENN	42	Nashville's state, abbr.	Volunteer State, abbr.
+WYO	40	Cheyenne's state, abbr.	Cowboy State, abbr.
+ARIZ	42	Phoenix's state, abbr.	Grand Canyon State, abbr.
+COLO	42	Denver's state, abbr.	Centennial State, abbr.
+ERIE	62	One of the Great Lakes	Lake near Cleveland	Pennsylvania port city
+HURON	60	One of the Great Lakes	Lake between Michigan and Ontario
+TAHOE	62	Lake on the California-Nevada line	Ski area near Reno
+NILE	68	Longest river in Africa	River through Cairo	Cleopatra's river
+RHINE	56	River through Cologne	German river
+THAMES	58	River through London	London's river
+VOLGA	50	Europe's longest river	Russian river
+DANUBE	54	River through Vienna	Blue ___ (Strauss waltz)
+YUKON	56	Canadian territory	River through Alaska
+ANDES	62	South American mountain range	Range with llamas	Peru's peaks
+URALS	50	Russian mountain range	Europe-Asia dividing range
+OZARKS	52	Missouri and Arkansas highlands	Region around Branson
+SAHARA	66	World's largest hot desert	Sandy North African expanse
+GOBI	52	Asian desert	Mongolian desert
+ASIA	66	Largest continent	Where China is	Continent with Everest
+EUROPE	66	Continent with Paris and Rome	Old World continent
+AFRICA	66	Continent with Kenya and Egypt	Sahara's continent
+ROME	70	Italy's capital	City of seven hills	Eternal City
+PARIS	72	City of Light	Eiffel Tower's city	French capital
+OSLO	60	Norway's capital	Nobel Peace Prize city	Scandinavian capital
+TOKYO	70	Japan's capital	City formerly called Edo	Big city in Japan
+LIMA	58	Peru's capital	South American capital
+CAIRO	64	Egypt's capital	City on the Nile
+DELHI	58	Indian capital city	New ___ (India's capital)
+DUBAI	62	City with the Burj Khalifa	Emirate famed for luxury
+MIAMI	68	South Beach's city	Florida city with a Heat team
+BOSTON	68	Massachusetts capital	Bean Town	City with a famous Tea Party
+DENVER	64	Mile High City	Colorado capital
+DALLAS	64	Big D	Texas city with the Cowboys
+AUSTIN	62	Texas capital	Live music capital of the world
+RENO	58	Biggest Little City in the World	Nevada gambling city
+TAMPA	58	Florida city on a bay	___ Bay Buccaneers
+OMAHA	56	Nebraska city	D-Day beach code name
+TULSA	54	Oklahoma city	City on the Arkansas River
+BOISE	54	Idaho's capital	Capital of the Gem State
+TOLEDO	54	Ohio city on Lake Erie	Spanish city famed for swords
+AKRON	50	Ohio city	Rubber Capital of the World
+ELPASO	50	Texas border city	City across from Juarez
+VEGAS	66	Sin City, familiarly	Nevada gambling mecca	The Strip's city
+NYC	56	Big Apple, initially	Manhattan's home, for short
+PERU	64	Land of the Incas	Machu Picchu's country	Lima's nation
+CHILE	62	Long, narrow South American country	Santiago's nation
+CUBA	62	Havana's island	Caribbean island nation
+HAITI	56	Port-au-Prince's country	Hispaniola nation
+IRAN	52	Tehran's country	Persia, today
+IRAQ	50	Baghdad's country	Land of the Tigris and Euphrates
+ISRAEL	58	Jerusalem's country	Tel Aviv's nation
+EGYPT	66	Land of the pyramids	Cairo's country
+KENYA	60	Nairobi's country	Safari destination in East Africa
+MALI	50	Timbuktu's country	West African nation
+NIGER	50	West African river	Niamey's country
+OMAN	52	Arabian Peninsula sultanate	Muscat's country
+QATAR	54	Doha's country	Persian Gulf nation
+YEMEN	50	Arabian Peninsula country	Sanaa's nation
+SYRIA	46	Damascus's country	Mideast nation
+INDIA	66	Taj Mahal's country	Land of Bollywood	Mumbai's nation
+NEPAL	60	Everest's country	Kathmandu's nation	Himalayan land
+LAOS	50	Vientiane's country	Southeast Asian nation
+KOREA	56	Seoul's peninsula	Land split at the 38th parallel
+SPAIN	66	Madrid's country	Land of flamenco	Iberian nation
+ITALY	68	Boot-shaped country	Rome's nation	Land of pasta
+FRANCE	66	Land of the Eiffel Tower	Paris's country
+NORWAY	58	Land of fjords	Oslo's country
+SWEDEN	58	Stockholm's country	IKEA's homeland
+ERIN	52	Ireland, poetically	Emerald Isle, in poems
+EIRE	48	Ireland, in Gaelic	Emerald Isle, to locals
+CANADA	66	Maple leaf country	Ottawa's nation	Land north of the U.S.
+MEXICO	66	Land of tacos and mariachi	Country south of the border
+TOGO	46	West African nation	Lome's country
+FIJI	58	South Pacific island nation	Suva's island country
+SAMOA	52	Pacific island nation	Pago Pago's islands
+BALI	60	Indonesian vacation island	Island near Java
+MAUI	62	Hawaiian island	Valley Isle	Island with Haleakala
+OAHU	58	Honolulu's island	Island with Waikiki
+KAUAI	52	Garden Isle of Hawaii	Hawaiian island
+CAPRI	52	Italian island near Naples	Isle with a Blue Grotto
+CRETE	54	Largest Greek island	Island of the Minotaur myth
+MALTA	52	Mediterranean island nation	Valletta's island
+ARUBA	58	Caribbean vacation island	One of the ABC islands
+ELBA	48	Napoleon's island of exile	Island off Tuscany
+IONA	30	Scottish isle
+TAOS	46	New Mexico art town	Pueblo near Santa Fe
+YALE	56	New Haven university	Ivy League school
+ROMA	48	Italy's capital, to Italians	Eternal City, locally
+MILAN	58	Fashion capital of Italy	La Scala's city
+NAPLES	54	Pizza's birthplace	Italian city near Vesuvius
+VENICE	62	City of canals	Gondola city
+TURIN	46	Italian city where Fiat is based	Shroud's city
+PISA	58	Leaning Tower city	Tuscan city with a tilt
+SIENA	46	Tuscan city	Palio horse race city
+MUNICH	58	Oktoberfest city	Bavarian capital
+BONN	46	Former West German capital	Beethoven's birthplace
+OSAKA	54	Japanese port city	City near Kyoto
+KYOTO	56	Former Japanese capital	City of temples in Japan
+SEOUL	58	South Korea's capital	K-pop's home city
+HANOI	52	Vietnam's capital	City on the Red River
+LHASA	38	Tibet's capital	City of the Potala Palace
+MOSCOW	58	Russia's capital	Kremlin's city
+KYIV	52	Ukraine's capital	City on the Dnipro
+RIGA	44	Latvia's capital	Baltic capital
+BERN	46	Swiss capital	Capital of Switzerland
+ZURICH	50	Swiss banking city	Largest city in Switzerland
+VIENNA	58	Austrian capital	City of waltzes
+PRAGUE	56	Czech capital	City of a hundred spires
+DUBLIN	58	Irish capital	City on the Liffey
+LONDON	66	Big Ben's city	English capital
+MADRID	58	Spanish capital	Prado's city
+LISBON	54	Portugal's capital	Hilly city on the Tagus
+ATHENS	58	Greek capital	Parthenon's city	Georgia college town
+SPARTA	50	Ancient Greek city-state	Leonidas's city
+HAVANA	56	Cuban capital	Cigar city
+QUITO	46	Ecuador's capital	Andean capital
+RIO	58	Copacabana's city, for short	___ Grande
+BELIZE	46	Central American nation	Country with a famous Blue Hole
+SYDNEY	58	City with a famous opera house	Australian harbor city
+PERTH	50	Western Australian city	Scottish city
+ELMO	68	Furry red Muppet	Tickle Me ___	Sesame Street resident
+ERNIE	64	Bert's Muppet pal	Rubber Duckie singer
+BERT	56	Ernie's roommate	Unibrowed Muppet
+GROVER	52	Blue Sesame Street Muppet	Super ___ (Muppet hero)
+KERMIT	64	Muppet frog	Miss Piggy's beau
+OPRAH	70	Talk show queen Winfrey	Media mogul known by one name
+ALI	58	Boxer who could float like a butterfly	The Greatest of boxing	Muhammad ___
+ELI	52	Manning of the Giants	Inventor Whitney	Biblical priest who raised Samuel
+ELSA	66	Frozen queen	Anna's sister in Frozen	Snow queen who lets it go
+OLAF	60	Frozen snowman	Snowman who likes warm hugs
+YODA	68	Wise Jedi master	Small green Star Wars sage	Speaks backward, he does
+LEIA	60	Princess of Star Wars	Han Solo's love
+HAN	50	___ Solo	Chewbacca's pilot pal
+ARTOO	46	___-Detoo (droid)	R2-D2, familiarly
+BART	60	Simpson son	Lisa's prankster brother	Eat my shorts kid
+MOE	52	Springfield bartender	Stooge with a bowl cut
+APU	42	Kwik-E-Mart clerk on The Simpsons	Springfield shopkeeper
+NED	50	Flanders of The Simpsons	Homer's neighbor Flanders
+ODIE	56	Garfield's canine pal	Comic-strip dog with a long tongue
+LINUS	52	Peanuts blanket holder	Lucy's little brother
+SHREK	66	Green movie ogre	Donkey's ogre pal	Fiona's husband
+FIONA	54	Shrek's princess	Shrek's wife
+NEMO	64	Lost clownfish of film	Captain of the Nautilus	Finding ___
+NALA	52	Simba's mate	Lion King lioness
+MUFASA	54	Simba's father	Lion King king
+TIMON	46	Pumbaa's meerkat pal	Hakuna matata singer with Pumbaa
+MULAN	60	Disney heroine who joins the army	Warrior princess of Disney
+MOANA	62	Disney wayfinder	Maui's movie companion
+BAMBI	60	Disney fawn	Thumper's friend
+MINNIE	56	Mickey's sweetheart	Polka-dot-loving mouse
+WALDO	58	Hidden guy in a striped shirt	Where's ___?
+TIGGER	56	Bouncy Pooh pal	Bouncing tiger of Hundred Acre Wood
+EEYORE	62	Gloomy Pooh donkey	Donkey who lost his tail
+RON	46	Harry Potter's redheaded pal	Weasley friend of Harry
+HAGRID	56	Hogwarts groundskeeper	Giant friend of Harry Potter
+FRODO	62	Ring bearer of Middle-earth	Sam's hobbit master
+GOLLUM	56	My precious creature	Ring-obsessed creature
+SAURON	46	Dark Lord of Mordor	Lord of the Rings villain
+ELROND	30	Rivendell's elf lord
+SPOCK	62	Vulcan of Star Trek	Logical Enterprise officer
+KIRK	52	Captain of the Enterprise	Star Trek captain
+UHURA	42	Enterprise communications officer	Star Trek lieutenant
+SULU	42	Star Trek helmsman	Enterprise pilot
+MARIO	70	Nintendo plumber	Luigi's brother	Super ___ Bros.
+LUIGI	62	Mario's brother	Green-clad Nintendo plumber
+ZELDA	60	The Legend of ___	Link's princess
+PACMAN	60	Dot-gobbling arcade hero	Ghost-chasing arcade game
+YOSHI	52	Mario's dinosaur pal	Green Nintendo dino
+KIRBY	50	Pink Nintendo puffball	Vacuum brand
+ELVIS	68	The King of Rock and Roll	Graceland's owner	___ has left the building
+CHER	58	Believe singer	Diva known by one name	Sonny's former partner
+ADELE	66	Hello singer	Rolling in the Deep singer
+BONO	56	U2 frontman	Singer with tinted shades
+ENYA	52	Orinoco Flow singer	Irish New Age singer
+LIZZO	54	Truth Hurts singer	Flute-playing pop star
+SADE	46	Smooth Operator singer	One-named singer of the 80s
+YOKO	48	Ono who married Lennon	Artist ___ Ono
+ONO	44	Yoko of art	Lennon's widow
+OZZY	46	Rocker Osbourne	Prince of Darkness of metal
+ELTON	62	Rocket Man singer John	Sir ___ John
+ARETHA	56	Queen of Soul	Respect singer Franklin
+REBA	52	Country star McEntire	One-named country singer
+SHANIA	46	Country star Twain	Man! I Feel Like a Woman! singer
+ELLA	54	Jazz great Fitzgerald	First Lady of Song
+ENZO	36	Ferrari founder	Italian man's name
+EDISON	60	Inventor of the phonograph	Wizard of Menlo Park
+DARWIN	58	Origin of Species author	Naturalist Charles
+PLATO	56	Republic philosopher	Student of Socrates
+AESOP	58	Teller of fables	The Tortoise and the Hare author
+DANTE	52	Inferno poet	Italian poet Alighieri
+OVID	40	Roman poet	Metamorphoses poet
+POE	56	The Raven poet	Edgar Allan ___
+SEUSS	64	Dr. ___ (Cat in the Hat author)	Green Eggs and Ham author
+ORWELL	56	1984 author	Animal Farm writer
+ALCOTT	46	Little Women author	Louisa May ___
+AUSTEN	56	Pride and Prejudice author	Novelist Jane
+BRONTE	46	Jane Eyre author	Literary sister Charlotte or Emily
+KEATS	42	Ode to a Nightingale poet	English Romantic poet
+YEATS	40	Irish poet William Butler ___
+MONET	58	Water Lilies painter	French Impressionist
+MANET	40	Olympia painter	Impressionist Edouard
+DALI	58	Surrealist with a famous mustache	Melting clocks painter
+RODIN	48	The Thinker sculptor	French sculptor
+FRIDA	52	Painter Kahlo	Self-portrait artist Kahlo
+KAHLO	44	Painter Frida	Mexican artist Frida
+WARHOL	52	Pop artist Andy	Soup can painter
+MOZART	62	Composer of The Magic Flute	Child prodigy composer
+CHOPIN	50	Polish pianist composer	Minute Waltz composer
+VERDI	46	Aida composer	Italian opera composer
+LISZT	38	Hungarian piano virtuoso
+HANDEL	44	Messiah composer	Baroque composer George Frideric
+PELE	58	Brazilian soccer legend	One-named World Cup great
+MESSI	62	Argentine soccer superstar Lionel	2022 World Cup winner
+KOBE	58	Lakers legend Bryant	Japanese beef city
+LEBRON	60	King James of the NBA	Basketball star James
+SHAQ	58	Big man O'Neal	Hoops giant known by four letters
+ARNIE	42	Golfer Palmer, familiarly	Arnold, informally
+ASHE	46	Tennis great Arthur	U.S. Open stadium name
+ORR	42	Hockey great Bobby	Bruins legend Bobby
+OHTANI	50	Two-way baseball star Shohei	Japanese baseball phenom
+YAO	44	Basketball's ___ Ming	Rockets center from China
+NADAL	50	Clay court king Rafael	Spanish tennis legend
+SIMONE	50	Gymnast Biles	Singer Nina
+BILES	52	Gymnastics GOAT Simone	Olympic gymnast Simone
+BRADY	52	Seven-time Super Bowl champ Tom	The ___ Bunch
+TEBOW	38	Quarterback Tim known for kneeling
+UNITAS	30	Colts QB great Johnny
+NAMATH	36	Broadway Joe of football
+ELLEN	56	Talk show host DeGeneres	Comic DeGeneres
+CONAN	52	Late-night host O'Brien	___ the Barbarian
+FALLON	46	Tonight Show host Jimmy	Late-night host Jimmy
+OBAMA	56	44th president	Michelle's husband
+ABE	56	Honest ___	Lincoln, familiarly	Simpson grandpa
+IKE	52	I Like ___ (1950s slogan)	Eisenhower, informally
+FDR	50	New Deal president, initially	President Roosevelt, by initials
+JFK	52	New York airport code	Camelot president, initially
+LBJ	44	Great Society president, initially	JFK's successor
+NIXON	46	Watergate president	37th president
+REAGAN	50	40th president	Gipper of politics
+TRUMAN	46	Give 'em Hell president	33rd president
+OPIE	50	Andy Griffith's TV son	Mayberry boy
+URKEL	48	Family Matters nerd	Steve of Did I do that? fame
+FONZ	52	Happy Days cool guy	The ___ (Henry Winkler role)
+FONZIE	50	Happy Days greaser	Ayyy guy of TV
+ALF	44	Furry TV alien	Melmac native of a sitcom
+MORK	46	Robin Williams's alien role	Mindy's alien pal
+TOTO	60	Dorothy's dog	Africa band
+ZEUS	62	King of the Greek gods	Thunderbolt thrower of myth
+HERA	50	Wife of Zeus	Greek queen of the gods
+ATHENA	54	Greek goddess of wisdom	Parthenon goddess
+EROS	50	Greek god of love	Cupid's Greek counterpart
+NIKE	62	Swoosh brand	Greek goddess of victory	Just Do It company
+GAIA	46	Earth goddess	Mother Earth, in myth
+THOR	64	Norse god of thunder	Hammer-wielding Avenger
+ODIN	50	Norse god of wisdom	Thor's father
+LOKI	56	Norse trickster god	Thor's mischievous brother
+FREYA	36	Norse goddess of love
+AJAX	46	Trojan War hero	Cleanser brand
+ICARUS	50	Flier who got too close to the sun	Daedalus's son
+OSIRIS	38	Egyptian god of the afterlife
+NOAH	58	Ark builder	Biblical flood survivor
+ADAM	56	First man, in Genesis	Eve's partner
+ABEL	48	Cain's brother	Second son of Adam
+ESAU	42	Jacob's twin	Hairy biblical brother
+ISAAC	52	Abraham's son	Physicist Newton
+JONAH	52	Biblical whale swallowee	Book after Obadiah
+MOSES	58	Parter of the Red Sea	Ten Commandments receiver
+LEAH	42	Jacob's first wife	Rachel's sister
+SAMSON	50	Delilah's strongman	Biblical long-haired hero
+LOIS	52	Superman's love	___ Lane
+THANOS	52	Infinity Gauntlet villain	Purple Marvel bad guy
+GROOT	56	I am ___ (tree's line)	Guardians of the Galaxy tree
+XMEN	56	Marvel mutant team	Professor X's students
+ELMER	50	___ Fudd	Bugs Bunny's hunter
+TWEETY	52	Sylvester's yellow prey	Cartoon canary
+TAZ	46	Looney Tunes devil, for short	Spinning cartoon devil
+SCOOBY	56	Mystery-solving Great Dane	___-Doo
+VELMA	46	Jinkies! sayer	Scooby gang brain
+WILMA	46	Fred Flintstone's wife	Pebbles's mom
+DINO	52	Flintstones pet	Pebbles's purple pet
+ELROY	36	Jetsons son
+OREO	68	Twist-apart cookie	Milk's favorite cookie	Cookie with a creme center
+LEGO	68	Plastic brick brand	Toy for budding builders	Bricks you step on barefoot
+IKEA	66	Swedish furniture giant	Flat-pack furniture store	Store with meatballs and Allen wrenches
+XBOX	62	Microsoft game console	PlayStation rival
+WII	50	Nintendo console with motion controls	Nintendo's ___ Sports
+SEGA	50	Sonic's company	Genesis maker
+ATARI	52	Pong maker	Classic video game brand
+PEPSI	62	Coke rival	Cola in a blue can
+FANTA	52	Orange soda brand	Coca-Cola's fruity brand
+ADIDAS	56	Three-stripe brand	Nike rival
+REEBOK	48	Sneaker brand	Athletic shoe company
+LEVIS	52	Classic jeans	501 jeans brand
+ZARA	48	Spanish fashion chain	Fast-fashion retailer
+PRADA	56	The Devil Wears ___	Italian luxury label
+GUCCI	56	Italian fashion house	Luxury label with interlocking G's
+DIOR	52	French fashion house	Couturier Christian
+CHANEL	52	No. 5 perfume maker	Coco of fashion
+ROLEX	56	Luxury watch brand	Swiss timepiece
+AMEX	46	Card company, for short	Credit card initials, briefly
+SONY	56	PlayStation maker	Japanese electronics giant
+IPAD	58	Apple tablet	Tablet with a Pencil
+IPOD	52	Classic Apple music player	Click wheel device
+IPHONE	60	Apple smartphone	Device with Siri
+IMAC	46	Apple desktop	All-in-one Apple computer
+SIRI	58	Apple's voice assistant	Hey ___
+ALEXA	58	Amazon's voice assistant	Echo's assistant
+TIKTOK	58	Short-video app	App for dance trends
+REDDIT	50	Front page of the internet	Site with upvotes
+ETSY	58	Handmade-goods marketplace	Online craft shop
+EBAY	60	Online auction site	Bidding website
+LYFT	50	Uber rival	Ride-hailing app
+VENMO	52	Payment app	Money-sending app
+SKYPE	46	Video chat pioneer	Microsoft calling app
+HULU	50	Streaming service	Netflix rival
+ROKU	46	Streaming device brand	TV streaming stick maker
+ESPN	58	Sports channel	SportsCenter network
+HBO	54	Premium cable channel	The Sopranos network
+CNN	52	Cable news channel	Atlanta-based news network
+NBC	52	Peacock network	Today show network
+CBS	50	Eye network	60 Minutes network
+PBS	52	Sesame Street network	Public TV channel
+MTV	52	Music video channel	Unplugged network
+AMC	48	Movie theater chain	Mad Men network
+OREOS	56	Cookies often dunked	Black-and-white cookies
+KFC	52	Colonel's chain	Fried chicken chain, initially
+IHOP	56	Pancake chain	Breakfast chain with a blue roof
+WENDYS	50	Redhead's burger chain	Frosty seller
+ARBYS	46	Roast beef chain	We have the meats chain
+DENNYS	46	Grand Slam breakfast chain	Diner chain
+COSTCO	56	Bulk-buying warehouse store	Sam's Club rival
+ALDI	46	German grocery chain	No-frills supermarket
+KMART	42	Blue Light Special store	Discount chain
+MACYS	50	Thanksgiving parade sponsor	Herald Square department store
+HONDA	56	Civic maker	Accord automaker
+TOYOTA	56	Camry maker	Prius maker
+NISSAN	50	Altima maker	Japanese automaker
+MAZDA	48	Miata maker	Zoom-zoom automaker
+KIA	50	Soul car maker	Korean automaker
+AUDI	52	German automaker	Car with four rings
+BMW	52	German automaker, initially	Bimmer maker
+VOLVO	52	Swedish automaker	Safe Swedish car
+SAAB	40	Former Swedish automaker	Gripen jet maker
+PRIUS	52	Toyota hybrid	Eco-friendly Toyota
+CAMRY	46	Toyota sedan	Popular Toyota model
+JETTA	42	Volkswagen sedan	VW model
+LEXUS	52	Toyota's luxury line	Luxury Japanese car
+ACURA	48	Honda's luxury brand	Integra maker
+NERF	58	Foam toy brand	Foam dart blaster brand	Make weaker, in gaming
+PEZ	52	Candy dispenser brand	Candy in a dispenser
+TWIX	50	Cookie bar with caramel	Two-finger candy bar
+KITKAT	52	Give me a break candy bar	Wafer candy bar
+REESES	48	Peanut butter cup brand	___ Pieces
+FRITOS	46	Corn chip brand	Bagged corn chips
+RITZ	50	Buttery cracker brand	Puttin' on the ___
+JELLO	56	Jiggly dessert brand	Gelatin treat brand
+EGGO	52	Frozen waffle brand	Toaster waffle
+HEINZ	52	57 Varieties brand	Ketchup brand
+ADVIL	48	Pain reliever brand	Ibuprofen brand
+ALEVE	46	Naproxen brand	Pain reliever choice
+QTIP	52	Cotton swab brand	Ear cleaner
+QTIPS	48	Cotton swabs	Swabs in a vanity drawer
+LYSOL	46	Disinfectant spray brand	Germ-killing spray
+CLOROX	46	Bleach brand	Disinfecting wipes brand
+WINDEX	46	Glass cleaner brand	My Big Fat Greek Wedding cure-all
+DRANO	42	Clog remover brand	Pipe-unclogging product
+SPF	50	Sunscreen letters	Sunblock rating, briefly
+NIVEA	40	Skin cream brand	Lotion brand
+OLAY	46	Skin care brand	Moisturizer brand
+AVON	46	Door-to-door cosmetics company	Shakespeare's river
+REVLON	44	Cosmetics brand	Lipstick brand
+EVIAN	46	French bottled water	Spring water brand
+LIPTON	44	Tea brand	Soup mix brand
+ATM	52	Cash machine, briefly	Bank kiosk, for short	PIN-requiring machine
+NBA	56	Hoops org.	Lakers' league, briefly
+NFL	56	Gridiron org.	Super Bowl org.
+NHL	52	Stanley Cup org.	Puck-chasing league, briefly
+MLB	50	Big-league baseball org.	World Series org.
+NCAA	48	March Madness org.	College sports org.
+PGA	46	Golf org.	Masters org.
+WNBA	42	Women's hoops org.	Liberty's league, briefly
+MLS	44	Soccer league, briefly	U.S. soccer org.
+FIFA	50	World Cup org.	Soccer's world governing body, briefly
+ASAP	60	Right away, on a memo	Stat, in office lingo	Pronto, briefly
+RSVP	58	Invitation letters	Reply request, briefly	Initials on an invite
+ETD	42	Airport board abbr.	Departure estimate, briefly
+CEO	54	Corner office VIP	Exec in charge, briefly	Company head, for short
+CFO	42	Money exec, briefly	Corporate bean counter, for short
+DIY	58	Make-it-yourself, briefly	Like many weekend projects, for short	Craft-it-yourself abbr.
+FAQ	50	Help page heading, for short	Common query, briefly
+FYI	54	Memo heads-up	Just so you know, briefly
+TBA	46	Not yet scheduled, briefly	Event listing abbr.
+TBD	46	Undecided, on a schedule	Still up in the air, briefly
+USB	50	Flash drive port	Charging cable type, briefly
+URL	50	Web address, briefly	Browser bar entry
+NASA	62	Apollo program agency	Space org.	Houston-based agency, briefly
+AWOL	52	Missing from base, briefly	Gone without leave
+UFO	56	Flying saucer, briefly	Sci-fi sighting
+ESP	50	Psychic ability, briefly	Sixth sense	Mind-reading, for short
+GPS	54	Navigation app tech	Car map aid, briefly
+GPA	48	Report card stat, briefly	Honor roll factor
+MBA	46	Business school deg.	Grad degree for execs
+PHD	50	Doctoral deg.	Dissertation reward, briefly
+BFF	56	Best buddy, in texts	Pal for life, briefly
+LOL	58	Text reaction to a joke	Online chuckle	That's funny, in texts
+OMG	54	Text gasp	Wow, in texts
+BRB	46	Chat room I'll be back	Text before a quick break
+IDK	44	No clue, in texts	Text shrug
+TTYL	42	Text sign-off	Chat later, briefly
+IMO	42	In my view, in texts	Opinion opener, online
+TBH	40	Honestly, in texts	Candid text opener
+FOMO	54	Party-skipping anxiety, briefly	Worry about missing out
+YOLO	54	Live-it-up motto, briefly	Carpe diem, in texts
+AKA	50	Alias letters	Also known as, briefly
+ETC	56	List ender	And so on, briefly
+IOU	56	Marker	Debtor's note	Promise to pay
+TLC	54	Pampering, briefly	Care, for short	Waterfalls group
+VIP	56	Big shot, briefly	Red carpet guest	Bigwig
+MVP	56	Game's top player, briefly	Award for the best
+EMT	48	Ambulance worker, briefly	First responder, for short
+ICU	46	Hospital ward, briefly	Critical care unit, for short
+DNA	56	Genetic code, briefly	Double helix stuff
+CPR	50	Lifesaving technique, briefly	First aid skill, for short
+RPM	44	Record speed, briefly	Tachometer reading
+MPH	50	Speedometer letters	Speed limit unit, briefly
+MPG	46	Fuel economy stat	Car mileage figure, briefly
+HDTV	42	Flat-screen letters	High-def set
+DVD	52	Movie disc	Blu-ray predecessor
+VCR	48	Old tape player	Device that might blink 12:00
+VHS	48	Old tape format	Betamax rival
+LCD	42	Flat screen type	Display tech, briefly
+PDF	52	Document file type	Common email attachment
+JPEG	48	Photo file type	Common image format
+GIF	56	Looping image	Animated reaction image
+HTML	46	Web page code	Coding language for websites, briefly
+WWW	50	Web address start	Internet letters
+AOL	46	You've got mail co.	Dial-up pioneer
+IBM	48	Big Blue	Tech giant, initially
+SUV	56	Family hauler, briefly	Jeep, e.g.
+ATV	48	Off-road vehicle, briefly	Quad, for short
+USPS	46	Mail carrier org.	Postal org.
+FBI	52	G-men org.	Hoover's org.
+CIA	50	Spy org.	Langley org.
+IRS	50	Tax org.	April 15 org.
+NSA	40	Codebreakers' org.	Spy agency, briefly
+EPA	44	Green org.	Clean air org.
+FDA	44	Food safety org.	Drug approval org.
+DMV	52	License office, briefly	Place with long lines
+NATO	50	Western alliance, briefly	Brussels-based alliance
+USA	58	Stars and Stripes land	Uncle Sam's land, briefly	Chant at the Olympics
+USSR	42	Cold War union, briefly	Former Soviet nation, initially
+NYSE	42	Wall St. exchange	Big Board, briefly
+IPO	44	Wall St. debut	Stock market debut, briefly
+CPA	44	Tax pro	Auditing pro, briefly
+ESQ	38	Lawyer's title, briefly
+MRS	46	Married woman's title	___ Doubtfire
+BLVD	42	Wide street, abbr.	Sunset ___
+DEPT	42	Store section, abbr.	Agency division, abbr.
+ASST	42	Helper, abbr.	Aide, abbr.
+ADDL	30	Extra, abbr.
+MISC	44	Odds and ends, abbr.	Grab bag, abbr.
+APPROX	44	Ballpark, abbr.	Roughly, abbr.
+INC	46	Corporate abbr.	Monsters, ___
+LTD	42	British business abbr.	Co. alternative
+CORP	44	Business abbr.	Company, abbr.
+LBS	46	Weight units, abbr.	Scale readings, abbr.
+TSP	44	Recipe abbr.	Small spoonful, abbr.
+TBSP	42	Recipe abbr.	Big spoonful, abbr.
+HRS	44	Time units, abbr.	Office ___ (open times)
+TUES	42	Day after Mon.	Day before Wed.
+THURS	42	Day before Fri.	Thanksgiving day, abbr.
+FEB	44	Valentine's month, abbr.	Short month, abbr.
+APR	44	Tax month, abbr.	Spring month, abbr.
+AUG	42	Summer month, abbr.	Back-to-school month, abbr.
+OCT	44	Halloween month, abbr.	Fall month, abbr.
+NOV	44	Thanksgiving month, abbr.	Election month, abbr.
+ETE	44	Summer, in Paris	French season
+MERCI	54	Thanks, in French	Parisian's thanks	___ beaucoup
+ADIOS	58	Goodbye, in Spanish	Spanish farewell	Hasta la vista alternative
+AMOR	50	Love, in Spanish	Te ___ (I love you, in Spanish)
+AMIGA	44	Spanish female friend	Pal, in Puebla
+HOLA	58	Hello, in Spanish	Spanish greeting
+TIA	42	Spanish aunt	Aunt, in Acapulco
+TIO	42	Spanish uncle	Uncle, in Uruguay
+ANO	40	Year, in Spanish	Spanish year
+TRES	46	Three, in Spanish	Very, in French
+CINCO	48	___ de Mayo	Five, in Spanish
+OCHO	42	Eight, in Spanish	Number after siete
+DIEZ	36	Ten, in Spanish
+MANANA	50	Tomorrow, in Spanish	Later, in Latin America
+AGUA	46	Water, in Spanish	Spanish water
+ELNINO	52	Pacific weather pattern	Warm Pacific current
+BUENOS	42	___ Aires	___ dias
+DIA	38	Day, in Spanish	___ de los Muertos
+DIAS	42	Buenos ___ (good morning)	Spanish days
+ESTA	36	Como ___ usted?
+ARRIBA	48	Spanish cheer	Up, in Spanish
+GATO	42	Spanish cat	Cat, in Cancun
+PERRO	40	Spanish dog	Dog, in Spanish
+ROJO	40	Spanish red	Red, in Mexico
+LECHE	42	Dulce de ___	Spanish milk
+QUESO	58	Cheesy dip	Chips' partner at a Tex-Mex spot
+ETRE	36	French to be	Raison d'___
+ESTE	36	East, in Spanish
+LYCEE	30	French high school
+ROI	36	French king	King, in France
+REINE	30	French queen
+PERE	40	French father	___ Noel
+DEJA	46	___ vu	Already, in French
+LAIT	42	Cafe au ___	Milk, in Paris
+BLANC	42	White, in French	Sauvignon ___
+NOIR	46	Black, in French	Pinot ___	Film ___
+BLEU	42	Blue, in French	Cordon ___
+BIEN	42	Well, in French	Tres ___
+ALLEZ	40	Go!, in French	French cheer
+NEIN	44	No, in German	German refusal
+DANKE	48	Thanks, in German	German thanks
+BITTE	36	Please, in German
+GUTEN	44	___ Tag	___ Morgen
+DAS	38	German article	___ Boot (submarine film)
+EIN	40	German a	One, in German
+EINS	40	One, in German	German number
+ZWEI	38	Two, in German
+DREI	38	Three, in German
+FRAU	46	German woman	Mrs., in Munich
+HERR	42	Mister, in Munich	German title
+ACH	36	German oh!	Exclamation in Berlin
+AUF	38	___ Wiedersehen
+NYET	44	No, in Russian	Russian refusal
+KAWAII	40	Cute, in Japanese slang	Adorable, in J-pop style
+MAHALO	50	Thanks, in Hawaii	Hawaiian thank-you
+GRAZIE	46	Thanks, in Italian	Italian thank-you
+BELLA	44	Beautiful, in Italian	Italian beauty
+NONNA	48	Italian grandma	Grandmother, in Rome
+MAZEL	46	___ tov!	Luck, in Yiddish
+OYVEY	44	Yiddish lament	Woe is me!
+ETAL	42	Bibliography abbr.	And others, in footnotes
+ANNO	30	___ Domini
+CARPE	42	___ diem	Seize, in Latin
+DIEM	42	Carpe ___	Day, in Latin
+ALMA	42	___ mater	Nourishing, in Latin
+ATBAT	46	Plate appearance	Batter's turn	Hitting, in baseball
+ASIS	50	Without warranty	Like some yard-sale items	No-returns sale condition
+ATALL	46	In the least	Even a little
+INAWE	48	Wide-eyed with wonder	Gobsmacked
+ONEND	42	Upright, like hair in fright	Continuously, as for hours
+OHNO	56	Uh-oh!	Cry after a spill
+ISIT	42	Really?	You don't say?
+ITSME	46	Knock-knock reply	Answer to Who's there?
+YAY	56	Hooray!	Cheer of joy	Woo-hoo!
+UHOH	54	Trouble's coming!	Oops-like exclamation
+OHMY	50	Goodness!	Lions and tigers and bears, ___!
+OHBOY	52	Here we go!	Gee whiz!
+WOOT	40	Online cheer	Gamer's cheer
+WOOHOO	52	Cry of glee	Party yell
+YEEHAW	50	Rodeo whoop	Cowboy's yell
+TADA	56	Magician's reveal	Behold!
+EWW	46	Gross!	Cry at a bug in the soup
+YOHO	40	Pirate's cry	___ and a bottle of rum
+ATTA	50	___ boy!	___ girl!
+ATEASE	46	Relax, soldier	Drill sergeant's command
+ATSEA	48	Sailing	Confused
+ATONCE	46	Immediately	Right now
+ATLAST	50	Finally!	Etta James classic
+ALLIN	52	Poker bet of everything	Fully committed
+ALLSET	50	Ready to go	Good to go
+INTIME	46	Not late	Eventually
+INONE	44	Hole ___ (ace)	Combined
+INLOVE	50	Smitten	Head over heels
+INSYNC	46	Coordinated	Perfectly matched
+ONTIME	52	Punctual	Not late
+ONTAP	50	Available, as beer	Draft, as a drink
+ONICE	46	Chilled	Put off for later
+ONAIR	50	Broadcasting	Studio sign
+ONSALE	52	Discounted	Marked down
+ONCUE	48	At the right moment	Just as planned
+ONTOP	46	In the lead	Winning
+ONEUP	48	Outdo	Best by a bit
+ATIT	42	Busy	Working away
+NOTME	44	Kid's denial	Finger-pointing reply
+NOTSO	44	That's untrue!	Hardly
+IMIN	50	Count me in!	Poker player's words
+IMOUT	44	Fold call	Count me out!
+IDO	56	Altar words	Wedding vow	Vow at a wedding
+LETSGO	52	Come on!	Rally cry
+NOTYET	44	Hold on	Still waiting
+SOSO	50	Meh	Middling
+OHWELL	50	C'est la vie	Shrug of acceptance
+GOTIT	50	Understood!	Roger that!
+SEEYA	50	Later!	Bye-bye
+TATA	46	Bye-bye	Cheerio
+BYEBYE	50	So long!	Farewell to a toddler
+UMM	42	Hesitant sound	Well, let me think
+TSK	46	Disapproving sound	Cluck of disapproval
+TSKTSK	44	Shame on you!	Disapproving sounds
+OWIE	46	Boo-boo	Kid's minor injury
+YOWZA	44	Wow!	Hubba hubba
+ZOWIE	40	Wowza!	Comic-book exclamation
+GEEZ	50	Sheesh!	Good grief!
+YOOHOO	46	Hey, over here!	Chocolate drink brand
+KAPOW	42	Comic-book punch sound	Pow!
+ZZZ	46	Sleep sound	Snooze in comics
+ZZZS	40	Shut-eye	Comics snores
+ABCS	48	Basics	Kindergarten lessons
+XOXO	52	Hugs and kisses	Letter sign-off
+IOUS	50	Markers	Debtors' notes
+TGIF	54	End-of-week cheer	Friday cry, briefly
+OHIOAN	40	Buckeye State native	Clevelander, e.g.
+OSCAR	62	Academy Award	Sesame Street grouch	Statuette for Best Picture
+LISA	56	Simpson with a saxophone	Mona ___
+LUKE	56	Skywalker of Star Wars	Gospel writer
+LUCY	58	Charlie Brown's football holder	I Love ___
+SAM	50	Uncle ___	Frodo's loyal gardener
+FRED	50	Flintstone of Bedrock	Dancer Astaire
+ERIC	44	Comedian Idle	Clapton of rock
+STAN	46	Laurel of comedy	Marvel's Lee
+LARRY	46	Stooge with frizzy hair	Bird of the Celtics
+KENNY	42	Singer Rogers	Saxophonist ___ G
+GARY	40	SpongeBob's snail	Indiana city
+CLARK	48	Superman's first name	Kent of the Daily Planet
+DONALD	52	Disney duck	Daisy's beau
+BRUNO	50	Singer Mars	We don't talk about him in Encanto
+TAYLOR	52	Swift of pop	Singer Swift
+LIONEL	42	Hello singer Richie	Toy train brand
+SARAH	44	Abraham's wife	Singer McLachlan
+JASON	46	Argonauts leader	Golden Fleece seeker
+ROSIE	44	___ the Riveter	Jetsons robot maid
+VENUS	58	Second planet from the sun	Tennis great Williams	Goddess of love
+PLUTO	60	Dwarf planet	Mickey's dog
+GREECE	60	Acropolis's country	Athens's nation	Olympics birthplace
+POLAND	52	Warsaw's country	Chopin's homeland
+PENN	46	Philadelphia's founder	Ivy in Philadelphia
+UNO	56	Card game with Skips	One, in Spanish	Game with wild cards
+OLE	56	Bullfight cheer	Flamenco shout
+TORO	50	Bullring beast	Spanish bull
+NADA	56	Zilch	Nothing, in Spanish
+AMORE	50	Love, in Italian	That's ___ (Dean Martin song)
+VOILA	56	There you have it!	Magician's flourish
+SOIREE	52	Evening party	Fancy get-together
+UBER	56	Lyft rival	Very, in slang	Ride-hailing app
+SOS	52	Distress signal	Morse code call for help
+APP	58	Phone download	Home-screen icon	Ride-hailing ___
+ABC	48	Alphabet start	Easy as ___
+TNT	50	Wile E. Coyote's explosive	Dynamite stuff, briefly
+EDEN	58	Garden of Genesis	Paradise	East of ___
+SANTA	64	Rudolph's boss	North Pole resident	Gift-giver on Christmas Eve
+JAN	44	New Year's month, abbr.	Winter month, abbr.
+DEC	44	Christmas month, abbr.	Last month, abbr.
+MON	42	Week start, abbr.	Day after Sun.
+FRI	44	TGIF day	Day before Sat.
+THU	36	Day before Fri.	Weekday, abbr.
+TUE	36	Day after Mon.	Weekday abbr.
+SEC	46	Moment, briefly	Just a ___!
+MIN	42	Hour part, abbr.	Max's opposite, briefly
+NOS	40	Refusals	Thumbs-down votes
+AVE	46	Fifth or Park, briefly	___ Maria
+EST	44	NYC time zone	Winter clock setting in Boston, abbr.
+ETS	50	Alien visitors, briefly	UFO passengers
+SENSEI	50	Martial arts teacher	Dojo master
+SHEESH	44	Good grief!	Oh, come on!
+NOM	36	Yummy, in memes	Munching sound, online
+AHH	42	Spa sigh	Sound at the doctor's
+ARGH	46	Pirate's grumble	Cry of frustration
+BAM	46	Emeril's catchphrase	Comic-book punch sound
+OKS	44	Approves	Gives the go-ahead
+XOS	42	Hugs and kisses	Kisses, in letters
+MIA	46	Mamma ___!	Missing soldier, briefly
+TEL	38	___ Aviv	Phone no. abbr.
+VIN	38	French wine	___ rouge
+BON	44	___ appetit!	___ voyage!
+BEAUX	36	Suitors	Boyfriends, old-style
+ASTRO	50	Houston ballplayer	Jetsons dog
+BOOBOO	42	Minor injury, to a kid	Yogi's sidekick
+UPTO	40	Plotting	As many as
+LETGO	48	Release	Fire from a job
+ITSA	38	___ deal!	___ small world
+ICAN	42	___ do it!	Little engine's words
+IMSO	36	___ sorry!	___ proud of you!
+WOWIE	36	Gee whiz!	Holy cow!
+BAMBAM	42	Pebbles's pal	Club-swinging Flintstones tot
+JETSON	44	George of the Space Age	Elroy's family name
+EAUX	30	French waters
+NEPALI	38	Kathmandu native	Language of Kathmandu
+QTS	36	Gallon parts, abbr.	Milk amounts, abbr.
+WIFI	62	Cafe internet	Hotspot offering	Wireless web access
+VLOG	52	Video diary	YouTube journal
+VLOGS	46	Video diaries	YouTube journals
+ECARD	46	Online greeting	Digital birthday greeting
+EBOOK	52	Kindle download	Digital read
+EBOOKS	46	Kindle downloads	Digital reads
+IPADS	46	Apple tablets	Tablets with Pencils
+NOOB	46	Gaming newbie	Rookie, online
+NOOBS	40	Gaming newbies	Online rookies
+GIFS	50	Looping images	Animated reactions
+SMH	38	Text head shake	Disappointed, in texts
+TMI	50	Too much information!	Overshare reaction, briefly
+DMS	46	Private social media messages	Inbox notes on Instagram, briefly
+BAE	40	Sweetie, in slang	Boo, in texts
+FAQS	44	Help page items, briefly	Common queries, for short
+URLS	44	Web addresses, briefly	Browser bar entries
+ATMS	46	Cash machines, briefly	Bank kiosks
+CEOS	46	Corporate heads, briefly	Corner office VIPs
+UFOS	50	Flying saucers, briefly	Roswell sightings
+DVDS	46	Movie discs	Rental discs of old
+CDS	46	Old music discs	Bank savings, briefly
+PDFS	42	Document files	Email attachments, often
+SUVS	48	Family haulers, briefly	Big rides
+ATVS	42	Off-roaders, briefly	Quads
+MVPS	44	Game standouts, briefly	Top players
+VIPS	48	Big shots, briefly	Bigwigs
+BFFS	48	Besties, in texts	Pals for life
+EMTS	42	Ambulance crews, briefly	First responders
+RSVPS	46	Invitation replies	Reply-card letters
+DJS	48	Party spinners	Radio hosts, briefly
+TVS	46	Flat screens	Living room sets
+PCS	42	Desktops, briefly	Laptops, e.g.
+LEGOS	56	Toy bricks	Plastic building blocks
+ZUMBA	54	Latin dance workout	Dance fitness class
+ACAI	50	Superfood berry	___ bowl
+BOBA	54	Bubble tea pearls	Tapioca drink, informally
+MATCHA	54	Green tea powder	Latte made with green tea
+CHAI	56	Spiced tea	___ latte
+GUAC	50	Avocado dip, briefly	Chipotle extra
+EDAM	50	Dutch cheese	Red-waxed cheese
+GOUDA	54	Dutch cheese	Smoked cheese option
+GELATO	60	Italian ice cream	Creamy Italian treat
+MOCHI	52	Japanese rice cake	Ice cream wrapped in rice dough
+KPOP	52	BTS's genre	Korean pop music
+BTS	46	K-pop supergroup	Dynamite boy band
+ACDC	48	Back in Black band	Highway to Hell rockers
+INXS	36	Need You Tonight band
+DEVO	40	Whip It band	New wave band with red hats
+ELO	42	Mr. Blue Sky band, briefly	Jeff Lynne's band
+WEEZER	42	Buddy Holly band	Say It Ain't So band
+NSYNC	50	Bye Bye Bye band	Justin Timberlake's old band
+ARIANA	54	Singer Grande	7 Rings singer
+LORDE	50	Royals singer	New Zealand pop star
+SIA	46	Chandelier singer	Wig-wearing pop star
+SZA	40	Kill Bill singer	R&B star
+DUA	42	Singer ___ Lipa	Lipa of pop
+LIPA	44	Dua of pop	Levitating singer
+BIEBER	48	Pop star Justin	Baby singer
+KESHA	42	Tik Tok singer	Pop star from Nashville
+KATY	52	Singer Perry	Roar singer
+MOBY	46	___ Dick	Electronic musician
+EMINEM	50	Lose Yourself rapper	Slim Shady
+JAYZ	44	Empire State of Mind rapper	Beyonce's husband
+TPAIN	36	Auto-Tune singer
+NORAH	44	Singer Jones	Don't Know Why singer
+ETTA	52	At Last singer James	Blues singer James
+NINA	44	Singer Simone	One of Columbus's ships
+JOAN	46	___ of Arc	Singer Baez
+ALANIS	42	Ironic singer	Singer Morissette
+TINA	52	Turner of rock	Comedian Fey
+CYNDI	42	Girls Just Want to Have Fun singer
+CELINE	50	Singer Dion	My Heart Will Go On singer
+BJORK	40	Icelandic singer	Singer in a swan dress
+ROBYN	36	Dancing On My Own singer
+ANDRE	42	Tennis star Agassi	Giant wrestler
+ICET	36	Law & Order actor-rapper
+DMC	36	Run-___
+DRE	42	Rapper Dr. ___	Beats maker Dr. ___
+NAS	36	Illmatic rapper
+ALDA	50	M*A*S*H star Alan	Hawkeye portrayer Alan
+ALAN	42	Actor Alda	Comic Cumming
+AMY	44	Poehler of Parks and Recreation	Little Women sister
+ARNOLD	46	Terminator star Schwarzenegger	Golfer Palmer
+ARTHUR	46	King of Camelot	Aardvark of kids' TV
+BETTY	46	___ Boop	___ White
+BOOP	46	Betty of cartoons	Playful nose tap
+BLUTO	40	Popeye's rival	Olive Oyl suitor
+POPEYE	56	Spinach-eating sailor	Olive Oyl's sweetie
+CASPER	52	Friendly ghost	Cartoon ghost
+CALVIN	46	Hobbes's pal	Klein of fashion
+HOBBES	44	Calvin's tiger	Tiger of the funnies
+CLINT	46	Eastwood of Westerns	Actor Eastwood
+CLIO	36	Advertising award	Muse of history
+DENZEL	52	Actor Washington	Training Day star
+DWIGHT	44	Schrute of The Office	Ike's first name
+EFRON	40	Actor Zac	High School Musical star
+EGOT	42	Emmy-Grammy-Oscar-Tony feat	Showbiz grand slam
+ELAINE	44	Seinfeld's ex	Julia Louis-Dreyfus role
+ELLE	50	Fashion magazine	___ Woods of Legally Blonde
+EMMA	48	Austen heroine	Actress Stone or Watson
+EMMY	56	TV award	Statuette with wings
+EMMYS	50	TV awards	Annual TV honors
+GRAMMY	54	Music award	Record of the Year prize
+OSCARS	58	Academy Awards	Hollywood honors
+OBIE	38	Off-Broadway award
+OBIES	34	Off-Broadway awards
+TONYS	46	Broadway awards	Theater honors
+HAGAR	36	Horrible comic-strip Viking
+HALLE	46	Actress Berry	Monster's Ball star
+IDRIS	46	Actor Elba	Luther star
+JIM	44	Halpert of The Office	Pam's husband on The Office
+PAM	42	Beesly of The Office	Cooking spray brand
+JULIA	46	Chef Child	Actress Roberts
+KEANU	52	Actor Reeves	The Matrix star
+KRAMER	46	Seinfeld neighbor	Jerry's wacky friend
+NEWMAN	42	Hello, ___ (Seinfeld line)	Paul of film
+MERYL	50	Actress Streep	The Devil Wears Prada star
+STREEP	42	Meryl of film	Actress with many Oscar nods
+MINDY	40	Kaling of comedy	Mork's earthling pal
+KALING	36	Comic Mindy
+MONICA	44	Courteney Cox's Friends role	Chandler's wife on Friends
+RACHEL	44	Jennifer Aniston's Friends role	Ross's on-and-off love
+ROSS	44	Friends paleontologist	Painter Bob
+NEO	50	The Matrix hero	Keanu Reeves role
+NILES	38	Frasier's brother	Brother on Frasier
+OLIVIA	44	Singer Rodrigo	Actress Newton-John
+ORSON	42	Citizen Kane director Welles	Card of sci-fi
+WELLES	36	Citizen Kane director Orson
+PITT	44	Actor Brad	Moneyball star Brad
+RYAN	42	Actor Gosling	Saving Private ___
+SNL	52	Live from New York show	Late-night sketch show, briefly
+TARZAN	54	Jungle swinger	Jane's man
+WALLE	50	Pixar robot	Trash-compacting film robot
+REMY	48	Ratatouille rat	Rat chef of film
+MERIDA	44	Brave princess	Red-haired Pixar archer
+TIANA	46	Princess and the Frog heroine	Disney princess from New Orleans
+RAYA	40	Disney heroine who seeks the last dragon
+ZIGGY	40	Comic strip by Tom Wilson	Bowie's Stardust
+FOZZIE	44	Wocka wocka Muppet	Joke-telling bear
+ZOE	38	Actress Saldana	Sesame Street Muppet
+ABBY	38	Dear ___ (advice column)	Wambach of soccer
+SVEN	44	Kristoff's reindeer	Frozen reindeer
+HANS	38	Frozen villain	Brinker of the silver skates
+MIGUEL	38	Coco boy	Remember Me singer in Coco
+ARCHIE	46	Riverdale redhead	Bunker of All in the Family
+RICHIE	36	Singer Lionel	Fonzie's pal Cunningham
+DENNIS	44	___ the Menace	Mr. Wilson's pest
+CATHY	36	Comic strip with ack!
+ROY	36	Rogers of Westerns	Dale Evans's husband
+MARIAN	36	Robin Hood's love
+ALBANY	50	New York's capital	Capital on the Hudson
+AMES	40	Iowa State's city	Iowa college town
+BOGOTA	46	Colombia's capital	Andean capital city
+BRONX	52	Yankee Stadium's borough	Borough north of Manhattan
+CANCUN	56	Mexican beach resort	Spring break spot on the Yucatan
+DAKOTA	46	North or South state	Plains state name
+DAYTON	40	Ohio city where the Wright brothers lived	Ohio city
+DULUTH	38	Minnesota port on Lake Superior
+FARGO	50	North Dakota city	Coen brothers film
+FRESNO	40	California city in the Central Valley
+HARLEM	50	Manhattan neighborhood	___ Globetrotters
+IOWAN	44	Des Moines native	Hawkeye State resident
+IOWANS	40	Des Moines natives	Hawkeye State residents
+ITHACA	42	Cornell's city	Odysseus's island home
+KNICKS	50	Madison Square Garden team	New York hoopsters
+LAKERS	56	Los Angeles hoops team	Kobe's team
+METS	52	Citi Field team	New York ballclub
+NAPA	56	California wine valley	Wine country valley
+NEWARK	44	New Jersey's largest city	Airport city near NYC
+OTTAWA	54	Canada's capital	Capital on the Rideau Canal
+PEORIA	40	Will it play in ___?	Illinois city
+PROVO	38	BYU's city	Utah city
+QUEBEC	52	French-speaking Canadian province	Province east of Ontario
+SALEM	50	Oregon's capital	Massachusetts witch-trial town
+SEDONA	46	Arizona red-rock town	Town with vortexes
+SOHO	46	Manhattan arts district	London district
+SONOMA	44	California wine county	Napa neighbor
+SOX	44	Red or White team	Boston nine, familiarly
+TACOMA	40	Washington port city	City south of Seattle
+TEXAN	52	Lone Star State native	Houstonian, e.g.
+TEXANS	46	Lone Star Staters	Houston NFL team
+TOPEKA	46	Kansas capital	Capital of the Sunflower State
+UTICA	34	Upstate New York city
+WACO	46	Baylor's city	Texas city on the Brazos
+YUMA	40	3:10 to ___	Arizona city
+CUSCO	40	Peruvian city near Machu Picchu	Old Inca capital
+ASTROS	48	Houston ballclub	Minute Maid Park team
+NINERS	44	San Francisco gridders, familiarly	49ers, informally
+SIOUX	40	Lakota people	___ Falls, South Dakota
+SKOKIE	30	Chicago suburb
+OAXACA	36	Mexican state known for mole
+LAPAZ	42	Bolivia's capital	World's highest capital city
+BUCS	38	Tampa Bay gridders, informally
+NATS	38	Washington ballclub, familiarly
+TEMPE	40	Arizona State's city	Phoenix suburb
+MACON	32	Georgia city
+OGDEN	30	Utah city

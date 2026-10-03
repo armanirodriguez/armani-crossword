@@ -1,0 +1,75 @@
+# Deploy the player site (site/) to GitHub Pages.
+#
+# One-time setup:
+#   1. Push this repo to GitHub with the published puzzles (site/puzzles/) committed.
+#   2. On GitHub: Settings -> Pages -> "Build and deployment" -> Source: "GitHub Actions".
+#   3. Push to main (or master), or run this workflow by hand: Actions tab -> "Deploy site to GitHub Pages" ->
+#      "Run workflow". The site appears at https://<user>.github.io/<repo>/ — put that address in the builder's
+#      Site settings as "Share URL" (it is used in share text and link previews).
+#
+# How scheduled puzzles go live:
+#   Publishing in the builder writes site/puzzles/<date>.json; commit and push it any time before its date. Every
+#   build runs `npm run build -- --released-only --lead-hours 3`, which leaves out puzzles that are not due yet: a
+#   puzzle is included once it is less than 3 hours to midnight of its date in the site's time zone (site/config.json
+#   "timeZone"; when that is empty, in the earliest zone on Earth, UTC+14, because each solver then switches at their
+#   own midnight). This workflow runs every hour, so each puzzle is online 2–3 hours before its midnight — with two
+#   spare runs in case GitHub delays or skips one — and the player unlocks it for solvers exactly at midnight (in the
+#   site's zone, or each solver's own). Daylight saving time and your own zone don't matter: no cron line to adjust.
+#
+# Things to know:
+#   - In a public repository GitHub turns off scheduled workflows after 60 days without any activity (such as a
+#     commit); pushing puzzles counts as activity. Once that happens, scheduled puzzles stop going live. Re-enable it
+#     on GitHub: Actions tab -> "Deploy site to GitHub Pages" (left) -> "Enable workflow", then "Run workflow".
+#   - In a PUBLIC repository anyone can read site/puzzles/ on GitHub, including puzzles scheduled for later. Their
+#     answers are only obfuscated (not encrypted), so a determined friend could peek. Keep the repo private (GitHub
+#     Pages from a private repo needs a paid plan) or publish puzzles close to their date if that matters to you.
+#     Drafts and data/user-clues.json are in .gitignore for the same reason.
+#   - Each run takes well under a minute (about 720 runs a month). Public repositories don't pay for Actions minutes;
+#     on a paid plan for a private repository this uses part of the monthly free minutes.
+
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: "7 * * * *"   # every hour at minute 7 (UTC); see "How scheduled puzzles go live" above
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment at a time; never cancel one that is already publishing.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      # The build script only uses Node built-ins, so no `npm ci` is needed.
+      - name: Build site (released puzzles only)
+        run: npm run build -- --released-only --lead-hours 3
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

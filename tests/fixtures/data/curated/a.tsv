@@ -1,0 +1,9 @@
+# Fixture curated file A (tests/unit/data.test.js). Format: WORD<TAB>SCORE<TAB>clue...
+ZEBRA	40	Striped animal	Savanna grazer
+QUIRKY	60	Offbeat
+CAT	20	Feline pet
+FIXTUREWORD	55	Test-only entry
+SPACEDOUT	45	Dazed
+BADSCORE	abc	ignored: score is not a number
+X	50	ignored: too short
+

@@ -1,0 +1,996 @@
+# extra-long.tsv: lively multi-word phrases and modern entries (6-15 letters) not in the base wordlist
+ICECREAM	85	Sundae base	Scoop shop treat	Cone filler
+HOTDOG	80	Ballpark frank	Wiener in a bun	Show-off on skis, maybe
+FRENCHTOAST	82	Eggy brunch dish	Breakfast made from stale bread	Syrup-topped morning slices
+FRENCHFRIES	82	Burger sidekicks	Spuds served in a paper sleeve	Ketchup dippers
+COMFORTFOOD	84	Mac and cheese, for many	Soul-soothing fare	Chicken soup, e.g.
+PIZZAPARTY	82	Classroom reward, often	Pepperoni-fueled celebration
+PEANUTBUTTER	80	Jelly's partner	Sandwich spread from legumes	PB in PB&J
+GRILLEDCHEESE	80	Tomato soup's companion	Melty sandwich	Toasty diner staple
+CHOCOLATECHIP	78	Classic cookie variety	Kind of cookie or pancake
+HOTCHOCOLATE	80	Cocoa on a cold day	Marshmallow-topped mug filler
+HOTSAUCE	75	Bottle of fire for tacos	Spicy condiment	Sriracha, e.g.
+FOODTRUCK	78	Lunch on wheels	Mobile taco stand, maybe
+FOODCOMA	76	Post-Thanksgiving stupor	Drowsiness after a big meal
+SNACKBAR	66	Concession stand	Quick-bite counter
+COFFEEBREAK	74	Midmorning pause at work	Time for a cup of joe
+COFFEESHOP	72	Cafe	Place for a latte and laptop
+BAKESALE	74	School fundraiser with brownies	Cookie-selling event
+TACOTUESDAY	80	Weekly Mexican food tradition	Midweek fiesta, alliteratively
+TRAILMIX	74	Hiker's snack	Nuts, raisins and M&Ms combo	GORP
+COTTONCANDY	80	Fluffy fair treat	Spun sugar on a stick
+CANDYCANE	78	Striped Christmas treat	Hooked peppermint stick
+CANDYBAR	72	Vending machine treat	Snickers or Twix, e.g.
+GUMMYBEARS	76	Chewy candy critters	Haribo treats
+APPLEPIE	78	All-American dessert	Dessert served a la mode, often	Lattice-topped dessert
+PUMPKINPIE	78	Thanksgiving dessert	Fall dessert with whipped cream
+BIRTHDAYCAKE	78	Dessert with candles	Treat before a wish
+MACANDCHEESE	82	Kid-favorite pasta dish	Elbow noodles in a creamy orange sauce	Comfort food from a blue box, often
+CHICKENSOUP	74	Remedy for a cold, reputedly	Noodle-filled bowl
+CHICKENWINGS	76	Buffalo-style game day snack	Sports bar appetizer
+BUFFALOWINGS	76	Spicy bar food	Game day finger food with blue cheese
+CHIPSANDDIP	74	Party snack combo	Classic game day spread
+BURRITOBOWL	74	Chipotle order without the wrap	Rice-and-beans lunch
+SUSHIROLL	72	California ___, e.g.	Maki order
+BUBBLETEA	78	Drink with tapioca pearls	Boba
+ICEDCOFFEE	76	Summer cafe order	Chilled brew
+ICEDTEA	72	Summer porch drink	Arnold Palmer half
+LEMONADESTAND	80	Kid's first business, often	Summer sidewalk venture
+ORANGEJUICE	74	Breakfast glass of OJ	Florida citrus drink
+ROOTBEER	74	Float soda	A&W product
+ROOTBEERFLOAT	80	Soda fountain treat with ice cream	Frothy brown dessert drink
+BANANASPLIT	80	Sundae in a long dish	Fruity ice cream dessert
+SMORES	76	Campfire treat	Graham cracker sandwich with marshmallow
+FORTUNECOOKIE	80	Dessert with a message inside	Takeout treat that predicts the future?
+DINNERPARTY	72	Evening gathering with a menu	Social meal at home
+BREAKFASTINBED	78	Mother's Day treat, maybe	Pampering morning meal
+MIDNIGHTSNACK	80	Late fridge raid	Bite after bedtime
+SWEETTOOTH	78	Craving for sugar	Dessert lover's trait
+DEEPDISH	72	Chicago-style pizza	Thick-crust type
+THINCRUST	68	New York-style pizza feature	Crispy pizza base
+PIZZASLICE	70	Triangle from a pie	Dollar ___ (NYC classic)
+EGGROLL	70	Chinese takeout appetizer	Fried wrapped starter
+FRIEDRICE	70	Takeout side with peas and egg	Wok-tossed grain dish
+SODAPOP	66	Fizzy drink	Coke, in the Midwest
+SPARKLINGWATER	70	Fizzy alternative to soda	LaCroix, e.g.
+COFFEEMUG	66	Morning cup	Office gift with a pun, often
+WAFFLECONE	74	Crunchy ice cream holder	Grid-patterned alternative to a cup
+SOFTSERVE	74	Swirled ice cream	Dairy Queen offering
+SNOWCONE	74	Shaved ice treat	Syrupy summer cup
+SNICKERDOODLE	76	Cinnamon-sugar cookie	Fun-to-say cookie
+BROWNIEBITES	62	Small chocolate squares	Bake sale minis
+AVOCADOTOAST	78	Millennial brunch staple	Trendy cafe breakfast with a green spread
+BRUNCHDATE	66	Weekend meetup with mimosas	Late-morning get-together
+FARMERSMARKET	76	Weekend produce stalls	Place to buy local tomatoes
+GROCERYLIST	72	Supermarket reminder	Fridge note before a store run
+CHEFSKISS	74	"Perfect!" gesture	Fingertip smooch of approval
+SECONDHELPING	72	Another plate, please	Seconds
+DOGGYBAG	72	Leftovers container	Restaurant take-home box
+POPTART	66	Toaster pastry	Frosted breakfast treat
+BEANBURRITO	60	Wrapped vegetarian order	Tex-Mex lunch
+CORNDOG	76	Fair food on a stick	Battered frank
+FUNNELCAKE	76	Powdered-sugar fair treat	Carnival fried dough
+KETTLECORN	72	Sweet-and-salty popcorn	Fair snack
+CARAMELAPPLE	74	Fall fair treat on a stick	Sticky orchard snack
+PIEEATING	60	___ contest (fair event)	Like a messy county fair contest
+TEAPARTY	72	Mad Hatter's gathering	Kids' pretend event with cups
+COOKIEJAR	74	Place for a hand to get caught	Kitchen counter container
+BROWNBAG	70	Pack a lunch	Kind of lunch or seminar
+SALADBAR	68	Buffet greens station	Restaurant help-yourself area
+ALLYOUCANEAT	72	Buffet promise	Kind of buffet
+HAPPYHOUR	76	After-work discount time	Bar special period
+SPEEDDATING	66	Rapid-fire romance event	Matchmaking with a timer
+GAMENIGHT	80	Evening of Monopoly and snacks	Friends' Scrabble-and-chips evening
+BOARDGAME	72	Scrabble or Clue	Tabletop pastime with dice, often
+CARDGAME	66	Poker or Go Fish	Deck-based pastime
+ESCAPEROOM	80	Puzzle-filled locked chamber	Team activity with a ticking clock
+HIGHFIVE	80	Celebratory slap	Palm-to-palm "Nice!"
+FISTBUMP	76	Knuckle greeting	Casual "Way to go!"
+FIELDGOAL	72	Three-pointer in football	Kick through the uprights
+HOMERUN	76	Four-bagger	Big hit over the fence	Total success, figuratively
+GRANDSLAM	78	Bases-loaded homer	Tennis sweep of majors
+SLAMDUNK	78	Emphatic basket	Sure thing, figuratively
+BUZZERBEATER	80	Last-second shot	Clutch basket as time expires
+HATTRICK	76	Three goals by one player	Hockey trio that prompts tossed caps
+HOLEINONE	80	Golfer's dream shot	Ace on the links
+HAILMARY	76	Desperate long pass	Last-ditch effort
+SUPERBOWL	78	NFL title game	Big February game
+WORLDSERIES	76	October baseball showdown	Fall Classic
+MARCHMADNESS	82	Bracket-busting tournament	College hoops frenzy
+FANTASYFOOTBALL	78	Draft-based pastime for NFL fans	Game with imaginary rosters
+TABLETENNIS	72	Ping-pong	Paddle sport with a net
+PINGPONG	76	Table tennis	Back-and-forth game with paddles
+DODGEBALL	74	Gym class game of evasion	Duck-and-weave game
+JUMPROPE	72	Double Dutch need	Recess skipping item
+HIDEANDSEEK	80	Game with "Ready or not, here I come!"	Kids' searching game
+TAGYOUREIT	74	Chaser's cry	Line in a playground chase
+TUGOFWAR	76	Rope-pulling contest	Field day showdown
+SACKRACE	68	Field day hopping event	Potato-bag competition
+EGGTOSS	60	Picnic game that can get messy	Catching contest with a fragile object
+MARCOPOLO	78	Pool game with a call and response	Swimmer's game of blind tag
+BELLYFLOP	74	Painful dive	Splashy diving mistake
+MINIGOLF	76	Putt-putt	Windmill course game
+PUTTPUTT	72	Mini golf	Windmill-obstacle game
+BOWLINGALLEY	70	Place for strikes and spares	Lane venue
+GUTTERBALL	70	Bowler's miss	Zero-pin roll
+LASERTAG	74	Game with infrared vests	Arena shootout with beams
+ROLLERSKATES	70	Four-wheeled footwear	Rink rentals
+ICESKATING	72	Rink activity in winter	Gliding on blades
+SKILIFT	68	Chair to the top of a slope	T-bar, e.g.
+SNOWBALLFIGHT	80	Winter skirmish	Frosty playground battle
+SNOWANGEL	78	Figure made by flapping on the ground	Winter yard imprint
+BOXSCORE	62	Game summary in a newspaper	Stats table
+SUDDENDEATH	70	Tiebreaker format	Next score wins
+GAMEDAY	72	Big match date	When tailgaters gather
+GAMEPLAN	72	Strategy	Coach's blueprint
+GAMECHANGER	78	Revolutionary development	Something that shifts everything
+HOMETEAM	68	Local squad	Side batting last
+HOMECOURT	66	___ advantage	Familiar territory
+COUCHPOTATO	78	Sofa sloth	TV-loving lounger
+PEPRALLY	70	School spirit gathering	Pregame assembly
+TEAMSPIRIT	70	Esprit de corps	Rah-rah attitude
+TEAMPLAYER	72	Cooperative colleague	One who puts the group first
+PERSONALBEST	74	Top performance yet	PR, to runners
+FINISHLINE	74	Race's end	Tape to break
+STARTINGLINE	66	Where a race begins	Runners' mark
+HALFMARATHON	72	13.1-mile race	Shorter road race
+CROSSFIT	60	Intense workout regimen	Box gym program
+YOGAMAT	68	Downward dog surface	Rolled-up studio gear
+YOGACLASS	62	Session of poses	Stretching session
+PUSHUPS	66	Floor exercises	Gym class reps
+JUMPINGJACKS	74	Arm-and-leg warm-ups	Calisthenics star shapes
+SITUPS	60	Abdominal exercises	Crunches' cousins
+GYMRAT	68	Fitness fanatic	Weight room regular
+PERSONALTRAINER	68	Gym coach for one	Workout guide
+SPINCLASS	66	Stationary bike workout	Pedal session
+WARMUP	66	Pre-exercise routine	Opening act, of sorts
+COOLDOWN	66	Post-workout wind-down	Calm period
+POWERNAP	78	Quick energizing snooze	Brief siesta
+CHESSCLUB	62	After-school group with knights	Gathering for checkmates
+CROSSWORDPUZZLE	78	Grid with clues	Daily brain teaser
+JIGSAWPUZZLE	74	Thousand-piece pastime	Brain teaser with interlocking parts
+RUBIKSCUBE	74	Colorful twisting puzzle	1980s craze with 54 stickers
+WORDSEARCH	70	Letter-grid puzzle	Find-the-hidden-terms game
+SUDOKU	70	Nine-by-nine number puzzle	Grid with digits 1-9
+PICTIONARY	70	Drawing guessing game	Sketch-and-guess party pastime
+TRIVIANIGHT	76	Pub quiz event	Weekly bar contest
+PUBQUIZ	70	Bar trivia contest	Team trivia night
+SCAVENGERHUNT	80	Item-finding race	Clue-following game
+TREASUREHUNT	76	Search for buried loot	Pirate-themed game
+TRUTHORDARE	74	Sleepover game of challenges	Pick-one party game
+MUSICALCHAIRS	78	Party game with a shrinking seat count	Shuffling of jobs, figuratively
+SIMONSAYS	76	Game where you must follow the leader	Copycat command game
+REDROVER	70	Arm-linking playground game	Game where kids are called across a line
+DUCKDUCKGOOSE	78	Circle game of tapping heads	Kids' chase game
+FREEZETAG	72	Chase game where touched players stop	Playground game of statues
+TICTACTOE	76	X's and O's	Three-in-a-row game
+CONNECTFOUR	72	Drop-the-checker game	Vertical cousin of tic-tac-toe
+VIDEOGAME	74	Console pastime	Mario adventure, e.g.
+GAMECONSOLE	66	Xbox or PlayStation	Gaming system
+ARCADEGAME	68	Pac-Man, e.g.	Quarter-eating machine
+HIGHSCORE	76	Arcade record	Top tally on a leaderboard
+LEADERBOARD	72	Ranking display	Tournament standings
+BONUSLEVEL	66	Extra stage in a game	Secret stage
+LEVELUP	74	Advance in a game	Improve one's skills
+POWERUP	72	Mushroom for Mario, e.g.	Game boost
+EASTEREGG	76	Hidden surprise in a game	Item for a spring hunt
+SIDEQUEST	68	Optional game mission	Detour from the main plot
+BOSSBATTLE	66	Game's toughest fight	Final level showdown
+GAMEOVER	78	Arcade screen message	"It's all done now!"
+PLAYERONE	62	First gamer	"Ready ___?"
+ROCKANDROLL	80	Elvis's genre	Chuck Berry music
+ROCKSTAR	76	Guitar god	Total pro, figuratively
+POPSTAR	72	Chart-topping singer	Taylor Swift, e.g.
+BOYBAND	72	NSYNC, e.g.	Harmonizing teen heartthrobs
+GIRLGROUP	66	The Supremes, e.g.	Spice Girls, for one
+AIRGUITAR	80	Imaginary instrument	Strummed nothing at a concert?
+KARAOKENIGHT	76	Evening of off-key singing	Bar's sing-along event
+MIXTAPE	76	Old-school playlist	Cassette of favorite songs
+GREATESTHITS	72	Best-of album	Compilation of chart-toppers
+ONEHITWONDER	80	Artist with a single big song	Flash in the pan, musically
+FRONTROW	74	Best seats at a show	Closest seats to the stage
+MOSHPIT	66	Rowdy area at a concert	Slam-dance zone
+CROWDSURF	68	Ride the audience at a show	Be passed hand to hand at a concert
+DRUMROLL	76	"___, please!"	Suspense-building beat
+DRUMSOLO	66	Percussionist's spotlight	Showy stick work
+GUITARSOLO	70	Shredder's moment	Rock song highlight
+JAZZHANDS	78	Showy fluttering fingers	Theatrical wiggle
+BROADWAY	76	Manhattan theater district	Showbiz street of NYC
+SHOWTUNE	72	"Memory," e.g.	Song from a musical
+STANDINGOVATION	80	Rising applause	Audience's highest honor
+OPENINGNIGHT	72	Premiere	First performance
+CURTAINCALL	74	Post-show bow	Final appearance onstage
+BREAKALEG	80	Actor's good-luck wish	Theater "Good luck!"
+CENTERSTAGE	72	Spotlight spot	Focus of attention
+TALENTSHOW	74	School stage competition	Amateur variety night
+MUSICFESTIVAL	70	Coachella, e.g.	Multi-day concert event
+RECORDPLAYER	72	Turntable	Vinyl spinner
+LOVESONG	70	Ballad for a sweetheart	Romantic tune
+EARWORM	78	Song you can't shake	Catchy tune stuck in your head
+BEATBOX	70	Make drum sounds with your mouth	Vocal percussion
+DANCEFLOOR	70	Club's center	Place to bust a move
+DANCEPARTY	74	Get-together with a DJ	Kitchen boogie session
+SLOWDANCE	70	Prom sway	Swaying with a partner
+LINEDANCE	68	Country group routine	Electric Slide, e.g.
+CONGALINE	72	Party chain	Snaking dance
+MOVIENIGHT	80	Popcorn evening at home	Film-watching gathering
+DRIVEIN	72	Outdoor theater for cars	Kind of movie theater
+MOVIESTAR	72	Hollywood celeb	Big-screen icon
+REDCARPET	78	Premiere walkway	Celebrity entrance
+OSCARNIGHT	66	Academy Awards broadcast	Hollywood's big evening
+PLOTTWIST	80	Unexpected story turn	M. Night Shyamalan specialty
+SPOILERALERT	82	Warning before a reveal	"Don't read further if you haven't seen it!"
+HAPPYENDING	78	Fairy tale finale	Rom-com resolution
+BINGEWATCH	78	View a whole season at once	Marathon a show
+SEASONFINALE	74	Last episode till next year	TV cliffhanger time
+REALITYTV	72	Survivor genre	Unscripted programming
+GAMESHOW	74	Jeopardy!, e.g.	TV contest
+SOAPOPERA	70	Daytime drama	Melodramatic serial
+TALKSHOW	68	Late-night program with guests	Couch-and-desk TV format
+REMOTECONTROL	70	Clicker	Couch commander's device
+COMMERCIALBREAK	70	Ad interruption	Time to grab a snack, on TV
+SATURDAYMORNING	68	Cartoon time, traditionally	Weekend start
+ARCHVILLAIN	70	Hero's chief foe	Lex Luthor, to Superman
+ORIGINSTORY	72	Superhero backstory	How it all began
+SECRETIDENTITY	74	Clark Kent, for Superman	Alter ego
+ALTEREGO	70	Second self	Bruce Wayne, to Batman
+STARWARS	82	Saga in a galaxy far, far away	Lucas space epic
+STARTREK	80	Enterprise adventures	"Boldly go" franchise
+DARTHVADER	80	Luke's father	Heavy-breathing Sith lord
+LUKESKYWALKER	78	Jedi hero of Tatooine	Leia's twin
+HARRYPOTTER	82	Boy wizard	Hogwarts hero
+HOGWARTS	76	Wizarding school	Where Hermione studied
+SHERLOCKHOLMES	80	Baker Street sleuth	Watson's partner
+SPIDERMAN	78	Web-slinger	Peter Parker's alter ego
+WONDERWOMAN	76	Amazon superhero	Diana Prince's alter ego
+CAPTAINAMERICA	74	Shield-wielding Avenger	Steve Rogers
+MICKEYMOUSE	80	Disney's big-eared mascot	Minnie's guy
+DONALDDUCK	76	Daisy's guy	Disney's sailor-suited fowl
+BUGSBUNNY	78	"What's up, Doc?" speaker	Looney Tunes rabbit
+SCOOBYDOO	78	Mystery-solving Great Dane	Shaggy's pal
+WINNIETHEPOOH	80	Honey-loving bear	Piglet's pal
+CHARLIEBROWN	78	"Good grief!" kid	Snoopy's owner
+SANTACLAUS	78	North Pole resident	Chimney visitor
+TOOTHFAIRY	76	Pillow visitor	Collector of baby teeth
+EASTERBUNNY	76	Basket-bearing hopper	Spring egg deliverer
+CINDERELLA	76	Glass slipper wearer	Rags-to-riches princess
+SNOWWHITE	74	Princess with seven friends	Poisoned-apple victim
+PETERPAN	76	Boy who wouldn't grow up	Neverland resident
+TINKERBELL	76	Pixie in Neverland	Peter's fairy friend
+CAPTAINHOOK	74	Peter Pan villain	Pirate missing a hand
+MADHATTER	72	Tea party host in Wonderland	Eccentric Carroll character
+CHESHIRECAT	72	Grinning Wonderland feline	Vanishing smiler
+WIZARDOFOZ	78	Dorothy's story	"There's no place like home" film
+YELLOWBRICKROAD	80	Path to Emerald City	Dorothy's route
+TINMAN	70	Oz character seeking a heart	Woodsman of Oz
+COWARDLYLION	74	Oz character seeking courage	Fearful Oz feline
+WICKEDWITCH	70	Oz villain	Green-faced foe of Dorothy
+JAMESBOND	80	Agent 007	Spy who likes his martini shaken
+INDIANAJONES	78	Whip-cracking archaeologist	Harrison Ford adventurer
+TOYSTORY	78	Pixar film with Woody	Buzz Lightyear debut film
+FINDINGNEMO	78	Pixar film about a lost clownfish	Dory's debut movie
+THELIONKING	78	"Hakuna Matata" film	Simba's story
+JURASSICPARK	78	Spielberg dinosaur hit	Film with a T. rex on the loose
+GODZILLA	74	Tokyo-stomping monster	Giant lizard of film
+KINGKONG	74	Giant ape of film	Empire State climber
+FRANKENSTEIN	74	Shelley novel	Doctor with a monster
+COUNTDRACULA	68	Transylvanian vampire	Bram Stoker villain
+GROUPCHAT	80	Friends' text thread	Where memes get shared
+GROUPTEXT	70	Message to many friends	Multi-person message thread
+SELFIESTICK	74	Tourist's extendable pole	Arm-lengthening photo gadget
+PHOTOBOMB	78	Sneak into someone's picture	Spoil a snapshot, playfully
+LIVESTREAM	72	Real-time broadcast online	Twitch feed
+GOVIRAL	76	Spread like wildfire online	Blow up on the internet
+WIFIPASSWORD	72	Thing guests ask for	Network login code
+SMARTHOME	62	House with talking gadgets	Connected residence
+SCREENTIME	74	Parents limit it	Hours on a device
+APPSTORE	66	Download marketplace	Place to get games for a phone
+SOCIALMEDIA	70	Instagram and TikTok	Online networks
+INFLUENCER	70	Sponsored-post maker	Social media trendsetter
+UNFOLLOW	66	Stop tracking online	Social media snub
+DIRECTMESSAGE	64	Private social media note	DM, in full
+TEXTMESSAGE	66	SMS	Phone note
+VIDEOCALL	68	FaceTime session	Zoom meeting, e.g.
+ZOOMCALL	66	Video meeting	Online face-to-face
+MUTEBUTTON	68	Silencer on a remote	Zoom call lifesaver
+CAPSLOCK	70	Key for shouting online	Uppercase toggle
+SPACEBAR	70	Longest key	Keyboard's widest key
+SEARCHENGINE	68	Google, e.g.	Web finder
+SIGNUP	68	Register	Create an account
+TWOFACTOR	62	Kind of authentication	Like logins that text you a code
+CLOUDSTORAGE	62	Online backup space	Dropbox service
+BLUETOOTH	72	Wireless pairing tech	Earbud connection
+POWERBANK	66	Portable battery	Phone juice to go
+LOWBATTERY	72	Phone warning	Red icon cause for panic
+AIRPLANEMODE	76	Phone setting for flights	Offline switch
+DONOTDISTURB	76	Hotel door hanger	Phone's quiet setting
+AUTOCORRECT	78	Texting fixer that causes fails	Ducking feature?
+COPYANDPASTE	72	Duplicate text	Ctrl+C, Ctrl+V
+CTRLALTDELETE	66	Reboot combo	PC salute
+REPLYALL	74	Email faux pas, often	Message to the whole thread
+OUTOFOFFICE	72	Vacation autoreply	Away message
+SPAMFOLDER	66	Junk mail bin	Where unwanted emails go
+INBOXZERO	70	Email organizer's goal	Cleared-out mailbox
+EMAILADDRESS	62	Online contact info	Inbox identifier
+RICKROLL	72	Prank with an '80s music video	Never Gonna Give You Up surprise
+CATVIDEO	72	Popular internet clip with a feline	YouTube kitten clip
+CLICKBAIT	76	"You won't believe what happens next!"	Sensational headline
+PODCASTER	62	Mic-using host	Audio show creator
+YOUTUBER	66	Online video star	Vlogger
+VLOGGER	62	Video diarist	YouTube personality
+THUMBSUP	78	Approval gesture	Like icon
+HEARTEYES	66	Smitten emoji	Lovestruck face icon
+ONLINESHOPPING	70	Cart-filling on a laptop	Amazon habit
+FREESHIPPING	74	Online store perk	No-cost delivery
+CYBERMONDAY	72	Online sales event after Thanksgiving	Post-Black Friday shopping event
+BLACKFRIDAY	74	Post-Thanksgiving sales frenzy	Doorbuster event
+ADDTOCART	70	Online shopping button	Shopper's click
+WISHLIST	70	Gift hopes	Registry of wants
+UNBOXING	68	Popular video genre with new gadgets	Opening a package on camera
+BETATEST	62	Trial run of software	Pre-release trial
+SOFTWAREUPDATE	62	Phone prompt at night	Patch download
+TECHSUPPORT	70	Help desk	"Have you tried turning it off and on?" folks
+HELPDESK	66	Tech support spot	IT counter
+COMPUTERVIRUS	66	Malware	Digital bug
+SELFDRIVING	68	Like some robocars	Autonomous, as a car
+ELECTRICCAR	70	Tesla, e.g.	EV, in full
+ROBOTVACUUM	68	Roomba, e.g.	Autonomous floor cleaner
+VIRTUALREALITY	72	Headset world	VR, in full
+CHATBOT	70	Automated conversational program	Customer service AI
+DARKMODE	72	Night-friendly screen setting	Black-background option
+LOADINGSCREEN	62	Gamer's wait	Spinning wheel display
+PLAYBUTTON	66	Triangle icon	Video starter
+FASTFORWARD	74	Skip ahead	Speed through
+PAUSEBUTTON	66	Freeze control	Remote's two-bar key
+DIGITALCAMERA	62	Pre-phone snapshot device	Point-and-shoot
+PHOTOALBUM	66	Picture book	Snapshot collection
+PROFILEPICTURE	66	Avatar	Image on a social media page
+COMMENTSECTION	68	Place to reply below an article	Web forum below a video
+NEWSFEED	62	Scrolling stream of posts	Facebook timeline
+DOOMSCROLL	70	Keep reading bad news online	Endless phone swipe
+SPEEDRUN	68	Race through a video game	Fast gaming playthrough
+CHEATCODE	72	Up, up, down, down ..., e.g.	Gamer's shortcut
+GAMERTAG	62	Xbox handle	Online gaming name
+ROADTRIP	84	Long drive with friends	Cross-country car adventure	Journey with "Are we there yet?"
+GASSTATION	66	Fill-up stop	Pump spot on a highway
+RESTSTOP	66	Highway break area	Place to stretch on a long drive
+PITSTOP	72	Quick break on a trip	Tire change during a race
+CARPOOLLANE	66	HOV option	Fast route for shared rides
+TRAFFICJAM	74	Gridlock	Rush-hour backup
+RUSHHOUR	72	Commute crunch	Peak traffic time
+BACKSEATDRIVER	78	Unhelpful passenger	Critic who never takes the wheel
+BOARDINGPASS	72	Airport document	Ticket to get on the plane
+WINDOWSEAT	74	View-lover's flight pick	Spot opposite the aisle
+AISLESEAT	66	Spot for easy access on a plane	Choice opposite the window
+JETLAG	74	Time-zone fatigue	Traveler's grogginess
+REDEYE	72	Overnight flight	Late-night departure
+FREQUENTFLYER	72	Mileage collector	Regular jetsetter
+FIRSTCLASS	74	Luxury seating	Top-tier, as service
+SECURITYLINE	64	Airport queue	Shoe-removal spot
+BAGGAGECLAIM	70	Carousel area	Where suitcases come back
+TRAVELBUG	72	Wanderlust	Urge to explore
+STAYCATION	78	Holiday at home	Vacation without leaving town
+SPRINGBREAK	78	March vacation for students	Collegiate beach getaway
+SUMMERVACATION	74	School's out stretch	July getaway
+FAMILYVACATION	68	Trip with the kids	Minivan getaway
+BEACHTOWEL	68	Sand-side spread	Sunbather's cloth
+BEACHBALL	70	Inflatable sphere	Colorful sand toy
+FLIPFLOPS	74	Beach sandals	Changes position, politically
+BOOGIEBOARD	70	Body-surfing slab	Short foam surf toy
+SCUBADIVING	72	Underwater exploring	Reef tour with tanks
+CRUISESHIP	72	Floating resort	Liner with a buffet
+BEDANDBREAKFAST	74	Cozy inn	B&B, spelled out
+YOUTHHOSTEL	62	Cheap traveler lodging	Backpacker's bunk spot
+ROOMSERVICE	72	Hotel delivery	In-suite dining
+CHECKOUTTIME	62	Hotel deadline	When to vacate the room
+SOUVENIRSHOP	66	Keychain seller	Tourist trap store
+TOURISTTRAP	76	Overpriced attraction	Spot for selfie seekers
+THEMEPARK	74	Disneyland, e.g.	Place for roller coasters
+FERRISWHEEL	78	Carnival ride with a view	Big rotating fair ride
+BUMPERCARS	76	Carnival collision ride	Fairground smashups
+MERRYGOROUND	76	Carousel	Spinning playground ride
+WATERPARK	72	Place for slides and lazy rivers	Splash-filled attraction
+LAZYRIVER	72	Water park float	Slow-moving pool loop
+ZIPLINE	72	Canopy tour ride	Cable-suspended ride
+HOTAIRBALLOON	76	Basket-carrying flyer	Burner-powered sky ride
+NEWYORK	80	The Big Apple	Empire State
+NEWYORKCITY	74	Big Apple	Home of Broadway
+LASVEGAS	80	Sin City	Strip city in Nevada
+LOSANGELES	76	City of Angels	LA, in full
+SANFRANCISCO	74	Golden Gate city	Home of cable cars
+NEWORLEANS	76	Big Easy	Mardi Gras city
+HOLLYWOOD	76	Tinseltown	Movie capital
+GRANDCANYON	78	Arizona chasm	Colorado River gorge
+NIAGARAFALLS	76	Honeymoon cataract	Cascade on the US-Canada border
+YELLOWSTONE	72	Old Faithful's park	First national park
+EIFFELTOWER	78	Paris landmark	Iron icon on the Seine
+STATUEOFLIBERTY	78	Lady in New York Harbor	Torch-bearing icon
+BIGBEN	72	London clock	Westminster bell
+MOUNTRUSHMORE	74	Granite presidents	South Dakota memorial
+GOLDENGATE	72	San Francisco bridge	Famous red span
+TIMESSQUARE	76	New Year's Eve ball drop spot	Crossroads of the World
+CENTRALPARK	74	Manhattan's green space	Home of NYC's Strawberry Fields
+DISNEYWORLD	74	Orlando resort	Magic Kingdom site
+NORTHPOLE	76	Santa's home	Top of the world
+SOUTHPOLE	66	Antarctic point	Bottom of the globe
+OUTERSPACE	72	Final frontier	Astronaut's destination
+MILKYWAY	76	Our galaxy	Candy bar named for the stars
+SHOOTINGSTAR	78	Falling meteor	Wish maker
+BIGDIPPER	72	Ursa Major group	Star ladle
+FULLMOON	72	Werewolf trigger	Bright lunar phase
+NEWMOON	62	Dark lunar phase	Start of the lunar cycle
+SOLARSYSTEM	70	Planets and the sun	Our cosmic neighborhood
+ROCKETSHIP	68	Spacecraft	Blast-off vehicle
+SPACESTATION	66	Orbiting outpost	ISS
+MOONLANDING	72	1969 feat	Apollo 11 milestone
+WORLDTOUR	68	Rock band's global trek	Globe-trotting concert series
+ONEWAYTICKET	70	No-return fare	Fare for leaving for good
+OPENROAD	72	Highway freedom	Untraveled stretch ahead
+SCENICROUTE	72	Long way with views	Detour for the vistas
+TRAVELAGENT	66	Booking expert	Trip planner
+BUCKETLIST	82	Must-dos for a lifetime	Skydiving or seeing Paris, for many
+SNOWDAY	82	School cancellation cause	Unexpected winter holiday for kids
+ICESKATES	66	Rink footwear	Bladed boots
+HOTCOCOA	76	Winter warmer	Marshmallow mug drink
+UGLYSWEATER	78	Holiday party attire, ironically	Festive knit worn for laughs
+CHRISTMASTREE	78	Decorated evergreen	Spot for ornaments
+CHRISTMASEVE	76	Night before the big day	December 24
+STOCKINGSTUFFER	78	Small gift hung by the chimney	Candy cane, maybe
+GINGERBREADMAN	74	"Run, run, as fast as you can" cookie	Holiday cookie figure
+SECRETSANTA	80	Office gift exchange	Anonymous gift giver
+WHITEELEPHANT	74	Gag-gift exchange	Gift-stealing party game
+WRAPPINGPAPER	70	Gift cover	Holiday rolls
+SLEIGHRIDE	72	Dashing through the snow, e.g.	Horse-drawn winter outing
+JINGLEBELLS	78	"Dashing through the snow" song	Carol about a one-horse open sleigh
+NEWYEARSEVE	76	December 31	Countdown night
+NEWYEARSDAY	68	January 1	Resolution start date
+BALLDROP	72	Times Square midnight event	Countdown climax
+AULDLANGSYNE	72	Midnight song	Song for old acquaintance
+VALENTINESDAY	76	February 14	Holiday for chocolates and roses
+LOVELETTER	70	Sweetheart's note	Mushy mail
+STPATRICKSDAY	72	March 17	Holiday to wear green
+FOURLEAFCLOVER	76	Lucky find	Rare shamrock
+POTOFGOLD	76	End-of-the-rainbow find	Leprechaun's treasure
+APRILFOOLS	76	Prank day	Victims of a spring jokester
+EASTEREGGHUNT	74	Spring lawn search	Basket-filling activity
+EGGHUNT	66	Easter activity	Spring backyard search
+MOTHERSDAY	72	May holiday with flowers	Time to call Mom
+FATHERSDAY	70	June holiday with ties	Holiday for Dad
+MEMORIALDAY	66	Late-May holiday	Unofficial summer start
+FOURTHOFJULY	80	Independence Day	Fireworks holiday
+BLOCKPARTY	76	Street celebration	Neighborhood bash
+LABORDAY	68	Holiday in September	End of summer
+BACKTOSCHOOL	74	August sale theme	Fall return to class
+JACKOLANTERN	78	Carved pumpkin	Glowing porch gourd
+TRICKORTREAT	80	Halloween cry	Door-to-door candy request
+HAUNTEDHOUSE	76	Halloween attraction	Spooky home
+CANDYCORN	74	Tricolor Halloween treat	Divisive autumn sweet
+COSTUMEPARTY	72	Dress-up bash	Masquerade
+PUMPKINPATCH	76	Fall field trip spot	Gourd-picking field
+CORNMAZE	72	Fall farm puzzle	Stalk labyrinth
+APPLEPICKING	70	Orchard activity	Fall outing with bushels
+PUMPKINSPICE	78	Fall latte flavor	Autumn flavor craze
+SWEATERWEATHER	76	Crisp fall days	Cozy-knit season
+FALLFOLIAGE	72	Autumn colors	Leaf-peeper attraction
+LEAFPILE	62	Jumping spot in autumn	Raked heap
+TURKEYDAY	72	Thanksgiving, informally	Late-November feast
+GRAVYBOAT	72	Thanksgiving table vessel	Sauce server
+MACYSPARADE	66	Thanksgiving tradition with balloons	Big balloon march
+SUMMERCAMP	74	Kids' getaway with cabins	Place for s'mores and canoes
+SLEEPINGBAG	70	Camper's bed	Zippered sack
+HIKINGTRAIL	66	Path in the woods	Trek route
+NATUREWALK	66	Outdoor stroll	Ramble in the woods
+NATIONALPARK	70	Yosemite, e.g.	Ranger-patrolled reserve
+RAINFOREST	72	Amazon habitat	Jungle with high rainfall
+COLDFRONT	66	Weather map line	Chilly change
+CLOUDNINE	74	State of bliss, with "on"	Euphoria
+SPRINGCLEANING	76	Seasonal tidy-up	March decluttering
+SPRINGFEVER	72	Restless seasonal feeling	March itch
+APRILSHOWERS	74	They bring May flowers	Spring rains
+DOGDAYS	72	Hottest stretch of summer	___ of summer
+HARVESTMOON	70	Bright September night light	Fall night light
+GROUNDHOGDAY	78	February 2	Repetitive Bill Murray film
+LEAPYEAR	72	Calendar period with 366 days	Quadrennial calendar quirk
+LEAPDAY	66	February 29	Quadrennial date
+DAYLIGHTSAVING	68	Spring forward, fall back	Clock-changing practice
+BEARHUG	76	Big squeeze	Crushing embrace
+PUPPYLOVE	78	Young crush	Childish infatuation
+DOGPARK	68	Off-leash area	Pooch playground
+DOGWALKER	66	Pet-care pro with leashes	Canine exerciser
+TEDDYBEAR	78	Cuddly toy	Stuffed bruin
+POLARBEAR	72	Arctic predator	White bruin
+PANDABEAR	68	Bamboo eater	Black-and-white bruin
+KOALABEAR	60	Eucalyptus muncher, informally	Aussie tree-hugger
+SEALION	66	Barking marine mammal	Aquarium show star
+KILLERWHALE	62	Orca	Black-and-white sea predator
+HERMITCRAB	68	Shell-borrowing crustacean	Tide pool squatter
+POPQUIZ	80	Surprise test	Unannounced exam
+FIELDTRIP	78	Class outing	Museum visit by bus, maybe
+SHOWANDTELL	78	Grade school presentation	Kid's chance to bring a pet to class
+SPELLINGBEE	78	Word contest for kids	Event where "Can you use it in a sentence?" is asked
+SCIENCEFAIR	74	Volcano-model showcase	Trifold-poster event
+LUNCHLADY	66	Cafeteria server	School food worker
+HALLPASS	72	Permission to roam school	Bathroom-trip permit
+PERMISSIONSLIP	68	Field trip form	Parent's signature form
+REPORTCARD	74	Grade sheet	Straight-A document, hopefully
+HONORROLL	68	Good student's list	Bumper-sticker achievement
+TEACHERSPET	76	Class favorite	Apple bringer, maybe
+CLASSCLOWN	78	Cutup in school	Funny student
+SCHOOLBUS	72	Yellow ride	Morning pickup
+SCHOOLSPIRIT	68	Pep	Pride in one's alma mater
+PROMNIGHT	72	Big high school dance	Corsage occasion
+PROMQUEEN	68	Crowned senior	Dance royalty
+CAPANDGOWN	74	Commencement attire	Mortarboard outfit
+COLLEGEDORM	62	Freshman residence	Hall with roommates
+STUDYHALL	66	Free period for homework	Quiet room at school
+STUDYGROUP	66	Exam prep team	Cram session crew
+ALLNIGHTER	78	Sleepless cram session	Dawn-to-dawn study session
+CRAMSESSION	66	Last-minute study	Pre-exam frenzy
+OPENBOOK	70	Like a lenient test	Easy to read, as a person
+BOOKCLUB	72	Monthly reading group	Wine and novels gathering
+LIBRARYCARD	72	Borrower's ID	Ticket to free reads
+STORYTIME	72	Library event for toddlers	Picture book reading session
+BEDTIMESTORY	76	Tale before sleep	Goodnight reading
+ONCEUPONATIME	80	Story starter	Fairy tale opener
+SUMMERREADING	62	Vacation homework	Beach books for class
+WORKFROMHOME	74	Remote job arrangement	Commute-free gig
+HOMEOFFICE	66	Desk in the den	Remote worker's space
+OFFICEPARTY	70	Holiday gathering at work	Cubicle celebration
+WATERCOOLER	72	Office gossip spot	___ talk
+COFFEERUN	66	Trip for lattes	Office errand
+TEAMBUILDING	70	Trust falls, e.g.	Office retreat activity
+CASUALFRIDAY	74	Jeans-at-work tradition	Relaxed dress policy
+NINETOFIVE	76	Regular job	Office hours	Dolly Parton hit
+DAYJOB	72	Thing not to quit, in a joke	Bill-paying gig
+SIDEHUSTLE	78	Moonlighting gig	Weekend money-maker
+DREAMJOB	76	Ideal position	Career goal
+JOBINTERVIEW	70	Hiring meeting	Resume follow-up
+FIRSTDAY	66	Nervous start at a new job	Debut at school
+NEWHIRE	62	Onboarding subject	Freshly employed person
+CORNEROFFICE	76	Executive's perch	Prized workplace spot
+BIGBOSS	62	Top dog	Head honcho
+BOARDMEETING	66	Corporate gathering	Directors' session
+CONFERENCECALL	66	Multi-party phone meeting	Dial-in session
+OFFICEHOURS	66	Professor's availability	Drop-in time
+BUSINESSCARD	66	Networking handout	Item in a Rolodex
+ELEVATORPITCH	76	Brief sales spiel	Thirty-second idea summary
+SMALLBUSINESS	66	Mom-and-pop shop	Local enterprise
+STICKYNOTE	70	Post-it	Reminder on a monitor
+GLUESTICK	66	Crafty adhesive	Twist-up paste
+FINGERPAINT	72	Messy art supply for kids	Daub with digits
+ARTSANDCRAFTS	74	Summer camp activity	Popsicle-stick projects
+PAPERAIRPLANE	76	Folded flyer	Classroom projectile
+PIGGYBANK	76	Coin saver	Porcine savings spot
+CHORECHART	66	Fridge list of tasks	Kid's job tracker
+NAPTIME	70	Preschool rest period	Toddler's downtime
+PLAYDATE	74	Arranged kids' meetup	Toddler social event
+PILLOWFIGHT	78	Slumber party skirmish	Feathery battle
+BLANKETFORT	76	Living room hideout	Cushion-and-quilt structure
+TREEHOUSE	76	Backyard hideout up high	Clubhouse in branches
+MONKEYBARS	74	Playground climbing rungs	Overhead ladder
+TEETERTOTTER	72	Seesaw	Playground lever
+SWINGSET	68	Backyard playground equipment	Place to pump legs
+WATERBALLOON	72	Summer projectile	Splashy grenade
+WATERGUN	68	Squirt toy	Super Soaker, e.g.
+SLIPNSLIDE	72	Backyard water toy	Wet plastic runway
+ICECREAMTRUCK	78	Jingling summer vehicle	Popsicle seller on wheels
+BUBBLEBATH	74	Foamy soak	Relaxing tub time
+RUBBERDUCKY	76	Bathtub toy	Ernie's bathtub buddy
+ONTHEGO	78	Busy and moving	Like a snack eaten in the car
+BIGDEAL	74	Something important	"So what?"
+NOBIGDEAL	78	"Don't worry about it"	"It's nothing"
+ONCLOUDNINE	80	Elated	Overjoyed
+INTHEZONE	78	Totally focused	Locked on, as an athlete
+ATEASE	70	Relaxed	Command to soldiers
+ONTHEFENCE	74	Undecided	Sitting between two sides
+PIECEOFCAKE	82	Cinch	"No sweat!"	Breeze
+EASYPEASY	78	Simple as can be	"Lemon squeezy" lead-in
+NOSWEAT	74	"Easy!"	"Piece of cake!"
+NOPROBLEM	72	"You got it"	"Happy to help"
+NOWORRIES	72	"It's all good"	"Don't fret!"
+ALLGOOD	66	"No harm done"	Fine and dandy
+SOUNDSGOOD	70	"Works for me"	"Okay!"
+WORKSFORME	70	"Fine by me"	"Sounds good"
+GOODCALL	72	"Smart decision!"	Wise choice
+GOODVIBES	76	Positive energy	Upbeat feelings
+GOODTIMES	66	Fun memories	Happy days
+FUNANDGAMES	72	Playful time	"It's all ___ until ..."
+BESTFRIEND	78	BFF	Bosom buddy
+BESTIE	72	BFF	Closest pal
+PARTNERINCRIME	80	Mischief accomplice	Best buddy for adventures
+GIRLSNIGHT	68	Ladies' evening out	Friends' evening with snacks
+DATENIGHT	74	Couple's evening out	Romantic evening
+FIRSTDATE	72	Nervous meetup	Initial romantic outing
+BLINDDATE	72	Setup with a stranger	Meeting arranged by friends
+HEARTTOHEART	76	Candid talk	Deep conversation
+SMALLWORLD	76	"Fancy meeting you here!"	Disney song "It's a ___ After All"
+TIMEFLIES	74	It goes fast when you're having fun	"Wow, where did the hours go?"
+INNOTIME	70	Very quickly	Before you know it
+INAJIFFY	74	Super quickly	Pronto
+INAFLASH	72	Instantly	Lickety-split
+INAPINCH	70	If necessary	When push comes to shove
+ATLAST	66	Finally!	"Ah, ___ ..."
+FORREAL	70	"Seriously?"	"No joke"
+NOJOKE	68	"Seriously"	"For real"
+JUSTKIDDING	72	"Gotcha!"	"Not really!"
+OHWELL	66	Shrug words	"Can't win 'em all"
+OHMYGOSH	70	"Wow!"	Startled cry
+YOUBET	66	"Absolutely!"	"Sure thing"
+SURETHING	70	"You bet!"	Lock
+GAMEON	74	"Let's do this!"	Challenge accepted
+BRINGITON	76	"I'm ready!"	Challenger's taunt
+LETSGO	74	"Come on!"	Sports fan chant
+LETSROLL	66	"Time to go!"	Departure cry
+ROADRAGE	60	Angry driving	Highway fury
+YESWAY	62	Playful "Believe it!"	Comeback to a skeptic
+ALLEARS	72	Listening intently	Eager to hear
+ALLSET	66	Ready to go	Prepared
+ALLSTAR	72	Top player	Midseason game honoree
+ROCKSOLID	74	Unshakable	Totally dependable
+SPOTON	72	Exactly right	Accurate
+ONPOINT	70	Exactly right	Looking sharp
+ONTRACK	68	Making progress	Proceeding as planned
+ONTARGET	66	Accurate	Bull's-eye
+ONTHEBALL	72	Alert	Quick-witted
+ONTHEFLY	70	Spontaneously	While moving
+ONTHEHOUSE	76	Free, at a bar	Compliments of the restaurant
+ONTHEMONEY	72	Exactly right	Bull's-eye accurate
+ONTHEROCKS	70	Served with ice	In trouble, as a marriage
+ONTHEDOT	70	Precisely punctual	Sharp, timewise
+ONTHEMEND	66	Recovering	Healing
+ONTHELOOSE	70	Escaped	Free and running wild
+ONTHESPOT	72	Immediately	In a tough position
+ONTHEAIR	66	Broadcasting	Live, as a radio show
+OFFTHEHOOK	76	Freed from blame	Ringing nonstop, informally
+OFFTHECHARTS	78	Record-breaking	Extremely high
+OFFTHEWALL	72	Wacky	Zany
+OFFTHERECORD	72	Not for publication	Confidential, to a reporter
+OUTOFTHEBLUE	76	Unexpectedly	Without warning
+OUTOFTHISWORLD	76	Amazing	Fantastic
+OUTOFTHEBOX	66	Ready to use immediately	Creative, as thinking
+OUTOFTHELOOP	72	Uninformed	Unaware of the latest
+INTHELOOP	70	Informed	Kept up to date
+INTHEKNOW	70	Well-informed	Privy to secrets
+INTHEBAG	70	Assured	Clinched
+INTHEDARK	68	Uninformed	Clueless
+INHOTWATER	72	Facing a scolding	Up a creek
+INAPICKLE	76	Stuck	Between a rock and a hard place
+UPINTHEAIR	72	Undecided	Uncertain
+UPTODATE	66	Current	Modern
+UPANDATEM	66	"Out of bed, sleepyhead!"	Morning rouser
+RISEANDSHINE	76	Morning greeting	"Wake up, sleepyhead!"
+EARLYBIRD	74	Worm catcher	Morning person
+NIGHTOWL	76	Late-hours person	One up at all hours
+BEAUTYSLEEP	70	Rejuvenating rest	Snooze for looks
+SWEETDREAMS	74	Bedtime wish	"Good night!"
+SEEYALATER	72	Casual goodbye	"Bye for now!"
+CATCHYOULATER	70	"See ya!"	Casual goodbye
+TAKECARE	66	Farewell phrase	"Be safe!"
+LONGTIMENOSEE	76	Greeting after a while	"It's been ages!"
+WHATSUP	72	Casual greeting	"How's it going?"
+HIGHTIME	62	"Finally!"	Long overdue moment
+ABOUTTIME	70	"Finally!"	"It's ___!"
+TIMETOSHINE	66	Moment in the spotlight	Opportunity to excel
+TOUGHCOOKIE	74	Resilient person	One who doesn't crumble?
+SMARTCOOKIE	74	Clever person	Brainy one
+COOLCAT	70	Hip person	Jazzy dude
+TOPDOG	72	Head honcho	Leader of the pack
+SCAREDYCAT	76	Wimp	Chicken
+LUCKYSTAR	68	One to thank for good fortune	"Thank your ___"
+LUCKYCHARM	72	Rabbit's foot, e.g.	Good-fortune token
+LUCKYBREAK	72	Fortunate turn	Stroke of good fortune
+BEGINNERSLUCK	76	Rookie's good fortune	Novice's surprise win
+FINGERSCROSSED	78	Hopeful gesture	Wishing for luck
+KNOCKONWOOD	74	Superstitious remark	Phrase said while tapping a table
+SILVERLINING	78	Bright side	Cloud's upside
+BRIGHTSIDE	66	Optimist's view	Positive angle
+GLASSHALFFULL	74	Optimist's view	Sunny outlook
+WINWIN	72	Great for everyone	Mutually beneficial
+TWOCENTS	72	Opinion	Unsolicited input
+FOODFORTHOUGHT	76	Something to ponder	Stimulus for reflection
+BREAKTHEICE	76	Start a conversation	Get things going at a party
+COLDFEET	74	Pre-wedding jitters	Last-minute doubts
+CHEAPSEATS	66	Nosebleed section	Upper deck, say
+SPILLTHEBEANS	80	Reveal a secret	Blab
+SPILLTHETEA	76	Share gossip	Dish the dirt
+HITTHEROAD	74	Leave	Get going
+HITTHESACK	72	Go to bed	Turn in
+HITTHEBOOKS	72	Study	Cram
+HITTHESPOT	72	Satisfy completely	Be just right
+HITTHEJACKPOT	74	Win big	Strike gold
+CALLITADAY	74	Quit for now	Knock off work
+CALLITANIGHT	72	Head home	End the evening
+SLEEPONIT	72	Delay a decision	Mull overnight
+TAKEAHIKE	72	"Get lost!"	"Scram!"
+TAKEABOW	72	Accept applause	Bend at the waist after a show
+TAKEFIVE	72	Have a short break	Rest a bit
+TAKEITEASY	72	Relax	"Chill out"
+CHILLOUT	72	Relax	"Calm down!"
+LAIDBACK	72	Easygoing	Mellow
+GOWITHTHEFLOW	76	Be easygoing	Not fight the current
+ROLLWITHIT	70	Adapt	Be flexible
+HANGINTHERE	72	"Don't give up!"	Kitten-on-a-branch poster message
+KEEPCALM	70	"Stay composed"	"___ and carry on"
+NEVERGIVEUP	74	Motivational motto	"Keep going!"
+YOUCANDOIT	72	Words of encouragement	"Believe in yourself!"
+GOFORIT	72	"Take the shot!"	"Seize the day!"
+WHYNOT	66	"Sure, sounds fun"	"Might as well"
+FAIRENOUGH	72	"Point taken"	"Okay, I'll give you that"
+GOODGRIEF	72	Charlie Brown's lament	"Oh, brother!"
+HOLYCOW	72	"Wow!"	Startled exclamation
+HOLYMOLY	72	"Wowza!"	Startled outburst
+SAYCHEESE	80	Photographer's request	Smile instruction
+GOODSPORT	72	Graceful loser	Fair player
+SOURGRAPES	72	Bitter attitude	Loser's grumbling
+SORELOSER	70	Graceless player	One who whines after defeat
+TURNINGPOINT	70	Watershed moment	Pivotal time
+COMEBACKKID	70	Resilient competitor	Rebounder
+SECONDWIND	72	Renewed energy	Revived stamina
+SECONDCHANCE	72	Another shot	Do-over
+DOOVER	72	Mulligan	Another try
+FRESHSTART	74	Clean slate	New beginning
+CLEANSLATE	72	Fresh start	Blank record
+BLANKCHECK	68	Unlimited authority	Free rein
+GREENLIGHT	72	Approve	Go-ahead
+REDFLAG	74	Warning sign	Dating dealbreaker
+REDTAPE	72	Bureaucracy	Paperwork hassle
+REDHANDED	70	In the act	Caught ___
+REDLETTERDAY	66	Special occasion	Memorable date
+GREENTHUMB	74	Gardener's gift	Knack for plants
+GREENWITHENVY	72	Jealous	Very jealous, colorfully
+FEELINGBLUE	66	Sad	Down in the dumps
+TICKLEDPINK	76	Delighted	Very pleased
+BLACKANDWHITE	70	Clear-cut	Like old movies
+GOLDSTAR	74	Teacher's sticker	Reward for good work
+GOLDMEDAL	72	Olympic first prize	Winner's prize
+GOLDENRULE	72	Do-unto-others principle	Ethical guideline
+SILVERSCREEN	72	Movies	Cinema
+SILVERSPOON	66	Privileged upbringing	Born with one in the mouth
+FIRSTRATE	66	Excellent	Top-notch
+SECONDNATURE	72	Habitual	Done without thinking
+THIRDWHEEL	76	Unneeded companion on a date	Extra person
+FIFTHWHEEL	62	Camper type	Superfluous one
+SIXTHSENSE	74	Intuition	ESP
+SEVENTHHEAVEN	74	Bliss	Cloud nine
+NINELIVES	72	Cat's quota, supposedly	Feline's lucky number of chances
+HIGHANDDRY	70	Stranded	Left without help
+HIGHHOPES	70	Big expectations	Optimism
+HIGHNOON	72	Midday showdown time	Western film classic
+LOWKEY	74	Understated	Quietly, in slang
+HIGHKEY	60	Openly, in slang	Obviously, to Gen Z
+DOWNTOEARTH	76	Unpretentious	Grounded
+UPANDCOMING	72	Promising	On the rise
+WORLDCLASS	72	Top-notch	Elite
+LIFEHACK	74	Clever shortcut	Handy everyday trick
+LIFEOFTHEPARTY	78	Social star	Fun-loving guest
+PARTYANIMAL	74	Social butterfly	Reveler
+PARTYPOOPER	76	Killjoy	Wet blanket
+WETBLANKET	74	Killjoy	Party pooper
+SOCIALBUTTERFLY	76	Gregarious person	Mingler
+FREESPIRIT	72	Nonconformist	Bohemian
+OLDSOUL	72	Wise young person	Mature beyond one's years
+GOODEGG	66	Decent person	Nice guy
+SUGARRUSH	76	Post-candy energy	Kid's hyper state after cake
+BRAINFREEZE	80	Slushie headache	Ice cream pain
+BRAINFOG	66	Mental cloudiness	Fuzzy thinking
+LIGHTBULBMOMENT	78	Sudden insight	"Aha!"
+AHAMOMENT	78	Epiphany	"Eureka!" time
+DEJAVU	72	Feeling of familiarity	"Haven't I been here before?"
+GUTFEELING	74	Hunch	Intuition
+GUTCHECK	66	Moment of honest reflection	Courage test
+BREATHINGROOM	70	Some space	Leeway
+COMFORTZONE	78	Where it's easy to stay	Safe space
+SAFESPACE	62	Supportive environment	Judgment-free zone
+METIME	74	Self-care period	Personal downtime
+SELFCARE	72	Bubble baths and naps, e.g.	Personal wellness
+BUBBLEWRAP	76	Poppable packing material	Fragile-item cushioning
+LIVINGROOM	68	Den	Place for the couch
+GAMEROOM	66	Basement den with a pool table	Rec area
+MANCAVE	72	Guy's hangout den	Basement retreat
+WALKINCLOSET	70	Roomy wardrobe space	Spacious storage for clothes
+BUNKBEDS	72	Stacked sleepers	Siblings' room furniture
+BEANBAGCHAIR	70	Squishy dorm seat	Lumpy lounger
+LAZYSUSAN	72	Rotating tray	Spinning condiment server
+ROCKINGCHAIR	72	Porch seat	Glider
+WELCOMEMAT	68	Porch greeter	Entry rug
+FRONTPORCH	66	Rocking-chair spot	Home's entrance deck
+PICKETFENCE	72	White suburban barrier	Dream-home border
+BIRDFEEDER	64	Seed dispenser	Squirrel target
+GARDENGNOME	74	Lawn statue with a pointy hat	Yard elf
+LEAFBLOWER	64	Noisy fall tool	Yard gadget
+GARAGESALE	74	Driveway bargains	Weekend junk sell-off
+YARDSALE	70	Lawn bargains	Driveway market
+FLEAMARKET	72	Bargain bazaar	Swap meet
+THRIFTSHOP	70	Secondhand store	Goodwill, e.g.
+DOLLARSTORE	68	Bargain shop	Everything-costs-a-buck shop
+SHOPPINGMALL	68	Food court site	Retail complex
+FOODCOURT	72	Mall dining area	Pretzel-and-pizza zone
+WINDOWSHOPPING	72	Browsing without buying	Looking, not purchasing
+RETAILTHERAPY	76	Shopping as a pick-me-up	Mood-boosting spree
+IMPULSEBUY	72	Checkout candy, often	Spontaneous purchase
+GIFTCARD	72	Last-minute present	Store credit present
+GIFTBAG	66	Party favor holder	Tissue-paper tote
+PARTYFAVOR	68	Goody bag item	Take-home treat
+GOODYBAG	68	Party favor	Take-home treats
+BALLOONANIMAL	76	Twisted party creation	Clown's craft
+SURPRISEPARTY	80	Celebration with hidden guests	Bash for an unsuspecting honoree
+BABYSHOWER	70	Pre-birth gathering	Party with onesies
+BRIDALSHOWER	66	Pre-wedding gift party	Bride-to-be bash
+WEDDINGCAKE	72	Tiered dessert	Topper's spot
+WEDDINGRING	66	Gold band	"I do" accessory
+FIRSTDANCE	66	Newlyweds' sway	Reception highlight
+BESTMAN	66	Groom's right hand	Toast giver
+MAIDOFHONOR	66	Bride's right-hand woman	Wedding attendant
+FLOWERGIRL	66	Petal tosser	Young wedding attendant
+RINGBEARER	64	Pillow-carrying kid	Young wedding attendant
+BIRTHDAYPARTY	72	Celebration with cake	Annual bash
+PARTYHAT	68	Cone-shaped headwear	Birthday topper
+FAMILYREUNION	70	Kin gathering	Relatives' get-together
+FAMILYTREE	72	Genealogy chart	Ancestry diagram
+SIBLINGRIVALRY	72	Brotherly competition	Sister-vs-sister tension
+BIGBROTHER	66	Older sib	Watching eye
+LITTLESISTER	64	Younger sib	Baby girl of the family
+BABYMONITOR	62	Nursery listening device	Crib sound transmitter
+DIAPERBAG	60	Baby essentials tote	Parent's carryall
+ROCKABYEBABY	70	Lullaby on the treetop	Cradle song
+NURSERYRHYME	72	Humpty Dumpty verse	Mother Goose poem
+HUMPTYDUMPTY	76	Fragile wall-sitter	Egg of rhyme
+PATACAKE	68	Clapping game	Baker's man rhyme
+ITSYBITSY	66	___ spider	Teeny-tiny
+TEENYTINY	68	Minuscule	Itsy-bitsy
+THREELITTLEPIGS	74	Big Bad Wolf's victims	Tale of brick and straw houses
+BIGBADWOLF	76	Huffer and puffer	Red Riding Hood foe
+JACKANDJILL	72	Hill climbers of rhyme	Pail fetchers
+MOTHERGOOSE	72	Nursery rhyme author	Rhyme teller
+LAUNDRYDAY	66	Washing time	When the hamper gets emptied
+JUNKDRAWER	76	Kitchen catchall	Spot for rubber bands and batteries
+JUNKFOOD	72	Chips and candy	Snacks with empty calories
+JUNKMAIL	68	Catalog clutter	Unwanted letters
+FRIDGEMAGNET	66	Kitchen cling	Refrigerator decoration
+ALARMCLOCK	70	Morning buzzer	Snooze button holder
+SNOOZEBUTTON	76	Morning delay	Late riser's friend
+TOASTEROVEN	62	Countertop cooker	Mini broiler
+SLOWCOOKER	64	Crock-Pot	Countertop stewer
+AIRFRYER	72	Trendy countertop cooker	Crispy-food gadget
+VACUUMCLEANER	62	Dust sucker	Hoover
+DUSTBUNNY	72	Under-bed fluff	Fluffy floor critter?
+SPRINGROLL	60	Asian appetizer	Fried wrap
+SANTASWORKSHOP	70	North Pole factory	Elves' workplace
+ELFONTHESHELF	74	Holiday surveillance doll	December mischief maker
+EBENEZERSCROOGE	70	"Bah, humbug!" sayer	Dickens miser
+TINYTIM	72	"God bless us, every one!" speaker	Cratchit child
+ROBINHOOD	76	Sherwood Forest hero	Steal-from-the-rich outlaw
+KINGARTHUR	72	Camelot ruler	Excalibur wielder
+ROUNDTABLE	68	Knights' furniture	Panel discussion
+WILLYWONKA	78	Chocolate factory owner	Golden ticket issuer
+GOLDENTICKET	74	Wonka prize	Coveted pass
+OOMPALOOMPA	74	Wonka worker	Orange-skinned factory hand
+CATINTHEHAT	76	Seuss character in stripes	Thing One's companion
+DRSEUSS	74	Green Eggs and Ham author	Grinch creator
+GREENEGGSANDHAM	74	Seuss food	Sam-I-Am's offering
+CURIOUSGEORGE	74	Monkey with a man in a yellow hat	Inquisitive primate of books
+PADDINGTON	72	Marmalade-loving bear	Bear from Peru
+KERMITTHEFROG	76	"It's not easy being green" singer	Miss Piggy's beau
+MISSPIGGY	74	Kermit's admirer	Muppet diva
+COOKIEMONSTER	80	"Om nom nom" Muppet	Blue baked-goods fan
+BIGBIRD	74	Sesame Street giant	Yellow Muppet
+SESAMESTREET	74	Elmo's neighborhood	Kids' TV classic
+MRROGERS	74	Cardigan-wearing TV neighbor	Beloved PBS host
+SPONGEBOB	76	Bikini Bottom resident	Square-pants guy
+HOMERSIMPSON	76	"D'oh!" sayer	Springfield dad
+BARTSIMPSON	70	Cartoon prankster	"Eat my shorts" kid
+FREDFLINTSTONE	74	"Yabba dabba doo!" sayer	Bedrock dad
+GEORGEJETSON	66	Space-age cartoon dad	Orbit City resident
+PINKPANTHER	74	Mancini-themed cartoon cat	Clouseau film series
+WILECOYOTE	72	Acme customer	Desert schemer
+TWEETYBIRD	70	"I tawt I taw a puddy tat!"	Sylvester's quarry
+DAFFYDUCK	70	"You're despicable!" toon	Lisping Looney Tunes fowl
+GARFIELD	72	Lasagna-loving cat	Monday-hating feline
+BUZZLIGHTYEAR	78	"To infinity and beyond!" toy	Space ranger action figure
+MRPOTATOHEAD	74	Toy with removable features	Toy Story spud
+PIKACHU	76	Electric Pokemon	Yellow pocket monster
+SUPERMARIO	76	Nintendo plumber	Mushroom Kingdom hero
+PACMAN	76	Arcade dot-eater	Ghost chaser
+DONKEYKONG	70	Barrel-throwing ape	Classic arcade gorilla
+MINECRAFT	74	Block-building game	Creeper's world
+ANGRYBIRDS	68	Slingshot game	Pig-toppling app
+JACKINTHEBOX	74	Pop-up toy	Crank toy with a surprise
+HULAHOOP	76	Hip-swiveling toy	Waist-spinning ring
+KITEFLYING	62	Breezy pastime	Windy day activity
+GUMBALLMACHINE	72	Coin-operated candy dispenser	Penny candy globe
+SPACEINVADERS	70	Classic arcade shooter	Alien-blasting game
+GHOSTBUSTERS	76	"Who you gonna call?" team	Proton-pack film
+BACKTOTHEFUTURE	78	DeLorean film	Marty McFly movie
+TIMEMACHINE	76	DeLorean, e.g.	H.G. Wells device
+TIMETRAVEL	74	Doctor Who specialty	Back-to-the-past journey
+ETPHONEHOME	78	Alien's famous line	Spielberg film catchphrase
+LIGHTSABER	78	Jedi weapon	Glowing sword
+JEDIKNIGHT	72	Force user	Obi-Wan, e.g.
+PRINCESSLEIA	74	Rebel leader with hair buns	Luke's sister
+HANSOLO	74	Millennium Falcon pilot	Chewbacca's partner
+CHEWBACCA	74	Wookiee copilot	Han's furry partner
+GANDALF	72	Wizard of Middle-earth	"You shall not pass!" speaker
+LORDOFTHERINGS	74	Tolkien trilogy	Frodo's saga
+HERMIONE	72	Harry's brainy friend	Granger of Hogwarts
+DUMBLEDORE	72	Hogwarts headmaster	Wizard with a long beard
+QUIDDITCH	72	Hogwarts sport	Broomstick game
+NEVERLAND	72	Peter Pan's home	Lost Boys' realm
+EMERALDCITY	72	Oz's capital	Green metropolis
+GOTHAMCITY	72	Batman's turf	Fictional crime-ridden metropolis
+BATCAVE	72	Wayne's hideout	Crime fighter's lair
+BATMOBILE	74	Caped Crusader's car	Dark Knight ride
+SPIDEYSENSE	72	Web-slinger's tingle	Danger intuition
+INCREDIBLEHULK	72	Green Avenger	Bruce Banner's alter ego
+BLACKPANTHER	72	Wakanda king	Marvel hero T'Challa
+PROFESSORX	66	Telepathic mutant leader	Charles Xavier
+WHERESWALDO	76	Find-the-guy book	Striped-shirt search book
+CARMENSANDIEGO	72	Globe-trotting thief of games	"Where in the world" woman
+NANCYDREW	72	Girl sleuth	Teen detective of books
+HARDYBOYS	66	Sleuthing brothers	Teen detective duo
+SCROOGEMCDUCK	72	Rich Disney uncle	Money-bin owner
+POOHBEAR	70	Hundred Acre Wood resident	Honey-loving bruin
+BAKEOFF	72	Baking competition	Great British TV contest
+TASTETEST	68	Blind sampling	Cola challenge, e.g.
+SECRETRECIPE	74	Grandma's guarded instructions	Colonel's closely held list
+FAMILYRECIPE	66	Heirloom dish instructions	Grandma's index card
+TASTEBUDS	72	Tongue's sensors	Flavor detectors
+SWEETANDSOUR	72	Chinese sauce style	Bittersweet, in a way
+SALTANDPEPPER	72	Table shaker pair	Graying, as hair
+MEATANDPOTATOES	72	Basic	Fundamental
+BREADANDBUTTER	74	Livelihood	Main source of income
+CHERRYONTOP	76	Finishing touch	Sundae garnish
+ICINGONTHECAKE	78	Extra bonus	Finishing touch
+TOUGHCROWD	74	Hard audience to please	Comedian's complaint
+SPILLEDMILK	62	Thing not to cry over	Minor mishap
+COUCHSURF	66	Crash at friends' homes	Sofa-hop while traveling
+BINGEREAD	60	Devour a book series	Plow through novels nonstop
+FANFAVORITE	74	Crowd-pleaser	Popular pick
+FANCLUB	68	Group of admirers	Celebrity followers
+FANFICTION	66	Amateur stories set in existing worlds	Unofficial Hogwarts tales, e.g.
+BOXOFFICE	72	Ticket window	Film revenue
+BOXSET	62	Complete series collection	DVD bundle
+MOVIEBUFF	72	Film fanatic	Cinephile
+MOVIETRAILER	66	Coming attraction	Preview
+POPCULTURE	70	Mass entertainment	Movies, music, memes
+TVDINNER	72	Frozen meal on a tray	Couch supper
+LATESHOW	62	Night broadcast	Program after the news
+LIVEAUDIENCE	66	In-studio spectators	Sitcom laughers
+LAUGHTRACK	70	Canned chuckles	Sitcom sound effect
+STANDUPCOMEDY	72	Mic-and-brick-wall art	Joke-telling act
+OPENMIC	72	Amateur night	Comedy club tryout
+KNOCKKNOCK	78	Joke opener	"Who's there?" prompt
+DADJOKE	80	Groan-worthy pun	Corny quip from Pops
+INSIDEJOKE	74	Gag only friends get	Private quip
+PRACTICALJOKE	72	Whoopee cushion prank	Hoax for laughs
+WHOOPEECUSHION	78	Prank pillow	Gag gift that toots
+RUBBERCHICKEN	72	Classic gag prop	Squeaky comedy bird
+CLOWNCAR	70	Overpacked circus vehicle	Chaotic situation, figuratively
+BIGTOP	72	Circus tent	Ringmaster's domain
+COUNTYFAIR	72	Summer event with livestock	Funnel cake venue
+BLUERIBBON	72	First prize	Top honor at a fair
+STATEFAIR	70	Annual agricultural expo	Deep-fried everything event
+PETTINGZOO	74	Farm-animal play area	Goat-feeding attraction
+WATERSLIDE	72	Pool chute	Splashy ride
+SWIMMINGPOOL	68	Backyard oasis	Place for laps
+DIVINGBOARD	68	Springy plank	Pool launcher
+DEEPEND	66	Pool's lower area	Where to jump in, figuratively
+SHALLOWEND	62	Kiddie side of the pool	Wading area
+POOLPARTY	74	Splashy celebration	Summer bash
+BEACHDAY	68	Sunny getaway	Outing to the shore
+GOLDENHOUR	70	Photographer's favorite light	Time just before sunset
+TIMECAPSULE	74	Buried keepsake box	Future-opening container
+MEMORYLANE	72	Trip down nostalgia	Place to stroll, figuratively
+GOODOLDDAYS	74	Nostalgic time	Fond past
+OLDSCHOOL	74	Traditional	Retro
+FASHIONSHOW	68	Runway event	Model parade
+BADHAIRDAY	78	Morning of rough tresses	Off occasion
+SPADAY	72	Pampering outing	Massage and facial time
+MAKEAWISH	74	Blow out the candles	Toss a coin in a fountain
+WISHINGWELL	70	Coin-toss spot	Fountain for dreams
+DREAMBIG	74	Aim high	Motivational poster slogan
+DREAMTEAM	76	All-star squad	Perfect group
+BUCKETHAT	66	Floppy brimmed cap	Gilligan's topper
+BASEBALLCAP	68	Brimmed hat	Dugout headwear
+PAJAMAPARTY	72	Sleepover	Slumber bash
+FUZZYSOCKS	66	Cozy footwear	Warm feet gift
+COMFYCLOTHES	62	Loungewear	Sweats

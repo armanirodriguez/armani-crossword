@@ -1,0 +1,358 @@
+{
+  "format": "crossword/1",
+  "id": "2026-10-03",
+  "date": "2026-10-03",
+  "title": "The First Armani Crossword",
+  "author": "Armani Rodriguez",
+  "note": "Happy Saturday!",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "##....##...#...",
+    "......#....#...",
+    "...............",
+    "....##....#....",
+    "...#...#....###",
+    "......#....#...",
+    "###......#.....",
+    "...............",
+    ".....#......###",
+    "...#....#......",
+    "###....#...#...",
+    "....#....##....",
+    "...............",
+    "...#....#......",
+    "...#...##....##"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:TOpRjI6xK3E+EDNzVAldX/acDpLgkIu8lEJ63LLO00Cxwx7mFadFW74aGVK8m+RZ/yGn2Vef5oRwWtKGNfF2IqQntqrLjtDeOZ/G5nVr1iuPwMvjDv9N9pggD4c4QL4na9rWfi7C3Z2JXAS539noXyJAhaKJhak6QDH0qwCACVtu8eFYRCfNz+V/AQh0Mr66Kukc+TBdlxo1pdw+AS6RqlWGRFyJuCSyvNRjh5bu/uZLSd/5ws5uto9vmNNCrBX402H6VMINZMDk4JPTXyK7g6W82Ghij49ztjYrOVmtIOS2",
+  "checksum": "4f86c669",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Only 1 point"
+      },
+      {
+        "num": 5,
+        "clue": "Gotcha!"
+      },
+      {
+        "num": 8,
+        "clue": "Hooter"
+      },
+      {
+        "num": 11,
+        "clue": "Racci"
+      },
+      {
+        "num": 13,
+        "clue": "Assert"
+      },
+      {
+        "num": 14,
+        "clue": "Day, in Mexico City"
+      },
+      {
+        "num": 15,
+        "clue": "Computer class?"
+      },
+      {
+        "num": 18,
+        "clue": "You and what ____"
+      },
+      {
+        "num": 19,
+        "clue": "Sour"
+      },
+      {
+        "num": 20,
+        "clue": "Wraps up"
+      },
+      {
+        "num": 21,
+        "clue": "Massage locale"
+      },
+      {
+        "num": 22,
+        "clue": "What Zach requires to get to B-Dubs, briefly"
+      },
+      {
+        "num": 24,
+        "clue": "Celebration"
+      },
+      {
+        "num": 26,
+        "clue": "Karate Teacher"
+      },
+      {
+        "num": 28,
+        "clue": "Flank"
+      },
+      {
+        "num": 29,
+        "clue": "Not in"
+      },
+      {
+        "num": 32,
+        "clue": "Starry"
+      },
+      {
+        "num": 34,
+        "clue": "Honda's luxury brand"
+      },
+      {
+        "num": 36,
+        "clue": "What your first program did"
+      },
+      {
+        "num": 40,
+        "clue": "Civic maker"
+      },
+      {
+        "num": 41,
+        "clue": "Informal"
+      },
+      {
+        "num": 42,
+        "clue": "Carried out"
+      },
+      {
+        "num": 43,
+        "clue": "Bump"
+      },
+      {
+        "num": 45,
+        "clue": "The information theorist, or the product of 15 across"
+      },
+      {
+        "num": 49,
+        "clue": "Happy juice"
+      },
+      {
+        "num": 50,
+        "clue": "Stanley Cup org."
+      },
+      {
+        "num": 51,
+        "clue": "Includes a dinner jacket and bowtie"
+      },
+      {
+        "num": 52,
+        "clue": "Happiness"
+      },
+      {
+        "num": 55,
+        "clue": "Small pistols from Black Ops 1"
+      },
+      {
+        "num": 57,
+        "clue": "____ Dry"
+      },
+      {
+        "num": 58,
+        "clue": "Student's written study of the past"
+      },
+      {
+        "num": 62,
+        "clue": "Dine"
+      },
+      {
+        "num": 63,
+        "clue": "Off-roaders, briefly"
+      },
+      {
+        "num": 64,
+        "clue": "Christopher Cruz and Vincent Van Gogh for two"
+      },
+      {
+        "num": 65,
+        "clue": "Before, poetically"
+      },
+      {
+        "num": 66,
+        "clue": "The good old boys were drinking this with their whiskey"
+      },
+      {
+        "num": 67,
+        "clue": "Capital of Qatar"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Dot eater"
+      },
+      {
+        "num": 2,
+        "clue": "Sore"
+      },
+      {
+        "num": 3,
+        "clue": "Nintendo console with motion controls"
+      },
+      {
+        "num": 4,
+        "clue": "Wrong number?"
+      },
+      {
+        "num": 5,
+        "clue": "Goes past the brim, as a cup"
+      },
+      {
+        "num": 6,
+        "clue": "Fiery (Argument)"
+      },
+      {
+        "num": 7,
+        "clue": "Hockey great Bobby"
+      },
+      {
+        "num": 8,
+        "clue": "Norse god of wisdom"
+      },
+      {
+        "num": 9,
+        "clue": "Breeze"
+      },
+      {
+        "num": 10,
+        "clue": "Trails (Behind)"
+      },
+      {
+        "num": 11,
+        "clue": "Accumulate"
+      },
+      {
+        "num": 12,
+        "clue": "___ diem"
+      },
+      {
+        "num": 13,
+        "clue": "Pie ___ mode"
+      },
+      {
+        "num": 16,
+        "clue": "Alien visitors, briefly"
+      },
+      {
+        "num": 17,
+        "clue": "Table tennis divider"
+      },
+      {
+        "num": 22,
+        "clue": "Develop in the womb"
+      },
+      {
+        "num": 23,
+        "clue": "Piss with a lisp"
+      },
+      {
+        "num": 25,
+        "clue": "Coastal barrier"
+      },
+      {
+        "num": 27,
+        "clue": "Beach stuff"
+      },
+      {
+        "num": 28,
+        "clue": "Caesar or cobb for two"
+      },
+      {
+        "num": 29,
+        "clue": "Us posessively"
+      },
+      {
+        "num": 30,
+        "clue": "Web address, briefly"
+      },
+      {
+        "num": 31,
+        "clue": "Smidgen"
+      },
+      {
+        "num": 33,
+        "clue": "See 33 down??"
+      },
+      {
+        "num": 35,
+        "clue": "Soda"
+      },
+      {
+        "num": 36,
+        "clue": "Doctoral deg."
+      },
+      {
+        "num": 37,
+        "clue": "Gain on an investment: Abbr."
+      },
+      {
+        "num": 38,
+        "clue": "Hoosier State, abbr."
+      },
+      {
+        "num": 39,
+        "clue": "\"Ow!\""
+      },
+      {
+        "num": 44,
+        "clue": "Filling, as a meal"
+      },
+      {
+        "num": 46,
+        "clue": "Best place"
+      },
+      {
+        "num": 47,
+        "clue": "Sand hills"
+      },
+      {
+        "num": 48,
+        "clue": "Puts forth, as effort"
+      },
+      {
+        "num": 49,
+        "clue": "Wager"
+      },
+      {
+        "num": 50,
+        "clue": "Codebreakers' org."
+      },
+      {
+        "num": 52,
+        "clue": "Butter for naan"
+      },
+      {
+        "num": 53,
+        "clue": "Pinocchio, notably"
+      },
+      {
+        "num": 54,
+        "clue": "East, in Madrid"
+      },
+      {
+        "num": 56,
+        "clue": "Desktop computers, briefly"
+      },
+      {
+        "num": 57,
+        "clue": "Bubble ___"
+      },
+      {
+        "num": 59,
+        "clue": "Rowboat need"
+      },
+      {
+        "num": 60,
+        "clue": "Lass's counterpart"
+      },
+      {
+        "num": 61,
+        "clue": "Expert"
+      }
+    ]
+  },
+  "publishedAt": "2026-10-03T17:34:37.354Z"
+}
