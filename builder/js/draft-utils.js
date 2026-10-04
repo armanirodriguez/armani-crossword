@@ -7,13 +7,15 @@ import {
 import {
   PUZZLE_FORMAT, addDays, checksum, draftEntries, draftToPuzzle, encodeSolution, isValidDateId, normalizeAnswer, normalizeClue,
 } from '../../site/shared/puzzle.js';
+import { draftKind, puzzleId } from './kinds.js';
 
 export const SIZE_PRESETS = [
+  // The hint is the kind the size suggests (SPEC §8 suggestKind); the user can still pick any kind.
   { w: 5, h: 5, label: '5×5', hint: 'Mini' },
-  { w: 7, h: 7, label: '7×7', hint: 'Midi' },
-  { w: 9, h: 9, label: '9×9', hint: 'Small' },
-  { w: 11, h: 11, label: '11×11', hint: 'Medium' },
-  { w: 13, h: 13, label: '13×13', hint: 'Large' },
+  { w: 7, h: 7, label: '7×7', hint: 'Mini' },
+  { w: 9, h: 9, label: '9×9', hint: 'Midi' },
+  { w: 11, h: 11, label: '11×11', hint: 'Midi' },
+  { w: 13, h: 13, label: '13×13', hint: 'Daily' },
   { w: 15, h: 15, label: '15×15', hint: 'Daily' },
 ];
 export const MIN_SIZE = 3;
@@ -291,10 +293,14 @@ export function previewPuzzle(d, fallbackDate) {
   };
   const plain = cells.join('');
   const white = (list) => [...new Set(list || [])].filter((i) => Number.isInteger(i) && plain[i] && plain[i] !== BLOCK).sort((a, b) => a - b);
+  // Same id (and solution salt) as publishing would use: a Mini / Midi has its own id on the date.
+  const kind = draftKind(d);
+  const id = puzzleId(date, kind);
   const puzzle = {
     format: PUZZLE_FORMAT,
-    id: date,
+    id,
     date,
+    ...(kind !== 'daily' ? { kind } : {}),
     title: normalizeClue(d.title) || 'Untitled',
     author: normalizeClue(d.author),
     note: String(d.note ?? '').trim(),
@@ -303,7 +309,7 @@ export function previewPuzzle(d, fallbackDate) {
     layout: layoutFromGrid(gridOf(copy)),
     circles: white(d.circles),
     shaded: white(d.shaded),
-    solution: encodeSolution(plain, date),
+    solution: encodeSolution(plain, id),
     checksum: checksum(plain),
     clues: {
       across: across.map((e) => ({ num: e.num, clue: clue(e) })),

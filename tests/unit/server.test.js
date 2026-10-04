@@ -720,3 +720,151 @@ test('GET /api/recent-answers lists the answers of puzzles published within N da
     for (const date of dates) await api('DELETE', `/api/published/${date}`);
   }
 });
+
+// --- SPEC §8: multiple puzzles per day (Mini / Midi / Daily) -----------------------------------
+
+test('§8 publish: one puzzle per date AND kind; ids, files, per-kind numbering, unpublish by id', async () => {
+  const date = '2029-04-04';
+  const ids = [date, `${date}-mini`, `${date}-midi`];
+  try {
+    const daily = await api('POST', '/api/publish', { draft: await sampleDraft({ date, title: 'Daily' }) });
+    assert.equal(daily.status, 200, JSON.stringify(daily.json));
+    assert.equal(daily.json.puzzle.id, date);
+    assert.ok(!('kind' in daily.json.puzzle));
+    const mini = await api('POST', '/api/publish', { draft: await sampleDraft({ date, kind: 'mini', title: 'Mini' }) });
+    assert.equal(mini.status, 200, JSON.stringify(mini.json)); // same date, other kind: no conflict
+    assert.equal(mini.json.puzzle.id, `${date}-mini`);
+    assert.equal(mini.json.puzzle.kind, 'mini');
+    assert.equal(mini.json.url, `/site/#/puzzle/${date}-mini`);
+    assert.equal(mini.json.number, 1); // first Mini ever
+    const midi = await api('POST', '/api/publish', { draft: await sampleDraft({ date, kind: 'midi', title: 'Midi' }) });
+    assert.equal(midi.status, 200);
+
+    const file = await readJson(`site/puzzles/${date}-mini.json`);
+    assert.ok(validatePuzzle(file).ok, validatePuzzle(file).errors.join('; '));
+    assert.equal(file.kind, 'mini');
+
+    const index = (await api('GET', '/api/published')).json;
+    const day = index.puzzles.filter((p) => p.date === date);
+    assert.deepEqual(day.map((p) => [p.id, p.kind]), [[`${date}-mini`, 'mini'], [`${date}-midi`, 'midi'], [date, 'daily']]);
+    assert.equal(day[2].number, index.puzzles.filter((p) => p.kind === 'daily').length);
+    assert.ok(index.puzzles.every((p) => p.kind));
+
+    // A second mini on that date is a conflict naming the existing mini; the daily is untouched.
+    const again = await api('POST', '/api/publish', { draft: await sampleDraft({ date, kind: 'mini', title: 'Mini 2' }) });
+    assert.equal(again.status, 409);
+    assert.equal(again.json.existing.id, `${date}-mini`);
+    assert.equal(again.json.existing.kind, 'mini');
+    assert.match(again.json.error, /Mini/);
+    const over = await api('POST', '/api/publish', { draft: await sampleDraft({ date, kind: 'mini', title: 'Mini 2' }), overwrite: true });
+    assert.equal(over.status, 200);
+    assert.equal((await readJson(`site/puzzles/${date}-mini.json`)).title, 'Mini 2');
+    assert.equal((await readJson(`site/puzzles/${date}.json`)).title, 'Daily');
+
+    // A bad kind is refused when saving a draft and when publishing.
+    assert.equal((await api('PUT', '/api/drafts/bad-kind', { ...(await sampleDraft()), id: 'bad-kind', kind: 'jumbo' })).status, 400);
+    assert.equal((await api('POST', '/api/publish', { draft: await sampleDraft({ date, kind: 'jumbo' }) })).status, 422);
+
+    // Unpublish by id: only that kind goes.
+    const del = await api('DELETE', `/api/published/${date}-mini`);
+    assert.equal(del.status, 200);
+    assert.equal(await exists(`site/puzzles/${date}-mini.json`), false);
+    assert.equal(await exists(`site/puzzles/${date}.json`), true);
+    assert.deepEqual(del.json.index.puzzles.filter((p) => p.date === date).map((p) => p.id), [`${date}-midi`, date]);
+    assert.equal((await api('DELETE', `/api/published/${date}-mini`)).status, 404);
+    assert.equal((await api('DELETE', `/api/published/${date}-daily`)).status, 400);
+    assert.equal((await api('DELETE', `/api/published/${date}-maxi`)).status, 400);
+  } finally {
+    for (const id of ids) await api('DELETE', `/api/published/${id}`);
+  }
+});
+
+test('§8 drafts list carries kind and publishedId', async () => {
+  const mk = (id, extra) => ({ ...makeDraft({ id, width: 5 }), ...extra });
+  const rows = [
+    ['k-legacy', { publishedDate: '2026-10-03', publishedAt: 'x' }, 'daily', '2026-10-03'],
+    ['k-mini', { kind: 'mini', publishedDate: '2026-10-03', publishedAt: 'x' }, 'mini', '2026-10-03-mini'],
+    ['k-stored', { kind: 'midi', publishedId: '2026-10-03-midi' }, 'midi', '2026-10-03-midi'],
+    ['k-never', { kind: 'midi' }, 'midi', ''],
+  ];
+  try {
+    for (const [id, extra] of rows) {
+      const d = mk(id, extra);
+      if (!extra.kind) delete d.kind; // a draft saved before kinds existed
+      assert.equal((await api('PUT', `/api/drafts/${id}`, d)).status, 200);
+    }
+    const list = (await api('GET', '/api/drafts')).json;
+    for (const [id, , kind, publishedId] of rows) {
+      const row = list.find((r) => r.id === id);
+      assert.equal(row.kind, kind, id);
+      assert.equal(row.publishedId, publishedId, id);
+    }
+  } finally {
+    for (const [id] of rows) await api('DELETE', `/api/drafts/${id}`);
+  }
+});
+
+test('§8 recent-answers: other kinds on the same date count; only the asking id is excluded', async () => {
+  const date = '2029-06-10';
+  const sample = await sampleDraft();
+  const word = draftEntries(sample).all[0].answer;
+  try {
+    for (const kind of ['daily', 'mini']) {
+      const r = await api('POST', '/api/publish', { draft: await sampleDraft({ date, kind }) });
+      assert.equal(r.status, 200, JSON.stringify(r.json));
+    }
+    // The midi of that date sees both the daily and the mini (same date listed once in answers; ids in sources).
+    let r = await api('GET', `/api/recent-answers?id=${date}-midi&days=0`);
+    assert.equal(r.status, 200);
+    assert.equal(r.json.id, `${date}-midi`);
+    assert.equal(r.json.kind, 'midi');
+    assert.deepEqual(r.json.answers[word], [date]);
+    assert.deepEqual(r.json.sources[word], [`${date}-mini`, date]);
+    // The mini sees only the daily; the daily only the mini (by ?date=&kind= and by ?date= alone = daily).
+    r = await api('GET', `/api/recent-answers?date=${date}&kind=mini&days=0`);
+    assert.deepEqual(r.json.sources[word], [date]);
+    r = await api('GET', `/api/recent-answers?date=${date}&days=0`);
+    assert.equal(r.json.kind, 'daily');
+    assert.deepEqual(r.json.sources[word], [`${date}-mini`]);
+    r = await api('GET', `/api/recent-answers?id=${date}&days=0`);
+    assert.deepEqual(r.json.sources[word], [`${date}-mini`]);
+    for (const bad of ['?id=2029-06-10-maxi', '?id=nope', `?date=${date}&kind=jumbo`]) {
+      assert.equal((await api('GET', `/api/recent-answers${bad}`)).status, 400, bad);
+    }
+  } finally {
+    await api('DELETE', `/api/published/${date}`);
+    await api('DELETE', `/api/published/${date}-mini`);
+  }
+});
+
+test('§8 LAN hiding goes by date for every kind', { skip: !lanAddress() && 'no network interface' }, async () => {
+  const ip = lanAddress();
+  const lanServer = createServer({ root });
+  await new Promise((resolve) => lanServer.listen(0, ip, resolve));
+  const lanBase = `http://${ip}:${lanServer.address().port}`;
+  const get = async (url) => {
+    const res = await fetch(lanBase + url, { redirect: 'manual' });
+    return { status: res.status, text: await res.text() };
+  };
+  const past = '2026-09-29';
+  const future = '2099-07-01';
+  try {
+    for (const date of [past, future]) {
+      for (const kind of ['mini', 'daily']) {
+        const r = await api('POST', '/api/publish', { draft: await sampleDraft({ date, kind }), overwrite: true });
+        assert.equal(r.status, 200);
+      }
+    }
+    assert.equal((await get(`/site/puzzles/${past}-mini.json`)).status, 200);
+    assert.equal((await get(`/site/puzzles/${past}.json`)).status, 200);
+    assert.equal((await get(`/site/puzzles/${future}-mini.json`)).status, 404);
+    assert.equal((await get(`/site/puzzles/${future}.json`)).status, 404);
+    const index = JSON.parse((await get('/site/puzzles/index.json')).text);
+    assert.ok(index.puzzles.some((p) => p.id === `${past}-mini`));
+    assert.ok(!index.puzzles.some((p) => p.date === future));
+  } finally {
+    lanServer.closeAllConnections?.();
+    await new Promise((resolve) => lanServer.close(resolve));
+    for (const id of [past, `${past}-mini`, future, `${future}-mini`]) await api('DELETE', `/api/published/${id}`);
+  }
+});

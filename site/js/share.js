@@ -1,13 +1,14 @@
 // Share text (SPEC §6 "Share"): a pure builder that is unit-tested, plus the delivery helpers
 // (navigator.share -> clipboard -> execCommand('copy') -> manual textarea).
 //
-// 🧩 Armani Crossword #12 · Sat, Oct 3
+// 🧩 Armani Crossword #12 · Sat, Oct 3        (a daily)
+// 🧩 Armani Crossword Mini #1 · Sun, Oct 4    (a mini / midi: the kind before the number, SPEC §8)
 // ⏱️ 4:32 · ✨ no hints
 // ⬛🟩🟩🟩🟩
 // …
 // https://friends.example/crossword/
 
-import { formatDuration, isValidDateId } from '../shared/puzzle.js';
+import { KIND_LABELS, formatDuration, isValidDateId } from '../shared/puzzle.js';
 
 export const SHARE_EMOJI = Object.freeze({
   block: '⬛',
@@ -61,6 +62,7 @@ export function shareGridRows(puzzle, marks, everWrong = []) {
  * @param {object} o
  * @param {string}  o.siteName
  * @param {number|null} o.number     puzzle number from the index (omitted when unknown, e.g. preview)
+ * @param {string}  [o.kind='daily'] 'mini' | 'midi' | 'daily' — the kind label goes before the number (none for daily)
  * @param {string}  o.date           YYYY-MM-DD
  * @param {number}  o.elapsedMs
  * @param {number}  o.checks
@@ -69,11 +71,12 @@ export function shareGridRows(puzzle, marks, everWrong = []) {
  * @param {boolean} [o.shareGrid=true]
  * @param {string}  o.url
  */
-export function buildShareText({ siteName, number = null, date, elapsedMs, checks = 0, reveals = 0, gridRows = null, shareGrid = true, url = '' }) {
+export function buildShareText({ siteName, number = null, kind = 'daily', date, elapsedMs, checks = 0, reveals = 0, gridRows = null, shareGrid = true, url = '' }) {
   const name = String(siteName || 'Armani Crossword').trim();
   const num = Number.isInteger(number) && number > 0 ? ` #${number}` : '';
+  const kindWord = kind && kind !== 'daily' && KIND_LABELS[kind] ? ` ${KIND_LABELS[kind]}` : '';
   const lines = [
-    `🧩 ${name}${num} · ${shareDate(date)}`,
+    `🧩 ${name}${kindWord}${num} · ${shareDate(date)}`,
     `⏱️ ${formatDuration(elapsedMs)} · ${hintSummary(checks, reveals)}`,
   ];
   if (shareGrid && gridRows?.length) lines.push(...gridRows);

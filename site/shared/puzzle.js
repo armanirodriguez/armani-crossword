@@ -125,6 +125,49 @@ export function formatDuration(ms) {
 }
 
 // ---------------------------------------------------------------------------
+// Puzzle kinds and ids (SPEC §8): a date holds up to one Mini, one Midi and one Daily.
+
+/** Puzzle kinds in display order. */
+export const KINDS = Object.freeze(['mini', 'midi', 'daily']);
+export const KIND_LABELS = Object.freeze({ mini: 'Mini', midi: 'Midi', daily: 'Daily' });
+
+/** True for one of KINDS. */
+export function isValidKind(kind) {
+  return typeof kind === 'string' && KINDS.includes(kind);
+}
+
+/** The kind of a puzzle, draft or index entry: `p.kind || 'daily'`. */
+export function puzzleKind(p) {
+  return (p && p.kind) || 'daily';
+}
+
+/** Published id for a date + kind: "2026-10-05" (daily, backward compatible) or "2026-10-05-mini". */
+export function puzzleId(date, kind = 'daily') {
+  const k = kind || 'daily';
+  return k === 'daily' ? String(date) : `${date}-${k}`;
+}
+
+/** "2026-10-05-mini" -> { date: '2026-10-05', kind: 'mini' }; "2026-10-05" -> { …, kind: 'daily' }; else null. */
+export function parsePuzzleId(id) {
+  if (typeof id !== 'string') return null;
+  const m = /^(\d{4}-\d{2}-\d{2})(?:-(mini|midi))?$/.exec(id);
+  if (!m || !isValidDateId(m[1])) return null;
+  return { date: m[1], kind: m[2] || 'daily' };
+}
+
+export function isValidPuzzleId(id) {
+  return parsePuzzleId(id) !== null;
+}
+
+/** Default kind for a grid size (the user can still choose another): ≤ 7 mini, ≤ 11 midi, else daily. */
+export function suggestKind(width, height = width) {
+  const size = Math.max(Number(width) || 0, Number(height) || 0);
+  if (size <= 7) return 'mini';
+  if (size <= 11) return 'midi';
+  return 'daily';
+}
+
+// ---------------------------------------------------------------------------
 // Drafts (builder)
 
 export function isValidDraftId(id) {
@@ -132,7 +175,7 @@ export function isValidDraftId(id) {
 }
 
 /** A new, empty draft. */
-export function makeDraft({ id, width = 9, height = width, title = '', author = '', date = '', symmetry = 'rotational' } = {}) {
+export function makeDraft({ id, width = 9, height = width, title = '', author = '', date = '', symmetry = 'rotational', kind = 'daily' } = {}) {
   const now = new Date().toISOString();
   return {
     format: DRAFT_FORMAT,
@@ -141,6 +184,7 @@ export function makeDraft({ id, width = 9, height = width, title = '', author = 
     author,
     note: '',
     date,
+    kind: isValidKind(kind) ? kind : 'daily',
     width,
     height,
     symmetry,
@@ -170,7 +214,7 @@ export function draftEntries(draft) {
 /**
  * Convert a draft into a publishable puzzle.
  * Returns { puzzle, errors: string[], warnings: string[] }. `puzzle` is null when there are errors.
- * The published id is the draft's date (one puzzle per day).
+ * The published id is puzzleId(draft.date, draft.kind): the date for a daily, "<date>-mini" / "<date>-midi" otherwise.
  */
 export function draftToPuzzle(draft) {
   const errors = [];
@@ -183,6 +227,8 @@ export function draftToPuzzle(draft) {
     return { puzzle: null, errors: ['Grid cells do not match the grid size'], warnings };
   }
   if (!isValidDateId(draft.date)) errors.push('Pick a release date (YYYY-MM-DD)');
+  const kind = puzzleKind(draft);
+  if (!isValidKind(kind)) errors.push(`Unknown puzzle kind "${kind}" (use mini, midi or daily)`);
   if (!normalizeClue(draft.title)) warnings.push('The puzzle has no title');
 
   const grid = { width, height, cells: draft.cells };
@@ -203,7 +249,7 @@ export function draftToPuzzle(draft) {
   }
   if (errors.length) return { puzzle: null, errors, warnings };
 
-  const id = draft.date;
+  const id = puzzleId(draft.date, kind);
   const plain = draft.cells.map((ch) => (ch === BLOCK ? BLOCK : ch)).join('');
   const whiteSet = (list) => [...new Set((list || []).filter((i) => Number.isInteger(i) && i >= 0 && i < plain.length && plain[i] !== BLOCK))].sort((a, b) => a - b);
   const { across, down } = draftEntries(draft);
@@ -211,6 +257,7 @@ export function draftToPuzzle(draft) {
     format: PUZZLE_FORMAT,
     id,
     date: draft.date,
+    ...(kind === 'daily' ? {} : { kind }),
     title: normalizeClue(draft.title) || 'Untitled',
     author: normalizeClue(draft.author),
     note: String(draft.note ?? '').trim(),
@@ -237,7 +284,11 @@ export function validatePuzzle(p) {
   const errors = [];
   if (!p || typeof p !== 'object') return { ok: false, errors: ['Not an object'] };
   if (p.format !== PUZZLE_FORMAT) errors.push(`Unknown format ${p.format}`);
-  if (!isValidDateId(p.id) || p.id !== p.date) errors.push('id/date must be the same YYYY-MM-DD date');
+  const kind = puzzleKind(p);
+  if (!isValidKind(kind)) errors.push(`Unknown kind ${kind}`);
+  else if (!isValidDateId(p.date) || p.id !== puzzleId(p.date, kind)) {
+    errors.push(kind === 'daily' ? 'id/date must be the same YYYY-MM-DD date' : `id must be ${p.date}-${kind} for a ${kind} on ${p.date}`);
+  }
   const { width, height } = p;
   if (!Number.isInteger(width) || !Number.isInteger(height) || width < 2 || height < 2 || width > MAX_SIZE || height > MAX_SIZE) {
     errors.push('Invalid size');
@@ -308,15 +359,26 @@ export function loadPuzzle(p) {
 
 /** Index summary for one published puzzle (number is assigned by buildIndex). */
 export function puzzleSummary(p) {
-  return { id: p.id, date: p.date, title: p.title, author: p.author || '', width: p.width, height: p.height };
+  return { id: p.id, date: p.date, kind: puzzleKind(p), title: p.title, author: p.author || '', width: p.width, height: p.height };
+}
+
+/** Sort comparator: by date, then kind display order (Mini, Midi, Daily). */
+export function comparePuzzles(a, b) {
+  if (a.date !== b.date) return a.date < b.date ? -1 : 1;
+  return KINDS.indexOf(puzzleKind(a)) - KINDS.indexOf(puzzleKind(b));
 }
 
 /**
  * Build site/puzzles/index.json from published puzzles (or summaries).
- * Puzzles are sorted by date and numbered 1..N in date order.
+ * Puzzles are sorted by date then kind (Mini, Midi, Daily); `number` counts 1..N per kind in date order
+ * (Daily #2, Mini #1). Entries without `kind` are dailies. Every entry carries `kind`.
  */
 export function buildIndex(puzzles) {
-  const list = puzzles.map(puzzleSummary).sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
-  list.forEach((s, i) => { s.number = i + 1; });
+  const list = puzzles.map(puzzleSummary).sort(comparePuzzles);
+  const counts = {};
+  for (const s of list) {
+    counts[s.kind] = (counts[s.kind] || 0) + 1;
+    s.number = counts[s.kind];
+  }
   return { format: 'crossword-index/1', puzzles: list };
 }

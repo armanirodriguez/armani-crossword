@@ -14,7 +14,7 @@ import { confirmDialog, isOverlayOpen, openMenu, openModal, openSheet, toast } f
 import { confetti } from '../confetti.js';
 import { hintSummary, shareDate } from '../share.js';
 import { ProgressSync } from '../progress.js';
-import { formatDuration } from '../../shared/puzzle.js';
+import { KIND_LABELS, formatDuration, puzzleKind } from '../../shared/puzzle.js';
 import { shareNow, shareTextFor } from './share-action.js';
 
 /** Touch layout (custom keyboard + clue bar) for coarse pointers or narrow windows. */
@@ -30,13 +30,15 @@ const pluralize = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
  * @param {object} o.raw       published puzzle JSON
  * @param {object} o.loaded    loadPuzzle(raw)
  * @param {object|null} o.entry index entry (number)
- * @param {() => void} o.onBack  show the intro card again
+ * @param {() => void} o.onBack  show the intro card again (or today's puzzles, when Play came from there)
+ * @param {string} [o.backLabel]   accessible name of the back button
  * @returns {{ el, enter(), leave(), destroy(), sync(), get progress() }}
  *
  * Progress is loaded here (not passed in) so this view knows exactly which stored version it started from:
  * other tabs of the same puzzle may save too, and every save/pull merges with them (ProgressSync).
  */
-export function createPlayView({ ctx, raw, loaded, entry, onBack }) {
+export function createPlayView({ ctx, raw, loaded, entry, onBack, backLabel = 'Back to puzzle info' }) {
+  const kind = puzzleKind(raw);
   const store = new ProgressSync({ storage: ctx.storage, puzzleId: raw.id, puzzle: loaded, checksum: raw.checksum });
   const progress = store.load();
   const game = new Game(loaded, progress);
@@ -115,7 +117,7 @@ export function createPlayView({ ctx, raw, loaded, entry, onBack }) {
     icon('bulb', { size: 22 }), h('span', { class: 'btn-label' }, 'Hints'));
   const cluesBtn = h('button', { type: 'button', class: 'icon-btn clues-btn', 'aria-label': 'All clues', title: 'All clues' }, icon('list', { size: 22 }));
   const shareBtn = h('button', { type: 'button', class: 'btn btn-primary btn-sm share-btn', hidden: true }, icon('share', { size: 18 }), h('span', null, 'Share'));
-  const backBtn = h('button', { type: 'button', class: 'icon-btn back-btn', 'aria-label': 'Back to puzzle info', title: 'Back' }, icon('chevronLeft', { size: 24 }));
+  const backBtn = h('button', { type: 'button', class: 'icon-btn back-btn', 'aria-label': backLabel, title: 'Back' }, icon('chevronLeft', { size: 24 }));
   const archiveLink = h('a', { class: 'icon-btn archive-link', href: '#/archive', 'aria-label': 'Archive', title: 'Archive' }, icon('calendar', { size: 21 }));
 
   const header = h('header', { class: 'play-header' },
@@ -123,9 +125,11 @@ export function createPlayView({ ctx, raw, loaded, entry, onBack }) {
     h('div', { class: 'play-title' },
       h('span', { class: 'play-title-main' }, raw.title || 'Untitled'),
       // Separate parts so very narrow phones can drop the date and keep the puzzle number.
-      h('span', { class: ['play-title-sub', entry?.number && 'has-num'] }, [
+      h('span', { class: ['play-title-sub', (entry?.number || kind !== 'daily') && 'has-num'] }, [
         h('span', { class: 'sub-date' }, shareDate(raw.date)),
-        entry?.number && h('span', { class: 'sub-num' }, `#${entry.number}`),
+        // "#2" for a daily, "Mini #1" for a mini (SPEC §8).
+        (entry?.number || kind !== 'daily') && h('span', { class: 'sub-num' },
+          [kind !== 'daily' && KIND_LABELS[kind], entry?.number && `#${entry.number}`].filter(Boolean).join(' ')),
         ctx.preview && h('span', { class: 'sub-preview' }, 'Preview'),
       ])),
     h('div', { class: 'play-actions' }, timerBtn, hintsBtn, shareBtn, cluesBtn, archiveLink));
@@ -324,7 +328,7 @@ export function createPlayView({ ctx, raw, loaded, entry, onBack }) {
       body: [
         h('p', { class: 'solved-time' }, formatDuration(r.elapsedMs)),
         h('p', { class: 'solved-hints' }, hintSummary(r.checks, r.reveals)),
-        h('p', { class: 'solved-puzzle' }, `${raw.title || 'Untitled'} · ${shareDate(raw.date)}`),
+        h('p', { class: 'solved-puzzle' }, [kind !== 'daily' && KIND_LABELS[kind], raw.title || 'Untitled', shareDate(raw.date)].filter(Boolean).join(' · ')),
       ],
       actions: [
         { label: 'View puzzle', value: 'view' },

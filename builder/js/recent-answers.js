@@ -3,10 +3,13 @@
 // Fill option "Avoid repeating recent answers" is on), the Words panel tags them ("used Oct 1") and the Checks panel
 // and the Review checklist list the ones in the grid.
 //
-// Results are cached per (date, window) and dropped whenever the published puzzles change.
+// The draft's own puzzle (its date and kind) is left out; the other kinds of the same day count, so same-day
+// puzzles avoid sharing answers. Results are cached per (date, kind, window) and dropped whenever the published
+// puzzles change.
 
 import { draftEntries, isValidDateId } from '../../site/shared/puzzle.js';
 import { api } from './api.js';
+import { DEFAULT_KIND, idDate, kindLabel, parsePuzzleId } from './kinds.js';
 
 /** After a failed request, ask again this much later (not on every render). */
 const RETRY_MS = 30_000;
@@ -16,19 +19,25 @@ export const RECENT_PENALTY = 30;
 /** Window choices (days before and after the draft's date). */
 export const RECENT_WINDOWS = [7, 14, 30, 60, 90];
 
-/** "2026-10-01" -> "Oct 1" (with the year when it differs from `relativeTo`'s). */
+/**
+ * "2026-10-01" -> "Oct 1" (with the year when it differs from `relativeTo`'s). A puzzle id of a Mini / Midi
+ * ("2026-10-01-mini") reads "Oct 1 Mini".
+ */
 export function shortDate(dateId, relativeTo = '') {
-  if (!isValidDateId(dateId)) return String(dateId ?? '');
-  const [y, m, d] = dateId.split('-').map(Number);
+  const date = idDate(dateId);
+  if (!date) return String(dateId ?? '');
+  const [y, m, d] = date.split('-').map(Number);
   const opts = { month: 'short', day: 'numeric', timeZone: 'UTC' };
-  if (relativeTo && relativeTo.slice(0, 4) !== dateId.slice(0, 4)) opts.year = 'numeric';
-  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-US', opts);
+  if (relativeTo && relativeTo.slice(0, 4) !== date.slice(0, 4)) opts.year = 'numeric';
+  const kind = isValidDateId(dateId) ? 'daily' : parsePuzzleId(dateId)?.kind;
+  const text = new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-US', opts);
+  return kind && kind !== 'daily' ? `${text} ${kindLabel(kind)}` : text;
 }
 
-/** Of `dates` (YYYY-MM-DD), the one closest to `date` (earlier wins a tie). */
+/** Of `dates` (YYYY-MM-DD, or puzzle ids), the one closest to `date` (earlier wins a tie). */
 export function nearestDate(dates, date) {
   if (!isValidDateId(date)) return dates[dates.length - 1] ?? null;
-  const dist = (x) => Math.abs(Date.parse(x) - Date.parse(date));
+  const dist = (x) => Math.abs(Date.parse(idDate(x) || x) - Date.parse(date));
   return [...dates].sort((a, b) => dist(a) - dist(b) || (a < b ? -1 : 1))[0] ?? null;
 }
 
@@ -86,14 +95,14 @@ export class RecentAnswers extends EventTarget {
   #generation = 0;
 
   /** The cached result (answer -> dates) or null; starts loading it when missing. */
-  get(date, days) {
-    const entry = this.#entry(date, days);
+  get(date, days, kind = DEFAULT_KIND) {
+    const entry = this.#entry(date, days, kind);
     return entry ? entry.value : null;
   }
 
   /** Resolves to the result (answer -> dates); an empty Map when it cannot be loaded. */
-  async load(date, days) {
-    const entry = this.#entry(date, days);
+  async load(date, days, kind = DEFAULT_KIND) {
+    const entry = this.#entry(date, days, kind);
     if (!entry) return new Map();
     await entry.promise;
     return entry.value || new Map();
@@ -105,14 +114,14 @@ export class RecentAnswers extends EventTarget {
     this.#cache.clear();
   }
 
-  #entry(date, days) {
+  #entry(date, days, kind) {
     if (!isValidDateId(date) || !Number.isInteger(days) || days < 0) return null;
-    const key = `${date}|${days}`;
+    const key = `${date}|${kind}|${days}`;
     let entry = this.#cache.get(key);
     if (!entry) {
       const generation = this.#generation;
       entry = { value: null, promise: null };
-      entry.promise = api.recentAnswers(date, days).then((res) => {
+      entry.promise = api.recentAnswers(date, days, kind).then((res) => {
         entry.value = new Map(Object.entries(res?.answers || {}).filter(([, dates]) => Array.isArray(dates) && dates.length));
       }, (err) => {
         console.warn('Recent answers are unavailable:', err?.message || err);
@@ -120,7 +129,7 @@ export class RecentAnswers extends EventTarget {
         const retry = setTimeout(() => { if (this.#cache.get(key) === entry) this.#cache.delete(key); }, RETRY_MS);
         retry?.unref?.(); // (Node, in tests: don't keep the process alive for it)
       }).then(() => {
-        if (generation === this.#generation) this.dispatchEvent(new CustomEvent('loaded', { detail: { date, days } }));
+        if (generation === this.#generation) this.dispatchEvent(new CustomEvent('loaded', { detail: { date, days, kind } }));
       });
       this.#cache.set(key, entry);
     }

@@ -3,6 +3,7 @@
 import { addDays, formatDate } from '../../../site/shared/puzzle.js';
 import { h, icon, timeAgo } from '../dom.js';
 import { openNewDraftDialog } from '../new-draft.js';
+import { draftKind, kindLabel, puzzleKind } from '../kinds.js';
 
 const STEPS = [
   ['Type theme words', 'A few words or phrases that tie the puzzle together.'],
@@ -36,19 +37,28 @@ export function mountHome(container, app) {
       recent.append(h('ul', { class: 'link-list' }, app.drafts.slice(0, 8).map((d) => h('li', null,
         h('a', { href: `#/draft/${d.id}` },
           h('span', { class: 'll-title', text: d.title || 'Untitled' }),
-          h('span', { class: 'muted small' }, `${d.width}×${d.height} · ${d.date ? formatDate(d.date, 'short') : 'no date'} · edited ${timeAgo(d.updatedAt)}`))))));
+          h('span', { class: 'muted small' },
+            h('span', { class: ['kind-badge', `kind-${draftKind(d)}`], text: kindLabel(draftKind(d)) }),
+            ` ${d.width}×${d.height} · ${d.date ? formatDate(d.date, 'short') : 'no date'} · edited ${timeAgo(d.updatedAt)}`))))));
     }
-    const pub = app.publishedByDate();
     const today = app.today();
     const days = Array.from({ length: 7 }, (_, k) => addDays(today, k));
+    // Each day lists its published puzzles (Mini, Midi, Daily) and the drafts planned for a kind not published yet.
     upcoming.replaceChildren(h('ul', { class: 'day-list' }, days.map((date) => {
-      const p = pub.get(date);
-      const draft = !p && app.drafts.find((d) => d.date === date);
-      return h('li', { class: ['day', p ? 'filled' : draft ? 'planned' : 'gap'] },
+      const pubs = app.publishedOn(date);
+      const kinds = new Set(pubs.map(puzzleKind));
+      const drafts = app.drafts.filter((d) => d.date === date && !kinds.has(draftKind(d)));
+      return h('li', { class: ['day', pubs.length ? 'filled' : drafts.length ? 'planned' : 'gap'] },
         h('span', { class: 'day-date' }, date === today ? 'Today' : formatDate(date, 'short').replace(/, \d{4}$/, '')),
-        p ? h('span', null, h('strong', null, `#${p.number} `), p.title)
-          : draft ? h('a', { href: `#/draft/${draft.id}` }, `Draft: ${draft.title || 'Untitled'} (not published)`)
-            : h('button', { class: 'btn sm link', type: 'button', onclick: () => openNewDraftDialog(app, { date }) }, icon('plus', { size: 12 }), 'Plan a puzzle'));
+        h('span', { class: 'day-items' },
+          pubs.map((p) => h('span', { class: 'day-item' },
+            h('span', { class: ['kind-badge', `kind-${puzzleKind(p)}`], text: kindLabel(puzzleKind(p)) }),
+            h('strong', null, `#${p.number} `), h('span', { text: p.title }))),
+          drafts.map((d) => h('a', { class: 'day-item', href: `#/draft/${d.id}` },
+            h('span', { class: ['kind-badge', `kind-${draftKind(d)}`], text: kindLabel(draftKind(d)) }),
+            `Draft: ${d.title || 'Untitled'} (not published)`)),
+          pubs.length || drafts.length ? null
+            : h('button', { class: 'btn sm link', type: 'button', onclick: () => openNewDraftDialog(app, { date }) }, icon('plus', { size: 12 }), 'Plan a puzzle')));
     })));
   }
 

@@ -14,10 +14,16 @@ import { shareNow, shareTextFor } from './share-action.js';
  * @param {object|null} o.entry index entry
  * @param {string} o.label      eyebrow ("Today's puzzle", "Latest puzzle", "Puzzle", "Preview")
  * @param {string} [o.notice]
- * @param {boolean} [o.autoStart] skip the intro (used when a live preview reloads mid-solve)
+ * @param {boolean} [o.autoStart] skip the intro (a live preview reloading mid-solve; Play on a today's-puzzles card)
+ * @param {boolean} [o.kindInLabel] the label already names the puzzle's kind ("Today’s Mini")
+ * @param {object[]} [o.siblings] the other puzzles of the same date (index entries), linked under the intro card
+ * @param {(() => void)|null} [o.onBack] the play view's back button (default: this puzzle's intro card)
+ * @param {string} [o.backLabel]
  * @param {(el: Node) => void} o.mount   replaces the page content
  */
-export function createPuzzleScreen({ ctx, raw, entry, label, notice = '', autoStart = false, mount }) {
+export function createPuzzleScreen({
+  ctx, raw, entry, label, notice = '', autoStart = false, kindInLabel = false, siblings = [], onBack = null, backLabel, mount,
+}) {
   const loaded = loadPuzzle(raw);
   let play = null;
   let intro = null;
@@ -28,7 +34,7 @@ export function createPuzzleScreen({ ctx, raw, entry, label, notice = '', autoSt
     if (play) play.leave();
     const progress = progressNow();
     intro = buildIntro({
-      ctx, raw, loaded, entry, label, notice, progress,
+      ctx, raw, loaded, entry, label, notice, progress, kindInLabel, siblings,
       onPlay: showPlay,
       onShare: () => shareNow(shareTextFor(ctx, raw, entry, loaded, progress)),
     });
@@ -39,7 +45,7 @@ export function createPuzzleScreen({ ctx, raw, entry, label, notice = '', autoSt
 
   function showPlay() {
     if (!play) {
-      play = createPlayView({ ctx, raw, loaded, entry, onBack: showIntro });
+      play = createPlayView({ ctx, raw, loaded, entry, onBack: onBack || showIntro, backLabel });
     }
     intro = null;
     mount(play.el);

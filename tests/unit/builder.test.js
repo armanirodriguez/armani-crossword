@@ -19,6 +19,12 @@ import {
 import { DraftStore } from '../../builder/js/store.js';
 import { siteUrlFor } from '../../builder/js/preview.js';
 import { parseScore } from '../../builder/js/views/wordlist.js';
+import { previewPuzzle } from '../../builder/js/draft-utils.js';
+import {
+  draftKind, draftPuzzleId, entryId, idDate, numberLabel, parsePuzzleId, predictedNumber, puzzleId, recordedPuzzleId,
+  renumberedBy, sortPuzzles, suggestKind, takenDatesForKind,
+} from '../../builder/js/kinds.js';
+import { validatePuzzle } from '../../site/shared/puzzle.js';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const sample = JSON.parse(await fsp.readFile(path.join(REPO, 'tests', 'fixtures', 'sample-draft.json'), 'utf8'));
@@ -336,7 +342,7 @@ test('RecentAnswers loads from the dev server, caches per date and window, and s
   const map = await recent.load('2029-05-10', 30);
   assert.deepEqual(map.get(answer), ['2029-05-01', '2029-05-20']);
   assert.equal(recent.get('2029-05-10', 30), map); // cached
-  assert.deepEqual(loaded, [{ date: '2029-05-10', days: 30 }]);
+  assert.deepEqual(loaded, [{ date: '2029-05-10', days: 30, kind: 'daily' }]);
   assert.deepEqual((await recent.load('2029-05-10', 5)).size, 0);
   assert.deepEqual((await recent.load('2029-05-20', 30)).get(answer), ['2029-05-01']); // its own date is left out
   // Invalid input never throws or asks the server.
@@ -364,4 +370,104 @@ test('RecentAnswers degrades to "nothing recent" when the server cannot answer',
     globalThis.fetch = saved;
     console.warn = warn;
   }
+});
+
+// ---------------------------------------------------------------------------
+// SPEC §8: several puzzles per day (Mini / Midi / Daily)
+
+test('kinds: ids, labels, the size default and what a draft publishes to', () => {
+  assert.equal(puzzleId('2026-10-05', 'daily'), '2026-10-05');
+  assert.equal(puzzleId('2026-10-05', 'mini'), '2026-10-05-mini');
+  assert.deepEqual(parsePuzzleId('2026-10-05-midi'), { date: '2026-10-05', kind: 'midi' });
+  assert.deepEqual(parsePuzzleId('2026-10-05'), { date: '2026-10-05', kind: 'daily' });
+  assert.equal(parsePuzzleId('2026-10-05-maxi'), null);
+  assert.equal(idDate('2026-10-05-mini'), '2026-10-05');
+  assert.equal(suggestKind(5, 5), 'mini');
+  assert.equal(suggestKind(7, 7), 'mini');
+  assert.equal(suggestKind(9, 9), 'midi');
+  assert.equal(suggestKind(11, 11), 'midi');
+  assert.equal(suggestKind(15, 15), 'daily');
+  assert.equal(numberLabel({ kind: 'daily', number: 2 }), '#2');
+  assert.equal(numberLabel({ number: 2 }), '#2'); // old index entries: dailies
+  assert.equal(numberLabel({ kind: 'mini', number: 1 }), 'Mini #1');
+  // Drafts made before kinds existed are dailies and keep their id.
+  assert.equal(draftKind({}), 'daily');
+  assert.equal(draftPuzzleId({ date: '2026-10-03' }), '2026-10-03');
+  assert.equal(draftPuzzleId({ date: '2026-10-03', kind: 'midi' }), '2026-10-03-midi');
+  assert.equal(draftPuzzleId({ date: '' , kind: 'mini' }), null);
+  assert.equal(entryId({ date: '2026-10-03', number: 1 }), '2026-10-03');
+  assert.equal(entryId({ id: '2026-10-03-mini', date: '2026-10-03', kind: 'mini' }), '2026-10-03-mini');
+  // Where it was published: the recorded id, else (older drafts) the daily of publishedDate.
+  assert.equal(recordedPuzzleId({ publishedDate: '2026-10-03', kind: 'mini' }), '2026-10-03');
+  assert.equal(recordedPuzzleId({ publishedDate: '2026-10-03', publishedId: '2026-10-03-mini' }), '2026-10-03-mini');
+  assert.equal(recordedPuzzleId({}), null);
+});
+
+test('kinds: next free date, numbering and order are per kind', () => {
+  const published = [
+    { id: '2026-10-03', date: '2026-10-03', number: 1 }, // an old entry without kind = daily
+    { id: '2026-10-04-mini', date: '2026-10-04', kind: 'mini', number: 1 },
+    { id: '2026-10-04', date: '2026-10-04', kind: 'daily', number: 2 },
+    { id: '2026-10-06-mini', date: '2026-10-06', kind: 'mini', number: 2 },
+  ];
+  const drafts = [{ id: 'a', date: '2026-10-05', kind: 'mini' }, { id: 'b', date: '2026-10-05' }];
+  assert.deepEqual([...takenDatesForKind('mini', { published, drafts })].sort(), ['2026-10-04', '2026-10-05', '2026-10-06']);
+  assert.deepEqual([...takenDatesForKind('daily', { published, drafts })].sort(), ['2026-10-03', '2026-10-04', '2026-10-05']);
+  assert.deepEqual([...takenDatesForKind('daily', { published, drafts, exceptDraft: 'b' })].sort(), ['2026-10-03', '2026-10-04']);
+  assert.deepEqual([...takenDatesForKind('midi', { published, drafts })], []);
+  assert.equal(predictedNumber(published, '2026-10-05', 'mini'), 2);
+  assert.equal(predictedNumber(published, '2026-10-05', 'daily'), 3);
+  assert.equal(predictedNumber(published, '2026-10-04', 'mini'), 1); // already there
+  assert.equal(predictedNumber(published, '2026-10-01', 'midi'), 1);
+  assert.equal(renumberedBy(published, '2026-10-05', 'mini'), 1);
+  assert.equal(renumberedBy(published, '2026-10-05', 'daily'), 0);
+  assert.equal(renumberedBy(published, '2026-10-04', 'mini'), 0); // replacing does not shift
+  assert.deepEqual(sortPuzzles(published).map((p) => p.id), ['2026-10-03', '2026-10-04-mini', '2026-10-04', '2026-10-06-mini']);
+  assert.deepEqual(sortPuzzles(published, { descending: true }).map((p) => p.id), ['2026-10-06-mini', '2026-10-04-mini', '2026-10-04', '2026-10-03']);
+});
+
+test('siteUrlFor takes puzzle ids: a Mini of today is open, a later one is a preview', () => {
+  assert.equal(siteUrlFor('2026-10-02-mini', '2026-10-02'), '/site/#/puzzle/2026-10-02-mini');
+  assert.equal(siteUrlFor('2026-10-03-midi', '2026-10-02'), '/site/index.html?preview=1#/puzzle/2026-10-03-midi');
+});
+
+test('the preview puzzle carries the kind and publishes to the same id (finished or not)', () => {
+  const mini = { ...clone(sample), kind: 'mini' };
+  const done = previewPuzzle(mini, '2026-10-04').puzzle;
+  assert.equal(done.id, `${sample.date}-mini`);
+  assert.equal(done.kind, 'mini');
+  assert.deepEqual(validatePuzzle(done).errors ?? [], []);
+  // Unfinished: the lenient conversion uses the same id and solution salt.
+  const rough = { ...clone(sample), kind: 'midi', date: '' };
+  rough.cells = rough.cells.map((c, i) => (i === rough.cells.findIndex((x) => x !== '#') ? '' : c));
+  const { puzzle } = previewPuzzle(rough, '2026-10-04');
+  assert.equal(puzzle.id, '2026-10-04-midi');
+  assert.equal(puzzle.kind, 'midi');
+  assert.equal(validatePuzzle(puzzle).ok, true);
+  assert.equal(previewPuzzle(rough, '2026-10-04').puzzle.date, '2026-10-04');
+  // A daily is unchanged: id = date, no kind field.
+  const daily = previewPuzzle(clone(sample), '2026-10-04').puzzle;
+  assert.equal(daily.id, sample.date);
+  assert.equal('kind' in daily, false);
+});
+
+test('recent answers per kind: the same day\'s other kinds count, the puzzle itself does not', async () => {
+  const date = '2029-07-01';
+  for (const kind of ['mini', 'daily']) {
+    const res = await realFetch(`${base}/api/publish`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ draft: { ...clone(sample), date, kind } }),
+    });
+    assert.equal(res.status, 200, await res.text());
+  }
+  const answer = draftEntries(sample).across[0].answer;
+  const recent = new RecentAnswers();
+  // The daily of that day sees the mini's answers (and vice versa); a midi sees both.
+  assert.ok((await recent.load(date, 7, 'daily')).has(answer));
+  assert.ok((await recent.load(date, 7, 'mini')).has(answer));
+  assert.ok((await recent.load(date, 7, 'midi')).has(answer));
+  assert.equal(shortDate('2029-07-01-mini', '2029-07-03'), 'Jul 1 Mini');
+  assert.equal(shortDate('2029-07-01', '2029-07-03'), 'Jul 1');
+  for (const id of [`${date}-mini`, date]) await realFetch(`${base}/api/published/${id}`, { method: 'DELETE' });
+  recent.invalidate();
+  assert.equal((await recent.load(date, 7, 'daily')).size, 0);
 });

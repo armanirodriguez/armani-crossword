@@ -84,12 +84,16 @@ export async function loadIndex() {
 
 const cache = new Map();
 
-/** A published puzzle, validated. Successful loads are cached for the session. */
-export async function loadPuzzleFile(date) {
-  if (cache.has(date)) return cache.get(date);
-  const raw = await fetchJSON(`puzzles/${date}.json`);
+/**
+ * A published puzzle by id ("2026-10-04" daily, "2026-10-04-mini", …), validated. Successful loads are cached for
+ * the session. A file whose id is not the one asked for (e.g. a daily saved as a mini's file) is 'invalid'.
+ */
+export async function loadPuzzleFile(id) {
+  if (cache.has(id)) return cache.get(id);
+  const raw = await fetchJSON(`puzzles/${id}.json`);
   checkPuzzle(raw);
-  cache.set(date, raw);
+  if (raw.id !== id) throw new LoadError('invalid', 'This puzzle file is damaged', [`puzzles/${id}.json holds puzzle ${raw.id}`]);
+  cache.set(id, raw);
   return raw;
 }
 

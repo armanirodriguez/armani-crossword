@@ -16,6 +16,9 @@ import { recentAnswers, recentPenalties } from './js/recent-answers.js';
 import { h, isTextEntry, debounce } from './js/dom.js';
 import { openModal, toast, toastError } from './js/dialogs.js';
 import { makeDraftId, nextFreeDate } from './js/draft-utils.js';
+import {
+  DEFAULT_KIND, draftKind, draftPuzzleId, entryId, isKind, recordedPuzzleId, sortPuzzles, suggestKind, takenDatesForKind,
+} from './js/kinds.js';
 import { mountSidebar } from './js/sidebar.js';
 import { mountEditor, TABS } from './js/editor.js';
 import { mountHome } from './js/views/home.js';
@@ -57,7 +60,7 @@ class App extends EventTarget {
 
   async refreshDrafts() {
     try {
-      this.drafts = await api.listDrafts();
+      this.drafts = await withKinds(await api.listDrafts());
       this.emit('drafts');
     } catch (err) {
       toastError(err, 'Could not load drafts: ');
@@ -87,10 +90,11 @@ class App extends EventTarget {
   freshnessDate(d) { return isValidDateId(d?.date) ? d.date : this.today(); }
 
   /**
-   * Answers of puzzles published within the Fill options' window around the draft's date (answer -> dates), or null
+   * Answers of puzzles published within the Fill options' window around the draft's date (answer -> dates; the
+   * other kinds of the same day count too, so same-day puzzles avoid sharing answers), or null
    * while they load (a 'loaded' event on app.recentAnswers follows).
    */
-  recentFor(d) { return d ? this.recentAnswers.get(this.freshnessDate(d), getFillOptions().recentDays) : null; }
+  recentFor(d) { return d ? this.recentAnswers.get(this.freshnessDate(d), getFillOptions().recentDays, draftKind(d)) : null; }
 
   /**
    * The engine's `penalize` option for a draft: recently used answers (not its theme answers) when the Fill option
@@ -99,52 +103,72 @@ class App extends EventTarget {
   async freshnessPenalties(d) {
     const { avoidRecent, recentDays } = getFillOptions();
     if (!avoidRecent || !d) return null;
-    const recent = await this.recentAnswers.load(this.freshnessDate(d), recentDays);
+    const recent = await this.recentAnswers.load(this.freshnessDate(d), recentDays, draftKind(d));
     return recentPenalties(recent, (d.theme || []).map((t) => t.answer));
   }
 
-  publishedByDate() {
-    return new Map((this.published?.puzzles || []).map((p) => [p.date, p]));
+  /** Published index entries by puzzle id (a date holds up to one Mini, Midi and Daily). */
+  publishedById() {
+    return new Map((this.published?.puzzles || []).map((p) => [entryId(p), p]));
+  }
+
+  /** The published puzzles of one date, in Mini, Midi, Daily order. */
+  publishedOn(date) {
+    return sortPuzzles((this.published?.puzzles || []).filter((p) => p.date === date));
   }
 
   /**
-   * The published puzzle that came from this draft: it recorded publishing on its current date, or (for drafts
-   * published before the builder recorded that, like the sample) the puzzle on its date has the same title.
+   * The published puzzle that came from this draft: it recorded publishing to the id it would publish to now
+   * (same date and kind), or (for drafts published before the builder recorded that, like the sample) the puzzle
+   * at that id has the same title.
    */
   publishedFor(d) {
-    const p = d?.date ? this.publishedByDate().get(d.date) : null;
+    const id = draftPuzzleId(d);
+    const p = id ? this.publishedById().get(id) : null;
     if (!p) return null;
-    if (d.publishedAt) return !d.publishedDate || d.publishedDate === d.date ? p : null;
+    if (d.publishedAt) {
+      const recorded = recordedPuzzleId(d);
+      return !recorded || recorded === id ? p : null;
+    }
     return normalizeClue(d.title) && normalizeClue(d.title) === p.title ? p : null;
   }
 
-  /** A published puzzle that occupies this draft's date but is not this draft. */
+  /** A published puzzle that occupies this draft's date and kind but is not this draft. */
   dateConflict(d) {
-    const p = d?.date ? this.publishedByDate().get(d.date) : null;
+    const id = draftPuzzleId(d);
+    const p = id ? this.publishedById().get(id) : null;
     return p && !this.publishedFor(d) ? p : null;
   }
 
-  /** Dates already used by published puzzles and (optionally) by other drafts. */
-  takenDates({ includeDrafts = true, exceptDraft = null } = {}) {
-    const taken = new Set((this.published?.puzzles || []).map((p) => p.date));
-    if (includeDrafts) for (const d of this.drafts) if (d.date && d.id !== exceptDraft) taken.add(d.date);
-    return taken;
+  /** Dates already used for `kind` by published puzzles and (optionally) by other drafts of that kind. */
+  takenDates({ kind = DEFAULT_KIND, includeDrafts = true, exceptDraft = null } = {}) {
+    return takenDatesForKind(kind, {
+      published: this.published?.puzzles || [],
+      drafts: includeDrafts ? this.drafts : [],
+      exceptDraft,
+    });
   }
 
-  suggestDate(exceptDraft = null) {
-    return nextFreeDate(this.today(), this.takenDates({ exceptDraft }));
+  /** The next day from today without a puzzle (or planned draft) of this kind. */
+  suggestDate(exceptDraft = null, kind = DEFAULT_KIND) {
+    return nextFreeDate(this.today(), this.takenDates({ kind, exceptDraft }));
   }
 
   /** Create a draft on the server and open it. */
-  async createDraft({ title = '', width = 9, height = width, date = null, tab = 'theme' } = {}) {
+  async createDraft({
+    title = '', width = 9, height = width, date = null, tab = 'theme', kind = suggestKind(width, height), kindChosen = false,
+  } = {}) {
     const draft = makeDraft({
       id: makeDraftId(title),
       width,
       height,
       title,
       author: getPref('author', ''),
-      date: date ?? this.suggestDate(),
+      date: date ?? this.suggestDate(null, kind),
     });
+    draft.kind = isKind(kind) ? kind : suggestKind(width, height);
+    // A kind the user picked stays put when the size changes; otherwise Setup follows the size (see setup.js).
+    if (kindChosen) draft.kindSource = 'user';
     draft.themeText = '';
     await api.saveDraft(draft, { create: true });
     await this.refreshDrafts();
@@ -165,6 +189,7 @@ class App extends EventTarget {
     };
     delete copy.publishedAt;
     delete copy.publishedDate;
+    delete copy.publishedId;
     delete copy.publishedFingerprint;
     await api.saveDraft(copy, { create: true });
     await this.refreshDrafts();
@@ -187,6 +212,23 @@ class App extends EventTarget {
 
   /** Ask what to do about a save that another tab made impossible (see store.js); resolves when handled. */
   resolveConflict() { return resolveConflict(); }
+}
+
+/**
+ * Drafts list rows carry each draft's `kind`. A dev server from before kinds existed leaves it out: then read
+ * the drafts themselves (there are only a few), so lists and "next free date" still know which is which.
+ */
+async function withKinds(rows) {
+  if (!Array.isArray(rows) || rows.every((r) => 'kind' in r)) return rows;
+  return Promise.all(rows.map(async (r) => {
+    if ('kind' in r) return r;
+    try {
+      const d = await api.getDraft(r.id);
+      return { ...r, kind: draftKind(d), publishedId: r.publishedId || d.publishedId || '' };
+    } catch {
+      return { ...r, kind: DEFAULT_KIND };
+    }
+  }));
 }
 
 export const app = new App();

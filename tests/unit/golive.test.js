@@ -141,6 +141,20 @@ test('commit messages describe what changed', () => {
   assert.equal(goLiveCommitMessage([index]), 'Update published puzzles');
 });
 
+test('§8 commit messages name puzzle ids, listed by date then kind (Mini, Midi, Daily)', () => {
+  const p = (id, change) => ({ path: `site/puzzles/${id}.json`, change });
+  const index = { path: 'site/puzzles/index.json', change: 'modified' };
+  assert.equal(goLiveCommitMessage([p('2026-10-05', 'added'), p('2026-10-05-mini', 'added'), index]), 'Publish puzzles 2026-10-05-mini, 2026-10-05');
+  assert.equal(
+    goLiveCommitMessage([p('2026-10-06-mini', 'added'), p('2026-10-05', 'added'), p('2026-10-05-midi', 'added'), index]),
+    'Publish puzzles 2026-10-05-midi, 2026-10-05, 2026-10-06-mini',
+  );
+  assert.equal(goLiveCommitMessage([p('2026-10-04-midi', 'deleted'), p('2026-10-05-mini', 'modified'), index]),
+    'Update puzzle 2026-10-05-mini; unpublish 2026-10-04-midi');
+  // Files that are not puzzle ids are not named.
+  assert.equal(goLiveCommitMessage([p('2026-10-05-daily', 'added'), index]), 'Update published puzzles');
+});
+
 test('git output parsing, secret redaction, error classification, Pages address', () => {
   assert.deepEqual(parseStatusZ('?? site/puzzles/2026-10-05.json\0 M site/puzzles/index.json\0D  site/puzzles/2026-10-04.json\0'), [
     { path: 'site/puzzles/2026-10-05.json', change: 'added' },

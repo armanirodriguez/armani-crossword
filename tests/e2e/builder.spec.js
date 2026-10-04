@@ -9,7 +9,8 @@
 import { readFileSync } from 'node:fs';
 import { expect, test } from '@playwright/test';
 import { draftEntries, loadPuzzle, makeDraft, validatePuzzle } from '../../site/shared/puzzle.js';
-import { Player, noonUTC } from './support/player.js';
+import { Player, captureShares, noonUTC } from './support/player.js';
+import { FIXTURES } from './support/root.js';
 
 test.describe.configure({ mode: 'default' });
 
@@ -24,12 +25,14 @@ const fifteen = { ...fixture, date: DATE }; // the API test's draft
 // Start from the fixture state even when a test is retried or repeated against the same server.
 test.beforeEach(async ({ request }) => {
   for (const date of [RELEASE, DATE]) {
-    const res = await request.delete(`/api/published/${date}`);
-    expect([200, 404]).toContain(res.status());
+    for (const id of [date, `${date}-mini`, `${date}-midi`]) {
+      const res = await request.delete(`/api/published/${id}`);
+      expect([200, 404]).toContain(res.status());
+    }
   }
 });
 
-test('build a themed 5×5 mini, publish it, see it scheduled and solve it in the player', async ({ page, browser, baseURL }) => {
+test('build a themed 5×5 (picked as the Daily), publish it, see it scheduled and solve it in the player', async ({ page, browser, baseURL }) => {
   test.setTimeout(150_000);
   const problems = [];
   page.on('pageerror', (err) => problems.push(`pageerror: ${err.message}`));
@@ -42,12 +45,17 @@ test('build a themed 5×5 mini, publish it, see it scheduled and solve it in the
   const dialog = page.locator('.modal-new');
   await dialog.locator('input[name="title"]').fill(TITLE);
   await dialog.locator('label.size-pick', { hasText: '5×5' }).click();
+  // A 5×5 suggests a Mini; this one is the day's main puzzle, so pick Daily (SPEC §8: the user chooses).
+  await expect(dialog.locator('input[name="kind"][value="mini"]')).toBeChecked();
+  await dialog.locator('label.seg-item', { hasText: 'Daily' }).click();
   await dialog.getByRole('button', { name: 'Create puzzle' }).click();
   await expect(page).toHaveURL(/#\/draft\/[a-z0-9-]+\/theme$/);
   const draftId = /#\/draft\/([a-z0-9-]+)\//.exec(page.url())[1];
 
-  // ---- Setup: release date
+  // ---- Setup: release date (the kind picked in the dialog stays)
   await page.getByRole('tab', { name: /Setup/ }).click();
+  await expect(page.locator('input[name="setup-kind"][value="daily"]')).toBeChecked();
+  await expect(page.locator('.ed-chips .chip-kind')).toHaveText('Daily');
   await page.locator('#f-date').fill(RELEASE);
   await expect(page.locator('.date-info')).toContainText('Saturday, June 15, 2030');
 
@@ -135,7 +143,8 @@ test('build a themed 5×5 mini, publish it, see it scheduled and solve it in the
   await expect(page.getByRole('heading', { name: 'Schedule', level: 1 })).toBeVisible();
   const row = page.locator('table tr', { hasText: TITLE });
   await expect(row).toHaveCount(1);
-  await expect(row.locator('td').first()).toHaveText('4');
+  await expect(row.locator('td').nth(1)).toHaveText('Daily');
+  await expect(row.locator('td').nth(2)).toHaveText('4');
   await expect(row).toContainText('Jun 15, 2030');
   await expect(row.locator('.pill')).toHaveText('Scheduled');
 
@@ -1036,5 +1045,277 @@ test('Put it online from the Schedule: count after unpublishing, the sidebar lin
     expect(problems).toEqual([]);
   } finally {
     await request.delete(`/api/published/${date}`);
+  }
+});
+
+// ---------------------------------------------------------------------------- SPEC §8: Mini / Midi / Daily
+
+test('a Mini and a Daily on the same day: kind picker, per-kind dates and clashes, schedule, unpublish one', async ({ page, request }) => {
+  test.setTimeout(90_000);
+  const day = '2033-03-03';
+  const next = '2033-03-04';
+  const ids = { mini: 'e2e-kind-mini', daily: 'e2e-kind-daily', third: 'e2e-kind-third' };
+  await putDraft(request, draftOf(ids.mini, { title: 'Tiny Tuesday', date: day, kind: 'mini', kindSource: 'user' }));
+  await putDraft(request, draftOf(ids.daily, { title: 'Big Tuesday', date: day, kind: 'daily', kindSource: 'user' }));
+  // An empty draft without a kind (like drafts made before kinds existed): a daily until Setup says otherwise.
+  const empty = makeDraft({ id: ids.third, width: 5, height: 5, title: 'Third One' });
+  delete empty.kind;
+  await putDraft(request, empty);
+  try {
+    const problems = watch(page);
+    await page.clock.setFixedTime(new Date(`${day}T12:00:00Z`)); // the builder's "today" is the day itself
+
+    // ---- Publish the Mini, then the Daily: no clash between them
+    await page.goto(`/builder/#/draft/${ids.mini}/review`);
+    await expect(page.locator('.ed-chips .chip-kind')).toHaveText('Mini');
+    await expect(page.locator('.summary')).toContainText('Mini #1');
+    await page.locator('.publish-box').getByRole('button', { name: 'Publish', exact: true }).click();
+    await expect(page.locator('.publish-done')).toContainText(/Published as Mini #1 for Mar 3, 2033\./);
+    await expect(page.locator('.publish-done').getByRole('link', { name: 'Open in the site' }))
+      .toHaveAttribute('href', `/site/#/puzzle/${day}-mini`);
+    await expect(page.locator('.draft-row', { hasText: 'Tiny Tuesday' }).locator('.kind-badge')).toHaveText('Mini');
+
+    await page.goto(`/builder/#/draft/${ids.daily}/review`);
+    await expect(page.locator('.ed-chips .chip-kind')).toHaveText('Daily');
+    await expect(page.locator('.check-list')).not.toContainText('already published');
+    await page.locator('.publish-box').getByRole('button', { name: 'Publish', exact: true }).click();
+    await expect(page.locator('.publish-done')).toContainText(/Published as #\d+ for Mar 3, 2033\./);
+    await expect(page.locator('.modal')).toHaveCount(0); // no "replace it?" question
+
+    const mini = await (await request.get(`/site/puzzles/${day}-mini.json`)).json();
+    expect(mini).toMatchObject({ id: `${day}-mini`, date: day, kind: 'mini', title: 'Tiny Tuesday' });
+    expect(validatePuzzle(mini)).toEqual({ ok: true, errors: [] });
+    const daily = await (await request.get(`/site/puzzles/${day}.json`)).json();
+    expect(daily).toMatchObject({ id: day, date: day, title: 'Big Tuesday' });
+    expect(daily.kind ?? 'daily').toBe('daily');
+    await expect.poll(async () => (await diskDraft(request, ids.mini)).publishedId).toBe(`${day}-mini`);
+
+    // ---- Setup of a third draft: the kind follows the size until picked; dates and clashes are per kind
+    await page.goto(`/builder/#/draft/${ids.third}/setup`);
+    const kind = (k) => page.locator(`input[name="setup-kind"][value="${k}"]`);
+    await expect(kind('daily')).toBeChecked();
+    await page.locator('label.size-pick', { hasText: '7×7' }).click();
+    await expect(kind('mini')).toBeChecked(); // re-suggested from the size
+    await page.locator('label.size-pick', { hasText: '11×11' }).click();
+    await expect(kind('midi')).toBeChecked();
+    await expect(page.locator('.date-info')).toContainText(`Use next free date for a Midi: ${'Mar 3, 2033'}`);
+    await page.locator('.seg-card[data-kind="mini"]').click();
+    await expect(page.locator('.ed-chips .chip-kind')).toHaveText('Mini');
+    await expect(page.locator('.date-info')).toContainText('Use next free date for a Mini: Mar 4, 2033');
+    await page.locator('label.size-pick', { hasText: '15×15' }).click();
+    await expect(kind('mini')).toBeChecked(); // picked explicitly: the size no longer changes it
+    await page.locator('#f-date').fill(day);
+    await expect(page.locator('.date-info')).toContainText('Mini #1 “Tiny Tuesday” is already published on this date');
+    await page.locator('.seg-card[data-kind="midi"]').click();
+    await expect(page.locator('.date-info')).not.toContainText('already published');
+    await expect(page.locator('.date-info')).toContainText('Also on this day: Mini #1 “Tiny Tuesday”');
+    await expect.poll(async () => (await diskDraft(request, ids.third))).toMatchObject({ kind: 'midi', kindSource: 'user', date: day, width: 15 });
+    await expect(page.locator('.draft-row', { hasText: 'Third One' }).locator('.kind-badge')).toHaveText('Midi');
+
+    // ---- Home: the day lists both puzzles with their kinds (and the planned Midi)
+    await page.goto('/builder/#/');
+    const today = page.locator('.home-upcoming .day').first();
+    await expect(today.locator('.kind-badge')).toHaveText(['Mini', 'Daily', 'Midi']);
+
+    // ---- Schedule: the day shows each puzzle with its kind; "Add" plans the free kind
+    await page.goto('/builder/#/schedule');
+    const cell = page.locator(`.day-cell[data-date="${day}"]`);
+    await expect(cell.locator('.dc-item .kind-badge')).toHaveText(['Mini', 'Daily', 'Midi']);
+    await expect(cell.locator('.dc-more')).toHaveCount(0); // Midi is planned: no free kind that day
+    await expect(page.locator(`.day-cell[data-date="${next}"] .dc-add`)).toBeVisible();
+    const miniRow = page.locator(`tr[data-id="${day}-mini"]`);
+    const dailyRow = page.locator(`tr[data-id="${day}"]`);
+    await expect(miniRow.locator('td').nth(1)).toHaveText('Mini');
+    await expect(dailyRow.locator('td').nth(1)).toHaveText('Daily');
+    await expect(miniRow.getByRole('link', { name: 'Open draft' })).toHaveAttribute('href', `#/draft/${ids.mini}`);
+    await expect(miniRow.getByRole('link', { name: 'Open Mini #1 in the player' })).toHaveAttribute('href', `/site/#/puzzle/${day}-mini`);
+
+    // Unpublish the Mini only.
+    await miniRow.getByRole('button', { name: 'Unpublish' }).click();
+    await expect(page.locator('.modal-confirm')).toContainText('Other puzzles of that day stay');
+    await page.locator('.modal-confirm').getByRole('button', { name: 'Unpublish' }).click();
+    await expect(miniRow).toHaveCount(0);
+    await expect(dailyRow).toHaveCount(1);
+    expect((await request.get(`/site/puzzles/${day}-mini.json`)).status()).toBe(404);
+    expect((await request.get(`/site/puzzles/${day}.json`)).status()).toBe(200);
+    // The Mini's draft is now planned for the day again.
+    await expect(cell.locator('.dc-item.planned .kind-badge')).toHaveText(['Mini', 'Midi']);
+
+    // The "New puzzle" dialog from a day with room: the free kind is preselected; the date is that day.
+    await page.locator(`.day-cell[data-date="${next}"] .dc-add`).click();
+    const dialog = page.locator('.modal-new');
+    await expect(dialog.locator('.new-when')).toContainText('Friday, March 4, 2033');
+    await dialog.locator('label.size-pick', { hasText: '5×5' }).click();
+    await expect(dialog.locator('input[name="kind"][value="mini"]')).toBeChecked();
+    await dialog.getByRole('button', { name: 'Cancel' }).click();
+    expect(problems).toEqual([]);
+  } finally {
+    for (const id of [`${day}-mini`, `${day}-midi`, day]) await request.delete(`/api/published/${id}`);
+    await dropDrafts(request, ...Object.values(ids));
+  }
+});
+
+test('New puzzle dialog: the kind follows the size until picked, and the date is the next free day of that kind', async ({ page, request }) => {
+  const day = '2034-05-05';
+  const id = 'e2e-kind-dialog';
+  await putDraft(request, draftOf(id, { title: 'Occupies Mini', date: day, kind: 'mini' }));
+  try {
+    const problems = watch(page);
+    await page.clock.setFixedTime(new Date(`${day}T12:00:00Z`));
+    await page.goto('/builder/');
+    await page.getByRole('button', { name: 'New puzzle' }).first().click();
+    const dialog = page.locator('.modal-new');
+    const checked = (k) => dialog.locator(`input[name="kind"][value="${k}"]`);
+    await dialog.locator('label.size-pick', { hasText: '15×15' }).click();
+    await expect(checked('daily')).toBeChecked();
+    await expect(dialog.locator('.new-when')).toContainText('Friday, May 5, 2034');
+    await dialog.locator('label.size-pick', { hasText: '5×5' }).click();
+    await expect(checked('mini')).toBeChecked();
+    // A Mini is planned for today already: the next free day for a Mini is tomorrow.
+    await expect(dialog.locator('.new-when')).toContainText('Saturday, May 6, 2034');
+    await dialog.locator('label.seg-item', { hasText: 'Midi' }).click();
+    await dialog.locator('label.size-pick', { hasText: '15×15' }).click();
+    await expect(checked('midi')).toBeChecked();
+    await dialog.locator('input[name="title"]').fill('E2E Kind Dialog');
+    await dialog.getByRole('button', { name: 'Create puzzle' }).click();
+    await expect(page).toHaveURL(/#\/draft\/[a-z0-9-]+\/theme$/);
+    const created = await storeDraft(page);
+    expect(created).toMatchObject({ kind: 'midi', kindSource: 'user', date: day, width: 15 });
+    await expect(page.locator('.ed-chips .chip-kind')).toHaveText('Midi');
+    await dropDrafts(request, created.id);
+    expect(problems).toEqual([]);
+  } finally {
+    await dropDrafts(request, id);
+  }
+});
+
+test('changing the kind of a published Daily (published before kinds existed) offers to move it', async ({ page, request }) => {
+  const day = '2035-07-07';
+  const id = 'e2e-kind-move';
+  const draft = draftOf(id, { title: 'Moving Day', date: day });
+  delete draft.kind;
+  const res = await request.post('/api/publish', { data: { draft } });
+  expect(res.status(), await res.text()).toBe(200);
+  const { puzzle } = await res.json();
+  // Recorded the old way: only the date (no publishedId).
+  await putDraft(request, { ...draft, publishedAt: puzzle.publishedAt, publishedDate: day });
+  try {
+    const problems = watch(page);
+    await page.goto(`/builder/#/draft/${id}/setup`);
+    await expect(page.locator('input[name="setup-kind"][value="daily"]')).toBeChecked();
+    await expect(page.locator('.date-info')).toContainText('Published as #');
+    await page.locator('.seg-card[data-kind="midi"]').click();
+    await expect(page.locator('.kind-picks + .field-help')).toContainText('Publishing it as a Midi adds a new puzzle');
+    // The old place is pinned down before the kind changes.
+    await expect.poll(async () => (await diskDraft(request, id))).toMatchObject({ kind: 'midi', publishedId: day });
+
+    await page.getByRole('tab', { name: /Review/ }).click();
+    await page.locator('.publish-box').getByRole('button', { name: 'Publish', exact: true }).click();
+    const modal = page.locator('.modal-confirm');
+    await expect(modal).toContainText('already published as #');
+    await modal.getByRole('button', { name: 'Move to Midi' }).click();
+    await expect(page.locator('.publish-done')).toContainText(/Published as Midi #1 for/);
+    expect((await request.get(`/site/puzzles/${day}-midi.json`)).status()).toBe(200);
+    await expect.poll(async () => (await request.get(`/site/puzzles/${day}.json`)).status()).toBe(404);
+    await expect.poll(async () => (await diskDraft(request, id)).publishedId).toBe(`${day}-midi`);
+    expect(problems).toEqual([]);
+  } finally {
+    for (const pid of [day, `${day}-midi`]) await request.delete(`/api/published/${pid}`);
+    await dropDrafts(request, id);
+  }
+});
+
+test('a Mini, a Midi and a Daily on one date: published from the builder, all three on the player’s day screen', async ({ page, request, browser, baseURL }) => {
+  test.setTimeout(120_000);
+  const day = '2036-06-06';
+  const ids = { mini: 'e2e-three-mini', midi: 'e2e-three-midi', daily: 'e2e-three-daily' };
+  const drafts = {
+    mini: draftOf(ids.mini, { title: 'Three Mini', date: day, kind: 'mini', kindSource: 'user' }),
+    midi: { ...structuredClone(FIXTURES['2026-09-28']), id: ids.midi, title: 'Three Midi', date: day, kind: 'midi', kindSource: 'user' },
+    daily: { ...structuredClone(fifteen), id: ids.daily, title: 'Three Daily', date: day, kind: 'daily', kindSource: 'user' },
+  };
+  for (const d of Object.values(drafts)) await putDraft(request, d);
+  const solution = (kind) => drafts[kind].cells.filter((c) => c !== '#').join('');
+  try {
+    const problems = watch(page);
+    await page.clock.setFixedTime(new Date(`${day}T12:00:00Z`));
+    // ---- Publish all three from Review: no clash, each numbered within its kind
+    for (const kind of ['daily', 'mini', 'midi']) {
+      await page.goto(`/builder/#/draft/${ids[kind]}/review`);
+      await expect(page.locator('.check-list')).toContainText('Ready to publish');
+      await page.locator('.publish-box').getByRole('button', { name: 'Publish', exact: true }).click();
+      await expect(page.locator('.publish-done')).toContainText(/Published as /);
+      await expect(page.locator('.modal')).toHaveCount(0);
+    }
+    const index = (await (await request.get('/api/published')).json()).puzzles;
+    const entries = index.filter((p) => p.date === day);
+    expect(entries.map((p) => [p.id, p.kind])).toEqual([[`${day}-mini`, 'mini'], [`${day}-midi`, 'midi'], [day, 'daily']]);
+    const num = Object.fromEntries(entries.map((p) => [p.kind, p.number]));
+    expect(num.mini).toBe(index.filter((p) => p.kind === 'mini').length); // the latest of each kind
+    expect(num.midi).toBe(index.filter((p) => p.kind === 'midi').length);
+    for (const p of entries) expect(validatePuzzle(await (await request.get(`/site/puzzles/${p.id}.json`)).json())).toEqual({ ok: true, errors: [] });
+    const dup = await request.post('/api/publish', { data: { draft: { ...drafts.mini, id: 'e2e-three-dup' } } });
+    expect(dup.status()).toBe(409);
+    await page.goto('/builder/#/schedule');
+    await expect(page.locator(`.day-cell[data-date="${day}"] .dc-item .kind-badge`)).toHaveText(['Mini', 'Midi', 'Daily']);
+    expect(problems).toEqual([]);
+
+    // ---- Player on that day: three cards, each plays and saves on its own
+    const ctx = await browser.newContext({ baseURL, timezoneId: 'America/Chicago', locale: 'en-US', viewport: { width: 1280, height: 800 } });
+    try {
+      await captureShares(ctx);
+      const solver = await ctx.newPage();
+      const p = new Player(solver, { mobile: false });
+      const cards = solver.locator('.day-card');
+      await p.open(`#/puzzle/${day}-mini`, { at: new Date(`${day}T04:00:00Z`) }); // 11 pm the day before in Chicago
+      await expect(solver.locator('.message-title')).toHaveText('Unlocks on Friday, June 6, 2036');
+      await solver.clock.setSystemTime(new Date(`${day}T17:00:00Z`));
+      await solver.goto('/site/#/');
+      await expect(solver.locator('.day-header .eyebrow')).toHaveText('Today’s puzzles');
+      await expect(cards.locator('.kind-badge')).toHaveText(['Mini', 'Midi', 'Daily']);
+      await expect(cards.locator('.day-card-title')).toHaveText(['Three Mini', 'Three Midi', 'Three Daily']);
+      await expect(cards.locator('.day-card-num')).toHaveText([`#${num.mini}`, `#${num.midi}`, `#${num.daily}`]);
+      await expect(cards.locator('.day-card-status')).toHaveText(['New', 'New', 'New']);
+
+      await p.freezeClock();
+      await p.press(cards.nth(1).getByRole('button', { name: /^Play/ }));
+      await expect(solver.locator('.sub-num')).toHaveText(`Midi #${num.midi}`);
+      await p.tick(12_000);
+      await p.type(solution('midi'));
+      await p.tick(1_000);
+      await expect(p.solvedModal).toBeVisible();
+      await p.press(p.solvedModal.getByRole('button', { name: 'Share' }));
+      expect((await p.lastShare(1)).text.split('\n')[0]).toBe(`🧩 Crossword Club Midi #${num.midi} · Fri, Jun 6`);
+      await p.press(p.solvedModal.getByRole('button', { name: 'View puzzle' }));
+      await p.settle();
+      await p.press(solver.locator('.play-header .back-btn'));
+      await expect(cards.locator('.day-card-status')).toHaveText(['New', '✓ Solved 0:12', 'New']);
+
+      await p.press(cards.nth(0).getByRole('button', { name: /^Play/ }));
+      await p.tick(3_000);
+      await p.type(solution('mini').slice(0, 2));
+      await p.press(solver.locator('.play-header .back-btn'));
+      await expect(cards.locator('.day-card-status')).toHaveText([/^In progress 0:0\d$/, '✓ Solved 0:12', 'New']);
+
+      // The Daily keeps the date-only id: an old date link opens it, its progress key is the date.
+      await solver.goto(`/site/#/puzzle/${day}`);
+      await expect(solver.locator('.intro-title')).toHaveText('Three Daily');
+      await expect(solver.locator('.intro-siblings .kind-chip')).toHaveText(['MiniThree Mini', 'MidiThree Midi']);
+      await p.play();
+      await p.type(solution('daily').slice(0, 1));
+      await p.tick(2_000);
+      const keys = await solver.evaluate(() => Object.keys(localStorage).filter((k) => k.startsWith('xw:v1:progress:')).sort());
+      expect(keys).toEqual([`xw:v1:progress:${day}`, `xw:v1:progress:${day}-midi`, `xw:v1:progress:${day}-mini`]);
+
+      await solver.goto('/site/#/archive');
+      const group = solver.locator('.archive-day').first();
+      await expect(group.locator('.archive-item .kind-badge')).toHaveText(['Mini', 'Midi', 'Daily']);
+      expect(p.errors).toEqual([]);
+    } finally {
+      await ctx.close();
+    }
+  } finally {
+    for (const pid of [`${day}-mini`, `${day}-midi`, day]) await request.delete(`/api/published/${pid}`);
+    await dropDrafts(request, ...Object.values(ids), 'e2e-three-dup');
   }
 });

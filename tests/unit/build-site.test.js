@@ -81,6 +81,32 @@ test('--released-only drops future puzzles and keeps numbering', async () => {
   }
 });
 
+test('§8 --released-only goes by date for mini, midi and daily files; index numbers per kind', async () => {
+  await writeSite(root, ['2026-10-02', '2026-10-03', '2026-10-04']);
+  const puzzles = path.join(root, 'site', 'puzzles');
+  for (const [date, kind] of [['2026-10-03', 'mini'], ['2026-10-03', 'midi'], ['2026-10-04', 'mini']]) {
+    const draft = JSON.parse(await fsp.readFile(path.join(REPO, 'tests', 'fixtures', 'sample-draft.json'), 'utf8'));
+    const { draftToPuzzle } = await import('../../site/shared/puzzle.js');
+    const { puzzle } = draftToPuzzle({ ...draft, date, kind });
+    await fsp.writeFile(path.join(puzzles, `${puzzle.id}.json`), JSON.stringify(puzzle));
+  }
+  // A stray, non-puzzle file dated in the future must not ship either.
+  await fsp.writeFile(path.join(puzzles, '2026-10-04-copy.json'), '{}');
+  const result = await buildSite({ root, releasedOnly: true, today: '2026-10-03', out: 'public' });
+  assert.deepEqual(result.kept, ['2026-10-02', '2026-10-03-mini', '2026-10-03-midi', '2026-10-03']);
+  assert.deepEqual(result.dropped, ['2026-10-04-mini', '2026-10-04']);
+  const out = path.join(root, 'public', 'puzzles');
+  assert.deepEqual((await fsp.readdir(out)).sort(),
+    ['2026-10-02.json', '2026-10-03-midi.json', '2026-10-03-mini.json', '2026-10-03.json', 'index.json']);
+  const index = JSON.parse(await fsp.readFile(path.join(out, 'index.json'), 'utf8'));
+  assert.deepEqual(index.puzzles.map((p) => [p.id, p.kind, p.number]), [
+    ['2026-10-02', 'daily', 1], ['2026-10-03-mini', 'mini', 1], ['2026-10-03-midi', 'midi', 1], ['2026-10-03', 'daily', 2],
+  ]);
+  for (const f of (await fsp.readdir(out)).filter((n) => n !== 'index.json')) {
+    assert.ok(validatePuzzle(JSON.parse(await fsp.readFile(path.join(out, f), 'utf8'))).ok, f);
+  }
+});
+
 test('--released-only uses config.timeZone for "today"', async () => {
   const tz = 'Pacific/Honolulu';
   const today = todayISO(tz);

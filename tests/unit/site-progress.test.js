@@ -150,7 +150,7 @@ test('parseRoute', () => {
   assert.deepEqual(parseRoute(''), { name: 'today' });
   assert.deepEqual(parseRoute('#/'), { name: 'today' });
   assert.deepEqual(parseRoute('#/archive'), { name: 'archive' });
-  assert.deepEqual(parseRoute('#/puzzle/2026-10-03'), { name: 'puzzle', date: '2026-10-03' });
+  assert.deepEqual(parseRoute('#/puzzle/2026-10-03'), { name: 'puzzle', id: '2026-10-03', date: '2026-10-03', kind: 'daily' });
   assert.deepEqual(parseRoute('#/puzzle/2026-02-30'), { name: 'today', unknown: true });
   assert.deepEqual(parseRoute('#/what'), { name: 'today', unknown: true });
 });

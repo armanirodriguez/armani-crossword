@@ -414,3 +414,31 @@ PWA niceties: `manifest.webmanifest`, theme-color, apple-touch-icon (no service 
   untouched, determinism, timeouts/aborts honored; layout validity), server API (temp dirs), data pipeline sanity.
 - `npm run test:e2e`: Playwright — desktop + mobile viewports for the player (play, timer pause on
   hidden/blur, solve, share text), builder smoke (create draft, generate/fill, clue, publish → visible in site).
+
+## 8. Multiple puzzles per day (Mini / Midi / Daily) — added 2026-10-04
+
+A date can hold up to one puzzle of each **kind**: `mini`, `midi`, `daily` (labels "Mini", "Midi", "Daily";
+display order Mini, Midi, Daily). Everything published before this change is a `daily` and keeps working unchanged
+(same file, same id, same saved progress).
+
+- **Ids** (`site/shared/puzzle.js`): `KINDS = ['mini','midi','daily']`, `KIND_LABELS`, `puzzleId(date, kind)` →
+  `YYYY-MM-DD` for daily (backward compatible), `YYYY-MM-DD-mini` / `YYYY-MM-DD-midi` otherwise;
+  `parsePuzzleId(id)` → `{ date, kind }` or null; `isValidPuzzleId(id)`; `puzzleKind(p)` → `p.kind || 'daily'`.
+  `suggestKind(width, height)` → mini for ≤ 7, midi for ≤ 11, else daily (just a default; the user chooses).
+- **Draft**: new field `kind` (default `'daily'`; missing ⇒ daily). `draftToPuzzle` publishes to id `puzzleId(date, kind)`.
+- **Published puzzle**: new field `kind` (omitted/`'daily'` for daily). `validatePuzzle` requires
+  `id === puzzleId(date, kind)`. Solution salt stays the id. File: `site/puzzles/<id>.json`.
+- **Index**: entries gain `kind`; `number` counts per kind in date order (Daily #2, Mini #1); list sorted by date then
+  kind order. `buildIndex` handles entries without `kind` as daily.
+- **Server**: publish conflicts are per id (409 only if that date+kind exists); `DELETE /api/published/:id` accepts
+  any puzzle id; drafts list rows gain `publishedId`; recent-answers excludes only the draft's own id (other kinds on
+  the same date count, so same-day puzzles avoid sharing answers) and takes `?id=` (or `?date=&kind=`); go-live commit
+  messages name ids ("Publish puzzles 2026-10-05-mini, 2026-10-05"); LAN future hiding and
+  `build-site --released-only` still go by date.
+- **Builder**: Setup has a Kind picker (Mini / Midi / Daily, defaulting from the size); the header and drafts list show
+  the kind; "next free date" and the date-clash check are per kind; Schedule shows every puzzle of a day with its kind.
+- **Player**: routes `#/puzzle/<id>` (old date-only links still work). Home `#/`: today's puzzles — one card each (Mini,
+  Midi, Daily order) with title, size, status (New / In progress m:ss / Solved m:ss) and Play/Resume; a single puzzle
+  today keeps the current single intro card. No puzzle today ⇒ the latest date that has puzzles, labelled "Latest".
+  Archive groups by date with kind badges. Share text: `🧩 Armani Crossword Mini #1 · Sun, Oct 4` (no kind word for
+  daily: `🧩 Armani Crossword #2 · …`). Progress keys stay `xw:v1:progress:<id>`.

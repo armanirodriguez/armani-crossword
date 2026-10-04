@@ -4,17 +4,19 @@
 
 import { previewPuzzle } from './draft-utils.js';
 import { toast } from './dialogs.js';
+import { idDate } from './kinds.js';
 
 export const PREVIEW_KEY = 'xw:preview';
 export const PREVIEW_URL = '/site/index.html?preview=1';
 
 /**
- * Link to a published puzzle in the local player. A puzzle dated after `today` is locked for solvers ("Unlocks
- * on …"), so its creator gets the player's preview mode, which opens published puzzles of any date and never
- * saves progress.
+ * Link to a published puzzle in the local player, by puzzle id (a date for a daily, "2026-10-05-mini" …). A
+ * puzzle dated after `today` is locked for solvers ("Unlocks on …"), so its creator gets the player's preview
+ * mode, which opens published puzzles of any date and never saves progress.
  */
-export function siteUrlFor(date, today) {
-  return date > today ? `/site/index.html?preview=1#/puzzle/${date}` : `/site/#/puzzle/${date}`;
+export function siteUrlFor(id, today) {
+  const date = idDate(id) || id;
+  return date > today ? `/site/index.html?preview=1#/puzzle/${id}` : `/site/#/puzzle/${id}`;
 }
 
 /** Store the preview puzzle. Returns { ok, notes }. */

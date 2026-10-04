@@ -479,6 +479,244 @@ p { text-wrap: pretty; }
   .status-pill { grid-column: 2; justify-self: start; margin-top: 4px; }
 }
 
+/* ------------------------------------------------------------------ puzzle kinds (Mini / Midi / Daily, SPEC §8) */
+/* Kind colours echo the logo: Mini = the yellow active square, Midi = the blue word, Daily = ink. */
+:root {
+  --kind-mini-bg: #ffd84a;
+  --kind-mini-ink: #3d2f00;
+  --kind-midi-bg: #a9d7ff;
+  --kind-midi-ink: #0b3558;
+  --kind-daily-bg: #16161a;
+  --kind-daily-ink: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --kind-mini-bg: #f2c94c;
+    --kind-mini-ink: #2b2100;
+    --kind-midi-bg: #7cbcf2;
+    --kind-midi-ink: #082a47;
+    --kind-daily-bg: #f1f1f4;
+    --kind-daily-ink: #131315;
+  }
+}
+.kind-mini { --kind-bg: var(--kind-mini-bg); --kind-ink: var(--kind-mini-ink); }
+.kind-midi { --kind-bg: var(--kind-midi-bg); --kind-ink: var(--kind-midi-ink); }
+.kind-daily { --kind-bg: var(--kind-daily-bg); --kind-ink: var(--kind-daily-ink); }
+.kind-badge {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--kind-bg, var(--surface-2));
+  color: var(--kind-ink, var(--ink));
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ---- today's puzzles: one card per puzzle */
+.day { max-width: 1040px; margin: 0 auto; animation: rise 0.35s var(--ease-out) both; }
+.screen-day.is-refresh .day { animation: none; }
+.day-header { text-align: center; margin: clamp(0px, 2vh, 20px) 0 clamp(16px, 3vh, 28px); }
+.day-header .eyebrow { margin-bottom: 6px; }
+.day-title {
+  margin: 0 0 4px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(28px, 7vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+}
+.day-sub { margin: 0; color: var(--muted); font-size: 15px; }
+.day-cards {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  max-width: 520px;
+}
+.day-cards-item { display: flex; min-width: 0; }
+.day-card {
+  --box: 76px;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 18px 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+/* a band of the kind's colour along the top edge */
+.day-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  background: var(--kind-bg);
+}
+.day-card-head { display: flex; align-items: center; gap: 8px; }
+.day-card-num { font-weight: 800; color: var(--muted); font-variant-numeric: tabular-nums; font-size: 14px; }
+.day-card-body { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 16px; }
+.day-card-thumb { display: grid; place-items: center; width: var(--box); height: var(--box); }
+/* the thumbnail: n cells + (n - 1) 1px gaps + a 2px border on each side = --box */
+.silhouette.thumb {
+  --sc: calc((var(--box) - 3px - var(--n) * 1px) / var(--n));
+  margin: 0;
+  border-radius: 3px;
+}
+.day-card-text { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
+@media (max-width: 599px) {
+  .day-card-note { -webkit-line-clamp: 1; line-clamp: 1; font-size: 15px; }
+  .day-card { gap: 11px; }
+}
+.day-card-title {
+  margin: 0 0 2px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.day-card-byline, .day-card-meta {
+  margin: 0;
+  max-width: 100%;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.day-card-byline { color: var(--ink-2); }
+.day-card-meta { color: var(--muted); }
+.day-card-status { margin-left: auto; font-size: 12.5px; padding: 4px 10px; }
+.day-card-note {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 15.5px;
+  line-height: 1.4;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.day-card-actions { margin-top: auto; display: flex; }
+.day-card-play { width: 100%; min-height: 48px; }
+.day-card-error { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--warn-ink); font-weight: 600; }
+.day-card.is-solved .day-card-thumb, .day-card.is-revealed .day-card-thumb { opacity: 0.9; }
+
+/* small phones */
+@media (max-width: 360px) {
+  .day-card { --box: 64px; padding: 16px 14px 14px; border-radius: 18px; gap: 10px; }
+  .day-card-status { font-size: 12px; padding: 3px 8px; }
+  .day-card-body { gap: 12px; }
+  .day-card-title { font-size: 19px; }
+  .day-card-note { font-size: 14.5px; }
+}
+/* short phones (or landscape): tighter header so more cards fit */
+@media (max-height: 700px) and (max-width: 759px) {
+  .day-header { margin-bottom: 14px; }
+  .day-title { font-size: clamp(24px, 6.5vw, 32px); }
+  .day-card { gap: 10px; padding-top: 16px; }
+  .day-card-note { -webkit-line-clamp: 1; line-clamp: 1; }
+}
+/* phones in landscape and tablets: cards side by side */
+@media (min-width: 600px) {
+  .day-cards[data-count="2"], .day-cards[data-count="3"] { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; }
+}
+/* wide screens: one column per puzzle, each card a little intro card of its own */
+@media (min-width: 900px) {
+  .day-cards[data-count="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 1040px; }
+}
+@media (min-width: 600px) and (min-height: 560px) {
+  .day-cards { gap: 18px; }
+  .day-card { --box: 136px; padding: 26px 22px 20px; text-align: center; align-items: stretch; transition: transform 0.18s var(--ease-out), box-shadow 0.18s; }
+  .day-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-3); }
+  .day-card-head { justify-content: center; }
+  .day-card-body { grid-template-columns: minmax(0, 1fr); justify-items: center; gap: 16px; }
+  .day-card-text { align-items: center; }
+  .day-card-title { font-size: 25px; }
+  .day-card-head { flex-wrap: wrap; }
+  .day-card-status { margin-left: 4px; }
+}
+
+/* ---- intro card: links to the other puzzles of the same day */
+.intro-siblings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+.intro-siblings-label {
+  flex-basis: 100%;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.kind-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  min-height: 40px;
+  padding: 0 14px 0 7px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 14.5px;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.kind-chip:hover { background: var(--surface-2); }
+.kind-chip-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ---- archive: a date with several puzzles is one joined block under a date heading */
+.archive-day { display: flex; flex-direction: column; gap: 6px; margin: 6px 0 2px; }
+.archive-day-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 0 4px;
+  font-size: 12.5px;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.archive-day-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.archive-day-list > li { position: relative; }
+.archive-day-list > li + li { margin-top: -1px; }
+.archive-day-list > li + li .archive-item { border-top-left-radius: 0; border-top-right-radius: 0; }
+.archive-day-list > li:not(:last-child) .archive-item { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.archive-day-list > li:hover { z-index: 1; }
+.archive-title .kind-badge { font-size: 10.5px; padding: 2px 8px; }
+
 /* ------------------------------------------------------------------ message / loading */
 .message-card { text-align: center; max-width: 440px; padding: 32px 8px; animation: rise 0.3s var(--ease-out) both; }
 .message-icon {

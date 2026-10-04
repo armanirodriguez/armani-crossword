@@ -5,6 +5,7 @@ import { draftEntries, formatDate } from '../../site/shared/puzzle.js';
 import { h, icon, replaceChildren } from './dom.js';
 import { hasUnpublishedChanges } from './draft-utils.js';
 import { openPreviewTab } from './preview.js';
+import { draftKind, kindLabel, numberLabel } from './kinds.js';
 import { mountSetup } from './tabs/setup.js';
 import { mountTheme } from './tabs/theme.js';
 import { mountFill } from './tabs/fill.js';
@@ -97,10 +98,14 @@ export function mountEditor(container, app, { tab }) {
     const pub = app.publishedFor(d);
     // Edits after publishing are saved to the draft only; say so until "Publish update".
     const behind = pub && hasUnpublishedChanges(d);
+    const kind = draftKind(d);
     replaceChildren(chips,
+      h('a', {
+        class: ['chip', 'chip-kind', `kind-${kind}`], href: `#/draft/${d.id}/setup`, title: 'Kind of puzzle (change it in Setup)',
+      }, kindLabel(kind)),
       h('span', { class: ['chip', !d.date && 'warn'] }, d.date ? formatDate(d.date, 'short') : 'No release date'),
       h('span', { class: 'chip' }, `${d.width}×${d.height}`),
-      pub ? h('span', { class: 'chip ok' }, icon('check', { size: 12 }), `Published #${pub.number}`) : null,
+      pub ? h('span', { class: 'chip ok' }, icon('check', { size: 12 }), `Published ${numberLabel(pub)}`) : null,
       behind ? h('a', {
         class: 'chip warn chip-unpublished', href: `#/draft/${d.id}/review`,
         title: 'You changed this puzzle after publishing it. Solvers still get the published version until you publish the update.',

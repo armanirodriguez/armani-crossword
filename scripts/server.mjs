@@ -38,7 +38,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 
 import {
   addDays, draftToPuzzle, draftEntries, buildIndex, isValidDraftId, isValidDateId, loadPuzzle, normalizeClue,
-  normalizeAnswer, MAX_SIZE,
+  normalizeAnswer, MAX_SIZE, KINDS, KIND_LABELS, puzzleId, parsePuzzleId, isValidPuzzleId, puzzleKind, comparePuzzles,
 } from '../site/shared/puzzle.js';
 import { releasedThrough } from './build-site.mjs';
 
@@ -217,6 +217,19 @@ export function isAllowedHost(hostHeader, extra = []) {
   return ownHostnames().has(name);
 }
 
+/**
+ * The puzzle id a draft was last published as ('' if never): its `publishedId` when the builder stored one, else
+ * derived from `publishedDate` + the draft's kind (drafts published before SPEC §8 are dailies).
+ */
+export function draftPublishedId(d) {
+  if (typeof d?.publishedId === 'string' && isValidPuzzleId(d.publishedId)) return d.publishedId;
+  if (typeof d?.publishedDate === 'string' && isValidDateId(d.publishedDate)) {
+    const kind = KINDS.includes(d.publishedKind) ? d.publishedKind : puzzleKind(d);
+    return puzzleId(d.publishedDate, KINDS.includes(kind) ? kind : 'daily');
+  }
+  return '';
+}
+
 // ---------------------------------------------------------------------------
 // Validation of drafts sent by the builder ("basic shape" — the full checks happen at publish time)
 
@@ -240,6 +253,7 @@ function validateDraftShape(d, id) {
     if (d[key] !== undefined && typeof d[key] !== 'string') return `${key} must be a string`;
   }
   if (d.date && !isValidDateId(d.date)) return 'date must be YYYY-MM-DD or empty';
+  if (d.kind !== undefined && !KINDS.includes(d.kind)) return `kind must be one of ${KINDS.join(', ')}`;
   if (d.symmetry !== undefined && !['rotational', 'mirror', 'none'].includes(d.symmetry)) return 'symmetry must be rotational, mirror or none';
   if (d.theme !== undefined && (!Array.isArray(d.theme) || !d.theme.every((t) => t && typeof t === 'object' && typeof t.answer === 'string'))) {
     return 'theme must be an array of { answer, clue?, raw? }';
@@ -458,23 +472,24 @@ export function parseNameStatusZ(out) {
 }
 
 /**
- * A commit message from what changed, e.g. "Publish puzzle 2026-10-05", "Publish puzzles 2026-10-05, 2026-10-06",
+ * A commit message from what changed, e.g. "Publish puzzle 2026-10-05", "Publish puzzles 2026-10-05-mini, 2026-10-05",
  * "Unpublish 2026-10-04", "Update site settings", "Publish puzzle 2026-10-05; unpublish 2026-10-04".
+ * Puzzles are named by id (SPEC §8), listed by date then kind (Mini, Midi, Daily).
  */
 export function goLiveCommitMessage(changes) {
-  const dates = { added: [], modified: [], deleted: [] };
+  const dates = { added: [], modified: [], deleted: [] }; // puzzle ids per change
   let settings = false;
   let words = false;
   let otherPuzzleFiles = false;
   for (const { path: file, change } of changes || []) {
-    const m = /^site\/puzzles\/(\d{4}-\d{2}-\d{2})\.json$/.exec(file);
-    if (m) dates[change in dates ? change : 'modified'].push(m[1]);
+    const m = /^site\/puzzles\/([^/]+)\.json$/.exec(file);
+    if (m && isValidPuzzleId(m[1])) dates[change in dates ? change : 'modified'].push(m[1]);
     else if (file === 'site/config.json') settings = true;
     else if (file === 'data/user-words.txt') words = true;
     else otherPuzzleFiles = true; // index.json (renumbering) or other files under site/puzzles/
   }
   const list = (ds) => {
-    const sorted = [...ds].sort();
+    const sorted = ds.map(parsePuzzleId).map((p, i) => ({ ...p, id: ds[i] })).sort(comparePuzzles).map((p) => p.id);
     return sorted.length <= 3 ? sorted.join(', ') : `${sorted.slice(0, 2).join(', ')} and ${sorted.length - 2} more`;
   };
   const parts = [];
@@ -625,7 +640,8 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       if (err.code === 'ENOENT') return [];
       throw err;
     }
-    return names.filter((n) => /^\d{4}-\d{2}-\d{2}\.json$/.test(n) && isValidDateId(n.slice(0, 10)));
+    // <date>.json (daily) and <date>-mini.json / <date>-midi.json (SPEC §8)
+    return names.filter((n) => n.endsWith('.json') && isValidPuzzleId(n.slice(0, -5)));
   }
 
   async function rebuildIndex() {
@@ -666,8 +682,9 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       try {
         const d = JSON.parse(await fsp.readFile(path.join(paths.drafts, name), 'utf8'));
         list.push({
-          id: name.slice(0, -5), title: d.title || '', date: d.date || '', width: d.width, height: d.height,
+          id: name.slice(0, -5), title: d.title || '', date: d.date || '', kind: puzzleKind(d), width: d.width, height: d.height,
           updatedAt: d.updatedAt || '', publishedAt: d.publishedAt || '', publishedDate: d.publishedDate || '',
+          publishedId: draftPublishedId(d),
         });
       } catch (err) {
         log(`warning: skipping unreadable draft ${name}: ${err.message}`);
@@ -759,8 +776,13 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     const out = await withLock(async () => {
       const existing = await readJsonIfExists(file, null);
       if (existing && body.overwrite !== true) {
-        throw new HttpError(409, `A puzzle is already published for ${puzzle.date}`, {
-          existing: { id: existing.id, date: existing.date, title: existing.title, author: existing.author, publishedAt: existing.publishedAt || '' },
+        const kind = puzzleKind(puzzle);
+        const what = kind === 'daily' ? 'A puzzle' : `A ${KIND_LABELS[kind]}`;
+        throw new HttpError(409, `${what} is already published for ${puzzle.date}`, {
+          existing: {
+            id: existing.id, date: existing.date, kind: puzzleKind(existing), title: existing.title, author: existing.author,
+            publishedAt: existing.publishedAt || '',
+          },
         });
       }
       // Remembering clues is a convenience: read it BEFORE publishing, and never let a broken user-clues.json
@@ -798,13 +820,25 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     sendJson(res, 200, buildIndex(puzzles));
   });
 
-  // Addition to SPEC: answers of the puzzles published within `days` days before or after `date` (scheduling ahead
-  // is normal), not counting `date` itself -> { date, days, answers: { WORD: [dates, ascending] } }. The builder uses
-  // it to avoid (and flag) answers that repeat a recent puzzle.
+  // Addition to SPEC: answers of the puzzles published within `days` days before or after the date (scheduling ahead
+  // is normal), not counting the asking puzzle itself -> { id, date, kind, days, answers: { WORD: [dates, ascending,
+  // unique] }, sources: { WORD: [puzzle ids] } }. The builder uses it to avoid (and flag) answers that repeat a
+  // recent puzzle. SPEC §8: the puzzle is `?id=<puzzle id>` or `?date=&kind=` (kind defaults to daily); other kinds
+  // on the same date DO count, so same-day puzzles avoid sharing answers.
   route('GET', /^\/api\/recent-answers$/, async (req, res) => {
     const params = new URL(req.url, 'http://localhost').searchParams;
-    const date = params.get('date') || '';
-    if (!isValidDateId(date)) throw new HttpError(400, 'date must be YYYY-MM-DD');
+    let self;
+    if (params.has('id')) {
+      self = parsePuzzleId(params.get('id'));
+      if (!self) throw new HttpError(400, 'id must be a puzzle id (YYYY-MM-DD, YYYY-MM-DD-mini or YYYY-MM-DD-midi)');
+    } else {
+      const kind = params.get('kind') || 'daily';
+      if (!KINDS.includes(kind)) throw new HttpError(400, `kind must be one of ${KINDS.join(', ')}`);
+      self = { date: params.get('date') || '', kind };
+      if (!isValidDateId(self.date)) throw new HttpError(400, 'date must be YYYY-MM-DD');
+    }
+    const { date, kind } = self;
+    const selfId = puzzleId(date, kind);
     const daysText = params.get('days');
     const days = daysText === null ? RECENT_DAYS_DEFAULT : Number(daysText);
     if (!Number.isInteger(days) || days < 0 || days > RECENT_DAYS_MAX) {
@@ -813,49 +847,58 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     const from = addDays(date, -days);
     const to = addDays(date, days);
     const answers = {};
-    for (const [d, words] of await answersByDate(from, to)) {
-      if (d === date) continue;
-      for (const w of new Set(words)) (answers[w] ||= []).push(d);
+    const sources = {};
+    for (const [id, { date: d, words }] of await answersById(from, to)) {
+      if (id === selfId) continue;
+      for (const w of new Set(words)) {
+        (answers[w] ||= []).push(d);
+        (sources[w] ||= []).push(id);
+      }
     }
-    for (const list of Object.values(answers)) list.sort();
-    sendJson(res, 200, { date, days, answers });
+    for (const w of Object.keys(answers)) {
+      answers[w] = [...new Set(answers[w])].sort();
+      sources[w] = sources[w].map(parsePuzzleId).map((p, i) => ({ ...p, id: sources[w][i] })).sort(comparePuzzles).map((p) => p.id);
+    }
+    sendJson(res, 200, { id: selfId, date, kind, days, answers, sources });
   });
 
   /**
-   * date -> answers of the published puzzles dated `from`..`to`. Decoded puzzles are cached until the index changes
+   * puzzle id -> { date, words } for the published puzzles dated `from`..`to`. Decoded puzzles are cached until the index changes
    * (every publish and unpublish rewrites it atomically, so its inode and mtime change); without an index nothing is
    * cached.
    */
-  let answerCache = { version: null, byDate: new Map() };
-  async function answersByDate(from, to) {
+  let answerCache = { version: null, byId: new Map() };
+  async function answersById(from, to) {
     const version = await fsp.stat(paths.index).then((st) => `${st.ino}:${st.mtimeMs}:${st.size}`, () => null);
-    if (version === null || version !== answerCache.version) answerCache = { version, byDate: new Map() };
-    const { byDate } = answerCache;
+    if (version === null || version !== answerCache.version) answerCache = { version, byId: new Map() };
+    const { byId } = answerCache;
     const out = new Map();
     for (const name of await listPuzzleFiles()) {
-      const date = name.slice(0, 10);
+      const id = name.slice(0, -5);
+      const { date } = parsePuzzleId(id);
       if (date < from || date > to) continue;
-      if (!byDate.has(date)) {
+      if (!byId.has(id)) {
         let words = [];
         try {
           words = puzzleAnswers(JSON.parse(await fsp.readFile(path.join(paths.puzzles, name), 'utf8')));
         } catch (err) {
           log(`warning: skipping unreadable puzzle ${name}: ${err.message}`);
         }
-        byDate.set(date, words);
+        byId.set(id, words);
       }
-      out.set(date, byDate.get(date));
+      out.set(id, { date, words: byId.get(id) });
     }
     return out;
   }
 
-  route('DELETE', /^\/api\/published\/([^/]+)$/, async (req, res, [date]) => {
-    if (!isValidDateId(date)) throw new HttpError(400, 'Date must be YYYY-MM-DD');
+  // Takes any puzzle id (SPEC §8): "2026-10-05" (the daily) or "2026-10-05-mini" / "2026-10-05-midi".
+  route('DELETE', /^\/api\/published\/([^/]+)$/, async (req, res, [id]) => {
+    if (!isValidPuzzleId(id)) throw new HttpError(400, 'Puzzle id must be YYYY-MM-DD, YYYY-MM-DD-mini or YYYY-MM-DD-midi');
     const index = await withLock(async () => {
       try {
-        await fsp.unlink(path.join(paths.puzzles, `${date}.json`));
+        await fsp.unlink(path.join(paths.puzzles, `${id}.json`));
       } catch (err) {
-        if (err.code === 'ENOENT') throw new HttpError(404, `Nothing is published for ${date}`);
+        if (err.code === 'ENOENT') throw new HttpError(404, `Nothing is published as ${id}`);
         throw err;
       }
       return rebuildIndex();
@@ -1217,7 +1260,9 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     if (!puzzlesDir || path.dirname(file) !== puzzlesDir) return false;
     const name = path.basename(file);
     const released = await releasedDate();
-    if (/^\d{4}-\d{2}-\d{2}\.json$/.test(name) && name.slice(0, 10) > released) throw new HttpError(404, 'Not found');
+    // Any puzzle file of a future date (daily, mini or midi) is hidden: release goes by date (SPEC §8).
+    const dated = /^(\d{4}-\d{2}-\d{2})(?:[-.]|$)/.exec(name);
+    if (dated && name !== 'index.json' && dated[1] > released) throw new HttpError(404, 'Not found');
     if (name !== 'index.json') return false;
     const index = await readJsonIfExists(file, null);
     if (!index || !Array.isArray(index.puzzles)) return false;

@@ -1,5 +1,5 @@
-// Setup tab: title, author (remembered), release date (with conflict warnings and a "next free date" helper),
-// grid size, symmetry, note for solvers.
+// Setup tab: title, author (remembered), kind (Mini / Midi / Daily), release date (with conflict warnings and a
+// "next free date" helper, both per kind), grid size, symmetry, note for solvers.
 
 import { isSymmetric } from '../../../site/shared/grid.js';
 import { formatDate, isValidDateId } from '../../../site/shared/puzzle.js';
@@ -9,6 +9,9 @@ import {
   MAX_BUILDER_SIZE, MIN_SIZE, SIZE_PRESETS, gridHasContent, gridOf, resizeDraft,
 } from '../draft-utils.js';
 import { setPref } from '../prefs.js';
+import {
+  KINDS, KIND_HELP, draftKind, draftPuzzleId, kindLabel, numberLabel, puzzleKind, recordedPuzzleId, suggestKind,
+} from '../kinds.js';
 
 const SYMMETRIES = [
   { id: 'rotational', label: 'Rotational', help: 'Standard: the grid looks the same upside down.' },
@@ -38,6 +41,8 @@ export function mountSetup(container, ctx) {
     onchange: () => meta((x) => { x.date = isValidDateId(date.value) ? date.value : ''; }),
   });
   const dateInfo = h('div', { class: 'date-info' });
+  const kindGroup = h('div', { class: 'seg-cards kind-picks', role: 'radiogroup', 'aria-label': 'Kind of puzzle' });
+  const kindNote = h('p', { class: 'field-help' });
   const note = h('textarea', {
     id: 'f-note', rows: 3, maxLength: 600, value: d().note,
     placeholder: 'Optional. Shown on the intro screen before solvers start, e.g. “Happy Halloween! Circled letters spell a costume.”',
@@ -59,6 +64,10 @@ export function mountSetup(container, ctx) {
       h('div', { class: 'form-grid' },
         field('Title', title, 'f-title', 'Shown to solvers and in the share text archive.'),
         field('Author', author, 'f-author', 'Remembered for your next puzzle.'),
+        h('div', { class: 'field span-2' },
+          h('span', { class: 'field-label', id: 'f-kind-label' }, 'Kind'),
+          kindGroup,
+          kindNote),
         h('div', { class: 'field span-2' },
           h('label', { class: 'field-label', for: 'f-date' }, 'Release date'),
           h('div', { class: 'row gap-sm' }, date),
@@ -105,7 +114,11 @@ export function mountSetup(container, ctx) {
       });
       if (!ok) { renderSize(); return; }
     }
-    store.update((x) => resizeDraft(x, w, hgt), { kind: 'grid', label: 'resize' });
+    store.update((x) => {
+      resizeDraft(x, w, hgt);
+      // The kind follows the size until the user picks one (never for a published draft: that would move it).
+      if (followsSize(x)) x.kind = suggestKind(w, hgt);
+    }, { kind: 'grid', label: 'resize' });
     ctx.session.index = 0;
     ctx.session.layoutJob?.cancel(); // layouts for the old size are of no use
     ctx.session.layouts = null;
@@ -134,6 +147,46 @@ export function mountSetup(container, ctx) {
       : 'Pick a size, then add theme words on the next step.';
   }
 
+  // ---- kind ----
+  /** True while the kind is the size's default rather than the user's choice. */
+  function followsSize(x) {
+    return x.kindSource !== 'user' && !x.publishedAt;
+  }
+
+  const kindRadios = KINDS.map((k) => {
+    const input = h('input', {
+      type: 'radio', name: 'setup-kind', value: k,
+      onchange: () => meta((x) => {
+        // Pin down where it was published before the kind changes (older drafts only recorded the date).
+        if (x.publishedAt && !x.publishedId && recordedPuzzleId(x)) x.publishedId = recordedPuzzleId(x);
+        x.kind = k;
+        x.kindSource = 'user';
+      }),
+    });
+    kindGroup.append(h('label', { class: 'seg-card', 'data-kind': k }, input,
+      h('span', { class: 'sc-box' }, h('strong', null, kindLabel(k)), h('small', null, KIND_HELP[k]))));
+    return { k, input };
+  });
+
+  function renderKind() {
+    const cur = d();
+    const kind = draftKind(cur);
+    for (const { k, input } of kindRadios) input.checked = kind === k;
+    const suggested = suggestKind(cur.width, cur.height);
+    const recorded = cur.publishedAt ? recordedPuzzleId(cur) : null;
+    const pub = recorded ? app.publishedById().get(recorded) : null;
+    kindNote.classList.remove('warn');
+    if (pub && recorded !== draftPuzzleId(cur) && cur.date === pub.date) {
+      // Same day, other kind: publishing puts it in the other slot (Review asks whether to remove the old one).
+      kindNote.textContent = `Published as ${numberLabel(pub)}. Publishing it as a ${kindLabel(kind)} adds a new puzzle; you will be asked whether to remove the ${kindLabel(puzzleKind(pub))}.`;
+      kindNote.classList.add('warn');
+    } else if (followsSize(cur) && kind === suggested) {
+      kindNote.textContent = `Follows the grid size (${cur.width}×${cur.height} → ${kindLabel(suggested)}) until you pick one. Each day can have one Mini, one Midi and one Daily.`;
+    } else {
+      kindNote.textContent = `Each day can have one Mini, one Midi and one Daily.${kind !== suggested ? ` (A ${cur.width}×${cur.height} grid is usually a ${kindLabel(suggested)}.)` : ''}`;
+    }
+  }
+
   // ---- symmetry ----
   const symRadios = SYMMETRIES.map((sym) => {
     const input = h('input', {
@@ -158,31 +211,39 @@ export function mountSetup(container, ctx) {
   function renderDate() {
     const cur = d();
     if (document.activeElement !== date) date.value = cur.date;
+    const kind = draftKind(cur);
+    const label = kindLabel(kind);
     const items = [];
     const today = app.today();
-    const suggestion = app.suggestDate(cur.id);
+    const suggestion = app.suggestDate(cur.id, kind);
     if (cur.date) {
       items.push(h('span', { class: 'muted' }, formatDate(cur.date)));
       const mine = app.publishedFor(cur);
       const clash = app.dateConflict(cur);
       if (clash) {
         items.push(h('p', { class: 'note warn' }, icon('alert', { size: 14 }),
-          `#${clash.number} “${clash.title}” is already published on this date. Publishing will ask before replacing it.`));
+          `${numberLabel(clash)} “${clash.title}” is already published on this date. Publishing will ask before replacing it.`));
       } else if (mine) {
-        items.push(h('p', { class: 'note ok' }, icon('check', { size: 14 }), `Published as #${mine.number}. Publishing again updates it.`));
+        items.push(h('p', { class: 'note ok' }, icon('check', { size: 14 }), `Published as ${numberLabel(mine)}. Publishing again updates it.`));
       }
       const pub = mine || clash;
-      const other = app.drafts.find((x) => x.id !== cur.id && x.date === cur.date);
-      if (other) items.push(h('p', { class: 'note info' }, `Another draft (“${other.title || 'Untitled'}”) is also planned for this date.`));
+      const other = app.drafts.find((x) => x.id !== cur.id && x.date === cur.date && draftKind(x) === kind);
+      if (other) items.push(h('p', { class: 'note info' }, `Another ${label} draft (“${other.title || 'Untitled'}”) is also planned for this date.`));
+      // The other kinds of that day are fine (one of each per day); mention them so the day's line-up is clear.
+      const sameDay = app.publishedOn(cur.date).filter((p) => p !== pub);
+      if (sameDay.length) {
+        items.push(h('p', { class: 'note info small' },
+          `Also on this day: ${sameDay.map((p) => `${numberLabel(p)} “${p.title}”`).join(', ')}.`));
+      }
       if (cur.date < today && !pub) items.push(h('p', { class: 'note info' }, 'This date is in the past: the puzzle will appear in the archive right away.'));
     } else {
-      items.push(h('p', { class: 'note warn' }, 'Pick the day this puzzle goes live (one puzzle per day).'));
+      items.push(h('p', { class: 'note warn' }, 'Pick the day this puzzle goes live (each day has room for one Mini, one Midi and one Daily).'));
     }
     if (suggestion !== cur.date) {
       items.push(h('button', {
         class: 'btn sm link', type: 'button',
         onclick: () => { meta((x) => { x.date = suggestion; }); },
-      }, `Use next free date: ${formatDate(suggestion, 'short')}`));
+      }, `Use next free date for a ${label}: ${formatDate(suggestion, 'short')}`));
     }
     dateInfo.replaceChildren(...items);
   }
@@ -192,6 +253,7 @@ export function mountSetup(container, ctx) {
     if (document.activeElement !== author) author.value = d().author;
     if (document.activeElement !== note) note.value = d().note;
     renderSize();
+    renderKind();
     renderSymmetry();
     renderDate();
   }

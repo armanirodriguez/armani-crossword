@@ -12,14 +12,17 @@ import { getFillOptions } from '../prefs.js';
 import { recentRepeats, shortDate } from '../recent-answers.js';
 import { PREVIEW_URL, writePreview, siteUrlFor } from '../preview.js';
 import { goLiveControl } from '../go-live.js';
+import {
+  draftKind, draftPuzzleId, kindLabel, numberLabel, parsePuzzleId, predictedNumber, puzzleKind, recordedPuzzleId, renumberedBy,
+} from '../kinds.js';
 
 export function mountReview(container, ctx) {
   const { store, app, session } = ctx;
   const d = () => store.draft;
   let alive = true;
   let publishing = false;
-  let live = { date: null, fp: '' }; // fingerprint of the puzzle file that is published on the draft's date
-  let lastPublish = session.lastPublish || null; // { date, number, url, replaced }
+  let live = { id: null, fp: '' }; // fingerprint of the puzzle file published at the draft's id (date + kind)
+  let lastPublish = session.lastPublish || null; // { id, date, kind, number, url, replaced }
   let device = session.previewDevice || 'desktop';
 
   const checklist = h('div', { class: 'checklist' });
@@ -55,26 +58,26 @@ export function mountReview(container, ctx) {
   // ---- checklist ----
   function targetTab(message) {
     if (/clue/i.test(message)) return 'clues';
-    if (/date|title/i.test(message)) return 'setup';
+    if (/date|title|kind/i.test(message)) return 'setup';
     return 'grid';
   }
 
   /** Is the published copy behind the draft? (Known from the published file, else from the publish record.) */
   function unpublishedChanges(cur) {
     if (!app.publishedFor(cur)) return false;
-    const fp = live.date === cur.date && live.fp ? live.fp : cur.publishedFingerprint;
+    const fp = live.id === draftPuzzleId(cur) && live.fp ? live.fp : cur.publishedFingerprint;
     return Boolean(fp) && draftFingerprint(cur) !== fp;
   }
 
   async function loadLive() {
     const cur = d();
-    if (!cur || !app.publishedFor(cur)) { live = { date: null, fp: '' }; return; }
-    const { date } = cur;
-    live = { date, fp: live.date === date ? live.fp : '' };
+    if (!cur || !app.publishedFor(cur)) { live = { id: null, fp: '' }; return; }
+    const id = draftPuzzleId(cur);
+    live = { id, fp: live.id === id ? live.fp : '' };
     try {
-      const file = await fetchStatic(`site/puzzles/${date}.json`, 'json');
-      if (!alive || d()?.date !== date) return;
-      live = { date, fp: file ? puzzleFingerprint(file) : '' };
+      const file = await fetchStatic(`site/puzzles/${id}.json`, 'json');
+      if (!alive || draftPuzzleId(d()) !== id) return;
+      live = { id, fp: file ? puzzleFingerprint(file) : '' };
       render();
     } catch { /* keep what we know */ }
   }
@@ -119,17 +122,19 @@ export function mountReview(container, ctx) {
       items.push(item('warn', `Changes since publishing are not live yet — press “Publish update” to send them to solvers`, null));
     }
     for (const w of warnings) items.push(item('warn', w, targetTab(w)));
-    if (pub) items.push(item('warn', `#${pub.number} “${pub.title}” is already published on ${formatDate(cur.date, 'short')} — publishing will ask to replace it`, 'setup'));
+    if (pub) items.push(item('warn', `${numberLabel(pub)} “${pub.title}” is already published on ${formatDate(cur.date, 'short')} — publishing will ask to replace it`, 'setup'));
     if (!errors.length) items.unshift(item('ok', 'Ready to publish', null));
     checklist.replaceChildren(h('ul', { class: 'check-list' }, items));
 
     // Summary
     const { all } = analyze(cur);
-    const number = predictedNumber(cur.date);
+    const kind = draftKind(cur);
+    const number = predictedNumber(app.published?.puzzles, cur.date, kind);
     const rows = [
       ['Title', cur.title || '—'],
       ['Author', cur.author || '—'],
-      ['Release', isValidDateId(cur.date) ? `${formatDate(cur.date)}${number ? ` · #${number}` : ''}` : 'No date'],
+      ['Kind', kindLabel(kind)],
+      ['Release', isValidDateId(cur.date) ? `${formatDate(cur.date)}${number ? ` · ${numberLabel({ kind, number })}` : ''}` : 'No date'],
       ['Size', `${cur.width}×${cur.height} · ${plural(all.length, 'word')} · ${cur.cells.filter((c) => c === '#').length} blocks`],
       ['Theme', themeSummary(cur, all)],
     ];
@@ -157,30 +162,24 @@ export function mountReview(container, ctx) {
       : h('div', { class: 'check-btn' }, ...content));
   }
 
-  /** The "#N" this puzzle will get: its position in date order among published puzzles. */
-  function predictedNumber(date) {
-    if (!isValidDateId(date)) return null;
-    const dates = new Set((app.published?.puzzles || []).map((p) => p.date));
-    dates.add(date);
-    return [...dates].sort().indexOf(date) + 1;
-  }
-
   // ---- publish ----
   function renderPublish(errors) {
     const cur = d();
-    // Publishing on a new date shifts the numbers of puzzles dated after it; replacing a date does not.
-    const later = app.publishedByDate().has(cur.date) ? 0 : (app.published?.puzzles || []).filter((p) => p.date > cur.date).length;
+    // Numbers count per kind: publishing a new Mini shifts the numbers of later Minis; replacing one does not.
+    const kind = draftKind(cur);
+    const id = draftPuzzleId(cur);
+    const later = renumberedBy(app.published?.puzzles, cur.date, kind);
     const nodes = [h('h2', { class: 'card-title' }, 'Publish')];
     const own = app.publishedFor(cur);
     const behind = unpublishedChanges(cur);
-    if (lastPublish && lastPublish.date === cur.date && cur.publishedAt) {
+    if (lastPublish && (lastPublish.id || lastPublish.date) === id && cur.publishedAt) {
       // A scheduled puzzle is locked for solvers until its day: open it in preview mode instead of "No peeking!".
       const future = cur.date > app.today();
-      const url = siteUrlFor(cur.date, app.today());
+      const url = siteUrlFor(id, app.today());
       nodes.push(h('div', { class: 'note ok publish-done' },
         icon('check', { size: 16 }),
         h('div', null,
-          h('strong', null, `Published as #${lastPublish.number ?? '?'} for ${formatDate(cur.date, 'short')}.`),
+          h('strong', null, `Published as ${numberLabel({ kind, number: lastPublish.number })} for ${formatDate(cur.date, 'short')}.`),
           h('div', { class: 'small' },
             cur.date > app.today() ? `Solvers will see it on ${formatDate(cur.date)}.` : 'It is live in your local site now.'),
           h('div', { class: 'row wrap gap-sm' }, goLive.button),
@@ -194,14 +193,14 @@ export function mountReview(container, ctx) {
     }
     if (isValidDateId(cur.date)) {
       nodes.push(h('p', { class: 'muted small' },
-        `Writes site/puzzles/${cur.date}.json and updates the index.`
-        + (later ? ` ${plural(later, 'puzzle')} dated later will be renumbered.` : '')));
+        `Writes site/puzzles/${id}.json and updates the index.`
+        + (later ? ` ${plural(later, kind === 'daily' ? 'Daily' : kindLabel(kind))} dated later will be renumbered.` : '')));
     }
     if (own && !errors.length) {
       nodes.push(behind
-        ? h('p', { class: 'note warn small publish-state' }, icon('alert', { size: 14 }), `You changed this puzzle after publishing it. Solvers still get the published version of #${own.number} until you publish the update.`)
+        ? h('p', { class: 'note warn small publish-state' }, icon('alert', { size: 14 }), `You changed this puzzle after publishing it. Solvers still get the published version of ${numberLabel(own)} until you publish the update.`)
         : (live.fp || cur.publishedFingerprint)
-          ? h('p', { class: 'muted small publish-state' }, icon('check', { size: 14 }), ` The published #${own.number} is up to date with this draft.`)
+          ? h('p', { class: 'muted small publish-state' }, icon('check', { size: 14 }), ` The published ${numberLabel(own)} is up to date with this draft.`)
           : null);
     }
     nodes.push(h('div', { class: 'row gap-sm' },
@@ -229,21 +228,21 @@ export function mountReview(container, ctx) {
     const other = app.dateConflict(cur);
     let overwrite = false;
     if (other) {
-      if (!(await confirmReplace(other, cur.date))) return;
+      if (!(await confirmReplace(other, cur.date, draftKind(cur)))) return;
       overwrite = true;
     } else if (own) {
       if (cur.date <= app.today() && !(await confirmDialog({
         title: 'Update the live puzzle?',
-        message: [`#${own.number} is already out (${formatDate(cur.date)}).`, 'Friends who already started it will see your changes the next time they open it.'],
+        message: [`${numberLabel(own)} is already out (${formatDate(cur.date)}).`, 'Friends who already started it will see your changes the next time they open it.'],
         confirmLabel: 'Publish update',
       }))) return;
       overwrite = true;
     }
-    // Published before under another date? Offer to move it rather than leaving a copy behind.
+    // Published before under another date or kind? Offer to move it rather than leaving a copy behind.
     const movedFrom = await previousCopy(cur);
     let unpublishOld = false;
     if (movedFrom) {
-      const choice = await askMove(movedFrom, cur.date);
+      const choice = await askMove(movedFrom, cur);
       if (!choice) return;
       unpublishOld = choice === 'move';
     }
@@ -259,21 +258,23 @@ export function mountReview(container, ctx) {
       } catch (err) {
         if (err.status !== 409) throw err;
         // Someone published this date in the meantime (another tab): ask now.
-        if (!(await confirmReplace(err.body?.existing || {}, draft.date))) return;
+        if (!(await confirmReplace(err.body?.existing || {}, draft.date, draftKind(draft)))) return;
         res = await api.publish(draft, true);
       }
       if (unpublishOld) {
         try {
-          await api.unpublish(movedFrom.date);
+          await api.unpublish(movedFrom.id);
         } catch (err) {
-          toastError(err, `Published, but the copy on ${formatDate(movedFrom.date, 'short')} could not be removed: `);
+          toastError(err, `Published, but the copy ${copyName(movedFrom)} could not be removed: `);
         }
       }
-      lastPublish = { date: res.puzzle.date, number: res.number, url: res.url, replaced: res.replaced };
+      const pubKind = puzzleKind(res.puzzle);
+      lastPublish = { id: res.puzzle.id, date: res.puzzle.date, kind: pubKind, number: res.number, url: res.url, replaced: res.replaced };
       session.lastPublish = lastPublish;
       const record = {
         publishedAt: res.puzzle.publishedAt,
         publishedDate: res.puzzle.date,
+        publishedId: res.puzzle.id, // the date + kind it went to (SPEC §8)
         publishedFingerprint: puzzleFingerprint(res.puzzle), // to notice later edits that are not published
       };
       if (isOpen()) {
@@ -281,13 +282,13 @@ export function mountReview(container, ctx) {
       } else {
         await recordPublish(id, record);
       }
-      live = { date: res.puzzle.date, fp: record.publishedFingerprint };
+      live = { id: res.puzzle.id, fp: record.publishedFingerprint };
       await app.refreshPublished();
       app.clueBank.load(true); // your clues now include this puzzle's
       // The number may have changed if an earlier copy was removed.
-      const number = app.publishedByDate().get(res.puzzle.date)?.number ?? res.number;
+      const number = app.publishedById().get(res.puzzle.id)?.number ?? res.number;
       lastPublish.number = number;
-      toast(`Published ${isOpen() ? '' : `“${res.puzzle.title}” as `}#${number} · ${formatDate(res.puzzle.date, 'short')}${unpublishOld ? ` (removed from ${formatDate(movedFrom.date, 'short')})` : ''}`, { type: 'success' });
+      toast(`Published ${isOpen() ? '' : `“${res.puzzle.title}” as `}${numberLabel({ kind: pubKind, number })} · ${formatDate(res.puzzle.date, 'short')}${unpublishOld ? ` (removed ${copyName(movedFrom)})` : ''}`, { type: 'success' });
       for (const w of res.serverWarnings || []) toast(w, { type: 'warn', timeout: 10000 });
       for (const w of res.warnings || []) console.info('Publish warning:', w);
     } catch (err) {
@@ -321,12 +322,14 @@ export function mountReview(container, ctx) {
     }
   }
 
-  /** Ask before replacing another puzzle on `date`. `ex`: { title, author?, number? }. */
-  function confirmReplace(ex, date) {
+  /** Ask before replacing the published puzzle of `kind` on `date`. `ex`: { title, author?, number?, kind? }. */
+  function confirmReplace(ex, date, kind) {
+    const k = ex.kind || kind;
+    const label = ex.number ? `${numberLabel({ kind: k, number: ex.number })} ` : k === 'daily' ? '' : `The ${kindLabel(k)} `;
     return confirmDialog({
-      title: 'Replace the published puzzle?',
+      title: k === 'daily' ? 'Replace the published puzzle?' : `Replace the published ${kindLabel(k)}?`,
       message: [
-        `${ex.number ? `#${ex.number} ` : ''}“${ex.title || 'A puzzle'}”${ex.author ? ` by ${ex.author}` : ''} is already published for ${formatDate(date)}.`,
+        `${label}“${ex.title || 'A puzzle'}”${ex.author ? ` by ${ex.author}` : ''} is already published for ${formatDate(date)}.`,
         'Publishing replaces it. Anyone who already started it will see the new puzzle.',
       ],
       confirmLabel: 'Replace it',
@@ -335,34 +338,45 @@ export function mountReview(container, ctx) {
   }
 
   /**
-   * The copy this draft published earlier on a different date, if it is still there (and was not replaced by
-   * another puzzle since): { date, number, title } or null.
+   * The copy this draft published earlier under another id (another date, or another kind of the same day), if it
+   * is still there (and was not replaced by another puzzle since): { id, date, kind, number, title } or null.
    */
   async function previousCopy(cur) {
-    const old = cur.publishedDate;
-    if (!old || old === cur.date || !cur.publishedAt) return null;
-    const entry = app.publishedByDate().get(old);
+    const old = cur.publishedAt ? recordedPuzzleId(cur) : null;
+    if (!old || old === draftPuzzleId(cur)) return null;
+    const entry = app.publishedById().get(old);
     if (!entry) return null;
     try {
       const pub = await fetchStatic(`site/puzzles/${old}.json`, 'json');
-      return pub && pub.publishedAt === cur.publishedAt ? { date: old, number: entry.number, title: entry.title } : null;
+      if (!pub || pub.publishedAt !== cur.publishedAt) return null;
+      const { date, kind } = parsePuzzleId(old);
+      return { id: old, date, kind, number: entry.number, title: entry.title };
     } catch {
       return null;
     }
   }
 
-  /** 'move' | 'keep' | undefined (cancel). */
+  /** "from Oct 5" / "(the Daily of Oct 5)" — how to name the old copy. */
+  function copyName(from) {
+    return from.kind === 'daily' ? `from ${formatDate(from.date, 'short')}` : `(the ${kindLabel(from.kind)} of ${formatDate(from.date, 'short')})`;
+  }
+
+  /** 'move' | 'keep' | undefined (cancel). `to`: the draft being published. */
   function askMove(from, to) {
+    const toKind = draftKind(to);
+    const sameDay = from.date === to.date;
+    const where = sameDay ? `as the ${kindLabel(toKind)}` : `for ${formatDate(to.date)}${toKind !== from.kind ? ` as a ${kindLabel(toKind)}` : ''}`;
     return openModal({
       title: 'Move the published puzzle?',
       className: 'modal-confirm',
       build: (close) => h('div', null,
-        h('p', { text: `This puzzle is already published as #${from.number} on ${formatDate(from.date)}. You are now publishing it for ${formatDate(to)}.` }),
-        h('p', { class: 'muted', text: 'Move it (remove it from the old date), or keep it on both dates?' }),
+        h('p', { text: `This puzzle is already published as ${numberLabel(from)} on ${formatDate(from.date)}. You are now publishing it ${where}.` }),
+        h('p', { class: 'muted', text: sameDay ? `Move it (remove the ${kindLabel(from.kind)}), or keep both?` : 'Move it (remove it from the old date), or keep it on both dates?' }),
         h('div', { class: 'modal-actions' },
           h('button', { class: 'btn', type: 'button', onclick: () => close(undefined) }, 'Cancel'),
           h('button', { class: 'btn', type: 'button', onclick: () => close('keep') }, 'Keep both'),
-          h('button', { class: 'btn primary', type: 'button', onclick: () => close('move') }, `Move to ${formatDate(to, 'short')}`))),
+          h('button', { class: 'btn primary', type: 'button', onclick: () => close('move') },
+            sameDay ? `Move to ${kindLabel(toKind)}` : `Move to ${formatDate(to.date, 'short')}`))),
     });
   }
 
@@ -421,7 +435,7 @@ export function mountReview(container, ctx) {
       render();
       if (detail.kind === 'grid' || detail.kind === 'clues' || detail.kind === 'meta') refreshPreviewSoon();
       const cur = d();
-      if (cur && ((detail.kind === 'external' && detail.what === 'published') || detail.kind === 'load' || live.date !== (app.publishedFor(cur) ? cur.date : null))) {
+      if (cur && ((detail.kind === 'external' && detail.what === 'published') || detail.kind === 'load' || live.id !== (app.publishedFor(cur) ? draftPuzzleId(cur) : null))) {
         if (!publishing) loadLive();
       }
     },

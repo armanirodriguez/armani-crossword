@@ -53,7 +53,8 @@ export const api = {
   /** Resolves to { ok, puzzle, number, warnings, url }; rejects with ApiError 422 { errors, warnings } / 409 { existing }. */
   publish: (draft, overwrite = false) => request('POST', '/api/publish', { json: { draft, overwrite } }),
   listPublished: () => request('GET', '/api/published'),
-  unpublish: (date) => request('DELETE', `/api/published/${enc(date)}`),
+  /** Remove a published puzzle by its id (YYYY-MM-DD for a daily, YYYY-MM-DD-mini / -midi otherwise). */
+  unpublish: (id) => request('DELETE', `/api/published/${enc(id)}`),
 
   getConfig: () => request('GET', '/api/config'),
   saveConfig: (config) => request('PUT', '/api/config', { json: config }),
@@ -64,8 +65,11 @@ export const api = {
   patchUserWords: (ops) => request('PATCH', '/api/user-words', { json: ops }),
 
   getUserClues: () => request('GET', '/api/user-clues'),
-  /** Answers of puzzles published within `days` days before/after `date` (not on it): { date, days, answers: { WORD: [dates] } }. */
-  recentAnswers: (date, days) => request('GET', `/api/recent-answers?date=${enc(date)}&days=${enc(days)}`),
+  /**
+   * Answers of puzzles published within `days` days before/after `date`, except the puzzle of this date and kind
+   * itself (other kinds of the same day count): { date, days, answers: { WORD: [dates or ids] } }.
+   */
+  recentAnswers: (date, days, kind = 'daily') => request('GET', `/api/recent-answers?date=${enc(date)}&kind=${enc(kind)}&days=${enc(days)}`),
 
   /** "Put it online" status: { git, branch, remote, upstream, pending: [{ path, change }], ahead, siteUrl, pagesUrl, busy, ready, problem }. */
   goLiveStatus: () => request('GET', '/api/go-live'),

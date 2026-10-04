@@ -1,5 +1,6 @@
 // "Share" button behaviour shared by the solved modal, the play header and the intro card.
 
+import { puzzleKind } from '../../shared/puzzle.js';
 import { buildShareText, deliverShare, shareGridRows, shareUrlFor } from '../share.js';
 import { showCopyFallback, toast } from '../ui.js';
 
@@ -15,6 +16,7 @@ export function shareTextFor(ctx, raw, entry, loaded, result) {
   return buildShareText({
     siteName: ctx.config.siteName,
     number: entry?.number ?? null,
+    kind: puzzleKind(raw),
     date: raw.date,
     elapsedMs: result.elapsedMs,
     checks: result.checks,

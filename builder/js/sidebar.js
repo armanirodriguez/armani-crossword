@@ -8,6 +8,7 @@ import { getPref, setPref } from './prefs.js';
 import { openNewDraftDialog } from './new-draft.js';
 import { hasUnpublishedChanges } from './draft-utils.js';
 import { goLiveStatusLine } from './go-live.js';
+import { draftKind, kindLabel, numberLabel } from './kinds.js';
 
 export function mountSidebar(el, app) {
   const list = h('nav', { class: 'draft-list', 'aria-label': 'Drafts' });
@@ -53,14 +54,14 @@ export function mountSidebar(el, app) {
   // ---- drafts list ----
   function statusText(d) {
     if (app.publishedFor(d)) {
-      const base = `#${app.publishedFor(d).number} · ${formatDate(d.date, 'short')}`;
+      const base = `#${app.publishedFor(d).number} · ${formatDate(d.date, 'short')}`; // (the kind badge is beside it)
       return d.behind
         ? { text: `${base} · edited`, cls: 'warn', title: 'Published, but changed since: publish an update to make the changes live' }
         : { text: base, cls: 'ok', title: 'Published' };
     }
     if (d.date) {
       const clash = app.dateConflict(d);
-      return { text: formatDate(d.date, 'short'), cls: clash ? 'warn' : '', title: clash ? `“${clash.title}” is already published on this date` : 'Release date (not published yet)' };
+      return { text: formatDate(d.date, 'short'), cls: clash ? 'warn' : '', title: clash ? `${numberLabel(clash)} “${clash.title}” is already published on this date` : 'Release date (not published yet)' };
     }
     return { text: 'No date', cls: 'muted', title: 'No release date yet' };
   }
@@ -78,6 +79,7 @@ export function mountSidebar(el, app) {
         h('a', { class: 'draft-link', href: `#/draft/${d.id}`, title: d.updatedAt ? `Edited ${timeAgo(d.updatedAt)}` : '' },
           h('span', { class: 'dr-title', text: d.title || 'Untitled' }),
           h('span', { class: 'dr-meta' },
+            h('span', { class: ['kind-badge', `kind-${draftKind(d)}`], text: kindLabel(draftKind(d)) }),
             h('span', { class: ['dr-status', st.cls], text: st.text, title: st.title }),
             h('span', { text: `${d.width}×${d.height}` }))),
         h('div', { class: 'dr-actions' },
@@ -119,7 +121,8 @@ export function mountSidebar(el, app) {
     const row = app.drafts.find((x) => x.id === d.id);
     if (!row) return;
     const next = {
-      title: d.title, date: d.date, width: d.width, height: d.height, publishedAt: d.publishedAt || '', publishedDate: d.publishedDate || '',
+      title: d.title, date: d.date, kind: draftKind(d), width: d.width, height: d.height,
+      publishedAt: d.publishedAt || '', publishedDate: d.publishedDate || '', publishedId: d.publishedId || '',
       // Only known for the open draft: edited after publishing, not published again yet.
       behind: Boolean(app.publishedFor(d) && hasUnpublishedChanges(d)),
     };

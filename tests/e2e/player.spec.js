@@ -6,6 +6,7 @@
 import { draftToPuzzle } from '../../site/shared/puzzle.js';
 import { FIXTURES, SITE_CONFIG, TODAY, fixturePuzzle, solutionLetters } from './support/root.js';
 import { expect, test } from './support/player.js';
+import { MULTI_DATE, multiSolution, serveMultiKind } from './support/multi.js';
 
 const SOLUTION = solutionLetters(TODAY); // GASPDELTAENTERBREAKTERM
 const PAST = '2026-09-28'; // #1 "Tiny Three" (3×3)
@@ -745,5 +746,159 @@ test.describe('phone and tablet layouts', () => {
     expect(lists.y - (grid.y + grid.height)).toBeLessThan(40); // no empty band between them
     expect(lists.height).toBeGreaterThan(150);
     expect(grid.width).toBeGreaterThan(480);
+  });
+});
+
+// ---------------------------------------------------------------------------------------------------------------
+// SPEC §8: a Mini, a Midi and a Daily on the same date (fixtures in support/multi.js; Oct 4 has all three).
+
+test.describe('several puzzles a day (Mini / Midi / Daily)', () => {
+  const cards = (page) => page.locator('.day-card');
+
+  test('today’s cards in Mini, Midi, Daily order; Play opens the grid, Back returns, progress is per puzzle', async ({ page, baseURL, player: p }) => {
+    await serveMultiKind(page);
+    await p.open('', { date: MULTI_DATE });
+    await expect(page.locator('.day-header .eyebrow')).toHaveText('Today’s puzzles');
+    await expect(page.locator('.day-title')).toHaveText('Sunday, October 4, 2026');
+    await expect(cards(page)).toHaveCount(3);
+    await expect(cards(page).locator('.kind-badge')).toHaveText(['Mini', 'Midi', 'Daily']);
+    await expect(cards(page).locator('.day-card-num')).toHaveText(['#1', '#2', '#3']);
+    await expect(cards(page).locator('.day-card-title')).toHaveText(['Tiny Mini', 'Midi Mix', 'Sunday Best']);
+    await expect(cards(page).locator('.day-card-meta')).toHaveText(['3×3', '3×3', '5×5']);
+    await expect(cards(page).locator('.day-card-status')).toHaveText(['New', 'New', 'New']);
+    await expect(p.intro).toHaveCount(0);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+
+    // Play on the Mini goes straight to its grid.
+    await p.freezeClock();
+    await p.press(cards(page).nth(0).getByRole('button', { name: /^Play/ }));
+    await expect(p.grid).toBeVisible();
+    expect(page.url()).toContain('#/puzzle/2026-10-04-mini');
+    await expect(page.locator('.play-title-main')).toHaveText('Tiny Mini');
+    await expect(page.locator('.sub-num')).toHaveText('Mini #1');
+    await p.tick(21_000);
+    await p.type(multiSolution('2026-10-04-mini'));
+    await p.tick(1_000);
+    await expect(p.solvedModal).toBeVisible();
+    await p.press(p.solvedModal.getByRole('button', { name: 'Share' }));
+    expect((await p.lastShare()).text).toBe([
+      '🧩 Crossword Club Mini #1 · Sun, Oct 4', '⏱️ 0:21 · ✨ no hints', '🟩🟩🟩', '🟩🟩🟩', '🟩🟩🟩', `${baseURL}/site/`,
+    ].join('\n'));
+    await p.press(p.solvedModal.getByRole('button', { name: 'View puzzle' }));
+    await p.settle();
+
+    // Back returns to the cards; the Mini is solved, the others untouched.
+    await p.press(page.locator('.play-header .back-btn'));
+    await expect(cards(page)).toHaveCount(3);
+    expect(page.url()).not.toContain('#/puzzle/');
+    await expect(cards(page).locator('.day-card-status')).toHaveText(['✓ Solved 0:21', 'New', 'New']);
+    await expect(page.locator('.day-sub')).toHaveText('3 puzzles · 1 solved');
+
+    // The Daily keeps its date-only id (and progress key); Resume shows on its card afterwards.
+    await p.press(cards(page).nth(2).getByRole('button', { name: /^Play/ }));
+    await expect(page.locator('.play-title-main')).toHaveText('Sunday Best');
+    await expect(page.locator('.sub-num')).toHaveText('#3');
+    await p.type('G');
+    await p.tick(5_000);
+    await p.press(page.locator('.play-header .back-btn'));
+    await expect(cards(page).nth(2).getByRole('button', { name: /^Resume · 0:05/ })).toBeVisible();
+    const keys = await page.evaluate(() => Object.keys(localStorage).sort());
+    expect(keys).toEqual(['xw:v1:progress:2026-10-04', 'xw:v1:progress:2026-10-04-mini']);
+  });
+
+  test('a puzzle link shows its intro card with links to the rest of the day; ids and old date links resolve', async ({ page, player: p }) => {
+    await serveMultiKind(page);
+    await p.open('#/puzzle/2026-10-04-midi', { date: MULTI_DATE });
+    await expect(page.locator('.eyebrow')).toHaveText('Today’s Midi · #2');
+    await expect(page.locator('.intro-title')).toHaveText('Midi Mix');
+    await expect(page.locator('.intro-meta')).toHaveText(/3×3$/);
+    await expect(page.locator('.intro-siblings .kind-chip')).toHaveText(['MiniTiny Mini', 'DailySunday Best']);
+    await p.press(page.locator('.intro-siblings .kind-chip').nth(1));
+    await expect(page.locator('.intro-title')).toHaveText('Sunday Best');
+    await expect(page.locator('.eyebrow')).toHaveText('Today’s puzzle · #3');
+
+    // An archive puzzle of another kind: "From the archive · Midi #1". Oct 3 has only that midi, so the old
+    // date-only link to Oct 3 opens it too.
+    await page.goto('/site/#/puzzle/2026-10-03-midi');
+    await expect(page.locator('.eyebrow')).toHaveText('From the archive · Midi #1');
+    await page.goto('/site/#/puzzle/2026-10-03');
+    await expect(page.locator('.intro-title')).toHaveText('Middle Ground');
+    await p.play();
+    await p.type(multiSolution('2026-10-03-midi'));
+    await expect(p.solvedModal).toBeVisible();
+    expect(await p.progress('2026-10-03-midi')).toMatchObject({ solved: true });
+
+    // A kind that day doesn't have, a future kind, and a bad id.
+    await page.goto('/site/#/puzzle/2026-10-02-mini');
+    await expect(page.locator('.message-title')).toHaveText('No puzzle that day');
+    await expect(page.locator('.message-text')).toHaveText('There’s no Mini for Friday, October 2, 2026.');
+    await page.goto('/site/#/puzzle/2026-10-05-mini');
+    await expect(page.locator('.message-title')).toHaveText('Unlocks on Monday, October 5, 2026');
+    await page.goto('/site/#/puzzle/2026-10-04-maxi');
+    await expect(cards(page)).toHaveCount(3);
+  });
+
+  test('archive groups a day’s puzzles under its date with kind badges', async ({ page, player: p }) => {
+    await serveMultiKind(page);
+    await p.open('#/archive', { date: MULTI_DATE });
+    await expect(page.locator('.archive-sub')).toHaveText('6 puzzles · 0 solved in this browser');
+    const day = page.locator('.archive-day');
+    await expect(day).toHaveCount(1); // Oct 4; the other days have one puzzle each
+    await expect(day.locator('.archive-day-heading')).toHaveText('Sunday, October 4, 2026Today');
+    await expect(day.locator('.archive-item .kind-badge')).toHaveText(['Mini', 'Midi', 'Daily']);
+    await expect(day.locator('.archive-num')).toHaveText(['#1', '#2', '#3']);
+    await expect(day.locator('.archive-meta').first()).toHaveText('3×3 · by E2E Bot');
+    // Single-puzzle days stay plain rows: the Oct 3 midi carries its badge, the old dailies none.
+    const rows = page.locator('.archive-list > li > .archive-item');
+    await expect(rows).toHaveCount(3);
+    await expect(rows.nth(0).locator('.archive-title')).toHaveText('MidiMiddle Ground');
+    await expect(rows.nth(1).locator('.archive-title')).toHaveText('Warm-Up');
+    await expect(rows.nth(1).locator('.kind-badge')).toHaveCount(0);
+    // The rows of a group line up with the plain rows.
+    const xs = await page.locator('.archive-num').evaluateAll((els) => els.map((el) => Math.round(el.getBoundingClientRect().x)));
+    expect(new Set(xs).size).toBe(1);
+    await p.press(day.locator('.archive-item').nth(0));
+    await expect(page.locator('.intro-title')).toHaveText('Tiny Mini');
+    expect(page.url()).toContain('#/puzzle/2026-10-04-mini');
+  });
+
+  test('a day with only a mini keeps the single intro card; “Latest” falls back to the last day with puzzles', async ({ page, player: p }) => {
+    // Oct 5 with its daily held back (not deployed): only the Monday Mini.
+    await serveMultiKind(page, { hidden: ['2026-10-05'] });
+    await p.open('', { date: '2026-10-05' });
+    await expect(p.intro).toBeVisible();
+    await expect(page.locator('.eyebrow')).toHaveText('Today’s Mini · #2');
+    await expect(page.locator('.intro-meta')).toHaveText(/3×3$/);
+    await p.play();
+    await p.type(multiSolution('2026-10-05-mini'));
+    await expect(p.solvedModal).toBeVisible();
+
+    // With Oct 5's puzzles all held back, Oct 5 shows the latest day that has puzzles: Oct 4's three.
+    await page.unrouteAll({ behavior: 'ignoreErrors' });
+    await serveMultiKind(page, { hidden: ['2026-10-05', '2026-10-05-mini'] });
+    await page.goto('/site/#/');
+    await page.reload(); // the index is loaded when the page opens
+    await expect(page.locator('.day-header .eyebrow')).toHaveText('Latest puzzles');
+    await expect(cards(page)).toHaveCount(3);
+  });
+
+  test('another kind deployed later and the midnight roll-over both show up on an open page', async ({ page, player: p }) => {
+    // Oct 5: the daily is out, the mini lands later.
+    const state = await serveMultiKind(page, { hidden: ['2026-10-05-mini'] });
+    await p.open('', { at: new Date('2026-10-05T00:30:00Z') });
+    await expect(page.locator('.eyebrow')).toHaveText('Today’s puzzle · #4');
+    state.hidden.clear();
+    await p.tick(6 * 60_000); // the page re-checks the index every few minutes
+    await expect(cards(page)).toHaveCount(2);
+    await expect(cards(page).locator('.kind-badge')).toHaveText(['Mini', 'Daily']);
+  });
+
+  test('midnight flips the cards to the new day', async ({ page, player: p }) => {
+    await serveMultiKind(page);
+    await p.open('', { at: new Date('2026-10-03T23:59:00Z') });
+    await expect(page.locator('.eyebrow')).toHaveText('Today’s Midi · #1');
+    await p.tick(2 * 60_000);
+    await expect(page.locator('.day-header .eyebrow')).toHaveText('Today’s puzzles');
+    await expect(cards(page)).toHaveCount(3);
   });
 });

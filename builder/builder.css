@@ -15,6 +15,9 @@
   --accent-hover: #3150cc;
   --accent-soft: #e9eefd;
   --accent-text: #2c48bf;
+  --kind-mini: #0b7285; --kind-mini-soft: #e3f6f8;
+  --kind-midi: #8a3fb8; --kind-midi-soft: #f4eafb;
+  --kind-daily: #2c48bf; --kind-daily-soft: #e9eefd;
   --on-accent: #ffffff;
   --ok: #2b8a3e;
   --ok-soft: #e7f5ea;
@@ -71,6 +74,9 @@
     --accent-hover: #819cff;
     --accent-soft: #222b47;
     --accent-text: #a3b6ff;
+    --kind-mini: #66d9e8; --kind-mini-soft: #15353a;
+    --kind-midi: #d0a2f7; --kind-midi-soft: #33213f;
+    --kind-daily: #a3b6ff; --kind-daily-soft: #222b47;
     --on-accent: #0b1020;
     --ok: #5cc073;
     --ok-soft: #1b2e21;
@@ -115,6 +121,9 @@
   --accent-hover: #819cff;
   --accent-soft: #222b47;
   --accent-text: #a3b6ff;
+  --kind-mini: #66d9e8; --kind-mini-soft: #15353a;
+  --kind-midi: #d0a2f7; --kind-midi-soft: #33213f;
+  --kind-daily: #a3b6ff; --kind-daily-soft: #222b47;
   --on-accent: #0b1020;
   --ok: #5cc073;
   --ok-soft: #1b2e21;
@@ -785,6 +794,33 @@ button.check-btn:hover .icon:last-child { opacity: .6; }
 .dc-add { align-items: center; justify-content: center; flex-direction: row; gap: 4px; border: 0; background: none; color: var(--text-3); cursor: pointer; font-weight: 600; }
 .dc-add:hover { color: var(--accent-text); background: var(--accent-soft); }
 .day-cell.gap { border-style: dashed; }
+
+/* ------------------------------------------------------------------ puzzle kinds (Mini / Midi / Daily) */
+.kind-badge {
+  display: inline-flex; align-items: center; padding: 0 6px; border-radius: 4px; font-size: 10.5px; font-weight: 700;
+  line-height: 16px; letter-spacing: .02em; text-transform: uppercase; white-space: nowrap; flex: none;
+  background: var(--kind-daily-soft); color: var(--kind-daily);
+}
+.kind-badge.kind-mini, .chip-kind.kind-mini { background: var(--kind-mini-soft); color: var(--kind-mini); }
+.kind-badge.kind-midi, .chip-kind.kind-midi { background: var(--kind-midi-soft); color: var(--kind-midi); }
+.chip-kind { background: var(--kind-daily-soft); color: var(--kind-daily); border-color: transparent; font-weight: 700; }
+.dr-meta .kind-badge { font-size: 9.5px; line-height: 15px; padding: 0 5px; }
+.link-list .kind-badge { margin-right: 2px; vertical-align: 1px; }
+.day-items { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.day-item { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.day-item > span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dc-list { gap: 5px; }
+.dc-item { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: 5px; row-gap: 1px; color: var(--text); text-decoration: none; min-width: 0; }
+.dc-item .dc-title { grid-column: 1 / -1; -webkit-line-clamp: 1; }
+.dc-item.planned .dc-num { color: var(--warn); }
+a.dc-item:hover .dc-title { text-decoration: underline; }
+.dc-more {
+  margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 3px; border: 0; background: none;
+  padding: 1px 2px; color: var(--text-3); font: inherit; font-size: 11.5px; font-weight: 600; cursor: pointer; border-radius: 4px;
+}
+.dc-more:hover { color: var(--accent-text); background: var(--accent-soft); }
+.schedule-table tr.same-day td { border-top-color: transparent; }
+.new-when.warn-text { color: var(--warn); }
 .lookup { display: flex; flex-direction: column; gap: 10px; }
 .word-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; gap: 10px; }
 .wc-head { display: flex; align-items: center; gap: 12px; }

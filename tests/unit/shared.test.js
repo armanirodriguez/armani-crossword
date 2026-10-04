@@ -6,6 +6,7 @@ import {
 import {
   encodeSolution, decodeSolution, draftToPuzzle, validatePuzzle, loadPuzzle, makeDraft, normalizeAnswer,
   formatDuration, isValidDateId, todayISO, addDays, buildIndex, formatDate,
+  KINDS, KIND_LABELS, puzzleId, parsePuzzleId, isValidPuzzleId, puzzleKind, suggestKind, isValidKind,
 } from '../../site/shared/puzzle.js';
 
 const g = (rows) => gridFromLayout(rows.map((r) => r.replace(/[A-Z]/g, '.')), rows.join('').replace(/\./g, ' '));
@@ -103,4 +104,96 @@ test('misc helpers', () => {
   assert.equal(formatDate('2026-10-03'), 'Saturday, October 3, 2026');
   const idx = buildIndex([{ id: '2026-10-05', date: '2026-10-05', title: 'B', width: 5, height: 5 }, { id: '2026-10-01', date: '2026-10-01', title: 'A', width: 5, height: 5 }]);
   assert.deepEqual(idx.puzzles.map((p) => [p.id, p.number]), [['2026-10-01', 1], ['2026-10-05', 2]]);
+});
+
+// --- §8 multiple puzzles per day -------------------------------------------------------------
+
+test('kind ids: puzzleId / parsePuzzleId / isValidPuzzleId / puzzleKind / suggestKind', () => {
+  assert.deepEqual([...KINDS], ['mini', 'midi', 'daily']);
+  assert.deepEqual(KIND_LABELS, { mini: 'Mini', midi: 'Midi', daily: 'Daily' });
+  assert.ok(isValidKind('midi') && !isValidKind('maxi') && !isValidKind(undefined));
+  assert.equal(puzzleId('2026-10-05'), '2026-10-05');
+  assert.equal(puzzleId('2026-10-05', 'daily'), '2026-10-05');
+  assert.equal(puzzleId('2026-10-05', 'mini'), '2026-10-05-mini');
+  assert.equal(puzzleId('2026-10-05', 'midi'), '2026-10-05-midi');
+  assert.deepEqual(parsePuzzleId('2026-10-05'), { date: '2026-10-05', kind: 'daily' });
+  assert.deepEqual(parsePuzzleId('2026-10-05-mini'), { date: '2026-10-05', kind: 'mini' });
+  assert.deepEqual(parsePuzzleId('2026-10-05-midi'), { date: '2026-10-05', kind: 'midi' });
+  for (const bad of ['2026-10-05-daily', '2026-10-05-maxi', '2025-02-29', '2025-02-29-mini', '../x', '', null, 5, '2026-10-05-mini-x']) {
+    assert.equal(parsePuzzleId(bad), null, String(bad));
+    assert.equal(isValidPuzzleId(bad), false, String(bad));
+  }
+  assert.ok(isValidPuzzleId('2026-10-05-midi'));
+  assert.equal(puzzleKind({}), 'daily');
+  assert.equal(puzzleKind({ kind: 'mini' }), 'mini');
+  assert.equal(puzzleKind(null), 'daily');
+  assert.equal(suggestKind(5, 5), 'mini');
+  assert.equal(suggestKind(7), 'mini');
+  assert.equal(suggestKind(9, 9), 'midi');
+  assert.equal(suggestKind(11, 8), 'midi');
+  assert.equal(suggestKind(15, 15), 'daily');
+  assert.equal(suggestKind(7, 13), 'daily');
+});
+
+test('makeDraft has kind (default daily)', () => {
+  assert.equal(makeDraft({ id: 'a' }).kind, 'daily');
+  assert.equal(makeDraft({ id: 'a', kind: 'mini' }).kind, 'mini');
+  assert.equal(makeDraft({ id: 'a', kind: 'bogus' }).kind, 'daily');
+});
+
+test('draftToPuzzle publishes kinded ids; dailies unchanged; validatePuzzle checks id', () => {
+  const base = sampleDraft();
+  base.clues.TEN = 'Decade';
+  const legacy = { ...base };
+  delete legacy.kind; // drafts saved before kinds existed
+  const daily = draftToPuzzle(legacy).puzzle;
+  assert.equal(daily.id, '2026-10-02');
+  assert.ok(!('kind' in daily));
+  assert.equal(draftToPuzzle({ ...base, kind: 'daily' }).puzzle.solution, daily.solution);
+
+  const mini = draftToPuzzle({ ...base, kind: 'mini' }).puzzle;
+  assert.equal(mini.id, '2026-10-02-mini');
+  assert.equal(mini.kind, 'mini');
+  assert.equal(mini.date, '2026-10-02');
+  assert.deepEqual(validatePuzzle(mini), { ok: true, errors: [] });
+  assert.equal(loadPuzzle(mini).solution.join(''), 'CATAREPEN'); // salt is the id
+  assert.notEqual(mini.solution, daily.solution);
+
+  // id must match date + kind
+  assert.equal(validatePuzzle({ ...mini, kind: 'midi' }).ok, false);
+  assert.equal(validatePuzzle({ ...mini, kind: undefined }).ok, false);
+  assert.equal(validatePuzzle({ ...daily, kind: 'mini' }).ok, false);
+  assert.equal(validatePuzzle({ ...daily, kind: 'daily' }).ok, true);
+  assert.equal(validatePuzzle({ ...mini, kind: 'jumbo' }).ok, false);
+
+  const bad = draftToPuzzle({ ...base, kind: 'jumbo' });
+  assert.equal(bad.puzzle, null);
+  assert.ok(bad.errors.some((e) => e.includes('kind')));
+});
+
+test('the sample published puzzle (no kind) still validates', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const p = JSON.parse(await readFile(new URL('../fixtures/sample-puzzle.json', import.meta.url), 'utf8'));
+  assert.equal(validatePuzzle(p).ok, true);
+  assert.equal(puzzleKind(p), 'daily');
+});
+
+test('buildIndex numbers per kind and sorts by date then kind', () => {
+  const e = (id, date, kind) => ({ id, date, ...(kind ? { kind } : {}), title: id, width: 5, height: 5 });
+  const idx = buildIndex([
+    e('2026-10-05', '2026-10-05'),
+    e('2026-10-05-midi', '2026-10-05', 'midi'),
+    e('2026-10-03', '2026-10-03'),
+    e('2026-10-05-mini', '2026-10-05', 'mini'),
+    e('2026-10-04-mini', '2026-10-04', 'mini'),
+    e('2026-10-06', '2026-10-06', 'daily'),
+  ]);
+  assert.deepEqual(idx.puzzles.map((p) => [p.id, p.kind, p.number]), [
+    ['2026-10-03', 'daily', 1],
+    ['2026-10-04-mini', 'mini', 1],
+    ['2026-10-05-mini', 'mini', 2],
+    ['2026-10-05-midi', 'midi', 1],
+    ['2026-10-05', 'daily', 2],
+    ['2026-10-06', 'daily', 3],
+  ]);
 });

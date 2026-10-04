@@ -22,13 +22,14 @@
 // og:* tags and the web-app manifest in the output are rewritten from config.json (siteName, tagline, shareUrl).
 //
 // The puzzle index is always rebuilt from the puzzle files that end up in the output, so numbering stays
-// consistent (numbers are by date order, so dropping future puzzles never renumbers released ones).
+// consistent (numbers count per kind in date order, so dropping future puzzles never renumbers released ones).
+// Puzzle files are <date>.json (daily) and <date>-mini.json / <date>-midi.json (SPEC §8); release goes by date.
 
 import path from 'node:path';
 import { promises as fsp } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-import { buildIndex, isValidDateId, todayISO } from '../site/shared/puzzle.js';
+import { buildIndex, comparePuzzles, isValidDateId, parsePuzzleId, todayISO } from '../site/shared/puzzle.js';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 /** The zone where the calendar date changes first (UTC+14). */
@@ -238,7 +239,7 @@ async function writeSiteMetadata(out, config, log) {
  *   now:       the current time (tests)
  *   force:     replace an existing output folder even without the build marker
  * @returns {Promise<{ out: string, today: string|null, kept: string[], dropped: string[], index: object }>}
- *   `today` is the last released date (null without releasedOnly).
+ *   `today` is the last released date (null without releasedOnly); kept/dropped list puzzle ids (a daily's id is its date).
  */
 export async function buildSite({
   root = REPO_ROOT, out, releasedOnly = false, today, leadHours = 0, now = new Date(), force = false, log = () => {},
@@ -285,7 +286,7 @@ export async function buildSite({
   const puzzlesDir = path.join(out, 'puzzles');
   let names = [];
   try {
-    names = (await fsp.readdir(puzzlesDir)).filter((n) => /^\d{4}-\d{2}-\d{2}\.json$/.test(n));
+    names = await fsp.readdir(puzzlesDir);
   } catch (err) {
     if (err.code !== 'ENOENT') throw err;
     await fsp.mkdir(puzzlesDir, { recursive: true });
@@ -294,21 +295,31 @@ export async function buildSite({
   const kept = [];
   const dropped = [];
   const puzzles = [];
-  for (const name of names.sort()) {
-    const date = name.slice(0, 10);
+  const entries = [];
+  for (const name of names) {
+    const parsed = name.endsWith('.json') ? parsePuzzleId(name.slice(0, -5)) : null;
+    if (parsed) { entries.push({ ...parsed, id: name.slice(0, -5), name }); continue; }
+    // Anything else dated in the future (e.g. a stray "2026-12-25-copy.json") must not leak either.
+    const dated = /^(\d{4}-\d{2}-\d{2})[-.]/.exec(name);
+    if (todayId && dated && dated[1] > todayId) {
+      log(`warning: removing unreleased file ${name}`);
+      await fsp.rm(path.join(puzzlesDir, name), { recursive: true, force: true });
+    }
+  }
+  for (const { id, date, name } of entries.sort(comparePuzzles)) {
     const file = path.join(puzzlesDir, name);
     if (todayId && date > todayId) {
       await fsp.rm(file);
-      dropped.push(date);
+      dropped.push(id);
       continue;
     }
     try {
       puzzles.push(JSON.parse(await fsp.readFile(file, 'utf8')));
-      kept.push(date);
+      kept.push(id);
     } catch (err) {
       log(`warning: removing unreadable puzzle ${name}: ${err.message}`);
       await fsp.rm(file);
-      dropped.push(date);
+      dropped.push(id);
     }
   }
   const index = buildIndex(puzzles);
