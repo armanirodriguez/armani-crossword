@@ -87,6 +87,7 @@ export const DEFAULT_CONFIG = Object.freeze({
   timeZone: null,
   shareUrl: '',
   shareGrid: true,
+  shareLink: true,
 });
 
 /**
@@ -934,6 +935,10 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       if (body.shareGrid !== undefined) {
         if (typeof body.shareGrid !== 'boolean') throw new HttpError(400, 'shareGrid must be true or false');
         cfg.shareGrid = body.shareGrid;
+      }
+      if (body.shareLink !== undefined) {
+        if (typeof body.shareLink !== 'boolean') throw new HttpError(400, 'shareLink must be true or false');
+        cfg.shareLink = body.shareLink;
       }
       await writeJsonAtomic(paths.config, cfg);
       return cfg;

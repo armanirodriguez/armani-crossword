@@ -3,5 +3,6 @@
   "tagline": "",
   "timeZone": "America/Chicago",
   "shareUrl": "https://armanirodriguez.github.io/armani-crossword/",
-  "shareGrid": false
+  "shareGrid": false,
+  "shareLink": false
 }

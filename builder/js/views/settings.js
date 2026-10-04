@@ -37,6 +37,7 @@ export function mountSettings(container, app) {
   }, `Use my time zone (${localZone.replace(/_/g, ' ')})`);
   const shareUrl = h('input', { type: 'url', id: 's-url', maxLength: 500, placeholder: 'https://you.github.io/crossword/' });
   const shareGrid = h('input', { type: 'checkbox', id: 's-grid' });
+  const shareLink = h('input', { type: 'checkbox', id: 's-link' });
   const sample = h('pre', { class: 'share-sample' });
   const sampleNote = h('p', { class: 'muted small share-sample-note' });
   const saveBtn = h('button', { class: 'btn primary', type: 'submit' }, 'Save settings');
@@ -56,7 +57,9 @@ export function mountSettings(container, app) {
           h('label', { class: 'field-label', for: 's-url' }, 'Share URL'), shareUrl,
           h('span', { class: 'field-help' }, 'Added to the end of the share text. Leave empty to use the page’s own address.')),
         h('label', { class: 'check-field span-2' }, shareGrid,
-          h('span', null, h('strong', null, 'Include the emoji grid in share text'), h('span', { class: 'field-help' }, ' (shows which squares needed help — never the letters)'))))),
+          h('span', null, h('strong', null, 'Include the emoji grid in share text'), h('span', { class: 'field-help' }, ' (shows which squares needed help — never the letters)'))),
+        h('label', { class: 'check-field span-2' }, shareLink,
+          h('span', null, h('strong', null, 'Include the site link in share text'))))),
     h('section', { class: 'card' },
       h('h2', { class: 'card-title' }, 'Share text example'),
       sample,
@@ -74,6 +77,7 @@ export function mountSettings(container, app) {
     tz.value = cfg.timeZone || '';
     shareUrl.value = cfg.shareUrl || '';
     shareGrid.checked = cfg.shareGrid !== false;
+    shareLink.checked = cfg.shareLink !== false;
     renderDynamic();
   }
 
@@ -84,12 +88,13 @@ export function mountSettings(container, app) {
       timeZone: tz.value || null,
       shareUrl: shareUrl.value.trim(),
       shareGrid: shareGrid.checked,
+      shareLink: shareLink.checked,
     };
   }
 
   function dirty() {
     const c = current();
-    return Object.keys(c).some((k) => (c[k] ?? null) !== (app.config?.[k] ?? (k === 'shareGrid' ? true : k === 'timeZone' ? null : '')));
+    return Object.keys(c).some((k) => (c[k] ?? null) !== (app.config?.[k] ?? (k === 'shareGrid' || k === 'shareLink' ? true : k === 'timeZone' ? null : '')));
   }
 
   function renderDynamic() {
@@ -104,14 +109,14 @@ export function mountSettings(container, app) {
     const lines = [`🧩 ${c.siteName || 'Armani Crossword'} #12 · Sat, Oct 3`, '⏱️ 4:32 · 🔍 1 checked'];
     if (c.shareGrid) lines.push('⬛🟩🟩🟩🟩', '🟩🟩🟩🟩🟩', '🟩🟩🟨🟩🟩', '🟩🟩🟩🟩🟩', '🟩🟩🟩🟩⬛');
     // With no share URL the player uses the address friends opened, i.e. the live site, never this dev server.
-    lines.push(c.shareUrl || 'https://your-site-address/');
+    if (c.shareLink) lines.push(c.shareUrl || 'https://your-site-address/');
     sample.textContent = lines.join('\n');
     sampleNote.textContent = c.shareUrl
       ? ''
       : 'The last line will be your site’s real address (e.g. https://you.github.io/crossword/), filled in automatically on the live site.';
     statusEl.textContent = dirty() ? 'Unsaved changes' : '';
   }
-  for (const el of [siteName, tagline, tz, shareUrl, shareGrid]) {
+  for (const el of [siteName, tagline, tz, shareUrl, shareGrid, shareLink]) {
     el.addEventListener('input', renderDynamic);
     el.addEventListener('change', renderDynamic);
   }

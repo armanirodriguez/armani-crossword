@@ -14,6 +14,7 @@ export const DEFAULT_CONFIG = Object.freeze({
   timeZone: null,
   shareUrl: '',
   shareGrid: true,
+  shareLink: true,
 });
 
 export class LoadError extends Error {
@@ -65,6 +66,7 @@ export function sanitizeConfig(raw) {
   if (typeof raw.timeZone === 'string' && raw.timeZone.trim()) c.timeZone = raw.timeZone.trim();
   if (typeof raw.shareUrl === 'string') c.shareUrl = raw.shareUrl.trim();
   if (typeof raw.shareGrid === 'boolean') c.shareGrid = raw.shareGrid;
+  if (typeof raw.shareLink === 'boolean') c.shareLink = raw.shareLink;
   return c;
 }
 

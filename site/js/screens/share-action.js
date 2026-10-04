@@ -23,7 +23,7 @@ export function shareTextFor(ctx, raw, entry, loaded, result) {
     reveals: result.reveals,
     gridRows: shareGridRows(loaded, result.marks, result.everWrong),
     shareGrid: ctx.config.shareGrid !== false,
-    url: shareUrlFor(ctx.config.shareUrl, window.location),
+    url: ctx.config.shareLink === false ? '' : shareUrlFor(ctx.config.shareUrl, window.location),
   });
 }
 
