@@ -1,0 +1,69 @@
+{
+  "format": "crossword/1",
+  "id": "2026-10-04-mini",
+  "date": "2026-10-04",
+  "kind": "mini",
+  "title": "First Armani Mini",
+  "author": "Armani Rodriguez",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    "#....",
+    ".....",
+    "....#",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:4ebnenQKsbULqCVM/daDXXUeCqWrdif1sg==",
+  "checksum": "e61c990b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Highway to Hell rockers"
+      },
+      {
+        "num": 5,
+        "clue": "Christopher Cruz Unironically"
+      },
+      {
+        "num": 6,
+        "clue": "They have bows but no arrows"
+      },
+      {
+        "num": 7,
+        "clue": "Warsaw native"
+      },
+      {
+        "num": 8,
+        "clue": "Nayome unironically"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Cue for a blessing?"
+      },
+      {
+        "num": 2,
+        "clue": "Hot pepper"
+      },
+      {
+        "num": 3,
+        "clue": "Tricked"
+      },
+      {
+        "num": 4,
+        "clue": "Bank certificates, briefly"
+      },
+      {
+        "num": 6,
+        "clue": "Sunscreen rating"
+      }
+    ]
+  },
+  "publishedAt": "2026-10-04T18:39:43.338Z"
+}
