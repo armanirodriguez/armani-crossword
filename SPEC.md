@@ -316,6 +316,15 @@ Draft editor with steps/tabs: **Setup · Theme & Layout · Grid & Fill · Clues 
   curated → dictionary, labelled by source), length counter, status (missing / contains answer / auto-needs-review).
   Enter moves to next clue; selecting a row highlights the entry in a small grid. "Suggest all missing" fills empty
   clues with the top suggestion (source 'auto').
+  **Ask Claude** (added 2026-10-04; ✦ on every row, `builder/js/claude-clues.js` → `scripts/claude-clues.mjs`):
+  `POST /api/claude/clues {answer, entryId?, isTheme?, title?, theme?, otherClues?, avoid?}` → `{straightforward: [3],
+  lateral: [3] /* end in "?" */, via: 'api'|'cli', model, ms}` (409 while one runs for that answer; errors `{error,
+  hint, code}`); `GET /api/claude/status` → `{available, via, model, hint}`. Provider: the Claude API when
+  `ANTHROPIC_API_KEY` + the optional `@anthropic-ai/sdk` are present, else the user's logged-in Claude Code CLI (headless,
+  no tools, temp cwd, argv array, 90 s timeout); `XW_CLAUDE=off|api|cli`, `XW_CLAUDE_MODEL`, `XW_CLAUDE_BIN`. The
+  server drops clues that leak the answer (same letters rule as "contains answer"), repeat, or exceed 90 characters and
+  retries once if a group is short. Panel: thinking + seconds, click a clue to use it (source 'user'), Try again (sends
+  earlier suggestions as `avoid`), Esc/× closes. Site settings has a "Claude" connection card.
 - **Review & Publish**: checklist from `draftToPuzzle` errors/warnings + auto-clue count; live preview of the real
   player in an iframe (and "open in new tab"); Publish (handles 409 → confirm overwrite) → success with link.
 - **Schedule**: published puzzles by date (number, title, size), unpublish, open draft, gaps in the next 14 days.
@@ -442,3 +451,36 @@ display order Mini, Midi, Daily). Everything published before this change is a `
   today keeps the current single intro card. No puzzle today ⇒ the latest date that has puzzles, labelled "Latest".
   Archive groups by date with kind badges. Share text: `🧩 Armani Crossword Mini #1 · Sun, Oct 4` (no kind word for
   daily: `🧩 Armani Crossword #2 · …`). Progress keys stay `xw:v1:progress:<id>`.
+
+## 9. "Claude's way" — a second, Claude-made series — added 2026-10-04
+
+Separate from the user's puzzles (series `main`): every day a scheduled cloud Claude session picks a theme and
+publishes a Mini, Midi and Daily in series `claude`. The user's builder flow is unchanged.
+
+- **Series** (`site/shared/puzzle.js`): `SERIES = ['main', 'claude']`, `SERIES_LABELS = { main: '', claude: "Claude's way" }`,
+  `puzzleSeries(p)` → `p.series || 'main'`. `puzzleId(date, kind = 'daily', series = 'main')`: main ids unchanged;
+  claude ids `claude-YYYY-MM-DD` (daily) / `claude-YYYY-MM-DD-mini` / `claude-YYYY-MM-DD-midi`. `parsePuzzleId(id)` →
+  `{ date, kind, series }`. Draft field `series` (missing ⇒ main); published puzzles carry `series: 'claude'` (omitted for
+  main); `validatePuzzle` requires `id === puzzleId(date, kind, series)`. Progress keys stay `xw:v1:progress:<id>`.
+- **Files**: Claude puzzles live in `site/puzzles/claude/<id>.json` with their own index `site/puzzles/claude/index.json`
+  (same format, `buildIndex`; numbering per kind within the series). The main index never lists Claude puzzles, and
+  the cloud session only ever writes under `site/puzzles/claude/` — so its daily pushes never conflict with the
+  user's publishes. Working drafts go in `.claude-way/` (git-ignored) and are never committed.
+- **Difficulty** (by the puzzle date's weekday, classic newspaper ramp): Mon 1, Tue 2, Wed 3, Thu 4, Fri 5, Sat 6,
+  Sun 4 (≈ Thursday). The Mini is one level gentler (min 1); Midi and Daily use the day's level.
+- **Generator CLI** `scripts/claude-way.mjs` (zero deps, Node ≥ 20): `status`, `build`, `refill` (re-fill around
+  `--avoid` words, keeping the grid), `restore` (list/bring back saved builds in `.claude-way/builds/`), `publish`
+  (quality gates + non-blocking "Editor's checks"), `unpublish`, `check` — see the file header; driven by the playbook
+  `claude/PLAYBOOK.md`, which the daily routine follows.
+- **Daily routine**: a Claude Code cloud routine (Opus 5.5) fires at 20:00 UTC (3 PM CDT / 2 PM CST), clones the repo,
+  follows the playbook for tomorrow (plus today if missing), and pushes only `site/puzzles/claude/` to `main`.
+- **Ask Claude (builder)**: `scripts/claude-clues.mjs` + `GET /api/claude/status` / `POST /api/claude/clues` → 3
+  straightforward + 3 lateral "?" clues, via the local Claude Code login (default) or an API key (optional SDK).
+- **Player**: home shows the user's section exactly as before, then a "Claude's way" section with that day's Claude
+  puzzles as cards (or the latest set, labelled). If the user has no puzzles at all, Claude's section shows alone.
+  `#/puzzle/<id>` loads from the right folder by id prefix. Archive has both series (switchable). Share text uses the
+  series label instead of the site name: `🧩 Claude's way Mini #3 · Mon, Oct 5` / `🧩 Claude's way #3 · Mon, Oct 5`.
+  Day rollover / late-deploy re-checks cover both indexes.
+- **Server / build**: LAN future-hiding and `build-site --released-only` also apply to `site/puzzles/claude/`.
+  "Put it online" first fetches and, if GitHub has newer commits (the daily Claude pushes), rebases onto them
+  (`git pull --rebase --autostash`), aborting cleanly with a friendly error on conflict; status reports `behind`.

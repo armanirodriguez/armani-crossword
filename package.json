@@ -18,5 +18,8 @@
     "@playwright/test": "^1.63.0",
     "wordlist-english": "^1.2.1",
     "wordnet-db": "^3.1.14"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.131.0"
   }
 }

@@ -1319,3 +1319,112 @@ test('a Mini, a Midi and a Daily on one date: published from the builder, all th
     await dropDrafts(request, ...Object.values(ids), 'e2e-three-dup');
   }
 });
+
+// ---------------------------------------------------------------------------- Ask Claude (Clues step)
+// /api/claude/* is stubbed with page.route — no real Claude in e2e. The server side (providers, prompt, checks, the
+// fake-CLI runs) is covered by tests/unit/claude-clues.test.js.
+
+const CLAUDE_REPLY = {
+  straightforward: ['Greek letter after gamma', 'Atlanta-based airline', 'Nile ___ (fertile region)'],
+  lateral: ['Symbol of change?', 'Spread at the mouth?', 'Carrier with lots of baggage?'],
+  via: 'cli', model: 'claude-opus-5-5', ms: 4200,
+};
+
+test('Ask Claude: six clues, pick a lateral one, reopen without asking again, Try again shows an error inline', async ({ page, request }) => {
+  const id = 'e2e-ask-claude';
+  await putDraft(request, draftOf(id, { title: 'River Day' }));
+  try {
+    const problems = watch(page);
+    const posted = [];
+    const replies = [
+      { status: 200, body: CLAUDE_REPLY, delay: 1500 },
+      { status: 503, body: { error: 'Claude Code isn’t logged in.', hint: 'Run claude in a terminal and log in (type /login), then try again.', code: 'not-logged-in' } },
+    ];
+    await page.route('**/api/claude/clues', async (route) => {
+      const req = route.request();
+      posted.push({ body: JSON.parse(req.postData()), type: req.headers()['content-type'] });
+      const next = replies.shift() || { status: 500, body: { error: 'unexpected request' } };
+      if (next.delay) await new Promise((resolve) => setTimeout(resolve, next.delay));
+      await route.fulfill({ status: next.status, contentType: 'application/json', body: JSON.stringify(next.body) });
+    });
+    await page.goto(`/builder/#/draft/${id}/clues`);
+    const row = page.locator('.clue-row[data-id="5A"]');
+    const ask = row.getByRole('button', { name: 'Ask Claude for clues for DELTA' });
+    await expect(ask).toHaveAttribute('title', 'Ask Claude for clues');
+
+    // ---- one click: thinking (with seconds), then three straightforward + three lateral
+    await ask.click();
+    const panel = row.locator('.claude-panel');
+    await expect(panel.locator('.claude-thinking')).toContainText(/Claude is thinking… *\d+ s/);
+    await expect(ask).toHaveAttribute('aria-busy', 'true');
+    await expect(panel.getByRole('button', { name: 'Try again' })).toBeDisabled();
+    await expect(panel.locator('.claude-clue')).toHaveCount(6);
+    await expect(panel.getByRole('group', { name: 'Straightforward' }).locator('.claude-clue-text')).toHaveText(CLAUDE_REPLY.straightforward);
+    await expect(panel.getByRole('group', { name: 'Lateral ?' }).locator('.claude-clue-text')).toHaveText(CLAUDE_REPLY.lateral);
+    await expect(panel.locator('.claude-meta')).toHaveText('via Claude Code · 4 s');
+    await expect(ask).toHaveAttribute('aria-busy', 'false');
+    // What the builder told Claude about the puzzle.
+    expect(posted).toHaveLength(1);
+    expect(posted[0].type).toMatch(/^application\/json/);
+    expect(posted[0].body).toMatchObject({ answer: 'DELTA', entryId: '5A', isTheme: false, title: 'River Day', theme: [], avoid: ['River\'s mouth, often'] });
+    expect(posted[0].body.otherClues).toContain('Sharp intake of breath');
+    expect(posted[0].body.otherClues).not.toContain('River\'s mouth, often');
+
+    // ---- pick a lateral clue: it lands in the input as the user's own clue, and the panel closes
+    await panel.getByRole('button', { name: /Spread at the mouth\?/ }).click();
+    const input = row.locator('.clue-input');
+    await expect(input).toHaveValue('Spread at the mouth?');
+    await expect(input).toBeFocused();
+    await expect(panel).toHaveCount(0);
+    const d = await storeDraft(page);
+    expect(d.clues.DELTA).toBe('Spread at the mouth?');
+    expect(d.clueSources.DELTA).toBe('user');
+    await expect(row).toHaveAttribute('data-status', 'ok');
+    await expect.poll(async () => (await diskDraft(request, id)).clues.DELTA).toBe('Spread at the mouth?');
+
+    // ---- reopening shows the same six without asking again; keyboard: arrows move, Esc closes back to the button
+    await ask.click();
+    await expect(panel.locator('.claude-clue')).toHaveCount(6);
+    expect(posted).toHaveLength(1);
+    await expect(panel.locator('.claude-clue').first()).toBeFocused();
+    await page.keyboard.press('ArrowDown');
+    await expect(panel.locator('.claude-clue').nth(1)).toBeFocused();
+    await page.keyboard.press('Escape');
+    await expect(panel).toHaveCount(0);
+    await expect(ask).toBeFocused();
+    await page.keyboard.press('Enter');
+    await expect(panel.locator('.claude-clue')).toHaveCount(6);
+
+    // ---- Try again sends what was already suggested; a failure is shown inline with its hint
+    await panel.getByRole('button', { name: 'Try again' }).click();
+    const error = panel.locator('.claude-error');
+    await expect(error).toContainText('Claude Code isn’t logged in.');
+    await expect(error).toContainText('type /login');
+    expect(posted).toHaveLength(2);
+    expect(posted[1].body.avoid).toEqual([...CLAUDE_REPLY.straightforward, ...CLAUDE_REPLY.lateral]);
+    await expect(panel.getByRole('button', { name: 'Try again' })).toBeEnabled();
+    await expect(input).toHaveValue('Spread at the mouth?');
+    await panel.getByRole('button', { name: 'Close Claude’s clues' }).click();
+    await expect(panel).toHaveCount(0);
+    expect(problems).toEqual([]);
+  } finally {
+    await dropDrafts(request, id);
+  }
+});
+
+test('Site settings shows whether Claude is connected, and how to set it up when it is not', async ({ page }) => {
+  const problems = watch(page);
+  const status = { available: true, via: 'cli', model: 'claude-opus-5-5', hint: 'Runs Claude Code on this computer with your login, so clues count toward your Claude plan’s usage.' };
+  await page.route('**/api/claude/status', (route) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(status) }));
+  await page.goto('/builder/#/settings');
+  const card = page.locator('.claude-card');
+  await expect(card).toContainText('Connected via your Claude Code login');
+  await expect(card.locator('.pill')).toHaveText('Connected');
+  await expect(card).toContainText('claude-opus-5-5');
+  Object.assign(status, { available: false, via: null, error: 'Claude isn’t connected on this computer.', code: 'unavailable', hint: 'Install Claude Code…' });
+  await card.getByRole('button', { name: 'Check again' }).click();
+  await expect(card).toContainText('Not available — how to set up');
+  await expect(card.locator('.claude-setup li')).toHaveCount(2);
+  await expect(card).toContainText('ANTHROPIC_API_KEY');
+  expect(problems).toEqual([]);
+});

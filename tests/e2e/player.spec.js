@@ -3,10 +3,11 @@
 // The fake clock makes "today" 2026-10-02 (the sample "Warm-Up" puzzle) and lets every test control exactly how
 // much solving time passes, so times in the UI and in the share text are asserted exactly.
 
-import { draftToPuzzle } from '../../site/shared/puzzle.js';
+import { buildIndex, draftToPuzzle } from '../../site/shared/puzzle.js';
 import { FIXTURES, SITE_CONFIG, TODAY, fixturePuzzle, solutionLetters } from './support/root.js';
 import { expect, test } from './support/player.js';
 import { MULTI_DATE, multiSolution, serveMultiKind } from './support/multi.js';
+import { claudeSet, claudeSolution, serveClaude } from './support/claude.js';
 
 const SOLUTION = solutionLetters(TODAY); // GASPDELTAENTERBREAKTERM
 const PAST = '2026-09-28'; // #1 "Tiny Three" (3×3)
@@ -900,5 +901,237 @@ test.describe('several puzzles a day (Mini / Midi / Daily)', () => {
     await p.tick(2 * 60_000);
     await expect(page.locator('.day-header .eyebrow')).toHaveText('Today’s puzzles');
     await expect(cards(page)).toHaveCount(3);
+  });
+});
+
+// ---------------------------------------------------------------------------------------------------------------
+// SPEC §9: "Claude's way", a second series served from puzzles/claude/ (fixtures in support/claude.js; TODAY, Oct 2,
+// has a Mini, Midi and Daily #2). Without serveClaude() the e2e root has no Claude puzzles at all.
+
+test.describe('Claude’s way (a second series)', () => {
+  const section = (page) => page.locator('.claude-way');
+  const claudeCards = (page) => section(page).locator('.day-card');
+  const noSideways = (page) => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth);
+
+  test('home: the user’s puzzle as before, then Claude’s Mini, Midi and Daily; play, share and come back', async ({ page, baseURL, player: p }) => {
+    await serveClaude(page);
+    await p.open();
+    // The user's section is first and unchanged.
+    await expect(p.intro).toBeVisible();
+    await expect(page.locator('.intro-card .eyebrow')).toHaveText('Today’s puzzle · #2');
+    await expect(page.locator('.intro-title')).toHaveText('Warm-Up');
+    // Then Claude's.
+    await expect(section(page).locator('.cw-title')).toHaveText('Claude’s way');
+    await expect(section(page).locator('.cw-sub')).toHaveText('A fresh theme every day, made by Claude');
+    await expect(section(page).locator('.cw-when')).toHaveText('Today · Friday, October 2');
+    await expect(claudeCards(page).locator('.kind-badge')).toHaveText(['Mini', 'Midi', 'Daily']);
+    await expect(claudeCards(page).locator('.day-card-num')).toHaveText(['#2', '#2', '#2']);
+    await expect(claudeCards(page).locator('.day-card-title')).toHaveText(['Spa Day', 'Rainy Day', 'Day Off']);
+    await expect(claudeCards(page).locator('.day-card-byline')).toHaveText(['by Claude', 'by Claude', 'by Claude']);
+    await expect(claudeCards(page).locator('.day-card-meta')).toHaveText(['3×3', '3×3', '5×5']);
+    await expect(claudeCards(page).locator('.day-card-status')).toHaveText(['New', 'New', 'New']);
+    const intro = await p.intro.boundingBox();
+    expect((await section(page).boundingBox()).y).toBeGreaterThan(intro.y + intro.height);
+    expect(await noSideways(page)).toBe(true);
+
+    // Play on Claude's Mini goes straight to its grid; the header names the series.
+    await p.freezeClock();
+    await p.press(claudeCards(page).nth(0).getByRole('button', { name: 'Play — Claude’s way Mini: Spa Day' }));
+    await expect(p.grid).toBeVisible();
+    expect(page.url()).toContain('#/puzzle/claude-2026-10-02-mini');
+    await expect(page.locator('.play-title-main')).toHaveText('Spa Day');
+    await expect(page.locator('.sub-num')).toHaveText('Claude’s way · Mini #2');
+    await expect(section(page)).toHaveCount(0);
+    await p.tick(17_000);
+    await p.type(claudeSolution('claude-2026-10-02-mini'));
+    await p.tick(1_000);
+    await expect(p.solvedModal.locator('.solved-puzzle')).toHaveText('Claude’s way · Mini #2 · Spa Day · Fri, Oct 2');
+    await p.press(p.solvedModal.getByRole('button', { name: 'Share' }));
+    expect((await p.lastShare()).text).toBe([
+      "🧩 Claude's way Mini #2 · Fri, Oct 2", '⏱️ 0:17 · ✨ no hints', '🟩🟩🟩', '🟩🟩🟩', '🟩🟩🟩', `${baseURL}/site/`,
+    ].join('\n'));
+    await p.press(p.solvedModal.getByRole('button', { name: 'View puzzle' }));
+    await p.settle();
+
+    // Back: the home page again, with Claude's Mini solved; progress is kept under the Claude id.
+    await p.press(page.locator('.play-header .back-btn'));
+    await expect(p.intro).toBeVisible();
+    expect(page.url()).not.toContain('#/puzzle/');
+    await expect(claudeCards(page).locator('.day-card-status')).toHaveText(['✓ Solved 0:17', 'New', 'New']);
+    await expect(section(page).locator('.cw-progress')).toHaveText('1 of 3 solved');
+    expect(await page.evaluate(() => Object.keys(localStorage))).toEqual(['xw:v1:progress:claude-2026-10-02-mini']);
+
+    // The user's own puzzle still plays from its card; the section comes back with the card.
+    await p.play();
+    await expect(page.locator('.sub-num')).toHaveText('#2');
+    await expect(section(page)).toHaveCount(0);
+    await p.press(page.locator('.play-header .back-btn'));
+    await expect(p.intro).toBeVisible();
+    await expect(claudeCards(page)).toHaveCount(3);
+  });
+
+  test('a Claude puzzle link: the series on its card; the Daily’s share text has no kind word', async ({ page, baseURL, player: p }) => {
+    await serveClaude(page);
+    await p.open('#/puzzle/claude-2026-10-01');
+    await expect(p.intro).toHaveClass(/series-claude/);
+    await expect(page.locator('.eyebrow')).toHaveText('Claude’s way · Daily #1');
+    await expect(page.locator('.intro-title')).toHaveText('Thursday Thoughts');
+    await expect(page.locator('.intro-byline')).toHaveText('by Claude');
+    await expect(page.locator('.intro-meta')).toHaveText('Thursday, October 1, 2026 · 5×5');
+    await expect(page.locator('.intro-siblings .kind-chip')).toHaveText(['MiniNight Shift', 'MidiPurr-fect']);
+    await expect(page.locator('.intro-siblings .kind-chip').nth(0)).toHaveAttribute('href', '#/puzzle/claude-2026-10-01-mini');
+
+    await p.freezeClock();
+    await p.play();
+    await expect(page.locator('.sub-num')).toHaveText('Claude’s way · Daily #1');
+    await expect(page.locator('.play-header .archive-link')).toHaveAttribute('href', '#/archive/claude');
+    await p.tick(42_000);
+    await p.type(SOLUTION);
+    await p.tick(1_000);
+    await expect(p.solvedModal.locator('.solved-time')).toHaveText('0:42');
+    await p.press(p.solvedModal.getByRole('button', { name: 'Share' }));
+    expect((await p.lastShare()).text).toBe(["🧩 Claude's way #1 · Thu, Oct 1", '⏱️ 0:42 · ✨ no hints', ...CLEAN_ROWS, `${baseURL}/site/`].join('\n'));
+    expect(await p.progress('claude-2026-10-01')).toMatchObject({ solved: true, elapsedMs: 42_000 });
+    expect(await p.progress('2026-10-01')).toBeNull();
+  });
+
+  test('Claude ids that are locked, not published or malformed', async ({ page, player: p }) => {
+    await serveClaude(page, { hidden: ['claude-2026-10-02-midi'] });
+    await p.open('#/puzzle/claude-2026-10-05-mini');
+    await expect(page.locator('.message-title')).toHaveText('Unlocks on Monday, October 5, 2026');
+    await expect(page.locator('.message-actions').getByRole('link', { name: 'Archive' })).toHaveAttribute('href', '#/archive/claude');
+    await expect(p.playButton).toHaveCount(0);
+
+    await page.goto('/site/#/puzzle/claude-2026-10-02-midi');
+    await expect(page.locator('.message-title')).toHaveText('No puzzle that day');
+    await expect(page.locator('.message-text')).toHaveText('There’s no Claude’s way Midi for Friday, October 2, 2026.');
+    await page.goto('/site/#/puzzle/claude-2026-12-25');
+    await expect(page.locator('.message-title')).toHaveText('No puzzle that day');
+
+    await page.goto('/site/#/puzzle/claude-2026-10-02-maxi');
+    await expect(p.intro).toBeVisible();
+    await expect(page.locator('.intro-title')).toHaveText('Warm-Up');
+  });
+
+  test('archive: a switch between the user’s puzzles and Claude’s, each with its own URL', async ({ page, player: p }) => {
+    await serveClaude(page);
+    await p.open('#/archive');
+    const tabs = page.locator('.series-switch .series-tab');
+    await expect(tabs).toHaveText(['Crossword Club', 'Claude’s way']);
+    await expect(tabs.nth(0)).toHaveAttribute('aria-current', 'page');
+    // The user's archive as before.
+    await expect(page.locator('.archive-item')).toHaveCount(2);
+    await expect(page.locator('.archive-sub')).toHaveText('2 puzzles · 0 solved in this browser');
+
+    await p.press(tabs.nth(1));
+    await expect(page).toHaveURL(/#\/archive\/claude$/);
+    await expect(tabs.nth(1)).toHaveAttribute('aria-current', 'page');
+    await expect(page.locator('.archive-sub')).toHaveText('6 puzzles · 0 solved in this browser'); // Oct 5's is not out
+    const days = page.locator('.archive-day');
+    await expect(days.locator('.archive-day-heading')).toHaveText(['Friday, October 2, 2026Today', 'Thursday, October 1, 2026']);
+    await expect(days.nth(0).locator('.archive-title-text')).toHaveText(['Spa Day', 'Rainy Day', 'Day Off']);
+    await expect(days.nth(1).locator('.archive-num')).toHaveText(['#1', '#1', '#1']);
+    expect(await noSideways(page)).toBe(true);
+
+    await p.press(days.nth(1).locator('.archive-item').nth(2));
+    await expect(page.locator('.intro-title')).toHaveText('Thursday Thoughts');
+    expect(page.url()).toContain('#/puzzle/claude-2026-10-01');
+    await page.goBack();
+    await expect(tabs.nth(1)).toHaveAttribute('aria-current', 'page');
+    await page.goBack();
+    await expect(tabs.nth(0)).toHaveAttribute('aria-current', 'page');
+    await expect(page.locator('.archive-item')).toHaveCount(2);
+  });
+
+  test('the latest Claude set until today’s is out; a late deploy and midnight show up on an open page', async ({ page, player: p }) => {
+    const state = await serveClaude(page, { hidden: claudeSet('2026-10-02') });
+    await p.open('', { at: new Date('2026-10-02T00:30:00Z') });
+    await expect(page.locator('.intro-title')).toHaveText('Warm-Up');
+    await expect(section(page).locator('.cw-when')).toHaveText('Latest · Thursday, October 1');
+    await expect(claudeCards(page).locator('.day-card-title')).toHaveText(['Night Shift', 'Purr-fect', 'Thursday Thoughts']);
+
+    state.hidden.clear();
+    await p.tick(6 * 60_000); // the page re-checks both indexes every few minutes while today's puzzles are missing
+    await expect(section(page).locator('.cw-when')).toHaveText('Today · Friday, October 2');
+    await expect(claudeCards(page).locator('.day-card-title')).toHaveText(['Spa Day', 'Rainy Day', 'Day Off']);
+
+    // Midnight into Oct 5: the user's scheduled puzzle and Claude's Monday Mini both open.
+    await page.clock.setSystemTime(new Date('2026-10-04T23:59:30Z'));
+    await p.tick(2 * 60_000);
+    await expect(page.locator('.intro-card .eyebrow')).toHaveText('Today’s puzzle · #3');
+    await expect(section(page).locator('.cw-when')).toHaveText('Today · Monday, October 5');
+    await expect(claudeCards(page).locator('.day-card-title')).toHaveText(['Monday Mini']);
+  });
+
+  test('Claude alone when the user has nothing out; a missing or damaged Claude index never breaks the home page', async ({ page, player: p }) => {
+    await serveClaude(page);
+    await page.route('**/site/puzzles/index.json', (route) => route.fulfill({ json: buildIndex([]) }));
+    await p.open();
+    await expect(page.locator('.claude-way.is-solo h1')).toHaveText('Claude’s way');
+    await expect(claudeCards(page)).toHaveCount(3);
+    await expect(p.intro).toHaveCount(0);
+    await expect(page.locator('.message-title')).toHaveCount(0);
+    await expect(page.locator('.cw-notice')).toHaveCount(0);
+
+    // Only a scheduled puzzle of the user's: Claude's section, and when theirs unlocks.
+    await page.unroute('**/site/puzzles/index.json');
+    await page.route('**/site/puzzles/index.json', (route) => route.fulfill({ json: buildIndex([fixturePuzzle('2026-10-05')]) }));
+    await page.reload();
+    await expect(page.locator('.cw-notice')).toHaveText('The first Crossword Club puzzle unlocks on Monday, October 5, 2026.');
+    await expect(claudeCards(page)).toHaveCount(3);
+
+    // A damaged Claude index: the user's home page as before, without the section — never an error page.
+    await page.unrouteAll({ behavior: 'ignoreErrors' });
+    await serveClaude(page, { index: { body: '{"format":' } });
+    await page.reload();
+    await expect(page.locator('.intro-title')).toHaveText('Warm-Up');
+    await expect(section(page)).toHaveCount(0);
+
+    // No Claude puzzles at all (its index 404s, as before the first run): the same, and no archive switch.
+    await page.unrouteAll({ behavior: 'ignoreErrors' });
+    await page.reload();
+    await expect(page.locator('.intro-title')).toHaveText('Warm-Up');
+    await expect(section(page)).toHaveCount(0);
+    await page.goto('/site/#/archive');
+    await expect(page.locator('.archive-item')).toHaveCount(2);
+    await expect(page.locator('.series-switch')).toHaveCount(0);
+    await page.goto('/site/#/archive/claude');
+    await expect(page.locator('.archive-empty')).toHaveText('No Claude’s way puzzles yet — the first set is on its way.');
+    await expect(page.locator('.series-switch')).toBeVisible();
+  });
+
+  test('under the user’s several puzzles of a day; progress from another tab shows on Claude’s cards', async ({ page, player: p }) => {
+    await serveMultiKind(page);
+    await serveClaude(page);
+    await p.open('', { date: MULTI_DATE });
+    await expect(page.locator('.day-header .eyebrow')).toHaveText('Today’s puzzles');
+    await expect(page.locator('.day .day-card')).toHaveCount(3);
+    await expect(section(page).locator('.cw-when')).toHaveText('Latest · Friday, October 2');
+    await expect(claudeCards(page).locator('.day-card-title')).toHaveText(['Spa Day', 'Rainy Day', 'Day Off']);
+
+    const b = await p.newTab();
+    await serveClaude(b.page);
+    await b.open('#/puzzle/claude-2026-10-02-midi');
+    await b.play();
+    await b.type(claudeSolution('claude-2026-10-02-midi'));
+    await expect(b.solvedModal).toBeVisible();
+    await page.bringToFront();
+    await expect(claudeCards(page).nth(1).locator('.day-card-status')).toHaveText(/^✓ Solved/);
+    await expect(page.locator('.day .day-card-status')).toHaveText(['New', 'New', 'New']);
+    expect(b.errors).toEqual([]);
+  });
+
+  test('320 px phone: Claude’s section and the archive switch fit the screen', async ({ page, player: p }) => {
+    await page.setViewportSize({ width: 320, height: 568 });
+    await serveClaude(page);
+    await p.open();
+    await expect(claudeCards(page)).toHaveCount(3);
+    expect(await noSideways(page)).toBe(true);
+    expect((await section(page).locator('.cw-when').boundingBox()).height).toBeLessThan(24); // one line
+    await page.goto('/site/#/archive/claude');
+    await expect(page.locator('.series-switch')).toBeVisible();
+    const sw = await page.locator('.series-switch').boundingBox();
+    expect(sw.x + sw.width).toBeLessThanOrEqual(320 - 15);
+    expect(await noSideways(page)).toBe(true);
   });
 });

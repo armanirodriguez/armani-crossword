@@ -5,7 +5,8 @@ import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { formatDate, formatDuration, puzzleKind } from '../../shared/puzzle.js';
 import { entryId, entryKind, kindLabel, sizeLabel } from '../daily.js';
-import { siteHeader } from './common.js';
+import { CLAUDE, seriesOf } from '../series.js';
+import { claudeMark, siteHeader } from './common.js';
 
 /**
  * Small preview of the block pattern; filled squares are tinted, letters never shown.
@@ -68,6 +69,8 @@ export function playState(loaded, progress) {
  */
 export function buildIntro({ ctx, raw, loaded, entry, label, progress, onPlay, onShare, notice = '', kindInLabel = false, siblings = [] }) {
   const kind = puzzleKind(raw);
+  // Claude's way (SPEC §9): the label is the series ("Claude’s way · Mini #3"), the kind is always named.
+  const claude = seriesOf(raw) === CLAUDE;
   const state = playState(loaded, progress);
   const { playLabel, playIcon } = state;
   let status = null;
@@ -83,9 +86,10 @@ export function buildIntro({ ctx, raw, loaded, entry, label, progress, onPlay, o
     : null;
 
   // "#2" for a daily; "Mini #1" for a mini (just "#1" when the label already says "Today’s Mini").
-  const kindWord = kind !== 'daily' && !kindInLabel ? kindLabel(kind) : '';
+  const kindWord = (kind !== 'daily' || claude) && !kindInLabel ? kindLabel(kind) : '';
   const number = [kindWord, entry?.number ? `#${entry.number}` : ''].filter(Boolean).join(' ') || null;
-  const meta = [formatDate(raw.date), sizeLabel(raw.width, raw.height, kind)].filter(Boolean);
+  // (The eyebrow names a Claude puzzle's kind, so its size stands alone: a 5×5 Claude Daily is not "5×5 Mini".)
+  const meta = [formatDate(raw.date), claude ? `${raw.width}×${raw.height}` : sizeLabel(raw.width, raw.height, kind)].filter(Boolean);
   const others = siblings.length
     ? h('nav', { class: 'intro-siblings', 'aria-label': 'More puzzles this day' },
       h('span', { class: 'intro-siblings-label' }, 'Also this day'),
@@ -97,9 +101,9 @@ export function buildIntro({ ctx, raw, loaded, entry, label, progress, onPlay, o
   return h('div', { class: 'screen screen-intro' },
     siteHeader(ctx, ctx.route?.name === 'today' ? 'today' : null),
     h('main', { class: 'page page-center', id: 'main' },
-      h('article', { class: ['intro-card', `kind-${kind}`], dataset: { kind } },
+      h('article', { class: ['intro-card', `kind-${kind}`, claude && 'series-claude'], dataset: { kind, series: claude ? CLAUDE : null } },
         notice && h('p', { class: 'intro-notice' }, notice),
-        h('p', { class: 'eyebrow' }, [label, number].filter(Boolean).join(' · ')),
+        h('p', { class: 'eyebrow' }, claude && claudeMark(14), [label, number].filter(Boolean).join(' · ')),
         h('h1', { class: 'intro-title' }, raw.title || 'Untitled'),
         raw.author && h('p', { class: 'intro-byline' }, `by ${raw.author}`),
         h('p', { class: 'intro-meta' }, meta.join('  ·  ')),

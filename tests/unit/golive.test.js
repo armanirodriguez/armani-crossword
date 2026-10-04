@@ -14,7 +14,7 @@ import {
   createServer, classifyGitFailure, githubPagesUrl, goLiveCommitMessage, parseNameStatusZ, parseStatusZ, redactSecrets,
   runGit, GO_LIVE_PATHS,
 } from '../../scripts/server.mjs';
-import { buildIndex } from '../../site/shared/puzzle.js';
+import { buildIndex, draftToPuzzle } from '../../site/shared/puzzle.js';
 
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 
@@ -123,6 +123,26 @@ async function serve(root) {
 const byPath = (list) => [...list].sort((a, b) => a.path.localeCompare(b.path));
 const draftFor = (date) => ({ ...structuredClone(sampleDraft), id: `d-${date}`, date, title: `Puzzle ${date}` });
 
+/** A second clone of `bare` (another computer, or the daily cloud session) with its own identity. */
+function cloneOf(base, bare, name) {
+  const dir = path.join(base, name);
+  git(base, 'clone', '-q', bare, dir);
+  git(dir, 'config', 'user.name', name);
+  git(dir, 'config', 'user.email', `${name}@example.test`);
+  git(dir, 'config', 'commit.gpgsign', 'false');
+  return dir;
+}
+
+/** Write a Claude's way Mini, Midi and Daily for `date` (+ their index) into `dir`/site/puzzles/claude/; returns the ids. */
+async function writeClaudePuzzles(dir, date) {
+  const folder = path.join(dir, 'site', 'puzzles', 'claude');
+  await fsp.mkdir(folder, { recursive: true });
+  const puzzles = ['mini', 'midi', 'daily'].map((kind) => draftToPuzzle({ ...structuredClone(sampleDraft), date, kind, series: 'claude' }).puzzle);
+  for (const p of puzzles) await fsp.writeFile(path.join(folder, `${p.id}.json`), `${JSON.stringify(p, null, 2)}\n`);
+  await fsp.writeFile(path.join(folder, 'index.json'), `${JSON.stringify(buildIndex(puzzles), null, 2)}\n`);
+  return puzzles.map((p) => p.id);
+}
+
 // ---------------------------------------------------------------------------- helpers
 
 test('commit messages describe what changed', () => {
@@ -155,6 +175,19 @@ test('§8 commit messages name puzzle ids, listed by date then kind (Mini, Midi,
   assert.equal(goLiveCommitMessage([p('2026-10-05-daily', 'added'), index]), 'Update published puzzles');
 });
 
+test('§9 commit messages name Claude puzzles by id; files outside their series folder are not puzzles', () => {
+  const index = { path: 'site/puzzles/claude/index.json', change: 'added' };
+  const c = (id, change = 'added') => ({ path: `site/puzzles/claude/${id}.json`, change });
+  assert.equal(goLiveCommitMessage([c('claude-2026-10-05'), c('claude-2026-10-05-mini'), index]), 'Publish puzzles claude-2026-10-05-mini, claude-2026-10-05');
+  assert.equal(
+    goLiveCommitMessage([c('claude-2026-10-05-midi'), { path: 'site/puzzles/2026-10-05.json', change: 'added' }, { path: 'site/puzzles/index.json', change: 'modified' }, index]),
+    'Publish puzzles 2026-10-05, claude-2026-10-05-midi',
+  );
+  assert.equal(goLiveCommitMessage([c('claude-2026-10-04', 'deleted'), index]), 'Unpublish claude-2026-10-04');
+  // A main id in the claude folder, a Claude id in the main folder, an unknown folder: not named.
+  assert.equal(goLiveCommitMessage([c('2026-10-05'), { path: 'site/puzzles/claude-2026-10-05.json', change: 'added' }, { path: 'site/puzzles/x/2026-10-05.json', change: 'added' }]), 'Update published puzzles');
+});
+
 test('git output parsing, secret redaction, error classification, Pages address', () => {
   assert.deepEqual(parseStatusZ('?? site/puzzles/2026-10-05.json\0 M site/puzzles/index.json\0D  site/puzzles/2026-10-04.json\0'), [
     { path: 'site/puzzles/2026-10-05.json', change: 'added' },
@@ -178,6 +211,13 @@ test('git output parsing, secret redaction, error classification, Pages address'
   assert.equal(classifyGitFailure({ timedOut: true }), 'timeout');
   assert.equal(classifyGitFailure({ stderr: '*** Please tell me who you are.' }, 'commit'), 'identity');
   assert.equal(classifyGitFailure({ stderr: 'something odd' }, 'commit'), 'commit-failed');
+  assert.equal(classifyGitFailure({ stderr: 'something odd' }, 'fetch'), 'fetch-failed');
+  assert.equal(classifyGitFailure({ stderr: 'something odd' }, 'rebase'), 'conflict');
+  assert.equal(classifyGitFailure({ stdout: 'CONFLICT (content): Merge conflict in site/puzzles/index.json', stderr: 'error: could not apply 1a2b3c4... Publish' }, 'rebase'), 'conflict');
+  assert.equal(classifyGitFailure({ stderr: 'error: The following untracked working tree files would be overwritten by checkout:' }, 'rebase'), 'conflict');
+  assert.equal(classifyGitFailure({ stderr: 'It seems that there is already a rebase-merge directory, and\nI wonder if you are in the middle of another rebase.' }, 'rebase'), 'in-progress');
+  assert.equal(classifyGitFailure({ stderr: 'error: Committing is not possible because you have unmerged files.' }, 'commit'), 'in-progress');
+  assert.equal(classifyGitFailure({ stderr: 'fatal: unable to access …: Could not resolve host: github.com' }, 'fetch'), 'network');
   assert.equal(githubPagesUrl('https://github.com/armani/armani-crossword.git'), 'https://armani.github.io/armani-crossword/');
   assert.equal(githubPagesUrl('git@github.com:Armani/armani.github.io.git'), 'https://armani.github.io/');
   assert.equal(githubPagesUrl('/tmp/origin.git'), null);
@@ -361,13 +401,10 @@ gitTest('no "origin" remote: a friendly error and nothing committed; once connec
   assert.equal(st.ahead, 0);
 });
 
-gitTest('GitHub has commits this computer lacks: the push is refused with a hint, the commit is kept', async () => {
+gitTest('GitHub has commits this computer lacks: go-live fetches, rebases and pushes both (SPEC §9)', async () => {
   const { base, work, bare } = await makeProject();
   // Someone else pushes first.
-  const other = path.join(base, 'other');
-  git(base, 'clone', '-q', bare, other);
-  git(other, 'config', 'user.name', 'Someone Else');
-  git(other, 'config', 'user.email', 'else@example.test');
+  const other = cloneOf(base, bare, 'other');
   await fsp.writeFile(path.join(other, 'README.md'), '# Edited on GitHub\n');
   git(other, 'commit', '-q', '-am', 'Edit on GitHub');
   git(other, 'push', '-q');
@@ -375,23 +412,190 @@ gitTest('GitHub has commits this computer lacks: the push is refused with a hint
 
   const api = await serve(work);
   assert.equal((await api('POST', '/api/publish', { draft: draftFor('2026-10-07') })).status, 200);
+  // Status never touches the network: it does not know about GitHub's commit yet.
+  assert.equal((await api('GET', '/api/go-live')).json.behind, 0);
+  const res = await api('POST', '/api/go-live', {});
+  assert.equal(res.status, 200, res.text);
+  assert.deepEqual(
+    { ok: res.json.ok, committed: res.json.committed, pushed: res.json.pushed, pulled: res.json.pulled, upToDate: res.json.upToDate },
+    { ok: true, committed: true, pushed: true, pulled: 1, upToDate: false },
+  );
+  assert.equal(res.json.commit.message, 'Publish puzzle 2026-10-07');
+  // GitHub has both: ours on top of theirs (no merge commit), and the reported sha is the one on GitHub.
+  assert.equal(bareGit(bare, 'rev-parse', 'main'), res.json.commit.sha);
+  assert.equal(bareGit(bare, 'rev-parse', 'main~1'), theirs);
+  assert.equal(bareGit(bare, 'log', '-1', '--format=%s', 'main'), 'Publish puzzle 2026-10-07');
+  assert.equal(git(work, 'rev-parse', 'HEAD'), res.json.commit.sha);
+  assert.equal(await fsp.readFile(path.join(work, 'README.md'), 'utf8'), '# Edited on GitHub\n');
+  const st = (await api('GET', '/api/go-live')).json;
+  assert.deepEqual({ pending: st.pending, ahead: st.ahead, behind: st.behind, problem: st.problem }, { pending: [], ahead: 0, behind: 0, problem: null });
+});
+
+gitTest('the daily Claude push + a main publish here: rebased and pushed cleanly, local edits kept (SPEC §9)', async () => {
+  const { base, work, bare } = await makeProject();
+  // The cloud session: commits ONLY site/puzzles/claude/ and pushes to main.
+  const cloud = cloneOf(base, bare, 'cloud');
+  const claudeIds = await writeClaudePuzzles(cloud, '2026-10-05');
+  git(cloud, 'add', '--', 'site/puzzles/claude');
+  git(cloud, 'commit', '-q', '-m', "Claude's way 2026-10-05");
+  git(cloud, 'push', '-q');
+  const cloudSha = git(cloud, 'rev-parse', 'HEAD');
+
+  // The user, meanwhile: their own edit to a tracked file, a staged file of their own, and a publish.
+  await fsp.writeFile(path.join(work, 'README.md'), '# My notes (not committed)\n');
+  await fsp.writeFile(path.join(work, 'notes.txt'), 'staged by the user for their own commit\n');
+  git(work, 'add', 'notes.txt');
+  const api = await serve(work);
+  assert.equal((await api('POST', '/api/publish', { draft: draftFor('2026-10-05') })).status, 200);
+  const mainIndexBefore = await fsp.readFile(path.join(work, 'site', 'puzzles', 'index.json'), 'utf8');
+
+  // After any fetch (e.g. the user's own), status says GitHub has 1 commit this computer lacks.
+  git(work, 'fetch', '-q');
+  let st = (await api('GET', '/api/go-live')).json;
+  assert.equal(st.behind, 1);
+  assert.equal(st.ahead, 0);
+  assert.equal(st.ready, true);
+  assert.deepEqual(byPath(st.pending).map((c) => c.path), ['site/puzzles/2026-10-05.json', 'site/puzzles/index.json']);
+
+  const res = await api('POST', '/api/go-live', {});
+  assert.equal(res.status, 200, res.text);
+  assert.equal(res.json.pulled, 1);
+  assert.equal(res.json.commit.message, 'Publish puzzle 2026-10-05');
+  assert.deepEqual(byPath(res.json.commit.files).map((c) => c.path), ['site/puzzles/2026-10-05.json', 'site/puzzles/index.json']);
+  // GitHub: the Claude commit, then ours on top; both series' files are there; ours touched only main files.
+  assert.equal(bareGit(bare, 'rev-parse', 'main~1'), cloudSha);
+  assert.equal(bareGit(bare, 'rev-parse', 'main'), res.json.commit.sha);
+  const tree = bareGit(bare, 'ls-tree', '-r', '--name-only', 'main').split('\n');
+  for (const id of claudeIds) assert.ok(tree.includes(`site/puzzles/claude/${id}.json`), id);
+  assert.ok(tree.includes('site/puzzles/claude/index.json'));
+  assert.ok(tree.includes('site/puzzles/2026-10-05.json'));
+  assert.ok(!tree.includes('notes.txt'));
+  assert.deepEqual(bareGit(bare, 'diff', '--name-only', 'main~1', 'main').split('\n').sort(), ['site/puzzles/2026-10-05.json', 'site/puzzles/index.json']);
+  // The main index is the user's own (Claude never touches it).
+  assert.equal(bareGit(bare, 'show', 'main:site/puzzles/index.json'), mainIndexBefore.trim());
+
+  // This computer: has Claude's puzzles now; the user's edit and staged file are exactly as they were.
+  for (const id of claudeIds) await fsp.access(path.join(work, 'site', 'puzzles', 'claude', `${id}.json`));
+  assert.equal(await fsp.readFile(path.join(work, 'README.md'), 'utf8'), '# My notes (not committed)\n');
+  assert.equal(git(work, 'diff', '--cached', '--name-only'), 'notes.txt');
+  assert.equal(git(work, 'diff', '--name-only'), 'README.md');
+  assert.equal(git(work, 'stash', 'list'), '');
+  st = (await api('GET', '/api/go-live')).json;
+  assert.deepEqual({ pending: st.pending, ahead: st.ahead, behind: st.behind }, { pending: [], ahead: 0, behind: 0 });
+});
+
+gitTest('GitHub moves again during the push: caught up once more, then pushed', async () => {
+  const { base, work, bare } = await makeProject();
+  const cloud = cloneOf(base, bare, 'cloud');
+  await writeClaudePuzzles(cloud, '2026-10-06');
+  git(cloud, 'add', '-A');
+  git(cloud, 'commit', '-q', '-m', "Claude's way 2026-10-06");
+  // The cloud session pushes exactly while our first push is under way (from inside our pre-push hook, once).
+  const marker = path.join(base, 'raced');
+  const hook = path.join(work, '.git', 'hooks', 'pre-push');
+  await fsp.writeFile(hook, [
+    '#!/bin/sh',
+    `if [ ! -f '${marker}' ]; then`,
+    `  touch '${marker}'`,
+    '  unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE GIT_PREFIX',
+    `  git -C '${cloud}' push -q origin main >/dev/null 2>&1`,
+    'fi',
+    'exit 0',
+    '',
+  ].join('\n'), { mode: 0o755 });
+  const api = await serve(work);
+  assert.equal((await api('POST', '/api/publish', { draft: draftFor('2026-10-06') })).status, 200);
+  const res = await api('POST', '/api/go-live', {});
+  assert.equal(res.status, 200, res.text);
+  await fsp.access(marker); // the race really happened
+  assert.equal(res.json.pulled, 1);
+  assert.equal(bareGit(bare, 'log', '-1', '--format=%s', 'main~1'), "Claude's way 2026-10-06");
+  assert.equal(bareGit(bare, 'rev-parse', 'main'), res.json.commit.sha);
+  assert.equal(git(work, 'rev-parse', 'HEAD'), res.json.commit.sha);
+});
+
+gitTest('a clash is aborted cleanly: code "conflict", the local commit and files are kept, GitHub unchanged', async () => {
+  const { base, work, bare } = await makeProject();
+  // Another computer publishes a different puzzle (its index.json differs from ours line for line).
+  const other = cloneOf(base, bare, 'other');
+  const otherApi = await serve(other);
+  assert.equal((await otherApi('POST', '/api/publish', { draft: draftFor('2026-10-08') })).status, 200);
+  git(other, 'add', '-A', '--', 'site/puzzles');
+  git(other, 'commit', '-q', '-m', 'Publish puzzle 2026-10-08');
+  git(other, 'push', '-q');
+  const theirs = git(other, 'rev-parse', 'HEAD');
+
+  const api = await serve(work);
+  assert.equal((await api('POST', '/api/publish', { draft: draftFor('2026-10-09') })).status, 200);
+  const ourIndex = await fsp.readFile(path.join(work, 'site', 'puzzles', 'index.json'), 'utf8');
   const res = await api('POST', '/api/go-live', {});
   assert.equal(res.status, 409, res.text);
-  assert.equal(res.json.code, 'rejected');
+  assert.equal(res.json.code, 'conflict');
+  assert.match(res.json.error, /clash/);
   assert.match(res.json.hint, /git pull --rebase/);
-  assert.match(res.json.error, /GitHub has changes/);
   assert.equal(res.json.committed, true);
-  assert.equal(res.json.commit.message, 'Publish puzzle 2026-10-07');
-  assert.equal(git(work, 'rev-parse', 'HEAD'), res.json.commit.sha); // kept locally
-  assert.equal(bareGit(bare, 'rev-parse', 'main'), theirs); // remote unchanged
-
+  assert.equal(res.json.commit.message, 'Publish puzzle 2026-10-09');
+  // Everything is as before the rebase: our commit on top of the old base, a clean tree, no rebase half-way.
+  assert.equal(git(work, 'rev-parse', 'HEAD'), res.json.commit.sha);
+  assert.equal(git(work, 'status', '--porcelain'), '');
+  assert.equal(await fsp.readFile(path.join(work, 'site', 'puzzles', 'index.json'), 'utf8'), ourIndex);
+  await assert.rejects(fsp.access(path.join(work, '.git', 'rebase-merge')));
+  assert.equal(bareGit(bare, 'rev-parse', 'main'), theirs);
   const st = (await api('GET', '/api/go-live')).json;
-  assert.deepEqual(st.pending, []);
-  assert.equal(st.ahead, 1);
-  const again = await api('POST', '/api/go-live', {});
-  assert.equal(again.status, 409);
-  assert.equal(again.json.code, 'rejected');
-  assert.equal(again.json.committed, false);
+  assert.deepEqual({ ahead: st.ahead, behind: st.behind, ready: st.ready, problem: st.problem }, { ahead: 1, behind: 1, ready: true, problem: null });
+});
+
+gitTest('uncommitted edits to a file GitHub changed: refused before anything is touched', async () => {
+  const { base, work, bare } = await makeProject();
+  const other = cloneOf(base, bare, 'other');
+  await fsp.writeFile(path.join(other, 'README.md'), '# Edited on GitHub\n');
+  git(other, 'commit', '-q', '-am', 'Edit on GitHub');
+  git(other, 'push', '-q');
+  await fsp.writeFile(path.join(work, 'README.md'), '# My unsaved edit\n');
+  const api = await serve(work);
+  assert.equal((await api('POST', '/api/publish', { draft: draftFor('2026-10-10') })).status, 200);
+  const res = await api('POST', '/api/go-live', {});
+  assert.equal(res.status, 409, res.text);
+  assert.equal(res.json.code, 'conflict');
+  assert.match(res.json.detail, /README\.md/);
+  assert.equal(res.json.committed, true);
+  assert.equal(await fsp.readFile(path.join(work, 'README.md'), 'utf8'), '# My unsaved edit\n');
+  assert.equal(git(work, 'rev-parse', 'HEAD'), res.json.commit.sha);
+  assert.equal(git(work, 'stash', 'list'), '');
+});
+
+gitTest('Claude puzzles made on this computer go online too: the new folder is staged file by file', async () => {
+  const { work, bare } = await makeProject();
+  const api = await serve(work);
+  const ids = await writeClaudePuzzles(work, '2026-10-11'); // e.g. the playbook run by hand here
+  const st = (await api('GET', '/api/go-live')).json;
+  assert.deepEqual(byPath(st.pending).map((c) => c.path), [
+    ...ids.map((id) => `site/puzzles/claude/${id}.json`), 'site/puzzles/claude/index.json',
+  ].sort());
+  const res = await api('POST', '/api/go-live', {});
+  assert.equal(res.status, 200, res.text);
+  assert.equal(res.json.commit.message, 'Publish puzzles claude-2026-10-11-mini, claude-2026-10-11-midi, claude-2026-10-11');
+  const changed = bareGit(bare, 'diff', '--name-status', 'main~1', 'main').split('\n').sort();
+  assert.deepEqual(changed, [...ids.map((id) => `A\tsite/puzzles/claude/${id}.json`), 'A\tsite/puzzles/claude/index.json'].sort());
+  assert.deepEqual((await api('GET', '/api/go-live')).json.pending, []);
+});
+
+gitTest('a rebase or merge stopped half-way: "in-progress", nothing is committed', async () => {
+  const { work } = await makeProject();
+  const api = await serve(work);
+  assert.equal((await api('POST', '/api/publish', { draft: draftFor('2026-10-12') })).status, 200);
+  const mergeHead = path.join(work, '.git', 'MERGE_HEAD');
+  await fsp.writeFile(mergeHead, `${git(work, 'rev-parse', 'HEAD')}\n`);
+  const st = (await api('GET', '/api/go-live')).json;
+  assert.equal(st.ready, false);
+  assert.equal(st.problem.code, 'in-progress');
+  const res = await api('POST', '/api/go-live', {});
+  assert.equal(res.status, 409);
+  assert.equal(res.json.code, 'in-progress');
+  assert.match(res.json.hint, /rebase --abort|merge --abort/);
+  assert.equal(git(work, 'rev-list', '--count', 'HEAD'), '1');
+  await fsp.rm(mergeHead);
+  assert.equal((await api('POST', '/api/go-live', {})).status, 200);
 });
 
 gitTest('one go-live at a time: a second request gets 409 busy', async () => {

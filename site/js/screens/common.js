@@ -14,6 +14,11 @@ export function brandMark(size = 28) {
     cell(3, 15, 'bm-cell'), cell(9, 15, 'bm-cell'), cell(15, 15, 'bm-cell'));
 }
 
+/** Claude's way mark (SPEC §9): the spark, in Claude's accent colour (decorative). */
+export function claudeMark(size = 18) {
+  return h('span', { class: 'cw-mark', 'aria-hidden': 'true' }, icon('spark', { size, strokeWidth: 2.4 }));
+}
+
 /**
  * Site header for intro / archive / message screens.
  * @param {object} ctx  app context

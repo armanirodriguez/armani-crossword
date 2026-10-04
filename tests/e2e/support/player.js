@@ -30,6 +30,14 @@ export async function captureShares(context) {
   });
 }
 
+/**
+ * The browser's "Failed to load resource: … 404" line for puzzles/claude/index.json. Expected whenever no Claude's way
+ * puzzles are published (SPEC §9: a missing index means none) — the e2e root has none unless a test serves them.
+ */
+function isMissingClaudeIndex(msg) {
+  return /\b404\b/.test(msg.text()) && /\/puzzles\/claude\/index\.json$/.test(msg.location()?.url || '');
+}
+
 export class Player {
   /**
    * @param {import('@playwright/test').Page} page
@@ -44,7 +52,10 @@ export class Player {
     this.clockInstalled = false;
     this.errors = [];
     page.on('pageerror', (err) => this.errors.push(`pageerror: ${err.message}`));
-    page.on('console', (msg) => { if (msg.type() === 'error') this.errors.push(`console: ${msg.text()}`); });
+    page.on('console', (msg) => {
+      if (msg.type() !== 'error' || isMissingClaudeIndex(msg)) return;
+      this.errors.push(`console: ${msg.text()}`);
+    });
   }
 
   /**

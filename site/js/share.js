@@ -3,6 +3,7 @@
 //
 // 🧩 Armani Crossword #12 · Sat, Oct 3        (a daily)
 // 🧩 Armani Crossword Mini #1 · Sun, Oct 4    (a mini / midi: the kind before the number, SPEC §8)
+// 🧩 Claude's way Mini #3 · Mon, Oct 5        (Claude's way: the series label instead of the site name, SPEC §9)
 // ⏱️ 4:32 · ✨ no hints
 // ⬛🟩🟩🟩🟩
 // …

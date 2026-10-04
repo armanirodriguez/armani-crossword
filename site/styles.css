@@ -1429,3 +1429,153 @@ p { text-wrap: pretty; }
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   gap: 16px;
 }
+
+/* ------------------------------------------------------------------ Claude's way (SPEC §9) */
+/* A second series made by Claude: its own warm terracotta accent on the same cards, badges and type, so it reads
+   as a distinct section of the same site. Kind colours (Mini / Midi / Daily) stay as they are. */
+:root {
+  --cw-accent: #c15f3c;
+  --cw-accent-hover: #a94f30;
+  --cw-accent-ink: #ffffff;
+  --cw-soft: #f6e3d8;
+  --cw-soft-ink: #96401f;
+  --cw-wash: #fbf0e9;
+  --cw-line: #efd9cb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cw-accent: #e3896a;
+    --cw-accent-hover: #eb9d81;
+    --cw-accent-ink: #1d0f09;
+    --cw-soft: #3d261c;
+    --cw-soft-ink: #f2b597;
+    --cw-wash: #1e1815;
+    --cw-line: #3a2b23;
+  }
+}
+
+.cw-mark { display: inline-grid; place-items: center; flex: none; color: var(--cw-accent); }
+.series-claude .btn-primary { background: var(--cw-accent); color: var(--cw-accent-ink); }
+.series-claude .btn-primary:hover { background: var(--cw-accent-hover); }
+
+/* ---- the home-page section */
+.claude-way { max-width: 1040px; margin: 0 auto; animation: rise 0.35s var(--ease-out) both; }
+.is-refresh .claude-way { animation: none; }
+.claude-way.is-below {
+  margin-top: clamp(28px, 6vh, 56px);
+  padding: clamp(22px, 4vw, 34px) clamp(14px, 3vw, 28px) clamp(14px, 3vw, 22px);
+  background: var(--cw-wash);
+  border: 1px solid var(--cw-line);
+  border-radius: 28px;
+}
+.claude-way.is-solo { margin-top: clamp(0px, 2vh, 20px); }
+.cw-header { text-align: center; margin: 0 0 clamp(16px, 3vh, 26px); }
+.cw-when { margin-bottom: 8px; color: var(--cw-soft-ink); }
+.cw-when > span { white-space: nowrap; }
+.cw-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32em;
+  margin: 0 0 4px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(27px, 6.6vw, 36px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.is-solo .cw-title { font-size: clamp(30px, 7.5vw, 42px); }
+.cw-title .cw-mark {
+  width: 1.12em;
+  height: 1.12em;
+  border-radius: 0.3em;
+  background: var(--cw-accent);
+  color: var(--cw-accent-ink);
+  box-shadow: 0 6px 16px rgba(193, 95, 60, 0.28);
+}
+.cw-title .cw-mark .icon { width: 64%; height: 64%; }
+.cw-sub { margin: 0; color: var(--ink-2); font-size: 15.5px; text-wrap: balance; }
+.cw-progress { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+.cw-more { margin: clamp(12px, 2.5vh, 18px) 0 0; text-align: center; }
+.cw-archive-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 40px;
+  padding: 0 10px 0 16px;
+  border-radius: 999px;
+  color: var(--cw-soft-ink);
+  font-weight: 650;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+.cw-archive-link:hover { background: var(--cw-soft); }
+.cw-notice { margin: 4px auto 0; max-width: 520px; text-align: center; color: var(--ink-2); font-size: 14.5px; }
+/* under the user's single intro card: the card stays centred, the section follows it */
+.has-claude .page-center { flex-direction: column; align-items: center; }
+.has-claude .page-center > .claude-way { width: 100%; }
+
+/* ---- Claude's puzzles elsewhere: intro card, play header, solved dialog */
+.intro-card.series-claude { box-shadow: inset 0 4px 0 var(--cw-accent), var(--shadow-2); }
+.intro-card.series-claude .eyebrow { color: var(--cw-soft-ink); }
+.eyebrow .cw-mark { margin-right: 6px; vertical-align: -2px; color: var(--cw-accent); }
+.sub-num .cw-mark { margin-right: 4px; vertical-align: -1px; }
+.series-claude .sub-num { color: var(--cw-soft-ink); font-weight: 700; }
+.series-claude .sub-num::before { color: var(--muted); font-weight: 400; }
+/* phones: a Claude puzzle's header line is "✳ Claude’s way · Mini #3" (no date); most phones show "✳ Mini #3" (the
+   series name stays for screen readers) */
+@media (max-width: 520px) {
+  .series-claude .play-title-sub.has-num .sub-date { display: none; }
+  .series-claude .play-title-sub.has-num .sub-date + span::before { content: none; }
+}
+@media (max-width: 420px) {
+  .series-claude .sub-series {
+    position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+}
+
+/* ---- archive: switch between the two series */
+.series-switch {
+  display: flex;
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 14px 0 12px;
+  padding: 4px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.series-tab {
+  flex: 0 1 auto;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 16px 0 11px;
+  border-radius: 999px;
+  color: var(--ink-2);
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 15px;
+  transition: background-color 0.15s, color 0.15s;
+}
+.series-tab:hover { background: var(--surface-3); color: var(--ink); }
+.series-tab-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.series-tab .brand-mark { width: 18px; height: 18px; }
+.series-tab.is-current { background: var(--surface); color: var(--ink); box-shadow: var(--shadow-1); }
+.series-tab-claude.is-current { background: var(--cw-accent); color: var(--cw-accent-ink); }
+.series-tab-claude.is-current .cw-mark { color: inherit; }
+@media (max-width: 420px) {
+  .series-switch { width: 100%; }
+  .series-tab { padding: 0 12px 0 10px; gap: 6px; font-size: 14.5px; }
+  /* the site name gives way first; "Claude’s way" always fits */
+  .series-tab-main { flex: 1 1 auto; }
+  .series-tab-claude { flex: none; }
+}
+@media (max-width: 360px) {
+  .series-tab { font-size: 14px; }
+  .series-tab-main .brand-mark { display: none; }
+}

@@ -1,10 +1,12 @@
-// Site settings: edits site/config.json through the API (site name, tagline, time zone, share URL, share grid).
+// Site settings: edits site/config.json through the API (site name, tagline, time zone, share URL, share grid), plus
+// a "Claude" card showing whether Ask Claude (Clues step) is connected on this computer.
 // There is deliberately no login / passcode / player-name setting: friends just open the site and play.
 
 import { formatDate, todayISO } from '../../../site/shared/puzzle.js';
 import { h } from '../dom.js';
 import { openModal, toast, toastError } from '../dialogs.js';
 import { api } from '../api.js';
+import { claudeStatusCard } from '../claude-clues.js';
 
 const FALLBACK_ZONES = [
   'America/Los_Angeles', 'America/Denver', 'America/Chicago', 'America/New_York', 'America/Sao_Paulo',
@@ -64,7 +66,8 @@ export function mountSettings(container, app) {
       h('h2', { class: 'card-title' }, 'Share text example'),
       sample,
       sampleNote),
-    h('div', { class: 'page-foot' }, statusEl, saveBtn));
+    h('div', { class: 'page-foot' }, statusEl, saveBtn),
+    claudeStatusCard());
   container.append(form);
 
   function field(label, control, id, help) {

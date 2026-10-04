@@ -13,3 +13,6 @@ data/user-clues.json*
 
 # Temp files from interrupted atomic writes (they may hold answers too).
 *.tmp
+
+# Claude's way working drafts (plaintext answers) — never committed
+.claude-way/

@@ -868,3 +868,98 @@ test('§8 LAN hiding goes by date for every kind', { skip: !lanAddress() && 'no 
     for (const id of [past, `${past}-mini`, future, `${future}-mini`]) await api('DELETE', `/api/published/${id}`);
   }
 });
+
+// --- SPEC §9: "Claude's way" ------------------------------------------------------------------
+
+test('§9 the builder API is main-only: Claude drafts/puzzles are refused; main publishes are unchanged', async () => {
+  // Publishing a Claude draft through the builder API: 422 with the reason, nothing written.
+  const claude = await sampleDraft({ date: '2029-08-01', series: 'claude' });
+  const r = await api('POST', '/api/publish', { draft: claude });
+  assert.equal(r.status, 422);
+  assert.match(r.json.errors[0], /claude-way\.mjs/);
+  assert.equal(await exists('site/puzzles/claude-2029-08-01.json'), false);
+  assert.equal(await exists('site/puzzles/claude'), false);
+  assert.equal((await api('POST', '/api/publish', { draft: await sampleDraft({ date: '2029-08-01', series: 'bogus' }) })).status, 422);
+
+  // Saving drafts: series 'main' (what makeDraft writes) is fine; 'claude' and unknown series are refused.
+  assert.equal((await api('PUT', '/api/drafts/series-main', { ...makeDraft({ id: 'series-main', width: 5 }) })).status, 200);
+  assert.equal((await api('PUT', '/api/drafts/series-claude', { ...makeDraft({ id: 'series-claude', width: 5, series: 'claude' }) })).status, 400);
+  assert.equal((await api('PUT', '/api/drafts/series-bad', { ...makeDraft({ id: 'series-bad', width: 5 }), series: 'x' })).status, 400);
+  await api('DELETE', '/api/drafts/series-main');
+
+  // A main draft that says series: 'main' publishes exactly like one without the field.
+  const main = await api('POST', '/api/publish', { draft: await sampleDraft({ date: '2029-08-01', series: 'main' }) });
+  assert.equal(main.status, 200, JSON.stringify(main.json));
+  assert.equal(main.json.puzzle.id, '2029-08-01');
+  assert.ok(!('series' in main.json.puzzle));
+  // Unpublishing a Claude id through the builder API is refused (Claude manages its own folder).
+  assert.equal((await api('DELETE', '/api/published/claude-2029-08-01')).status, 400);
+  assert.equal((await api('DELETE', '/api/published/2029-08-01')).status, 200);
+});
+
+test('§9 Claude files never enter the main index; recent-answers stays main-only', async () => {
+  const { draftToPuzzle } = await import('../../site/shared/puzzle.js');
+  const claude = draftToPuzzle(await sampleDraft({ date: '2029-09-01', series: 'claude' })).puzzle;
+  // One where it belongs (site/puzzles/claude/) and a stray copy in the main folder.
+  await fsp.mkdir(path.join(root, 'site', 'puzzles', 'claude'), { recursive: true });
+  await fsp.writeFile(path.join(root, 'site', 'puzzles', 'claude', `${claude.id}.json`), JSON.stringify(claude));
+  await fsp.writeFile(path.join(root, 'site', 'puzzles', `${claude.id}.json`), JSON.stringify(claude));
+  try {
+    const r = await api('POST', '/api/publish', { draft: await sampleDraft({ date: '2029-09-02' }) });
+    assert.equal(r.status, 200);
+    const index = await readJson('site/puzzles/index.json');
+    assert.ok(!index.puzzles.some((p) => p.id.startsWith('claude-') || p.series), JSON.stringify(index.puzzles.map((p) => p.id)));
+    assert.deepEqual(index, (await api('GET', '/api/published')).json);
+    // Claude's answers do not count as "recent" for the user's own puzzles.
+    const recent = await api('GET', '/api/recent-answers?date=2029-09-01&days=0');
+    assert.deepEqual(recent.json.answers, {});
+    // A Claude id is understood (and is never its own "recent" puzzle).
+    const self = await api('GET', `/api/recent-answers?id=${claude.id}&days=1`);
+    assert.equal(self.status, 200);
+    assert.equal(self.json.id, claude.id);
+    assert.ok(Object.values(self.json.sources).every((ids) => !ids.includes(claude.id)));
+  } finally {
+    await api('DELETE', '/api/published/2029-09-02');
+    await fsp.rm(path.join(root, 'site', 'puzzles', `${claude.id}.json`), { force: true });
+    await fsp.rm(path.join(root, 'site', 'puzzles', 'claude'), { recursive: true, force: true });
+  }
+});
+
+test('§9 LAN hiding also covers site/puzzles/claude/ (files and its index)', { skip: !lanAddress() && 'no network interface' }, async () => {
+  const { draftToPuzzle } = await import('../../site/shared/puzzle.js');
+  const ip = lanAddress();
+  const lanServer = createServer({ root });
+  await new Promise((resolve) => lanServer.listen(0, ip, resolve));
+  const lanBase = `http://${ip}:${lanServer.address().port}`;
+  const get = async (url) => {
+    const res = await fetch(lanBase + url, { redirect: 'manual' });
+    return { status: res.status, text: await res.text() };
+  };
+  const folder = path.join(root, 'site', 'puzzles', 'claude');
+  try {
+    await fsp.mkdir(folder, { recursive: true });
+    const puzzles = [];
+    for (const [date, kind] of [['2026-09-28', 'mini'], ['2026-09-28', 'daily'], ['2099-08-01', 'mini'], ['2099-08-01', 'daily']]) {
+      const p = draftToPuzzle(await sampleDraft({ date, kind, series: 'claude' })).puzzle;
+      await fsp.writeFile(path.join(folder, `${p.id}.json`), JSON.stringify(p));
+      puzzles.push(p);
+    }
+    await fsp.writeFile(path.join(folder, 'index.json'), JSON.stringify(buildIndex(puzzles)));
+    await fsp.mkdir(path.join(folder, 'notes'), { recursive: true });
+    await fsp.writeFile(path.join(folder, 'notes', '2099-08-01-theme.json'), '{}');
+    assert.equal((await get('/site/puzzles/claude/claude-2026-09-28-mini.json')).status, 200);
+    assert.equal((await get('/site/puzzles/claude/claude-2026-09-28.json')).status, 200);
+    assert.equal((await get('/site/puzzles/claude/claude-2099-08-01-mini.json')).status, 404);
+    assert.equal((await get('/site/puzzles/claude/claude-2099-08-01.json')).status, 404);
+    assert.equal((await get('/site/puzzles/claude/notes/2099-08-01-theme.json')).status, 404);
+    const index = JSON.parse((await get('/site/puzzles/claude/index.json')).text);
+    assert.deepEqual(index.puzzles.map((p) => p.id), ['claude-2026-09-28-mini', 'claude-2026-09-28']);
+    // This computer still sees everything (the builder's own preview).
+    assert.equal((await api('GET', '/site/puzzles/claude/claude-2099-08-01.json')).status, 200);
+    assert.equal(JSON.parse((await api('GET', '/site/puzzles/claude/index.json')).text).puzzles.length, 4);
+  } finally {
+    lanServer.closeAllConnections?.();
+    await new Promise((resolve) => lanServer.close(resolve));
+    await fsp.rm(folder, { recursive: true, force: true });
+  }
+});

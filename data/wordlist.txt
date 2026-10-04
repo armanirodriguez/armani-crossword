@@ -2,8 +2,8 @@
 # change data/curated/*.tsv or data/banned.txt and rebuild, or add your own words in data/user-words.txt.
 # Format: WORD;SCORE — WORD is A-Z (3-21 letters), SCORE 1-100 (70+ lively, 50-69 solid, 35-49 acceptable,
 # 1-34 obscure / only if needed). Banned words are absent. See data/README.md.
-# Sources: SCOWL (wordlist-english 1.2.1, levels 10-70, english+american); WordNet 3.1 (wordnet-db 3.1.14); curated TSVs: 24 file(s), 27377 words; banned.txt: 514 words.
-# Entries: 143560
+# Sources: SCOWL (wordlist-english 1.2.1, levels 10-70, english+american); WordNet 3.1 (wordnet-db 3.1.14); curated TSVs: 24 file(s), 27377 words; banned.txt: 520 words.
+# Entries: 143551
 AACHEN;29
 AALBORG;29
 AALII;29
@@ -55079,12 +55079,9 @@ GROOVIEST;49
 GROOVINESS;20
 GROOVING;54
 GROOVY;54
-GROPE;25
 GROPED;10
-GROPEFOR;23
 GROPER;29
 GROPERS;29
-GROPES;20
 GROPING;54
 GROPINGLY;29
 GROPIUS;26
@@ -63123,8 +63120,6 @@ INCESSANT;45
 INCESSANTLY;54
 INCESSANTNESS;29
 INCESSANTNESSES;24
-INCESTUOUSLY;43
-INCESTUOUSNESS;34
 INCH;52
 INCHED;54
 INCHEON;29
@@ -91797,10 +91792,7 @@ PEDDLER;57
 PEDDLERS;40
 PEDDLES;35
 PEDDLING;54
-PEDERAST;47
 PEDERASTIC;29
-PEDERASTS;42
-PEDERASTY;47
 PEDESTAL;52
 PEDESTALS;51
 PEDESTRIAN;59
@@ -123645,7 +123637,6 @@ SUGGESTS;63
 SUHARTO;15
 SUICIDAL;59
 SUICIDALLY;20
-SUICIDEBOMBER;26
 SUICIDEBOMBING;21
 SUICIDEMISSION;21
 SUICIDEPILL;32

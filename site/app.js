@@ -1,10 +1,15 @@
 // Armani Crossword — player site bootstrap and hash router (SPEC §6).
 //
 //   #/                     today's puzzles (or the latest date before today that has any): one intro card for a
-//                          single puzzle, one card per puzzle (Mini, Midi, Daily) when the date has several (§8)
+//                          single puzzle, one card per puzzle (Mini, Midi, Daily) when the date has several (§8);
+//                          below them, "Claude's way": Claude's puzzles of today, or its latest set (§9)
 //   #/puzzle/<id>          a specific puzzle: YYYY-MM-DD (the daily — every pre-§8 link), YYYY-MM-DD-mini,
-//                          YYYY-MM-DD-midi (future dates show "Unlocks on …")
+//                          YYYY-MM-DD-midi, claude-YYYY-MM-DD[-mini|-midi] (future dates show "Unlocks on …")
 //   #/archive              every released puzzle with this browser's status, grouped by date
+//   #/archive/claude       the same for Claude's way
+//
+// The two series (§9) have separate indexes: puzzles/index.json and puzzles/claude/index.json. Claude's is optional:
+// missing (404) means no Claude puzzles, and a failure to load it never takes the user's puzzles down with it.
 //
 // ?preview=1 (used by the builder) plays the puzzle stored in localStorage['xw:preview'], bypasses date
 // locks and never persists progress. There is no login of any kind: progress lives in this browser.
@@ -13,12 +18,14 @@ import { formatDate, todayISO } from './shared/puzzle.js';
 import { createStorage } from './js/storage.js';
 import { DEFAULT_CONFIG, LoadError, checkPuzzle, loadConfig, loadIndex, loadPuzzleFile } from './js/data.js';
 import {
-  entriesOn, entryId, entryKind, findEntry, isLocked, kindLabel, parseRoute, pickToday, todaySignature,
+  entriesOn, entryId, entryKind, findEntry, isLocked, kindLabel, parseRoute, pickToday, routeSeries, todaySignature,
 } from './js/daily.js';
+import { CLAUDE, CLAUDE_TITLE, MAIN, archiveHref } from './js/series.js';
 import { loadingScreen, messageScreen } from './js/screens/common.js';
 import { buildArchive } from './js/screens/archive.js';
 import { createPuzzleScreen } from './js/screens/puzzle.js';
 import { createDayScreen } from './js/screens/day.js';
+import { createClaudeHomeScreen, createClaudeSection } from './js/screens/claude.js';
 import { PROGRESS_PREFIX } from './js/progress.js';
 import { closeAllOverlays, isOverlayOpen, toast } from './js/ui.js';
 
@@ -33,6 +40,9 @@ const ctx = {
   config: { ...DEFAULT_CONFIG },
   index: { puzzles: [] },
   indexError: null,
+  // Claude's way (§9): its own index. An error here is never shown as an error page; the last good copy stays.
+  claudeIndex: { puzzles: [] },
+  claudeIndexError: null,
   today: todayISO(null),
   preview,
   inIframe,
@@ -71,14 +81,25 @@ function applyBranding() {
   set('meta[name="apple-mobile-web-app-title"]', ctx.config.siteName);
 }
 
+/** (Re)load both series' indexes. The preview (the builder's draft) needs only the user's. */
 async function refreshIndex() {
-  try {
-    ctx.index = await loadIndex();
+  const [main, claude] = await Promise.allSettled([loadIndex(MAIN), preview ? null : loadIndex(CLAUDE)]);
+  if (main.status === 'fulfilled') {
+    ctx.index = main.value;
     ctx.indexError = null;
-  } catch (err) {
-    ctx.indexError = err;
+  } else {
+    ctx.indexError = main.reason;
+  }
+  if (claude.status === 'fulfilled') {
+    if (claude.value) ctx.claudeIndex = claude.value;
+    ctx.claudeIndexError = null;
+  } else {
+    ctx.claudeIndexError = claude.reason;
   }
 }
+
+const indexOf = (series) => (series === CLAUDE ? ctx.claudeIndex : ctx.index);
+const indexErrorOf = (series) => (series === CLAUDE ? ctx.claudeIndexError : ctx.indexError);
 
 /** Full-page error for a failed load, with a retry that re-runs the route. */
 function showLoadError(err, { what = 'the puzzles' } = {}) {
@@ -106,13 +127,73 @@ function showLoadError(err, { what = 'the puzzles' } = {}) {
   setTitle('Error');
 }
 
-function showPuzzle(raw, { entry, label, notice, autoStart = false, kindInLabel = false, siblings = [] }) {
+function showPuzzle(raw, { entry, label, notice, autoStart = false, kindInLabel = false, siblings = [], mountFn = mount }) {
   const viaCards = fromCards === raw.id;
   current = createPuzzleScreen({
-    ctx, raw, entry, label, notice, autoStart, kindInLabel, siblings, mount,
+    ctx, raw, entry, label, notice, autoStart, kindInLabel, siblings, mount: mountFn,
     onBack: viaCards ? () => history.back() : null,
     backLabel: viaCards ? 'Back to today’s puzzles' : undefined,
   });
+}
+
+// ---------------------------------------------------------------- Claude's way on the home page (§9)
+
+/** Load a set of puzzles in parallel: [{ entry, raw } | { entry, error }] (never rejects). */
+async function loadSet(entries) {
+  const results = await Promise.allSettled(entries.map((e) => loadPuzzleFile(entryId(e))));
+  return entries.map((entry, k) => (results[k].status === 'fulfilled'
+    ? { entry, raw: results[k].value }
+    : { entry, error: results[k].reason }));
+}
+
+/** Today's (or the latest) Claude set for the home page, loaded: { day, items } or null when there is none. */
+function loadClaudeHome() {
+  if (preview) return Promise.resolve(null);
+  const day = pickToday(ctx.claudeIndex, ctx.today);
+  if (!day.entries.length) return Promise.resolve(null);
+  return loadSet(day.entries).then((items) => ({ day, items }));
+}
+
+function claudeSection(home, { solo = false } = {}) {
+  if (!home) return null;
+  return createClaudeSection({
+    ctx,
+    date: home.day.date,
+    isToday: home.day.isToday,
+    items: home.items,
+    solo,
+    onPlay: playFromCards,
+    onRetry: () => { refreshIndex().then(() => route()); },
+  });
+}
+
+/**
+ * A mount function for the user's home screens that puts Claude's section under them (re-read each time: progress
+ * may have changed while a puzzle was open). The solving view itself never shows it.
+ */
+function homeMount(section) {
+  if (!section) return mount;
+  return (el) => {
+    if (!el.classList.contains('screen-play')) {
+      section.refresh();
+      el.classList.add('has-claude');
+      (el.querySelector('main') || el).append(section.el);
+    }
+    mount(el);
+  };
+}
+
+/** Wrap a home screen's controller so the app can refresh Claude's statuses (storage events from other tabs). */
+function homeController(ctl, section) {
+  return {
+    destroy: () => ctl.destroy(),
+    get playing() { return Boolean(ctl.playing); },
+    isHome: true,
+    refresh() {
+      if (ctl.isDay) ctl.refresh(); // rebuilds the day screen, Claude's section included
+      else if (section && !ctl.playing) section.refresh();
+    },
+  };
 }
 
 /** Eyebrow for a puzzle of today or the latest day: "Today’s puzzle" (daily) / "Today’s Mini", "Latest Midi", … */
@@ -128,20 +209,19 @@ function playFromCards(id) {
   window.location.hash = `#/puzzle/${id}`;
 }
 
-/** Several puzzles on one date: load them all (in parallel) and show one card each. */
-async function showDay(seq, date, entries, { label }) {
-  const results = await Promise.allSettled(entries.map((e) => loadPuzzleFile(entryId(e))));
+/** Several puzzles on one date: load them all (in parallel) and show one card each (+ Claude's section on home). */
+async function showDay(seq, date, entries, { label, claude = null }) {
+  const [items, claudeHome] = await Promise.all([loadSet(entries), claude]);
   if (seq !== routeSeq) return;
   // Nothing loaded at all (offline, …): the full-page error explains it better than three broken cards.
-  if (results.every((r) => r.status === 'rejected')) throw results[0].reason;
-  const items = entries.map((entry, k) => (results[k].status === 'fulfilled'
-    ? { entry, raw: results[k].value }
-    : { entry, error: results[k].reason }));
-  current = createDayScreen({
-    ctx, date, items, label, mount,
+  if (items.every((item) => item.error)) throw items[0].error;
+  const section = claudeSection(claudeHome);
+  const ctl = createDayScreen({
+    ctx, date, items, label, mount: homeMount(section),
     onPlay: playFromCards,
     onRetry: () => { refreshIndex().then(() => route()); },
   });
+  current = section ? homeController(ctl, section) : ctl;
 }
 
 async function routeToday(seq, { autoStart = false } = {}) {
@@ -161,7 +241,23 @@ async function routeToday(seq, { autoStart = false } = {}) {
   }
   if (ctx.indexError) { showLoadError(ctx.indexError); return; }
   const day = pickToday(ctx.index, ctx.today);
+  // Claude's set loads alongside the user's puzzles; a puzzle of it that fails shows as an error card in its section.
+  const claude = loadClaudeHome();
   if (!day.entries.length) {
+    const claudeHome = await claude;
+    if (seq !== routeSeq) return;
+    if (claudeHome) {
+      // Nothing of the user's is out: Claude's section is the home page.
+      const section = claudeSection(claudeHome, { solo: true });
+      mount(createClaudeHomeScreen({
+        ctx,
+        section,
+        notice: day.nextDate ? `The first ${ctx.config.siteName} puzzle unlocks on ${formatDate(day.nextDate)}.` : '',
+      }));
+      current = homeController({ destroy() {}, playing: false }, section);
+      setTitle(null);
+      return;
+    }
     mount(messageScreen(ctx, {
       emoji: '🧩',
       title: 'No puzzles yet',
@@ -174,47 +270,55 @@ async function routeToday(seq, { autoStart = false } = {}) {
     return;
   }
   if (day.entries.length > 1) {
-    await showDay(seq, day.date, day.entries, { label: day.isToday ? 'Today’s puzzles' : 'Latest puzzles' });
+    await showDay(seq, day.date, day.entries, { label: day.isToday ? 'Today’s puzzles' : 'Latest puzzles', claude });
     return;
   }
   // A single puzzle: the classic intro card.
   const [entry] = day.entries;
   const kind = entryKind(entry);
-  const raw = await loadPuzzleFile(entryId(entry));
+  const [raw, claudeHome] = await Promise.all([loadPuzzleFile(entryId(entry)), claude]);
   if (seq !== routeSeq) return;
-  showPuzzle(raw, { entry, label: dayLabel(kind, day.isToday), kindInLabel: kind !== 'daily' });
+  const section = claudeSection(claudeHome);
+  showPuzzle(raw, { entry, label: dayLabel(kind, day.isToday), kindInLabel: kind !== 'daily', mountFn: homeMount(section) });
+  if (section) current = homeController(current, section);
 }
 
-function showNoPuzzle(date, kind = 'daily') {
+function showNoPuzzle(date, kind = 'daily', series = MAIN) {
+  const what = series === CLAUDE ? `${CLAUDE_TITLE} ${kindLabel(kind)}` : kind === 'daily' ? 'puzzle' : kindLabel(kind);
   mount(messageScreen(ctx, {
     emoji: '🔎',
     title: 'No puzzle that day',
-    text: kind === 'daily' ? `There’s no puzzle for ${formatDate(date)}.` : `There’s no ${kindLabel(kind)} for ${formatDate(date)}.`,
-    actions: [{ label: 'Today’s puzzle', href: '#/', primary: true }, { label: 'Archive', href: '#/archive' }],
+    text: `There’s no ${what} for ${formatDate(date)}.`,
+    actions: [{ label: 'Today’s puzzle', href: '#/', primary: true }, { label: 'Archive', href: archiveHref(series) }],
   }));
   setTitle('Not found');
 }
 
-async function routePuzzle(seq, { id, date, kind }) {
-  const sameDay = ctx.indexError ? [] : entriesOn(ctx.index, date);
-  const entry = findEntry(ctx.index, id);
+async function routePuzzle(seq, r) {
+  const { id, date, kind } = r;
+  const series = routeSeries(r);
+  const index = indexOf(series);
+  const indexError = indexErrorOf(series);
+  const sameDay = indexError ? [] : entriesOn(index, date);
+  const entry = findEntry(index, id);
   if (isLocked(date, ctx.today, preview)) {
     // Only scheduled puzzles get an unlock date; a future day with nothing published is simply "no puzzle".
-    if (!ctx.indexError && !entry && !sameDay.length) {
-      showNoPuzzle(date);
+    if (!indexError && !entry && !sameDay.length) {
+      showNoPuzzle(date, kind, series);
       return;
     }
     mount(messageScreen(ctx, {
       icon: 'lock',
       title: `Unlocks on ${formatDate(date)}`,
       text: 'No peeking! This puzzle isn’t out yet.',
-      actions: [{ label: 'Today’s puzzle', href: '#/', primary: true }, { label: 'Archive', href: '#/archive' }],
+      actions: [{ label: 'Today’s puzzle', href: '#/', primary: true }, { label: 'Archive', href: archiveHref(series) }],
     }));
     setTitle('Locked');
     return;
   }
-  // A date-only link (the daily's id) to a day that has no daily but other kinds: that day's puzzles.
-  if (!entry && kind === 'daily' && sameDay.length) {
+  // A date-only link (the daily's id) to a day that has no daily but other kinds: that day's puzzles. (Old links
+  // only exist for the user's own puzzles.)
+  if (series === MAIN && !entry && kind === 'daily' && sameDay.length) {
     if (sameDay.length > 1) {
       await showDay(seq, date, sameDay, { label: date === ctx.today ? 'Today’s puzzles' : 'From the archive' });
       return;
@@ -225,9 +329,10 @@ async function routePuzzle(seq, { id, date, kind }) {
     showPuzzle(raw, { entry: only, label: date === ctx.today ? dayLabel(entryKind(only), true) : 'From the archive', kindInLabel: date === ctx.today });
     return;
   }
-  // A Mini / Midi the index doesn't know is not there (no request needed). Dailies are still fetched, as before §8.
-  if (!entry && kind !== 'daily' && !ctx.indexError && !preview) {
-    showNoPuzzle(date, kind);
+  // A Mini / Midi the index doesn't know is not there (no request needed). Dailies are still fetched, as before §8
+  // (Claude's dailies are not: its index is the only way they are published).
+  if (!entry && (kind !== 'daily' || series === CLAUDE) && !indexError && !preview) {
+    showNoPuzzle(date, kind, series);
     return;
   }
   let raw;
@@ -236,7 +341,7 @@ async function routePuzzle(seq, { id, date, kind }) {
   } catch (err) {
     if (seq !== routeSeq) return;
     if (err.kind === 'not-found') {
-      showNoPuzzle(date, kind);
+      showNoPuzzle(date, kind, series);
       return;
     }
     throw err;
@@ -247,8 +352,9 @@ async function routePuzzle(seq, { id, date, kind }) {
   const isToday = date === ctx.today;
   showPuzzle(raw, {
     entry,
-    label: isToday ? dayLabel(kind, true) : 'From the archive',
-    kindInLabel: isToday && kind !== 'daily',
+    // Claude's way: "Claude’s way · Mini #3" (the date is on the card).
+    label: series === CLAUDE ? CLAUDE_TITLE : isToday ? dayLabel(kind, true) : 'From the archive',
+    kindInLabel: series === MAIN && isToday && kind !== 'daily',
     siblings: sameDay.filter((p) => entryId(p) !== id),
     autoStart,
   });
@@ -271,7 +377,10 @@ async function route({ autoStart = false } = {}) {
   const spinner = setTimeout(() => { if (seq === routeSeq && !current) mount(loadingScreen(ctx)); }, 180);
   try {
     if (r.name === 'archive') {
-      if (ctx.indexError) showLoadError(ctx.indexError);
+      const series = routeSeries(r);
+      // Claude's archive keeps the last good copy of its index; only a never-loaded one is an error.
+      const err = series === CLAUDE ? (!ctx.claudeIndex.puzzles.length && ctx.claudeIndexError) : ctx.indexError;
+      if (err) showLoadError(err, { what: series === CLAUDE ? `${CLAUDE_TITLE} puzzles` : 'the puzzles' });
       else showArchive();
     } else if (r.name === 'puzzle') {
       await routePuzzle(seq, r);
@@ -288,11 +397,12 @@ async function route({ autoStart = false } = {}) {
 }
 
 function showArchive({ refresh = false } = {}) {
-  const el = buildArchive(ctx);
+  const series = routeSeries(ctx.route);
+  const el = buildArchive(ctx, series);
   if (refresh) el.classList.add('is-refresh'); // no entrance animation for a live update
   mount(el);
   current = { destroy() {}, playing: false, isArchive: true };
-  setTitle('Archive');
+  setTitle(series === CLAUDE ? `${CLAUDE_TITLE} archive` : 'Archive');
 }
 
 const DAY_CHECK_MS = 30_000;
@@ -300,7 +410,11 @@ const DAY_CHECK_MS = 30_000;
 const INDEX_RECHECK_MS = 5 * 60_000;
 let lastIndexCheck = 0;
 
-const hasTodaysPuzzle = () => entriesOn(ctx.index, ctx.today).length > 0;
+/** Both series have today's puzzles out (else keep looking for a late deploy). */
+const hasTodaysPuzzles = () => entriesOn(ctx.index, ctx.today).length > 0
+  && (preview || entriesOn(ctx.claudeIndex, ctx.today).length > 0);
+/** What the home page shows for today, in both series (to notice a deploy that changes it). */
+const homeSignature = () => `${todaySignature(ctx.index, ctx.today)}||${todaySignature(ctx.claudeIndex, ctx.today)}`;
 
 /** Has "today" moved on? Re-route when it has and nobody is mid-solve (or a dialog is open). */
 function checkDay() {
@@ -314,14 +428,15 @@ function checkDay() {
     dayChanged = false;
     lastIndexCheck = Date.now();
     refreshIndex().then(() => route());
-  } else if (idle && !ctx.indexError && (!hasTodaysPuzzle() || ctx.route.name === 'today')
+  } else if (idle && !ctx.indexError && (!hasTodaysPuzzles() || ctx.route.name === 'today')
     && Date.now() - lastIndexCheck >= INDEX_RECHECK_MS) {
-    // Today's puzzle isn't online yet — or today's puzzles are showing and another kind (a Mini after the Daily, …)
-    // may still land: re-fetch the (small) index now and then and re-route once today's set of puzzles changes.
+    // Today's puzzles aren't online yet (the user's or Claude's) — or today's puzzles are showing and another kind
+    // (a Mini after the Daily, …) may still land: re-fetch the (small) indexes now and then and re-route once
+    // today's set of puzzles changes in either series.
     lastIndexCheck = Date.now();
-    const before = todaySignature(ctx.index, ctx.today);
+    const before = homeSignature();
     refreshIndex().then(() => {
-      if (todaySignature(ctx.index, ctx.today) !== before && !current?.playing && !isOverlayOpen()) route();
+      if (homeSignature() !== before && !current?.playing && !isOverlayOpen()) route();
     });
   }
 }
@@ -368,11 +483,12 @@ async function boot() {
     refreshIndex().then(() => route());
   });
 
-  // Progress saved in another tab: keep the statuses on the archive and on today's puzzle cards current.
+  // Progress saved in another tab: keep the statuses on the archive and on today's puzzle cards current
+  // (the user's and Claude's).
   if (!preview) {
     window.addEventListener('storage', (e) => {
       const onArchive = ctx.route.name === 'archive' && current?.isArchive;
-      if (!onArchive && !current?.isDay) return;
+      if (!onArchive && !current?.isDay && !current?.isHome) return;
       if (e.key !== null && !e.key.startsWith(PROGRESS_PREFIX)) return;
       if (isOverlayOpen()) return;
       if (onArchive) showArchive({ refresh: true });

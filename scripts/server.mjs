@@ -24,7 +24,11 @@
 // data/user-words.txt, data/user-clues.json), so tests can run against a temporary copy of the repo.
 //
 // "Put it online" (/api/go-live) runs git in the root: it commits ONLY site/puzzles/, site/config.json and
-// data/user-words.txt and pushes them. git never prompts (no terminal, no askpass) and every call has a timeout.
+// data/user-words.txt, fetches, rebases onto anything GitHub has that this computer lacks (the daily "Claude's way"
+// pushes, SPEC §9) and pushes. git never prompts (no terminal, no askpass) and every call has a timeout.
+//
+// Claude's way (SPEC §9) puzzles live in site/puzzles/claude/ and are published by scripts/claude-way.mjs, never
+// through this API: publish / unpublish / recent-answers here are about the user's own (series 'main') puzzles.
 //
 // Importing this module does not start a server: use `createServer({ root })` and call `.listen()` yourself.
 
@@ -39,8 +43,10 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
   addDays, draftToPuzzle, draftEntries, buildIndex, isValidDraftId, isValidDateId, loadPuzzle, normalizeClue,
   normalizeAnswer, MAX_SIZE, KINDS, KIND_LABELS, puzzleId, parsePuzzleId, isValidPuzzleId, puzzleKind, comparePuzzles,
+  SERIES, puzzleSeries, seriesFolder,
 } from '../site/shared/puzzle.js';
 import { releasedThrough } from './build-site.mjs';
+import { claudeClueRoutes } from './claude-clues.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -236,6 +242,9 @@ export function draftPublishedId(d) {
 
 const CELL_RE = /^(#|[A-Z]?)$/;
 
+/** Why the builder API refuses Claude's way drafts and puzzles (SPEC §9: Claude publishes them with its own CLI). */
+const CLAUDE_SERIES_ONLY_CLI = "Claude's way puzzles are made and published by scripts/claude-way.mjs, not by the builder";
+
 function validateDraftShape(d, id) {
   if (!d || typeof d !== 'object' || Array.isArray(d)) return 'Draft must be a JSON object';
   if (d.id !== undefined && d.id !== id) return `Draft id "${d.id}" does not match URL id "${id}"`;
@@ -255,6 +264,8 @@ function validateDraftShape(d, id) {
   }
   if (d.date && !isValidDateId(d.date)) return 'date must be YYYY-MM-DD or empty';
   if (d.kind !== undefined && !KINDS.includes(d.kind)) return `kind must be one of ${KINDS.join(', ')}`;
+  if (d.series !== undefined && !SERIES.includes(d.series)) return `series must be one of ${SERIES.join(', ')}`;
+  if (d.series !== undefined && d.series !== 'main') return CLAUDE_SERIES_ONLY_CLI;
   if (d.symmetry !== undefined && !['rotational', 'mirror', 'none'].includes(d.symmetry)) return 'symmetry must be rotational, mirror or none';
   if (d.theme !== undefined && (!Array.isArray(d.theme) || !d.theme.every((t) => t && typeof t === 'object' && typeof t.answer === 'string'))) {
     return 'theme must be an array of { answer, clue?, raw? }';
@@ -475,7 +486,8 @@ export function parseNameStatusZ(out) {
 /**
  * A commit message from what changed, e.g. "Publish puzzle 2026-10-05", "Publish puzzles 2026-10-05-mini, 2026-10-05",
  * "Unpublish 2026-10-04", "Update site settings", "Publish puzzle 2026-10-05; unpublish 2026-10-04".
- * Puzzles are named by id (SPEC §8), listed by date then kind (Mini, Midi, Daily).
+ * Puzzles are named by id (SPEC §8), listed by date then series then kind (Mini, Midi, Daily); Claude's way files
+ * (site/puzzles/claude/claude-<date>….json, SPEC §9) are named by their ids too.
  */
 export function goLiveCommitMessage(changes) {
   const dates = { added: [], modified: [], deleted: [] }; // puzzle ids per change
@@ -483,8 +495,10 @@ export function goLiveCommitMessage(changes) {
   let words = false;
   let otherPuzzleFiles = false;
   for (const { path: file, change } of changes || []) {
-    const m = /^site\/puzzles\/([^/]+)\.json$/.exec(file);
-    if (m && isValidPuzzleId(m[1])) dates[change in dates ? change : 'modified'].push(m[1]);
+    const m = /^site\/puzzles\/(?:([a-z]+)\/)?([^/]+)\.json$/.exec(file);
+    // A puzzle file counts only in its own series' folder: <id>.json for main, claude/claude-<…>.json for Claude's way.
+    const parsed = m && parsePuzzleId(m[2]);
+    if (parsed && (m[1] || '') === seriesFolder(parsed.series)) dates[change in dates ? change : 'modified'].push(m[2]);
     else if (file === 'site/config.json') settings = true;
     else if (file === 'data/user-words.txt') words = true;
     else otherPuzzleFiles = true; // index.json (renumbering) or other files under site/puzzles/
@@ -528,11 +542,14 @@ const GO_LIVE_ERRORS = {
   'ssh-host': [502, 'Your computer does not trust GitHub’s SSH key yet.', 'Run "ssh -T git@github.com" once in a terminal and answer "yes", then try again.'],
   'repo-not-found': [502, 'GitHub cannot find the repository, or your account cannot see it.', 'Check the address with "git remote -v" in the project folder, or run "gh auth login" with the account that owns it.'],
   rejected: [409, 'GitHub has changes that this computer does not have yet, so it refused the update.', 'Run "git pull --rebase" in the project folder (or ask Claude to sort it out), then try again.'],
+  conflict: [409, 'GitHub has changes that clash with the ones on this computer, so nothing was sent.', 'Your puzzles are safe (saved in a local commit). Ask Claude to sort it out, or run "git pull --rebase" in the project folder and fix the clash, then try again.'],
+  'in-progress': [409, 'Git is in the middle of a rebase or merge in this folder, so it cannot put anything online right now.', 'Finish it (or run "git rebase --abort" / "git merge --abort") in the project folder, or ask Claude, then try again.'],
   protected: [409, 'GitHub refused the update: the branch is protected.', 'Allow pushes to this branch in the repository settings on GitHub, or ask Claude.'],
   network: [502, 'Could not reach GitHub.', 'Check your internet connection and try again.'],
   timeout: [504, 'Git took too long and was stopped.', 'Check your internet connection and try again. If it keeps happening, run "git push" in a terminal to see what it is waiting for.'],
   'commit-failed': [500, 'Git could not save a commit.', 'Run "git status" in the project folder to see what is wrong, or ask Claude.'],
   'push-failed': [502, 'Sending to GitHub failed.', 'Run "git push" in the project folder to see the full message, or ask Claude.'],
+  'fetch-failed': [502, 'Could not get the latest changes from GitHub.', 'Run "git fetch" in the project folder to see the full message, or ask Claude.'],
   'git-failed': [500, 'A git command failed.', 'Run "git status" in the project folder to see what is wrong, or ask Claude.'],
 };
 
@@ -550,13 +567,16 @@ export function classifyGitFailure({ stderr = '', stdout = '', timedOut = false 
   if (/Please tell me who you are|unable to auto-detect email address|empty ident name/i.test(text)) return 'identity';
   if (/index\.lock|Unable to create .*\.lock|another git process/i.test(text)) return 'locked';
   if (/dubious ownership/i.test(text)) return 'unsafe';
+  if (/rebase-(merge|apply) directory|in the middle of (a|an|another) \w+|You have not concluded your merge|MERGE_HEAD exists|you have unmerged files|unmerged paths/i.test(text)) return 'in-progress';
+  if (/^CONFLICT \(|could not apply [0-9a-f]+|would be overwritten by (checkout|merge)|Merge conflict in /im.test(text)) return 'conflict';
   if (/Host key verification failed/i.test(text)) return 'ssh-host';
   if (/Authentication failed|could not read (Username|Password)|terminal prompts disabled|Permission denied \(publickey|Invalid username or password|returned error: 40[13]|denied to |Write access to repository not granted|access denied/i.test(text)) return 'auth';
   if (/Repository not found|does not appear to be a git repository|returned error: 404/i.test(text)) return 'repo-not-found';
   if (/protected branch|GH006/i.test(text)) return 'protected';
   if (/\[rejected\]|\[remote rejected\]|non-fast-forward|fetch first|Updates were rejected/i.test(text)) return 'rejected';
   if (/Could not resolve host|unable to access|Failed to connect|Connection (timed out|refused|reset)|Network is unreachable|Operation timed out|Could not read from remote repository|ssh: connect to host|SSL|TLS|early EOF|RPC failed/i.test(text)) return 'network';
-  return step === 'push' ? 'push-failed' : step === 'commit' ? 'commit-failed' : 'git-failed';
+  if (step === 'rebase') return 'conflict'; // any other failed rebase: it was aborted, nothing changed
+  return { push: 'push-failed', commit: 'commit-failed', fetch: 'fetch-failed' }[step] || 'git-failed';
 }
 
 // ---------------------------------------------------------------------------
@@ -566,9 +586,10 @@ export function classifyGitFailure({ stderr = '', stdout = '', timedOut = false 
  * Create (but do not start) the dev server.
  * @param {{ root?: string, log?: (line: string) => void, allowedHosts?: string[] }} [opts]
  *   allowedHosts: extra Host names to accept besides localhost / loopback IPs / this computer's own names and IPs.
+ *   claude: options for "Ask Claude" (scripts/claude-clues.mjs; tests inject a provider).
  * @returns {http.Server}
  */
-export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = [] } = {}) {
+export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = [], claude = {} } = {}) {
   root = path.resolve(root);
   const extraHosts = [...allowedHosts, ...String(process.env.XW_ALLOWED_HOSTS || '').split(',')]
     .map((x) => x.trim().toLowerCase()).filter(Boolean);
@@ -576,6 +597,7 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     drafts: path.join(root, 'drafts'),
     puzzles: path.join(root, 'site', 'puzzles'),
     index: path.join(root, 'site', 'puzzles', 'index.json'),
+    claudePuzzles: path.join(root, 'site', 'puzzles', 'claude'), // SPEC §9 (written by scripts/claude-way.mjs only)
     config: path.join(root, 'site', 'config.json'),
     userWords: path.join(root, 'data', 'user-words.txt'),
     userClues: path.join(root, 'data', 'user-clues.json'),
@@ -641,8 +663,9 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       if (err.code === 'ENOENT') return [];
       throw err;
     }
-    // <date>.json (daily) and <date>-mini.json / <date>-midi.json (SPEC §8)
-    return names.filter((n) => n.endsWith('.json') && isValidPuzzleId(n.slice(0, -5)));
+    // <date>.json (daily) and <date>-mini.json / <date>-midi.json (SPEC §8). Only the user's own series lives here:
+    // a stray claude-*.json in this folder is not a main puzzle and never enters the main index (SPEC §9).
+    return names.filter((n) => n.endsWith('.json') && parsePuzzleId(n.slice(0, -5))?.series === 'main');
   }
 
   async function rebuildIndex() {
@@ -670,6 +693,9 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
   // ---- API handlers ----
   const routes = [];
   const route = (method, pattern, handler) => routes.push({ method, pattern, handler });
+
+  // "Ask Claude" for clues (SPEC §5): GET /api/claude/status, POST /api/claude/clues — see scripts/claude-clues.mjs.
+  for (const r of claudeClueRoutes({ HttpError, readJsonBody, sendJson, log, ...claude })) route(r.method, r.pattern, r.handler);
 
   route('GET', /^\/api\/drafts$/, async (req, res) => {
     let names = [];
@@ -765,6 +791,10 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     const body = await readJsonBody(req);
     const draft = body?.draft;
     if (!draft || typeof draft !== 'object') throw new HttpError(400, 'Body must be { draft, overwrite? }');
+    // The builder publishes the user's own series only (SPEC §9).
+    if (puzzleSeries(draft) !== 'main') {
+      throw new HttpError(422, CLAUDE_SERIES_ONLY_CLI, { errors: [CLAUDE_SERIES_ONLY_CLI], warnings: [] });
+    }
     let result;
     try {
       result = draftToPuzzle(draft);
@@ -839,7 +869,7 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       if (!isValidDateId(self.date)) throw new HttpError(400, 'date must be YYYY-MM-DD');
     }
     const { date, kind } = self;
-    const selfId = puzzleId(date, kind);
+    const selfId = puzzleId(date, kind, self.series || 'main');
     const daysText = params.get('days');
     const days = daysText === null ? RECENT_DAYS_DEFAULT : Number(daysText);
     if (!Number.isInteger(days) || days < 0 || days > RECENT_DAYS_MAX) {
@@ -892,9 +922,11 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     return out;
   }
 
-  // Takes any puzzle id (SPEC §8): "2026-10-05" (the daily) or "2026-10-05-mini" / "2026-10-05-midi".
+  // Takes any puzzle id (SPEC §8): "2026-10-05" (the daily) or "2026-10-05-mini" / "2026-10-05-midi" — of the user's
+  // own series: Claude's way puzzles are not unpublished from the builder (SPEC §9).
   route('DELETE', /^\/api\/published\/([^/]+)$/, async (req, res, [id]) => {
     if (!isValidPuzzleId(id)) throw new HttpError(400, 'Puzzle id must be YYYY-MM-DD, YYYY-MM-DD-mini or YYYY-MM-DD-midi');
+    if (parsePuzzleId(id).series !== 'main') throw new HttpError(400, CLAUDE_SERIES_ONLY_CLI);
     const index = await withLock(async () => {
       try {
         await fsp.unlink(path.join(paths.puzzles, `${id}.json`));
@@ -1020,12 +1052,16 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
 
   // ---- "Put it online" (addition to SPEC §4): commit the published content and push it to GitHub ----
   //
-  // GET  /api/go-live -> { git, branch, remote, upstream, pending: [{ path, change }], ahead, siteUrl, pagesUrl,
-  //                        busy, ready, problem: { code, error, hint } | null }   (local only, no network)
-  // POST /api/go-live {} -> stage + commit ONLY the GO_LIVE_PATHS that changed, then push (also when only earlier
-  //                        commits are waiting). -> { ok, upToDate, committed, pushed, commit: { sha, message, files },
-  //                        branch, remote, siteUrl, pagesUrl }; errors { error, hint, code, detail?, committed? };
-  //                        409 { busy: true } while another one runs.
+  // GET  /api/go-live -> { git, branch, remote, upstream, pending: [{ path, change }], ahead, behind, siteUrl, pagesUrl,
+  //                        busy, ready, problem: { code, error, hint } | null }   (local only, no network: `behind` is
+  //                        what GitHub had at the last fetch that this computer lacks)
+  // POST /api/go-live {} -> stage + commit ONLY the GO_LIVE_PATHS that changed; then, when there is anything to send,
+  //                        fetch, rebase onto what GitHub has that this computer lacks (SPEC §9: the daily "Claude's
+  //                        way" pushes — `git pull --rebase --autostash`, from the fetch just made) and push (also
+  //                        when only earlier commits are waiting). -> { ok, upToDate, committed, pushed, pulled,
+  //                        commit: { sha, message, files }, branch, remote, siteUrl, pagesUrl }; errors { error,
+  //                        hint, code, detail?, committed?, commit? } (a clash is code 'conflict': the rebase is aborted
+  //                        and everything is as before it); 409 { busy: true } while another one runs.
   let goLiveBusy = false;
   const git = (args, opts) => runGit(root, args, opts);
   const isGoLivePath = (file) => GO_LIVE_PATHS.some((spec) => (spec.endsWith('/') ? file.startsWith(spec) : file === spec));
@@ -1036,25 +1072,25 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     return new HttpError(status, error, { ...rest, ...extra });
   }
 
-  /** Run a git step that must succeed; a failure becomes a friendly error. */
-  async function gitOk(args, step) {
+  /** Run a git step that must succeed; a failure becomes a friendly error (with `extra`, e.g. what was committed). */
+  async function gitOk(args, step, { extra = {}, timeoutMs } = {}) {
     let r;
     try {
-      r = await git(args);
+      r = await git(args, timeoutMs ? { timeoutMs } : undefined);
     } catch (err) {
-      throw goLiveError(err.code === 'ENOENT' ? 'no-git' : 'git-failed', err.message);
+      throw goLiveError(err.code === 'ENOENT' ? 'no-git' : 'git-failed', err.message, extra);
     }
-    if (r.code !== 0 || r.timedOut) throw goLiveError(classifyGitFailure(r, step), r.stderr || r.stdout);
+    if (r.code !== 0 || r.timedOut) throw goLiveError(classifyGitFailure(r, step), r.stderr || r.stdout, extra);
     return r;
   }
 
   /**
-   * Where the repository stands, without touching the network: { git, branch, unborn, remote, upstream, ahead,
-   * problem } — upstream is e.g. 'origin/main' or null; problem = goLiveProblem(…) when "Put it online" cannot
-   * work (yet).
+   * Where the repository stands, without touching the network: { git, branch, unborn, remote, upstream, ahead, behind,
+   * problem } — upstream is e.g. 'origin/main' or null; ahead / behind count commits only here / only on GitHub as
+   * of the last fetch; problem = goLiveProblem(…) when "Put it online" cannot work (yet).
    */
   async function inspectRepo() {
-    const out = { git: false, branch: null, unborn: false, remote: null, upstream: null, ahead: 0, problem: null };
+    const out = { git: false, branch: null, unborn: false, remote: null, upstream: null, ahead: 0, behind: 0, problem: null };
     let top;
     try {
       top = await git(['rev-parse', '--show-toplevel']);
@@ -1078,10 +1114,11 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       return out;
     }
     out.git = true;
-    const [branch, head, remote] = await Promise.all([
+    const [branch, head, remote, midway] = await Promise.all([
       git(['symbolic-ref', '--quiet', '--short', 'HEAD']),
       git(['rev-parse', '--verify', '--quiet', 'HEAD']),
       git(['remote', 'get-url', 'origin']),
+      operationInProgress(),
     ]);
     out.branch = branch.code === 0 && branch.stdout.trim() ? branch.stdout.trim() : null;
     out.unborn = head.code !== 0;
@@ -1090,24 +1127,45 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       const up = await git(['rev-parse', '--abbrev-ref', '--symbolic-full-name', '@{upstream}']);
       out.upstream = up.code === 0 && up.stdout.trim() ? up.stdout.trim() : null;
     }
-    out.ahead = await countAhead(out);
+    Object.assign(out, await countAheadBehind(out));
     if (out.unborn) out.problem = goLiveProblem('no-commits');
+    else if (midway) out.problem = goLiveProblem('in-progress');
     else if (!out.branch) out.problem = goLiveProblem('detached');
     else if (!out.remote) out.problem = goLiveProblem('no-remote');
     return out;
   }
 
-  /** Commits on this branch that the remote does not have yet, as far as this computer knows (0 when unknown). */
-  async function countAhead({ branch, unborn, remote, upstream }) {
-    if (unborn || !branch || !remote) return 0;
-    let base = upstream;
+  /** True while a rebase, merge, cherry-pick or revert is stopped half-way in the repository (the user's own, say). */
+  async function operationInProgress() {
+    const names = ['rebase-merge', 'rebase-apply', 'MERGE_HEAD', 'CHERRY_PICK_HEAD', 'REVERT_HEAD'];
+    const r = await git(['rev-parse', ...names.flatMap((n) => ['--git-path', n])]);
+    if (r.code !== 0) return false;
+    const found = await Promise.all(r.stdout.split('\n').map((l) => l.trim()).filter(Boolean)
+      .map((p) => fsp.access(path.resolve(root, p)).then(() => true, () => false)));
+    return found.some(Boolean);
+  }
+
+  /** What this branch is compared with: its upstream, else origin's copy of the branch when known, else null. */
+  async function baseRef({ branch, unborn, remote, upstream }) {
+    if (unborn || !branch || !remote) return null;
+    if (upstream) return upstream;
+    // Never pushed with -u: origin's copy of the branch if we know it, else nothing is on GitHub yet.
+    const tracking = `refs/remotes/origin/${branch}`;
+    return (await git(['rev-parse', '--verify', '--quiet', tracking])).code === 0 ? tracking : null;
+  }
+
+  /** { ahead, behind }: commits only on this branch / only on GitHub, as far as this computer knows (0 when unknown). */
+  async function countAheadBehind(repo) {
+    if (repo.unborn || !repo.branch || !repo.remote) return { ahead: 0, behind: 0 };
+    const base = await baseRef(repo);
     if (!base) {
-      // Never pushed with -u: compare with origin's copy of the branch if we know it, else nothing is on GitHub yet.
-      const tracking = `refs/remotes/origin/${branch}`;
-      base = (await git(['rev-parse', '--verify', '--quiet', tracking])).code === 0 ? tracking : null;
+      const r = await git(['rev-list', '--count', 'HEAD']);
+      return { ahead: r.code === 0 ? Number(r.stdout.trim()) || 0 : 0, behind: 0 };
     }
-    const r = await git(['rev-list', '--count', base ? `${base}..HEAD` : 'HEAD']);
-    return r.code === 0 ? Number(r.stdout.trim()) || 0 : 0;
+    const r = await git(['rev-list', '--left-right', '--count', `HEAD...${base}`]);
+    if (r.code !== 0) return { ahead: 0, behind: 0 };
+    const [ahead = 0, behind = 0] = r.stdout.trim().split(/\s+/).map((n) => Number(n) || 0);
+    return { ahead, behind };
   }
 
   /** Uncommitted changes under GO_LIVE_PATHS (nothing else is ever looked at). */
@@ -1136,6 +1194,7 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
       upstream: Boolean(repo.upstream),
       pending,
       ahead: repo.ahead,
+      behind: repo.behind,
       siteUrl: config.shareUrl || null,
       pagesUrl: githubPagesUrl(repo.remote),
       busy: goLiveBusy,
@@ -1150,6 +1209,8 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     if (!pending.length) return null;
     // Stage exactly the changed files (never temp files). Explicit paths, not the folder + an exclude pathspec: with
     // an exclude magic pathspec, `git add -A <dir>` silently skips NEW files, so a newly published puzzle was left out.
+    // (Status lists every untracked file on its own — --untracked-files=all — so a new site/puzzles/claude/ folder is
+    // staged file by file too.)
     const specs = [...new Set(pending.map((c) => c.path).filter((p) => !p.endsWith('.tmp')))];
     if (!specs.length) return null;
     await gitOk(['add', '-A', '--', ...specs], 'add');
@@ -1164,6 +1225,48 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     return { sha, message, files };
   }
 
+  /**
+   * Bring in what GitHub has that this computer lacks (SPEC §9): fetch, then — if behind — replay this computer's
+   * commits on top (`git pull --rebase --autostash`, rebasing onto the ref just fetched so there is one network
+   * call). Uncommitted edits elsewhere are stashed and put back. When GitHub's new commits touch a file this computer
+   * has uncommitted edits to, or the replay clashes, nothing is changed (the rebase is aborted) and a 'conflict' error
+   * is thrown. Runs the rebase under the write lock (no publish writes files while git rewrites the tree).
+   * Returns the number of commits brought in.
+   */
+  async function catchUp(repo, extra) {
+    const fetchArgs = repo.upstream ? ['fetch', '--quiet'] : ['fetch', '--quiet', 'origin'];
+    await gitOk(fetchArgs, 'fetch', { extra, timeoutMs: GIT_PUSH_TIMEOUT_MS });
+    const base = await baseRef(repo);
+    if (!base) return 0;
+    const { behind } = await countAheadBehind(repo);
+    if (!behind) return 0;
+    return withLock(async () => {
+      // An autostash that cannot be put back cleanly would leave conflict markers in the user's own files: refuse
+      // before touching anything when GitHub changed a file with uncommitted edits here.
+      const theirs = (await gitOk(['diff', '--name-only', '-z', '--no-renames', `HEAD...${base}`, '--'], 'diff')).stdout
+        .split('\0').filter(Boolean);
+      const dirty = parseStatusZ((await gitOk(['status', '--porcelain=v1', '-z', '--no-renames', '--untracked-files=no'], 'status')).stdout)
+        .map((c) => c.path);
+      const clash = dirty.filter((f) => theirs.includes(f));
+      if (clash.length) {
+        throw goLiveError('conflict', `Changed on GitHub and edited (not committed) on this computer: ${clash.slice(0, 5).join(', ')}`, extra);
+      }
+      const r = await git(['rebase', '--autostash', base]);
+      if (r.code !== 0 || r.timedOut) {
+        const code = classifyGitFailure(r, 'rebase');
+        // Our own rebase stopped half-way (a clash): put everything back exactly as it was (autostash included).
+        if (await operationInProgress()) {
+          const abort = await git(['rebase', '--abort']);
+          if (abort.code !== 0) log(`go-live: git rebase --abort failed: ${redactSecrets(abort.stderr).trim()}`);
+        }
+        log(`go-live: could not rebase onto ${base} (${code})`);
+        throw goLiveError(code, r.stderr || r.stdout, extra);
+      }
+      log(`go-live: rebased onto ${base} (${behind} new commit${behind === 1 ? '' : 's'} from GitHub)`);
+      return behind;
+    });
+  }
+
   async function goLive() {
     const repo = await inspectRepo();
     if (repo.problem) {
@@ -1174,24 +1277,33 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
     const about = { branch: repo.branch, remote: repo.remote, siteUrl: config.shareUrl || null, pagesUrl: githubPagesUrl(repo.remote) };
     // Commit while no publish / unpublish / settings save is half-way through writing its files.
     const commit = await withLock(() => commitPublished());
-    const ahead = await countAhead(repo);
-    if (!commit && ahead === 0) return { ok: true, upToDate: true, committed: false, pushed: false, commit: null, ...about };
-    const args = repo.upstream ? ['push'] : ['push', '-u', 'origin', repo.branch];
-    const committed = { committed: Boolean(commit), commit };
-    let r;
-    try {
-      r = await git(args, { timeoutMs: GIT_PUSH_TIMEOUT_MS });
-    } catch (err) {
-      throw goLiveError(err.code === 'ENOENT' ? 'no-git' : 'push-failed', err.message, committed);
+    const { ahead } = await countAheadBehind(repo);
+    if (!commit && ahead === 0) {
+      return { ok: true, upToDate: true, committed: false, pushed: false, pulled: 0, commit: null, ...about };
     }
-    if (r.code !== 0 || r.timedOut) {
+    const committed = { committed: Boolean(commit), commit };
+    const args = repo.upstream ? ['push'] : ['push', '-u', 'origin', repo.branch];
+    let pulled = 0;
+    // GitHub may get a new commit between our fetch and our push (the daily Claude push): then catch up once more.
+    for (let attempt = 1; ; attempt++) {
+      pulled += await catchUp(repo, committed);
+      let r;
+      try {
+        r = await git(args, { timeoutMs: GIT_PUSH_TIMEOUT_MS });
+      } catch (err) {
+        throw goLiveError(err.code === 'ENOENT' ? 'no-git' : 'push-failed', err.message, committed);
+      }
+      if (r.code === 0 && !r.timedOut) break;
       const code = classifyGitFailure(r, 'push');
+      if (code === 'rejected' && attempt < 2) continue;
       const last = redactSecrets(r.stderr).trim().split('\n').pop() || '';
       log(`go-live: push failed (${code})${last ? `: ${last}` : ''}`);
       throw goLiveError(code, r.stderr || r.stdout, committed);
     }
+    // After a rebase our commit has a new sha: report the one that is on GitHub.
+    if (commit && pulled) commit.sha = (await gitOk(['rev-parse', 'HEAD'], 'rev-parse')).stdout.trim();
     log(`go-live: pushed ${repo.branch} to ${repo.remote}`);
-    return { ok: true, upToDate: false, committed: Boolean(commit), pushed: true, commit, ...about };
+    return { ok: true, upToDate: false, committed: Boolean(commit), pushed: true, pulled, commit, ...about };
   }
 
   route('GET', /^\/api\/go-live$/, async (req, res) => {
@@ -1259,18 +1371,24 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
   }
 
   /**
-   * For devices on the network: hide unreleased puzzle files and drop them from the index, so the dev server
-   * shows a phone exactly what the deployed site would. Returns true when it answered the request itself.
+   * For devices on the network: hide unreleased puzzle files and drop them from the indexes, so the dev server
+   * shows a phone exactly what the deployed site would. Covers site/puzzles/ and the series folders below it
+   * (site/puzzles/claude/, SPEC §9): a file whose name — or a folder in its path — starts with a date (after an
+   * optional series prefix, "claude-2026-10-05-mini.json") later than the release date is hidden, and every
+   * index.json there is served without the entries dated later. Returns true when it answered the request itself.
    */
   async function serveRemotePuzzles(req, res, file) {
-    const puzzlesDir = await fsp.realpath(paths.puzzles).catch(() => null);
-    if (!puzzlesDir || path.dirname(file) !== puzzlesDir) return false;
-    const name = path.basename(file);
+    const dirs = (await Promise.all([paths.puzzles, paths.claudePuzzles].map((d) => fsp.realpath(d).catch(() => null))))
+      .filter(Boolean);
+    const dir = dirs.find((d) => file.startsWith(d + path.sep));
+    if (!dir) return false;
     const released = await releasedDate();
-    // Any puzzle file of a future date (daily, mini or midi) is hidden: release goes by date (SPEC §8).
-    const dated = /^(\d{4}-\d{2}-\d{2})(?:[-.]|$)/.exec(name);
-    if (dated && name !== 'index.json' && dated[1] > released) throw new HttpError(404, 'Not found');
-    if (name !== 'index.json') return false;
+    // Release goes by date for every kind and series (SPEC §8, §9).
+    for (const segment of path.relative(dir, file).split(path.sep)) {
+      const dated = /^(?:[a-z]+-)*(\d{4}-\d{2}-\d{2})(?:[-.]|$)/.exec(segment);
+      if (dated && dated[1] > released) throw new HttpError(404, 'Not found');
+    }
+    if (path.basename(file) !== 'index.json') return false;
     const index = await readJsonIfExists(file, null);
     if (!index || !Array.isArray(index.puzzles)) return false;
     const body = JSON.stringify({ ...index, puzzles: index.puzzles.filter((p) => !(p && typeof p.date === 'string' && p.date > released)) });

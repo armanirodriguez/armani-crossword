@@ -1,6 +1,6 @@
 // Clues tab: Across / Down lists with a clue input per entry, suggestions (theme → yours → curated → dictionary),
-// status (missing / contains answer / auto-suggested needs review), "Suggest all missing", and a small grid that
-// highlights the entry being clued.
+// "Ask Claude" (✦: three straightforward + three lateral clues, see ../claude-clues.js), status (missing / contains
+// answer / auto-suggested needs review), "Suggest all missing", and a small grid that highlights the entry being clued.
 //
 // Clue text is stored exactly as typed (draft.clues[ANSWER]); it is normalised only when publishing.
 
@@ -12,6 +12,7 @@ import {
   LONG_CLUE_CHARS, analyze, entryPattern, fillMissingClues, gridOf, themeAnswers, themeClues, undoFilledClues,
 } from '../draft-utils.js';
 import { miniGrid } from '../mini-grid.js';
+import { createClaudeAsk } from '../claude-clues.js';
 
 const FILTERS = [
   { id: 'all', label: 'All' },
@@ -29,6 +30,17 @@ export function mountClues(container, ctx) {
   let activeId = session.clueEntry || null;
   let filter = 'all';
   let popover = null;          // { el, entryId, items, index }
+  const claude = createClaudeAsk({
+    contextFor: claudeContext,
+    currentClue: (e) => normalizeClue(d().clues[e.answer] ?? ''),
+    onOpen: (e) => setActive(e.id),
+    onPick: (e, clue) => {
+      // Like picking a suggestion: the user chose it, so it counts as reviewed.
+      setClue(e.answer, clue, 'user');
+      const row = rows.get(e.id);
+      if (row) { row.input.value = clue; row.input.focus(); }
+    },
+  });
 
   const summary = h('div', { class: 'clue-summary' });
   const filterSeg = h('div', { class: 'seg sm', role: 'radiogroup', 'aria-label': 'Show' },
@@ -56,6 +68,7 @@ export function mountClues(container, ctx) {
   function build() {
     const cur = d();
     entries = analyze(cur);
+    claude.reset();
     rows = new Map();
     order = [];
     acrossList.replaceChildren();
@@ -102,7 +115,8 @@ export function mountClues(container, ctx) {
         isTheme ? h('span', { class: 'badge theme' }, 'Theme') : null,
         statusEl,
         lenEl),
-      h('div', { class: 'cr-input' }, input, suggBtn));
+      h('div', { class: 'cr-input' }, input, suggBtn, claude.button(e)));
+    claude.attach(e.id, li);
     return { entry: e, li, input, statusEl, lenEl, suggBtn };
   }
 
@@ -296,6 +310,20 @@ export function mountClues(container, ctx) {
       .filter((s) => s.clue !== normalizeClue(cur.clues[e.answer] ?? ''));
   }
 
+  /** What Claude is told about the puzzle for one entry (POST /api/claude/clues, minus `avoid`). */
+  function claudeContext(e) {
+    const cur = d();
+    const theme = [...themeAnswers(cur)].filter((a) => /^[A-Z]{2,25}$/.test(a)).slice(0, 40);
+    const others = entries.all
+      .filter((x) => x.answer && x.answer !== e.answer)
+      .map((x) => normalizeClue(cur.clues[x.answer] ?? '').slice(0, 300))
+      .filter(Boolean);
+    return {
+      answer: e.answer, entryId: e.id, isTheme: theme.includes(e.answer), title: normalizeClue(cur.title).slice(0, 200),
+      theme, otherClues: [...new Set(others)].slice(0, 400),
+    };
+  }
+
   async function suggestAllMissing() {
     if (!clueBank.loaded) await clueBank.load();
     const cur = d();
@@ -392,6 +420,7 @@ export function mountClues(container, ctx) {
     },
     destroy() {
       document.removeEventListener('mousedown', onDocDown);
+      claude.destroy();
     },
   };
 }

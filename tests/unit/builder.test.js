@@ -378,8 +378,11 @@ test('RecentAnswers degrades to "nothing recent" when the server cannot answer',
 test('kinds: ids, labels, the size default and what a draft publishes to', () => {
   assert.equal(puzzleId('2026-10-05', 'daily'), '2026-10-05');
   assert.equal(puzzleId('2026-10-05', 'mini'), '2026-10-05-mini');
-  assert.deepEqual(parsePuzzleId('2026-10-05-midi'), { date: '2026-10-05', kind: 'midi' });
-  assert.deepEqual(parsePuzzleId('2026-10-05'), { date: '2026-10-05', kind: 'daily' });
+  assert.deepEqual(parsePuzzleId('2026-10-05-midi'), { date: '2026-10-05', kind: 'midi', series: 'main' });
+  assert.deepEqual(parsePuzzleId('2026-10-05'), { date: '2026-10-05', kind: 'daily', series: 'main' });
+  // SPEC §9: Claude's way ids parse too (the builder itself only ever publishes main-series ids).
+  assert.deepEqual(parsePuzzleId('claude-2026-10-05-mini'), { date: '2026-10-05', kind: 'mini', series: 'claude' });
+  assert.equal(idDate('claude-2026-10-05'), '2026-10-05');
   assert.equal(parsePuzzleId('2026-10-05-maxi'), null);
   assert.equal(idDate('2026-10-05-mini'), '2026-10-05');
   assert.equal(suggestKind(5, 5), 'mini');

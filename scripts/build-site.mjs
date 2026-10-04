@@ -24,12 +24,16 @@
 // The puzzle index is always rebuilt from the puzzle files that end up in the output, so numbering stays
 // consistent (numbers count per kind in date order, so dropping future puzzles never renumbers released ones).
 // Puzzle files are <date>.json (daily) and <date>-mini.json / <date>-midi.json (SPEC §8); release goes by date.
+// "Claude's way" (SPEC §9) lives in puzzles/claude/ (claude-<date>.json, claude-<date>-mini.json, …) with its own
+// index.json: it is released by date exactly the same way and its index rebuilt; the folder may not exist (yet).
 
 import path from 'node:path';
 import { promises as fsp } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
-import { buildIndex, comparePuzzles, isValidDateId, parsePuzzleId, todayISO } from '../site/shared/puzzle.js';
+import {
+  SERIES, buildIndex, comparePuzzles, isValidDateId, parsePuzzleId, seriesFolder, todayISO,
+} from '../site/shared/puzzle.js';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 /** The zone where the calendar date changes first (UTC+14). */
@@ -284,30 +288,61 @@ export async function buildSite({
   await writeSiteMetadata(out, config, log);
 
   const puzzlesDir = path.join(out, 'puzzles');
-  let names = [];
-  try {
-    names = await fsp.readdir(puzzlesDir);
-  } catch (err) {
-    if (err.code !== 'ENOENT') throw err;
-    await fsp.mkdir(puzzlesDir, { recursive: true });
-  }
-
+  await fsp.mkdir(puzzlesDir, { recursive: true });
   const kept = [];
   const dropped = [];
-  const puzzles = [];
+  const indexes = {};
+  for (const series of SERIES) {
+    const dir = path.join(puzzlesDir, seriesFolder(series));
+    // Series other than the user's own only exist once their first puzzle is published (SPEC §9). (lstat: a symbolic
+    // link is never followed — deleting unreleased files through it could reach the source folder.)
+    if (series !== 'main' && !(await fsp.lstat(dir).then((st) => st.isDirectory(), () => false))) continue;
+    indexes[series] = await releaseFolder(dir, series, { todayId, kept, dropped, log });
+  }
+  const zone = config.timeZone || `${EARLIEST_ZONE}, the earliest zone`;
+  log(`Built ${path.relative(process.cwd(), out) || out}: ${kept.length} puzzle(s)`
+    + (releasedOnly
+      ? `, ${dropped.length} unreleased held back (released through ${todayId}`
+        + `${today ? '' : ` in ${zone}${leadHours ? `, ${leadHours} h ahead` : ''}`})`
+      : ''));
+  return { out, today: todayId, kept, dropped, index: indexes.main, indexes };
+}
+
+/** Matches a file or folder name that starts with a date, after optional prefixes: "2026-10-05.json", "claude-2026-10-05-mini.json". */
+const DATED_NAME = /^(?:[a-z]+-)*(\d{4}-\d{2}-\d{2})(?:[-.]|$)/;
+
+/**
+ * One series' folder of the output: with `todayId`, delete its puzzles dated after it (and any other file or folder
+ * whose name is dated after it, e.g. a stray "2026-12-25-copy.json"); then rewrite its index.json from the puzzle files
+ * left. Only files named with this series' ids are indexed (a claude-*.json in the main folder is not a main puzzle).
+ * The other series' folders inside the main folder are left to their own pass; other subfolders are swept for
+ * unreleased files.
+ * @returns {Promise<object>} the index written
+ */
+async function releaseFolder(dir, series, { todayId, kept, dropped, log }) {
+  const seriesDirs = new Set(SERIES.map(seriesFolder).filter(Boolean));
   const entries = [];
-  for (const name of names) {
-    const parsed = name.endsWith('.json') ? parsePuzzleId(name.slice(0, -5)) : null;
-    if (parsed) { entries.push({ ...parsed, id: name.slice(0, -5), name }); continue; }
-    // Anything else dated in the future (e.g. a stray "2026-12-25-copy.json") must not leak either.
-    const dated = /^(\d{4}-\d{2}-\d{2})[-.]/.exec(name);
-    if (todayId && dated && dated[1] > todayId) {
-      log(`warning: removing unreleased file ${name}`);
-      await fsp.rm(path.join(puzzlesDir, name), { recursive: true, force: true });
+  for (const dirent of await fsp.readdir(dir, { withFileTypes: true })) {
+    const { name } = dirent;
+    const parsed = dirent.isFile() && name.endsWith('.json') ? parsePuzzleId(name.slice(0, -5)) : null;
+    if (parsed && parsed.series === series) {
+      entries.push({ ...parsed, id: name.slice(0, -5), name });
+      continue;
+    }
+    if (series === 'main' && dirent.isDirectory() && seriesDirs.has(name)) continue;
+    if (!todayId) continue;
+    // Anything else dated in the future must not leak either.
+    const dated = DATED_NAME.exec(name);
+    if (dated && dated[1] > todayId) {
+      log(`warning: removing unreleased file ${path.relative(path.dirname(dir), path.join(dir, name))}`);
+      await fsp.rm(path.join(dir, name), { recursive: true, force: true });
+    } else if (dirent.isDirectory()) {
+      await sweepUnreleased(path.join(dir, name), todayId, log);
     }
   }
+  const puzzles = [];
   for (const { id, date, name } of entries.sort(comparePuzzles)) {
-    const file = path.join(puzzlesDir, name);
+    const file = path.join(dir, name);
     if (todayId && date > todayId) {
       await fsp.rm(file);
       dropped.push(id);
@@ -323,15 +358,22 @@ export async function buildSite({
     }
   }
   const index = buildIndex(puzzles);
-  await fsp.writeFile(path.join(puzzlesDir, 'index.json'), `${JSON.stringify(index, null, 2)}\n`);
+  await fsp.writeFile(path.join(dir, 'index.json'), `${JSON.stringify(index, null, 2)}\n`);
+  return index;
+}
 
-  const zone = config.timeZone || `${EARLIEST_ZONE}, the earliest zone`;
-  log(`Built ${path.relative(process.cwd(), out) || out}: ${kept.length} puzzle(s)`
-    + (releasedOnly
-      ? `, ${dropped.length} unreleased held back (released through ${todayId}`
-        + `${today ? '' : ` in ${zone}${leadHours ? `, ${leadHours} h ahead` : ''}`})`
-      : ''));
-  return { out, today: todayId, kept, dropped, index };
+/** Delete every file or folder below `dir` whose name is dated after `todayId`. */
+async function sweepUnreleased(dir, todayId, log) {
+  for (const dirent of await fsp.readdir(dir, { withFileTypes: true })) {
+    const full = path.join(dir, dirent.name);
+    const dated = DATED_NAME.exec(dirent.name);
+    if (dated && dated[1] > todayId) {
+      log(`warning: removing unreleased file ${full}`);
+      await fsp.rm(full, { recursive: true, force: true });
+    } else if (dirent.isDirectory()) {
+      await sweepUnreleased(full, todayId, log);
+    }
+  }
 }
 
 function parseArgs(argv) {

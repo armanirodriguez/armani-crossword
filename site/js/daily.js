@@ -2,20 +2,29 @@
 //
 // A date can hold up to one puzzle of each kind (SPEC §8): Mini, Midi and Daily. Index entries are identified by
 // their puzzle id ("2026-10-04" for a daily — the id every pre-§8 puzzle already has — "2026-10-04-mini", …).
+// Each series (SPEC §9: the user's puzzles and "Claude's way") has its own index; every function here works on one
+// index at a time. Entries of Claude's index carry series: 'claude' (data.js tags them) and ids "claude-2026-10-04-mini".
 
 import { KINDS, KIND_LABELS, isValidDateId, isValidKind, parsePuzzleId, puzzleId } from '../shared/puzzle.js';
+import { CLAUDE, seriesOf } from './series.js';
 
 /** The kind of an index entry ('daily' when missing or unknown). */
 export function entryKind(p) {
   return isValidKind(p?.kind) ? p.kind : 'daily';
 }
 
-/** The puzzle id of an index entry (derived from date + kind when the entry has no valid id). */
+/** The series of an index entry: 'claude' or 'main'. */
+export function entrySeries(p) {
+  return seriesOf(p);
+}
+
+/** The puzzle id of an index entry (derived from date + kind + series when the entry has no valid id). */
 export function entryId(p) {
   const kind = entryKind(p);
+  const series = entrySeries(p);
   const parsed = parsePuzzleId(p?.id);
-  if (parsed && parsed.date === p.date && parsed.kind === kind) return p.id;
-  return puzzleId(p?.date, kind);
+  if (parsed && parsed.date === p.date && parsed.kind === kind && parsed.series === series) return p.id;
+  return puzzleId(p?.date, kind, series);
 }
 
 /** "Mini" / "Midi" / "Daily". */
@@ -95,11 +104,11 @@ export function pickDaily(index, today) {
   return { entry: t.entries[t.entries.length - 1], isToday: t.isToday };
 }
 
-/** Index entry for a puzzle id (a bare date is the daily of that date), or null. */
+/** Index entry for a puzzle id (a bare date is the daily of that date), or null. Look Claude ids up in Claude's index. */
 export function findEntry(index, id) {
   const parsed = parsePuzzleId(id);
   if (!parsed) return null;
-  const want = puzzleId(parsed.date, parsed.kind);
+  const want = puzzleId(parsed.date, parsed.kind, parsed.series);
   return indexEntries(index).find((p) => entryId(p) === want) || null;
 }
 
@@ -110,21 +119,33 @@ export function todaySignature(index, today) {
 }
 
 /**
- * Parse location.hash into a route:
- *   '' | '#' | '#/'               -> { name: 'today' }
- *   '#/puzzle/2026-10-03'          -> { name: 'puzzle', id: '2026-10-03', date, kind: 'daily' }
- *   '#/puzzle/2026-10-03-mini'     -> { name: 'puzzle', id: '2026-10-03-mini', date, kind: 'mini' }
- *   '#/archive'                    -> { name: 'archive' }
- *   anything else                  -> { name: 'today', unknown: true }
+ * Parse location.hash into a route (the user's series has no `series` field, as before SPEC §9):
+ *   '' | '#' | '#/'                    -> { name: 'today' }
+ *   '#/puzzle/2026-10-03'               -> { name: 'puzzle', id: '2026-10-03', date, kind: 'daily' }
+ *   '#/puzzle/2026-10-03-mini'          -> { name: 'puzzle', id: '2026-10-03-mini', date, kind: 'mini' }
+ *   '#/puzzle/claude-2026-10-03-mini'   -> { name: 'puzzle', id: 'claude-2026-10-03-mini', date, kind: 'mini', series: 'claude' }
+ *   '#/archive'                         -> { name: 'archive' }
+ *   '#/archive/claude'                  -> { name: 'archive', series: 'claude' }
+ *   anything else                       -> { name: 'today', unknown: true }
  */
 export function parseRoute(hash) {
   const h = String(hash || '').replace(/^#/, '');
   if (h === '' || h === '/') return { name: 'today' };
-  if (/^\/archive\/?$/.test(h)) return { name: 'archive' };
+  const a = /^\/archive(\/claude)?\/?$/.exec(h);
+  if (a) return a[1] ? { name: 'archive', series: CLAUDE } : { name: 'archive' };
   const m = /^\/puzzle\/([0-9a-z-]+?)\/?$/.exec(h);
   const parsed = m ? parsePuzzleId(m[1]) : null;
-  if (parsed) return { name: 'puzzle', id: m[1], date: parsed.date, kind: parsed.kind };
+  if (parsed) {
+    const r = { name: 'puzzle', id: m[1], date: parsed.date, kind: parsed.kind };
+    if (parsed.series === CLAUDE) r.series = CLAUDE;
+    return r;
+  }
   return { name: 'today', unknown: true };
+}
+
+/** The series a route is about ('main' unless it names Claude's). */
+export function routeSeries(r) {
+  return seriesOf(r);
 }
 
 /**

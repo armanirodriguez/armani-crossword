@@ -2,10 +2,12 @@
 
 import { puzzleKind } from '../../shared/puzzle.js';
 import { buildShareText, deliverShare, shareGridRows, shareUrlFor } from '../share.js';
+import { CLAUDE, CLAUDE_LABEL, seriesOf } from '../series.js';
 import { showCopyFallback, toast } from '../ui.js';
 
 /**
- * Build the share text for a solved puzzle.
+ * Build the share text for a solved puzzle. Claude's way puzzles use the series label instead of the site name
+ * (SPEC §9): "🧩 Claude's way Mini #3 · Mon, Oct 5".
  * @param {object} ctx      app context (config)
  * @param {object} raw      published puzzle
  * @param {object|null} entry index entry (number)
@@ -14,7 +16,7 @@ import { showCopyFallback, toast } from '../ui.js';
  */
 export function shareTextFor(ctx, raw, entry, loaded, result) {
   return buildShareText({
-    siteName: ctx.config.siteName,
+    siteName: seriesOf(raw) === CLAUDE ? CLAUDE_LABEL : ctx.config.siteName,
     number: entry?.number ?? null,
     kind: puzzleKind(raw),
     date: raw.date,

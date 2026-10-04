@@ -1,11 +1,13 @@
 // Today's puzzles when a date has more than one (SPEC §8): one card per puzzle in Mini, Midi, Daily order, each
 // with its kind, number, title, size, a silhouette of the grid, this browser's status and Play / Resume.
-// (A date with a single puzzle keeps the classic intro card — see intro.js.)
+// (A date with a single puzzle keeps the classic intro card — see intro.js.) Claude's way (SPEC §9) uses the same
+// cards in its own home-page section (claude.js).
 
 import { h } from '../dom.js';
 import { icon } from '../icons.js';
 import { formatDate, loadPuzzle, puzzleKind } from '../../shared/puzzle.js';
-import { entryId, entryKind, kindLabel } from '../daily.js';
+import { entryId, entryKind, entrySeries, kindLabel } from '../daily.js';
+import { CLAUDE, CLAUDE_TITLE } from '../series.js';
 import { loadProgress, progressKey, progressStatus } from '../progress.js';
 import { playState, silhouette } from './intro.js';
 import { siteHeader } from './common.js';
@@ -13,17 +15,19 @@ import { siteHeader } from './common.js';
 /**
  * One card. `item` = { entry, raw } for a loaded puzzle, or { entry, error } when its file could not be loaded.
  */
-function dayCard(ctx, item, { onPlay, onRetry }) {
+export function dayCard(ctx, item, { onPlay, onRetry }) {
   const { entry } = item;
   const kind = item.raw ? puzzleKind(item.raw) : entryKind(entry);
   const id = entryId(entry);
+  const claude = entrySeries(entry) === CLAUDE;
+  const what = claude ? `${CLAUDE_TITLE} ${kindLabel(kind)}` : kindLabel(kind); // for the Play button's name
   const head = (status = null) => h('div', { class: 'day-card-head' },
     h('span', { class: ['kind-badge', `kind-${kind}`] }, kindLabel(kind)),
     entry.number ? h('span', { class: 'day-card-num' }, `#${entry.number}`) : null,
     status && h('span', { class: ['status-pill', `status-${status.state}`, 'day-card-status'] }, status.label));
 
   if (!item.raw) {
-    return h('article', { class: ['day-card', `kind-${kind}`, 'is-error'], dataset: { id, kind } },
+    return h('article', { class: ['day-card', `kind-${kind}`, claude && 'series-claude', 'is-error'], dataset: { id, kind } },
       head(),
       h('h2', { class: 'day-card-title' }, entry.title || 'Untitled'),
       h('p', { class: 'day-card-error' }, icon('alert', { size: 18 }), h('span', null, 'This puzzle couldn’t be loaded.')),
@@ -39,11 +43,11 @@ function dayCard(ctx, item, { onPlay, onRetry }) {
   const playBtn = h('button', {
     type: 'button',
     class: ['btn', status.state === 'new' || status.state === 'progress' ? 'btn-primary' : 'btn-secondary', 'day-card-play'],
-    'aria-label': `${playLabel} — ${kindLabel(kind)}: ${raw.title || 'Untitled'}`,
+    'aria-label': `${playLabel} — ${what}: ${raw.title || 'Untitled'}`,
     onclick: () => onPlay(raw.id),
   }, icon(playIcon, { size: 18 }), h('span', null, playLabel));
 
-  return h('article', { class: ['day-card', `kind-${kind}`, `is-${status.state}`], dataset: { id: raw.id, kind } },
+  return h('article', { class: ['day-card', `kind-${kind}`, claude && 'series-claude', `is-${status.state}`], dataset: { id: raw.id, kind } },
     head(status),
     h('div', { class: 'day-card-body' },
       h('div', { class: 'day-card-thumb' }, silhouette(loaded, progress, { fluid: true, className: 'thumb' })),

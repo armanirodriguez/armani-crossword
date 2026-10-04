@@ -45,11 +45,43 @@ Open **http://localhost:5173/builder/** (the player site is at http://localhost:
 4. **Clues** → **Suggest all missing** fills empty clues from the clue bank (your own past clues first, then
    a curated bank of crossword-style clues for ~26,000 words, then dictionary-derived clues). Rewrite anything that isn't fun; auto-suggested clues
    are flagged for review. Words the bank doesn't know (often theme words) stay empty for you to write.
+   Stuck on one? Click **✦** on its row to [ask Claude](#ask-claude-for-clues) for ideas.
 5. **Review & Publish** → check the list, play it in the preview (desktop and phone sizes), then **Publish**.
 
 Publishing writes `site/puzzles/<date>.json`. It is only on your computer until you deploy (below).
 
 There is a sample draft, **Warm-Up**, in the sidebar if you want to try the flow on a finished mini.
+
+---
+
+## Ask Claude for clues
+
+In **Clues**, every row has a **✦** button (*Ask Claude for clues*). One click and, after about 5–15 seconds,
+Claude suggests six clues for that word:
+
+- **Straightforward** — three clean, fair clues (a definition, a synonym or example, a fill-in-the-blank with
+  `___`), Monday–Wednesday style.
+- **Lateral ?** — three trickier, misdirecting clues (puns, double meanings) that end in "?", Thursday–Saturday
+  style.
+
+Click one to use it (it goes into the clue box like a picked suggestion — edit it as you like), **Try again** for six
+fresh ones, or **×** / Esc to close. Claude is told the puzzle's title, its theme answers and the other clues, so it
+doesn't repeat ideas, and the builder throws out any clue that gives the answer away. Claude only ever sees the one
+word you ask about plus that context — and only when you click.
+
+**How it connects.** By default it uses **your Claude Code login**: if `claude` works in a terminal on this computer
+(install [Claude Code](https://claude.com/claude-code) and log in once), it just works — no API key, nothing to
+install in this project. Each click runs Claude Code in the background, so it **counts toward your Claude plan's
+usage** like any other Claude Code request. **Site settings → Claude** shows whether it's connected.
+
+Optional: to use a Claude API key instead (billed to that API account), run `npm install` (it installs the optional
+`@anthropic-ai/sdk` package) and start the builder with the key set: `ANTHROPIC_API_KEY=sk-ant-… npm run dev`. The key
+wins when both are available. Other switches: `XW_CLAUDE=off` turns the feature off, `XW_CLAUDE=cli` / `XW_CLAUDE=api`
+picks the connection, `XW_CLAUDE_MODEL=…` changes the model (default `claude-opus-5-5`), and `XW_CLAUDE_BIN=/path/to/claude`
+points to Claude Code if it isn't on your PATH or in `~/.local/bin`.
+
+If it says **"Claude Code isn't logged in"**, run `claude` in a terminal, log in (`/login`) and click **Try again**.
+**"Restart npm run dev"** means the dev server was started before this feature existed.
 
 ---
 

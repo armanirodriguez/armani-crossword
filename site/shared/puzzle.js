@@ -141,22 +141,71 @@ export function puzzleKind(p) {
   return (p && p.kind) || 'daily';
 }
 
-/** Published id for a date + kind: "2026-10-05" (daily, backward compatible) or "2026-10-05-mini". */
-export function puzzleId(date, kind = 'daily') {
-  const k = kind || 'daily';
-  return k === 'daily' ? String(date) : `${date}-${k}`;
+// ---------------------------------------------------------------------------
+// Series (SPEC §9): the user's own puzzles ('main') and "Claude's way" ('claude'), made daily by a Claude session.
+
+/** Puzzle series in display order. */
+export const SERIES = Object.freeze(['main', 'claude']);
+/** Display names ('' for the user's own series: the site name is used there). */
+export const SERIES_LABELS = Object.freeze({ main: '', claude: "Claude's way" });
+
+/** True for one of SERIES. */
+export function isValidSeries(series) {
+  return typeof series === 'string' && SERIES.includes(series);
 }
 
-/** "2026-10-05-mini" -> { date: '2026-10-05', kind: 'mini' }; "2026-10-05" -> { …, kind: 'daily' }; else null. */
+/** The series of a puzzle, draft or index entry: `p.series || 'main'`. */
+export function puzzleSeries(p) {
+  return (p && p.series) || 'main';
+}
+
+/**
+ * Published id for a date + kind (+ series): "2026-10-05" (daily, backward compatible) or "2026-10-05-mini";
+ * Claude's way ids carry the series first: "claude-2026-10-05", "claude-2026-10-05-mini".
+ */
+export function puzzleId(date, kind = 'daily', series = 'main') {
+  const k = kind || 'daily';
+  const id = k === 'daily' ? String(date) : `${date}-${k}`;
+  return series && series !== 'main' ? `${series}-${id}` : id;
+}
+
+const PUZZLE_ID_RE = new RegExp(`^(?:(${SERIES.filter((s) => s !== 'main').join('|')})-)?(\\d{4}-\\d{2}-\\d{2})(?:-(mini|midi))?$`);
+
+/**
+ * "2026-10-05-mini" -> { date: '2026-10-05', kind: 'mini', series: 'main' }; "2026-10-05" -> { …, kind: 'daily', … };
+ * "claude-2026-10-05-midi" -> { date: '2026-10-05', kind: 'midi', series: 'claude' }; anything else -> null.
+ */
 export function parsePuzzleId(id) {
   if (typeof id !== 'string') return null;
-  const m = /^(\d{4}-\d{2}-\d{2})(?:-(mini|midi))?$/.exec(id);
-  if (!m || !isValidDateId(m[1])) return null;
-  return { date: m[1], kind: m[2] || 'daily' };
+  const m = PUZZLE_ID_RE.exec(id);
+  if (!m || !isValidDateId(m[2])) return null;
+  return { date: m[2], kind: m[3] || 'daily', series: m[1] || 'main' };
 }
 
 export function isValidPuzzleId(id) {
   return parsePuzzleId(id) !== null;
+}
+
+/** Folder of a series' files under site/puzzles/: '' for main (and anything unknown), 'claude' for Claude's way. */
+export function seriesFolder(series = 'main') {
+  return isValidSeries(series) && series !== 'main' ? series : '';
+}
+
+/**
+ * Where a puzzle's file lives, relative to site/puzzles/ (and dist/puzzles/): "2026-10-05.json",
+ * "claude/claude-2026-10-05-mini.json". Null for an invalid id.
+ */
+export function puzzleFilePath(id) {
+  const parsed = parsePuzzleId(id);
+  if (!parsed) return null;
+  const folder = seriesFolder(parsed.series);
+  return folder ? `${folder}/${id}.json` : `${id}.json`;
+}
+
+/** A series' index file relative to site/puzzles/: "index.json" (main) or "claude/index.json". */
+export function seriesIndexPath(series = 'main') {
+  const folder = seriesFolder(series);
+  return folder ? `${folder}/index.json` : 'index.json';
 }
 
 /** Default kind for a grid size (the user can still choose another): ≤ 7 mini, ≤ 11 midi, else daily. */
@@ -174,8 +223,10 @@ export function isValidDraftId(id) {
   return typeof id === 'string' && /^[a-z0-9][a-z0-9-]{0,63}$/.test(id);
 }
 
-/** A new, empty draft. */
-export function makeDraft({ id, width = 9, height = width, title = '', author = '', date = '', symmetry = 'rotational', kind = 'daily' } = {}) {
+/** A new, empty draft. `series` is 'main' (the builder's) unless Claude's way makes it (SPEC §9). */
+export function makeDraft({
+  id, width = 9, height = width, title = '', author = '', date = '', symmetry = 'rotational', kind = 'daily', series = 'main',
+} = {}) {
   const now = new Date().toISOString();
   return {
     format: DRAFT_FORMAT,
@@ -185,6 +236,7 @@ export function makeDraft({ id, width = 9, height = width, title = '', author = 
     note: '',
     date,
     kind: isValidKind(kind) ? kind : 'daily',
+    series: isValidSeries(series) ? series : 'main',
     width,
     height,
     symmetry,
@@ -214,7 +266,8 @@ export function draftEntries(draft) {
 /**
  * Convert a draft into a publishable puzzle.
  * Returns { puzzle, errors: string[], warnings: string[] }. `puzzle` is null when there are errors.
- * The published id is puzzleId(draft.date, draft.kind): the date for a daily, "<date>-mini" / "<date>-midi" otherwise.
+ * The published id is puzzleId(draft.date, draft.kind, draft.series): the date for a daily, "<date>-mini" /
+ * "<date>-midi" otherwise, prefixed "claude-" for Claude's way (series 'claude'; missing ⇒ 'main').
  */
 export function draftToPuzzle(draft) {
   const errors = [];
@@ -229,6 +282,8 @@ export function draftToPuzzle(draft) {
   if (!isValidDateId(draft.date)) errors.push('Pick a release date (YYYY-MM-DD)');
   const kind = puzzleKind(draft);
   if (!isValidKind(kind)) errors.push(`Unknown puzzle kind "${kind}" (use mini, midi or daily)`);
+  const series = puzzleSeries(draft);
+  if (!isValidSeries(series)) errors.push(`Unknown puzzle series "${series}" (use ${SERIES.join(' or ')})`);
   if (!normalizeClue(draft.title)) warnings.push('The puzzle has no title');
 
   const grid = { width, height, cells: draft.cells };
@@ -249,7 +304,7 @@ export function draftToPuzzle(draft) {
   }
   if (errors.length) return { puzzle: null, errors, warnings };
 
-  const id = puzzleId(draft.date, kind);
+  const id = puzzleId(draft.date, kind, series);
   const plain = draft.cells.map((ch) => (ch === BLOCK ? BLOCK : ch)).join('');
   const whiteSet = (list) => [...new Set((list || []).filter((i) => Number.isInteger(i) && i >= 0 && i < plain.length && plain[i] !== BLOCK))].sort((a, b) => a - b);
   const { across, down } = draftEntries(draft);
@@ -258,6 +313,7 @@ export function draftToPuzzle(draft) {
     id,
     date: draft.date,
     ...(kind === 'daily' ? {} : { kind }),
+    ...(series === 'main' ? {} : { series }),
     title: normalizeClue(draft.title) || 'Untitled',
     author: normalizeClue(draft.author),
     note: String(draft.note ?? '').trim(),
@@ -285,9 +341,13 @@ export function validatePuzzle(p) {
   if (!p || typeof p !== 'object') return { ok: false, errors: ['Not an object'] };
   if (p.format !== PUZZLE_FORMAT) errors.push(`Unknown format ${p.format}`);
   const kind = puzzleKind(p);
+  const series = puzzleSeries(p);
   if (!isValidKind(kind)) errors.push(`Unknown kind ${kind}`);
-  else if (!isValidDateId(p.date) || p.id !== puzzleId(p.date, kind)) {
-    errors.push(kind === 'daily' ? 'id/date must be the same YYYY-MM-DD date' : `id must be ${p.date}-${kind} for a ${kind} on ${p.date}`);
+  else if (!isValidSeries(series)) errors.push(`Unknown series ${series}`);
+  else if (!isValidDateId(p.date) || p.id !== puzzleId(p.date, kind, series)) {
+    errors.push(kind === 'daily' && series === 'main'
+      ? 'id/date must be the same YYYY-MM-DD date'
+      : `id must be ${puzzleId(p.date, kind, series)} for a ${series === 'main' ? '' : `${SERIES_LABELS[series]} `}${kind} on ${p.date}`);
   }
   const { width, height } = p;
   if (!Number.isInteger(width) || !Number.isInteger(height) || width < 2 || height < 2 || width > MAX_SIZE || height > MAX_SIZE) {
@@ -357,28 +417,38 @@ export function loadPuzzle(p) {
   };
 }
 
-/** Index summary for one published puzzle (number is assigned by buildIndex). */
+/**
+ * Index summary for one published puzzle (number is assigned by buildIndex). Claude's way entries also carry
+ * `series: 'claude'` (omitted for the user's own puzzles, like in the puzzle files).
+ */
 export function puzzleSummary(p) {
-  return { id: p.id, date: p.date, kind: puzzleKind(p), title: p.title, author: p.author || '', width: p.width, height: p.height };
+  const series = puzzleSeries(p);
+  return {
+    id: p.id, date: p.date, kind: puzzleKind(p), ...(series === 'main' ? {} : { series }),
+    title: p.title, author: p.author || '', width: p.width, height: p.height,
+  };
 }
 
-/** Sort comparator: by date, then kind display order (Mini, Midi, Daily). */
+/** Sort comparator: by date, then series (the user's own first), then kind display order (Mini, Midi, Daily). */
 export function comparePuzzles(a, b) {
   if (a.date !== b.date) return a.date < b.date ? -1 : 1;
+  const bySeries = SERIES.indexOf(puzzleSeries(a)) - SERIES.indexOf(puzzleSeries(b));
+  if (bySeries) return bySeries;
   return KINDS.indexOf(puzzleKind(a)) - KINDS.indexOf(puzzleKind(b));
 }
 
 /**
- * Build site/puzzles/index.json from published puzzles (or summaries).
+ * Build site/puzzles/index.json (or site/puzzles/claude/index.json) from published puzzles (or summaries).
  * Puzzles are sorted by date then kind (Mini, Midi, Daily); `number` counts 1..N per kind in date order
- * (Daily #2, Mini #1). Entries without `kind` are dailies. Every entry carries `kind`.
+ * (Daily #2, Mini #1), separately for each series. Entries without `kind` are dailies. Every entry carries `kind`.
  */
 export function buildIndex(puzzles) {
   const list = puzzles.map(puzzleSummary).sort(comparePuzzles);
   const counts = {};
   for (const s of list) {
-    counts[s.kind] = (counts[s.kind] || 0) + 1;
-    s.number = counts[s.kind];
+    const key = `${puzzleSeries(s)}:${s.kind}`;
+    counts[key] = (counts[key] || 0) + 1;
+    s.number = counts[key];
   }
   return { format: 'crossword-index/1', puzzles: list };
 }

@@ -370,3 +370,95 @@ test('the real site/index.html has every tag the build rewrites', async () => {
   // Each tag was rewritten in place, not added a second time.
   assert.equal(out.split('\n').length, html.split('\n').length + 1); // + og:image
 });
+
+// ---------------------------------------------------------------------------
+// SPEC §9: "Claude's way" lives in puzzles/claude/ with its own index, released by date the same way
+
+async function writeClaude(dir, list) {
+  const { draftToPuzzle } = await import('../../site/shared/puzzle.js');
+  const draft = JSON.parse(await fsp.readFile(path.join(REPO, 'tests', 'fixtures', 'sample-draft.json'), 'utf8'));
+  const folder = path.join(dir, 'site', 'puzzles', 'claude');
+  await fsp.mkdir(folder, { recursive: true });
+  for (const [date, kind] of list) {
+    const { puzzle } = draftToPuzzle({ ...draft, date, kind, series: 'claude', title: `Claude ${date} ${kind}` });
+    await fsp.writeFile(path.join(folder, `${puzzle.id}.json`), JSON.stringify(puzzle));
+  }
+  // A stale index: the build regenerates it from the files.
+  await fsp.writeFile(path.join(folder, 'index.json'), '{"format":"crossword-index/1","puzzles":[]}');
+  return folder;
+}
+
+test('§9 --released-only also goes by date in puzzles/claude/ and rewrites its index (numbers per kind)', async () => {
+  await writeSite(root, ['2026-10-03', '2026-10-04']);
+  const folder = await writeClaude(root, [
+    ['2026-10-03', 'mini'], ['2026-10-03', 'midi'], ['2026-10-03', 'daily'],
+    ['2026-10-04', 'mini'], ['2026-10-04', 'midi'], ['2026-10-04', 'daily'],
+  ]);
+  // Strays: a future-dated copy in the claude folder, a Claude file in the main folder (past and future), a dated subfolder.
+  await fsp.writeFile(path.join(folder, 'claude-2026-10-04-copy.json'), '{}');
+  await fsp.writeFile(path.join(root, 'site', 'puzzles', 'claude-2026-10-02.json'), '{}');
+  await fsp.writeFile(path.join(root, 'site', 'puzzles', 'claude-2026-10-09.json'), '{}');
+  await fsp.mkdir(path.join(folder, 'extra', '2026-10-05'), { recursive: true });
+  await fsp.writeFile(path.join(folder, 'extra', '2026-10-05', 'x.json'), '{}');
+  await fsp.writeFile(path.join(folder, 'extra', 'keep.txt'), 'ok');
+
+  const result = await buildSite({ root, releasedOnly: true, today: '2026-10-03', out: 'public' });
+  assert.deepEqual(result.kept, ['2026-10-03', 'claude-2026-10-03-mini', 'claude-2026-10-03-midi', 'claude-2026-10-03']);
+  assert.deepEqual(result.dropped, ['2026-10-04', 'claude-2026-10-04-mini', 'claude-2026-10-04-midi', 'claude-2026-10-04']);
+  const out = path.join(root, 'public', 'puzzles');
+  assert.deepEqual((await fsp.readdir(out)).sort(), ['2026-10-03.json', 'claude', 'claude-2026-10-02.json', 'index.json']);
+  assert.deepEqual((await fsp.readdir(path.join(out, 'claude'))).sort(),
+    ['claude-2026-10-03-midi.json', 'claude-2026-10-03-mini.json', 'claude-2026-10-03.json', 'extra', 'index.json']);
+  assert.deepEqual(await fsp.readdir(path.join(out, 'claude', 'extra')), ['keep.txt']);
+
+  // The main index never lists Claude puzzles (not even one misplaced in the main folder).
+  const main = JSON.parse(await fsp.readFile(path.join(out, 'index.json'), 'utf8'));
+  assert.deepEqual(main.puzzles.map((p) => p.id), ['2026-10-03']);
+  assert.deepEqual(result.index, main);
+  const claude = JSON.parse(await fsp.readFile(path.join(out, 'claude', 'index.json'), 'utf8'));
+  assert.deepEqual(claude.puzzles.map((p) => [p.id, p.kind, p.series, p.number]), [
+    ['claude-2026-10-03-mini', 'mini', 'claude', 1],
+    ['claude-2026-10-03-midi', 'midi', 'claude', 1],
+    ['claude-2026-10-03', 'daily', 'claude', 1],
+  ]);
+  assert.deepEqual(result.indexes.claude, claude);
+  for (const f of ['claude-2026-10-03-midi.json', 'claude-2026-10-03-mini.json', 'claude-2026-10-03.json']) {
+    assert.ok(validatePuzzle(JSON.parse(await fsp.readFile(path.join(out, 'claude', f), 'utf8'))).ok, f);
+  }
+  // Sources untouched.
+  assert.equal((await fsp.readdir(folder)).length, 9);
+
+  // The next day everything ships, numbered per kind within the series.
+  const next = await buildSite({ root, releasedOnly: true, today: '2026-10-04', out: 'public' });
+  assert.deepEqual(next.indexes.claude.puzzles.map((p) => [p.id, p.number]), [
+    ['claude-2026-10-03-mini', 1], ['claude-2026-10-03-midi', 1], ['claude-2026-10-03', 1],
+    ['claude-2026-10-04-mini', 2], ['claude-2026-10-04-midi', 2], ['claude-2026-10-04', 2],
+  ]);
+  assert.deepEqual(next.index.puzzles.map((p) => [p.id, p.number]), [['2026-10-03', 1], ['2026-10-04', 2]]);
+});
+
+test('§9 without --released-only the claude index is rebuilt too; no claude folder is fine (and none is made)', async () => {
+  await writeSite(root, ['2026-10-01']);
+  await writeClaude(root, [['2030-01-01', 'mini'], ['2026-10-01', 'daily']]);
+  const all = await buildSite({ root });
+  assert.deepEqual(all.dropped, []);
+  assert.deepEqual(all.indexes.claude.puzzles.map((p) => [p.id, p.number]), [['claude-2026-10-01', 1], ['claude-2030-01-01-mini', 1]]);
+  const written = JSON.parse(await fsp.readFile(path.join(root, 'dist', 'puzzles', 'claude', 'index.json'), 'utf8'));
+  assert.deepEqual(written, all.indexes.claude);
+
+  // Before Claude's first puzzle there is no folder: the build works and does not invent one.
+  await writeSite(root, ['2026-10-01', '2099-01-01']);
+  const plain = await buildSite({ root, releasedOnly: true, today: '2026-10-02' });
+  assert.deepEqual(plain.kept, ['2026-10-01']);
+  assert.equal(plain.indexes.claude, undefined);
+  assert.deepEqual((await fsp.readdir(path.join(root, 'dist', 'puzzles'))).sort(), ['2026-10-01.json', 'index.json']);
+
+  // A claude folder that is only a symbolic link is never followed (its target must not lose files).
+  const elsewhere = path.join(root, 'elsewhere');
+  await fsp.mkdir(elsewhere, { recursive: true });
+  await fsp.writeFile(path.join(elsewhere, 'claude-2099-01-01.json'), '{}');
+  await fsp.symlink(elsewhere, path.join(root, 'site', 'puzzles', 'claude'));
+  const linked = await buildSite({ root, releasedOnly: true, today: '2026-10-02' });
+  assert.equal(linked.indexes.claude, undefined);
+  await fsp.access(path.join(elsewhere, 'claude-2099-01-01.json'));
+});

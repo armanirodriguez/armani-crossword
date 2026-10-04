@@ -52,6 +52,8 @@ const ICONS = {
   ],
   search: [['circle', { cx: 11, cy: 11, r: 6.5 }], ['path', { d: 'm20 20-4.2-4.2' }]],
   copy: [['rect', { x: 8.5, y: 8.5, width: 12, height: 12, rx: 2 }], ['path', { d: 'M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5' }]],
+  // Claude's way (SPEC §9): an eight-ray spark, long rays on the axes and shorter diagonals.
+  spark: [['path', { d: 'M12 2.8v18.4M2.8 12h18.4M7.1 7.1l9.8 9.8M16.9 7.1l-9.8 9.8' }]],
   refresh: [['path', { d: 'M20 11a8 8 0 0 0-14.6-4.5L3.5 9M4 13a8 8 0 0 0 14.6 4.5l1.9-2.5' }], ['path', { d: 'M3.5 4v5h5M20.5 20v-5h-5' }]],
 };
 

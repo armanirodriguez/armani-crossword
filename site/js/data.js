@@ -7,6 +7,7 @@
 //   'invalid'    valid JSON that is not a valid puzzle (validatePuzzle errors in .details)
 
 import { validatePuzzle } from '../shared/puzzle.js';
+import { CLAUDE, MAIN, indexPath, puzzlePath } from './series.js';
 
 export const DEFAULT_CONFIG = Object.freeze({
   siteName: 'Armani Crossword',
@@ -70,14 +71,20 @@ export function sanitizeConfig(raw) {
   return c;
 }
 
-/** The puzzle index. A missing index (404) is treated as "no puzzles yet". */
-export async function loadIndex() {
+/**
+ * A series' puzzle index: puzzles/index.json (the user's) or puzzles/claude/index.json (Claude's way, SPEC §9).
+ * A missing index (404) is treated as "no puzzles yet". Entries of Claude's index are tagged series: 'claude' (its
+ * ids are "claude-…" whether or not the file says so).
+ */
+export async function loadIndex(series = MAIN) {
+  const url = indexPath(series);
   try {
-    const idx = await fetchJSON('puzzles/index.json');
+    const idx = await fetchJSON(url);
     if (!idx || typeof idx !== 'object' || !Array.isArray(idx.puzzles)) {
-      throw new LoadError('bad-json', 'puzzles/index.json has an unexpected shape');
+      throw new LoadError('bad-json', `${url} has an unexpected shape`);
     }
-    return idx;
+    if (series !== CLAUDE) return idx;
+    return { ...idx, puzzles: idx.puzzles.map((p) => (p && typeof p === 'object' ? { ...p, series: CLAUDE } : p)) };
   } catch (err) {
     if (err.kind === 'not-found') return { format: 'crossword-index/1', puzzles: [] };
     throw err;
@@ -87,14 +94,16 @@ export async function loadIndex() {
 const cache = new Map();
 
 /**
- * A published puzzle by id ("2026-10-04" daily, "2026-10-04-mini", …), validated. Successful loads are cached for
- * the session. A file whose id is not the one asked for (e.g. a daily saved as a mini's file) is 'invalid'.
+ * A published puzzle by id ("2026-10-04" daily, "2026-10-04-mini", "claude-2026-10-04-mini" from puzzles/claude/, …),
+ * validated. Successful loads are cached for the session. A file whose id is not the one asked for (e.g. a daily
+ * saved as a mini's file) is 'invalid'.
  */
 export async function loadPuzzleFile(id) {
   if (cache.has(id)) return cache.get(id);
-  const raw = await fetchJSON(`puzzles/${id}.json`);
+  const url = puzzlePath(id);
+  const raw = await fetchJSON(url);
   checkPuzzle(raw);
-  if (raw.id !== id) throw new LoadError('invalid', 'This puzzle file is damaged', [`puzzles/${id}.json holds puzzle ${raw.id}`]);
+  if (raw.id !== id) throw new LoadError('invalid', 'This puzzle file is damaged', [`${url} holds puzzle ${raw.id}`]);
   cache.set(id, raw);
   return raw;
 }
