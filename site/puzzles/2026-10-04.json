@@ -1,0 +1,318 @@
+{
+  "format": "crossword/1",
+  "id": "2026-10-04",
+  "date": "2026-10-04",
+  "title": "Second Armani Crossword",
+  "author": "Armani Rodriguez",
+  "note": "Unless you send a solve time, keep your mouth shut",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "#...#...#...###",
+    "#.......#...###",
+    "#............##",
+    "......##.......",
+    ".....#...#.....",
+    "...#......##...",
+    "###.....#......",
+    "##...........##",
+    "......#.....###",
+    "...##......#...",
+    ".....#...#.....",
+    ".......##......",
+    "##............#",
+    "###...#.......#",
+    "###...#...#...#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:BbPrCmGzYro1U6iWeOec5pngGkhGgPsCwpYC1fHlNkt8pn7tAgObtdjNwkwP2Vf0LbBZV7itXYcVk+r0Lwq/WuCr8OMLe9Tp1y8zWjMlImx3N1BlhZeiWNBPu1HtlVbns1qGDYhCSS1JQX1hn/ECJEQxOCkeZWCS/2T8ppqJAYfJH7XyHcmaYxpQdIsHGABtcKfxm8YXcKWZiso8ZR5dGMaO6yQDLYCGzo+EDWI/DSp2QSFz9M4OjxRbYXci8SAKqRHfy3SQ4hCniXfofq18peo3tGvakPLgoOteo8NR1Mxp",
+  "checksum": "490c0b8a",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Small lump"
+      },
+      {
+        "num": 4,
+        "clue": "Head"
+      },
+      {
+        "num": 7,
+        "clue": "Message that might be sent using smoke signals"
+      },
+      {
+        "num": 10,
+        "clue": "Embodiment"
+      },
+      {
+        "num": 12,
+        "clue": "Toward the stern"
+      },
+      {
+        "num": 13,
+        "clue": "Apostle with winged lion?"
+      },
+      {
+        "num": 16,
+        "clue": "Food closet"
+      },
+      {
+        "num": 17,
+        "clue": "Recite quickly"
+      },
+      {
+        "num": 20,
+        "clue": "Like every birthday boy"
+      },
+      {
+        "num": 21,
+        "clue": "Money exec."
+      },
+      {
+        "num": 23,
+        "clue": "Knot anew"
+      },
+      {
+        "num": 24,
+        "clue": "Insult"
+      },
+      {
+        "num": 25,
+        "clue": "Georgia college town"
+      },
+      {
+        "num": 28,
+        "clue": "Wrath"
+      },
+      {
+        "num": 29,
+        "clue": "Increased frequency of showers?"
+      },
+      {
+        "num": 30,
+        "clue": "Alerted"
+      },
+      {
+        "num": 33,
+        "clue": "Label for someone who reads, from someone who doesn't"
+      },
+      {
+        "num": 35,
+        "clue": "Pal"
+      },
+      {
+        "num": 37,
+        "clue": "Nowaday"
+      },
+      {
+        "num": 38,
+        "clue": "Prune"
+      },
+      {
+        "num": 39,
+        "clue": "M&M wrapper?"
+      },
+      {
+        "num": 41,
+        "clue": "Nice hotels have one"
+      },
+      {
+        "num": 44,
+        "clue": "Aids in crime"
+      },
+      {
+        "num": 47,
+        "clue": "King Kong, for one"
+      },
+      {
+        "num": 48,
+        "clue": "Cries"
+      },
+      {
+        "num": 50,
+        "clue": "Messy morning hair"
+      },
+      {
+        "num": 52,
+        "clue": "Rise to the surface, as tears or emotions might"
+      },
+      {
+        "num": 53,
+        "clue": "Dreamlike and bizarre, like a Dalí painting"
+      },
+      {
+        "num": 56,
+        "clue": "Floor covering"
+      },
+      {
+        "num": 57,
+        "clue": "Refill shelves"
+      },
+      {
+        "num": 58,
+        "clue": "Disappointed, in texts"
+      },
+      {
+        "num": 59,
+        "clue": "Foot digit"
+      },
+      {
+        "num": 60,
+        "clue": "Utter"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Kathmandu native"
+      },
+      {
+        "num": 2,
+        "clue": "Topples"
+      },
+      {
+        "num": 3,
+        "clue": "Spoken often by polite Berliners"
+      },
+      {
+        "num": 4,
+        "clue": "British conservative"
+      },
+      {
+        "num": 5,
+        "clue": "Texter shocked"
+      },
+      {
+        "num": 6,
+        "clue": "Apiece"
+      },
+      {
+        "num": 7,
+        "clue": "Holder of many notes?"
+      },
+      {
+        "num": 8,
+        "clue": "Proposal"
+      },
+      {
+        "num": 9,
+        "clue": "Steps over a fence"
+      },
+      {
+        "num": 11,
+        "clue": "Water Tortoise"
+      },
+      {
+        "num": 14,
+        "clue": "Steel element"
+      },
+      {
+        "num": 15,
+        "clue": "Writing down"
+      },
+      {
+        "num": 16,
+        "clue": "Pea Holder"
+      },
+      {
+        "num": 18,
+        "clue": "Get rid of"
+      },
+      {
+        "num": 19,
+        "clue": "Give food"
+      },
+      {
+        "num": 21,
+        "clue": "Face part"
+      },
+      {
+        "num": 22,
+        "clue": "Kind of pen"
+      },
+      {
+        "num": 26,
+        "clue": "Swap"
+      },
+      {
+        "num": 27,
+        "clue": "Stockholm native"
+      },
+      {
+        "num": 29,
+        "clue": "You ___ here"
+      },
+      {
+        "num": 31,
+        "clue": "First man facing the sunset?"
+      },
+      {
+        "num": 32,
+        "clue": "Rogers of Westerns"
+      },
+      {
+        "num": 33,
+        "clue": "Humans and ostriches for two"
+      },
+      {
+        "num": 34,
+        "clue": "Dial (In)"
+      },
+      {
+        "num": 35,
+        "clue": "Excess fat"
+      },
+      {
+        "num": 36,
+        "clue": "Spa wear"
+      },
+      {
+        "num": 40,
+        "clue": "Created"
+      },
+      {
+        "num": 41,
+        "clue": "\"DO NOT EAT\""
+      },
+      {
+        "num": 42,
+        "clue": "Brave"
+      },
+      {
+        "num": 43,
+        "clue": "Small gun"
+      },
+      {
+        "num": 45,
+        "clue": "Thanksgiving day, abbr."
+      },
+      {
+        "num": 46,
+        "clue": "Truth ___"
+      },
+      {
+        "num": 49,
+        "clue": "Choir voices"
+      },
+      {
+        "num": 51,
+        "clue": "Cry of frustration"
+      },
+      {
+        "num": 52,
+        "clue": "Like an owl"
+      },
+      {
+        "num": 54,
+        "clue": "State of the ___"
+      },
+      {
+        "num": 55,
+        "clue": "Lion"
+      }
+    ]
+  },
+  "publishedAt": "2026-10-04T18:45:00.893Z"
+}
