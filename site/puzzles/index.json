@@ -22,6 +22,16 @@
       "number": 1
     },
     {
+      "id": "2026-10-04-midi",
+      "date": "2026-10-04",
+      "kind": "midi",
+      "title": "First Armani Midi",
+      "author": "Armani Rodriguez",
+      "width": 9,
+      "height": 9,
+      "number": 1
+    },
+    {
       "id": "2026-10-04",
       "date": "2026-10-04",
       "kind": "daily",

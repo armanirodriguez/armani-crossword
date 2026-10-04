@@ -1,0 +1,153 @@
+{
+  "format": "crossword/1",
+  "id": "2026-10-04-midi",
+  "date": "2026-10-04",
+  "kind": "midi",
+  "title": "First Armani Midi",
+  "author": "Armani Rodriguez",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...##....",
+    "...#.....",
+    "...#.....",
+    "#......##",
+    "###...###",
+    "##......#",
+    ".....#...",
+    ".....#...",
+    "....##..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:RzFR1agIsTbZmFs/9XxyVrB4euXtCXCx1IOPupCxjJDv2yHTjmhs3D0djz+5dSy53ULZ1IDES2YL2uK7NZSc5L3+v19SePNZ2Y+aJCiFiCFD",
+  "checksum": "226724ef",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Tachometer reading"
+      },
+      {
+        "num": 4,
+        "clue": "Hot Stunner"
+      },
+      {
+        "num": 8,
+        "clue": "Yes that sounds like a game console"
+      },
+      {
+        "num": 9,
+        "clue": "Wept"
+      },
+      {
+        "num": 10,
+        "clue": "[Its cold!]"
+      },
+      {
+        "num": 11,
+        "clue": "Have a gun"
+      },
+      {
+        "num": 12,
+        "clue": "Caterpillars, eg."
+      },
+      {
+        "num": 14,
+        "clue": "German a"
+      },
+      {
+        "num": 15,
+        "clue": "Hitter"
+      },
+      {
+        "num": 18,
+        "clue": "Slander"
+      },
+      {
+        "num": 20,
+        "clue": "We got two"
+      },
+      {
+        "num": 22,
+        "clue": "Heart vessel"
+      },
+      {
+        "num": 23,
+        "clue": "Run around?"
+      },
+      {
+        "num": 24,
+        "clue": "Better half"
+      },
+      {
+        "num": 25,
+        "clue": "Hot Breacher"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Mug"
+      },
+      {
+        "num": 2,
+        "clue": "Knitting stitch"
+      },
+      {
+        "num": 3,
+        "clue": "Hot window installer"
+      },
+      {
+        "num": 4,
+        "clue": "Task"
+      },
+      {
+        "num": 5,
+        "clue": "Acidic ingredient in guacamole"
+      },
+      {
+        "num": 6,
+        "clue": "Robert Edward ___"
+      },
+      {
+        "num": 7,
+        "clue": "Do some summing"
+      },
+      {
+        "num": 9,
+        "clue": "Hot Sneaker"
+      },
+      {
+        "num": 13,
+        "clue": "Connect"
+      },
+      {
+        "num": 15,
+        "clue": "Feudal worker"
+      },
+      {
+        "num": 16,
+        "clue": "Black-tie event"
+      },
+      {
+        "num": 17,
+        "clue": "Periods"
+      },
+      {
+        "num": 18,
+        "clue": "Had visual"
+      },
+      {
+        "num": 19,
+        "clue": "How Parisians refer to themselves"
+      },
+      {
+        "num": 21,
+        "clue": "Speed limit unit, briefly"
+      }
+    ]
+  },
+  "publishedAt": "2026-10-04T19:49:56.298Z"
+}
