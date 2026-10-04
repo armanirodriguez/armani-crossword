@@ -301,6 +301,16 @@ gitTest('publish → put it online: the remote gets exactly the allow-listed cha
   assert.equal(un.json.commit.message, 'Unpublish 2026-10-05');
   assert.deepEqual(bareGit(bare, 'diff', '--name-status', 'main~1', 'main').split('\n').sort(), ['D\tsite/puzzles/2026-10-05.json', 'M\tsite/puzzles/index.json']);
 
+  // Regression: a NEW puzzle file next to already-committed ones (a Mini added to a day) must be pushed too —
+  // the old `git add -A <dir> ':(exclude,glob)**/*.tmp'` staged only the index and silently left the file behind.
+  assert.equal((await api('POST', '/api/publish', { draft: draftFor('2026-10-05') })).status, 200);
+  assert.equal((await api('POST', '/api/go-live', {})).status, 200);
+  assert.equal((await api('POST', '/api/publish', { draft: { ...draftFor('2026-10-05'), id: 'mini-draft', kind: 'mini' } })).status, 200);
+  const mini = await api('POST', '/api/go-live', {});
+  assert.equal(mini.status, 200, mini.text);
+  assert.deepEqual(bareGit(bare, 'diff', '--name-status', 'main~1', 'main').split('\n').sort(), ['A\tsite/puzzles/2026-10-05-mini.json', 'M\tsite/puzzles/index.json']);
+  assert.deepEqual((await api('GET', '/api/go-live')).json.pending, []);
+
   // Writes are same-origin JSON only, like the rest of the API.
   assert.equal((await api('POST', '/api/go-live', {}, { Origin: 'http://evil.example' })).status, 403);
   assert.equal((await api('POST', '/api/go-live', '{}', { 'Content-Type': 'text/plain' })).status, 415);

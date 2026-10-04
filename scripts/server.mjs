@@ -1143,9 +1143,11 @@ export function createServer({ root = REPO_ROOT, log = () => {}, allowedHosts = 
   async function commitPublished() {
     const pending = await pendingChanges();
     if (!pending.length) return null;
-    // Only allow-listed paths that changed: a pathspec matching no file would make `git add` fail.
-    const specs = GO_LIVE_PATHS.filter((spec) => pending.some((c) => (spec.endsWith('/') ? c.path.startsWith(spec) : c.path === spec)));
-    await gitOk(['add', '-A', '--', ...specs, GO_LIVE_EXCLUDE], 'add');
+    // Stage exactly the changed files (never temp files). Explicit paths, not the folder + an exclude pathspec: with
+    // an exclude magic pathspec, `git add -A <dir>` silently skips NEW files, so a newly published puzzle was left out.
+    const specs = [...new Set(pending.map((c) => c.path).filter((p) => !p.endsWith('.tmp')))];
+    if (!specs.length) return null;
+    await gitOk(['add', '-A', '--', ...specs], 'add');
     const diff = await gitOk(['diff', '--cached', '--name-status', '-z', '--no-renames', 'HEAD', '--', ...specs], 'diff');
     const files = parseNameStatusZ(diff.stdout).filter((c) => isGoLivePath(c.path));
     if (!files.length) return null;
