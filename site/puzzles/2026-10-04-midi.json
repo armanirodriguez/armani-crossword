@@ -9,145 +9,145 @@
   "width": 9,
   "height": 9,
   "layout": [
-    "...##....",
+    "....##...",
+    "....#....",
+    "....#....",
     "...#.....",
-    "...#.....",
-    "#......##",
-    "###...###",
-    "##......#",
-    ".....#...",
-    ".....#...",
-    "....##..."
+    "##...####",
+    "#.......#",
+    ".........",
+    ".........",
+    "...###..."
   ],
   "circles": [],
   "shaded": [],
-  "solution": "x1:RzFR1agIsTbZmFs/9XxyVrB4euXtCXCx1IOPupCxjJDv2yHTjmhs3D0djz+5dSy53ULZ1IDES2YL2uK7NZSc5L3+v19SePNZ2Y+aJCiFiCFD",
-  "checksum": "226724ef",
+  "solution": "x1:WChOt6hurS/fnlw/hRxlU7l9fPbsYhKxzIiM0JK7/ZXv2UOjjmgb1iBwjz+5dUyrx0LUwYTETGoF3vHcNZSU6qTpuVo+ffxO3oOOQiiFhT1M",
+  "checksum": "5d129c38",
   "clues": {
     "across": [
       {
         "num": 1,
-        "clue": "Tachometer reading"
+        "clue": "Hot window installer"
       },
       {
-        "num": 4,
-        "clue": "Hot Stunner"
+        "num": 5,
+        "clue": "Flat-faced dog"
       },
       {
         "num": 8,
-        "clue": "Yes that sounds like a game console"
+        "clue": "Its in the eye of the beholder"
       },
       {
         "num": 9,
-        "clue": "Wept"
+        "clue": "Hot Stunner"
       },
       {
         "num": 10,
-        "clue": "[Its cold!]"
+        "clue": "Small pinch, as of salt"
       },
       {
         "num": 11,
-        "clue": "Have a gun"
+        "clue": "Level on the corporate ladder?"
       },
       {
         "num": 12,
-        "clue": "Caterpillars, eg."
+        "clue": "Squid's defense"
+      },
+      {
+        "num": 13,
+        "clue": "Long tales"
       },
       {
         "num": 14,
-        "clue": "German a"
+        "clue": "Kid who reads the same both ways"
       },
       {
-        "num": 15,
-        "clue": "Hitter"
-      },
-      {
-        "num": 18,
-        "clue": "Slander"
+        "num": 16,
+        "clue": "Hot Sneaker"
       },
       {
         "num": 20,
-        "clue": "We got two"
+        "clue": "Accept a challenge"
       },
       {
         "num": 22,
-        "clue": "Heart vessel"
+        "clue": "Laying it on too thick"
       },
       {
         "num": 23,
-        "clue": "Run around?"
+        "clue": "A pop"
       },
       {
         "num": 24,
-        "clue": "Better half"
-      },
-      {
-        "num": 25,
-        "clue": "Hot Breacher"
+        "clue": "Inverse of exponentiation briefly"
       }
     ],
     "down": [
       {
         "num": 1,
-        "clue": "Mug"
+        "clue": "Size of this puzzle"
       },
       {
         "num": 2,
-        "clue": "Knitting stitch"
+        "clue": "Confession from a former track star"
       },
       {
         "num": 3,
-        "clue": "Hot window installer"
+        "clue": "Gambler"
       },
       {
         "num": 4,
-        "clue": "Task"
+        "clue": "Hot Breacher"
       },
       {
         "num": 5,
-        "clue": "Acidic ingredient in guacamole"
+        "clue": "Drug Dealer Informally"
       },
       {
         "num": 6,
-        "clue": "Robert Edward ___"
+        "clue": "Forearm bone"
       },
       {
         "num": 7,
-        "clue": "Do some summing"
+        "clue": "Jokes"
       },
       {
         "num": 9,
-        "clue": "Hot Sneaker"
+        "clue": "Pitcher's stat: Abbr."
       },
       {
         "num": 13,
-        "clue": "Connect"
+        "clue": "Home_____"
       },
       {
         "num": 15,
-        "clue": "Feudal worker"
+        "clue": "Above"
       },
       {
         "num": 16,
-        "clue": "Black-tie event"
+        "clue": "Give in"
       },
       {
         "num": 17,
-        "clue": "Periods"
+        "clue": "Altar words"
       },
       {
         "num": 18,
-        "clue": "Had visual"
+        "clue": "Complain loudly"
       },
       {
         "num": 19,
-        "clue": "How Parisians refer to themselves"
+        "clue": "River through Florence"
+      },
+      {
+        "num": 20,
+        "clue": "Lid"
       },
       {
         "num": 21,
-        "clue": "Speed limit unit, briefly"
+        "clue": "Urge (on)"
       }
     ]
   },
-  "publishedAt": "2026-10-04T19:49:56.298Z"
+  "publishedAt": "2026-10-04T20:02:53.795Z"
 }
