@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-05-midi",
+  "date": "2026-10-05",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Morning Menu",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:KaJtv6Gre3JiDRhwiNiMCH9zjBrcsrFZzcm4+1vJrO8i0O3i3ubf0i5/efnbyMYSzA9CcPT0PKJ4tADhzWLtRXJmmIVI50bgxjUEt/CoWEG3",
+  "checksum": "90c25151",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Queen in Disney's \"Frozen\""
+      },
+      {
+        "num": 5,
+        "clue": "Birthday dessert with candles"
+      },
+      {
+        "num": 9,
+        "clue": "Lump in a naughty kid's stocking"
+      },
+      {
+        "num": 10,
+        "clue": "Length times width"
+      },
+      {
+        "num": 11,
+        "clue": "Pan-fried potato chunks served alongside eggs"
+      },
+      {
+        "num": 13,
+        "clue": "\"Carmen\" or \"La Bohème\""
+      },
+      {
+        "num": 14,
+        "clue": "Fitting"
+      },
+      {
+        "num": 15,
+        "clue": "Extra money for a server"
+      },
+      {
+        "num": 17,
+        "clue": "Smartphone download"
+      },
+      {
+        "num": 20,
+        "clue": "Kitchen stove"
+      },
+      {
+        "num": 24,
+        "clue": "Flaky, crescent-shaped pastry"
+      },
+      {
+        "num": 26,
+        "clue": "Goose call"
+      },
+      {
+        "num": 27,
+        "clue": "Marvel's Lee"
+      },
+      {
+        "num": 28,
+        "clue": "Border"
+      },
+      {
+        "num": 29,
+        "clue": "\"¿Cómo ___ usted?\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Canyon reverberation"
+      },
+      {
+        "num": 2,
+        "clue": "Roller coaster feature"
+      },
+      {
+        "num": 3,
+        "clue": "Identical"
+      },
+      {
+        "num": 4,
+        "clue": "Wide awake and watchful"
+      },
+      {
+        "num": 5,
+        "clue": "Sedan or coupe"
+      },
+      {
+        "num": 6,
+        "clue": "Solo for a soprano"
+      },
+      {
+        "num": 7,
+        "clue": "Hold on to"
+      },
+      {
+        "num": 8,
+        "clue": "Direction of sunrise"
+      },
+      {
+        "num": 12,
+        "clue": "County events with rides and livestock"
+      },
+      {
+        "num": 16,
+        "clue": "Out of style"
+      },
+      {
+        "num": 17,
+        "clue": "Dull pain"
+      },
+      {
+        "num": 18,
+        "clue": "Poke"
+      },
+      {
+        "num": 19,
+        "clue": "Classic Atari video game"
+      },
+      {
+        "num": 21,
+        "clue": "Washington ballclub, familiarly"
+      },
+      {
+        "num": 22,
+        "clue": "Tiny biting bug"
+      },
+      {
+        "num": 23,
+        "clue": "Sicilian volcano"
+      },
+      {
+        "num": 25,
+        "clue": "Eisenhower's nickname"
+      }
+    ]
+  },
+  "theme": "Breakfast favorites",
+  "publishedAt": "2026-10-04T21:38:52.836Z"
+}

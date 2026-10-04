@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-04-mini",
+  "date": "2026-10-04",
+  "kind": "mini",
+  "series": "claude",
+  "title": "House of Cards",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:cGiEGdBj68ZlyPPTU6GaPb5hlkq1ba9eGA==",
+  "checksum": "5adf2b83",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Apple's center"
+      },
+      {
+        "num": 5,
+        "clue": "Chocolaty coffee order"
+      },
+      {
+        "num": 6,
+        "clue": "Nail the test"
+      },
+      {
+        "num": 7,
+        "clue": "Bank offerings"
+      },
+      {
+        "num": 8,
+        "clue": "Bowling alley strip"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Hot drink with marshmallows, maybe"
+      },
+      {
+        "num": 2,
+        "clue": "The big blue"
+      },
+      {
+        "num": 3,
+        "clue": "River through Germany"
+      },
+      {
+        "num": 4,
+        "clue": "Grub"
+      },
+      {
+        "num": 5,
+        "clue": "Place to shop till you drop"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a playing card",
+  "publishedAt": "2026-10-04T21:51:36.342Z"
+}

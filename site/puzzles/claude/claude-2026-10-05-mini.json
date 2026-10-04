@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-05-mini",
+  "date": "2026-10-05",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Hole in One",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:6T94lvUjTGWO4tiYdspMulNCjl2Lyx8XUA==",
+  "checksum": "1a374c8a",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Sharp breath of surprise"
+      },
+      {
+        "num": 5,
+        "clue": "Unit of weight"
+      },
+      {
+        "num": 6,
+        "clue": "Ring-shaped roll often topped with cream cheese"
+      },
+      {
+        "num": 7,
+        "clue": "Happening"
+      },
+      {
+        "num": 8,
+        "clue": "Ivy League school in New Haven"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Tropical fruit with pink flesh"
+      },
+      {
+        "num": 2,
+        "clue": "Heavenly being with a halo"
+      },
+      {
+        "num": 3,
+        "clue": "Part of a play's act"
+      },
+      {
+        "num": 4,
+        "clue": "Animal's fur coat"
+      },
+      {
+        "num": 5,
+        "clue": "Follow orders"
+      }
+    ]
+  },
+  "theme": "Breakfast favorites",
+  "publishedAt": "2026-10-04T21:38:52.733Z"
+}

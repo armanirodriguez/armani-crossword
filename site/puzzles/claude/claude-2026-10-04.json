@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-04",
+  "date": "2026-10-04",
+  "series": "claude",
+  "title": "Deal Me In",
+  "author": "Claude",
+  "note": "Deal yourself in: look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......#...##...",
+    "......#....#...",
+    "......#....#...",
+    "##............#",
+    ".......#.......",
+    "....##...#.....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    ".....#...##....",
+    ".......#.......",
+    "#............##",
+    "...#....#......",
+    "...#....#......",
+    "...##...#......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:7JFuwB+pcvDGoxrODbBaUgfZhoclb7ySTqmucMlqqY6R4zab8c/J6EAkcxkPaJG7wgL+rex50GEKwJhHff0oogUj8NF2TPeNZotqHbUZ9khvyEJEdAhK+KGCt4eLfFoOPjqVfBxdI/eOh2o7DkJ+OJG1IU0qvp28tDHSr7ykyP/VBJW/Uu0JHoZqeL4sn2qylEcdbb7/h3MrTFmu/NXimj6UyyLONoAH8J64wSh1TW0Z7SOsXdVUFeZ/TC+LnbPt+0UkW66jPB5ExUgB6G/+x42xBJzXBZPYFEYduCQbAwr7",
+  "checksum": "be3cf13e",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Summaries for latecomers"
+      },
+      {
+        "num": 7,
+        "clue": "Placeholder on a schedule, briefly"
+      },
+      {
+        "num": 10,
+        "clue": "Money exec, for short"
+      },
+      {
+        "num": 13,
+        "clue": "Positive particle"
+      },
+      {
+        "num": 14,
+        "clue": "Reunion attendee, informally"
+      },
+      {
+        "num": 16,
+        "clue": "Like yesterday's news"
+      },
+      {
+        "num": 17,
+        "clue": "Something repeated during meditation"
+      },
+      {
+        "num": 18,
+        "clue": "\"Tonight Show\" host before Fallon"
+      },
+      {
+        "num": 19,
+        "clue": "Fit to be tied"
+      },
+      {
+        "num": 20,
+        "clue": "Grinning gourd of October"
+      },
+      {
+        "num": 23,
+        "clue": "Less socially polished"
+      },
+      {
+        "num": 25,
+        "clue": "Radiator fluid"
+      },
+      {
+        "num": 27,
+        "clue": "Barbecue staple, often pulled"
+      },
+      {
+        "num": 28,
+        "clue": "German \"oh!\""
+      },
+      {
+        "num": 30,
+        "clue": "More impolite"
+      },
+      {
+        "num": 31,
+        "clue": "Pub pour"
+      },
+      {
+        "num": 32,
+        "clue": "Palindromic name"
+      },
+      {
+        "num": 34,
+        "clue": "In many places"
+      },
+      {
+        "num": 35,
+        "clue": "Like a 60-by-80-inch mattress"
+      },
+      {
+        "num": 37,
+        "clue": "Standing"
+      },
+      {
+        "num": 40,
+        "clue": "Something passed down?"
+      },
+      {
+        "num": 41,
+        "clue": "Jaw-dropping feeling"
+      },
+      {
+        "num": 44,
+        "clue": "Cupid's projectile"
+      },
+      {
+        "num": 45,
+        "clue": "Isle of ___"
+      },
+      {
+        "num": 46,
+        "clue": "Garden patch or storyline"
+      },
+      {
+        "num": 47,
+        "clue": "Mentee"
+      },
+      {
+        "num": 49,
+        "clue": "Ancient copyists"
+      },
+      {
+        "num": 52,
+        "clue": "Secret advantage held in reserve"
+      },
+      {
+        "num": 54,
+        "clue": "Season on the Seine"
+      },
+      {
+        "num": 55,
+        "clue": "Greek earth goddess"
+      },
+      {
+        "num": 56,
+        "clue": "Is crazy about"
+      },
+      {
+        "num": 59,
+        "clue": "Bro's sibling"
+      },
+      {
+        "num": 60,
+        "clue": "Web page code"
+      },
+      {
+        "num": 61,
+        "clue": "Put roots in a new place"
+      },
+      {
+        "num": 62,
+        "clue": "Desktops, e.g., for short"
+      },
+      {
+        "num": 63,
+        "clue": "Tennis match unit"
+      },
+      {
+        "num": 64,
+        "clue": "Art made of tiles"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Turntable speed abbr."
+      },
+      {
+        "num": 2,
+        "clue": "Pitching stat"
+      },
+      {
+        "num": 3,
+        "clue": "Summon, as a spirit"
+      },
+      {
+        "num": 4,
+        "clue": "Go on the offensive"
+      },
+      {
+        "num": 5,
+        "clue": "Spot for a rocking chair"
+      },
+      {
+        "num": 6,
+        "clue": "Plumber's tool"
+      },
+      {
+        "num": 7,
+        "clue": "Like a story that stretches the truth"
+      },
+      {
+        "num": 8,
+        "clue": "Laundry whitener"
+      },
+      {
+        "num": 9,
+        "clue": "\"Beats me\""
+      },
+      {
+        "num": 10,
+        "clue": "Fellow soldier"
+      },
+      {
+        "num": 11,
+        "clue": "Cozy fall shirt fabric"
+      },
+      {
+        "num": 12,
+        "clue": "Like 1, 3 and 5"
+      },
+      {
+        "num": 15,
+        "clue": "Equip with an engine"
+      },
+      {
+        "num": 21,
+        "clue": "Hold forth"
+      },
+      {
+        "num": 22,
+        "clue": "Give the slip"
+      },
+      {
+        "num": 23,
+        "clue": "Transcript figure, for short"
+      },
+      {
+        "num": 24,
+        "clue": "\"You've got mail\" company"
+      },
+      {
+        "num": 26,
+        "clue": "Have a go"
+      },
+      {
+        "num": 29,
+        "clue": "Party line?"
+      },
+      {
+        "num": 32,
+        "clue": "Matter more than"
+      },
+      {
+        "num": 33,
+        "clue": "Golf peg"
+      },
+      {
+        "num": 34,
+        "clue": "Victory"
+      },
+      {
+        "num": 35,
+        "clue": "Remark attributed to someone"
+      },
+      {
+        "num": 36,
+        "clue": "Taste or touch"
+      },
+      {
+        "num": 37,
+        "clue": "Knock"
+      },
+      {
+        "num": 38,
+        "clue": "Unpredictable"
+      },
+      {
+        "num": 39,
+        "clue": "Step-by-step method"
+      },
+      {
+        "num": 41,
+        "clue": "Canadian province with Banff"
+      },
+      {
+        "num": 42,
+        "clue": "\"___ is me!\""
+      },
+      {
+        "num": 43,
+        "clue": "Extraterrestrials, briefly"
+      },
+      {
+        "num": 45,
+        "clue": "Self-care hours, informally"
+      },
+      {
+        "num": 46,
+        "clue": "Cockpit crew"
+      },
+      {
+        "num": 48,
+        "clue": "Pesky picnic swarms"
+      },
+      {
+        "num": 50,
+        "clue": "Deep gap"
+      },
+      {
+        "num": 51,
+        "clue": "Bronco-busting event"
+      },
+      {
+        "num": 53,
+        "clue": "\"Stop right there!\""
+      },
+      {
+        "num": 54,
+        "clue": "Mind-reading ability, briefly"
+      },
+      {
+        "num": 57,
+        "clue": "Manning with two Super Bowl rings"
+      },
+      {
+        "num": 58,
+        "clue": "Just a moment, briefly"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a playing card",
+  "publishedAt": "2026-10-04T21:51:36.562Z"
+}

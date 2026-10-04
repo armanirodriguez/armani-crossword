@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-05",
+  "date": "2026-10-05",
+  "series": "claude",
+  "title": "Rise and Dine",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......##.......",
+    "......#........",
+    "......#........",
+    "...#....#...###",
+    "##...#.....#...",
+    "#....#...#.....",
+    "#.....#...#....",
+    "....#.....#....",
+    "....#...#.....#",
+    ".....#...#....#",
+    "...#.....#...##",
+    "###...#....#...",
+    "........#......",
+    "........#......",
+    ".......##......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:sBHeYwxuwDu1DDIzoS/kM4XSuFB4W59m/7DqFSQppqMXOu9fHq2x7xlZ9S2yRtWDdDvk8pkezB/t7ccN2TW6hv5gKvWqzdaLs2DdnJtEu99kVXLfAanbeARAGnat0K09qWYjt9fbuXSzhKU1yluRiwesldr++ssULZLOxidpt6/InP4IR58aqw8QtT9agxSO+1A5WQWxTrTG9pyGbWofOay0QJrLE26WTCyof2B6pWElxdWcIwdxmwB8DF6FUpAGSR+G1gsQ4ATYy4LMm17PP0vlMbsfQG3+s7fMBGK70y/q",
+  "checksum": "459e4a85",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Wipe out, as a memory"
+      },
+      {
+        "num": 7,
+        "clue": "Sang like an Alpine herder"
+      },
+      {
+        "num": 14,
+        "clue": "Scottish plaid"
+      },
+      {
+        "num": 15,
+        "clue": "Clip that holds hair in place"
+      },
+      {
+        "num": 16,
+        "clue": "Spooky, like a haunted house"
+      },
+      {
+        "num": 17,
+        "clue": "Give courage to"
+      },
+      {
+        "num": 18,
+        "clue": "Barnyard egg layer"
+      },
+      {
+        "num": 19,
+        "clue": "___ Grey tea"
+      },
+      {
+        "num": 21,
+        "clue": "___ and outs (details)"
+      },
+      {
+        "num": 22,
+        "clue": "Lifesaving technique, for short"
+      },
+      {
+        "num": 24,
+        "clue": "Striped stone used for marbles"
+      },
+      {
+        "num": 26,
+        "clue": "Chat idly"
+      },
+      {
+        "num": 29,
+        "clue": "Sneaker or sandal"
+      },
+      {
+        "num": 30,
+        "clue": "Come out on top"
+      },
+      {
+        "num": 31,
+        "clue": "Drill instructor, informally"
+      },
+      {
+        "num": 33,
+        "clue": "Piano practice piece"
+      },
+      {
+        "num": 35,
+        "clue": "Cash machine, for short"
+      },
+      {
+        "num": 37,
+        "clue": "Capital of Switzerland"
+      },
+      {
+        "num": 38,
+        "clue": "College teacher, informally"
+      },
+      {
+        "num": 39,
+        "clue": "Proprietor"
+      },
+      {
+        "num": 41,
+        "clue": "Tall marsh grass"
+      },
+      {
+        "num": 42,
+        "clue": "Turn over a new ___"
+      },
+      {
+        "num": 43,
+        "clue": "At this very moment"
+      },
+      {
+        "num": 44,
+        "clue": "Wheel rod"
+      },
+      {
+        "num": 46,
+        "clue": "Beginning"
+      },
+      {
+        "num": 48,
+        "clue": "Room with beakers and test tubes"
+      },
+      {
+        "num": 50,
+        "clue": "Sets down"
+      },
+      {
+        "num": 51,
+        "clue": "Dog or cat, often"
+      },
+      {
+        "num": 52,
+        "clue": "Easily offended"
+      },
+      {
+        "num": 54,
+        "clue": "\"Much ___ About Nothing\""
+      },
+      {
+        "num": 55,
+        "clue": "Wrongdoing"
+      },
+      {
+        "num": 56,
+        "clue": "Shade-loving plant with fronds"
+      },
+      {
+        "num": 58,
+        "clue": "Practical joke"
+      },
+      {
+        "num": 61,
+        "clue": "Living forever"
+      },
+      {
+        "num": 65,
+        "clue": "Bring about"
+      },
+      {
+        "num": 67,
+        "clue": "Kind of farm stand"
+      },
+      {
+        "num": 68,
+        "clue": "Relating to nerves"
+      },
+      {
+        "num": 69,
+        "clue": "Upper houses of legislatures"
+      },
+      {
+        "num": 70,
+        "clue": "Free of charge"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Engrave"
+      },
+      {
+        "num": 2,
+        "clue": "Bus ticket price"
+      },
+      {
+        "num": 3,
+        "clue": "Bread slices dipped in egg, fried and drizzled with syrup"
+      },
+      {
+        "num": 4,
+        "clue": "Had a meal"
+      },
+      {
+        "num": 5,
+        "clue": "Skipped about playfully"
+      },
+      {
+        "num": 6,
+        "clue": "Irish singer of \"Orinoco Flow\""
+      },
+      {
+        "num": 7,
+        "clue": "Orange root vegetable"
+      },
+      {
+        "num": 8,
+        "clue": "Path around the sun"
+      },
+      {
+        "num": 9,
+        "clue": "Flying cameras"
+      },
+      {
+        "num": 10,
+        "clue": "Slippery swimmers"
+      },
+      {
+        "num": 11,
+        "clue": "Abbr. after a British company's name"
+      },
+      {
+        "num": 12,
+        "clue": "Summer, in Paris"
+      },
+      {
+        "num": 13,
+        "clue": "Lion's home"
+      },
+      {
+        "num": 15,
+        "clue": "Deep-pocketed griddle treat, often served with strawberries"
+      },
+      {
+        "num": 20,
+        "clue": "Uncooked"
+      },
+      {
+        "num": 23,
+        "clue": "Padded footstool"
+      },
+      {
+        "num": 25,
+        "clue": "Poker stake"
+      },
+      {
+        "num": 26,
+        "clue": "Tangy, strained dairy cup often sprinkled with granola"
+      },
+      {
+        "num": 27,
+        "clue": "Says yes"
+      },
+      {
+        "num": 28,
+        "clue": "Flex, as a knee"
+      },
+      {
+        "num": 29,
+        "clue": "Calm and peaceful"
+      },
+      {
+        "num": 32,
+        "clue": "Overseas"
+      },
+      {
+        "num": 34,
+        "clue": "Very long time"
+      },
+      {
+        "num": 36,
+        "clue": "Married woman's title"
+      },
+      {
+        "num": 38,
+        "clue": "Sound of something dropping into water"
+      },
+      {
+        "num": 40,
+        "clue": "Pack animal that howls"
+      },
+      {
+        "num": 45,
+        "clue": "Daily schedule book"
+      },
+      {
+        "num": 47,
+        "clue": "Need for a drink"
+      },
+      {
+        "num": 49,
+        "clue": "\"See you later!\""
+      },
+      {
+        "num": 53,
+        "clue": "Loosen, as a knot"
+      },
+      {
+        "num": 55,
+        "clue": "Fizzy pop"
+      },
+      {
+        "num": 57,
+        "clue": "Wedding band"
+      },
+      {
+        "num": 59,
+        "clue": "Purple fruit in trendy bowls"
+      },
+      {
+        "num": 60,
+        "clue": "Styling products for a spiky look"
+      },
+      {
+        "num": 61,
+        "clue": "Org. that collects taxes"
+      },
+      {
+        "num": 62,
+        "clue": "Bartender on \"The Simpsons\""
+      },
+      {
+        "num": 63,
+        "clue": "Guy"
+      },
+      {
+        "num": 64,
+        "clue": "TV commercials"
+      },
+      {
+        "num": 66,
+        "clue": "Pop star ___ Lipa"
+      }
+    ]
+  },
+  "theme": "Breakfast favorites",
+  "publishedAt": "2026-10-04T21:38:52.941Z"
+}

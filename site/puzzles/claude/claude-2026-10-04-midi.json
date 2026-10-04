@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-04-midi",
+  "date": "2026-10-04",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Court Is in Session",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:YXbFbxn66EnEN2gj7YgZJfbo9LnpbiQSgH67DFyKqZ6AcICJOD3ksPsYpd/ifu7hiOHt4ePCnJ3AEkZFKoVVy8WqGeuB5wd3MqLZ9A9QqLWO",
+  "checksum": "b17453bf",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Clock's front"
+      },
+      {
+        "num": 5,
+        "clue": "Harsh review"
+      },
+      {
+        "num": 9,
+        "clue": "Pop star, to a superfan"
+      },
+      {
+        "num": 10,
+        "clue": "City with a famous lean"
+      },
+      {
+        "num": 11,
+        "clue": "Wintry figure who nips at your nose"
+      },
+      {
+        "num": 13,
+        "clue": "\"If you ask me,\" in a text"
+      },
+      {
+        "num": 14,
+        "clue": "Goes off"
+      },
+      {
+        "num": 15,
+        "clue": "Sunbeam"
+      },
+      {
+        "num": 16,
+        "clue": "Madrid's land"
+      },
+      {
+        "num": 19,
+        "clue": "Unagi, at a sushi bar"
+      },
+      {
+        "num": 22,
+        "clue": "Venomous serpent that can rear up tall"
+      },
+      {
+        "num": 24,
+        "clue": "Really digging"
+      },
+      {
+        "num": 25,
+        "clue": "Set down"
+      },
+      {
+        "num": 26,
+        "clue": "Commotion"
+      },
+      {
+        "num": 27,
+        "clue": "Things that may be batted"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Pacific nation with a namesake bottled water"
+      },
+      {
+        "num": 2,
+        "clue": "Eve's partner"
+      },
+      {
+        "num": 3,
+        "clue": "Chanel of fashion"
+      },
+      {
+        "num": 4,
+        "clue": "Antlered beast"
+      },
+      {
+        "num": 5,
+        "clue": "Ocean mist"
+      },
+      {
+        "num": 6,
+        "clue": "Pride member"
+      },
+      {
+        "num": 7,
+        "clue": "Office aide: Abbr."
+      },
+      {
+        "num": 8,
+        "clue": "Yoga class supplies"
+      },
+      {
+        "num": 12,
+        "clue": "Old French money"
+      },
+      {
+        "num": 15,
+        "clue": "Thoroughness"
+      },
+      {
+        "num": 16,
+        "clue": "Winter Olympics gear"
+      },
+      {
+        "num": 17,
+        "clue": "Ice cream container"
+      },
+      {
+        "num": 18,
+        "clue": "Opposed to"
+      },
+      {
+        "num": 19,
+        "clue": "Online auction site"
+      },
+      {
+        "num": 20,
+        "clue": "Great Lake"
+      },
+      {
+        "num": 21,
+        "clue": "Young fellows"
+      },
+      {
+        "num": 23,
+        "clue": "Bullring cheer"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a playing card",
+  "publishedAt": "2026-10-04T21:51:36.451Z"
+}
