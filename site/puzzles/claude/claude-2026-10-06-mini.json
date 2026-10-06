@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-06-mini",
+  "date": "2026-10-06",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Tail Light",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:7/o9cfycXYv4eTtm+0I1WiUpy45o8WbWeA==",
+  "checksum": "b0106783",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Got 100 on"
+      },
+      {
+        "num": 5,
+        "clue": "Pleasant smell"
+      },
+      {
+        "num": 6,
+        "clue": "Wrapped-up Halloween costume"
+      },
+      {
+        "num": 7,
+        "clue": "Follows orders"
+      },
+      {
+        "num": 8,
+        "clue": "Rodents bigger than mice"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Caribbean island near Venezuela"
+      },
+      {
+        "num": 2,
+        "clue": "Icy space body with a glowing tail"
+      },
+      {
+        "num": 3,
+        "clue": "TV awards"
+      },
+      {
+        "num": 4,
+        "clue": "Monday and Tuesday, e.g."
+      },
+      {
+        "num": 5,
+        "clue": "Love, in Spanish"
+      }
+    ]
+  },
+  "theme": "Sights in the night sky",
+  "publishedAt": "2026-10-06T20:20:53.549Z"
+}

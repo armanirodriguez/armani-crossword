@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-07",
+  "date": "2026-10-07",
+  "series": "claude",
+  "title": "Rhyme Time",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....##....#...",
+    ".....#.....#...",
+    "...........#...",
+    "....#....##....",
+    "#.....##.......",
+    ".....#.........",
+    "...#....#...###",
+    "....#.....#....",
+    "###...#....#...",
+    ".........#.....",
+    ".......##.....#",
+    "....##....#....",
+    "...#...........",
+    "...#.....#.....",
+    "...#....##....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:1RXHHRqDKPgNBT5WBEmKymul9/DkKlyiAqLY9F1ZoDw+RmYY4W6jmZnCz+EbzAAAjk6xXJVIWgSoF+IwtsDI62RFWupwcMt4yGrYkYIaaazmBq7VArVYJ0nmLOEHgQT5op7iXGbHu2UAYMLaHj9fdrb6tZ+1P/J6bg4kq1N8I4iLAGgTaIpmx5btt6Ve2erUj/R4goLj1T+0WNL5FXQLtIIT9YllevvboOozrL5/9Slx5NHRrKcTK5SsRjFPoCMB/7dM9yuknRvJNOSP34MDmpVneziA2CiBgvpjUVA3Ix4o",
+  "checksum": "dbd42859",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Mementos of a skateboarding mishap, maybe"
+      },
+      {
+        "num": 6,
+        "clue": "Seaweed in an underwater forest"
+      },
+      {
+        "num": 10,
+        "clue": "Tree whose wood makes many baseball bats"
+      },
+      {
+        "num": 13,
+        "clue": "Parcel out"
+      },
+      {
+        "num": 14,
+        "clue": "___ child"
+      },
+      {
+        "num": 15,
+        "clue": "Keanu's role in \"The Matrix\""
+      },
+      {
+        "num": 16,
+        "clue": "Practical details of a matter"
+      },
+      {
+        "num": 18,
+        "clue": "Month after Sept."
+      },
+      {
+        "num": 19,
+        "clue": "Give off"
+      },
+      {
+        "num": 20,
+        "clue": "Abominable Snowman"
+      },
+      {
+        "num": 21,
+        "clue": "Arduous journey"
+      },
+      {
+        "num": 22,
+        "clue": "Mr. T's TV squad, with \"The\""
+      },
+      {
+        "num": 24,
+        "clue": "Pretense"
+      },
+      {
+        "num": 27,
+        "clue": "Was awful, informally"
+      },
+      {
+        "num": 28,
+        "clue": "Cheery \"Sure thing!\""
+      },
+      {
+        "num": 30,
+        "clue": "Tease playfully"
+      },
+      {
+        "num": 31,
+        "clue": "Farm measure"
+      },
+      {
+        "num": 33,
+        "clue": "Soda, in the Midwest"
+      },
+      {
+        "num": 34,
+        "clue": "Rapper-actor on \"Law & Order: SVU\""
+      },
+      {
+        "num": 36,
+        "clue": "Speak from a podium"
+      },
+      {
+        "num": 38,
+        "clue": "\"___ noche\" (tonight, in Spanish)"
+      },
+      {
+        "num": 42,
+        "clue": "\"I wonder ...\""
+      },
+      {
+        "num": 44,
+        "clue": "Matador's opponent"
+      },
+      {
+        "num": 46,
+        "clue": "___ chi"
+      },
+      {
+        "num": 47,
+        "clue": "Like the spider that climbed the waterspout"
+      },
+      {
+        "num": 51,
+        "clue": "Fire ___ (school exercise)"
+      },
+      {
+        "num": 53,
+        "clue": "Purple McDonaldland character"
+      },
+      {
+        "num": 54,
+        "clue": "\"Rolling in the Deep\" singer"
+      },
+      {
+        "num": 55,
+        "clue": "River through Cairo"
+      },
+      {
+        "num": 56,
+        "clue": "Jacob's twin"
+      },
+      {
+        "num": 59,
+        "clue": "Fox homes"
+      },
+      {
+        "num": 61,
+        "clue": "\"I Like ___\" (1950s campaign slogan)"
+      },
+      {
+        "num": 62,
+        "clue": "Mixed-fruit ice cream flavor"
+      },
+      {
+        "num": 65,
+        "clue": "Bowling pin count"
+      },
+      {
+        "num": 66,
+        "clue": "Scornful look"
+      },
+      {
+        "num": 67,
+        "clue": "Played a part"
+      },
+      {
+        "num": 68,
+        "clue": "Abbr. on a cornerstone"
+      },
+      {
+        "num": 69,
+        "clue": "Left at sea?"
+      },
+      {
+        "num": 70,
+        "clue": "Crystal-lined rock"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Rational"
+      },
+      {
+        "num": 2,
+        "clue": "Of long-term weather patterns"
+      },
+      {
+        "num": 3,
+        "clue": "Pilot's reading"
+      },
+      {
+        "num": 4,
+        "clue": "Spoiled"
+      },
+      {
+        "num": 5,
+        "clue": "Pigpen"
+      },
+      {
+        "num": 6,
+        "clue": "Make a scarf, perhaps"
+      },
+      {
+        "num": 7,
+        "clue": "Lure"
+      },
+      {
+        "num": 8,
+        "clue": "Tennis serve do-over"
+      },
+      {
+        "num": 9,
+        "clue": "Be nosy"
+      },
+      {
+        "num": 10,
+        "clue": "Hooded jacket"
+      },
+      {
+        "num": 11,
+        "clue": "Formally withdraw"
+      },
+      {
+        "num": 12,
+        "clue": "Ctrl+C, e.g."
+      },
+      {
+        "num": 14,
+        "clue": "Anger"
+      },
+      {
+        "num": 17,
+        "clue": "Place to work out"
+      },
+      {
+        "num": 21,
+        "clue": "Overused plot device"
+      },
+      {
+        "num": 23,
+        "clue": "Alias letters"
+      },
+      {
+        "num": 25,
+        "clue": "Bouncing off the walls"
+      },
+      {
+        "num": 26,
+        "clue": "\"Much ___ About Nothing\""
+      },
+      {
+        "num": 27,
+        "clue": "Hit the slopes"
+      },
+      {
+        "num": 28,
+        "clue": "Bruins legend Bobby"
+      },
+      {
+        "num": 29,
+        "clue": "\"Ode on a Grecian Urn\" poet"
+      },
+      {
+        "num": 32,
+        "clue": "Stand-up performer"
+      },
+      {
+        "num": 35,
+        "clue": "Herb that sounds timely?"
+      },
+      {
+        "num": 37,
+        "clue": "Playroom item"
+      },
+      {
+        "num": 39,
+        "clue": "High heel"
+      },
+      {
+        "num": 40,
+        "clue": "Gifted"
+      },
+      {
+        "num": 41,
+        "clue": "Feel poorly"
+      },
+      {
+        "num": 43,
+        "clue": "Exec's degree"
+      },
+      {
+        "num": 45,
+        "clue": "Not even"
+      },
+      {
+        "num": 47,
+        "clue": "Set alight"
+      },
+      {
+        "num": 48,
+        "clue": "Tots' three-wheelers"
+      },
+      {
+        "num": 49,
+        "clue": "Like the B in \"lamb\""
+      },
+      {
+        "num": 50,
+        "clue": "Wobble"
+      },
+      {
+        "num": 52,
+        "clue": "Cut back"
+      },
+      {
+        "num": 54,
+        "clue": "\"___ Wiedersehen\""
+      },
+      {
+        "num": 57,
+        "clue": "Proofreader's \"leave it\""
+      },
+      {
+        "num": 58,
+        "clue": "Broadcast"
+      },
+      {
+        "num": 60,
+        "clue": "Fries or coleslaw, e.g."
+      },
+      {
+        "num": 62,
+        "clue": "Recipe amt."
+      },
+      {
+        "num": 63,
+        "clue": "Card game with Wild cards"
+      },
+      {
+        "num": 64,
+        "clue": "Dust cloth"
+      }
+    ]
+  },
+  "theme": "Rhyming two-part phrases",
+  "publishedAt": "2026-10-06T20:17:26.929Z"
+}

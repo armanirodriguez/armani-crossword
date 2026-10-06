@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-06-midi",
+  "date": "2026-10-06",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Space Case",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:L4lXiBmBs32GCKy9C1yWWSRKyfeG13MPPG1IW2Jm/XuLu4qnJfStWjKR949EFhYqCwwFghsjvp7f/nRTlR7TXvMmCXU5hDHqENGEKxpTZt7r",
+  "checksum": "b3c866ba",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Shakespeare, the ___ of Avon"
+      },
+      {
+        "num": 5,
+        "clue": "Attempt"
+      },
+      {
+        "num": 9,
+        "clue": "Double-reed woodwind"
+      },
+      {
+        "num": 10,
+        "clue": "Garden sprayer"
+      },
+      {
+        "num": 11,
+        "clue": "Space region that even light can't escape"
+      },
+      {
+        "num": 13,
+        "clue": "Four-door car"
+      },
+      {
+        "num": 14,
+        "clue": "2,000 pounds"
+      },
+      {
+        "num": 15,
+        "clue": "So far"
+      },
+      {
+        "num": 17,
+        "clue": "Greek letter after upsilon"
+      },
+      {
+        "num": 20,
+        "clue": "Wipe out"
+      },
+      {
+        "num": 24,
+        "clue": "Mars, familiarly"
+      },
+      {
+        "num": 26,
+        "clue": "Cookie with a creme center"
+      },
+      {
+        "num": 27,
+        "clue": "Coat hooks"
+      },
+      {
+        "num": 28,
+        "clue": "Castle's protective ditch"
+      },
+      {
+        "num": 29,
+        "clue": "Rock from side to side"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Bounces on the water"
+      },
+      {
+        "num": 2,
+        "clue": "Capable"
+      },
+      {
+        "num": 3,
+        "clue": "Highway"
+      },
+      {
+        "num": 4,
+        "clue": "Rot"
+      },
+      {
+        "num": 5,
+        "clue": "\"Quiet, please!\""
+      },
+      {
+        "num": 6,
+        "clue": "Owl's call"
+      },
+      {
+        "num": 7,
+        "clue": "Norway's capital"
+      },
+      {
+        "num": 8,
+        "clue": "Fifteen-year-old, e.g."
+      },
+      {
+        "num": 12,
+        "clue": "Genuflect"
+      },
+      {
+        "num": 16,
+        "clue": "Snares"
+      },
+      {
+        "num": 17,
+        "clue": "Spring school dance"
+      },
+      {
+        "num": 18,
+        "clue": "Brave one"
+      },
+      {
+        "num": 19,
+        "clue": "Brainstorm result"
+      },
+      {
+        "num": 21,
+        "clue": "Once more"
+      },
+      {
+        "num": 22,
+        "clue": "Sonic the Hedgehog company"
+      },
+      {
+        "num": 23,
+        "clue": "Online crafts marketplace"
+      },
+      {
+        "num": 25,
+        "clue": "Stew holder"
+      }
+    ]
+  },
+  "theme": "Sights in the night sky",
+  "publishedAt": "2026-10-06T20:20:53.679Z"
+}

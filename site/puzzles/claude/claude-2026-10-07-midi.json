@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-07-midi",
+  "date": "2026-10-07",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Sound-Alike Slang",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:mnByrBPHQy7UKeWSDNdziQPJuRwILAxpVzZs219OUnkJJk6prCoRULagnbaqBznadGnh3lrfIq9eWAhIFYCqN7yDCCiDxdobjDDVrg/mvtYS",
+  "checksum": "00aba6dd",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Buddies"
+      },
+      {
+        "num": 5,
+        "clue": "Doorbell video gadgets, informally"
+      },
+      {
+        "num": 9,
+        "clue": "Urgent memo letters"
+      },
+      {
+        "num": 10,
+        "clue": "Largest continent"
+      },
+      {
+        "num": 11,
+        "clue": "Something to \"take\" when you're overreacting"
+      },
+      {
+        "num": 13,
+        "clue": "Spooky"
+      },
+      {
+        "num": 14,
+        "clue": "Get it"
+      },
+      {
+        "num": 15,
+        "clue": "Playground chase game"
+      },
+      {
+        "num": 17,
+        "clue": "Tally up"
+      },
+      {
+        "num": 20,
+        "clue": "Place for a blowout"
+      },
+      {
+        "num": 24,
+        "clue": "Network TV's peak evening hours"
+      },
+      {
+        "num": 26,
+        "clue": "Blacktop"
+      },
+      {
+        "num": 27,
+        "clue": "At any point"
+      },
+      {
+        "num": 28,
+        "clue": "Fret"
+      },
+      {
+        "num": 29,
+        "clue": "Hit the button on, as an email"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Walk back and forth"
+      },
+      {
+        "num": 2,
+        "clue": "Tennis great Arthur"
+      },
+      {
+        "num": 3,
+        "clue": "Villain's hideout"
+      },
+      {
+        "num": 4,
+        "clue": "Divvy up"
+      },
+      {
+        "num": 5,
+        "clue": "Bottle top"
+      },
+      {
+        "num": 6,
+        "clue": "Without a warranty"
+      },
+      {
+        "num": 7,
+        "clue": "5,280 feet"
+      },
+      {
+        "num": 8,
+        "clue": "Black Friday event"
+      },
+      {
+        "num": 12,
+        "clue": "Rental agreement"
+      },
+      {
+        "num": 16,
+        "clue": "Airport waiting areas"
+      },
+      {
+        "num": 17,
+        "clue": "Phone downloads"
+      },
+      {
+        "num": 18,
+        "clue": "\"Darn it!\""
+      },
+      {
+        "num": 19,
+        "clue": "Plunge"
+      },
+      {
+        "num": 21,
+        "clue": "Not taped"
+      },
+      {
+        "num": 22,
+        "clue": "Portent"
+      },
+      {
+        "num": 23,
+        "clue": "Brainy type"
+      },
+      {
+        "num": 25,
+        "clue": "Kitten's cry"
+      }
+    ]
+  },
+  "theme": "Rhyming two-part phrases",
+  "publishedAt": "2026-10-06T20:17:26.811Z"
+}

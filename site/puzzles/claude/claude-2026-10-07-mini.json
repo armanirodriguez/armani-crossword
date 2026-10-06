@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-07-mini",
+  "date": "2026-10-07",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Rhyme Scheme",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    "#....",
+    ".....",
+    "....#",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:MORG1W1U3ygf4Rhvl5XxyAaJKqUqeBNuUg==",
+  "checksum": "878749b7",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Hollywood A-lister"
+      },
+      {
+        "num": 5,
+        "clue": "Ruled out, plan-wise"
+      },
+      {
+        "num": 6,
+        "clue": "Backyard spot for a grill"
+      },
+      {
+        "num": 7,
+        "clue": "Spoken, as an exam"
+      },
+      {
+        "num": 8,
+        "clue": "Fashion magazine"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Traffic tangle"
+      },
+      {
+        "num": 2,
+        "clue": "Sum"
+      },
+      {
+        "num": 3,
+        "clue": "Nimble"
+      },
+      {
+        "num": 4,
+        "clue": "Winnie-the-Pooh's little friend"
+      },
+      {
+        "num": 6,
+        "clue": "\"The Raven\" poet"
+      }
+    ]
+  },
+  "theme": "Rhyming two-part phrases",
+  "publishedAt": "2026-10-06T20:17:26.701Z"
+}

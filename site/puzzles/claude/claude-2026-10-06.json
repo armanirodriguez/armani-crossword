@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-06",
+  "date": "2026-10-06",
+  "series": "claude",
+  "title": "Look Up!",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....###....#...",
+    "......#....#...",
+    "......#....#...",
+    "##............#",
+    ".......#.......",
+    "....##...##....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....##...##....",
+    ".......#.......",
+    "#............##",
+    "...#....#......",
+    "...#....#......",
+    "...#....###...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:LzIPbPbazOq09JnpWmTkFsab7YuQGFqTKIfNwGskS8mESHRvC/0Uh8SJwkkd5m4n+AFq32MWqAzSlhCv0JwaW7VFQLa5V1D0Aza4fpKbJZbDTzPA2LsSsJP9+cKC8aX8xYfcmxPfK1qrwO3wlIM+zeZZTSWLHmQifwbuoyjYb/mpT+MDxNfHyxgnxCBwYCuSyGxwSm80H9kgh4Talxe9b/yzEdFeRHSYwd5CJygn1I336YgaWBqcvbAtAdXZuBGTL0RgsG8dFfRdpSYmhFmRCMW+h54CixGbuzADSDhO7qrf",
+  "checksum": "0602d2ae",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Résumé listings"
+      },
+      {
+        "num": 5,
+        "clue": "Declare openly"
+      },
+      {
+        "num": 9,
+        "clue": "Cable news channel"
+      },
+      {
+        "num": 12,
+        "clue": "Bless with oil"
+      },
+      {
+        "num": 15,
+        "clue": "Prom-night ride"
+      },
+      {
+        "num": 16,
+        "clue": "Fib"
+      },
+      {
+        "num": 17,
+        "clue": "Scanty"
+      },
+      {
+        "num": 18,
+        "clue": "Bambi, for one"
+      },
+      {
+        "num": 19,
+        "clue": "Summer, in France"
+      },
+      {
+        "num": 20,
+        "clue": "Streak of light you might make a wish on"
+      },
+      {
+        "num": 23,
+        "clue": "Easing of tensions"
+      },
+      {
+        "num": 25,
+        "clue": "Not artificial"
+      },
+      {
+        "num": 27,
+        "clue": "Amazed"
+      },
+      {
+        "num": 28,
+        "clue": "Golf tour org."
+      },
+      {
+        "num": 30,
+        "clue": "Test version of software"
+      },
+      {
+        "num": 31,
+        "clue": "Garden plot"
+      },
+      {
+        "num": 32,
+        "clue": "Travel by boat"
+      },
+      {
+        "num": 34,
+        "clue": "Ranked, in a tournament"
+      },
+      {
+        "num": 36,
+        "clue": "Ladle-shaped part of Ursa Major"
+      },
+      {
+        "num": 38,
+        "clue": "Stick"
+      },
+      {
+        "num": 41,
+        "clue": "Clock face"
+      },
+      {
+        "num": 42,
+        "clue": "Airport board abbr."
+      },
+      {
+        "num": 45,
+        "clue": "College teacher, informally"
+      },
+      {
+        "num": 46,
+        "clue": "Encountered"
+      },
+      {
+        "num": 47,
+        "clue": "Flower stalk"
+      },
+      {
+        "num": 48,
+        "clue": "Meet by chance"
+      },
+      {
+        "num": 51,
+        "clue": "Small places of worship"
+      },
+      {
+        "num": 54,
+        "clue": "The Perseids, e.g."
+      },
+      {
+        "num": 56,
+        "clue": "Poehler of \"Parks and Recreation\""
+      },
+      {
+        "num": 57,
+        "clue": "List-ending abbr."
+      },
+      {
+        "num": 58,
+        "clue": "Car from the dealer during repairs"
+      },
+      {
+        "num": 61,
+        "clue": "Spike who directed \"Do the Right Thing\""
+      },
+      {
+        "num": 62,
+        "clue": "Surrealist Salvador"
+      },
+      {
+        "num": 63,
+        "clue": "Base, in chemistry"
+      },
+      {
+        "num": 64,
+        "clue": "Sum up"
+      },
+      {
+        "num": 65,
+        "clue": "Toboggan, e.g."
+      },
+      {
+        "num": 66,
+        "clue": "Messy person"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Traffic snarl"
+      },
+      {
+        "num": 2,
+        "clue": "Single"
+      },
+      {
+        "num": 3,
+        "clue": "Bragged"
+      },
+      {
+        "num": 4,
+        "clue": "Breathed out wearily"
+      },
+      {
+        "num": 5,
+        "clue": "Discount grocery chain from Germany"
+      },
+      {
+        "num": 6,
+        "clue": "Austria's capital"
+      },
+      {
+        "num": 7,
+        "clue": "Last Greek letter"
+      },
+      {
+        "num": 8,
+        "clue": "Least good"
+      },
+      {
+        "num": 9,
+        "clue": "Emptied, as a table"
+      },
+      {
+        "num": 10,
+        "clue": "Fertilizer compound"
+      },
+      {
+        "num": 11,
+        "clue": "Born, on a wedding announcement"
+      },
+      {
+        "num": 13,
+        "clue": "Glowing sign gas"
+      },
+      {
+        "num": 14,
+        "clue": "Horse's gait"
+      },
+      {
+        "num": 21,
+        "clue": "Lukewarm"
+      },
+      {
+        "num": 22,
+        "clue": "Potato, e.g."
+      },
+      {
+        "num": 23,
+        "clue": "Little bit, as of paint"
+      },
+      {
+        "num": 24,
+        "clue": "Female sheep"
+      },
+      {
+        "num": 26,
+        "clue": "Young fellow"
+      },
+      {
+        "num": 29,
+        "clue": "Move smoothly"
+      },
+      {
+        "num": 32,
+        "clue": "Knight's title"
+      },
+      {
+        "num": 33,
+        "clue": "Years lived"
+      },
+      {
+        "num": 34,
+        "clue": "Place for a massage"
+      },
+      {
+        "num": 35,
+        "clue": "Slippery fish"
+      },
+      {
+        "num": 36,
+        "clue": "Suit"
+      },
+      {
+        "num": 37,
+        "clue": "Baseball delivery"
+      },
+      {
+        "num": 38,
+        "clue": "Month before May: Abbr."
+      },
+      {
+        "num": 39,
+        "clue": "Tapped, as fingers on a desk"
+      },
+      {
+        "num": 40,
+        "clue": "Sweetened"
+      },
+      {
+        "num": 42,
+        "clue": "Everlasting"
+      },
+      {
+        "num": 43,
+        "clue": "Phone number abbr."
+      },
+      {
+        "num": 44,
+        "clue": "Private messages on social media"
+      },
+      {
+        "num": 46,
+        "clue": "Team spirit"
+      },
+      {
+        "num": 47,
+        "clue": "Talks"
+      },
+      {
+        "num": 49,
+        "clue": "Requires"
+      },
+      {
+        "num": 50,
+        "clue": "Bottom line"
+      },
+      {
+        "num": 52,
+        "clue": "Spanish hello"
+      },
+      {
+        "num": 53,
+        "clue": "Missing from duty, briefly"
+      },
+      {
+        "num": 55,
+        "clue": "Skidded"
+      },
+      {
+        "num": 56,
+        "clue": "In the style of"
+      },
+      {
+        "num": 59,
+        "clue": "\"Mr. Blue Sky\" band"
+      },
+      {
+        "num": 60,
+        "clue": "Barbecue cut"
+      }
+    ]
+  },
+  "theme": "Sights in the night sky",
+  "publishedAt": "2026-10-06T20:20:53.805Z"
+}
