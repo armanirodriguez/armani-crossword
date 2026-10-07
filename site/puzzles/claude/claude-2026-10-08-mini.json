@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-08-mini",
+  "date": "2026-10-08",
+  "kind": "mini",
+  "series": "claude",
+  "title": "All Ears",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:Z0OTt4WPvtgO+cGu1w0JwXIOwxiD7wn72A==",
+  "checksum": "81d8e389",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Magician's \"Voila!\""
+      },
+      {
+        "num": 5,
+        "clue": "Borders on"
+      },
+      {
+        "num": 7,
+        "clue": "Burger, fries and a drink, e.g."
+      },
+      {
+        "num": 8,
+        "clue": "Big brass in a marching band"
+      },
+      {
+        "num": 9,
+        "clue": "Dorothy's little dog"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Diplomat's asset"
+      },
+      {
+        "num": 2,
+        "clue": "Roughly"
+      },
+      {
+        "num": 3,
+        "clue": "Disney flier whose trunk is outshone by his ears"
+      },
+      {
+        "num": 4,
+        "clue": "Turn at the plate"
+      },
+      {
+        "num": 6,
+        "clue": "Just OK"
+      }
+    ]
+  },
+  "theme": "Things that have trunks",
+  "publishedAt": "2026-10-07T20:13:50.276Z"
+}

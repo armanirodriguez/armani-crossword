@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-08",
+  "date": "2026-10-08",
+  "series": "claude",
+  "title": "Trunk Show",
+  "author": "Claude",
+  "note": "Packing tip: think about what the three longest answers have in common.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....#......#...",
+    "....#......#...",
+    "...........#...",
+    "###.....##.....",
+    "......#...#....",
+    "...#...#......#",
+    "....##......###",
+    "#.............#",
+    "###......##....",
+    "#......#...#...",
+    "....#...#......",
+    ".....##.....###",
+    "...#...........",
+    "...#......#....",
+    "...#......#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:6BCh2lhrTrixOl5uxtWYyy0nkziHjxCiyocgdSOmpAbyC/Wke2jMjIyiAuAI8ZrpdmD0+Z5R/LOEZDoDC/DmFVIlrSMtDZ5qfWvK5vHUnYdDwbG0yole72U01w7M4i2YMOI3ohbKu+wIWdBsHYLBfqRBP+dTePe1deIUctXSsZTFQomPkkTTppxo6G67pGljLL5bR9pFUFm/XYMyKTPU3PUCwXdQLY4/YfkaG24JdPsRZDOTPnwshhnJ9kjetxCa8KKVD0xA2UhVPYUdEoIvMWaxozfI7dIgJDkRQeKQp7DW",
+  "checksum": "2666336a",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Taylor Swift's \"The ___ Tour\""
+      },
+      {
+        "num": 5,
+        "clue": "Lawrence of ___"
+      },
+      {
+        "num": 11,
+        "clue": "\"One sec,\" in a chat"
+      },
+      {
+        "num": 14,
+        "clue": "Top-notch, as steak sauce?"
+      },
+      {
+        "num": 15,
+        "clue": "Win over with charm"
+      },
+      {
+        "num": 16,
+        "clue": "Slippery swimmer"
+      },
+      {
+        "num": 17,
+        "clue": "Coastal California giant with a massive trunk"
+      },
+      {
+        "num": 19,
+        "clue": "Pub pour"
+      },
+      {
+        "num": 20,
+        "clue": "Campfire leftover"
+      },
+      {
+        "num": 21,
+        "clue": "Glossy pajama fabric"
+      },
+      {
+        "num": 23,
+        "clue": "Movie villain, informally"
+      },
+      {
+        "num": 26,
+        "clue": "Milk source for some lattes"
+      },
+      {
+        "num": 29,
+        "clue": "Require"
+      },
+      {
+        "num": 30,
+        "clue": "Yoko who sang with John"
+      },
+      {
+        "num": 31,
+        "clue": "Disapproving click"
+      },
+      {
+        "num": 33,
+        "clue": "Trip to the dry cleaner, say"
+      },
+      {
+        "num": 35,
+        "clue": "Ties the knot with"
+      },
+      {
+        "num": 37,
+        "clue": "Skier's flip, e.g."
+      },
+      {
+        "num": 39,
+        "clue": "Shaggy Ice Age beast whose nose doubled as a hand?"
+      },
+      {
+        "num": 44,
+        "clue": "Vanish, as a species"
+      },
+      {
+        "num": 45,
+        "clue": "Blooper"
+      },
+      {
+        "num": 47,
+        "clue": "One carrying a bag on the links"
+      },
+      {
+        "num": 49,
+        "clue": "Go out, as the tide"
+      },
+      {
+        "num": 52,
+        "clue": "Bullring cheer"
+      },
+      {
+        "num": 53,
+        "clue": "Iditarod finish line"
+      },
+      {
+        "num": 54,
+        "clue": "Spots on TV"
+      },
+      {
+        "num": 56,
+        "clue": "Ready to go after a nap"
+      },
+      {
+        "num": 58,
+        "clue": "Concert venue"
+      },
+      {
+        "num": 60,
+        "clue": "Let up"
+      },
+      {
+        "num": 62,
+        "clue": "Start of the work wk."
+      },
+      {
+        "num": 63,
+        "clue": "Four-door with room in back for the kids' luggage"
+      },
+      {
+        "num": 69,
+        "clue": "Finale"
+      },
+      {
+        "num": 70,
+        "clue": "Fifth or Park, in Manhattan"
+      },
+      {
+        "num": 71,
+        "clue": "Brazilian soccer legend"
+      },
+      {
+        "num": 72,
+        "clue": "German article"
+      },
+      {
+        "num": 73,
+        "clue": "Didn't buy, maybe"
+      },
+      {
+        "num": 74,
+        "clue": "Came in headfirst, maybe"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Something to lend"
+      },
+      {
+        "num": 2,
+        "clue": "Fish eggs"
+      },
+      {
+        "num": 3,
+        "clue": "Ampersand's meaning"
+      },
+      {
+        "num": 4,
+        "clue": "Stitched up"
+      },
+      {
+        "num": 5,
+        "clue": "Sun-dried brick homes"
+      },
+      {
+        "num": 6,
+        "clue": "Uber request"
+      },
+      {
+        "num": 7,
+        "clue": "Houston ballplayer"
+      },
+      {
+        "num": 8,
+        "clue": "Exam for a would-be lawyer"
+      },
+      {
+        "num": 9,
+        "clue": "Wrath"
+      },
+      {
+        "num": 10,
+        "clue": "Iowa State's city"
+      },
+      {
+        "num": 11,
+        "clue": "Like a well-worn path"
+      },
+      {
+        "num": 12,
+        "clue": "Leaned (on)"
+      },
+      {
+        "num": 13,
+        "clue": "Smoothie setting"
+      },
+      {
+        "num": 18,
+        "clue": "Leave out"
+      },
+      {
+        "num": 22,
+        "clue": "Like an old-school wristwatch"
+      },
+      {
+        "num": 23,
+        "clue": "Curtain call move"
+      },
+      {
+        "num": 24,
+        "clue": "From scratch"
+      },
+      {
+        "num": 25,
+        "clue": "Extinct Mauritius native"
+      },
+      {
+        "num": 27,
+        "clue": "Let air into, as soil"
+      },
+      {
+        "num": 28,
+        "clue": "Light haircut"
+      },
+      {
+        "num": 32,
+        "clue": "Floored, in a way"
+      },
+      {
+        "num": 34,
+        "clue": "Computer memory, for short"
+      },
+      {
+        "num": 36,
+        "clue": "Soaked through"
+      },
+      {
+        "num": 38,
+        "clue": "Big runner of the outback"
+      },
+      {
+        "num": 40,
+        "clue": "Jar topper"
+      },
+      {
+        "num": 41,
+        "clue": "Princess with iconic buns"
+      },
+      {
+        "num": 42,
+        "clue": "Horn sound"
+      },
+      {
+        "num": 43,
+        "clue": "One of 18 on a golf course"
+      },
+      {
+        "num": 46,
+        "clue": "G-man, informally"
+      },
+      {
+        "num": 47,
+        "clue": "Sun's outer glow"
+      },
+      {
+        "num": 48,
+        "clue": "Things made after a mistake"
+      },
+      {
+        "num": 50,
+        "clue": "Made a donkey noise"
+      },
+      {
+        "num": 51,
+        "clue": "Wagers"
+      },
+      {
+        "num": 53,
+        "clue": "Dubbed"
+      },
+      {
+        "num": 55,
+        "clue": "New Orleans football player"
+      },
+      {
+        "num": 57,
+        "clue": "Oozes"
+      },
+      {
+        "num": 59,
+        "clue": "From a distance"
+      },
+      {
+        "num": 61,
+        "clue": "Down in the dumps"
+      },
+      {
+        "num": 64,
+        "clue": "\"___ Maria\""
+      },
+      {
+        "num": 65,
+        "clue": "Chess pieces"
+      },
+      {
+        "num": 66,
+        "clue": "Keyboard key that zaps text, for short"
+      },
+      {
+        "num": 67,
+        "clue": "\"The Greatest\" in boxing"
+      },
+      {
+        "num": 68,
+        "clue": "Flanders of Springfield"
+      }
+    ]
+  },
+  "theme": "Things that have trunks",
+  "publishedAt": "2026-10-07T20:13:50.558Z"
+}

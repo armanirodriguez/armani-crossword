@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-08-midi",
+  "date": "2026-10-08",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Pop the Trunk",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....##...",
+    "....#....",
+    ".........",
+    "...#....#",
+    "###...###",
+    "#....#...",
+    ".........",
+    "....#....",
+    "...##...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:1TjAI128wZG8KWtAY6SC+hnQ8i/ln7FY/P3wyZiiGBIalMpWXYM8aN2/rBIgeJLSyMWxZPmku5hLYn74RdHiDy3VuxvVrXjdgcA9mHfKjC+j",
+  "checksum": "32197d8d",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Fall yard tool"
+      },
+      {
+        "num": 5,
+        "clue": "Fabulous, for short"
+      },
+      {
+        "num": 8,
+        "clue": "Way out"
+      },
+      {
+        "num": 9,
+        "clue": "Dublin's land, to locals"
+      },
+      {
+        "num": 10,
+        "clue": "Woodland sight with papery white bark"
+      },
+      {
+        "num": 12,
+        "clue": "Pop the question?"
+      },
+      {
+        "num": 13,
+        "clue": "Cash dispensers"
+      },
+      {
+        "num": 14,
+        "clue": "Pop star who often hides her face under a wig"
+      },
+      {
+        "num": 15,
+        "clue": "Nailed, as a putt"
+      },
+      {
+        "num": 17,
+        "clue": "Part of a puppy handshake"
+      },
+      {
+        "num": 20,
+        "clue": "Prom-night ride with its own trunk (and maybe a minibar)"
+      },
+      {
+        "num": 22,
+        "clue": "Coffee, casually"
+      },
+      {
+        "num": 23,
+        "clue": "\"___ girl!\""
+      },
+      {
+        "num": 24,
+        "clue": "Half a dozen"
+      },
+      {
+        "num": 25,
+        "clue": "Halloween disguise"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Country's McEntire"
+      },
+      {
+        "num": 2,
+        "clue": "Earth spins on it"
+      },
+      {
+        "num": 3,
+        "clue": "Enterprise captain"
+      },
+      {
+        "num": 4,
+        "clue": "List ender, briefly"
+      },
+      {
+        "num": 5,
+        "clue": "Law office, e.g."
+      },
+      {
+        "num": 6,
+        "clue": "Greek god of war"
+      },
+      {
+        "num": 7,
+        "clue": "Spelling contest"
+      },
+      {
+        "num": 9,
+        "clue": "Singer James of \"At Last\""
+      },
+      {
+        "num": 11,
+        "clue": "5-7-5 poem"
+      },
+      {
+        "num": 14,
+        "clue": "Shovel-worthy stuff"
+      },
+      {
+        "num": 15,
+        "clue": "iPhone helper"
+      },
+      {
+        "num": 16,
+        "clue": "Plastic in many wallets, for short"
+      },
+      {
+        "num": 17,
+        "clue": "Pocket bread"
+      },
+      {
+        "num": 18,
+        "clue": "Picnic crashers"
+      },
+      {
+        "num": 19,
+        "clue": "Like a watered-down latte"
+      },
+      {
+        "num": 20,
+        "clue": "Scale readings: Abbr."
+      },
+      {
+        "num": 21,
+        "clue": "Uncle in recruiting posters"
+      }
+    ]
+  },
+  "theme": "Things that have trunks",
+  "publishedAt": "2026-10-07T20:13:50.410Z"
+}

@@ -144,6 +144,42 @@
       "height": 15,
       "number": 4,
       "theme": "Rhyming two-part phrases"
+    },
+    {
+      "id": "claude-2026-10-08-mini",
+      "date": "2026-10-08",
+      "kind": "mini",
+      "series": "claude",
+      "title": "All Ears",
+      "author": "Claude",
+      "width": 5,
+      "height": 5,
+      "number": 5,
+      "theme": "Things that have trunks"
+    },
+    {
+      "id": "claude-2026-10-08-midi",
+      "date": "2026-10-08",
+      "kind": "midi",
+      "series": "claude",
+      "title": "Pop the Trunk",
+      "author": "Claude",
+      "width": 9,
+      "height": 9,
+      "number": 5,
+      "theme": "Things that have trunks"
+    },
+    {
+      "id": "claude-2026-10-08",
+      "date": "2026-10-08",
+      "kind": "daily",
+      "series": "claude",
+      "title": "Trunk Show",
+      "author": "Claude",
+      "width": 15,
+      "height": 15,
+      "number": 5,
+      "theme": "Things that have trunks"
     }
   ]
 }
