@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-09",
+  "date": "2026-10-09",
+  "series": "claude",
+  "title": "Undercover Band",
+  "author": "Claude",
+  "note": "Listen closely: each of the three longest answers has something you can play hiding inside it.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#....##.....",
+    "...#.....#.....",
+    "...#...........",
+    "......##....###",
+    "....#.....#....",
+    ".....#....##...",
+    "###.....#......",
+    "#.............#",
+    "......#.....###",
+    "...##....#.....",
+    "....#.....#....",
+    "###....##......",
+    "...........#...",
+    ".....#.....#...",
+    ".....##....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:x3Kq5Tt+KYe0PWmXuObTF+MOggK90FbkEtrlyQQZuF5kC28YIsAiXClOOpT8vtIClPsDp96ia+Om1WghfJhqgJaWT7eGAKP2v1RknttUf3L88GGB58efJF/orARuoBQGtWEhmAkJP0rISebulJdq1GxQRMLZnnzPDWIDAJLk21xK4WhFCfo4CV9SELgs8myYYIYYFCCIoka26LE+WUfVvW5sO8Nz+4ffefdTNprHKIt/FIIMt0wWrZ1ZVw8pZyjDRQ9HWXSnsvRoEoqM2imOoH+eHYTb6584vPHVuQc8OCKc",
+  "checksum": "2d7edf3a",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Do that may be blunt"
+      },
+      {
+        "num": 4,
+        "clue": "Huge amount, informally"
+      },
+      {
+        "num": 8,
+        "clue": "Ever ___ (from then on)"
+      },
+      {
+        "num": 13,
+        "clue": "Address bar entry, for short"
+      },
+      {
+        "num": 14,
+        "clue": "Hawaii has eight main ones"
+      },
+      {
+        "num": 16,
+        "clue": "Handy"
+      },
+      {
+        "num": 17,
+        "clue": "Copacabana's city, familiarly"
+      },
+      {
+        "num": 18,
+        "clue": "*University heads, in some systems"
+      },
+      {
+        "num": 20,
+        "clue": "Can't stand"
+      },
+      {
+        "num": 22,
+        "clue": "Review on Yelp, say"
+      },
+      {
+        "num": 23,
+        "clue": "Palo ___, Calif."
+      },
+      {
+        "num": 24,
+        "clue": "\"___, so good\""
+      },
+      {
+        "num": 27,
+        "clue": "Like molasses in January"
+      },
+      {
+        "num": 31,
+        "clue": "Green sauce with pine nuts"
+      },
+      {
+        "num": 33,
+        "clue": "Shade's holder"
+      },
+      {
+        "num": 34,
+        "clue": "Fed. agency concerned with emissions"
+      },
+      {
+        "num": 35,
+        "clue": "Mystery writers' award"
+      },
+      {
+        "num": 37,
+        "clue": "Pined"
+      },
+      {
+        "num": 40,
+        "clue": "*Summer gathering with name tags and a potluck, often"
+      },
+      {
+        "num": 43,
+        "clue": "Water that, per Exodus, was parted"
+      },
+      {
+        "num": 44,
+        "clue": "Make a case"
+      },
+      {
+        "num": 45,
+        "clue": "Like news you've already heard"
+      },
+      {
+        "num": 46,
+        "clue": "\"Star Wars,\" for one"
+      },
+      {
+        "num": 48,
+        "clue": "Ditch, as a plan"
+      },
+      {
+        "num": 52,
+        "clue": "\"___ Small World\""
+      },
+      {
+        "num": 54,
+        "clue": "Splash around in a bucket"
+      },
+      {
+        "num": 56,
+        "clue": "Money in Lisbon or Berlin"
+      },
+      {
+        "num": 57,
+        "clue": "Track event"
+      },
+      {
+        "num": 59,
+        "clue": "Bracket busters"
+      },
+      {
+        "num": 61,
+        "clue": "*Envoys with a residence abroad"
+      },
+      {
+        "num": 66,
+        "clue": "In shape"
+      },
+      {
+        "num": 67,
+        "clue": "Belle's beloved"
+      },
+      {
+        "num": 68,
+        "clue": "Doesn't buy, maybe"
+      },
+      {
+        "num": 69,
+        "clue": "Point of a thing"
+      },
+      {
+        "num": 70,
+        "clue": "Car scene staple in action films"
+      },
+      {
+        "num": 71,
+        "clue": "Where the sun goes down"
+      },
+      {
+        "num": 72,
+        "clue": "Co. relative"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Potato sack material"
+      },
+      {
+        "num": 2,
+        "clue": "Baltimore baseballer"
+      },
+      {
+        "num": 3,
+        "clue": "Puffs up"
+      },
+      {
+        "num": 4,
+        "clue": "Like a decadent chocolate cake"
+      },
+      {
+        "num": 5,
+        "clue": "Fireplace leftovers"
+      },
+      {
+        "num": 6,
+        "clue": "Tampa's state: Abbr."
+      },
+      {
+        "num": 7,
+        "clue": "Perfect score on a diving scorecard"
+      },
+      {
+        "num": 8,
+        "clue": "Rim coating for a margarita"
+      },
+      {
+        "num": 9,
+        "clue": "Runs in place?"
+      },
+      {
+        "num": 10,
+        "clue": "\"The Matrix\" hero"
+      },
+      {
+        "num": 11,
+        "clue": "Lifeguard's certification, briefly"
+      },
+      {
+        "num": 12,
+        "clue": "Saucer crew, for short"
+      },
+      {
+        "num": 15,
+        "clue": "\"Beat it!\""
+      },
+      {
+        "num": 19,
+        "clue": "Snorer's partner's friend"
+      },
+      {
+        "num": 21,
+        "clue": "Carved emblems"
+      },
+      {
+        "num": 25,
+        "clue": "Skin care brand"
+      },
+      {
+        "num": 26,
+        "clue": "Hodgepodge"
+      },
+      {
+        "num": 28,
+        "clue": "Brick with studs"
+      },
+      {
+        "num": 29,
+        "clue": "Sign in a shop window"
+      },
+      {
+        "num": 30,
+        "clue": "Roll of bills"
+      },
+      {
+        "num": 32,
+        "clue": "Comic strip dog with a long tongue"
+      },
+      {
+        "num": 36,
+        "clue": "Specs"
+      },
+      {
+        "num": 38,
+        "clue": "Burden"
+      },
+      {
+        "num": 39,
+        "clue": "Some relatives at a get-together"
+      },
+      {
+        "num": 40,
+        "clue": "Pool table covering"
+      },
+      {
+        "num": 41,
+        "clue": "Tacks on"
+      },
+      {
+        "num": 42,
+        "clue": "Big chunks of history"
+      },
+      {
+        "num": 43,
+        "clue": "Louis XIV, e.g., in Paris"
+      },
+      {
+        "num": 47,
+        "clue": "Where vows are said"
+      },
+      {
+        "num": 49,
+        "clue": "Full of regret"
+      },
+      {
+        "num": 50,
+        "clue": "Painter or singer"
+      },
+      {
+        "num": 51,
+        "clue": "Put up on social media"
+      },
+      {
+        "num": 53,
+        "clue": "Pile up"
+      },
+      {
+        "num": 55,
+        "clue": "Smarts"
+      },
+      {
+        "num": 58,
+        "clue": "East, in Madrid"
+      },
+      {
+        "num": 60,
+        "clue": "Attention-getting hiss"
+      },
+      {
+        "num": 61,
+        "clue": "Network with a circle logo"
+      },
+      {
+        "num": 62,
+        "clue": "\"Whatever\""
+      },
+      {
+        "num": 63,
+        "clue": "Flock call"
+      },
+      {
+        "num": 64,
+        "clue": "Morning drops"
+      },
+      {
+        "num": 65,
+        "clue": "\"The loneliest number,\" in song"
+      }
+    ]
+  },
+  "theme": "Musical instruments hidden in words and phrases",
+  "publishedAt": "2026-10-08T20:19:18.526Z"
+}

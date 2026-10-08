@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-09-midi",
+  "date": "2026-10-09",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Inner Music",
+  "author": "Claude",
+  "note": "Listen closely: each starred answer hides something you can play.",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...###...",
+    "....#....",
+    "....#....",
+    ".........",
+    "###...###",
+    ".........",
+    "....#....",
+    "....#....",
+    "...###..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:krN4K68L0UJJVjhiZ9Y1ihA9VtviU68LdEfmdzFpPpMTIJmk/YtBfKM+oJlYZiFrVlCrGb/6mlWIXK07x8pEGie4Jg6X7vfcpchVYMTISfwC",
+  "checksum": "a99d2cc8",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "One who might say \"Because I said so\""
+      },
+      {
+        "num": 4,
+        "clue": "\"Nova\" airer"
+      },
+      {
+        "num": 7,
+        "clue": "Tap target on a phone"
+      },
+      {
+        "num": 9,
+        "clue": "Backless slipper"
+      },
+      {
+        "num": 10,
+        "clue": "Tree's place, sometimes"
+      },
+      {
+        "num": 11,
+        "clue": "Pi r squared, for a circle"
+      },
+      {
+        "num": 12,
+        "clue": "*Head-scratcher"
+      },
+      {
+        "num": 14,
+        "clue": "Mama's brother, in Mexico"
+      },
+      {
+        "num": 15,
+        "clue": "*What a dull knife lacks"
+      },
+      {
+        "num": 21,
+        "clue": "Ring above a saint"
+      },
+      {
+        "num": 22,
+        "clue": "Where a scarf rests in back"
+      },
+      {
+        "num": 23,
+        "clue": "River through Stratford"
+      },
+      {
+        "num": 24,
+        "clue": "Las Vegas resort on the Strip"
+      },
+      {
+        "num": 25,
+        "clue": "___ hours (way past midnight)"
+      },
+      {
+        "num": 26,
+        "clue": "Weekend Update's home, for short"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Catchall category: Abbr."
+      },
+      {
+        "num": 2,
+        "clue": "Number of patas on una araña"
+      },
+      {
+        "num": 3,
+        "clue": "It waxes without polish"
+      },
+      {
+        "num": 4,
+        "clue": "Lap sound"
+      },
+      {
+        "num": 5,
+        "clue": "Like le ciel on a clear day"
+      },
+      {
+        "num": 6,
+        "clue": "Line on a baseball"
+      },
+      {
+        "num": 8,
+        "clue": "Nucleus member with no charge"
+      },
+      {
+        "num": 9,
+        "clue": "\"Like a Prayer\" singer"
+      },
+      {
+        "num": 13,
+        "clue": "Chill in the air"
+      },
+      {
+        "num": 15,
+        "clue": "\"Pygmalion\" writer"
+      },
+      {
+        "num": 16,
+        "clue": "Hold"
+      },
+      {
+        "num": 17,
+        "clue": "Gel source after a beach day"
+      },
+      {
+        "num": 18,
+        "clue": "Corn units"
+      },
+      {
+        "num": 19,
+        "clue": "Exercise class with stationary bikes"
+      },
+      {
+        "num": 20,
+        "clue": "Navy commando"
+      }
+    ]
+  },
+  "theme": "Musical instruments hidden in words and phrases",
+  "publishedAt": "2026-10-08T20:19:18.403Z"
+}

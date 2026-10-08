@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-09-mini",
+  "date": "2026-10-09",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Sharp Note",
+  "author": "Claude",
+  "note": "Listen closely: the starred answer hides something you can play.",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:BX2l1qWKiJD8wRZCs/9eJ/lIlZAR0vQr/A==",
+  "checksum": "05838d7b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Antlered buck"
+      },
+      {
+        "num": 5,
+        "clue": "*Rose's defense"
+      },
+      {
+        "num": 7,
+        "clue": "Impressive lineup"
+      },
+      {
+        "num": 8,
+        "clue": "Abominable snowmen"
+      },
+      {
+        "num": 9,
+        "clue": "Shrink, as a crescent"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Dog command that often follows \"sit\""
+      },
+      {
+        "num": 2,
+        "clue": "Pitched"
+      },
+      {
+        "num": 3,
+        "clue": "Heart's main line"
+      },
+      {
+        "num": 4,
+        "clue": "Wood pattern"
+      },
+      {
+        "num": 6,
+        "clue": "Wall St. trading floor"
+      }
+    ]
+  },
+  "theme": "Musical instruments hidden in words and phrases",
+  "publishedAt": "2026-10-08T20:19:18.284Z"
+}
