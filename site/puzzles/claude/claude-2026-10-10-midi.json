@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-10-midi",
+  "date": "2026-10-10",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Pitch Perfect",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:pM39YgcXe78O72xahNMB2/ZBcML0JeSK0cT5hIp7H053pf/tnb7AMVKgtEjHFFmOjRLLl+qzmLx8UNWU3CuWNtRWBBe5LwlOY6J1xcWsSfec",
+  "checksum": "a76eea7e",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Jeers"
+      },
+      {
+        "num": 5,
+        "clue": "Taj Mahal's city"
+      },
+      {
+        "num": 9,
+        "clue": "Rounds, e.g."
+      },
+      {
+        "num": 10,
+        "clue": "Pod contents"
+      },
+      {
+        "num": 11,
+        "clue": "Promise of \"another time,\" from a ticket for a washed-out game"
+      },
+      {
+        "num": 13,
+        "clue": "Blasting stuff"
+      },
+      {
+        "num": 14,
+        "clue": "Social media hearts"
+      },
+      {
+        "num": 15,
+        "clue": "Pop"
+      },
+      {
+        "num": 16,
+        "clue": "High points"
+      },
+      {
+        "num": 19,
+        "clue": "Ride you might hail"
+      },
+      {
+        "num": 22,
+        "clue": "Connect briefly, in office-speak"
+      },
+      {
+        "num": 24,
+        "clue": "Wise to"
+      },
+      {
+        "num": 25,
+        "clue": "Friend, in France"
+      },
+      {
+        "num": 26,
+        "clue": "Equal"
+      },
+      {
+        "num": 27,
+        "clue": "Votes in favor"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Simpson who skateboards"
+      },
+      {
+        "num": 2,
+        "clue": "Muscat's country"
+      },
+      {
+        "num": 3,
+        "clue": "Leave out"
+      },
+      {
+        "num": 4,
+        "clue": "Junior, e.g."
+      },
+      {
+        "num": 5,
+        "clue": "Rose pest"
+      },
+      {
+        "num": 6,
+        "clue": "Tech enthusiast"
+      },
+      {
+        "num": 7,
+        "clue": "Dash"
+      },
+      {
+        "num": 8,
+        "clue": "Inquires"
+      },
+      {
+        "num": 12,
+        "clue": "Don't go together"
+      },
+      {
+        "num": 15,
+        "clue": "Interior design"
+      },
+      {
+        "num": 16,
+        "clue": "Upon"
+      },
+      {
+        "num": 17,
+        "clue": "Scoop holder"
+      },
+      {
+        "num": 18,
+        "clue": "Silence"
+      },
+      {
+        "num": 19,
+        "clue": "Showed up"
+      },
+      {
+        "num": 20,
+        "clue": "Largest continent"
+      },
+      {
+        "num": 21,
+        "clue": "Spelling contests"
+      },
+      {
+        "num": 23,
+        "clue": "Howl at the moon"
+      }
+    ]
+  },
+  "theme": "Baseball expressions used in everyday speech",
+  "publishedAt": "2026-10-09T20:10:54.762Z"
+}

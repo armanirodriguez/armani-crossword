@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-10-mini",
+  "date": "2026-10-10",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Change-Up",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:jw/6kxPb7crecIeMFHsgx7uyuqfbguh63w==",
+  "checksum": "67c64b5e",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Mimics"
+      },
+      {
+        "num": 5,
+        "clue": "Petite"
+      },
+      {
+        "num": 6,
+        "clue": "Bending pitch, or something thrown to catch you off guard"
+      },
+      {
+        "num": 7,
+        "clue": "Crooked"
+      },
+      {
+        "num": 8,
+        "clue": "Oolong and others"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Tickle"
+      },
+      {
+        "num": 2,
+        "clue": "Hooded coat"
+      },
+      {
+        "num": 3,
+        "clue": "Santa's workshop staff"
+      },
+      {
+        "num": 4,
+        "clue": "Whole bunch"
+      },
+      {
+        "num": 5,
+        "clue": "\"Shoo!\""
+      }
+    ]
+  },
+  "theme": "Baseball expressions used in everyday speech",
+  "publishedAt": "2026-10-09T20:10:54.597Z"
+}

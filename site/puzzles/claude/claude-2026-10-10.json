@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-10",
+  "date": "2026-10-10",
+  "series": "claude",
+  "title": "Ballpark Figures of Speech",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....##....#...",
+    "......#....#...",
+    "...........#...",
+    "###....#.......",
+    "...##....##....",
+    "...#....#.....#",
+    ".....#......###",
+    "...............",
+    "###......#.....",
+    "#.....#....#...",
+    "....##....##...",
+    ".......#....###",
+    "...#...........",
+    "...#....#......",
+    "...#....##....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:p64mzSXCMVdBF7v6Esq002xFgeuQDyuzFjgB/+CHKGQIysQe0gm+RU6MextcV9wsUws8fe1ctgwgtTsczE6VDJ2Sl63iz2SMvrOe4iPr1fEQ/RUXuDCxtUoDGNaEcxgvhgmrDBtL7OIYz84T1Ulsir0b6VA+YEz1HezKAyOj66cAYtoPy95+fMhPBp6/D6hGzx+sNR+fmoQCj8njbYCpp/QK+cOpgO9v9wR+o5d+AT8N+zAYirybbNY7PgAJV1kznMWXjX02f7WnjMSLz3RtvEvnV7O+lLxKvGkq9Af60uuX",
+  "checksum": "87050e5a",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "One of the ABC islands"
+      },
+      {
+        "num": 6,
+        "clue": "Mind"
+      },
+      {
+        "num": 10,
+        "clue": "Scene-stealer, often"
+      },
+      {
+        "num": 13,
+        "clue": "Hopeless tangle"
+      },
+      {
+        "num": 15,
+        "clue": "Fretboard clamp"
+      },
+      {
+        "num": 16,
+        "clue": "Mesozoic, for one"
+      },
+      {
+        "num": 17,
+        "clue": "Emergency substitute at the office (or the plate)"
+      },
+      {
+        "num": 19,
+        "clue": "Promise that's not legal tender"
+      },
+      {
+        "num": 20,
+        "clue": "Razor-sharp"
+      },
+      {
+        "num": 21,
+        "clue": "Paying close attention"
+      },
+      {
+        "num": 23,
+        "clue": "Max's opposite"
+      },
+      {
+        "num": 26,
+        "clue": "With no warranty"
+      },
+      {
+        "num": 28,
+        "clue": "Some layers"
+      },
+      {
+        "num": 29,
+        "clue": "Texter's hedge"
+      },
+      {
+        "num": 30,
+        "clue": "Gait between a walk and a canter"
+      },
+      {
+        "num": 31,
+        "clue": "Greeting sent by email"
+      },
+      {
+        "num": 33,
+        "clue": "Capital on the Nile"
+      },
+      {
+        "num": 35,
+        "clue": "Consideration"
+      },
+      {
+        "num": 37,
+        "clue": "\"Bringing Up Baby\" genre that took its tag from an oddball pitch"
+      },
+      {
+        "num": 42,
+        "clue": "Illinois city in a proverbial test of mass appeal"
+      },
+      {
+        "num": 43,
+        "clue": "Grill site"
+      },
+      {
+        "num": 44,
+        "clue": "Like a pangolin"
+      },
+      {
+        "num": 46,
+        "clue": "Quads, e.g., for short"
+      },
+      {
+        "num": 48,
+        "clue": "Click of disapproval"
+      },
+      {
+        "num": 49,
+        "clue": "Stick with it"
+      },
+      {
+        "num": 50,
+        "clue": "Dead set against"
+      },
+      {
+        "num": 51,
+        "clue": "Serve that goes untouched"
+      },
+      {
+        "num": 52,
+        "clue": "Hand over to a resale shop"
+      },
+      {
+        "num": 55,
+        "clue": "Pull in"
+      },
+      {
+        "num": 58,
+        "clue": "Alias lead-in"
+      },
+      {
+        "num": 59,
+        "clue": "Big-time, as a headache"
+      },
+      {
+        "num": 64,
+        "clue": "Ruby or cherry"
+      },
+      {
+        "num": 65,
+        "clue": "Clear, as a snowy road"
+      },
+      {
+        "num": 66,
+        "clue": "Fried pastry with a spiced potato filling"
+      },
+      {
+        "num": 67,
+        "clue": "Food-safety agcy."
+      },
+      {
+        "num": 68,
+        "clue": "\"Better Call ___\""
+      },
+      {
+        "num": 69,
+        "clue": "Put off"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Stage stack component"
+      },
+      {
+        "num": 2,
+        "clue": "Monarch, to Moliere"
+      },
+      {
+        "num": 3,
+        "clue": "Coffee server"
+      },
+      {
+        "num": 4,
+        "clue": "Support"
+      },
+      {
+        "num": 5,
+        "clue": "Arthur of the courts"
+      },
+      {
+        "num": 6,
+        "clue": "When leaves fall in New England: Abbr."
+      },
+      {
+        "num": 7,
+        "clue": "Bubbly soaks"
+      },
+      {
+        "num": 8,
+        "clue": "Fencing blade"
+      },
+      {
+        "num": 9,
+        "clue": "Days of ___"
+      },
+      {
+        "num": 10,
+        "clue": "Young cow"
+      },
+      {
+        "num": 11,
+        "clue": "Give or take"
+      },
+      {
+        "num": 12,
+        "clue": "Log-splitting tools"
+      },
+      {
+        "num": 14,
+        "clue": "Clip, as fleece"
+      },
+      {
+        "num": 18,
+        "clue": "___ as (to the extent that)"
+      },
+      {
+        "num": 22,
+        "clue": "Buddhist teaching"
+      },
+      {
+        "num": 23,
+        "clue": "Stand-up equipment?"
+      },
+      {
+        "num": 24,
+        "clue": "Apple all-in-one"
+      },
+      {
+        "num": 25,
+        "clue": "Shadowy film style"
+      },
+      {
+        "num": 27,
+        "clue": "Like gelato, originally"
+      },
+      {
+        "num": 30,
+        "clue": "It's thrown in by someone giving up"
+      },
+      {
+        "num": 31,
+        "clue": "List shortener"
+      },
+      {
+        "num": 32,
+        "clue": "Places to roost"
+      },
+      {
+        "num": 34,
+        "clue": "Makes good on"
+      },
+      {
+        "num": 36,
+        "clue": "Din from a dropped tray"
+      },
+      {
+        "num": 38,
+        "clue": "\"Oh, ___!\""
+      },
+      {
+        "num": 39,
+        "clue": "James of \"At Last\""
+      },
+      {
+        "num": 40,
+        "clue": "Frisbee, e.g."
+      },
+      {
+        "num": 41,
+        "clue": "Oxen's harness"
+      },
+      {
+        "num": 44,
+        "clue": "Super excited"
+      },
+      {
+        "num": 45,
+        "clue": "Where loonies are spent"
+      },
+      {
+        "num": 47,
+        "clue": "Small lab containers"
+      },
+      {
+        "num": 49,
+        "clue": "Wolf"
+      },
+      {
+        "num": 50,
+        "clue": "Pear variety"
+      },
+      {
+        "num": 53,
+        "clue": "Little rascals"
+      },
+      {
+        "num": 54,
+        "clue": "Fancy fete"
+      },
+      {
+        "num": 56,
+        "clue": "Pored over"
+      },
+      {
+        "num": 57,
+        "clue": "Christen"
+      },
+      {
+        "num": 60,
+        "clue": "Night hooter"
+      },
+      {
+        "num": 61,
+        "clue": "Understood"
+      },
+      {
+        "num": 62,
+        "clue": "Employ"
+      },
+      {
+        "num": 63,
+        "clue": "It may be lent"
+      }
+    ]
+  },
+  "theme": "Baseball expressions used in everyday speech",
+  "publishedAt": "2026-10-09T20:10:54.922Z"
+}
