@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-11",
+  "date": "2026-10-11",
+  "series": "claude",
+  "title": "Fright Lite",
+  "author": "Claude",
+  "note": "Spooky season starts early: look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......#....#...",
+    "......#....#...",
+    "......#....#...",
+    "##............#",
+    "....##...##....",
+    ".......###.....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    ".....###.......",
+    "....##...##....",
+    "#............##",
+    "...#....#......",
+    "...#....#......",
+    "...#....#......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:KevYeiNyU4z4qfo8PCXEwDrfsbnJRjzJ0BDr697GWERYMokOEt0n3UmUlsW0cjdQLLyqTcqx2G4uXFzHlCtniQiEXJBJyxD8L3Wv4h1Gj3MvFlkcMQ+a6HUCYVZoXpAoq/AkjXBPIHWyoxqb6gQXwNxpS4dIpS2VTL0DK4Rb2WK1YzwDnJmkm5NxhqiA0A8MJclZCkaNaTYWsnPC0AoTJdu85/HBTdKXfHqsZvZQDi/LRnEfK5j9oz2dxedUGSE9YK6OYSFkkjiAoBPnFQXHEQYlRRJhOCa/P/vrZVwE4/M6",
+  "checksum": "24658e76",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Word said before a flash"
+      },
+      {
+        "num": 7,
+        "clue": "Composer of the Brandenburg Concertos"
+      },
+      {
+        "num": 11,
+        "clue": "One paid to play"
+      },
+      {
+        "num": 14,
+        "clue": "Wide ad on a web page"
+      },
+      {
+        "num": 15,
+        "clue": "Plant with gel in its leaves"
+      },
+      {
+        "num": 16,
+        "clue": "Lick up, like a kitten"
+      },
+      {
+        "num": 17,
+        "clue": "Two-speaker setup"
+      },
+      {
+        "num": 18,
+        "clue": "Island east of Java"
+      },
+      {
+        "num": 19,
+        "clue": "Tiny tunneler"
+      },
+      {
+        "num": 20,
+        "clue": "Vehicle that crushes cars for a cheering arena crowd"
+      },
+      {
+        "num": 23,
+        "clue": "Follow like a private eye"
+      },
+      {
+        "num": 25,
+        "clue": "Tree on many a Main Street"
+      },
+      {
+        "num": 26,
+        "clue": "Simba's childhood friend"
+      },
+      {
+        "num": 28,
+        "clue": "Folded breakfast orders"
+      },
+      {
+        "num": 31,
+        "clue": "Wail on the highway"
+      },
+      {
+        "num": 32,
+        "clue": "Dells, e.g., for short"
+      },
+      {
+        "num": 33,
+        "clue": "Cheerio!"
+      },
+      {
+        "num": 35,
+        "clue": "Like a cabin in the pines"
+      },
+      {
+        "num": 36,
+        "clue": "Abandoned settlement in the Old West"
+      },
+      {
+        "num": 38,
+        "clue": "Punch servers"
+      },
+      {
+        "num": 41,
+        "clue": "Swampy mess"
+      },
+      {
+        "num": 42,
+        "clue": "\"Kill Bill\" singer with the album \"SOS\""
+      },
+      {
+        "num": 45,
+        "clue": "Live, in a studio"
+      },
+      {
+        "num": 46,
+        "clue": "Stuck one's nose in"
+      },
+      {
+        "num": 48,
+        "clue": "It may be early or free"
+      },
+      {
+        "num": 49,
+        "clue": "Back in the day"
+      },
+      {
+        "num": 51,
+        "clue": "Electrically loaded particles"
+      },
+      {
+        "num": 52,
+        "clue": "Bare-bones staff on a holiday weekend"
+      },
+      {
+        "num": 57,
+        "clue": "Cover charge, e.g."
+      },
+      {
+        "num": 58,
+        "clue": "River through Stratford"
+      },
+      {
+        "num": 59,
+        "clue": "3:1 and 16:9, e.g."
+      },
+      {
+        "num": 62,
+        "clue": "Strong urge"
+      },
+      {
+        "num": 63,
+        "clue": "Place to fire a pot"
+      },
+      {
+        "num": 64,
+        "clue": "List of items for a meeting"
+      },
+      {
+        "num": 65,
+        "clue": "Bouncers check them"
+      },
+      {
+        "num": 66,
+        "clue": "Fitzgerald known for scat"
+      },
+      {
+        "num": 67,
+        "clue": "Joined lanes"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Survivor\" airer"
+      },
+      {
+        "num": 2,
+        "clue": "Fedora or beret"
+      },
+      {
+        "num": 3,
+        "clue": "Sherlock Holmes and Moriarty, e.g."
+      },
+      {
+        "num": 4,
+        "clue": "Sign up for classes"
+      },
+      {
+        "num": 5,
+        "clue": "Spotted"
+      },
+      {
+        "num": 6,
+        "clue": "Greek god with arrows"
+      },
+      {
+        "num": 7,
+        "clue": "Tower in Genesis"
+      },
+      {
+        "num": 8,
+        "clue": "Snooze button's target"
+      },
+      {
+        "num": 9,
+        "clue": "Young stallion"
+      },
+      {
+        "num": 10,
+        "clue": "One who's next in line"
+      },
+      {
+        "num": 11,
+        "clue": "Protester's board"
+      },
+      {
+        "num": 12,
+        "clue": "Gets under the skin of"
+      },
+      {
+        "num": 13,
+        "clue": "Choose (to)"
+      },
+      {
+        "num": 21,
+        "clue": "Finals, e.g."
+      },
+      {
+        "num": 22,
+        "clue": "Wedding, figuratively"
+      },
+      {
+        "num": 23,
+        "clue": "Shirt or blouse"
+      },
+      {
+        "num": 24,
+        "clue": "Movie theater chain"
+      },
+      {
+        "num": 27,
+        "clue": "\"___ questions?\""
+      },
+      {
+        "num": 29,
+        "clue": "Thin air, poetically"
+      },
+      {
+        "num": 30,
+        "clue": "New Mexico ski destination"
+      },
+      {
+        "num": 31,
+        "clue": "Put in the ground, as seeds"
+      },
+      {
+        "num": 34,
+        "clue": "Spot for a PIN, briefly"
+      },
+      {
+        "num": 35,
+        "clue": "Had on"
+      },
+      {
+        "num": 36,
+        "clue": "Move like a skater"
+      },
+      {
+        "num": 37,
+        "clue": "Meerkat in a Disney classic"
+      },
+      {
+        "num": 38,
+        "clue": "Soft, high toss"
+      },
+      {
+        "num": 39,
+        "clue": "Licorice-flavored spice"
+      },
+      {
+        "num": 40,
+        "clue": "Grows dim"
+      },
+      {
+        "num": 42,
+        "clue": "Easing off the gas"
+      },
+      {
+        "num": 43,
+        "clue": "State of total calm"
+      },
+      {
+        "num": 44,
+        "clue": "Commercials"
+      },
+      {
+        "num": 47,
+        "clue": "Calorie counter"
+      },
+      {
+        "num": 49,
+        "clue": "Ring of coral"
+      },
+      {
+        "num": 50,
+        "clue": "\"Never ___ Give You Up\""
+      },
+      {
+        "num": 53,
+        "clue": "Huron or Erie"
+      },
+      {
+        "num": 54,
+        "clue": "Dr. ___ of \"Austin Powers\""
+      },
+      {
+        "num": 55,
+        "clue": "Pull an all-nighter, maybe"
+      },
+      {
+        "num": 56,
+        "clue": "All the ___ (trendy)"
+      },
+      {
+        "num": 57,
+        "clue": "Heads-up in an email, briefly"
+      },
+      {
+        "num": 60,
+        "clue": "\"___ to Joy\""
+      },
+      {
+        "num": 61,
+        "clue": "Down in the dumps"
+      }
+    ]
+  },
+  "theme": "Spooky words used in not-so-spooky ways",
+  "publishedAt": "2026-10-10T20:13:35.353Z"
+}

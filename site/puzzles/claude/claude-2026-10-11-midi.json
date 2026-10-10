@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-11-midi",
+  "date": "2026-10-11",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Creature Features",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:1gtLgbIJAHi5ni3j9q+LXVBfHNAp9xo6uaEp6TE4HAuqbXVjVqS7BjRICLqBuXnrFSfGoBEg0VWNZVtEPN/aQp/oU6Ogbv4G835wcsv++Sge",
+  "checksum": "269d8df2",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Newborn"
+      },
+      {
+        "num": 5,
+        "clue": "Bulb rating"
+      },
+      {
+        "num": 9,
+        "clue": "Boo-boo, to a toddler"
+      },
+      {
+        "num": 10,
+        "clue": "Vibe someone gives off"
+      },
+      {
+        "num": 11,
+        "clue": "Beam in the Gotham sky"
+      },
+      {
+        "num": 13,
+        "clue": "Sailor's assent"
+      },
+      {
+        "num": 14,
+        "clue": "\"Don't look at me!\""
+      },
+      {
+        "num": 15,
+        "clue": "Joke that might get groans"
+      },
+      {
+        "num": 16,
+        "clue": "Handouts on \"The Bachelor\""
+      },
+      {
+        "num": 19,
+        "clue": "Taylor Swift's tour unit?"
+      },
+      {
+        "num": 22,
+        "clue": "Hero who's a friendly neighbor, so to speak"
+      },
+      {
+        "num": 24,
+        "clue": "\"La dolce ___\""
+      },
+      {
+        "num": 25,
+        "clue": "\"Deal me ___!\""
+      },
+      {
+        "num": 26,
+        "clue": "Banana's jacket"
+      },
+      {
+        "num": 27,
+        "clue": "Great ___ (big dog)"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Bubble tea pearls"
+      },
+      {
+        "num": 2,
+        "clue": "Not at home, as a game"
+      },
+      {
+        "num": 3,
+        "clue": "Quick snack"
+      },
+      {
+        "num": 4,
+        "clue": "Word on a ballot, maybe"
+      },
+      {
+        "num": 5,
+        "clue": "Little red pull toy"
+      },
+      {
+        "num": 6,
+        "clue": "Cousin's mom"
+      },
+      {
+        "num": 7,
+        "clue": "Ski-resort people mover"
+      },
+      {
+        "num": 8,
+        "clue": "Yarn"
+      },
+      {
+        "num": 12,
+        "clue": "Occupied"
+      },
+      {
+        "num": 15,
+        "clue": "Bike part you push"
+      },
+      {
+        "num": 16,
+        "clue": "Reply to an invite"
+      },
+      {
+        "num": 17,
+        "clue": "Ron Howard's Mayberry role"
+      },
+      {
+        "num": 18,
+        "clue": "Web destination"
+      },
+      {
+        "num": 19,
+        "clue": "Stone who won an Oscar for \"La La Land\""
+      },
+      {
+        "num": 20,
+        "clue": "Picnic spoiler"
+      },
+      {
+        "num": 21,
+        "clue": "Green Gables girl"
+      },
+      {
+        "num": 23,
+        "clue": "Free (of)"
+      }
+    ]
+  },
+  "theme": "Spooky words used in not-so-spooky ways",
+  "publishedAt": "2026-10-10T20:13:35.222Z"
+}

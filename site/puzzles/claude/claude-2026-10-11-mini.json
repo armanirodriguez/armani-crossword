@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-11-mini",
+  "date": "2026-10-11",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Scare Quotes",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:NJGKCBz28BH/VBtwBn1saVKqpSiel3AmIw==",
+  "checksum": "069173c9",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Office aide: Abbr."
+      },
+      {
+        "num": 5,
+        "clue": "Total mayhem"
+      },
+      {
+        "num": 7,
+        "clue": "Favorite hangout, as in \"my old ___\""
+      },
+      {
+        "num": 8,
+        "clue": "Bert's roommate on \"Sesame Street\""
+      },
+      {
+        "num": 9,
+        "clue": "Pinkie promise, e.g."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Post-workout complaint"
+      },
+      {
+        "num": 2,
+        "clue": "On the dot, timewise"
+      },
+      {
+        "num": 3,
+        "clue": "Hot spot at the spa?"
+      },
+      {
+        "num": 4,
+        "clue": "Gin's mixer"
+      },
+      {
+        "num": 6,
+        "clue": "\"Let it stand,\" to an editor"
+      }
+    ]
+  },
+  "theme": "Spooky words used in not-so-spooky ways",
+  "publishedAt": "2026-10-10T20:13:35.113Z"
+}
