@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-12",
+  "date": "2026-10-12",
+  "series": "claude",
+  "title": "Sights to See",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "##...#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "...#........###",
+    "......#....#...",
+    "##.......#.....",
+    "....#...#......",
+    "....#.....#....",
+    "......#...#....",
+    ".....#.......##",
+    "...#....#......",
+    "###........#...",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#...##"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:3Y9QvAZZmAEnu9o+N+JVqoBc735spr2GiHD0AHCGnpGyj0hJ3V7BsORj15PmA7v8/BRaVsKF5sXqiuQr4cWdmIlR+b0w7LDSJdl8APQxT0hjunKWEhVrVOHQFJGBOWlznbVs8ylnKLaKAzLaaxa00PVeB5bahX+Y33LKUl36wIeoxyw/iW8dKszIco3w0DwRz+dPVCYu7QimHnL+dsTbsmutF84zFVV0iWs4T/LSXr+nsKT9iXaI5gHg9oT4MN8FEBjMumuX+FEisAQ78YvS3hwMHDERviLry7DlQ/+05EWU",
+  "checksum": "5cfb5653",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Receive"
+      },
+      {
+        "num": 4,
+        "clue": "Quiet \"Hey, over here!\""
+      },
+      {
+        "num": 8,
+        "clue": "Lemon juice or vinegar, chemically"
+      },
+      {
+        "num": 12,
+        "clue": "See eye to eye"
+      },
+      {
+        "num": 14,
+        "clue": "___ boy! (words of praise)"
+      },
+      {
+        "num": 15,
+        "clue": "Fashion designer Chanel"
+      },
+      {
+        "num": 16,
+        "clue": "Gets drenched"
+      },
+      {
+        "num": 17,
+        "clue": "Wrapped garment worn in India"
+      },
+      {
+        "num": 18,
+        "clue": "Garden of Genesis"
+      },
+      {
+        "num": 19,
+        "clue": "Charged particle"
+      },
+      {
+        "num": 20,
+        "clue": "Events for sampling cheeses or chocolates"
+      },
+      {
+        "num": 23,
+        "clue": "Confused and muddled"
+      },
+      {
+        "num": 25,
+        "clue": "Busy with, as mischief"
+      },
+      {
+        "num": 26,
+        "clue": "Bar bill"
+      },
+      {
+        "num": 29,
+        "clue": "Wine pitchers at a restaurant"
+      },
+      {
+        "num": 31,
+        "clue": "Color of fresh snow"
+      },
+      {
+        "num": 33,
+        "clue": "Male deer"
+      },
+      {
+        "num": 35,
+        "clue": "Opposite of con"
+      },
+      {
+        "num": 36,
+        "clue": "Hard coating on a tooth"
+      },
+      {
+        "num": 37,
+        "clue": "Short sound from a phone notification"
+      },
+      {
+        "num": 38,
+        "clue": "Minor quarrels"
+      },
+      {
+        "num": 40,
+        "clue": "Great enthusiasm"
+      },
+      {
+        "num": 41,
+        "clue": "Tiers of a wedding cake"
+      },
+      {
+        "num": 43,
+        "clue": "Like birthday candles before a wish"
+      },
+      {
+        "num": 44,
+        "clue": "Doctrines or theories"
+      },
+      {
+        "num": 45,
+        "clue": "Positive terminal of a battery"
+      },
+      {
+        "num": 46,
+        "clue": "Angry rants"
+      },
+      {
+        "num": 48,
+        "clue": "Result of a day at the beach"
+      },
+      {
+        "num": 49,
+        "clue": "Native of Oman, for one"
+      },
+      {
+        "num": 51,
+        "clue": "Twisting force"
+      },
+      {
+        "num": 54,
+        "clue": "Astronauts, informally"
+      },
+      {
+        "num": 56,
+        "clue": "Olympic team that chants its own initials: Abbr."
+      },
+      {
+        "num": 57,
+        "clue": "Soft French cheese"
+      },
+      {
+        "num": 60,
+        "clue": "Bull, in Spanish"
+      },
+      {
+        "num": 61,
+        "clue": "Pile up"
+      },
+      {
+        "num": 63,
+        "clue": "Capital of Italy"
+      },
+      {
+        "num": 64,
+        "clue": "Ambulance workers, for short"
+      },
+      {
+        "num": 65,
+        "clue": "One of the Three Stooges"
+      },
+      {
+        "num": 66,
+        "clue": "Gym exercise counts"
+      },
+      {
+        "num": 67,
+        "clue": "States"
+      },
+      {
+        "num": 68,
+        "clue": "Product used to tint fabric"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Arizona gorge carved by the Colorado River"
+      },
+      {
+        "num": 2,
+        "clue": "Startled shriek"
+      },
+      {
+        "num": 3,
+        "clue": "Free sample at a perfume counter"
+      },
+      {
+        "num": 4,
+        "clue": "Get through an exam successfully"
+      },
+      {
+        "num": 5,
+        "clue": "Copper lady in New York Harbor"
+      },
+      {
+        "num": 6,
+        "clue": "Pieces of bacon"
+      },
+      {
+        "num": 7,
+        "clue": "Spoil"
+      },
+      {
+        "num": 8,
+        "clue": "Cards worth one or eleven in blackjack"
+      },
+      {
+        "num": 9,
+        "clue": "Fish in fish and chips"
+      },
+      {
+        "num": 10,
+        "clue": "Frozen water"
+      },
+      {
+        "num": 11,
+        "clue": "Put on, as a hat"
+      },
+      {
+        "num": 12,
+        "clue": "Largest continent"
+      },
+      {
+        "num": 13,
+        "clue": "Well-behaved"
+      },
+      {
+        "num": 21,
+        "clue": "Adjusts to new surroundings"
+      },
+      {
+        "num": 22,
+        "clue": "Formal dress"
+      },
+      {
+        "num": 24,
+        "clue": "Fell behind"
+      },
+      {
+        "num": 26,
+        "clue": "Manhattan spot famous for its New Year's Eve ball drop"
+      },
+      {
+        "num": 27,
+        "clue": "Top group of players"
+      },
+      {
+        "num": 28,
+        "clue": "Things rung at a church"
+      },
+      {
+        "num": 30,
+        "clue": "Day before Sat."
+      },
+      {
+        "num": 32,
+        "clue": "Less clear, as the sky"
+      },
+      {
+        "num": 33,
+        "clue": "Noise of a tomato hitting the floor"
+      },
+      {
+        "num": 34,
+        "clue": "Princess in Disney's \"The Princess and the Frog\""
+      },
+      {
+        "num": 36,
+        "clue": "Large property with a mansion"
+      },
+      {
+        "num": 39,
+        "clue": "Evergreen tree"
+      },
+      {
+        "num": 42,
+        "clue": "Harvest"
+      },
+      {
+        "num": 46,
+        "clue": "Washington city south of Seattle"
+      },
+      {
+        "num": 47,
+        "clue": "Mickey Mouse's quacking pal"
+      },
+      {
+        "num": 50,
+        "clue": "Prices per hour, say"
+      },
+      {
+        "num": 52,
+        "clue": "Former nation led from Moscow: Abbr."
+      },
+      {
+        "num": 53,
+        "clue": "Simple"
+      },
+      {
+        "num": 54,
+        "clue": "Notices"
+      },
+      {
+        "num": 55,
+        "clue": "Green stuff on a rock"
+      },
+      {
+        "num": 57,
+        "clue": "\"It's cold!\""
+      },
+      {
+        "num": 58,
+        "clue": "Caviar, essentially"
+      },
+      {
+        "num": 59,
+        "clue": "Little rascal"
+      },
+      {
+        "num": 62,
+        "clue": "Month after April"
+      }
+    ]
+  },
+  "theme": "Famous American landmarks",
+  "publishedAt": "2026-10-11T20:08:28.494Z"
+}

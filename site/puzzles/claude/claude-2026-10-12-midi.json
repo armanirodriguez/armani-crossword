@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-12-midi",
+  "date": "2026-10-12",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Road Trip",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:W5WmPlQFuwUsZyBZOFYpvXYF5NqJUDKezD1tw0txRboHvo3s98bNYrhM/l/nydUXsJxxQ/BHBDVS1wtpfuhWo59t3BzOk0w+FlB8XBDxLggm",
+  "checksum": "bd925cfe",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Bottom edges of skirts"
+      },
+      {
+        "num": 5,
+        "clue": "Like a fluffy pillow"
+      },
+      {
+        "num": 9,
+        "clue": "Spoken, as an exam"
+      },
+      {
+        "num": 10,
+        "clue": "Off course"
+      },
+      {
+        "num": 11,
+        "clue": "Colorado mountain that inspired \"America the Beautiful\""
+      },
+      {
+        "num": 13,
+        "clue": "Clumsy and unskilled"
+      },
+      {
+        "num": 14,
+        "clue": "Expected to arrive"
+      },
+      {
+        "num": 15,
+        "clue": "Faucet"
+      },
+      {
+        "num": 17,
+        "clue": "Pub pint"
+      },
+      {
+        "num": 20,
+        "clue": "Sly cunning"
+      },
+      {
+        "num": 24,
+        "clue": "Huge concrete wall on the Nevada-Arizona border"
+      },
+      {
+        "num": 26,
+        "clue": "Princess in Britain's royal family"
+      },
+      {
+        "num": 27,
+        "clue": "Take a break"
+      },
+      {
+        "num": 28,
+        "clue": "Top-notch"
+      },
+      {
+        "num": 29,
+        "clue": "Back talk"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Native American people of the Southwest"
+      },
+      {
+        "num": 2,
+        "clue": "Poetic name for Ireland"
+      },
+      {
+        "num": 3,
+        "clue": "Build"
+      },
+      {
+        "num": 4,
+        "clue": "Got some shut-eye"
+      },
+      {
+        "num": 5,
+        "clue": "Sticky stuff from a maple tree"
+      },
+      {
+        "num": 6,
+        "clue": "Was in debt"
+      },
+      {
+        "num": 7,
+        "clue": "German wife"
+      },
+      {
+        "num": 8,
+        "clue": "Little kid"
+      },
+      {
+        "num": 12,
+        "clue": "Where actors perform"
+      },
+      {
+        "num": 16,
+        "clue": "Sounds of a happy cat"
+      },
+      {
+        "num": 17,
+        "clue": "Melville's whale-hunting captain"
+      },
+      {
+        "num": 18,
+        "clue": "Single and solitary"
+      },
+      {
+        "num": 19,
+        "clue": "Ages and ages"
+      },
+      {
+        "num": 21,
+        "clue": "Bright thought"
+      },
+      {
+        "num": 22,
+        "clue": "Young Scottish girl"
+      },
+      {
+        "num": 23,
+        "clue": "Paramedics, for short"
+      },
+      {
+        "num": 25,
+        "clue": "Animal doctor"
+      }
+    ]
+  },
+  "theme": "Famous American landmarks",
+  "publishedAt": "2026-10-11T20:08:28.361Z"
+}

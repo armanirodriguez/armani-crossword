@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-12-mini",
+  "date": "2026-10-12",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Remember It",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:9LDWtKzTopnir04MS+B+eg4gYfO/nGwHJA==",
+  "checksum": "826c0b0f",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Restaurant check"
+      },
+      {
+        "num": 5,
+        "clue": "Small bay"
+      },
+      {
+        "num": 7,
+        "clue": "San Antonio mission everyone is told to remember"
+      },
+      {
+        "num": 8,
+        "clue": "Girl Scout cookie with caramel and coconut"
+      },
+      {
+        "num": 9,
+        "clue": "Harry Potter's spell-casting stick"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Unfair slant"
+      },
+      {
+        "num": 2,
+        "clue": "Spouse's parent, e.g."
+      },
+      {
+        "num": 3,
+        "clue": "Woolly animal of the Andes"
+      },
+      {
+        "num": 4,
+        "clue": "Sour yellow fruit"
+      },
+      {
+        "num": 6,
+        "clue": "Warty hopper"
+      }
+    ]
+  },
+  "theme": "Famous American landmarks",
+  "publishedAt": "2026-10-11T20:08:28.212Z"
+}
