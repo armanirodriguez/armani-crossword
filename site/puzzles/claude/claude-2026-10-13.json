@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-13",
+  "date": "2026-10-13",
+  "series": "claude",
+  "title": "Key Phrases",
+  "author": "Claude",
+  "note": "Type-cast: look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "#............##",
+    "......##.......",
+    "....#....#.....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    ".....#....#....",
+    ".......##......",
+    "##............#",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:2HH4xKJ1teuex8ot1Ybnjd4EFQuGCLcuv5ROk2D4DA7sEeMvHxgvfuBizOKJuBRPXnaMRtvZhDyviUwTllwJA4oISqzhXGFBHLpCkIRnZ05WIpDJ5dCh9BgLzwmTjTmQsf3Hb7xAKr7SIeolF7tECh7gnlpdvxD5Znn8blaUm+WrGz0MirIfuxnclE5UCSuYDW2s1ow01A6OMTpC/loNji7yJtZCMcy77AgphfdVF8+peZF3i2qbxMFXrGOi/Btv3/8eM19b5cXnO1QrOTSum++n0tn/TqCD71Cl68Uh8O9z",
+  "checksum": "4feca558",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Like a fresh apple or a fall morning"
+      },
+      {
+        "num": 6,
+        "clue": "House, in Spanish"
+      },
+      {
+        "num": 10,
+        "clue": "Spiced tea often served as a latte"
+      },
+      {
+        "num": 14,
+        "clue": "Coins in a UK pound"
+      },
+      {
+        "num": 15,
+        "clue": "Had an outstanding balance"
+      },
+      {
+        "num": 16,
+        "clue": "Midnight fridge ___"
+      },
+      {
+        "num": 17,
+        "clue": "Venomous European snake"
+      },
+      {
+        "num": 18,
+        "clue": "Denver's state, for short"
+      },
+      {
+        "num": 19,
+        "clue": "Finishes"
+      },
+      {
+        "num": 20,
+        "clue": "Micromanager who can't let anything go"
+      },
+      {
+        "num": 23,
+        "clue": "Calm, as a crying baby"
+      },
+      {
+        "num": 24,
+        "clue": "As an alternative"
+      },
+      {
+        "num": 27,
+        "clue": "Rowing equipment"
+      },
+      {
+        "num": 28,
+        "clue": "Poker pot starter"
+      },
+      {
+        "num": 31,
+        "clue": "Engine booster"
+      },
+      {
+        "num": 32,
+        "clue": "K-pop group with the hit \"Dynamite\""
+      },
+      {
+        "num": 33,
+        "clue": "Great joy"
+      },
+      {
+        "num": 34,
+        "clue": "Space distance unit mentioned by Han Solo"
+      },
+      {
+        "num": 35,
+        "clue": "Pentagon where a batter stands"
+      },
+      {
+        "num": 37,
+        "clue": "Gem surfaces"
+      },
+      {
+        "num": 40,
+        "clue": "Effortlessness"
+      },
+      {
+        "num": 41,
+        "clue": "Discs in old jewel cases"
+      },
+      {
+        "num": 44,
+        "clue": "Talk TV queen Winfrey"
+      },
+      {
+        "num": 45,
+        "clue": "Little salamander"
+      },
+      {
+        "num": 46,
+        "clue": "Garden dirt"
+      },
+      {
+        "num": 47,
+        "clue": "Very well-read"
+      },
+      {
+        "num": 49,
+        "clue": "Fish-catching hawk"
+      },
+      {
+        "num": 51,
+        "clue": "Houdini, famously"
+      },
+      {
+        "num": 54,
+        "clue": "Maui or Capri, e.g."
+      },
+      {
+        "num": 56,
+        "clue": "Frond-topped beach tree"
+      },
+      {
+        "num": 57,
+        "clue": "Opera showpieces"
+      },
+      {
+        "num": 59,
+        "clue": "Turn from ice to water"
+      },
+      {
+        "num": 60,
+        "clue": "Furry red \"Sesame Street\" character"
+      },
+      {
+        "num": 61,
+        "clue": "Opposite of micro"
+      },
+      {
+        "num": 62,
+        "clue": "Picks up the check"
+      },
+      {
+        "num": 63,
+        "clue": "Frisbee, e.g."
+      },
+      {
+        "num": 64,
+        "clue": "Broadway offerings"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Tax pro, for short"
+      },
+      {
+        "num": 2,
+        "clue": "British soldier in the American Revolution"
+      },
+      {
+        "num": 3,
+        "clue": "Not outside"
+      },
+      {
+        "num": 4,
+        "clue": "Perfume aromas"
+      },
+      {
+        "num": 5,
+        "clue": "Western Australia's capital"
+      },
+      {
+        "num": 6,
+        "clue": "Fashion designer Chanel"
+      },
+      {
+        "num": 7,
+        "clue": "Missing from base, in military slang"
+      },
+      {
+        "num": 8,
+        "clue": "Photo taken at arm's length, often"
+      },
+      {
+        "num": 9,
+        "clue": "Decorate"
+      },
+      {
+        "num": 10,
+        "clue": "Living being"
+      },
+      {
+        "num": 11,
+        "clue": "Yearns (for)"
+      },
+      {
+        "num": 12,
+        "clue": "Help"
+      },
+      {
+        "num": 13,
+        "clue": "Driver's licenses, e.g."
+      },
+      {
+        "num": 21,
+        "clue": "Kingdoms"
+      },
+      {
+        "num": 22,
+        "clue": "Large country property"
+      },
+      {
+        "num": 23,
+        "clue": "Cry hard"
+      },
+      {
+        "num": 25,
+        "clue": "Honest ___ (Lincoln's nickname)"
+      },
+      {
+        "num": 26,
+        "clue": "Physician, informally"
+      },
+      {
+        "num": 29,
+        "clue": "Born with the name, on a wedding page"
+      },
+      {
+        "num": 30,
+        "clue": "Cone-like tent"
+      },
+      {
+        "num": 33,
+        "clue": "Like many medieval cathedrals"
+      },
+      {
+        "num": 34,
+        "clue": "Church leader"
+      },
+      {
+        "num": 35,
+        "clue": "Gamers' communication gear"
+      },
+      {
+        "num": 36,
+        "clue": "Statute"
+      },
+      {
+        "num": 37,
+        "clue": "Enemy"
+      },
+      {
+        "num": 38,
+        "clue": "Credit card rate, briefly"
+      },
+      {
+        "num": 39,
+        "clue": "In a mean way"
+      },
+      {
+        "num": 41,
+        "clue": "Napoleon's birthplace in the Mediterranean"
+      },
+      {
+        "num": 42,
+        "clue": "___ restrictions (food allergies, e.g.)"
+      },
+      {
+        "num": 43,
+        "clue": "Crafty"
+      },
+      {
+        "num": 45,
+        "clue": "Kathmandu resident"
+      },
+      {
+        "num": 46,
+        "clue": "Corkscrew path"
+      },
+      {
+        "num": 48,
+        "clue": "Recorded, as a TV episode"
+      },
+      {
+        "num": 50,
+        "clue": "Envelope corner item"
+      },
+      {
+        "num": 52,
+        "clue": "Shady giants along many avenues"
+      },
+      {
+        "num": 53,
+        "clue": "Run ___ (go wild)"
+      },
+      {
+        "num": 54,
+        "clue": "Mischievous sprite"
+      },
+      {
+        "num": 55,
+        "clue": "Ocean"
+      },
+      {
+        "num": 58,
+        "clue": "Distress signal"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with a computer key",
+  "publishedAt": "2026-10-12T20:08:31.216Z"
+}

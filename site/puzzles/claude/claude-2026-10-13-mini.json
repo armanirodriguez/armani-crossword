@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-13-mini",
+  "date": "2026-10-13",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Hotkey",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:G2U44+9ry7TOC4dO6zzAThKOLN3bfKybMw==",
+  "checksum": "4c4dfaed",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Plate or bowl"
+      },
+      {
+        "num": 5,
+        "clue": "Spotted horse"
+      },
+      {
+        "num": 6,
+        "clue": "Finally land somewhere"
+      },
+      {
+        "num": 7,
+        "clue": "River that flows through Paris"
+      },
+      {
+        "num": 8,
+        "clue": "Uno, dos, ___"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Roadside eatery with booths"
+      },
+      {
+        "num": 2,
+        "clue": "Like a small-label band"
+      },
+      {
+        "num": 3,
+        "clue": "Amazes"
+      },
+      {
+        "num": 4,
+        "clue": "Wish for the best"
+      },
+      {
+        "num": 5,
+        "clue": "Annoying little brother, maybe"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with a computer key",
+  "publishedAt": "2026-10-12T20:08:30.929Z"
+}

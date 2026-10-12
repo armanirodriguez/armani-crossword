@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-13-midi",
+  "date": "2026-10-13",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Shortcuts",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:djPa9a0EwTjFjD3GbH2T83Xd1ko7+Pa29hrICepmjzJ8kxfVFaT/l83HdeI4AhaJVzTHW6YcsU//Uq2jIoHDVuka+6r/qMQ/BJVRNJ1xcG92",
+  "checksum": "af54d24b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Canvas shopping bag"
+      },
+      {
+        "num": 5,
+        "clue": "Silly, as the Brits say"
+      },
+      {
+        "num": 9,
+        "clue": "Cry loudly"
+      },
+      {
+        "num": 10,
+        "clue": "Water, in Mexico"
+      },
+      {
+        "num": 11,
+        "clue": "Night-and-day job schedule at a hospital or factory"
+      },
+      {
+        "num": 13,
+        "clue": "Wordplay that gets a groan"
+      },
+      {
+        "num": 14,
+        "clue": "Point of view"
+      },
+      {
+        "num": 15,
+        "clue": "School ride"
+      },
+      {
+        "num": 16,
+        "clue": "Annoying browser ad"
+      },
+      {
+        "num": 19,
+        "clue": "U.S. soccer league, initially"
+      },
+      {
+        "num": 22,
+        "clue": "Astronaut's outfit"
+      },
+      {
+        "num": 24,
+        "clue": "Kitchen basin"
+      },
+      {
+        "num": 25,
+        "clue": "Or ___ (threat ender)"
+      },
+      {
+        "num": 26,
+        "clue": "Golf ball holders"
+      },
+      {
+        "num": 27,
+        "clue": "Applaud"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Recipe amount: Abbr."
+      },
+      {
+        "num": 2,
+        "clue": "Island home of Honolulu"
+      },
+      {
+        "num": 3,
+        "clue": "Mary-Kate, to Ashley Olsen"
+      },
+      {
+        "num": 4,
+        "clue": "Santa's workshop helper"
+      },
+      {
+        "num": 5,
+        "clue": "Becomes clear (on)"
+      },
+      {
+        "num": 6,
+        "clue": "Wide-eyed with excitement"
+      },
+      {
+        "num": 7,
+        "clue": "Roll up, as a flag"
+      },
+      {
+        "num": 8,
+        "clue": "Film director's attempt"
+      },
+      {
+        "num": 12,
+        "clue": "Brownish-gray shade"
+      },
+      {
+        "num": 15,
+        "clue": "Milwaukee NBA team"
+      },
+      {
+        "num": 16,
+        "clue": "\"Hey, over here!\""
+      },
+      {
+        "num": 17,
+        "clue": "Andy Griffith's TV son"
+      },
+      {
+        "num": 18,
+        "clue": "Window glass piece"
+      },
+      {
+        "num": 19,
+        "clue": "Think over"
+      },
+      {
+        "num": 20,
+        "clue": "Bart Simpson's sister"
+      },
+      {
+        "num": 21,
+        "clue": "Stair part"
+      },
+      {
+        "num": 23,
+        "clue": "Brief moment, briefly"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with a computer key",
+  "publishedAt": "2026-10-12T20:08:31.060Z"
+}
