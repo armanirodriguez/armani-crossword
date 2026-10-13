@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-14-midi",
+  "date": "2026-10-14",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Precious Metals",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:T0YZKHadWsTMNBKKTfPdurSf4Nsn8QK4b2wT12UDmkkSHtrGJTg+FGy8ZbRQQ88LCUL4C1EpM3nUfCkWGvjvxWhR3UGhK8IuRcYhliex9V13",
+  "checksum": "077a3fd6",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Brown quickly in a hot skillet"
+      },
+      {
+        "num": 5,
+        "clue": "Something to ring for service"
+      },
+      {
+        "num": 9,
+        "clue": "Stare at rudely"
+      },
+      {
+        "num": 10,
+        "clue": "Showstopping opera solo"
+      },
+      {
+        "num": 11,
+        "clue": "Pyrite, by a famous nickname"
+      },
+      {
+        "num": 13,
+        "clue": "Spot for storing holiday decorations"
+      },
+      {
+        "num": 14,
+        "clue": "Tofu source"
+      },
+      {
+        "num": 15,
+        "clue": "Pro's opposite"
+      },
+      {
+        "num": 17,
+        "clue": "Mimic"
+      },
+      {
+        "num": 20,
+        "clue": "What two raised fingers can signify"
+      },
+      {
+        "num": 24,
+        "clue": "Distinguished older guy with graying hair, slangily"
+      },
+      {
+        "num": 26,
+        "clue": "Wile E. Coyote's go-to supplier"
+      },
+      {
+        "num": 27,
+        "clue": "Release, as a new album"
+      },
+      {
+        "num": 28,
+        "clue": "\"Hey, over here!\""
+      },
+      {
+        "num": 29,
+        "clue": "Risk-taker's motto, in brief"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Couch"
+      },
+      {
+        "num": 2,
+        "clue": "Awards grand slam achieved by Rita Moreno"
+      },
+      {
+        "num": 3,
+        "clue": "Tons, as two words"
+      },
+      {
+        "num": 4,
+        "clue": "Ancient artifact"
+      },
+      {
+        "num": 5,
+        "clue": "Paper or plastic item"
+      },
+      {
+        "num": 6,
+        "clue": "Greek god of love"
+      },
+      {
+        "num": 7,
+        "clue": "Stitch's best friend in a Disney film"
+      },
+      {
+        "num": 8,
+        "clue": "___ Gaga"
+      },
+      {
+        "num": 12,
+        "clue": "Range"
+      },
+      {
+        "num": 16,
+        "clue": "Like a mathlete, stereotypically"
+      },
+      {
+        "num": 17,
+        "clue": "Abbr. on a rush job"
+      },
+      {
+        "num": 18,
+        "clue": "Snapshots, informally"
+      },
+      {
+        "num": 19,
+        "clue": "Shady trees"
+      },
+      {
+        "num": 21,
+        "clue": "Big, round hairstyle"
+      },
+      {
+        "num": 22,
+        "clue": "Chill"
+      },
+      {
+        "num": 23,
+        "clue": "Trade show"
+      },
+      {
+        "num": 25,
+        "clue": "Pet doc"
+      }
+    ]
+  },
+  "theme": "Metals in everyday phrases",
+  "publishedAt": "2026-10-13T20:12:08.208Z"
+}

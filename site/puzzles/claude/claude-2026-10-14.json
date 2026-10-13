@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-14",
+  "date": "2026-10-14",
+  "series": "claude",
+  "title": "Heavy Metal",
+  "author": "Claude",
+  "note": "Mettle test: look for something metallic in the three longest answers.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#....##.....",
+    "...#.....#.....",
+    "...#...........",
+    "......##....###",
+    ".....#....#....",
+    "....#......#...",
+    "###.....##.....",
+    "#.............#",
+    ".....##.....###",
+    "...#......#....",
+    "....#....#.....",
+    "###....##......",
+    "...........#...",
+    ".....#.....#...",
+    ".....##....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:1UmVBiwkv9qfn6tSsRDcUYDfwIT8NSCNklVy4ZnqhoKmq/bZpw1I5t/dA34QL1y2R/3o8ONDikijn0gsQ9MdHAL9sbhc7ctZSf6hwHLNzcoPOJHUz3scccYQSkekjMQW7vV5kvkFDqFElMixLSy5nE82okyIqFGdlGPkAYcpUwdKgqQ/AUoPK5A5fO2jc3JdtsmVDRpDcvfQnE9ECaQ/RHNmubtHZEjUsiFd12fwKMcgNAja+RDnQYPrgWpg6pjgXlPYz/ICvtULbs5DtBBBHsG8mREP8e6mMNNKUQdetLpj",
+  "checksum": "0f0fe277",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Manning who won two Super Bowls with the Giants"
+      },
+      {
+        "num": 4,
+        "clue": "Lobster-dinner protection"
+      },
+      {
+        "num": 8,
+        "clue": "October birthstones"
+      },
+      {
+        "num": 13,
+        "clue": "Prefix with fiction or profit"
+      },
+      {
+        "num": 14,
+        "clue": "Zodiac ram"
+      },
+      {
+        "num": 16,
+        "clue": "Car parker at a fancy hotel"
+      },
+      {
+        "num": 17,
+        "clue": "Sets in the living room?"
+      },
+      {
+        "num": 18,
+        "clue": "Old Manhattan songwriting hub that sounds like a kitchen drawer?"
+      },
+      {
+        "num": 20,
+        "clue": "Peanut butter cup brand in many trick-or-treat bags"
+      },
+      {
+        "num": 22,
+        "clue": "Get under the skin of"
+      },
+      {
+        "num": 23,
+        "clue": "Slipped up"
+      },
+      {
+        "num": 24,
+        "clue": "Mirror-obsessed, say"
+      },
+      {
+        "num": 26,
+        "clue": "Totally awesome, in slang"
+      },
+      {
+        "num": 30,
+        "clue": "\"___ noche\" (tonight, in Spanish)"
+      },
+      {
+        "num": 31,
+        "clue": "Threw shade at"
+      },
+      {
+        "num": 33,
+        "clue": "\"Who, ___?\" (Miss Piggy's coy question)"
+      },
+      {
+        "num": 34,
+        "clue": "Singer Jones of \"Don't Know Why\""
+      },
+      {
+        "num": 36,
+        "clue": "Roll with the punches"
+      },
+      {
+        "num": 38,
+        "clue": "Pester with lots of small fees"
+      },
+      {
+        "num": 42,
+        "clue": "Printer cartridge contents"
+      },
+      {
+        "num": 43,
+        "clue": "Bullwinkle, for one"
+      },
+      {
+        "num": 44,
+        "clue": "Yoga class essential"
+      },
+      {
+        "num": 45,
+        "clue": "Bring to a halt"
+      },
+      {
+        "num": 48,
+        "clue": "Hit the waves"
+      },
+      {
+        "num": 52,
+        "clue": "Pancake chain"
+      },
+      {
+        "num": 54,
+        "clue": "Trusted staffer"
+      },
+      {
+        "num": 55,
+        "clue": "Fit for a queen"
+      },
+      {
+        "num": 56,
+        "clue": "Like the Sahara"
+      },
+      {
+        "num": 58,
+        "clue": "Feel a connection (to)"
+      },
+      {
+        "num": 59,
+        "clue": "Hitting the bench press, slangily"
+      },
+      {
+        "num": 64,
+        "clue": "Veto"
+      },
+      {
+        "num": 65,
+        "clue": "Like apricots in trail mix"
+      },
+      {
+        "num": 66,
+        "clue": "Run off to say \"I do\"?"
+      },
+      {
+        "num": 67,
+        "clue": "Female deer"
+      },
+      {
+        "num": 68,
+        "clue": "Roadside warning light"
+      },
+      {
+        "num": 69,
+        "clue": "Had down cold"
+      },
+      {
+        "num": 70,
+        "clue": "Word represented by &"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Main course"
+      },
+      {
+        "num": 2,
+        "clue": "Romeo and Juliet, e.g."
+      },
+      {
+        "num": 3,
+        "clue": "Put in"
+      },
+      {
+        "num": 4,
+        "clue": "With ___ breath"
+      },
+      {
+        "num": 5,
+        "clue": "Colorful part of the eye"
+      },
+      {
+        "num": 6,
+        "clue": "Recycling container"
+      },
+      {
+        "num": 7,
+        "clue": "Mo. after Aug."
+      },
+      {
+        "num": 8,
+        "clue": "Racetrack shape"
+      },
+      {
+        "num": 9,
+        "clue": "Turns white"
+      },
+      {
+        "num": 10,
+        "clue": "Every bit"
+      },
+      {
+        "num": 11,
+        "clue": "Spike who directed \"Do the Right Thing\""
+      },
+      {
+        "num": 12,
+        "clue": "Pigpen"
+      },
+      {
+        "num": 15,
+        "clue": "Draped garments in Delhi"
+      },
+      {
+        "num": 19,
+        "clue": "Number of innings in regulation"
+      },
+      {
+        "num": 21,
+        "clue": "Spooky sitting with a medium"
+      },
+      {
+        "num": 24,
+        "clue": "Tiny glass tube"
+      },
+      {
+        "num": 25,
+        "clue": "Red-faced, perhaps"
+      },
+      {
+        "num": 27,
+        "clue": "Mosque leader"
+      },
+      {
+        "num": 28,
+        "clue": "Get by"
+      },
+      {
+        "num": 29,
+        "clue": "First-aid ___"
+      },
+      {
+        "num": 31,
+        "clue": "Dr. ___ (hip-hop producer)"
+      },
+      {
+        "num": 32,
+        "clue": "Pops"
+      },
+      {
+        "num": 35,
+        "clue": "Gumbo veggie"
+      },
+      {
+        "num": 37,
+        "clue": "Big-rig fuel"
+      },
+      {
+        "num": 38,
+        "clue": "Ark builder"
+      },
+      {
+        "num": 39,
+        "clue": "Really digging"
+      },
+      {
+        "num": 40,
+        "clue": "Sniffer"
+      },
+      {
+        "num": 41,
+        "clue": "Period or polka"
+      },
+      {
+        "num": 42,
+        "clue": "Reaction to oversharing, in texts"
+      },
+      {
+        "num": 46,
+        "clue": "April showers"
+      },
+      {
+        "num": 47,
+        "clue": "Mountain crest"
+      },
+      {
+        "num": 49,
+        "clue": "Country on Lake Victoria"
+      },
+      {
+        "num": 50,
+        "clue": "Dole out sparingly"
+      },
+      {
+        "num": 51,
+        "clue": "Showed off, as muscles"
+      },
+      {
+        "num": 53,
+        "clue": "It covers rock, in a classic game"
+      },
+      {
+        "num": 55,
+        "clue": "Extend, as a library book"
+      },
+      {
+        "num": 57,
+        "clue": "Roller coaster, e.g."
+      },
+      {
+        "num": 58,
+        "clue": "Lasso material"
+      },
+      {
+        "num": 59,
+        "clue": "Common email attachment, briefly"
+      },
+      {
+        "num": 60,
+        "clue": "Web address, for short"
+      },
+      {
+        "num": 61,
+        "clue": "Soccer legend Hamm"
+      },
+      {
+        "num": 62,
+        "clue": "Sort"
+      },
+      {
+        "num": 63,
+        "clue": "Harry's red-haired friend"
+      }
+    ]
+  },
+  "theme": "Metals in everyday phrases",
+  "publishedAt": "2026-10-13T20:12:08.341Z"
+}

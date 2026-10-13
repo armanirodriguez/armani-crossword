@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-14-mini",
+  "date": "2026-10-14",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Get the Lead Out",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:frELJySRxAW8cWhl9JCDw+CVHyNszo8Eig==",
+  "checksum": "aeedbbab",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Run away"
+      },
+      {
+        "num": 5,
+        "clue": "Big concert venue"
+      },
+      {
+        "num": 6,
+        "clue": "Is out in front (or, said another way, a heavy metal)"
+      },
+      {
+        "num": 7,
+        "clue": "Valuable thing"
+      },
+      {
+        "num": 8,
+        "clue": "Backyard storage building"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Just picked"
+      },
+      {
+        "num": 2,
+        "clue": "Apartment contract"
+      },
+      {
+        "num": 3,
+        "clue": "Finished"
+      },
+      {
+        "num": 4,
+        "clue": "Where the sun rises"
+      },
+      {
+        "num": 5,
+        "clue": "\"Sadly...\""
+      }
+    ]
+  },
+  "theme": "Metals in everyday phrases",
+  "publishedAt": "2026-10-13T20:12:08.069Z"
+}
