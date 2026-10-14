@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-15",
+  "date": "2026-10-15",
+  "series": "claude",
+  "title": "Quote, Unquote",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "##............#",
+    "...#...##......",
+    "....#....#.....",
+    "......#....#...",
+    "###.........###",
+    "...#....#......",
+    ".....#....#....",
+    "......##...#...",
+    "#............##",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:1wQgz6PZC929diyRzilfBKJ7Re4Od58tAjfvU7YO8F28+QoGaQwE3tOF3cUK6bFJ2GdJcsuUTat5h91Ct5R6yaDKaN40XOPsG/bH+10ypaAI17mha0r+5bvrp/1LTibZJ1hHF1mz3/0CaPpuD429Tzh1kKwZ1wASWGIQFH8jY2hDr1J6bD5pyo/loW+cZkQsnxf2XRRmkR9hiJrYCHQEsb9/OhF/Nkc5dUWKrjrUDWiqwcPMz/r8ovztFsOF0P3pt3bF9OrwOEAnXeXiB8oV+aKRdq2E7WH+Bm8nlEr3qdmz",
+  "checksum": "261431f4",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Give a jolt to"
+      },
+      {
+        "num": 6,
+        "clue": "Places to get wrapped in seaweed"
+      },
+      {
+        "num": 10,
+        "clue": "Foot feature, or a golden McDonald's sight"
+      },
+      {
+        "num": 14,
+        "clue": "K-pop's homeland"
+      },
+      {
+        "num": 15,
+        "clue": "It's pushed down the aisle"
+      },
+      {
+        "num": 16,
+        "clue": "Machu Picchu's country"
+      },
+      {
+        "num": 17,
+        "clue": "Chips in before a hand"
+      },
+      {
+        "num": 18,
+        "clue": "Hankering"
+      },
+      {
+        "num": 19,
+        "clue": "\"Yes, ___!\" (can-do cry)"
+      },
+      {
+        "num": 20,
+        "clue": "\"Top Gun\" declaration that ends \"... for speed!\""
+      },
+      {
+        "num": 23,
+        "clue": "Close encounter figures, for short"
+      },
+      {
+        "num": 25,
+        "clue": "Softie"
+      },
+      {
+        "num": 26,
+        "clue": "Easy to handle"
+      },
+      {
+        "num": 28,
+        "clue": "Oven accessory"
+      },
+      {
+        "num": 30,
+        "clue": "Name above the title"
+      },
+      {
+        "num": 33,
+        "clue": "Plains dwelling"
+      },
+      {
+        "num": 34,
+        "clue": "Hazardous"
+      },
+      {
+        "num": 36,
+        "clue": "Tom Hiddleston's Marvel trickster"
+      },
+      {
+        "num": 38,
+        "clue": "Sound of mild reproach"
+      },
+      {
+        "num": 39,
+        "clue": "Promise made by Schwarzenegger's cyborg in \"The Terminator\""
+      },
+      {
+        "num": 42,
+        "clue": "Berlin sigh"
+      },
+      {
+        "num": 45,
+        "clue": "App audience member"
+      },
+      {
+        "num": 46,
+        "clue": "Mulls over"
+      },
+      {
+        "num": 50,
+        "clue": "Romp playfully"
+      },
+      {
+        "num": 52,
+        "clue": "\"At Last\" singer James"
+      },
+      {
+        "num": 54,
+        "clue": "Cozy corner"
+      },
+      {
+        "num": 55,
+        "clue": "Wobble on unsteady legs"
+      },
+      {
+        "num": 57,
+        "clue": "With it"
+      },
+      {
+        "num": 59,
+        "clue": "Bond, for one"
+      },
+      {
+        "num": 60,
+        "clue": "Menacing question from Heath Ledger's Joker"
+      },
+      {
+        "num": 64,
+        "clue": "\"American ___\""
+      },
+      {
+        "num": 65,
+        "clue": "Real doozy"
+      },
+      {
+        "num": 66,
+        "clue": "Stretch on the job"
+      },
+      {
+        "num": 69,
+        "clue": "Image that might go viral"
+      },
+      {
+        "num": 70,
+        "clue": "Taylor Swift's record-setting concert series, with \"The\""
+      },
+      {
+        "num": 71,
+        "clue": "Snouted jungle mammal"
+      },
+      {
+        "num": 72,
+        "clue": "Keats wrote one to a nightingale"
+      },
+      {
+        "num": 73,
+        "clue": "Hit the button on, as an email"
+      },
+      {
+        "num": 74,
+        "clue": "How a wallflower may smile"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Upbeat genre with horns and offbeat guitar"
+      },
+      {
+        "num": 2,
+        "clue": "Pro's opposite"
+      },
+      {
+        "num": 3,
+        "clue": "Gallery exhibitors"
+      },
+      {
+        "num": 4,
+        "clue": "Snorkeler's destination"
+      },
+      {
+        "num": 5,
+        "clue": "Lets up"
+      },
+      {
+        "num": 6,
+        "clue": "Shape, as clay"
+      },
+      {
+        "num": 7,
+        "clue": "Something a comb makes"
+      },
+      {
+        "num": 8,
+        "clue": "Cry of frustration"
+      },
+      {
+        "num": 9,
+        "clue": "Knight's ride"
+      },
+      {
+        "num": 10,
+        "clue": "Each"
+      },
+      {
+        "num": 11,
+        "clue": "Something to keep for a return"
+      },
+      {
+        "num": 12,
+        "clue": "Holds tenderly"
+      },
+      {
+        "num": 13,
+        "clue": "Attila, for one"
+      },
+      {
+        "num": 21,
+        "clue": "Studio stands"
+      },
+      {
+        "num": 22,
+        "clue": "Two weeks' worth, maybe?"
+      },
+      {
+        "num": 23,
+        "clue": "Big bird from Australia"
+      },
+      {
+        "num": 24,
+        "clue": "Can material"
+      },
+      {
+        "num": 27,
+        "clue": "Yelp at a mouse"
+      },
+      {
+        "num": 29,
+        "clue": "___ chi"
+      },
+      {
+        "num": 31,
+        "clue": "Wide awake"
+      },
+      {
+        "num": 32,
+        "clue": "Lowe of \"Parks and Recreation\""
+      },
+      {
+        "num": 35,
+        "clue": "Strokes of luck"
+      },
+      {
+        "num": 37,
+        "clue": "Cute, in Japanese pop culture"
+      },
+      {
+        "num": 40,
+        "clue": "Buzzer at a picnic?"
+      },
+      {
+        "num": 41,
+        "clue": "Folks"
+      },
+      {
+        "num": 42,
+        "clue": "Toward the stern"
+      },
+      {
+        "num": 43,
+        "clue": "Packed"
+      },
+      {
+        "num": 44,
+        "clue": "Struck a nerve"
+      },
+      {
+        "num": 47,
+        "clue": "Like some tabloid columns"
+      },
+      {
+        "num": 48,
+        "clue": "Short flight"
+      },
+      {
+        "num": 49,
+        "clue": "The limit, in a saying"
+      },
+      {
+        "num": 51,
+        "clue": "Harry of One Direction"
+      },
+      {
+        "num": 53,
+        "clue": "Main point"
+      },
+      {
+        "num": 56,
+        "clue": "What actors audition for"
+      },
+      {
+        "num": 58,
+        "clue": "Things to like and share"
+      },
+      {
+        "num": 61,
+        "clue": "\"You bet!\""
+      },
+      {
+        "num": 62,
+        "clue": "Flair"
+      },
+      {
+        "num": 63,
+        "clue": "Beehive State"
+      },
+      {
+        "num": 64,
+        "clue": "Texter's \"if you ask me\""
+      },
+      {
+        "num": 67,
+        "clue": "Zero, in soccer"
+      },
+      {
+        "num": 68,
+        "clue": "Take a stab"
+      }
+    ]
+  },
+  "theme": "Famous movie lines",
+  "publishedAt": "2026-10-14T20:17:03.784Z"
+}

@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-15-midi",
+  "date": "2026-10-15",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Take Two",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...##....",
+    "....#....",
+    "....#....",
+    ".........",
+    "###...###",
+    ".........",
+    "....#....",
+    "....#....",
+    "....##..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:r51xgbgf1544MD+mVZwmRXA/SgA4w64swf3bXKvtQTgVz1mnC5pXDslG364vXIebhnulQAH7/o3294+T0Ci3CFEyYnxDwz44UVi6VdngFGFI",
+  "checksum": "60f06c33",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Bank machine, briefly"
+      },
+      {
+        "num": 4,
+        "clue": "Noggin"
+      },
+      {
+        "num": 8,
+        "clue": "Circus performer with a ball on its nose"
+      },
+      {
+        "num": 10,
+        "clue": "Waffle brand you might \"leggo\" of"
+      },
+      {
+        "num": 11,
+        "clue": "___ mater"
+      },
+      {
+        "num": 12,
+        "clue": "Like a lemon or a bad mood"
+      },
+      {
+        "num": 13,
+        "clue": "Ilsa's piano-bar request in \"Casablanca\""
+      },
+      {
+        "num": 15,
+        "clue": "Court"
+      },
+      {
+        "num": 16,
+        "clue": "Westley's way of saying \"I love you\" in \"The Princess Bride\""
+      },
+      {
+        "num": 22,
+        "clue": "Space to spare"
+      },
+      {
+        "num": 23,
+        "clue": "Great Lake bordering Ohio"
+      },
+      {
+        "num": 24,
+        "clue": "Nicolas of \"National Treasure\""
+      },
+      {
+        "num": 25,
+        "clue": "Barbie, notably"
+      },
+      {
+        "num": 26,
+        "clue": "Bridge length"
+      },
+      {
+        "num": 27,
+        "clue": "Silent yes"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Memo letters that mean \"hurry\""
+      },
+      {
+        "num": 2,
+        "clue": "Poker player's giveaway"
+      },
+      {
+        "num": 3,
+        "clue": "\"___ Mia!\""
+      },
+      {
+        "num": 4,
+        "clue": "Conferred"
+      },
+      {
+        "num": 5,
+        "clue": "They may be bruised"
+      },
+      {
+        "num": 6,
+        "clue": "Water, in Mexico"
+      },
+      {
+        "num": 7,
+        "clue": "Standard"
+      },
+      {
+        "num": 9,
+        "clue": "Churchgoers who aren't clergy"
+      },
+      {
+        "num": 14,
+        "clue": "Paper promise"
+      },
+      {
+        "num": 16,
+        "clue": "Rainbow shapes"
+      },
+      {
+        "num": 17,
+        "clue": "Daytime drama"
+      },
+      {
+        "num": 18,
+        "clue": "Class with a downward dog"
+      },
+      {
+        "num": 19,
+        "clue": "Golf club or pressing appliance"
+      },
+      {
+        "num": 20,
+        "clue": "Farm tower"
+      },
+      {
+        "num": 21,
+        "clue": "Didn't let go of"
+      }
+    ]
+  },
+  "theme": "Famous movie lines",
+  "publishedAt": "2026-10-14T20:17:03.635Z"
+}

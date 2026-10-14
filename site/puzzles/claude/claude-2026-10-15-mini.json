@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-15-mini",
+  "date": "2026-10-15",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Totally Quotable",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    "#....",
+    ".....",
+    "....#",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:mGtA4G8nCN67za/UkmX3VW14pcAi/3hoiQ==",
+  "checksum": "7f3e07f7",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Quick kiss"
+      },
+      {
+        "num": 5,
+        "clue": "Tortoise's racing rival"
+      },
+      {
+        "num": 6,
+        "clue": "Skewered dish often served with peanut sauce"
+      },
+      {
+        "num": 7,
+        "clue": "Cher Horowitz's eye-rolling retort in \"Clueless\""
+      },
+      {
+        "num": 8,
+        "clue": "Dapper fellow"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Stage a teen may go through"
+      },
+      {
+        "num": 2,
+        "clue": "Skip takeout, say"
+      },
+      {
+        "num": 3,
+        "clue": "Etsy item, often"
+      },
+      {
+        "num": 4,
+        "clue": "It may be under the doormat"
+      },
+      {
+        "num": 6,
+        "clue": "Droop"
+      }
+    ]
+  },
+  "theme": "Famous movie lines",
+  "publishedAt": "2026-10-14T20:17:03.499Z"
+}
