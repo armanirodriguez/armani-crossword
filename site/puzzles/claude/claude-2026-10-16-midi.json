@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-16-midi",
+  "date": "2026-10-16",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Pick One",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:hhqO2Zk8/91HiWFaq8gK7W28Ld7IzidRhprxPnEtd4AZfkVnYb6SBD4NTVfAIuQORU14tHx+VjqGy/hC5jXyuY4/gN4ZCMKMTAK4QHH7DPrb",
+  "checksum": "db20685e",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Pop's Perry"
+      },
+      {
+        "num": 5,
+        "clue": "Juicy gossip"
+      },
+      {
+        "num": 9,
+        "clue": "Retailer famous for its meatballs"
+      },
+      {
+        "num": 10,
+        "clue": "Something a candle may mask"
+      },
+      {
+        "num": 11,
+        "clue": "Regardless of the final score"
+      },
+      {
+        "num": 13,
+        "clue": "Stopover spot"
+      },
+      {
+        "num": 14,
+        "clue": "Where strikes are welcome"
+      },
+      {
+        "num": 15,
+        "clue": "Org. that's always collecting"
+      },
+      {
+        "num": 16,
+        "clue": "Rapper ___ 3000"
+      },
+      {
+        "num": 19,
+        "clue": "Scale units: Abbr."
+      },
+      {
+        "num": 22,
+        "clue": "Question answered by pink or blue confetti"
+      },
+      {
+        "num": 24,
+        "clue": "All square"
+      },
+      {
+        "num": 25,
+        "clue": "Where most people on Earth live"
+      },
+      {
+        "num": 26,
+        "clue": "___ Gaga"
+      },
+      {
+        "num": 27,
+        "clue": "Fret"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "New Zealander, informally"
+      },
+      {
+        "num": 2,
+        "clue": "Related"
+      },
+      {
+        "num": 3,
+        "clue": "Nashville's state: Abbr."
+      },
+      {
+        "num": 4,
+        "clue": "Rockets legend ___ Ming"
+      },
+      {
+        "num": 5,
+        "clue": "Barbie and others"
+      },
+      {
+        "num": 6,
+        "clue": "\"American ___\""
+      },
+      {
+        "num": 7,
+        "clue": "Got up"
+      },
+      {
+        "num": 8,
+        "clue": "Three in a deck"
+      },
+      {
+        "num": 12,
+        "clue": "Pinker inside, as a steak"
+      },
+      {
+        "num": 15,
+        "clue": "\"Rain on your wedding day,\" per Alanis"
+      },
+      {
+        "num": 16,
+        "clue": "Biblical brother of Cain"
+      },
+      {
+        "num": 17,
+        "clue": "Star that suddenly flares"
+      },
+      {
+        "num": 18,
+        "clue": "Colored, as hair"
+      },
+      {
+        "num": 19,
+        "clue": "Lean to one side"
+      },
+      {
+        "num": 20,
+        "clue": "Cheese often baked in pastry"
+      },
+      {
+        "num": 21,
+        "clue": "Cabbage dish at a cookout"
+      },
+      {
+        "num": 23,
+        "clue": "It may be pumped"
+      }
+    ]
+  },
+  "theme": "Either-or phrases",
+  "publishedAt": "2026-10-15T20:13:05.191Z"
+}

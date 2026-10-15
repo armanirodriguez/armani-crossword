@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-16",
+  "date": "2026-10-16",
+  "series": "claude",
+  "title": "Decisions, Decisions",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#....#......",
+    "........#......",
+    "........#......",
+    "##............#",
+    "......##...#...",
+    "....##...##....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....##...##....",
+    "...#...##......",
+    "#............##",
+    "......#........",
+    "......#........",
+    "......#....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:mzsEpuYAJM7omLfev5cIUHDtA5IHSRnsLINNpaoBBAxAl6BuZJOOx5qaunothG12fZfNZaiyGiXOZGBs9M4F22UsPZhlLgsTSJraxTJ26VIDggqY8919yWXSwBn9X0T2O9fF4Rwe4vTRI8vgOpQ/uTJoxS+FWbn6ykWTk7/84vDOWZgqyo9/21u+27jBQB1D/oDl7FsNVqCK0mtcpd4BKhLAxcb4Gnn7ybwgjq64PU0zEqDs5MbStQU0oF73x5yRg0cmWa8o3gIE5yO4w1GTakCd1lNWAAiZl3Faqpzx8Nmv",
+  "checksum": "d79e99e5",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Way off"
+      },
+      {
+        "num": 4,
+        "clue": "Country's McEntire"
+      },
+      {
+        "num": 8,
+        "clue": "Crush underfoot"
+      },
+      {
+        "num": 14,
+        "clue": "Like a bishop's path"
+      },
+      {
+        "num": 16,
+        "clue": "Shohei who both pitches and hits"
+      },
+      {
+        "num": 17,
+        "clue": "Many an Etsy seller"
+      },
+      {
+        "num": 18,
+        "clue": "Root (out)"
+      },
+      {
+        "num": 19,
+        "clue": "Doorstep ultimatum on October 31"
+      },
+      {
+        "num": 21,
+        "clue": "Forklift's wooden platform"
+      },
+      {
+        "num": 23,
+        "clue": "\"Yes, captain!\""
+      },
+      {
+        "num": 24,
+        "clue": "Little taste"
+      },
+      {
+        "num": 26,
+        "clue": "Forever and a day"
+      },
+      {
+        "num": 27,
+        "clue": "Campus climber"
+      },
+      {
+        "num": 29,
+        "clue": "Go over with a fine-tooth tool"
+      },
+      {
+        "num": 30,
+        "clue": "Fishing gear"
+      },
+      {
+        "num": 31,
+        "clue": "Clean, as a counter"
+      },
+      {
+        "num": 33,
+        "clue": "Jump-start equipment"
+      },
+      {
+        "num": 35,
+        "clue": "Unpredictable, as a restaurant's quality"
+      },
+      {
+        "num": 37,
+        "clue": "Monastery heads"
+      },
+      {
+        "num": 40,
+        "clue": "Drench"
+      },
+      {
+        "num": 41,
+        "clue": "Pose for a portrait"
+      },
+      {
+        "num": 44,
+        "clue": "Not slack"
+      },
+      {
+        "num": 45,
+        "clue": "Corner-office occupant, often"
+      },
+      {
+        "num": 46,
+        "clue": "Lion's pride?"
+      },
+      {
+        "num": 47,
+        "clue": "Yalie"
+      },
+      {
+        "num": 48,
+        "clue": "April pro: Abbr."
+      },
+      {
+        "num": 50,
+        "clue": "Quick peek"
+      },
+      {
+        "num": 52,
+        "clue": "Like a poker player's final shove, maybe"
+      },
+      {
+        "num": 56,
+        "clue": "Bitter salad leaf"
+      },
+      {
+        "num": 57,
+        "clue": "Done as a formality"
+      },
+      {
+        "num": 60,
+        "clue": "Treats with clotted cream"
+      },
+      {
+        "num": 61,
+        "clue": "Like Mozart, by birth"
+      },
+      {
+        "num": 62,
+        "clue": "Core beliefs"
+      },
+      {
+        "num": 63,
+        "clue": "Allows"
+      },
+      {
+        "num": 64,
+        "clue": "Fitting"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Food-label watchdog: Abbr."
+      },
+      {
+        "num": 2,
+        "clue": "Put on TV"
+      },
+      {
+        "num": 3,
+        "clue": "Shaken up"
+      },
+      {
+        "num": 4,
+        "clue": "___ the Riveter"
+      },
+      {
+        "num": 5,
+        "clue": "Pass into law"
+      },
+      {
+        "num": 6,
+        "clue": "River's edge"
+      },
+      {
+        "num": 7,
+        "clue": "Too"
+      },
+      {
+        "num": 8,
+        "clue": "Pushover"
+      },
+      {
+        "num": 9,
+        "clue": "At that spot"
+      },
+      {
+        "num": 10,
+        "clue": "To be, in Paris"
+      },
+      {
+        "num": 11,
+        "clue": "Sun shield on a stick"
+      },
+      {
+        "num": 12,
+        "clue": "Former"
+      },
+      {
+        "num": 13,
+        "clue": "Picky complaint"
+      },
+      {
+        "num": 15,
+        "clue": "Lena Dunham's HBO series"
+      },
+      {
+        "num": 20,
+        "clue": "Glimmer of hope"
+      },
+      {
+        "num": 21,
+        "clue": "Golf standard"
+      },
+      {
+        "num": 22,
+        "clue": "Back then"
+      },
+      {
+        "num": 25,
+        "clue": "\"Antiques Roadshow\" network"
+      },
+      {
+        "num": 27,
+        "clue": "Wall Street debut, briefly"
+      },
+      {
+        "num": 28,
+        "clue": "It precedes the chorus"
+      },
+      {
+        "num": 29,
+        "clue": "Home of \"Survivor\" and \"60 Minutes\""
+      },
+      {
+        "num": 31,
+        "clue": "Quickness with a quip"
+      },
+      {
+        "num": 32,
+        "clue": "Possessive pronoun"
+      },
+      {
+        "num": 33,
+        "clue": "Langley org."
+      },
+      {
+        "num": 34,
+        "clue": "Inquire"
+      },
+      {
+        "num": 35,
+        "clue": "Fiery, flavor-wise"
+      },
+      {
+        "num": 36,
+        "clue": "Barnyard sound"
+      },
+      {
+        "num": 37,
+        "clue": "Had dinner"
+      },
+      {
+        "num": 38,
+        "clue": "What tightrope walkers need"
+      },
+      {
+        "num": 39,
+        "clue": "Expand from"
+      },
+      {
+        "num": 41,
+        "clue": "Fruity Spanish punch"
+      },
+      {
+        "num": 42,
+        "clue": "Corp. kin"
+      },
+      {
+        "num": 43,
+        "clue": "Casual shirt"
+      },
+      {
+        "num": 45,
+        "clue": "Is able to"
+      },
+      {
+        "num": 46,
+        "clue": "Lord's estate"
+      },
+      {
+        "num": 48,
+        "clue": "Envy"
+      },
+      {
+        "num": 49,
+        "clue": "Media people"
+      },
+      {
+        "num": 50,
+        "clue": "Spooky sheet-wearer"
+      },
+      {
+        "num": 51,
+        "clue": "Elevators, in London"
+      },
+      {
+        "num": 53,
+        "clue": "Queue"
+      },
+      {
+        "num": 54,
+        "clue": "Iridescent gem"
+      },
+      {
+        "num": 55,
+        "clue": "Accurate"
+      },
+      {
+        "num": 56,
+        "clue": "N.Y. time zone"
+      },
+      {
+        "num": 58,
+        "clue": "Atlas page"
+      },
+      {
+        "num": 59,
+        "clue": "Picnic pest"
+      }
+    ]
+  },
+  "theme": "Either-or phrases",
+  "publishedAt": "2026-10-15T20:13:05.385Z"
+}
