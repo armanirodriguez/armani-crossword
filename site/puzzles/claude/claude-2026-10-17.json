@@ -1,0 +1,368 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-17",
+  "date": "2026-10-17",
+  "series": "claude",
+  "title": "Fall Lineup",
+  "author": "Claude",
+  "note": "It's autumn, so look at what the longest answers like to do.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "###....##......",
+    "....#....#....#",
+    "............###",
+    ".....##...#....",
+    "...#.......#...",
+    "....#...##.....",
+    "###............",
+    "#....#....#....",
+    "......##....###",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:qpvwyGJNCBPgYzjQk0dN44ipAUPoC8CTMik88a7O25yskN8F7gAEfRStCTPuqY+o4AzYiZT9S7sI+oBQEaX+Z+S7WNJ1HkeipfR00NzCwpQqL/sH8lPNtLQYCRI7JVm7hillbAIttDV5KFSzbbftCnDu56Uos9XCo9JXRgzQb5rj8ZS/G7Sd9Z803tauWbaWLvbdUlENhbKfFRNVJoGfHo3nUnJblEAwrLA/rVhquF4YZMXi5Ac9Bt51iVkWLboxGmE1MRQzf1x3p4KG49RB4Lo0hreFw1IVwMf3kVD+yELe",
+  "checksum": "2405c04e",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Courier and Garamond"
+      },
+      {
+        "num": 6,
+        "clue": "Squeezes from Grandma"
+      },
+      {
+        "num": 10,
+        "clue": "Carpe ___"
+      },
+      {
+        "num": 14,
+        "clue": "Clued in"
+      },
+      {
+        "num": 15,
+        "clue": "Where Mongolia is"
+      },
+      {
+        "num": 16,
+        "clue": "Capital where the Peace Prize is awarded"
+      },
+      {
+        "num": 17,
+        "clue": "Accounting entry"
+      },
+      {
+        "num": 18,
+        "clue": "Infatuated"
+      },
+      {
+        "num": 19,
+        "clue": "Dell"
+      },
+      {
+        "num": 20,
+        "clue": "Sputnik's launcher: Abbr."
+      },
+      {
+        "num": 22,
+        "clue": "Festoon"
+      },
+      {
+        "num": 24,
+        "clue": "Cherry's tiny handle"
+      },
+      {
+        "num": 27,
+        "clue": "Saxophonist Simpson"
+      },
+      {
+        "num": 30,
+        "clue": "Sail's support"
+      },
+      {
+        "num": 31,
+        "clue": "Nursery-rhyme egg who took a great tumble"
+      },
+      {
+        "num": 34,
+        "clue": "Hi or bye on Oahu"
+      },
+      {
+        "num": 35,
+        "clue": "Langley org."
+      },
+      {
+        "num": 36,
+        "clue": "Droops"
+      },
+      {
+        "num": 40,
+        "clue": "Orchestra's spot"
+      },
+      {
+        "num": 41,
+        "clue": "Omen"
+      },
+      {
+        "num": 45,
+        "clue": "Bonk"
+      },
+      {
+        "num": 46,
+        "clue": "Fencing blade"
+      },
+      {
+        "num": 48,
+        "clue": "Console with a Nunchuk"
+      },
+      {
+        "num": 49,
+        "clue": "Can't get enough of"
+      },
+      {
+        "num": 51,
+        "clue": "Landmark that's \"falling down\" in a kids' song"
+      },
+      {
+        "num": 55,
+        "clue": "Codebreaker Turing"
+      },
+      {
+        "num": 57,
+        "clue": "\"Orinoco Flow\" singer"
+      },
+      {
+        "num": 58,
+        "clue": "Bracket placement"
+      },
+      {
+        "num": 59,
+        "clue": "Black diamonds, e.g."
+      },
+      {
+        "num": 61,
+        "clue": "Head start"
+      },
+      {
+        "num": 63,
+        "clue": "Markers, of a sort"
+      },
+      {
+        "num": 64,
+        "clue": "Buckeye State"
+      },
+      {
+        "num": 67,
+        "clue": "Kind of pants"
+      },
+      {
+        "num": 71,
+        "clue": "Poker stake"
+      },
+      {
+        "num": 72,
+        "clue": "Daybreak, poetically"
+      },
+      {
+        "num": 73,
+        "clue": "Promotional product"
+      },
+      {
+        "num": 74,
+        "clue": "Pigsty"
+      },
+      {
+        "num": 75,
+        "clue": "Flock females"
+      },
+      {
+        "num": 76,
+        "clue": "Takes photos, informally"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Fidget spinner, circa 2017"
+      },
+      {
+        "num": 2,
+        "clue": "Be behind on payments"
+      },
+      {
+        "num": 3,
+        "clue": "Collar"
+      },
+      {
+        "num": 4,
+        "clue": "Big win"
+      },
+      {
+        "num": 5,
+        "clue": "Gels"
+      },
+      {
+        "num": 6,
+        "clue": "Hogwarts groundskeeper"
+      },
+      {
+        "num": 7,
+        "clue": "Olympics chant"
+      },
+      {
+        "num": 8,
+        "clue": "Freelance job"
+      },
+      {
+        "num": 9,
+        "clue": "Former Swedish automaker"
+      },
+      {
+        "num": 10,
+        "clue": "Sultry stretch of summer"
+      },
+      {
+        "num": 11,
+        "clue": "Hebrides, e.g."
+      },
+      {
+        "num": 12,
+        "clue": "Vote in"
+      },
+      {
+        "num": 13,
+        "clue": "Brother in a habit"
+      },
+      {
+        "num": 21,
+        "clue": "Foxy"
+      },
+      {
+        "num": 23,
+        "clue": "Ambulance pro, briefly"
+      },
+      {
+        "num": 24,
+        "clue": "Hexagon or heart"
+      },
+      {
+        "num": 25,
+        "clue": "Bloom that's big in Holland"
+      },
+      {
+        "num": 26,
+        "clue": "Ham it up"
+      },
+      {
+        "num": 28,
+        "clue": "Vacuum cleaner's force"
+      },
+      {
+        "num": 29,
+        "clue": "Friend in Paris"
+      },
+      {
+        "num": 32,
+        "clue": "Choose for a role"
+      },
+      {
+        "num": 33,
+        "clue": "Trash, as a review"
+      },
+      {
+        "num": 37,
+        "clue": "Humble ___"
+      },
+      {
+        "num": 38,
+        "clue": "Canyon"
+      },
+      {
+        "num": 39,
+        "clue": "1994 Keanu Reeves thriller set on a bus"
+      },
+      {
+        "num": 42,
+        "clue": "Admit to"
+      },
+      {
+        "num": 43,
+        "clue": "Roller coaster, e.g."
+      },
+      {
+        "num": 44,
+        "clue": "Road goo"
+      },
+      {
+        "num": 47,
+        "clue": "Passes, as time"
+      },
+      {
+        "num": 50,
+        "clue": "Scorn"
+      },
+      {
+        "num": 52,
+        "clue": "Bill with a pyramid on it"
+      },
+      {
+        "num": 53,
+        "clue": "Stockings"
+      },
+      {
+        "num": 54,
+        "clue": "Sweetie, in slang"
+      },
+      {
+        "num": 55,
+        "clue": "Solo"
+      },
+      {
+        "num": 56,
+        "clue": "Boors"
+      },
+      {
+        "num": 59,
+        "clue": "Thailand, once"
+      },
+      {
+        "num": 60,
+        "clue": "Not all"
+      },
+      {
+        "num": 62,
+        "clue": "Play parts"
+      },
+      {
+        "num": 65,
+        "clue": "\"___ I Met Your Mother\""
+      },
+      {
+        "num": 66,
+        "clue": "Wrath"
+      },
+      {
+        "num": 68,
+        "clue": "Pod resident"
+      },
+      {
+        "num": 69,
+        "clue": "Tear"
+      },
+      {
+        "num": 70,
+        "clue": "Connections"
+      }
+    ]
+  },
+  "theme": "Things that fall (it is autumn, after all)",
+  "publishedAt": "2026-10-16T20:21:35.030Z"
+}

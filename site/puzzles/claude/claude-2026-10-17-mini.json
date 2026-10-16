@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-17-mini",
+  "date": "2026-10-17",
+  "kind": "mini",
+  "series": "claude",
+  "title": "After Dusk",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:+Jt3DsskU9rrcwxBWJ/2ItG6Y9vSQkrqKA==",
+  "checksum": "5cfeac69",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Stroll"
+      },
+      {
+        "num": 5,
+        "clue": "Brainstorm output"
+      },
+      {
+        "num": 7,
+        "clue": "What falls at dusk"
+      },
+      {
+        "num": 8,
+        "clue": "Eucalyptus muncher"
+      },
+      {
+        "num": 9,
+        "clue": "Trudge"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Flirty signal"
+      },
+      {
+        "num": 2,
+        "clue": "Goodbye, in Guadalajara"
+      },
+      {
+        "num": 3,
+        "clue": "Lawful"
+      },
+      {
+        "num": 4,
+        "clue": "Painter Frida"
+      },
+      {
+        "num": 6,
+        "clue": "Antlered animal"
+      }
+    ]
+  },
+  "theme": "Things that fall (it is autumn, after all)",
+  "publishedAt": "2026-10-16T20:21:26.861Z"
+}

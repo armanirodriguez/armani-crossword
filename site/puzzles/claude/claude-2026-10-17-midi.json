@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-17-midi",
+  "date": "2026-10-17",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Coming Down",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...#.....",
+    "...#.....",
+    "...#.....",
+    ".........",
+    "###...###",
+    ".........",
+    ".....#...",
+    ".....#...",
+    ".....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:9uxgffPwluxSAw5NDxrVZ9CLymyKJnpupz91wq0ocTVzk4TvYm1PPGRjedvY4ex5n6PekLRTSN//dmbwilFY+5mnweSE5Y3dTs2PYswSMF4G",
+  "checksum": "0dbb2737",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Shaggy hairdo"
+      },
+      {
+        "num": 4,
+        "clue": "Fresh"
+      },
+      {
+        "num": 9,
+        "clue": "Slick stuff"
+      },
+      {
+        "num": 10,
+        "clue": "Shade of green"
+      },
+      {
+        "num": 11,
+        "clue": "Double helix"
+      },
+      {
+        "num": 12,
+        "clue": "Simone with a slew of golds"
+      },
+      {
+        "num": 13,
+        "clue": "Ones taking the plunge from a plane"
+      },
+      {
+        "num": 15,
+        "clue": "Iron ___"
+      },
+      {
+        "num": 16,
+        "clue": "\"___ Keep Fallin' on My Head\""
+      },
+      {
+        "num": 22,
+        "clue": "Point of contention"
+      },
+      {
+        "num": 23,
+        "clue": "Moving vehicle"
+      },
+      {
+        "num": 24,
+        "clue": "Mufasa's son"
+      },
+      {
+        "num": 25,
+        "clue": "Self-image"
+      },
+      {
+        "num": 26,
+        "clue": "Painter's prop"
+      },
+      {
+        "num": 27,
+        "clue": "Beak"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Forum police, informally"
+      },
+      {
+        "num": 2,
+        "clue": "Barnyard sound"
+      },
+      {
+        "num": 3,
+        "clue": "\"Hamlet,\" e.g."
+      },
+      {
+        "num": 4,
+        "clue": "\"Don't sweat it\""
+      },
+      {
+        "num": 5,
+        "clue": "Twist of fiction"
+      },
+      {
+        "num": 6,
+        "clue": "Wretched"
+      },
+      {
+        "num": 7,
+        "clue": "At all"
+      },
+      {
+        "num": 8,
+        "clue": "Minus"
+      },
+      {
+        "num": 14,
+        "clue": "River through Budapest"
+      },
+      {
+        "num": 16,
+        "clue": "Get up"
+      },
+      {
+        "num": 17,
+        "clue": "Where Nepal is"
+      },
+      {
+        "num": 18,
+        "clue": "Doctrines"
+      },
+      {
+        "num": 19,
+        "clue": "Pizza spot"
+      },
+      {
+        "num": 20,
+        "clue": "Summon over the PA"
+      },
+      {
+        "num": 21,
+        "clue": "Elitist"
+      }
+    ]
+  },
+  "theme": "Things that fall (it is autumn, after all)",
+  "publishedAt": "2026-10-16T20:21:26.991Z"
+}
