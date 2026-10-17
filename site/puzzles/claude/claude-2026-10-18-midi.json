@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-18-midi",
+  "date": "2026-10-18",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Opening Moves",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....##...",
+    "....#....",
+    ".........",
+    "...#....#",
+    "###...###",
+    "#....#...",
+    ".........",
+    "....#....",
+    "...##...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:rHHEj5Pnz3oRUcV5zg33m+XuP02cckCQdBN0Evh2RL/PenIAVkW1Ma7MWQSifkvAhvfgArDefl/MZgfWpbUyLH8cBtax2+d+Ag9U387V1WmW",
+  "checksum": "df73214c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Penny"
+      },
+      {
+        "num": 5,
+        "clue": "Spelling contest"
+      },
+      {
+        "num": 8,
+        "clue": "Mined finds"
+      },
+      {
+        "num": 9,
+        "clue": "It flows from Kilauea"
+      },
+      {
+        "num": 10,
+        "clue": "Daredevil type"
+      },
+      {
+        "num": 12,
+        "clue": "Earnings after taxes"
+      },
+      {
+        "num": 13,
+        "clue": "Small bills"
+      },
+      {
+        "num": 14,
+        "clue": "Bachelor ___"
+      },
+      {
+        "num": 15,
+        "clue": "Street ___"
+      },
+      {
+        "num": 17,
+        "clue": "Transcript stat, briefly"
+      },
+      {
+        "num": 20,
+        "clue": "Group that makes its moves after school?"
+      },
+      {
+        "num": 22,
+        "clue": "Weight"
+      },
+      {
+        "num": 23,
+        "clue": "Reign"
+      },
+      {
+        "num": 24,
+        "clue": "No ___, ands or buts"
+      },
+      {
+        "num": 25,
+        "clue": "Holler"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Autumn maze material"
+      },
+      {
+        "num": 2,
+        "clue": "Great Lake on Ohio's border"
+      },
+      {
+        "num": 3,
+        "clue": "Robin's home"
+      },
+      {
+        "num": 4,
+        "clue": "Sound of disapproval"
+      },
+      {
+        "num": 5,
+        "clue": "Make, as bread"
+      },
+      {
+        "num": 6,
+        "clue": "Nights before holidays"
+      },
+      {
+        "num": 7,
+        "clue": "Something to lend"
+      },
+      {
+        "num": 9,
+        "clue": "Touch down"
+      },
+      {
+        "num": 11,
+        "clue": "Warty hoppers"
+      },
+      {
+        "num": 14,
+        "clue": "Nuisance"
+      },
+      {
+        "num": 15,
+        "clue": "Kitchen boss"
+      },
+      {
+        "num": 16,
+        "clue": "Whistle-blowers?"
+      },
+      {
+        "num": 17,
+        "clue": "Elmer's product"
+      },
+      {
+        "num": 18,
+        "clue": "Influence"
+      },
+      {
+        "num": 19,
+        "clue": "Cain's brother"
+      },
+      {
+        "num": 20,
+        "clue": "Tai ___"
+      },
+      {
+        "num": 21,
+        "clue": "Weep"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a board game",
+  "publishedAt": "2026-10-17T20:11:25.847Z"
+}

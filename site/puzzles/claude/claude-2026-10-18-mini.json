@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-18-mini",
+  "date": "2026-10-18",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Your Move",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:okEsxDHTY0WcdhsO6ok54kstfTxKDdiSGg==",
+  "checksum": "86c5292b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Huge, informally"
+      },
+      {
+        "num": 5,
+        "clue": "Not silently"
+      },
+      {
+        "num": 7,
+        "clue": "Open spot in the woods"
+      },
+      {
+        "num": 8,
+        "clue": "Old-photo tint"
+      },
+      {
+        "num": 9,
+        "clue": "Glowing sign gas"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Glossy reads, for short"
+      },
+      {
+        "num": 2,
+        "clue": "Talk show host DeGeneres"
+      },
+      {
+        "num": 3,
+        "clue": "Flip out, monkey-style?"
+      },
+      {
+        "num": 4,
+        "clue": "Podcast format"
+      },
+      {
+        "num": 6,
+        "clue": "College official"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a board game",
+  "publishedAt": "2026-10-17T20:11:25.688Z"
+}

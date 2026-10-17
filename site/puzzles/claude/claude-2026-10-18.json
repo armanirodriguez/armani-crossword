@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-18",
+  "date": "2026-10-18",
+  "series": "claude",
+  "title": "Board Meeting",
+  "author": "Claude",
+  "note": "Handy hint: look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......##...#...",
+    "......#........",
+    "......#........",
+    "...#....#...###",
+    ".....#.....#...",
+    "##...#...#.....",
+    "......#...#....",
+    "....#.....#....",
+    "....#...#......",
+    ".....#...#...##",
+    "...#.....#.....",
+    "###...#....#...",
+    "........#......",
+    "........#......",
+    "...#...##......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:lrB3UlRWhfaOgu6X10GPHWbbWqWRE3ZJyIN0mM1+Sp6QfeMzrtvDtu9Al2EFr02urUWvTva0RgIwIZ4RrP1+Au6N6pYwjw1WvAJ3XBkzPo/Uelo0NsbBmS3r/1H9iJ4dqvieFLrUjCqRUnHkKJzhUaB4SslyKX7TX8o/fShbF7HI5rSSKdIet/cVlAqLmPqu9f+j9N/NsYpPRKIedY6hc1ziReS5se+lGZv87uMB1kT3wGrDqguXhvq2fB8ms39/0O6I53iruzyYFZUJc2E50EMec/IeEOobi962dh2HXxhi",
+  "checksum": "45b898a2",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Hobbes's best friend"
+      },
+      {
+        "num": 7,
+        "clue": "Edge of a glass"
+      },
+      {
+        "num": 10,
+        "clue": "\"The Sopranos\" network"
+      },
+      {
+        "num": 13,
+        "clue": "Grande of pop"
+      },
+      {
+        "num": 14,
+        "clue": "Madonna's kind of girl"
+      },
+      {
+        "num": 16,
+        "clue": "Raised, or swiped"
+      },
+      {
+        "num": 17,
+        "clue": "Was at the controls"
+      },
+      {
+        "num": 18,
+        "clue": "Spike who directed \"Do the Right Thing\""
+      },
+      {
+        "num": 19,
+        "clue": "Picnic spoiler"
+      },
+      {
+        "num": 21,
+        "clue": "Max's opposite"
+      },
+      {
+        "num": 22,
+        "clue": "Balance sheet plus"
+      },
+      {
+        "num": 24,
+        "clue": "Celebrity ribbing event"
+      },
+      {
+        "num": 26,
+        "clue": "Placeholder on a schedule, for short"
+      },
+      {
+        "num": 29,
+        "clue": "Boxer known as \"The Greatest\""
+      },
+      {
+        "num": 30,
+        "clue": "Sunscreen rating, briefly"
+      },
+      {
+        "num": 31,
+        "clue": "Play casually, as a guitar"
+      },
+      {
+        "num": 33,
+        "clue": "Pricey roe"
+      },
+      {
+        "num": 36,
+        "clue": "Tolkien brute"
+      },
+      {
+        "num": 38,
+        "clue": "Tiny bit"
+      },
+      {
+        "num": 39,
+        "clue": "Leave out"
+      },
+      {
+        "num": 40,
+        "clue": "Dome home that might melt?"
+      },
+      {
+        "num": 42,
+        "clue": "Bonkers"
+      },
+      {
+        "num": 43,
+        "clue": "Cloud number?"
+      },
+      {
+        "num": 44,
+        "clue": "Settle up"
+      },
+      {
+        "num": 45,
+        "clue": "\"Survivor\" teams"
+      },
+      {
+        "num": 47,
+        "clue": "Emo emotion"
+      },
+      {
+        "num": 49,
+        "clue": "Run-___ (hip-hop trio)"
+      },
+      {
+        "num": 51,
+        "clue": "Slippery swimmer"
+      },
+      {
+        "num": 52,
+        "clue": "Rejections"
+      },
+      {
+        "num": 53,
+        "clue": "Teller of \"The Tortoise and the Hare\""
+      },
+      {
+        "num": 55,
+        "clue": "Peak of a wave"
+      },
+      {
+        "num": 58,
+        "clue": "Carpool ride, often"
+      },
+      {
+        "num": 59,
+        "clue": "Ace, as an audition"
+      },
+      {
+        "num": 61,
+        "clue": "Plant, as seeds"
+      },
+      {
+        "num": 62,
+        "clue": "Y-coordinate, in math"
+      },
+      {
+        "num": 66,
+        "clue": "Easy as pie"
+      },
+      {
+        "num": 68,
+        "clue": "Occasion for a back-to-school photo"
+      },
+      {
+        "num": 69,
+        "clue": "Head over heels"
+      },
+      {
+        "num": 70,
+        "clue": "Nemesis"
+      },
+      {
+        "num": 71,
+        "clue": "Mo. after Aug."
+      },
+      {
+        "num": 72,
+        "clue": "Put through its paces"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Elegant lily"
+      },
+      {
+        "num": 2,
+        "clue": "Ram of the zodiac"
+      },
+      {
+        "num": 3,
+        "clue": "Nest egg built over a career"
+      },
+      {
+        "num": 4,
+        "clue": "Big tub"
+      },
+      {
+        "num": 5,
+        "clue": "Newton's tendency to stay put"
+      },
+      {
+        "num": 6,
+        "clue": "Zilch"
+      },
+      {
+        "num": 7,
+        "clue": "Kendrick Lamar's genre"
+      },
+      {
+        "num": 8,
+        "clue": "Grocery list entries"
+      },
+      {
+        "num": 9,
+        "clue": "Earns"
+      },
+      {
+        "num": 10,
+        "clue": "Chart-topper"
+      },
+      {
+        "num": 11,
+        "clue": "Sweetie, in modern slang"
+      },
+      {
+        "num": 12,
+        "clue": "Past its prime"
+      },
+      {
+        "num": 14,
+        "clue": "Cash that won't buy you lunch"
+      },
+      {
+        "num": 15,
+        "clue": "Competed for office"
+      },
+      {
+        "num": 20,
+        "clue": "April 15 org."
+      },
+      {
+        "num": 23,
+        "clue": "Upper crust"
+      },
+      {
+        "num": 25,
+        "clue": "Hairstyle shaped with a pick"
+      },
+      {
+        "num": 26,
+        "clue": "Hot zone"
+      },
+      {
+        "num": 27,
+        "clue": "Flat-topped hill"
+      },
+      {
+        "num": 28,
+        "clue": "Pile up"
+      },
+      {
+        "num": 32,
+        "clue": "More minute"
+      },
+      {
+        "num": 33,
+        "clue": "O'Brien of late night"
+      },
+      {
+        "num": 34,
+        "clue": "___ acid"
+      },
+      {
+        "num": 35,
+        "clue": "Tear"
+      },
+      {
+        "num": 37,
+        "clue": "Camp bed"
+      },
+      {
+        "num": 41,
+        "clue": "Wanders (about)"
+      },
+      {
+        "num": 46,
+        "clue": "Tilt one's seat"
+      },
+      {
+        "num": 48,
+        "clue": "Trash talk"
+      },
+      {
+        "num": 50,
+        "clue": "Tax pro, for short"
+      },
+      {
+        "num": 54,
+        "clue": "Dodge"
+      },
+      {
+        "num": 56,
+        "clue": "Crack, as a case"
+      },
+      {
+        "num": 57,
+        "clue": "Fabric for a professor's jacket"
+      },
+      {
+        "num": 58,
+        "clue": "Bro's sibling"
+      },
+      {
+        "num": 60,
+        "clue": "\"___ just me?\""
+      },
+      {
+        "num": 62,
+        "clue": "Not on"
+      },
+      {
+        "num": 63,
+        "clue": "Copacabana's city"
+      },
+      {
+        "num": 64,
+        "clue": "Dr. ___ (Beats co-founder)"
+      },
+      {
+        "num": 65,
+        "clue": "Faucet"
+      },
+      {
+        "num": 67,
+        "clue": "U.S. soccer league, for short"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a board game",
+  "publishedAt": "2026-10-17T20:11:32.043Z"
+}
