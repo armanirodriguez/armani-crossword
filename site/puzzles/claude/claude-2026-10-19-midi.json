@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-19-midi",
+  "date": "2026-10-19",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Top It Off",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:yei6nPGZ93adjmUtGfSRbXUCryUIyeAvAtK4fLqKCqi4K88e7+2w34rZrjRAObIRCG10m3p2J+GBYGl1axRIHc7Xcfe4/EdqLScmK/krVao8",
+  "checksum": "a2e67c2b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Big birds from Australia"
+      },
+      {
+        "num": 5,
+        "clue": "Flair"
+      },
+      {
+        "num": 9,
+        "clue": "Smush, as potatoes"
+      },
+      {
+        "num": 10,
+        "clue": "String tie worn in the West"
+      },
+      {
+        "num": 11,
+        "clue": "Sliced fungi on a pizza"
+      },
+      {
+        "num": 13,
+        "clue": "What we breathe"
+      },
+      {
+        "num": 14,
+        "clue": "Restless and fidgety"
+      },
+      {
+        "num": 15,
+        "clue": "Like a home project done yourself, for short"
+      },
+      {
+        "num": 16,
+        "clue": "Sneakers and loafers"
+      },
+      {
+        "num": 19,
+        "clue": "Cut, as the lawn"
+      },
+      {
+        "num": 22,
+        "clue": "Spicy salami rounds on a pie"
+      },
+      {
+        "num": 24,
+        "clue": "Cookie with a creme filling"
+      },
+      {
+        "num": 25,
+        "clue": "Monsters in \"The Lord of the Rings\""
+      },
+      {
+        "num": 26,
+        "clue": "Campsite shelter"
+      },
+      {
+        "num": 27,
+        "clue": "Cry"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Actress Stone or Watson"
+      },
+      {
+        "num": 2,
+        "clue": "Hawaiian island"
+      },
+      {
+        "num": 3,
+        "clue": "Former nation with Moscow as its capital: Abbr."
+      },
+      {
+        "num": 4,
+        "clue": "\"Quiet!\""
+      },
+      {
+        "num": 5,
+        "clue": "Very dark wood"
+      },
+      {
+        "num": 6,
+        "clue": "Pirate's treasure"
+      },
+      {
+        "num": 7,
+        "clue": "Charity for the poor"
+      },
+      {
+        "num": 8,
+        "clue": "Prying"
+      },
+      {
+        "num": 12,
+        "clue": "Increase in pay"
+      },
+      {
+        "num": 15,
+        "clue": "Train station"
+      },
+      {
+        "num": 16,
+        "clue": "Dalmatian marking"
+      },
+      {
+        "num": 17,
+        "clue": "\"Present!\""
+      },
+      {
+        "num": 18,
+        "clue": "Not closed"
+      },
+      {
+        "num": 19,
+        "clue": "Extra"
+      },
+      {
+        "num": 20,
+        "clue": "One time"
+      },
+      {
+        "num": 21,
+        "clue": "Thin strand of hair or smoke"
+      },
+      {
+        "num": 23,
+        "clue": "Line of seats"
+      }
+    ]
+  },
+  "theme": "Pizza toppings",
+  "publishedAt": "2026-10-18T20:07:27.518Z"
+}

@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-19-mini",
+  "date": "2026-10-19",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Pie Chart",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:KUBFgsmQlfVqX8z1u9LBbrpOMBC2Qnmt9A==",
+  "checksum": "8280e153",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Concern"
+      },
+      {
+        "num": 5,
+        "clue": "Amazon's voice assistant"
+      },
+      {
+        "num": 7,
+        "clue": "Herb on a margherita pizza"
+      },
+      {
+        "num": 8,
+        "clue": "Grin"
+      },
+      {
+        "num": 9,
+        "clue": "Dollar bills"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Taxis"
+      },
+      {
+        "num": 2,
+        "clue": "San Antonio mission"
+      },
+      {
+        "num": 3,
+        "clue": "Sticky tree sap"
+      },
+      {
+        "num": 4,
+        "clue": "Banish"
+      },
+      {
+        "num": 6,
+        "clue": "Pub brews"
+      }
+    ]
+  },
+  "theme": "Pizza toppings",
+  "publishedAt": "2026-10-18T20:07:27.383Z"
+}

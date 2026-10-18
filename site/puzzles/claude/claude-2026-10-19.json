@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-19",
+  "date": "2026-10-19",
+  "series": "claude",
+  "title": "Slice of Life",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......#....#...",
+    "......#....#...",
+    "...........#...",
+    "###....##......",
+    "....##....#....",
+    "...#.....##....",
+    "......#.....###",
+    "#.............#",
+    "###.....#......",
+    "....##.....#...",
+    "....#....##....",
+    "......##....###",
+    "...#...........",
+    "...#....#......",
+    "...#....#......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:T/bDLVbPJYd7OhUOZbXPPhCyohahzfIjedqA+bhU9e5kSqyCVlqhnFVQN6r8IgI7PwQUKK4evFpDVLlfXpxwqW/iQbWdVk8LCWCPIjxzV5ziTLMitGJRMZsaoP2uxO8PB3J4ZqvRwJHbV7g1P2GSgaahnl4bQXE87uXjsQsijm4IWmAYkHWv89nP+aG7lbfuGmqy5CaZSH9eEDtsl9CZf7vrwnkBfLWKgIulpG/z5K+T7BDaBzEQVHpbdkVo3sWkpD+TUVwXzQHdWDBmVidh1fpdJuiVxfqFEOBnoSwPcdx1",
+  "checksum": "76f085d0",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Lessened, as a storm"
+      },
+      {
+        "num": 7,
+        "clue": "Large stringed instrument that's plucked"
+      },
+      {
+        "num": 11,
+        "clue": "Santa's helper"
+      },
+      {
+        "num": 14,
+        "clue": "Close cousin of the chimpanzee"
+      },
+      {
+        "num": 15,
+        "clue": "October birthstone"
+      },
+      {
+        "num": 16,
+        "clue": "Sedan or coupe"
+      },
+      {
+        "num": 17,
+        "clue": "Order for a mozzarella lover"
+      },
+      {
+        "num": 19,
+        "clue": "Shade of color"
+      },
+      {
+        "num": 20,
+        "clue": "Small child"
+      },
+      {
+        "num": 21,
+        "clue": "Tiered tower in Asia"
+      },
+      {
+        "num": 23,
+        "clue": "Dogs and cats, often"
+      },
+      {
+        "num": 26,
+        "clue": "Knocks on a door"
+      },
+      {
+        "num": 29,
+        "clue": "Smell bad"
+      },
+      {
+        "num": 30,
+        "clue": "Stock market debut, for short"
+      },
+      {
+        "num": 31,
+        "clue": "Bathroom device that measures weight"
+      },
+      {
+        "num": 33,
+        "clue": "Swirl of water"
+      },
+      {
+        "num": 34,
+        "clue": "Little laugh"
+      },
+      {
+        "num": 36,
+        "clue": "Silly"
+      },
+      {
+        "num": 39,
+        "clue": "Round, ham-like topping on a Hawaiian pie"
+      },
+      {
+        "num": 43,
+        "clue": "Unlocks"
+      },
+      {
+        "num": 44,
+        "clue": "Wild mountain goats"
+      },
+      {
+        "num": 46,
+        "clue": "Dance for seniors"
+      },
+      {
+        "num": 49,
+        "clue": "Dimes are worth ten of them"
+      },
+      {
+        "num": 51,
+        "clue": "Period of history"
+      },
+      {
+        "num": 52,
+        "clue": "Top-notch"
+      },
+      {
+        "num": 53,
+        "clue": "First, second or third, on a diamond"
+      },
+      {
+        "num": 54,
+        "clue": "Winter flakes"
+      },
+      {
+        "num": 55,
+        "clue": "Capital of the Bahamas"
+      },
+      {
+        "num": 57,
+        "clue": "British fellow"
+      },
+      {
+        "num": 60,
+        "clue": "\"You ___ here\" (map label)"
+      },
+      {
+        "num": 61,
+        "clue": "Sliced dark fruit on a supreme pizza"
+      },
+      {
+        "num": 67,
+        "clue": "Came across"
+      },
+      {
+        "num": 68,
+        "clue": "Fashion magazine"
+      },
+      {
+        "num": 69,
+        "clue": "Well-mannered"
+      },
+      {
+        "num": 70,
+        "clue": "Commercials"
+      },
+      {
+        "num": 71,
+        "clue": "Spelling mistake"
+      },
+      {
+        "num": 72,
+        "clue": "Choose"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Honest ___ (Lincoln's nickname)"
+      },
+      {
+        "num": 2,
+        "clue": "Cardboard container"
+      },
+      {
+        "num": 3,
+        "clue": "Picnic pest"
+      },
+      {
+        "num": 4,
+        "clue": "Civil wrongs, in legal terms"
+      },
+      {
+        "num": 5,
+        "clue": "Online auction site"
+      },
+      {
+        "num": 6,
+        "clue": "Place to tie up a boat"
+      },
+      {
+        "num": 7,
+        "clue": "Garden tool"
+      },
+      {
+        "num": 8,
+        "clue": "Mimic"
+      },
+      {
+        "num": 9,
+        "clue": "Speaks hoarsely"
+      },
+      {
+        "num": 10,
+        "clue": "Urgent request"
+      },
+      {
+        "num": 11,
+        "clue": "Repeated, as a sound in a canyon"
+      },
+      {
+        "num": 12,
+        "clue": "Praised"
+      },
+      {
+        "num": 13,
+        "clue": "\"___ Friday\" (Lindsay Lohan film)"
+      },
+      {
+        "num": 18,
+        "clue": "Wife of Zeus"
+      },
+      {
+        "num": 22,
+        "clue": "Home of the Parthenon"
+      },
+      {
+        "num": 23,
+        "clue": "Oinker on a farm"
+      },
+      {
+        "num": 24,
+        "clue": "Long heroic poem"
+      },
+      {
+        "num": 25,
+        "clue": "Sheet-like garment of old Rome"
+      },
+      {
+        "num": 27,
+        "clue": "False names"
+      },
+      {
+        "num": 28,
+        "clue": "Ivy League school in Philadelphia"
+      },
+      {
+        "num": 31,
+        "clue": "Hit with an open hand"
+      },
+      {
+        "num": 32,
+        "clue": "Give up, as territory"
+      },
+      {
+        "num": 35,
+        "clue": "Lawn statues with pointy hats"
+      },
+      {
+        "num": 37,
+        "clue": "Somewhat"
+      },
+      {
+        "num": 38,
+        "clue": "Catches in the act"
+      },
+      {
+        "num": 40,
+        "clue": "Machu Picchu builder"
+      },
+      {
+        "num": 41,
+        "clue": "Animals in a yoke"
+      },
+      {
+        "num": 42,
+        "clue": "Emperor who supposedly fiddled"
+      },
+      {
+        "num": 45,
+        "clue": "Spotted"
+      },
+      {
+        "num": 46,
+        "clue": "Country with a famous canal"
+      },
+      {
+        "num": 47,
+        "clue": "Made like a lion"
+      },
+      {
+        "num": 48,
+        "clue": "Beginnings"
+      },
+      {
+        "num": 50,
+        "clue": "Body part between head and shoulders"
+      },
+      {
+        "num": 53,
+        "clue": "Playground tormentor"
+      },
+      {
+        "num": 54,
+        "clue": "Tip over, as milk"
+      },
+      {
+        "num": 56,
+        "clue": "Aid and ___"
+      },
+      {
+        "num": 58,
+        "clue": "Jumps on one foot"
+      },
+      {
+        "num": 59,
+        "clue": "Soothing plant gel"
+      },
+      {
+        "num": 62,
+        "clue": "Swiss peak"
+      },
+      {
+        "num": 63,
+        "clue": "Corporate boss, for short"
+      },
+      {
+        "num": 64,
+        "clue": "Compete"
+      },
+      {
+        "num": 65,
+        "clue": "And so on: Abbr."
+      },
+      {
+        "num": 66,
+        "clue": "Tennis match unit"
+      }
+    ]
+  },
+  "theme": "Pizza toppings",
+  "publishedAt": "2026-10-18T20:07:27.658Z"
+}
