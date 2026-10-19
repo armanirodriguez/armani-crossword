@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-20-mini",
+  "date": "2026-10-20",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Local Breed",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:srCizJl87BcQtwG0MB5E8meiyLbeZ0JF8w==",
+  "checksum": "9cecf304",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Country south of Libya"
+      },
+      {
+        "num": 5,
+        "clue": "Pale purple flower"
+      },
+      {
+        "num": 7,
+        "clue": "Japanese breed named for a prefecture"
+      },
+      {
+        "num": 8,
+        "clue": "At no time"
+      },
+      {
+        "num": 9,
+        "clue": "Cincinnati baseball team"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Extended family"
+      },
+      {
+        "num": 2,
+        "clue": "Trail walker"
+      },
+      {
+        "num": 3,
+        "clue": "Living"
+      },
+      {
+        "num": 4,
+        "clue": "Old-fashioned"
+      },
+      {
+        "num": 6,
+        "clue": "Sedans and coupes"
+      }
+    ]
+  },
+  "theme": "Dog breeds named after places",
+  "publishedAt": "2026-10-19T20:23:44.873Z"
+}

@@ -1,0 +1,368 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-20",
+  "date": "2026-10-20",
+  "series": "claude",
+  "title": "Bred Crumbs",
+  "author": "Claude",
+  "note": "Where in the world? Each long answer is a dog breed named for a place.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#...##.....#",
+    "........#.....#",
+    "........#......",
+    "###...#...#....",
+    "...#.......#...",
+    ".....#...#.....",
+    "....#...#....##",
+    "....#.....#....",
+    "##....#...#....",
+    ".....#...#.....",
+    "...#.......#...",
+    "....#...#...###",
+    "......#........",
+    "#.....#........",
+    "#.....##...#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:Z8NHEHygaYRt2U8W9dkNScqtYD5Q5J8T4JkczAAXoHVpn65EE9bPLBqijqw8J2mlLwM7Pz5tXAO4QgRL2YKSsXjoB7ApcQleao3gxHovs0ol0rO66FLfSbjfD5Tl7oBax8z3w29dPbZ549egLyaHwujnwRDUBYYNXyZIjLMNRTfv+XGfc2D17tul8byyUqtzi1wLe4fDg//kPMieZluUD1n6Zax0FOWgjdLMdmO+d9WIM6lDKUAFCyCY9oDMUWWFkYpyG3o2vG62Qr9JFIwRgaEFGSh1Xb7a2iAjaFhziytK",
+  "checksum": "0d1eaec0",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Angsty rock genre"
+      },
+      {
+        "num": 4,
+        "clue": "Colonel Sanders's chain, for short"
+      },
+      {
+        "num": 7,
+        "clue": "Eighteen-wheelers"
+      },
+      {
+        "num": 12,
+        "clue": "Like the Arial typeface"
+      },
+      {
+        "num": 15,
+        "clue": "Separated"
+      },
+      {
+        "num": 16,
+        "clue": "Honey-loving resident of the Hundred Acre Wood"
+      },
+      {
+        "num": 17,
+        "clue": "Spa treatment with a mask"
+      },
+      {
+        "num": 19,
+        "clue": "\"Hooray!\""
+      },
+      {
+        "num": 20,
+        "clue": "Female sheep"
+      },
+      {
+        "num": 22,
+        "clue": "___ noche (tonight, in Spanish)"
+      },
+      {
+        "num": 23,
+        "clue": "Miami's state: Abbr."
+      },
+      {
+        "num": 26,
+        "clue": "Signs carried in parades"
+      },
+      {
+        "num": 29,
+        "clue": "Attila, for one"
+      },
+      {
+        "num": 30,
+        "clue": "Industrial-chic living spaces"
+      },
+      {
+        "num": 32,
+        "clue": "Unreturnable tennis serve"
+      },
+      {
+        "num": 33,
+        "clue": "Lessened, as pain"
+      },
+      {
+        "num": 35,
+        "clue": "Frozen waffle brand"
+      },
+      {
+        "num": 36,
+        "clue": "Fireplace residue"
+      },
+      {
+        "num": 37,
+        "clue": "Container for cut flowers"
+      },
+      {
+        "num": 38,
+        "clue": "Capital of Qatar"
+      },
+      {
+        "num": 39,
+        "clue": "Synagogue leader"
+      },
+      {
+        "num": 41,
+        "clue": "Red octagon's word"
+      },
+      {
+        "num": 44,
+        "clue": "Helper: Abbr."
+      },
+      {
+        "num": 46,
+        "clue": "Big coffee dispenser"
+      },
+      {
+        "num": 47,
+        "clue": "To be, in Paris"
+      },
+      {
+        "num": 48,
+        "clue": "\"Inferno\" poet"
+      },
+      {
+        "num": 50,
+        "clue": "Boxer Muhammad"
+      },
+      {
+        "num": 51,
+        "clue": "Pittsburgh product, famously"
+      },
+      {
+        "num": 52,
+        "clue": "\"Oh!\" in Berlin"
+      },
+      {
+        "num": 53,
+        "clue": "Like the Burj Khalifa among skyscrapers"
+      },
+      {
+        "num": 56,
+        "clue": "Spoil, as fruit"
+      },
+      {
+        "num": 57,
+        "clue": "New Mexico town near a famous pueblo"
+      },
+      {
+        "num": 59,
+        "clue": "Feeling blue"
+      },
+      {
+        "num": 60,
+        "clue": "Embrace"
+      },
+      {
+        "num": 62,
+        "clue": "Sharpness, as of vision"
+      },
+      {
+        "num": 64,
+        "clue": "\"The Mikado,\" for one"
+      },
+      {
+        "num": 69,
+        "clue": "Like a non-major record label"
+      },
+      {
+        "num": 70,
+        "clue": "Thin gilding material"
+      },
+      {
+        "num": 71,
+        "clue": "Skilled"
+      },
+      {
+        "num": 72,
+        "clue": "Tissue layer"
+      },
+      {
+        "num": 73,
+        "clue": "Picnic pest"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Sixth sense, for short"
+      },
+      {
+        "num": 2,
+        "clue": "___ suit (high-collared outfit)"
+      },
+      {
+        "num": 3,
+        "clue": "Yoko of music"
+      },
+      {
+        "num": 4,
+        "clue": "Skewered meat dishes"
+      },
+      {
+        "num": 5,
+        "clue": "Norse goddess of love"
+      },
+      {
+        "num": 6,
+        "clue": "Langley spy org."
+      },
+      {
+        "num": 7,
+        "clue": "Less risky"
+      },
+      {
+        "num": 8,
+        "clue": "Pollution-fighting federal org."
+      },
+      {
+        "num": 9,
+        "clue": "Nutmeg-related spice"
+      },
+      {
+        "num": 10,
+        "clue": "Rust-red gun dog from the Emerald Isle"
+      },
+      {
+        "num": 11,
+        "clue": "Sculpted figure"
+      },
+      {
+        "num": 13,
+        "clue": "Bashful"
+      },
+      {
+        "num": 14,
+        "clue": "Bat-eared breed with a Gallic name"
+      },
+      {
+        "num": 18,
+        "clue": "Touch down"
+      },
+      {
+        "num": 21,
+        "clue": "Small, to a Scot"
+      },
+      {
+        "num": 23,
+        "clue": "Ran away"
+      },
+      {
+        "num": 24,
+        "clue": "Nike swoosh, e.g."
+      },
+      {
+        "num": 25,
+        "clue": "Silky-coated sighthound named for Kabul's country"
+      },
+      {
+        "num": 27,
+        "clue": "Apollo program org."
+      },
+      {
+        "num": 28,
+        "clue": "The Caribbean, e.g."
+      },
+      {
+        "num": 31,
+        "clue": "Raise a glass to"
+      },
+      {
+        "num": 34,
+        "clue": "Valuable resource"
+      },
+      {
+        "num": 36,
+        "clue": "Gallery display"
+      },
+      {
+        "num": 37,
+        "clue": "Rouge or blanc, in Lyon"
+      },
+      {
+        "num": 40,
+        "clue": "Soft cheese often baked in pastry"
+      },
+      {
+        "num": 42,
+        "clue": "Black-and-white sandwich cookie"
+      },
+      {
+        "num": 43,
+        "clue": "Pummel, as with snowballs"
+      },
+      {
+        "num": 45,
+        "clue": "\"Ready, ___, go!\""
+      },
+      {
+        "num": 48,
+        "clue": "Facts and figures"
+      },
+      {
+        "num": 49,
+        "clue": "Thorny tree of the savanna"
+      },
+      {
+        "num": 50,
+        "clue": "Pie ___ mode"
+      },
+      {
+        "num": 51,
+        "clue": "Solidly built"
+      },
+      {
+        "num": 54,
+        "clue": "So far"
+      },
+      {
+        "num": 55,
+        "clue": "Beachcomber's find"
+      },
+      {
+        "num": 58,
+        "clue": "Coleslaw or fries, e.g."
+      },
+      {
+        "num": 61,
+        "clue": "Hair goo"
+      },
+      {
+        "num": 63,
+        "clue": "Gratuity"
+      },
+      {
+        "num": 65,
+        "clue": "Soda, in the Midwest"
+      },
+      {
+        "num": 66,
+        "clue": "Earl Grey, e.g."
+      },
+      {
+        "num": 67,
+        "clue": "Khaki shade"
+      },
+      {
+        "num": 68,
+        "clue": "Toward the stern"
+      }
+    ]
+  },
+  "theme": "Dog breeds named after places",
+  "publishedAt": "2026-10-19T20:23:45.205Z"
+}

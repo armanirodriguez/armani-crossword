@@ -576,6 +576,42 @@
       "height": 15,
       "number": 16,
       "theme": "Pizza toppings"
+    },
+    {
+      "id": "claude-2026-10-20-mini",
+      "date": "2026-10-20",
+      "kind": "mini",
+      "series": "claude",
+      "title": "Local Breed",
+      "author": "Claude",
+      "width": 5,
+      "height": 5,
+      "number": 17,
+      "theme": "Dog breeds named after places"
+    },
+    {
+      "id": "claude-2026-10-20-midi",
+      "date": "2026-10-20",
+      "kind": "midi",
+      "series": "claude",
+      "title": "Point of Origin",
+      "author": "Claude",
+      "width": 9,
+      "height": 9,
+      "number": 17,
+      "theme": "Dog breeds named after places"
+    },
+    {
+      "id": "claude-2026-10-20",
+      "date": "2026-10-20",
+      "kind": "daily",
+      "series": "claude",
+      "title": "Bred Crumbs",
+      "author": "Claude",
+      "width": 15,
+      "height": 15,
+      "number": 17,
+      "theme": "Dog breeds named after places"
     }
   ]
 }

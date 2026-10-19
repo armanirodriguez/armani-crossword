@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-20-midi",
+  "date": "2026-10-20",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Point of Origin",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...##....",
+    "...#.....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    ".....#...",
+    "....##..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:IXINbdKtyozkFRpDhHXM3LMcBY0RWsh6tTMTlJJYT8hmqQ0JLWwmYWPC6XiJvHQNj+vgHznYVf0CHLcKZMmkMDZsUq8h7apJ7Mi6Q8upQqnq",
+  "checksum": "590134c2",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Stew vessel"
+      },
+      {
+        "num": 4,
+        "clue": "Pageant contestant's ribbon"
+      },
+      {
+        "num": 8,
+        "clue": "Corn unit"
+      },
+      {
+        "num": 9,
+        "clue": "Specialized market"
+      },
+      {
+        "num": 10,
+        "clue": "Tiny pup that shares its name with a Mexican state"
+      },
+      {
+        "num": 12,
+        "clue": "Shrub with red autumn leaves"
+      },
+      {
+        "num": 13,
+        "clue": "Departure time guess: Abbr."
+      },
+      {
+        "num": 14,
+        "clue": "World Series org."
+      },
+      {
+        "num": 16,
+        "clue": "Taylor Swift's \"The ___s Tour\""
+      },
+      {
+        "num": 19,
+        "clue": "Brings home"
+      },
+      {
+        "num": 23,
+        "clue": "Spotted firehouse breed named for a region of Croatia"
+      },
+      {
+        "num": 25,
+        "clue": "Passion"
+      },
+      {
+        "num": 26,
+        "clue": "Report card stat, for short"
+      },
+      {
+        "num": 27,
+        "clue": "Honey wine"
+      },
+      {
+        "num": 28,
+        "clue": "Maple tree fluid"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Chest muscles, informally"
+      },
+      {
+        "num": 2,
+        "clue": "Honolulu's island"
+      },
+      {
+        "num": 3,
+        "clue": "Cut, as hedges"
+      },
+      {
+        "num": 4,
+        "clue": "\"Chandelier\" singer"
+      },
+      {
+        "num": 5,
+        "clue": "Dull pain"
+      },
+      {
+        "num": 6,
+        "clue": "Closed"
+      },
+      {
+        "num": 7,
+        "clue": "Leader"
+      },
+      {
+        "num": 9,
+        "clue": "___ family (parents and kids)"
+      },
+      {
+        "num": 11,
+        "clue": "Easter roast"
+      },
+      {
+        "num": 15,
+        "clue": "Halloween flier"
+      },
+      {
+        "num": 16,
+        "clue": "Red-waxed cheese"
+      },
+      {
+        "num": 17,
+        "clue": "Like a pink steak"
+      },
+      {
+        "num": 18,
+        "clue": "Alan of \"M*A*S*H\""
+      },
+      {
+        "num": 20,
+        "clue": "Big trucks"
+      },
+      {
+        "num": 21,
+        "clue": "California valley known for vineyards"
+      },
+      {
+        "num": 22,
+        "clue": "Click one's fingers"
+      },
+      {
+        "num": 24,
+        "clue": "'60s London style"
+      }
+    ]
+  },
+  "theme": "Dog breeds named after places",
+  "publishedAt": "2026-10-19T20:23:45.031Z"
+}
