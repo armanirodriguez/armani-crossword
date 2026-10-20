@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-21-mini",
+  "date": "2026-10-21",
+  "kind": "mini",
+  "series": "claude",
+  "title": "High Spirits",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:JM3vwRSC8IgZw6+BYXHNGAV0sL8blWRw8Q==",
+  "checksum": "0ebc1daf",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Clever life shortcut"
+      },
+      {
+        "num": 5,
+        "clue": "Like a diet with no dairy or meat"
+      },
+      {
+        "num": 6,
+        "clue": "Lift the spirits of (from Latin for \"raised\")"
+      },
+      {
+        "num": 7,
+        "clue": "Top-tier"
+      },
+      {
+        "num": 8,
+        "clue": "Small horse"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Adele hit with the line \"It's me\""
+      },
+      {
+        "num": 2,
+        "clue": "One more time"
+      },
+      {
+        "num": 3,
+        "clue": "Snarky and spiteful"
+      },
+      {
+        "num": 4,
+        "clue": "Leg joint"
+      },
+      {
+        "num": 5,
+        "clue": "No. 2 in D.C., informally"
+      }
+    ]
+  },
+  "theme": "Happy expressions that put you up high",
+  "publishedAt": "2026-10-20T20:09:04.042Z"
+}

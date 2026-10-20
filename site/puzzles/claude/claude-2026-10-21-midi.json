@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-21-midi",
+  "date": "2026-10-21",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Head in the Clouds",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:X4fym7+CO3cI0Pi+oZYJw0mt2AqunhgjVXnupBmcTh2bQWzZPgDqEUVSUyt0zF9eWceF31NjQxKcaLdXYIfiKs9vckPOuS2MdpdtjGQ3OkFN",
+  "checksum": "f8237404",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Places to get pampered"
+      },
+      {
+        "num": 5,
+        "clue": "Web page code"
+      },
+      {
+        "num": 9,
+        "clue": "Chat"
+      },
+      {
+        "num": 10,
+        "clue": "Opera solo"
+      },
+      {
+        "num": 11,
+        "clue": "Spirit-raising, as a story"
+      },
+      {
+        "num": 13,
+        "clue": "Vote against"
+      },
+      {
+        "num": 14,
+        "clue": "Protection, as in \"under the ___ of\""
+      },
+      {
+        "num": 15,
+        "clue": "April 15 org."
+      },
+      {
+        "num": 16,
+        "clue": "\"Rizz\" or \"bussin',\" e.g."
+      },
+      {
+        "num": 19,
+        "clue": "\"The Office\" network"
+      },
+      {
+        "num": 22,
+        "clue": "Feel so happy your feet barely touch the ground?"
+      },
+      {
+        "num": 24,
+        "clue": "Peak"
+      },
+      {
+        "num": 25,
+        "clue": "\"___ girl!\""
+      },
+      {
+        "num": 26,
+        "clue": "Necklace bit"
+      },
+      {
+        "num": 27,
+        "clue": "Sonnet or haiku"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Leave speechless"
+      },
+      {
+        "num": 2,
+        "clue": "Dad"
+      },
+      {
+        "num": 3,
+        "clue": "Friend in a fight"
+      },
+      {
+        "num": 4,
+        "clue": "Hit the slopes"
+      },
+      {
+        "num": 5,
+        "clue": "Can't stand"
+      },
+      {
+        "num": 6,
+        "clue": "Math class with sines, for short"
+      },
+      {
+        "num": 7,
+        "clue": "Short skirt style"
+      },
+      {
+        "num": 8,
+        "clue": "Falls behind"
+      },
+      {
+        "num": 12,
+        "clue": "Coen brothers film set partly in North Dakota"
+      },
+      {
+        "num": 15,
+        "clue": "Signed, as a contract"
+      },
+      {
+        "num": 16,
+        "clue": "Cotton-tipped stick"
+      },
+      {
+        "num": 17,
+        "clue": "Shoe tie"
+      },
+      {
+        "num": 18,
+        "clue": "___ mater"
+      },
+      {
+        "num": 19,
+        "clue": "Alliance since 1949"
+      },
+      {
+        "num": 20,
+        "clue": "Quick snack"
+      },
+      {
+        "num": 21,
+        "clue": "Study all night"
+      },
+      {
+        "num": 23,
+        "clue": "Afternoon snooze"
+      }
+    ]
+  },
+  "theme": "Happy expressions that put you up high",
+  "publishedAt": "2026-10-20T20:09:04.177Z"
+}

@@ -1,0 +1,368 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-21",
+  "date": "2026-10-21",
+  "series": "claude",
+  "title": "Sky-High Spirits",
+  "author": "Claude",
+  "note": "Lofty hint: where do the three longest answers put you?",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#.....#...",
+    ".....#.....#...",
+    "...........#...",
+    "...#.....##....",
+    "###....##.....#",
+    "......#.....###",
+    "....##.....#...",
+    "...............",
+    "...#.....##....",
+    "###.....#......",
+    "#.....##....###",
+    "....##.....#...",
+    "...#...........",
+    "...#.....#.....",
+    "...#.....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:sTSJegZuLLjzywPGtreJsyPp2iM+sZ2nugZoHiM1huFkSH477UFDU2QOHFdQXDmUyauAfzuXZevoNfpPoofLVrYTDHVOAmpRK5uoo/B+AGMvvk/M16pb4YFN1E7fD9t63DgNUOCCKv7kFPpwJL3TwP2xoVIwYUT+3PPdwyBAWWDp/z6P0MFvSuxEZdpldMh/hl4Zta5RnfLshwudYk98yfJzGgnKLMnnbNSfV3S+xJ2zqGu390EBrjFmlSF64QjLgtTwTN6jbj4f8LTPWelWGmVALsDPUVZQLP9dAIHWHnS3",
+  "checksum": "98a41890",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Racetrack shapes"
+      },
+      {
+        "num": 6,
+        "clue": "Pong pioneer"
+      },
+      {
+        "num": 11,
+        "clue": "Furry sitcom alien from Melmac"
+      },
+      {
+        "num": 14,
+        "clue": "Charlie Parker's jazz style"
+      },
+      {
+        "num": 15,
+        "clue": "Politely object"
+      },
+      {
+        "num": 16,
+        "clue": "Pool stick"
+      },
+      {
+        "num": 17,
+        "clue": "Blissfully happy, at a numbered altitude?"
+      },
+      {
+        "num": 19,
+        "clue": "Store posting: Abbr."
+      },
+      {
+        "num": 20,
+        "clue": "UFO crew, briefly"
+      },
+      {
+        "num": 21,
+        "clue": "What a hashtag may become"
+      },
+      {
+        "num": 22,
+        "clue": "Yard parts"
+      },
+      {
+        "num": 23,
+        "clue": "\"Please ___\" (phone request)"
+      },
+      {
+        "num": 24,
+        "clue": "Birthday mail"
+      },
+      {
+        "num": 26,
+        "clue": "Church instruments with pipes"
+      },
+      {
+        "num": 29,
+        "clue": "Partner of ivory, in a Paul McCartney duet"
+      },
+      {
+        "num": 31,
+        "clue": "Bargain"
+      },
+      {
+        "num": 32,
+        "clue": "Battery terminal"
+      },
+      {
+        "num": 33,
+        "clue": "Zip"
+      },
+      {
+        "num": 36,
+        "clue": "Feeling great, as from a summit?"
+      },
+      {
+        "num": 40,
+        "clue": "Sushi topping that pops"
+      },
+      {
+        "num": 41,
+        "clue": "Pinker in the middle, as a steak"
+      },
+      {
+        "num": 42,
+        "clue": "Pack animal that howls"
+      },
+      {
+        "num": 43,
+        "clue": "Engine"
+      },
+      {
+        "num": 44,
+        "clue": "Sight, smell and taste, among others"
+      },
+      {
+        "num": 46,
+        "clue": "Bus route points"
+      },
+      {
+        "num": 48,
+        "clue": "Slant"
+      },
+      {
+        "num": 49,
+        "clue": "Uncovered"
+      },
+      {
+        "num": 50,
+        "clue": "Calendar rows"
+      },
+      {
+        "num": 52,
+        "clue": "Like a date not yet set: Abbr."
+      },
+      {
+        "num": 55,
+        "clue": "Needle feature"
+      },
+      {
+        "num": 56,
+        "clue": "Thrilled, like a nursery-rhyme cow?"
+      },
+      {
+        "num": 59,
+        "clue": "Fort Meade intelligence org."
+      },
+      {
+        "num": 60,
+        "clue": "Tiny hairlike structures in the airway"
+      },
+      {
+        "num": 61,
+        "clue": "Sign in"
+      },
+      {
+        "num": 62,
+        "clue": "Toddler"
+      },
+      {
+        "num": 63,
+        "clue": "Fables, e.g."
+      },
+      {
+        "num": 64,
+        "clue": "Fern's reproductive cell"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Double-reed woodwind"
+      },
+      {
+        "num": 2,
+        "clue": "Let off steam"
+      },
+      {
+        "num": 3,
+        "clue": "Basics"
+      },
+      {
+        "num": 4,
+        "clue": "Texter's chuckle"
+      },
+      {
+        "num": 5,
+        "clue": "Exactly right"
+      },
+      {
+        "num": 6,
+        "clue": "Tacked on"
+      },
+      {
+        "num": 7,
+        "clue": "Nashville's state: Abbr."
+      },
+      {
+        "num": 8,
+        "clue": "Surrounded by"
+      },
+      {
+        "num": 9,
+        "clue": "Ladder in a stocking"
+      },
+      {
+        "num": 10,
+        "clue": "Wrath"
+      },
+      {
+        "num": 11,
+        "clue": "Felt sore"
+      },
+      {
+        "num": 12,
+        "clue": "Things anglers cast"
+      },
+      {
+        "num": 13,
+        "clue": "Oktoberfest, for one"
+      },
+      {
+        "num": 18,
+        "clue": "Web addresses, for short"
+      },
+      {
+        "num": 22,
+        "clue": "Small ___ (unimportant folks)"
+      },
+      {
+        "num": 23,
+        "clue": "Angel's ring"
+      },
+      {
+        "num": 24,
+        "clue": "Programmer's output"
+      },
+      {
+        "num": 25,
+        "clue": "Over again"
+      },
+      {
+        "num": 26,
+        "clue": "Whiff"
+      },
+      {
+        "num": 27,
+        "clue": "Nevada city on the Truckee River"
+      },
+      {
+        "num": 28,
+        "clue": "Airport waiting spot"
+      },
+      {
+        "num": 29,
+        "clue": "Keyboard key"
+      },
+      {
+        "num": 30,
+        "clue": "Danish physicist Niels"
+      },
+      {
+        "num": 32,
+        "clue": "Hairstyle with a pick"
+      },
+      {
+        "num": 33,
+        "clue": "Experts"
+      },
+      {
+        "num": 34,
+        "clue": "Fashion magazine"
+      },
+      {
+        "num": 35,
+        "clue": "Docs often emailed as attachments"
+      },
+      {
+        "num": 37,
+        "clue": "Stage item"
+      },
+      {
+        "num": 38,
+        "clue": "Granola grains"
+      },
+      {
+        "num": 39,
+        "clue": "Possesses"
+      },
+      {
+        "num": 43,
+        "clue": "One of the Three Stooges"
+      },
+      {
+        "num": 44,
+        "clue": "Follower of Guru Nanak"
+      },
+      {
+        "num": 45,
+        "clue": "Painters' stands"
+      },
+      {
+        "num": 46,
+        "clue": "Authority to approve"
+      },
+      {
+        "num": 47,
+        "clue": "Halloween handout"
+      },
+      {
+        "num": 48,
+        "clue": "Early test versions"
+      },
+      {
+        "num": 49,
+        "clue": "Not straight"
+      },
+      {
+        "num": 50,
+        "clue": "Wishing ___"
+      },
+      {
+        "num": 51,
+        "clue": "Lake bordering Ohio"
+      },
+      {
+        "num": 52,
+        "clue": "Takeout phrase"
+      },
+      {
+        "num": 53,
+        "clue": "Rude sort"
+      },
+      {
+        "num": 54,
+        "clue": "Green Gables girl"
+      },
+      {
+        "num": 56,
+        "clue": "Fall month: Abbr."
+      },
+      {
+        "num": 57,
+        "clue": "By way of"
+      },
+      {
+        "num": 58,
+        "clue": "Floor cleaner"
+      }
+    ]
+  },
+  "theme": "Happy expressions that put you up high",
+  "publishedAt": "2026-10-20T20:09:04.324Z"
+}
