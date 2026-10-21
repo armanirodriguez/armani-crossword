@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-22-mini",
+  "date": "2026-10-22",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Flying Start",
+  "author": "Claude",
+  "note": "A bird is perched at the start of the middle row.",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "##...",
+    ".....",
+    ".....",
+    ".....",
+    "...##"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:YDcwyKZa+0u5AQqy3dGMycobiFWE4lSkmg==",
+  "checksum": "86b65765",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Fruit in a Newton"
+      },
+      {
+        "num": 4,
+        "clue": "Ice house"
+      },
+      {
+        "num": 6,
+        "clue": "Three's one, so they say"
+      },
+      {
+        "num": 7,
+        "clue": "Vibes"
+      },
+      {
+        "num": 8,
+        "clue": "Hoops org."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Plant life"
+      },
+      {
+        "num": 2,
+        "clue": "Des Moines's state"
+      },
+      {
+        "num": 3,
+        "clue": "Zeus and Apollo"
+      },
+      {
+        "num": 4,
+        "clue": "\"Yes, ___!\""
+      },
+      {
+        "num": 5,
+        "clue": "Chow"
+      }
+    ]
+  },
+  "theme": "Words and phrases that begin with a bird",
+  "publishedAt": "2026-10-21T20:30:12.529Z"
+}

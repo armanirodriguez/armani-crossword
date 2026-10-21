@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-22",
+  "date": "2026-10-22",
+  "series": "claude",
+  "title": "Early Birds",
+  "author": "Claude",
+  "note": "Notice how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......##.......",
+    "......#........",
+    "......#........",
+    "...##...#...###",
+    "##...#.....#...",
+    "#....#...#.....",
+    "#.....#...#....",
+    "....#.....#....",
+    "....#...#.....#",
+    ".....#...#....#",
+    "...#.....#...##",
+    "###...#...##...",
+    "........#......",
+    "........#......",
+    ".......##......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:/TCf9CnZYQ1wMauBlODNq3WV3F0b7RVuGeeO/z8eks96vcf4ccdMfBXNU9Xv4kEKS7RWf41f64/JI0ON0duxGdOz4O2K4ylYdLlcOE8rnJS6hMC8Q3dENgevJ1T1WZsBe76Mm8Y9rnaJ1++05p3bYYQSyve0G8DeAR9PIYg9KbFMPyZ2KiLOS+q46n/+duE0cXQasemBUd5Jw0q8/OcvIfap/tsup2c+WBmUsUpvowbKhlIVpm6sVlnIHSPsjP6I/D029omXnRtYyzsVkZlI9bedX2vmAbHuRgYDRSeTtQ+r",
+  "checksum": "c3d5c6bf",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Carbs, fats and proteins, to a dieter"
+      },
+      {
+        "num": 7,
+        "clue": "Parade participant"
+      },
+      {
+        "num": 14,
+        "clue": "Green pet that may need a heat lamp"
+      },
+      {
+        "num": 15,
+        "clue": "Bleak and empty"
+      },
+      {
+        "num": 16,
+        "clue": "Tech or energy, to an economist"
+      },
+      {
+        "num": 17,
+        "clue": "Not cut out (for)"
+      },
+      {
+        "num": 18,
+        "clue": "Disapproving click"
+      },
+      {
+        "num": 19,
+        "clue": "Corp. cousin"
+      },
+      {
+        "num": 21,
+        "clue": "Sixth sense, briefly"
+      },
+      {
+        "num": 22,
+        "clue": "Something pulled in a shell?"
+      },
+      {
+        "num": 25,
+        "clue": "Rink rental"
+      },
+      {
+        "num": 27,
+        "clue": "Sunday seat"
+      },
+      {
+        "num": 30,
+        "clue": "Dorothy's little dog"
+      },
+      {
+        "num": 31,
+        "clue": "\"Much ___ About Nothing\""
+      },
+      {
+        "num": 32,
+        "clue": "Frodo's home, with \"the\""
+      },
+      {
+        "num": 34,
+        "clue": "Post-workout complaints"
+      },
+      {
+        "num": 36,
+        "clue": "Game with Skip and Reverse cards"
+      },
+      {
+        "num": 38,
+        "clue": "Shrek, for one"
+      },
+      {
+        "num": 39,
+        "clue": "It joins a pair of wheels"
+      },
+      {
+        "num": 40,
+        "clue": "Curved like a rainbow"
+      },
+      {
+        "num": 42,
+        "clue": "Drip from a faucet, say"
+      },
+      {
+        "num": 43,
+        "clue": "MGM mascot"
+      },
+      {
+        "num": 44,
+        "clue": "Stir-fry pan"
+      },
+      {
+        "num": 45,
+        "clue": "Matt of \"The Martian\""
+      },
+      {
+        "num": 47,
+        "clue": "Joe without the jolt?"
+      },
+      {
+        "num": 49,
+        "clue": "Back, timewise"
+      },
+      {
+        "num": 51,
+        "clue": "Clark of the Daily Planet"
+      },
+      {
+        "num": 52,
+        "clue": "Shrug in a text"
+      },
+      {
+        "num": 53,
+        "clue": "404, e.g."
+      },
+      {
+        "num": 55,
+        "clue": "Pokémon trainer Ketchum"
+      },
+      {
+        "num": 56,
+        "clue": "Boxer known as \"The Greatest\""
+      },
+      {
+        "num": 57,
+        "clue": "Sphere"
+      },
+      {
+        "num": 59,
+        "clue": "Approves"
+      },
+      {
+        "num": 62,
+        "clue": "Denies"
+      },
+      {
+        "num": 66,
+        "clue": "Folded brunch dish"
+      },
+      {
+        "num": 69,
+        "clue": "Push away"
+      },
+      {
+        "num": 70,
+        "clue": "Unruffled"
+      },
+      {
+        "num": 71,
+        "clue": "Many big rigs"
+      },
+      {
+        "num": 72,
+        "clue": "Tail"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Fine spray"
+      },
+      {
+        "num": 2,
+        "clue": "A really long time"
+      },
+      {
+        "num": 3,
+        "clue": "Wall timepiece with a pop-out caller"
+      },
+      {
+        "num": 4,
+        "clue": "Informant, slangily"
+      },
+      {
+        "num": 5,
+        "clue": "Yoko of art and music"
+      },
+      {
+        "num": 6,
+        "clue": "Draped garment from India"
+      },
+      {
+        "num": 7,
+        "clue": "Checkers pieces"
+      },
+      {
+        "num": 8,
+        "clue": "Plus"
+      },
+      {
+        "num": 9,
+        "clue": "Wakes"
+      },
+      {
+        "num": 10,
+        "clue": "Video snippet"
+      },
+      {
+        "num": 11,
+        "clue": "Fedora or beret"
+      },
+      {
+        "num": 12,
+        "clue": "Season in Paris"
+      },
+      {
+        "num": 13,
+        "clue": "Stop sign color"
+      },
+      {
+        "num": 15,
+        "clue": "Kids' circle pastime of tapping and chasing"
+      },
+      {
+        "num": 20,
+        "clue": "Fort Meade org."
+      },
+      {
+        "num": 23,
+        "clue": "Goddess of wisdom"
+      },
+      {
+        "num": 24,
+        "clue": "Fish eggs"
+      },
+      {
+        "num": 26,
+        "clue": "First-rate"
+      },
+      {
+        "num": 27,
+        "clue": "Typecast"
+      },
+      {
+        "num": 28,
+        "clue": "Stray"
+      },
+      {
+        "num": 29,
+        "clue": "Seven days"
+      },
+      {
+        "num": 30,
+        "clue": "Rolled down the runway"
+      },
+      {
+        "num": 33,
+        "clue": "Baker Street sleuth"
+      },
+      {
+        "num": 35,
+        "clue": "Proverb"
+      },
+      {
+        "num": 37,
+        "clue": "Peculiar"
+      },
+      {
+        "num": 39,
+        "clue": "German grocery chain"
+      },
+      {
+        "num": 41,
+        "clue": "Crowd noise after a touchdown"
+      },
+      {
+        "num": 46,
+        "clue": "Alias letters"
+      },
+      {
+        "num": 48,
+        "clue": "Catlike"
+      },
+      {
+        "num": 50,
+        "clue": "Bobby of the Bruins"
+      },
+      {
+        "num": 54,
+        "clue": "Competitor"
+      },
+      {
+        "num": 56,
+        "clue": "Greek god of war"
+      },
+      {
+        "num": 58,
+        "clue": "Head honcho"
+      },
+      {
+        "num": 60,
+        "clue": "Numbers draw at a casino"
+      },
+      {
+        "num": 61,
+        "clue": "Fret"
+      },
+      {
+        "num": 62,
+        "clue": "Pop"
+      },
+      {
+        "num": 63,
+        "clue": "Manning of the Giants"
+      },
+      {
+        "num": 64,
+        "clue": "Apple or pumpkin dessert"
+      },
+      {
+        "num": 65,
+        "clue": "Saucer riders, for short"
+      },
+      {
+        "num": 67,
+        "clue": "So-so"
+      },
+      {
+        "num": 68,
+        "clue": "Pitching stat, briefly"
+      }
+    ]
+  },
+  "theme": "Words and phrases that begin with a bird",
+  "publishedAt": "2026-10-21T20:30:12.785Z"
+}

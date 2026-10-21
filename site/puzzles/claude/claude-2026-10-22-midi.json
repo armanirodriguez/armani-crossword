@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-22-midi",
+  "date": "2026-10-22",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Birds of a Feather",
+  "author": "Claude",
+  "note": "Notice how the two longest answers begin.",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:QKIjiZ+rDxXUmiHiQwRQEniEEDIo+e3gipHmoqF9RXrYtC+Co8mztgIpfJLozCKkpRl2byrPwzjWISfFyPrjCRrqaN4/ADCqBJ/b226gPdN8",
+  "checksum": "707e61c1",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Stamp seller: Abbr."
+      },
+      {
+        "num": 5,
+        "clue": "Rowing team"
+      },
+      {
+        "num": 9,
+        "clue": "Soccer guard’s place"
+      },
+      {
+        "num": 10,
+        "clue": "Own"
+      },
+      {
+        "num": 11,
+        "clue": "Quick to spot a typo, say"
+      },
+      {
+        "num": 13,
+        "clue": "Private notes on Instagram, for short"
+      },
+      {
+        "num": 14,
+        "clue": "Tilts"
+      },
+      {
+        "num": 15,
+        "clue": "Antlered grazer"
+      },
+      {
+        "num": 16,
+        "clue": "Garlic segment"
+      },
+      {
+        "num": 19,
+        "clue": "G-men's org."
+      },
+      {
+        "num": 22,
+        "clue": "Archer who took from the rich"
+      },
+      {
+        "num": 24,
+        "clue": "One with a fan base"
+      },
+      {
+        "num": 25,
+        "clue": "Itch"
+      },
+      {
+        "num": 26,
+        "clue": "Spelling contests"
+      },
+      {
+        "num": 27,
+        "clue": "Untidy state"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Secondhand"
+      },
+      {
+        "num": 2,
+        "clue": "Phony"
+      },
+      {
+        "num": 3,
+        "clue": "Sty residents"
+      },
+      {
+        "num": 4,
+        "clue": "Late-night sketch show, initially"
+      },
+      {
+        "num": 5,
+        "clue": "Sass"
+      },
+      {
+        "num": 6,
+        "clue": "Disney heroine with a dragon friend named Sisu"
+      },
+      {
+        "num": 7,
+        "clue": "Like 2, 4 or 6"
+      },
+      {
+        "num": 8,
+        "clue": "Ties the knot"
+      },
+      {
+        "num": 12,
+        "clue": "DeGeneres of daytime TV"
+      },
+      {
+        "num": 15,
+        "clue": "The lesser of two ___"
+      },
+      {
+        "num": 16,
+        "clue": "Pad, slangily"
+      },
+      {
+        "num": 17,
+        "clue": "Mother ___"
+      },
+      {
+        "num": 18,
+        "clue": "Double-reed woodwind"
+      },
+      {
+        "num": 19,
+        "clue": "Golfer's warning"
+      },
+      {
+        "num": 20,
+        "clue": "Cranberry growers' wetlands"
+      },
+      {
+        "num": 21,
+        "clue": "March 15, notably"
+      },
+      {
+        "num": 23,
+        "clue": "Sing with closed lips"
+      }
+    ]
+  },
+  "theme": "Words and phrases that begin with a bird",
+  "publishedAt": "2026-10-21T20:30:12.652Z"
+}
