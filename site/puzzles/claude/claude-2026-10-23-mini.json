@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-23-mini",
+  "date": "2026-10-23",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Count Me In",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:o8k6nqolXsFa+lJkCvsxbzypcjlTMozuuQ==",
+  "checksum": "4eb9f994",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Captain who took two of everything"
+      },
+      {
+        "num": 5,
+        "clue": "Many a Diwali celebrant"
+      },
+      {
+        "num": 6,
+        "clue": "Time and again"
+      },
+      {
+        "num": 7,
+        "clue": "Celery unit"
+      },
+      {
+        "num": 8,
+        "clue": "Tap on a keyboard"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Pretty slick"
+      },
+      {
+        "num": 2,
+        "clue": "Available at the bar, as beer"
+      },
+      {
+        "num": 3,
+        "clue": "\"Hello\" singer"
+      },
+      {
+        "num": 4,
+        "clue": "Beefcake"
+      },
+      {
+        "num": 5,
+        "clue": "Party thrower"
+      }
+    ]
+  },
+  "theme": "Numbers hidden inside words and phrases",
+  "publishedAt": "2026-10-22T20:17:54.706Z"
+}

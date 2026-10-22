@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-23-midi",
+  "date": "2026-10-23",
+  "kind": "midi",
+  "series": "claude",
+  "title": "By the Numbers",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:4gJJLXIC+Sx6L6S9t38dZ211eVrAX15cmfeKyyX3ijkL1+4Rt27eEx058/b+3Ma90OxWZ4U649+ZAFRbpD16SZ5Mzm8ZTNMdcJXJqyJBk37S",
+  "checksum": "97029514",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Photo ruined by a shaky hand"
+      },
+      {
+        "num": 5,
+        "clue": "Cry of frustration"
+      },
+      {
+        "num": 9,
+        "clue": "It may be short or blown"
+      },
+      {
+        "num": 10,
+        "clue": "Dance with a swaying skirt"
+      },
+      {
+        "num": 11,
+        "clue": "Boat for boxes"
+      },
+      {
+        "num": 13,
+        "clue": "Twill used for suits"
+      },
+      {
+        "num": 14,
+        "clue": "Fall month: Abbr."
+      },
+      {
+        "num": 15,
+        "clue": "Bottom line, after expenses"
+      },
+      {
+        "num": 17,
+        "clue": "Founded: Abbr."
+      },
+      {
+        "num": 20,
+        "clue": "Authority to decide"
+      },
+      {
+        "num": 24,
+        "clue": "Hefty directory that once landed on every porch"
+      },
+      {
+        "num": 26,
+        "clue": "Home of Des Moines"
+      },
+      {
+        "num": 27,
+        "clue": "Like some exams that skip the pencils"
+      },
+      {
+        "num": 28,
+        "clue": "Pros' counterparts"
+      },
+      {
+        "num": 29,
+        "clue": "Gumbo pod"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Besties, in texts"
+      },
+      {
+        "num": 2,
+        "clue": "Tackle box item"
+      },
+      {
+        "num": 3,
+        "clue": "One logging in"
+      },
+      {
+        "num": 4,
+        "clue": "Time on the throne"
+      },
+      {
+        "num": 5,
+        "clue": "Sound in a hot tub"
+      },
+      {
+        "num": 6,
+        "clue": "Grooves one may get stuck in"
+      },
+      {
+        "num": 7,
+        "clue": "Delight"
+      },
+      {
+        "num": 8,
+        "clue": "Angel's instrument, in cartoons"
+      },
+      {
+        "num": 12,
+        "clue": "V formation flyers"
+      },
+      {
+        "num": 16,
+        "clue": "Off-limits"
+      },
+      {
+        "num": 17,
+        "clue": "Awesome, in slang"
+      },
+      {
+        "num": 18,
+        "clue": "\"Go on, get!\""
+      },
+      {
+        "num": 19,
+        "clue": "Burg"
+      },
+      {
+        "num": 21,
+        "clue": "Peppermint Pattie brand"
+      },
+      {
+        "num": 22,
+        "clue": "Climb sharply, as prices"
+      },
+      {
+        "num": 23,
+        "clue": "Tulsa's state: Abbr."
+      },
+      {
+        "num": 25,
+        "clue": "\"Illmatic\" rapper"
+      }
+    ]
+  },
+  "theme": "Numbers hidden inside words and phrases",
+  "publishedAt": "2026-10-22T20:17:54.849Z"
+}

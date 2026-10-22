@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-23",
+  "date": "2026-10-23",
+  "series": "claude",
+  "title": "Hidden Figures",
+  "author": "Claude",
+  "note": "Count carefully: the three longest answers each have a little something hidden.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#....##.....",
+    "...#.....#.....",
+    "...#...........",
+    "......##....###",
+    ".....#....#....",
+    "....#......#...",
+    "###.....##.....",
+    "#.............#",
+    ".....##.....###",
+    "...#......#....",
+    "....#....#.....",
+    "###....##......",
+    "...........#...",
+    ".....#.....#...",
+    ".....##....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:XdBdOPm9Xw97qgbubgNfj+dVbHxmTvWnw/ixUVOC/1k+pP/bBw9Mmqh/X1uzD6CwRJB/za8EGX62kqlMCXoBT6LN1HVOdqznEQsDb6xFsnKsoon8c4wskcaPB3OCVsp6jdGgph9H04QQiw5Ml4eNYy9/FseP6s4mppe5jxgudZ2oZ2oTS1TTbPpBYjveeMAkJVcd+FRZeWhcmfC3or/ETfDciT9mnXkaotzZIEA/zxRExlK4fxzcKHXHMxG5MTl26zQPVo1lwoIe6rCvcy4yvowaN7mi2VG8F5M/lDc2+a+a",
+  "checksum": "eb4da87f",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Saucer crew, for short"
+      },
+      {
+        "num": 4,
+        "clue": "Monty of game-show fame"
+      },
+      {
+        "num": 8,
+        "clue": "Like a committee formed for one job"
+      },
+      {
+        "num": 13,
+        "clue": "Early-morning lawn coating"
+      },
+      {
+        "num": 14,
+        "clue": "Figure with a famous belt"
+      },
+      {
+        "num": 16,
+        "clue": "Three, proverbially"
+      },
+      {
+        "num": 17,
+        "clue": "Diamonds, informally"
+      },
+      {
+        "num": 18,
+        "clue": "Pumps that barely lift you"
+      },
+      {
+        "num": 20,
+        "clue": "Like relations after a cold spell?"
+      },
+      {
+        "num": 22,
+        "clue": "Picks up the check"
+      },
+      {
+        "num": 23,
+        "clue": "Contest submission"
+      },
+      {
+        "num": 24,
+        "clue": "Phishing expedition, e.g."
+      },
+      {
+        "num": 26,
+        "clue": "\"Smooth Operator\" singer"
+      },
+      {
+        "num": 30,
+        "clue": "Pharmacist's measure"
+      },
+      {
+        "num": 31,
+        "clue": "Chipped in together"
+      },
+      {
+        "num": 33,
+        "clue": "Resolution time: Abbr."
+      },
+      {
+        "num": 34,
+        "clue": "Word often confused with \"there\""
+      },
+      {
+        "num": 36,
+        "clue": "Emmy or Grammy"
+      },
+      {
+        "num": 38,
+        "clue": "Place to accept a friend request"
+      },
+      {
+        "num": 42,
+        "clue": "Not quite on the level"
+      },
+      {
+        "num": 43,
+        "clue": "Product for a clogged sink"
+      },
+      {
+        "num": 44,
+        "clue": "Everybody, and then some"
+      },
+      {
+        "num": 45,
+        "clue": "Soak up, as a lesson"
+      },
+      {
+        "num": 48,
+        "clue": "Highland miss"
+      },
+      {
+        "num": 52,
+        "clue": "Gamer who's still learning the ropes"
+      },
+      {
+        "num": 54,
+        "clue": "Opposite of riches, in a story arc"
+      },
+      {
+        "num": 55,
+        "clue": "Put to rest, as fears"
+      },
+      {
+        "num": 56,
+        "clue": "Track component"
+      },
+      {
+        "num": 58,
+        "clue": "Safe haven granted abroad"
+      },
+      {
+        "num": 59,
+        "clue": "Fangs, more formally"
+      },
+      {
+        "num": 64,
+        "clue": "Crystal ball, e.g."
+      },
+      {
+        "num": 65,
+        "clue": "One who might take 10%"
+      },
+      {
+        "num": 66,
+        "clue": "Soothing rub"
+      },
+      {
+        "num": 67,
+        "clue": "Try to win over"
+      },
+      {
+        "num": 68,
+        "clue": "Changes addresses"
+      },
+      {
+        "num": 69,
+        "clue": "Bob who painted happy little trees"
+      },
+      {
+        "num": 70,
+        "clue": "\"Weekend Update\" home, for short"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Cut and pasted, say"
+      },
+      {
+        "num": 2,
+        "clue": "Rave genre"
+      },
+      {
+        "num": 3,
+        "clue": "Lazy-day pants"
+      },
+      {
+        "num": 4,
+        "clue": "Laid on a bit thick"
+      },
+      {
+        "num": 5,
+        "clue": "Like the Sahara"
+      },
+      {
+        "num": 6,
+        "clue": "Fun, in slang"
+      },
+      {
+        "num": 7,
+        "clue": "Auction unit"
+      },
+      {
+        "num": 8,
+        "clue": "Feeling the day after leg day"
+      },
+      {
+        "num": 9,
+        "clue": "Prom purchase"
+      },
+      {
+        "num": 10,
+        "clue": "Row-clearing tool"
+      },
+      {
+        "num": 11,
+        "clue": "Bird that asks \"Who?\""
+      },
+      {
+        "num": 12,
+        "clue": "Discs in old car stereos"
+      },
+      {
+        "num": 15,
+        "clue": "Land of Everest"
+      },
+      {
+        "num": 19,
+        "clue": "Something to drop at a party?"
+      },
+      {
+        "num": 21,
+        "clue": "Poor soul"
+      },
+      {
+        "num": 24,
+        "clue": "Potting mix"
+      },
+      {
+        "num": 25,
+        "clue": "Fair food on a stick"
+      },
+      {
+        "num": 27,
+        "clue": "Open a crack"
+      },
+      {
+        "num": 28,
+        "clue": "Like a theater on Monday nights"
+      },
+      {
+        "num": 29,
+        "clue": "Wrap-up"
+      },
+      {
+        "num": 31,
+        "clue": "Pod occupant"
+      },
+      {
+        "num": 32,
+        "clue": "Break of day"
+      },
+      {
+        "num": 35,
+        "clue": "\"Well, hello there!\""
+      },
+      {
+        "num": 37,
+        "clue": "Like a mammoth or a sheep"
+      },
+      {
+        "num": 38,
+        "clue": "Grain tower"
+      },
+      {
+        "num": 39,
+        "clue": "Capital where the Nobel Peace Prize is given"
+      },
+      {
+        "num": 40,
+        "clue": "Slips up"
+      },
+      {
+        "num": 41,
+        "clue": "Bar bill"
+      },
+      {
+        "num": 42,
+        "clue": "Ceiling spinner"
+      },
+      {
+        "num": 46,
+        "clue": "Wheel at a wine tasting"
+      },
+      {
+        "num": 47,
+        "clue": "Seasons, in a way"
+      },
+      {
+        "num": 49,
+        "clue": "Lets"
+      },
+      {
+        "num": 50,
+        "clue": "Middle-earth villain with a fiery eye"
+      },
+      {
+        "num": 51,
+        "clue": "Ampersand or asterisk"
+      },
+      {
+        "num": 53,
+        "clue": "Pickle juice"
+      },
+      {
+        "num": 55,
+        "clue": "Fire pit leftovers"
+      },
+      {
+        "num": 57,
+        "clue": "Picnic crashers"
+      },
+      {
+        "num": 58,
+        "clue": "Off-road rides: Abbr."
+      },
+      {
+        "num": 59,
+        "clue": "Dash ___"
+      },
+      {
+        "num": 60,
+        "clue": "Back then"
+      },
+      {
+        "num": 61,
+        "clue": "Reno's state: Abbr."
+      },
+      {
+        "num": 62,
+        "clue": "Cornstalk part"
+      },
+      {
+        "num": 63,
+        "clue": "\"Mr. Blue Sky\" band"
+      }
+    ]
+  },
+  "theme": "Numbers hidden inside words and phrases",
+  "publishedAt": "2026-10-22T20:17:58.884Z"
+}
