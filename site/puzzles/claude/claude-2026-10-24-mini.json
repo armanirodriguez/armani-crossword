@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-24-mini",
+  "date": "2026-10-24",
+  "kind": "mini",
+  "series": "claude",
+  "title": "How Low Can You Go?",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:Hi+9Gik6mm9vEpnnvOYeNJ9hhdueVGDMpw==",
+  "checksum": "019f4d76",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Leave speechless"
+      },
+      {
+        "num": 5,
+        "clue": "Look daggers"
+      },
+      {
+        "num": 6,
+        "clue": "Uncertain state ... or a dance done under a bar"
+      },
+      {
+        "num": 7,
+        "clue": "Moana's calling"
+      },
+      {
+        "num": 8,
+        "clue": "Capital where Einstein was a patent clerk"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Wayward drive"
+      },
+      {
+        "num": 2,
+        "clue": "Less wild"
+      },
+      {
+        "num": 3,
+        "clue": "Of the big city"
+      },
+      {
+        "num": 4,
+        "clue": "Glowing gas of the Vegas Strip"
+      },
+      {
+        "num": 5,
+        "clue": "Dollop"
+      }
+    ]
+  },
+  "theme": "Dances that do double duty",
+  "publishedAt": "2026-10-23T20:11:54.457Z"
+}

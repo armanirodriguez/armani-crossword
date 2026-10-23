@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-24-midi",
+  "date": "2026-10-24",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Two Left Feet",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:Td+YpX1zRtZf5xNsIDwJvLGIla/h5sPEzzUshOWSm7pBY0HTT+B9CWGnoSokrxiMRzUmnJuEzNKC/ojN0UMZE4WRGykJmwcVuLWxQcwRFfbP",
+  "checksum": "9182f735",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Wraps up"
+      },
+      {
+        "num": 5,
+        "clue": "Puts to work"
+      },
+      {
+        "num": 9,
+        "clue": "Café au ___"
+      },
+      {
+        "num": 10,
+        "clue": "Fish often served meunière"
+      },
+      {
+        "num": 11,
+        "clue": "School-zone slower-downer"
+      },
+      {
+        "num": 13,
+        "clue": "Diner"
+      },
+      {
+        "num": 14,
+        "clue": "Poker prize"
+      },
+      {
+        "num": 15,
+        "clue": "Trash-talk, as a film"
+      },
+      {
+        "num": 17,
+        "clue": "Super Bowl spots"
+      },
+      {
+        "num": 20,
+        "clue": "V formation flyers"
+      },
+      {
+        "num": 24,
+        "clue": "Sudden lurch from giddy to grumpy"
+      },
+      {
+        "num": 26,
+        "clue": "Collared shirt with a little logo, often"
+      },
+      {
+        "num": 27,
+        "clue": "Destiny's Child, for most of its run"
+      },
+      {
+        "num": 28,
+        "clue": "Haze over L.A."
+      },
+      {
+        "num": 29,
+        "clue": "Parts of a tennis match"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Otherwise"
+      },
+      {
+        "num": 2,
+        "clue": "Valley known for cabernet"
+      },
+      {
+        "num": 3,
+        "clue": "Keto or paleo"
+      },
+      {
+        "num": 4,
+        "clue": "Like San Francisco's Lombard Street"
+      },
+      {
+        "num": 5,
+        "clue": "Kind of port"
+      },
+      {
+        "num": 6,
+        "clue": "Course that might be split pea"
+      },
+      {
+        "num": 7,
+        "clue": "Red Muppet who refers to himself in the third person"
+      },
+      {
+        "num": 8,
+        "clue": "Fall mo."
+      },
+      {
+        "num": 12,
+        "clue": "Real bores"
+      },
+      {
+        "num": 16,
+        "clue": "Small amphibians"
+      },
+      {
+        "num": 17,
+        "clue": "Stage stacks"
+      },
+      {
+        "num": 18,
+        "clue": "Grim fate"
+      },
+      {
+        "num": 19,
+        "clue": "Han with a Wookiee co-pilot"
+      },
+      {
+        "num": 21,
+        "clue": "Dublin's land, to locals"
+      },
+      {
+        "num": 22,
+        "clue": "Huff"
+      },
+      {
+        "num": 23,
+        "clue": "They may need stroking"
+      },
+      {
+        "num": 25,
+        "clue": "Hot ___"
+      }
+    ]
+  },
+  "theme": "Dances that do double duty",
+  "publishedAt": "2026-10-23T20:11:54.562Z"
+}

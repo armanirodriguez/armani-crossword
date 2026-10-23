@@ -1,0 +1,336 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-24",
+  "date": "2026-10-24",
+  "series": "claude",
+  "title": "Dance Card",
+  "author": "Claude",
+  "note": "Step lively: the three longest answers all end on the dance floor.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "#.....#....#...",
+    "......#....#...",
+    "...........#...",
+    "....#.....#....",
+    ".....#...#.....",
+    "...#...#.......",
+    "###...#.......#",
+    "#.............#",
+    "#.......#...###",
+    ".......#...#...",
+    ".....#...#.....",
+    "....#.....#....",
+    "...#...........",
+    "...#....#......",
+    "...#....#.....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:wZ36tTFUi44p5E6IhwaGmHzXoCqrHQ/w/+c2ox5SJrU6vDk0MAAAXV0zPr+paiqk7G2FaXx8SvWyolmhsdS8daufM+lpklYSTfz/jAhjl6VzPrWn1zOdZDPhqaQeaaJyf7k86QEjylXq5Mwg2RlTjBdjVID0IIYFhjti8tZeUYLjBpWtTkJ8AW2M15CYH8YdJ8TKuR7PzFmm7GXCey3tC15oM/p1wQCpPFnzumol5mv09AaHlhwwrK9yozMjNv5dODUHPwGhjuZe4VxvAoQTE2bbxhi3MebY4Mxn8NH70Ug1",
+  "checksum": "e24a28fc",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Couch-surf for the night"
+      },
+      {
+        "num": 6,
+        "clue": "Thick hunk of marble"
+      },
+      {
+        "num": 10,
+        "clue": "The Tiffany Network"
+      },
+      {
+        "num": 13,
+        "clue": "Its flag features the Big Dipper"
+      },
+      {
+        "num": 14,
+        "clue": "Put up on Instagram"
+      },
+      {
+        "num": 15,
+        "clue": "Ga. neighbor"
+      },
+      {
+        "num": 16,
+        "clue": "Waxed string your hygienist begs you to use"
+      },
+      {
+        "num": 18,
+        "clue": "Put the kibosh on"
+      },
+      {
+        "num": 19,
+        "clue": "Sock's partner, e.g."
+      },
+      {
+        "num": 20,
+        "clue": "Thanksgiving spread"
+      },
+      {
+        "num": 21,
+        "clue": "They're often clicked"
+      },
+      {
+        "num": 22,
+        "clue": "Says with conviction"
+      },
+      {
+        "num": 24,
+        "clue": "Calm center of a storm"
+      },
+      {
+        "num": 25,
+        "clue": "Some slams"
+      },
+      {
+        "num": 26,
+        "clue": "Stark of Winterfell"
+      },
+      {
+        "num": 27,
+        "clue": "Bathroom scale units: Abbr."
+      },
+      {
+        "num": 29,
+        "clue": "Peak performance destination?"
+      },
+      {
+        "num": 31,
+        "clue": "Madre's sister"
+      },
+      {
+        "num": 32,
+        "clue": "Breathe life into"
+      },
+      {
+        "num": 33,
+        "clue": "Complimentary basket at many Tex-Mex spots"
+      },
+      {
+        "num": 36,
+        "clue": "With a smile"
+      },
+      {
+        "num": 37,
+        "clue": "Connections, so to speak"
+      },
+      {
+        "num": 38,
+        "clue": "Nag relentlessly"
+      },
+      {
+        "num": 39,
+        "clue": "British firm suffix: Abbr."
+      },
+      {
+        "num": 40,
+        "clue": "Knock on the door"
+      },
+      {
+        "num": 43,
+        "clue": "Something to take at a restaurant"
+      },
+      {
+        "num": 44,
+        "clue": "Fighter who vowed to 'sting like a bee'"
+      },
+      {
+        "num": 46,
+        "clue": "Peachy"
+      },
+      {
+        "num": 48,
+        "clue": "Lion's share"
+      },
+      {
+        "num": 49,
+        "clue": "Dolly, notably"
+      },
+      {
+        "num": 51,
+        "clue": "Home of the Munch Museum"
+      },
+      {
+        "num": 52,
+        "clue": "Squeeze (out)"
+      },
+      {
+        "num": 53,
+        "clue": "Orphan who famously asked for more"
+      },
+      {
+        "num": 55,
+        "clue": "Do-over on a serve"
+      },
+      {
+        "num": 56,
+        "clue": "Gulls' cry in 'Finding Nemo'"
+      },
+      {
+        "num": 57,
+        "clue": "Puts up with"
+      },
+      {
+        "num": 58,
+        "clue": "'Say ___ to the Dress'"
+      },
+      {
+        "num": 59,
+        "clue": "Has a turn"
+      },
+      {
+        "num": 60,
+        "clue": "Fitted item in a bedroom"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Cling or split, contradictorily"
+      },
+      {
+        "num": 2,
+        "clue": "Went off"
+      },
+      {
+        "num": 3,
+        "clue": "Fall bloomer"
+      },
+      {
+        "num": 4,
+        "clue": "Two-tone music genre"
+      },
+      {
+        "num": 5,
+        "clue": "Pint, to a quart"
+      },
+      {
+        "num": 6,
+        "clue": "Fan out, as fingers"
+      },
+      {
+        "num": 7,
+        "clue": "Something to tie up"
+      },
+      {
+        "num": 8,
+        "clue": "Exec's aide: Abbr."
+      },
+      {
+        "num": 9,
+        "clue": "K-pop septet with the hit 'Dynamite'"
+      },
+      {
+        "num": 10,
+        "clue": "Big kitchen remodeling expense"
+      },
+      {
+        "num": 11,
+        "clue": "Bulgaria's coast lies along it"
+      },
+      {
+        "num": 12,
+        "clue": "Least unhinged"
+      },
+      {
+        "num": 13,
+        "clue": "Don Draper, for one"
+      },
+      {
+        "num": 17,
+        "clue": "Some ATM annoyances"
+      },
+      {
+        "num": 21,
+        "clue": "Works on walls"
+      },
+      {
+        "num": 23,
+        "clue": "Cinderella left one behind"
+      },
+      {
+        "num": 25,
+        "clue": "Insists on"
+      },
+      {
+        "num": 28,
+        "clue": "Like pumpkin spice lattes, stereotypically"
+      },
+      {
+        "num": 30,
+        "clue": "Pay a call on"
+      },
+      {
+        "num": 31,
+        "clue": "Fur piece worn over the shoulders"
+      },
+      {
+        "num": 32,
+        "clue": "'___ questions?'"
+      },
+      {
+        "num": 33,
+        "clue": "Jeep model since the 1970s"
+      },
+      {
+        "num": 34,
+        "clue": "Landline parts you pick up"
+      },
+      {
+        "num": 35,
+        "clue": "Like many AA batteries"
+      },
+      {
+        "num": 38,
+        "clue": "Not much to look at"
+      },
+      {
+        "num": 39,
+        "clue": "Pickup ___"
+      },
+      {
+        "num": 40,
+        "clue": "Hang one's hat"
+      },
+      {
+        "num": 41,
+        "clue": "Good to go"
+      },
+      {
+        "num": 42,
+        "clue": "Things that may thicken"
+      },
+      {
+        "num": 45,
+        "clue": "Zeros on a court"
+      },
+      {
+        "num": 47,
+        "clue": "'___ zowie!'"
+      },
+      {
+        "num": 49,
+        "clue": "Award for a great commercial"
+      },
+      {
+        "num": 50,
+        "clue": "Taylor Swift's 'The ___ Tour'"
+      },
+      {
+        "num": 53,
+        "clue": "Texter's gasp"
+      },
+      {
+        "num": 54,
+        "clue": "Candid text opener"
+      }
+    ]
+  },
+  "theme": "Dances that do double duty",
+  "publishedAt": "2026-10-23T20:11:54.697Z"
+}
