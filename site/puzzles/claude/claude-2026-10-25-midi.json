@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-25-midi",
+  "date": "2026-10-25",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Closing Conditions",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:5dOVmJsmKFvyEWrIUr9Gc2Ng1rd8JriZsqVFAVuAK5XNv1RlUqTxBIrGpAFT3PCLfr34Z8W1qu+900zw0gl6pu9jwH0KPzNNy2DCGn+YprIs",
+  "checksum": "7e63a298",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Home, in Havana"
+      },
+      {
+        "num": 5,
+        "clue": "Coat of ___"
+      },
+      {
+        "num": 9,
+        "clue": "Horse breed prized for endurance"
+      },
+      {
+        "num": 10,
+        "clue": "Wiped out"
+      },
+      {
+        "num": 11,
+        "clue": "Cranberry-and-grapefruit cocktail"
+      },
+      {
+        "num": 13,
+        "clue": "Off-limits"
+      },
+      {
+        "num": 14,
+        "clue": "\"A ___ Good Men\""
+      },
+      {
+        "num": 15,
+        "clue": "Preschooler"
+      },
+      {
+        "num": 17,
+        "clue": "Pitcher's stat, for short"
+      },
+      {
+        "num": 20,
+        "clue": "Dr. who wrote about a Grinch"
+      },
+      {
+        "num": 24,
+        "clue": "Wish in a 1945 holiday song about frightful weather"
+      },
+      {
+        "num": 26,
+        "clue": "Lure"
+      },
+      {
+        "num": 27,
+        "clue": "Saxophonist Simpson"
+      },
+      {
+        "num": 28,
+        "clue": "Fine ___"
+      },
+      {
+        "num": 29,
+        "clue": "Tiny building block of matter"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Throw a line"
+      },
+      {
+        "num": 2,
+        "clue": "Length times width"
+      },
+      {
+        "num": 3,
+        "clue": "Swedish carmaker, once"
+      },
+      {
+        "num": 4,
+        "clue": "Monastery head"
+      },
+      {
+        "num": 5,
+        "clue": "Lincoln, informally"
+      },
+      {
+        "num": 6,
+        "clue": "Snorkeler's destination"
+      },
+      {
+        "num": 7,
+        "clue": "Corn ___ (fall attraction)"
+      },
+      {
+        "num": 8,
+        "clue": "Fret and fume"
+      },
+      {
+        "num": 12,
+        "clue": "Rule the ___"
+      },
+      {
+        "num": 16,
+        "clue": "Inventor Nikola"
+      },
+      {
+        "num": 17,
+        "clue": "Napoleon's exile isle"
+      },
+      {
+        "num": 18,
+        "clue": "Bring up, as kids"
+      },
+      {
+        "num": 19,
+        "clue": "Hard ___ (busy)"
+      },
+      {
+        "num": 21,
+        "clue": "Apartment, to a landlord"
+      },
+      {
+        "num": 22,
+        "clue": "Meh"
+      },
+      {
+        "num": 23,
+        "clue": "Paddled along"
+      },
+      {
+        "num": 25,
+        "clue": "\"___ a deal!\""
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in weather",
+  "publishedAt": "2026-10-24T20:08:33.688Z"
+}

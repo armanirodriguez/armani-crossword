@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-25",
+  "date": "2026-10-25",
+  "series": "claude",
+  "title": "Late Forecast",
+  "author": "Claude",
+  "note": "Check the forecast at the end of the three longest answers.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "...#...........",
+    "##.....#...#...",
+    "....#....#.....",
+    "....#...#...###",
+    "...............",
+    "###...#...#....",
+    ".....#....#....",
+    "...#...#.....##",
+    "...........#...",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:XWuq5ZWtVNW5c0DV8YBWJGox44ydcLKniAPLRoxLXz4rVPrpyfDdhzLrqIJ2XRSy8jXuU+H92hI6xSTNEgKGhX+ECTWAdsDf7E2u2AmS9s2Zzm6cd97jWCR4isXwvz+OOUaNYlgxt23RMOBN5QN6nnOMP0pPVlztGHeWOakdUxZ46++D554e28bE1D1QvgCbCpVzrh5KVG29G0K+E/vSxzy1PxaegDD3Drfae8e547WQqoyhQyE5XIzb01k2j42z39UH/InlZcyr04dnOYrPqUEhDrIzO1HcqC8DphnQI13d",
+  "checksum": "1f970195",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Bag handle, often"
+      },
+      {
+        "num": 6,
+        "clue": "Do laps"
+      },
+      {
+        "num": 10,
+        "clue": "Hold out"
+      },
+      {
+        "num": 14,
+        "clue": "Minotaur's island"
+      },
+      {
+        "num": 15,
+        "clue": "Spice made from nutmeg's covering"
+      },
+      {
+        "num": 16,
+        "clue": "\"That stings!\""
+      },
+      {
+        "num": 17,
+        "clue": "Senate staffers"
+      },
+      {
+        "num": 18,
+        "clue": "Done and dusted"
+      },
+      {
+        "num": 19,
+        "clue": "Mrs., in Munich"
+      },
+      {
+        "num": 20,
+        "clue": "Sushi topping, sometimes"
+      },
+      {
+        "num": 21,
+        "clue": "Captivate swiftly and completely"
+      },
+      {
+        "num": 24,
+        "clue": "Twenty, or a soundtrack"
+      },
+      {
+        "num": 26,
+        "clue": "Cheer at a bullring"
+      },
+      {
+        "num": 27,
+        "clue": "Single lift, at the gym"
+      },
+      {
+        "num": 28,
+        "clue": "Two of a kind, in poker"
+      },
+      {
+        "num": 30,
+        "clue": "Sweet-talk"
+      },
+      {
+        "num": 32,
+        "clue": "Something to keep off, per a sign?"
+      },
+      {
+        "num": 34,
+        "clue": "Competitive advantage"
+      },
+      {
+        "num": 35,
+        "clue": "Atlanta, for Delta"
+      },
+      {
+        "num": 36,
+        "clue": "Mon. follower"
+      },
+      {
+        "num": 37,
+        "clue": "1939 Best Picture set in Georgia"
+      },
+      {
+        "num": 43,
+        "clue": "Dr. behind Beats"
+      },
+      {
+        "num": 44,
+        "clue": "Bruins legend Bobby"
+      },
+      {
+        "num": 45,
+        "clue": "Persia, today"
+      },
+      {
+        "num": 46,
+        "clue": "Persian tongue"
+      },
+      {
+        "num": 49,
+        "clue": "Cookie in many a McFlurry"
+      },
+      {
+        "num": 50,
+        "clue": "Latvian capital"
+      },
+      {
+        "num": 51,
+        "clue": "Genre for My Chemical Romance"
+      },
+      {
+        "num": 52,
+        "clue": "Disappointed reaction, in a text"
+      },
+      {
+        "num": 54,
+        "clue": "Puts in up front, at the card table"
+      },
+      {
+        "num": 56,
+        "clue": "Neon-green soda with a Code Red variety"
+      },
+      {
+        "num": 59,
+        "clue": "\"Let me think ...\""
+      },
+      {
+        "num": 62,
+        "clue": "River through Florence"
+      },
+      {
+        "num": 63,
+        "clue": "Unflappable"
+      },
+      {
+        "num": 64,
+        "clue": "Monthly release, perhaps"
+      },
+      {
+        "num": 66,
+        "clue": "Young fellows, in Britain"
+      },
+      {
+        "num": 67,
+        "clue": "Can't stand"
+      },
+      {
+        "num": 68,
+        "clue": "Shot in the dark"
+      },
+      {
+        "num": 69,
+        "clue": "\"Or ___!\" (threat)"
+      },
+      {
+        "num": 70,
+        "clue": "Bills in a tip jar"
+      },
+      {
+        "num": 71,
+        "clue": "Box-office blockbuster"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Villain in \"The Lion King\""
+      },
+      {
+        "num": 2,
+        "clue": "Three-piece band"
+      },
+      {
+        "num": 3,
+        "clue": "Makeover for a logo"
+      },
+      {
+        "num": 4,
+        "clue": "Polished off"
+      },
+      {
+        "num": 5,
+        "clue": "Basil sauce from Genoa"
+      },
+      {
+        "num": 6,
+        "clue": "Drive from a hiding place"
+      },
+      {
+        "num": 7,
+        "clue": "Stadium crowd's ripple"
+      },
+      {
+        "num": 8,
+        "clue": "Old-fashioned fridge"
+      },
+      {
+        "num": 9,
+        "clue": "Streep of \"Mamma Mia!\""
+      },
+      {
+        "num": 10,
+        "clue": "Converted warehouse apartment"
+      },
+      {
+        "num": 11,
+        "clue": "Sleeping Beauty's name, in Disney's film"
+      },
+      {
+        "num": 12,
+        "clue": "Haunted houses deliver them"
+      },
+      {
+        "num": 13,
+        "clue": "Heavy thuds"
+      },
+      {
+        "num": 22,
+        "clue": "Riverdale redhead"
+      },
+      {
+        "num": 23,
+        "clue": "Smooth transition"
+      },
+      {
+        "num": 25,
+        "clue": "Statements of belief"
+      },
+      {
+        "num": 28,
+        "clue": "Square ___ in a round hole"
+      },
+      {
+        "num": 29,
+        "clue": "Fuss"
+      },
+      {
+        "num": 31,
+        "clue": "Find utterly repugnant"
+      },
+      {
+        "num": 33,
+        "clue": "Update a house's electrical system, say"
+      },
+      {
+        "num": 36,
+        "clue": "Iron one in Westeros"
+      },
+      {
+        "num": 38,
+        "clue": "Smartwatch spot"
+      },
+      {
+        "num": 39,
+        "clue": "Sewing machine pedals, once"
+      },
+      {
+        "num": 40,
+        "clue": "Water between Dublin and Liverpool"
+      },
+      {
+        "num": 41,
+        "clue": "Badger"
+      },
+      {
+        "num": 42,
+        "clue": "Double helix stuff"
+      },
+      {
+        "num": 46,
+        "clue": "Like a doe or a hen"
+      },
+      {
+        "num": 47,
+        "clue": "Without scruples"
+      },
+      {
+        "num": 48,
+        "clue": "Doctor's hospital visits"
+      },
+      {
+        "num": 49,
+        "clue": "Buckeye State native"
+      },
+      {
+        "num": 53,
+        "clue": "Swaggering, tough-guy"
+      },
+      {
+        "num": 55,
+        "clue": "Nest-building materials"
+      },
+      {
+        "num": 57,
+        "clue": "Follow your ___"
+      },
+      {
+        "num": 58,
+        "clue": "Thank-you ___"
+      },
+      {
+        "num": 60,
+        "clue": "Tousle"
+      },
+      {
+        "num": 61,
+        "clue": "Get along well"
+      },
+      {
+        "num": 65,
+        "clue": "Bottom line"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in weather",
+  "publishedAt": "2026-10-24T20:08:33.832Z"
+}

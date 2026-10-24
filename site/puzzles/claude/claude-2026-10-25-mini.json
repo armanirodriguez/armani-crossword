@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-25-mini",
+  "date": "2026-10-25",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Final Drops",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:9pM55zZNoC3d0kHKKRqffrLZMj6eWmHvJQ==",
+  "checksum": "cc5ce50b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Shirts and blouses"
+      },
+      {
+        "num": 5,
+        "clue": "Copying"
+      },
+      {
+        "num": 7,
+        "clue": "It may be picked or stormed"
+      },
+      {
+        "num": 8,
+        "clue": "Rudolph's boss"
+      },
+      {
+        "num": 9,
+        "clue": "Party thrower"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Browser lineup"
+      },
+      {
+        "num": 2,
+        "clue": "Talk show legend Winfrey"
+      },
+      {
+        "num": 3,
+        "clue": "Baby grand, e.g."
+      },
+      {
+        "num": 4,
+        "clue": "Fits of pique"
+      },
+      {
+        "num": 6,
+        "clue": "Tiny pest"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in weather",
+  "publishedAt": "2026-10-24T20:08:33.540Z"
+}
