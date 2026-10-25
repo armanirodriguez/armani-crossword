@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-26",
+  "date": "2026-10-26",
+  "series": "claude",
+  "title": "Trick or Sweet",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "#............##",
+    "......##.......",
+    "....#....#.....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    ".....#....#....",
+    ".......##......",
+    "##............#",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:vGCnwm+FuWm3oXymi9IgL4I1ai/AaP5q78FXNi3D4NAvfZ3sQZnIRR4qJ7yYZsM5Wlk7RLgut16P2++mMoN3Xzne1Bs935Dc8HMwqVDerTY7562rjZPtJIWXeXv3adCIBMAMMgPQS5rSfYc0aTWJJArko1NXSUjQRGvyAMuPUsiQuPoNLk5JHITnhFNlj8iE9+6KOsVVJZ/2f6ivLral2M3KwqyuEfI+eTFg46ii4ywoDXKWutZXe75OV6eWJGsoML0yvcBbPu7OTWg7nvnRvpBRJanXlHHY2mQbc2Yp3Di0",
+  "checksum": "6ead9b88",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Desk lights"
+      },
+      {
+        "num": 6,
+        "clue": "Long heroic poem"
+      },
+      {
+        "num": 10,
+        "clue": "Quick"
+      },
+      {
+        "num": 14,
+        "clue": "Love, in Italian"
+      },
+      {
+        "num": 15,
+        "clue": "Restaurant list of dishes"
+      },
+      {
+        "num": 16,
+        "clue": "Off-Broadway theater award"
+      },
+      {
+        "num": 17,
+        "clue": "Country on the Arabian Peninsula"
+      },
+      {
+        "num": 18,
+        "clue": "Exam"
+      },
+      {
+        "num": 19,
+        "clue": "Actor Reynolds or Gosling"
+      },
+      {
+        "num": 20,
+        "clue": "Peanut butter treat that E.T. famously loved"
+      },
+      {
+        "num": 23,
+        "clue": "First-place finisher"
+      },
+      {
+        "num": 24,
+        "clue": "Wear costumes for fun"
+      },
+      {
+        "num": 27,
+        "clue": "Play divisions"
+      },
+      {
+        "num": 28,
+        "clue": "Get up"
+      },
+      {
+        "num": 31,
+        "clue": "Strap for walking a pet"
+      },
+      {
+        "num": 32,
+        "clue": "Fuel at the pump"
+      },
+      {
+        "num": 33,
+        "clue": "Huff and puff"
+      },
+      {
+        "num": 34,
+        "clue": "Removed the skin from"
+      },
+      {
+        "num": 35,
+        "clue": "Tricolor Halloween confection shaped like a kernel"
+      },
+      {
+        "num": 37,
+        "clue": "Approach boldly and aggressively"
+      },
+      {
+        "num": 40,
+        "clue": "Easter flower"
+      },
+      {
+        "num": 41,
+        "clue": "Moral wrong"
+      },
+      {
+        "num": 44,
+        "clue": "Not tall"
+      },
+      {
+        "num": 45,
+        "clue": "Flippered animal at the zoo"
+      },
+      {
+        "num": 46,
+        "clue": "Choir voice below soprano"
+      },
+      {
+        "num": 47,
+        "clue": "Most caring"
+      },
+      {
+        "num": 49,
+        "clue": "High regard"
+      },
+      {
+        "num": 51,
+        "clue": "Hard sweet in flavors like Watermelon and Blue Raspberry"
+      },
+      {
+        "num": 54,
+        "clue": "Element in bright signs"
+      },
+      {
+        "num": 56,
+        "clue": "Apple desktop computer"
+      },
+      {
+        "num": 57,
+        "clue": "Return, as a loan"
+      },
+      {
+        "num": 59,
+        "clue": "Boo-boo"
+      },
+      {
+        "num": 60,
+        "clue": "Innings in a regulation baseball game"
+      },
+      {
+        "num": 61,
+        "clue": "Join forces"
+      },
+      {
+        "num": 62,
+        "clue": "Sell from a machine"
+      },
+      {
+        "num": 63,
+        "clue": "Receives"
+      },
+      {
+        "num": 64,
+        "clue": "Constant sources of misery"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Set down"
+      },
+      {
+        "num": 2,
+        "clue": "\"God Bless ___\""
+      },
+      {
+        "num": 3,
+        "clue": "Brief periods of time"
+      },
+      {
+        "num": 4,
+        "clue": "Primps in the mirror"
+      },
+      {
+        "num": 5,
+        "clue": "Sight or smell"
+      },
+      {
+        "num": 6,
+        "clue": "Paramedics' colleagues, briefly"
+      },
+      {
+        "num": 7,
+        "clue": "Chick's chirp"
+      },
+      {
+        "num": 8,
+        "clue": "Indoors"
+      },
+      {
+        "num": 9,
+        "clue": "More adorable"
+      },
+      {
+        "num": 10,
+        "clue": "Predicted"
+      },
+      {
+        "num": 11,
+        "clue": "Like the deepest parts of the ocean"
+      },
+      {
+        "num": 12,
+        "clue": "\"Chandelier\" singer"
+      },
+      {
+        "num": 13,
+        "clue": "Perfect score on many scales"
+      },
+      {
+        "num": 21,
+        "clue": "Straying from the proper course"
+      },
+      {
+        "num": 22,
+        "clue": "Crunchy green stalk"
+      },
+      {
+        "num": 23,
+        "clue": "Move like a happy dog's tail"
+      },
+      {
+        "num": 25,
+        "clue": "Employ"
+      },
+      {
+        "num": 26,
+        "clue": "Doctoral degree (abbr.)"
+      },
+      {
+        "num": 29,
+        "clue": "Neither Dem. nor Rep."
+      },
+      {
+        "num": 30,
+        "clue": "Flair for fashion"
+      },
+      {
+        "num": 33,
+        "clue": "Soft, pale color"
+      },
+      {
+        "num": 34,
+        "clue": "Powder carried by bees"
+      },
+      {
+        "num": 35,
+        "clue": "___ off (roped off)"
+      },
+      {
+        "num": 36,
+        "clue": "U.S. spy agency"
+      },
+      {
+        "num": 37,
+        "clue": "Pose a question"
+      },
+      {
+        "num": 38,
+        "clue": "Letter before psi"
+      },
+      {
+        "num": 39,
+        "clue": "Link together"
+      },
+      {
+        "num": 41,
+        "clue": "Stay in bed late"
+      },
+      {
+        "num": 42,
+        "clue": "Do again and again"
+      },
+      {
+        "num": 43,
+        "clue": "Online word for munching on something yummy"
+      },
+      {
+        "num": 45,
+        "clue": "Block, as progress"
+      },
+      {
+        "num": 46,
+        "clue": "Greek goddess of wisdom"
+      },
+      {
+        "num": 48,
+        "clue": "David's weapon against Goliath"
+      },
+      {
+        "num": 50,
+        "clue": "Clean with a brush"
+      },
+      {
+        "num": 52,
+        "clue": "Angry tirade"
+      },
+      {
+        "num": 53,
+        "clue": "Top cards in a deck"
+      },
+      {
+        "num": 54,
+        "clue": "Thanksgiving mo."
+      },
+      {
+        "num": 55,
+        "clue": "Female sheep"
+      },
+      {
+        "num": 58,
+        "clue": "Opposite of no"
+      }
+    ]
+  },
+  "theme": "Halloween candy favorites",
+  "publishedAt": "2026-10-25T20:14:32.090Z"
+}

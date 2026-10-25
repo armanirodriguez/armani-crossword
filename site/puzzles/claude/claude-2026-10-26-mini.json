@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-26-mini",
+  "date": "2026-10-26",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Sweet Tooth",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:GUeZUfA8Fp6baqSCgNNXx+xITQ64CuCyww==",
+  "checksum": "17348cd2",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Bills and coins"
+      },
+      {
+        "num": 5,
+        "clue": "Bean used to make chocolate"
+      },
+      {
+        "num": 6,
+        "clue": "In the midst of"
+      },
+      {
+        "num": 7,
+        "clue": "Tiny, crunchy candies sold in a box"
+      },
+      {
+        "num": 8,
+        "clue": "PlayStation maker"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Brief star appearance in a film"
+      },
+      {
+        "num": 2,
+        "clue": "Oak tree nut"
+      },
+      {
+        "num": 3,
+        "clue": "Like a beach"
+      },
+      {
+        "num": 4,
+        "clue": "Doesn't share"
+      },
+      {
+        "num": 5,
+        "clue": "Soda containers"
+      }
+    ]
+  },
+  "theme": "Halloween candy favorites",
+  "publishedAt": "2026-10-25T20:14:31.675Z"
+}

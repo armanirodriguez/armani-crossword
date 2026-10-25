@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-26-midi",
+  "date": "2026-10-26",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Fun Size",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...###...",
+    "....#....",
+    "....#....",
+    ".........",
+    "###...###",
+    ".........",
+    "....#....",
+    "....#....",
+    "...###..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:/Z2nvKxJkzIwJNLCUpbHSSiKU/Ye7/uxlenPoCgIoSFJOANMIt5z7ko7nQqfkeQ4cvhWNoiQnOa+5AEiuBSSQ5NhBQDqnB06mc105GR7sBA/",
+  "checksum": "f5861a27",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Web address, for short"
+      },
+      {
+        "num": 4,
+        "clue": "Looney Tunes Tasmanian devil, familiarly"
+      },
+      {
+        "num": 7,
+        "clue": "Wander"
+      },
+      {
+        "num": 9,
+        "clue": "Had on"
+      },
+      {
+        "num": 10,
+        "clue": "Stellar explosion"
+      },
+      {
+        "num": 11,
+        "clue": "Three of them end a half-inning"
+      },
+      {
+        "num": 12,
+        "clue": "Fruit chews in a square wrapper"
+      },
+      {
+        "num": 14,
+        "clue": "Olive ___"
+      },
+      {
+        "num": 15,
+        "clue": "Coconut candy bar topped with nuts"
+      },
+      {
+        "num": 21,
+        "clue": "Wreck"
+      },
+      {
+        "num": 22,
+        "clue": "U2 frontman"
+      },
+      {
+        "num": 23,
+        "clue": "Woes"
+      },
+      {
+        "num": 24,
+        "clue": "Apiece"
+      },
+      {
+        "num": 25,
+        "clue": "Firework that fails to go off"
+      },
+      {
+        "num": 26,
+        "clue": "Keanu Reeves's role in \"The Matrix\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Large coffee holders"
+      },
+      {
+        "num": 2,
+        "clue": "Plant part underground"
+      },
+      {
+        "num": 3,
+        "clue": "Volcano flow"
+      },
+      {
+        "num": 4,
+        "clue": "Trip with many stops"
+      },
+      {
+        "num": 5,
+        "clue": "Painting and sculpture, e.g."
+      },
+      {
+        "num": 6,
+        "clue": "Lemon peel shavings"
+      },
+      {
+        "num": 8,
+        "clue": "Strands on a desert island"
+      },
+      {
+        "num": 9,
+        "clue": "Aspiring"
+      },
+      {
+        "num": 13,
+        "clue": "Recycling container"
+      },
+      {
+        "num": 15,
+        "clue": "Very dry"
+      },
+      {
+        "num": 16,
+        "clue": "Real doozy"
+      },
+      {
+        "num": 17,
+        "clue": "Not spicy"
+      },
+      {
+        "num": 18,
+        "clue": "___ of Arc"
+      },
+      {
+        "num": 19,
+        "clue": "One time"
+      },
+      {
+        "num": 20,
+        "clue": "Pirate's cheer before a third \"ho\""
+      }
+    ]
+  },
+  "theme": "Halloween candy favorites",
+  "publishedAt": "2026-10-25T20:14:31.913Z"
+}
