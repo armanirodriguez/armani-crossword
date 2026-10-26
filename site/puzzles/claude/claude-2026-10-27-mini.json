@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-27-mini",
+  "date": "2026-10-27",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Smash Hit",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:kOhQJPAZcU66erp7ywT7CGe458Wd8r2/SA==",
+  "checksum": "a7ab222a",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Addition sign"
+      },
+      {
+        "num": 5,
+        "clue": "Ski hill"
+      },
+      {
+        "num": 6,
+        "clue": "Hit it to freeze a movie mid-scene"
+      },
+      {
+        "num": 7,
+        "clue": "Say"
+      },
+      {
+        "num": 8,
+        "clue": "Take a break"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Dinner dish"
+      },
+      {
+        "num": 2,
+        "clue": "Rude oafs"
+      },
+      {
+        "num": 3,
+        "clue": "Unhappy"
+      },
+      {
+        "num": 4,
+        "clue": "Fortune-teller"
+      },
+      {
+        "num": 5,
+        "clue": "Cowboy boot attachment"
+      }
+    ]
+  },
+  "theme": "Things you can hit",
+  "publishedAt": "2026-10-26T20:20:06.784Z"
+}

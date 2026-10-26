@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-27-midi",
+  "date": "2026-10-27",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Greatest Hits",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:xiitOY9UGKJLMNzvLmYZoZC5HnowjrqLLeNicJjQvDr7gXv6RHBdeRw9or9QMt0+viEcUFhE8uFVaAF7wVtS0BH2PFxTrWo1/kLEUwYy3Xr2",
+  "checksum": "80ea954e",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Hit it to fire off an email"
+      },
+      {
+        "num": 5,
+        "clue": "Basketball attempt"
+      },
+      {
+        "num": 9,
+        "clue": "Pride member"
+      },
+      {
+        "num": 10,
+        "clue": "Lofty"
+      },
+      {
+        "num": 11,
+        "clue": "Armored Texas critter"
+      },
+      {
+        "num": 13,
+        "clue": "Tiny"
+      },
+      {
+        "num": 14,
+        "clue": "Hit it to start a new line"
+      },
+      {
+        "num": 15,
+        "clue": "James Bond, e.g."
+      },
+      {
+        "num": 16,
+        "clue": "Hit it to restore factory settings"
+      },
+      {
+        "num": 19,
+        "clue": "Clean-air agency: Abbr."
+      },
+      {
+        "num": 22,
+        "clue": "Poorly picked"
+      },
+      {
+        "num": 24,
+        "clue": "Ink stain"
+      },
+      {
+        "num": 25,
+        "clue": "Stop"
+      },
+      {
+        "num": 26,
+        "clue": "Carpenters' cutters"
+      },
+      {
+        "num": 27,
+        "clue": "Hit it to silence the TV"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Cabbage side dish"
+      },
+      {
+        "num": 2,
+        "clue": "Ireland, to the Irish"
+      },
+      {
+        "num": 3,
+        "clue": "Alaskan city on the Bering Sea"
+      },
+      {
+        "num": 4,
+        "clue": "Genetic stuff"
+      },
+      {
+        "num": 5,
+        "clue": "Gleaming"
+      },
+      {
+        "num": 6,
+        "clue": "Sword handle"
+      },
+      {
+        "num": 7,
+        "clue": "Stare at"
+      },
+      {
+        "num": 8,
+        "clue": "Marvel's god of thunder"
+      },
+      {
+        "num": 12,
+        "clue": "Pool measurement"
+      },
+      {
+        "num": 15,
+        "clue": "Religious offshoots"
+      },
+      {
+        "num": 16,
+        "clue": "Barbecue order"
+      },
+      {
+        "num": 17,
+        "clue": "Jazz singer Fitzgerald"
+      },
+      {
+        "num": 18,
+        "clue": "Not fast"
+      },
+      {
+        "num": 19,
+        "clue": "Jacob's twin"
+      },
+      {
+        "num": 20,
+        "clue": "Animal's fur"
+      },
+      {
+        "num": 21,
+        "clue": "Poker stake"
+      },
+      {
+        "num": 23,
+        "clue": "Unit of electrical resistance"
+      }
+    ]
+  },
+  "theme": "Things you can hit",
+  "publishedAt": "2026-10-26T20:20:06.953Z"
+}

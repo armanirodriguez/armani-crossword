@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-27",
+  "date": "2026-10-27",
+  "series": "claude",
+  "title": "Hit List",
+  "author": "Claude",
+  "note": "Hint: each long answer is something you might hit.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#.....",
+    "#............##",
+    "......##.......",
+    ".....#....#....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....#....#.....",
+    ".......##......",
+    "##............#",
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:0fEZalfVugnLwsd4/a9BL/AqjxiCZ7JYr8EucB4oyJTgHcU78euuQCNso4Czv0Dp/4hO3w7ue6H8SYiIxPf2cN3pxR4686li+EEmQjCXPWPOupw0z2hcJbljBJH90jV0G5BvmokD2rfJxyltsXnzhNRxx1L5T2qyNFklK9Xjm8SVtIHax923zpCXAzl1XhKPzc3EYgBqozhYbGw4NukxEix0tY62/qpVSYOdOU67QnIb9mTPGBV6ixerXyX3jG5e4gbFRzOKndarp44+hqvIBngpWdrPIio2hT/Pca2ar79u",
+  "checksum": "1daac686",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Aid and ___"
+      },
+      {
+        "num": 5,
+        "clue": "Snatch"
+      },
+      {
+        "num": 9,
+        "clue": "True statements"
+      },
+      {
+        "num": 14,
+        "clue": "Zero, in tennis"
+      },
+      {
+        "num": 15,
+        "clue": "Traditional tales and beliefs"
+      },
+      {
+        "num": 16,
+        "clue": "Sneeze sound"
+      },
+      {
+        "num": 17,
+        "clue": "Brockovich played by Julia Roberts"
+      },
+      {
+        "num": 18,
+        "clue": "Maroon 5 frontman Levine"
+      },
+      {
+        "num": 19,
+        "clue": "Vacations"
+      },
+      {
+        "num": 20,
+        "clue": "You might hit it on a groggy morning"
+      },
+      {
+        "num": 23,
+        "clue": "Build up, as interest"
+      },
+      {
+        "num": 24,
+        "clue": "Source of tofu and edamame"
+      },
+      {
+        "num": 27,
+        "clue": "Treasure container"
+      },
+      {
+        "num": 28,
+        "clue": "Flower's stalk"
+      },
+      {
+        "num": 30,
+        "clue": "Continent that includes Mongolia"
+      },
+      {
+        "num": 31,
+        "clue": "Airport board abbr."
+      },
+      {
+        "num": 32,
+        "clue": "Celebrity status"
+      },
+      {
+        "num": 34,
+        "clue": "Blood vessel leading from the heart"
+      },
+      {
+        "num": 36,
+        "clue": "Sopranos hit them to show off their range"
+      },
+      {
+        "num": 38,
+        "clue": "Erase"
+      },
+      {
+        "num": 41,
+        "clue": "Vending machine opening"
+      },
+      {
+        "num": 42,
+        "clue": "\"Mr. Blue Sky\" band, for short"
+      },
+      {
+        "num": 45,
+        "clue": "Spoken, as an exam"
+      },
+      {
+        "num": 46,
+        "clue": "Require"
+      },
+      {
+        "num": 48,
+        "clue": "Madison Avenue worker"
+      },
+      {
+        "num": 50,
+        "clue": "Floor coverings"
+      },
+      {
+        "num": 52,
+        "clue": "Desert illusion"
+      },
+      {
+        "num": 53,
+        "clue": "Invisible career barrier some people hit"
+      },
+      {
+        "num": 56,
+        "clue": "Fencing blades"
+      },
+      {
+        "num": 58,
+        "clue": "Actor Alda of \"M*A*S*H\""
+      },
+      {
+        "num": 59,
+        "clue": "Conceited"
+      },
+      {
+        "num": 61,
+        "clue": "Beat felt at the wrist"
+      },
+      {
+        "num": 62,
+        "clue": "Round tent of the steppes"
+      },
+      {
+        "num": 63,
+        "clue": "Sicilian volcano"
+      },
+      {
+        "num": 64,
+        "clue": "Bottomless pit"
+      },
+      {
+        "num": 65,
+        "clue": "Capitol Hill members: Abbr."
+      },
+      {
+        "num": 66,
+        "clue": "A table usually has four"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Brewery output"
+      },
+      {
+        "num": 2,
+        "clue": "Beet soup"
+      },
+      {
+        "num": 3,
+        "clue": "Made evident"
+      },
+      {
+        "num": 4,
+        "clue": "Pavarotti and Domingo, e.g."
+      },
+      {
+        "num": 5,
+        "clue": "Doughnut coating"
+      },
+      {
+        "num": 6,
+        "clue": "Took the bus"
+      },
+      {
+        "num": 7,
+        "clue": "Omani, e.g."
+      },
+      {
+        "num": 8,
+        "clue": "Puzzle"
+      },
+      {
+        "num": 9,
+        "clue": "Like bacon"
+      },
+      {
+        "num": 10,
+        "clue": "Circus tumblers"
+      },
+      {
+        "num": 11,
+        "clue": "Takeout cuisine with lo mein"
+      },
+      {
+        "num": 12,
+        "clue": "Spinning toy"
+      },
+      {
+        "num": 13,
+        "clue": "Distress call"
+      },
+      {
+        "num": 21,
+        "clue": "Ensemble"
+      },
+      {
+        "num": 22,
+        "clue": "Ketchup base"
+      },
+      {
+        "num": 23,
+        "clue": "Untouchable serve"
+      },
+      {
+        "num": 25,
+        "clue": "What tires are filled with"
+      },
+      {
+        "num": 26,
+        "clue": "\"No\" vote"
+      },
+      {
+        "num": 28,
+        "clue": "Head-shaking text abbr."
+      },
+      {
+        "num": 29,
+        "clue": "On edge"
+      },
+      {
+        "num": 33,
+        "clue": "Hollywood dealmakers"
+      },
+      {
+        "num": 35,
+        "clue": "Store sales sector"
+      },
+      {
+        "num": 36,
+        "clue": "Unable to do anything"
+      },
+      {
+        "num": 37,
+        "clue": "Not new"
+      },
+      {
+        "num": 38,
+        "clue": "Physician, informally"
+      },
+      {
+        "num": 39,
+        "clue": "Period in history"
+      },
+      {
+        "num": 40,
+        "clue": "For the most part"
+      },
+      {
+        "num": 42,
+        "clue": "Flow out"
+      },
+      {
+        "num": 43,
+        "clue": "Falling behind"
+      },
+      {
+        "num": 44,
+        "clue": "Single"
+      },
+      {
+        "num": 47,
+        "clue": "College application pieces"
+      },
+      {
+        "num": 49,
+        "clue": "Nonsense"
+      },
+      {
+        "num": 51,
+        "clue": "Lightens up"
+      },
+      {
+        "num": 52,
+        "clue": "After-dinner candies"
+      },
+      {
+        "num": 54,
+        "clue": "Detective's find"
+      },
+      {
+        "num": 55,
+        "clue": "Make, as money"
+      },
+      {
+        "num": 56,
+        "clue": "Org. focused on pollution"
+      },
+      {
+        "num": 57,
+        "clue": "Irish bar"
+      },
+      {
+        "num": 60,
+        "clue": "\"Illmatic\" rapper"
+      }
+    ]
+  },
+  "theme": "Things you can hit",
+  "publishedAt": "2026-10-26T20:20:07.113Z"
+}
