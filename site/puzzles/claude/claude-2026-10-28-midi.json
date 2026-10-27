@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-28-midi",
+  "date": "2026-10-28",
+  "kind": "midi",
+  "series": "claude",
+  "title": "True Colors",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...##....",
+    "...#.....",
+    "...#.....",
+    ".........",
+    "###...###",
+    ".........",
+    ".....#...",
+    ".....#...",
+    "....##..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:x488U+CbV+1zXqLWfYgMH3vqBr9Dy4BvaU0KAnIitRumzRBUOaQu+P4qHIKZDI6LQbmmN4Pzg19Srvo4yY6YzApQ0jodhBvkTiuRhXKddbFV",
+  "checksum": "8a9c11a8",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Common email attachment"
+      },
+      {
+        "num": 4,
+        "clue": "Envelope part that gets licked"
+      },
+      {
+        "num": 8,
+        "clue": "Corn unit"
+      },
+      {
+        "num": 9,
+        "clue": "Sandcastle-building buckets"
+      },
+      {
+        "num": 10,
+        "clue": "Pint at the pub"
+      },
+      {
+        "num": 11,
+        "clue": "Stretch rides to the prom"
+      },
+      {
+        "num": 12,
+        "clue": "Premiere walkway for the stars"
+      },
+      {
+        "num": 14,
+        "clue": "Tall tale, maybe"
+      },
+      {
+        "num": 15,
+        "clue": "Backstage lounge for talk-show guests"
+      },
+      {
+        "num": 21,
+        "clue": "Fit for a king"
+      },
+      {
+        "num": 22,
+        "clue": "Old hand"
+      },
+      {
+        "num": 23,
+        "clue": "___ board (nail file)"
+      },
+      {
+        "num": 24,
+        "clue": "Earl Grey, e.g."
+      },
+      {
+        "num": 25,
+        "clue": "Thick rolls of cash"
+      },
+      {
+        "num": 26,
+        "clue": "Junior, often"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Bosc or Bartlett"
+      },
+      {
+        "num": 2,
+        "clue": "Chip's chipmunk pal"
+      },
+      {
+        "num": 3,
+        "clue": "Astaire of old Hollywood"
+      },
+      {
+        "num": 4,
+        "clue": "More just"
+      },
+      {
+        "num": 5,
+        "clue": "Like overcooked noodles"
+      },
+      {
+        "num": 6,
+        "clue": "Sunburn soother"
+      },
+      {
+        "num": 7,
+        "clue": "\"Hey, over here!\""
+      },
+      {
+        "num": 9,
+        "clue": "In no uncertain terms"
+      },
+      {
+        "num": 13,
+        "clue": "Buses, as tables"
+      },
+      {
+        "num": 15,
+        "clue": "Shot up, as a teen"
+      },
+      {
+        "num": 16,
+        "clue": "Eternal City, to locals"
+      },
+      {
+        "num": 17,
+        "clue": "Sized up"
+      },
+      {
+        "num": 18,
+        "clue": "Chooses (to)"
+      },
+      {
+        "num": 19,
+        "clue": "Cookie often dunked in milk"
+      },
+      {
+        "num": 20,
+        "clue": "Gripe"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a color",
+  "publishedAt": "2026-10-27T20:11:15.793Z"
+}

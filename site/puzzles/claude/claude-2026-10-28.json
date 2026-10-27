@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-28",
+  "date": "2026-10-28",
+  "series": "claude",
+  "title": "Color Commentary",
+  "author": "Claude",
+  "note": "Wednesday hint: look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#.....#...",
+    ".....#.....#...",
+    "...........#...",
+    "....#....#.....",
+    "##.....##......",
+    "...#......#....",
+    ".....##.....###",
+    "...............",
+    "###.....##.....",
+    "....#......#...",
+    "......##.....##",
+    ".....#....#....",
+    "...#...........",
+    "...#.....#.....",
+    "...#.....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:4COtnk6aXh7v4Jgl1OpHPOsoTbMfwPFc7vuqkyk+pp4i1j9ZZIU9mvCslOm/vgMrTGFiTXz5sWsPj8cwAsYs3qWwUohjWqBEZG5SR24gp9u5IDlanSis1jusHnrxg+/ifrUOR4jhl1ZmE+t3HJwxvXneMhLVD/W8UhLY31b1O4Ct1spnwyw5qrqgZt5RVR6Hc+kA4i+tKZzhzjyP/T6hq/D9tXYCz8g+FxJFSKlwfv7j24oHqmgQgI1VVeJdRqIW4N6LY1rXKKfy77ucz7HmqneaU2iyfBVuGAcTMSUWl4O4",
+  "checksum": "913e3587",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Like two peas not in a pod?"
+      },
+      {
+        "num": 6,
+        "clue": "Bamboo-munching bear"
+      },
+      {
+        "num": 11,
+        "clue": "Toward the stern"
+      },
+      {
+        "num": 14,
+        "clue": "Things a dog might bury"
+      },
+      {
+        "num": 15,
+        "clue": "Some golf clubs"
+      },
+      {
+        "num": 16,
+        "clue": "\"I do,\" for one"
+      },
+      {
+        "num": 17,
+        "clue": "Doorbuster shopping event after Thanksgiving"
+      },
+      {
+        "num": 19,
+        "clue": "\"You ___ here\" (mall map phrase)"
+      },
+      {
+        "num": 20,
+        "clue": "Carpe diem, in modern slang"
+      },
+      {
+        "num": 21,
+        "clue": "Lounge around"
+      },
+      {
+        "num": 22,
+        "clue": "Polished off, as a meal"
+      },
+      {
+        "num": 24,
+        "clue": "Beginning"
+      },
+      {
+        "num": 26,
+        "clue": "\"Finally!\""
+      },
+      {
+        "num": 27,
+        "clue": "Cranberry-growing spot"
+      },
+      {
+        "num": 29,
+        "clue": "Salad with croutons and romaine"
+      },
+      {
+        "num": 32,
+        "clue": "Like a gallery-hopping crowd, perhaps"
+      },
+      {
+        "num": 33,
+        "clue": "Island in the Beach Boys' \"Kokomo\""
+      },
+      {
+        "num": 35,
+        "clue": "Name on a fake ID, say"
+      },
+      {
+        "num": 37,
+        "clue": "Team whose fans are called Cheeseheads"
+      },
+      {
+        "num": 43,
+        "clue": "Things split by physicists"
+      },
+      {
+        "num": 44,
+        "clue": "Spokes, geometrically speaking"
+      },
+      {
+        "num": 45,
+        "clue": "Head of a college"
+      },
+      {
+        "num": 48,
+        "clue": "Orbit's high point"
+      },
+      {
+        "num": 51,
+        "clue": "Road-trip navigator, for short"
+      },
+      {
+        "num": 52,
+        "clue": "Sign up for the service"
+      },
+      {
+        "num": 54,
+        "clue": "Magazine release"
+      },
+      {
+        "num": 56,
+        "clue": "Cut side of a diamond"
+      },
+      {
+        "num": 57,
+        "clue": "Big Sky State, abbr."
+      },
+      {
+        "num": 59,
+        "clue": "Do laps, maybe"
+      },
+      {
+        "num": 62,
+        "clue": "Angsty 2000s rock style"
+      },
+      {
+        "num": 63,
+        "clue": "Squeezed glassful at brunch"
+      },
+      {
+        "num": 66,
+        "clue": "Veterans Day mo."
+      },
+      {
+        "num": 67,
+        "clue": "What a singer warms up"
+      },
+      {
+        "num": 68,
+        "clue": "Desert getaways"
+      },
+      {
+        "num": 69,
+        "clue": "Dr. ___ (Beats co-founder)"
+      },
+      {
+        "num": 70,
+        "clue": "Duck prized for its down"
+      },
+      {
+        "num": 71,
+        "clue": "\"___ you!\" (sneeze response)"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Dear ___\" (advice column)"
+      },
+      {
+        "num": 2,
+        "clue": "Sport played on horseback"
+      },
+      {
+        "num": 3,
+        "clue": "Non-digital, as a British watch"
+      },
+      {
+        "num": 4,
+        "clue": "Scouting mission, informally"
+      },
+      {
+        "num": 5,
+        "clue": "Sound of mild disapproval"
+      },
+      {
+        "num": 6,
+        "clue": "Jack Sparrow, for one"
+      },
+      {
+        "num": 7,
+        "clue": "Phoenix's home: Abbr."
+      },
+      {
+        "num": 8,
+        "clue": "Junction in a network"
+      },
+      {
+        "num": 9,
+        "clue": "Genetic material, briefly"
+      },
+      {
+        "num": 10,
+        "clue": "Up to now"
+      },
+      {
+        "num": 11,
+        "clue": "Online persona"
+      },
+      {
+        "num": 12,
+        "clue": "Where Bambi grew up"
+      },
+      {
+        "num": 13,
+        "clue": "A score"
+      },
+      {
+        "num": 18,
+        "clue": "Tiny jumper on a pup"
+      },
+      {
+        "num": 23,
+        "clue": "Largest of the fifty"
+      },
+      {
+        "num": 25,
+        "clue": "Meager"
+      },
+      {
+        "num": 26,
+        "clue": "Showstopper at the opera"
+      },
+      {
+        "num": 27,
+        "clue": "Grocery sack"
+      },
+      {
+        "num": 28,
+        "clue": "Bruins legend Bobby"
+      },
+      {
+        "num": 30,
+        "clue": "Final authority"
+      },
+      {
+        "num": 31,
+        "clue": "Peak near Zermatt"
+      },
+      {
+        "num": 34,
+        "clue": "Knit cap"
+      },
+      {
+        "num": 36,
+        "clue": "Farm measurements"
+      },
+      {
+        "num": 38,
+        "clue": "Gravy holder?"
+      },
+      {
+        "num": 39,
+        "clue": "Rocker's stage gear"
+      },
+      {
+        "num": 40,
+        "clue": "Way to get a word in, barely"
+      },
+      {
+        "num": 41,
+        "clue": "Tear"
+      },
+      {
+        "num": 42,
+        "clue": "Brother's sibling, informally"
+      },
+      {
+        "num": 45,
+        "clue": "Stand up for"
+      },
+      {
+        "num": 46,
+        "clue": "Charm completely"
+      },
+      {
+        "num": 47,
+        "clue": "Cozy nook"
+      },
+      {
+        "num": 49,
+        "clue": "Spice in a snap cookie"
+      },
+      {
+        "num": 50,
+        "clue": "East, in Spanish"
+      },
+      {
+        "num": 53,
+        "clue": "Kitchen range"
+      },
+      {
+        "num": 55,
+        "clue": "\"The ___\" (regular's order)"
+      },
+      {
+        "num": 57,
+        "clue": "Old ___ (card game)"
+      },
+      {
+        "num": 58,
+        "clue": "___ upon a time"
+      },
+      {
+        "num": 60,
+        "clue": "Clinches, as a win"
+      },
+      {
+        "num": 61,
+        "clue": "Teenager's room, stereotypically"
+      },
+      {
+        "num": 64,
+        "clue": "King, in France"
+      },
+      {
+        "num": 65,
+        "clue": "Gig"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a color",
+  "publishedAt": "2026-10-27T20:11:15.901Z"
+}
