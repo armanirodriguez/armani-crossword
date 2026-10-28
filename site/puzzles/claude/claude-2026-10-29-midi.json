@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-29-midi",
+  "date": "2026-10-29",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Capital Gains",
+  "author": "Claude",
+  "note": "Capital hint: look inside the two longest answers.",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:/FvbPlDGF664QVHyT1xpFWhcjIQp9wXf1yNuc2igO3R8XHhdi0oA/sCP7P11K3hX2DJr1fkeVuOM4cU6UFOE99nngUYEQlyvvvwPUENL42ru",
+  "checksum": "d0cb7600",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Old Apple music player"
+      },
+      {
+        "num": 5,
+        "clue": "Gossip column couple"
+      },
+      {
+        "num": 9,
+        "clue": "Zip"
+      },
+      {
+        "num": 10,
+        "clue": "Matador's foe"
+      },
+      {
+        "num": 11,
+        "clue": "Like a film's big final showdown"
+      },
+      {
+        "num": 13,
+        "clue": "Layer in the coop?"
+      },
+      {
+        "num": 14,
+        "clue": "Wheel wedge"
+      },
+      {
+        "num": 15,
+        "clue": "Fall for, slangily"
+      },
+      {
+        "num": 16,
+        "clue": "Snouted rain forest mammal"
+      },
+      {
+        "num": 19,
+        "clue": "Pair"
+      },
+      {
+        "num": 22,
+        "clue": "Officer just above a colonel, in the British Army"
+      },
+      {
+        "num": 24,
+        "clue": "Sound of exasperation"
+      },
+      {
+        "num": 25,
+        "clue": "Jazz's Fitzgerald"
+      },
+      {
+        "num": 26,
+        "clue": "History"
+      },
+      {
+        "num": 27,
+        "clue": "Battery unit"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Move ever so slowly"
+      },
+      {
+        "num": 2,
+        "clue": "Ghostly white"
+      },
+      {
+        "num": 3,
+        "clue": "Thor's father"
+      },
+      {
+        "num": 4,
+        "clue": "Beaver's project"
+      },
+      {
+        "num": 5,
+        "clue": "Scratchy, as a wool sweater"
+      },
+      {
+        "num": 6,
+        "clue": "Dorothy's dog"
+      },
+      {
+        "num": 7,
+        "clue": "Clapton of rock"
+      },
+      {
+        "num": 8,
+        "clue": "___ trial"
+      },
+      {
+        "num": 12,
+        "clue": "Integra maker"
+      },
+      {
+        "num": 15,
+        "clue": "Curved stretch of coastline"
+      },
+      {
+        "num": 16,
+        "clue": "Recipe meas."
+      },
+      {
+        "num": 17,
+        "clue": "Diva's showstopper"
+      },
+      {
+        "num": 18,
+        "clue": "Hogs"
+      },
+      {
+        "num": 19,
+        "clue": "Scrabble piece"
+      },
+      {
+        "num": 20,
+        "clue": "Wishing ___"
+      },
+      {
+        "num": 21,
+        "clue": "Spoken, not written"
+      },
+      {
+        "num": 23,
+        "clue": "New Year's Eve mo."
+      }
+    ]
+  },
+  "theme": "World capitals hidden in words and phrases",
+  "publishedAt": "2026-10-28T20:11:57.849Z"
+}

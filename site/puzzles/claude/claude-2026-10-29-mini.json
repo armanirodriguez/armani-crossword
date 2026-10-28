@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-29-mini",
+  "date": "2026-10-29",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Capital Letters",
+  "author": "Claude",
+  "note": "There's a capital hiding in 7-Across.",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:h+KMkLzcW/AcNUZSWoWfBsnQRBp4i+BBVA==",
+  "checksum": "b134f496",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Some Apple computers"
+      },
+      {
+        "num": 5,
+        "clue": "In the slightest"
+      },
+      {
+        "num": 7,
+        "clue": "Juliet's love"
+      },
+      {
+        "num": 8,
+        "clue": "Bee's ___"
+      },
+      {
+        "num": 9,
+        "clue": "Antlered beasts"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Target"
+      },
+      {
+        "num": 2,
+        "clue": "Make amends"
+      },
+      {
+        "num": 3,
+        "clue": "Desert mount"
+      },
+      {
+        "num": 4,
+        "clue": "Streamlined"
+      },
+      {
+        "num": 6,
+        "clue": "Win's opposite"
+      }
+    ]
+  },
+  "theme": "World capitals hidden in words and phrases",
+  "publishedAt": "2026-10-28T20:11:57.673Z"
+}

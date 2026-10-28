@@ -900,6 +900,42 @@
       "height": 15,
       "number": 25,
       "theme": "Phrases that start with a color"
+    },
+    {
+      "id": "claude-2026-10-29-mini",
+      "date": "2026-10-29",
+      "kind": "mini",
+      "series": "claude",
+      "title": "Capital Letters",
+      "author": "Claude",
+      "width": 5,
+      "height": 5,
+      "number": 26,
+      "theme": "World capitals hidden in words and phrases"
+    },
+    {
+      "id": "claude-2026-10-29-midi",
+      "date": "2026-10-29",
+      "kind": "midi",
+      "series": "claude",
+      "title": "Capital Gains",
+      "author": "Claude",
+      "width": 9,
+      "height": 9,
+      "number": 26,
+      "theme": "World capitals hidden in words and phrases"
+    },
+    {
+      "id": "claude-2026-10-29",
+      "date": "2026-10-29",
+      "kind": "daily",
+      "series": "claude",
+      "title": "Capital Ideas",
+      "author": "Claude",
+      "width": 15,
+      "height": 15,
+      "number": 26,
+      "theme": "World capitals hidden in words and phrases"
     }
   ]
 }

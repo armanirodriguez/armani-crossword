@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-29",
+  "date": "2026-10-29",
+  "series": "claude",
+  "title": "Capital Ideas",
+  "author": "Claude",
+  "note": "Capital hint: look inside the three longest answers.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....#......#...",
+    "....#......#...",
+    "...........#...",
+    "...#...##......",
+    "##...#...#.....",
+    ".....#....#....",
+    "......#.....###",
+    "...............",
+    "###.....#......",
+    "....#....#.....",
+    ".....#...#...##",
+    "......##...#...",
+    "...#...........",
+    "...#......#....",
+    "...#......#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:CGALeSNwFEKXsPLoVzvG5bxoj0nPaA5RJzV+xOjuPzxLeD0bJp7gVsCQ3rkh5lfY7CWaV1xRFKxyHUyO4zYP0jJi/ypRFKjwmYq+sQXajO2gjv4WNd96hzy63L+sDD6Ik3KR3z1irIX5EBF/DPeo+dtnCCvOtQOUuZWeXpIF/sNuIaYAv848oFri/n2Vjqzw8aNMh98TGDKFa0ZN7okCZgrOIdFHg5ZWTrsUhx+rMWbHM5Vefh5chkV+DVm1Gh1rJ8qC4C3hObz1wodm8+BaUBQJ74IoHDk+z6S+ZZYeSmvu",
+  "checksum": "27e35ddb",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Saint's glowing ring"
+      },
+      {
+        "num": 5,
+        "clue": "Rust bucket"
+      },
+      {
+        "num": 11,
+        "clue": "Bat wood"
+      },
+      {
+        "num": 14,
+        "clue": "State firmly"
+      },
+      {
+        "num": 15,
+        "clue": "Make see red"
+      },
+      {
+        "num": 16,
+        "clue": "Transcript figure, for short"
+      },
+      {
+        "num": 17,
+        "clue": "Bear's winter-long snooze"
+      },
+      {
+        "num": 19,
+        "clue": "Have a bite"
+      },
+      {
+        "num": 20,
+        "clue": "Spots on TV?"
+      },
+      {
+        "num": 21,
+        "clue": "Cash dispenser, for short"
+      },
+      {
+        "num": 22,
+        "clue": "Gathering that calls on spirits"
+      },
+      {
+        "num": 24,
+        "clue": "Oversharer's comeback, briefly"
+      },
+      {
+        "num": 26,
+        "clue": "Sounds at a fireworks show"
+      },
+      {
+        "num": 29,
+        "clue": "Less narrow"
+      },
+      {
+        "num": 30,
+        "clue": "Brainstorm output"
+      },
+      {
+        "num": 32,
+        "clue": "Wander about"
+      },
+      {
+        "num": 34,
+        "clue": "Sunbeams"
+      },
+      {
+        "num": 35,
+        "clue": "Rough-edged, as freshly cut metal"
+      },
+      {
+        "num": 37,
+        "clue": "Central link"
+      },
+      {
+        "num": 39,
+        "clue": "Mesh draped over a jungle cot"
+      },
+      {
+        "num": 44,
+        "clue": "Top bunk, e.g."
+      },
+      {
+        "num": 45,
+        "clue": "LASIK target"
+      },
+      {
+        "num": 46,
+        "clue": "No different"
+      },
+      {
+        "num": 49,
+        "clue": "Come across as"
+      },
+      {
+        "num": 51,
+        "clue": "Yearns (for)"
+      },
+      {
+        "num": 52,
+        "clue": "Inch along"
+      },
+      {
+        "num": 54,
+        "clue": "Red or Dead"
+      },
+      {
+        "num": 55,
+        "clue": "Wall St. debut"
+      },
+      {
+        "num": 56,
+        "clue": "Logic"
+      },
+      {
+        "num": 58,
+        "clue": "Ancestry test material, for short"
+      },
+      {
+        "num": 60,
+        "clue": "Blinker of \"12:00,\" once"
+      },
+      {
+        "num": 63,
+        "clue": "Gate info, for short"
+      },
+      {
+        "num": 64,
+        "clue": "Africa's highest peak"
+      },
+      {
+        "num": 68,
+        "clue": "\"Doctor ___\""
+      },
+      {
+        "num": 69,
+        "clue": "Swallows, as a syllable"
+      },
+      {
+        "num": 70,
+        "clue": "Hard ___ (busily working)"
+      },
+      {
+        "num": 71,
+        "clue": "Tool with teeth"
+      },
+      {
+        "num": 72,
+        "clue": "Arizona city known for red rocks"
+      },
+      {
+        "num": 73,
+        "clue": "Spiders' creations"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Very funny\""
+      },
+      {
+        "num": 2,
+        "clue": "Keen"
+      },
+      {
+        "num": 3,
+        "clue": "Maine catches"
+      },
+      {
+        "num": 4,
+        "clue": "Be in the red"
+      },
+      {
+        "num": 5,
+        "clue": "Not straight"
+      },
+      {
+        "num": 6,
+        "clue": "Captivate"
+      },
+      {
+        "num": 7,
+        "clue": "Louvre holdings"
+      },
+      {
+        "num": 8,
+        "clue": "___ chi"
+      },
+      {
+        "num": 9,
+        "clue": "Big heads"
+      },
+      {
+        "num": 10,
+        "clue": "Extend, as a lease"
+      },
+      {
+        "num": 11,
+        "clue": "Meeting outline"
+      },
+      {
+        "num": 12,
+        "clue": "Out to lunch?"
+      },
+      {
+        "num": 13,
+        "clue": "People who are always throwing shade"
+      },
+      {
+        "num": 18,
+        "clue": "Lift high"
+      },
+      {
+        "num": 23,
+        "clue": "Bush pilot's landing site"
+      },
+      {
+        "num": 25,
+        "clue": "Broadway signs"
+      },
+      {
+        "num": 27,
+        "clue": "Guest of the hour at a banquet"
+      },
+      {
+        "num": 28,
+        "clue": "\"Frozen\" reindeer"
+      },
+      {
+        "num": 30,
+        "clue": "Big Blue"
+      },
+      {
+        "num": 31,
+        "clue": "Simon & Garfunkel, e.g."
+      },
+      {
+        "num": 33,
+        "clue": "Suit in the C-suite"
+      },
+      {
+        "num": 36,
+        "clue": "Salsa and queso"
+      },
+      {
+        "num": 38,
+        "clue": "Like an ideal society"
+      },
+      {
+        "num": 40,
+        "clue": "Golf pegs"
+      },
+      {
+        "num": 41,
+        "clue": "Break new ground"
+      },
+      {
+        "num": 42,
+        "clue": "Born, in a wedding announcement"
+      },
+      {
+        "num": 43,
+        "clue": "Pump product"
+      },
+      {
+        "num": 46,
+        "clue": "Things with Phillips tops"
+      },
+      {
+        "num": 47,
+        "clue": "\"Respect\" singer Franklin"
+      },
+      {
+        "num": 48,
+        "clue": "Wildflower field"
+      },
+      {
+        "num": 50,
+        "clue": "Drama set at Sterling Cooper"
+      },
+      {
+        "num": 53,
+        "clue": "Prods"
+      },
+      {
+        "num": 57,
+        "clue": "River of Egypt"
+      },
+      {
+        "num": 59,
+        "clue": "Apollo org."
+      },
+      {
+        "num": 61,
+        "clue": "Pad, slangily"
+      },
+      {
+        "num": 62,
+        "clue": "Goes bad"
+      },
+      {
+        "num": 65,
+        "clue": "Jar topper"
+      },
+      {
+        "num": 66,
+        "clue": "Altar answer"
+      },
+      {
+        "num": 67,
+        "clue": "Part that drops in shock"
+      }
+    ]
+  },
+  "theme": "World capitals hidden in words and phrases",
+  "publishedAt": "2026-10-28T20:11:58.027Z"
+}
