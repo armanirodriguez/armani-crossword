@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-30",
+  "date": "2026-10-30",
+  "series": "claude",
+  "title": "Scaling Up",
+  "author": "Claude",
+  "note": "Handy hint: the three longest answers all have the same thing, in more than one sense.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#.....#.....",
+    "...#.....#.....",
+    "...#...........",
+    ".....##....#...",
+    "....#.....#....",
+    ".......#.......",
+    "...#....##....#",
+    "###.........###",
+    "#....##....#...",
+    ".......#.......",
+    "....#.....#....",
+    "...#....##.....",
+    "...........#...",
+    ".....#.....#...",
+    ".....#.....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:28F+Gb/Pu46ad3fNw+duMBUPuVcT/kkvHWIw7ka7y4JnM7KPTn8P1Ieh3RU/IOF2qLwcBqo8Wgi1zOlfDaPZ6ODcRhOMLVTxdHrZCPKA/uAfrcvzzTpwInUl8iDOw7M2yZe/OxKz0mKEKlYHm7f7i1PNz/laJQ+4cDpcAEoQAOaZTZZ0PpjCrmMNvLwkDDI4r038nN+gy+wUP1ML+sgIjZ9oOV4E5NTUrbHYDh0A7PWmB25gj0QbCp0YtSa6F+53EnvkxAki25vLvqS3IAA4f+7aUM1ap2GJbvf+DxLg3NA3",
+  "checksum": "b605c224",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Golf ball's position"
+      },
+      {
+        "num": 4,
+        "clue": "Prize money"
+      },
+      {
+        "num": 9,
+        "clue": "Tries, as a case"
+      },
+      {
+        "num": 14,
+        "clue": "Connections with clout"
+      },
+      {
+        "num": 15,
+        "clue": "Like most of the world's population"
+      },
+      {
+        "num": 16,
+        "clue": "Speck on a nautical chart"
+      },
+      {
+        "num": 17,
+        "clue": "Sets in living rooms"
+      },
+      {
+        "num": 18,
+        "clue": "Blindfolded figure at many courthouses"
+      },
+      {
+        "num": 20,
+        "clue": "Wedding cake levels"
+      },
+      {
+        "num": 22,
+        "clue": "Juniors, often"
+      },
+      {
+        "num": 23,
+        "clue": "Sweetie, in modern slang"
+      },
+      {
+        "num": 24,
+        "clue": "Sicilian smoker"
+      },
+      {
+        "num": 25,
+        "clue": "Steer clear of"
+      },
+      {
+        "num": 27,
+        "clue": "Nerve"
+      },
+      {
+        "num": 28,
+        "clue": "Give a second life to, as cans"
+      },
+      {
+        "num": 30,
+        "clue": "In particular"
+      },
+      {
+        "num": 32,
+        "clue": "Get it"
+      },
+      {
+        "num": 33,
+        "clue": "Party thrower"
+      },
+      {
+        "num": 35,
+        "clue": "The ___ Tour (Taylor Swift extravaganza)"
+      },
+      {
+        "num": 36,
+        "clue": "Monarch, for one"
+      },
+      {
+        "num": 39,
+        "clue": "Stain on one's record"
+      },
+      {
+        "num": 41,
+        "clue": "___ and void"
+      },
+      {
+        "num": 42,
+        "clue": "Down ___ (memorized)"
+      },
+      {
+        "num": 45,
+        "clue": "Nearest"
+      },
+      {
+        "num": 48,
+        "clue": "Notwithstanding"
+      },
+      {
+        "num": 50,
+        "clue": "Popular family dogs, for short"
+      },
+      {
+        "num": 51,
+        "clue": "Followed a rainbow's path"
+      },
+      {
+        "num": 53,
+        "clue": "Tehran's land"
+      },
+      {
+        "num": 54,
+        "clue": "Close-encounter visitors, briefly"
+      },
+      {
+        "num": 55,
+        "clue": "Water, south of the border"
+      },
+      {
+        "num": 56,
+        "clue": "Preliminary races"
+      },
+      {
+        "num": 57,
+        "clue": "Desert dweller with a noisy tail"
+      },
+      {
+        "num": 61,
+        "clue": "Deadlock"
+      },
+      {
+        "num": 62,
+        "clue": "Prepare to propose, perhaps"
+      },
+      {
+        "num": 63,
+        "clue": "Subject"
+      },
+      {
+        "num": 64,
+        "clue": "Flightless Aussie"
+      },
+      {
+        "num": 65,
+        "clue": "Wander off"
+      },
+      {
+        "num": 66,
+        "clue": "Tiptoe"
+      },
+      {
+        "num": 67,
+        "clue": "Labor Day mo."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Kitten batches"
+      },
+      {
+        "num": 2,
+        "clue": "Guest list name"
+      },
+      {
+        "num": 3,
+        "clue": "Core"
+      },
+      {
+        "num": 4,
+        "clue": "Buddies"
+      },
+      {
+        "num": 5,
+        "clue": "Olympic chant"
+      },
+      {
+        "num": 6,
+        "clue": "Free (of)"
+      },
+      {
+        "num": 7,
+        "clue": "Authorization, informally"
+      },
+      {
+        "num": 8,
+        "clue": "Legally prohibit"
+      },
+      {
+        "num": 9,
+        "clue": "Radiator sound"
+      },
+      {
+        "num": 10,
+        "clue": "Abbr. on a cornerstone"
+      },
+      {
+        "num": 11,
+        "clue": "He outwitted forty thieves"
+      },
+      {
+        "num": 12,
+        "clue": "Brings to mind"
+      },
+      {
+        "num": 13,
+        "clue": "Like a cold stare"
+      },
+      {
+        "num": 19,
+        "clue": "Ctrl+Z command"
+      },
+      {
+        "num": 21,
+        "clue": "Beam"
+      },
+      {
+        "num": 25,
+        "clue": "Thanks ___!"
+      },
+      {
+        "num": 26,
+        "clue": "Waistcoat"
+      },
+      {
+        "num": 27,
+        "clue": "Indiana city near Chicago"
+      },
+      {
+        "num": 29,
+        "clue": "Laundry ___"
+      },
+      {
+        "num": 31,
+        "clue": "Poker giveaways"
+      },
+      {
+        "num": 34,
+        "clue": "Perfect score, in gymnastics"
+      },
+      {
+        "num": 36,
+        "clue": "One who signs off on your PTO"
+      },
+      {
+        "num": 37,
+        "clue": "Impolite"
+      },
+      {
+        "num": 38,
+        "clue": "Took off"
+      },
+      {
+        "num": 39,
+        "clue": "Flagrant"
+      },
+      {
+        "num": 40,
+        "clue": "Maine catch"
+      },
+      {
+        "num": 42,
+        "clue": "Jolly Roger flyers"
+      },
+      {
+        "num": 43,
+        "clue": "One ___ (singly)"
+      },
+      {
+        "num": 44,
+        "clue": "Get stiff with nerves"
+      },
+      {
+        "num": 45,
+        "clue": "Store workers"
+      },
+      {
+        "num": 46,
+        "clue": "Wise one"
+      },
+      {
+        "num": 47,
+        "clue": "Has faith in"
+      },
+      {
+        "num": 49,
+        "clue": "Pumpkin dessert"
+      },
+      {
+        "num": 52,
+        "clue": "Official part of a fictional universe"
+      },
+      {
+        "num": 55,
+        "clue": "Friend in a fight"
+      },
+      {
+        "num": 56,
+        "clue": "What the ___?"
+      },
+      {
+        "num": 58,
+        "clue": "Juicy gossip, informally"
+      },
+      {
+        "num": 59,
+        "clue": "Mimic"
+      },
+      {
+        "num": 60,
+        "clue": "Maker of the Soul"
+      }
+    ]
+  },
+  "theme": "Things that have scales",
+  "publishedAt": "2026-10-29T20:22:48.718Z"
+}

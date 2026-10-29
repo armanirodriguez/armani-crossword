@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-30-mini",
+  "date": "2026-10-30",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Weigh In",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    "....#",
+    ".....",
+    "#....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:EhPOYWdrHq+Fo+i0THudFUMsIFcZR6nVmA==",
+  "checksum": "9ffae91b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "D.C. ballplayers"
+      },
+      {
+        "num": 5,
+        "clue": "Like a soda left open"
+      },
+      {
+        "num": 6,
+        "clue": "Sign with a balance"
+      },
+      {
+        "num": 8,
+        "clue": "Pleased"
+      },
+      {
+        "num": 9,
+        "clue": "Breaking stuff?"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Sunday org."
+      },
+      {
+        "num": 2,
+        "clue": "Line up"
+      },
+      {
+        "num": 3,
+        "clue": "Put on hold"
+      },
+      {
+        "num": 4,
+        "clue": "Milkshake accessory"
+      },
+      {
+        "num": 7,
+        "clue": "Commercials"
+      }
+    ]
+  },
+  "theme": "Things that have scales",
+  "publishedAt": "2026-10-29T20:22:49.012Z"
+}

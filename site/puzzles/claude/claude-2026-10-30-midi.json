@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-30-midi",
+  "date": "2026-10-30",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Tip the Scales",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:TadDVJZoKDOKOBTJGzrtt9WFraOyNYXsrXC3TFovb882rRkRDvrt8vtYMvK5tye5zTI+AIjq4EfrA2SSDnyIXMSWRg3qk25hKa47zMkfG41L",
+  "checksum": "8d7f9610",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Butter at a curry house"
+      },
+      {
+        "num": 5,
+        "clue": "Eye fringe"
+      },
+      {
+        "num": 9,
+        "clue": "Breadbasket item"
+      },
+      {
+        "num": 10,
+        "clue": "Canyon comeback"
+      },
+      {
+        "num": 11,
+        "clue": "Everglades lurker"
+      },
+      {
+        "num": 13,
+        "clue": "Tie-___"
+      },
+      {
+        "num": 14,
+        "clue": "Welles of 'Citizen Kane'"
+      },
+      {
+        "num": 15,
+        "clue": "A blast"
+      },
+      {
+        "num": 16,
+        "clue": "Crew member"
+      },
+      {
+        "num": 19,
+        "clue": "In demand"
+      },
+      {
+        "num": 22,
+        "clue": "Marlin look-alike with a long bill"
+      },
+      {
+        "num": 24,
+        "clue": "'___ Las Vegas'"
+      },
+      {
+        "num": 25,
+        "clue": "Fitzgerald of jazz"
+      },
+      {
+        "num": 26,
+        "clue": "Lose layers in the sun"
+      },
+      {
+        "num": 27,
+        "clue": "Huff and puff"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Cap-and-gown wearer"
+      },
+      {
+        "num": 2,
+        "clue": "Sacred"
+      },
+      {
+        "num": 3,
+        "clue": "Fashion magazine"
+      },
+      {
+        "num": 4,
+        "clue": "Manning with two Super Bowl MVPs"
+      },
+      {
+        "num": 5,
+        "clue": "Pick up"
+      },
+      {
+        "num": 6,
+        "clue": "Plays parts"
+      },
+      {
+        "num": 7,
+        "clue": "'Scram!'"
+      },
+      {
+        "num": 8,
+        "clue": "Car honker"
+      },
+      {
+        "num": 12,
+        "clue": "Autumn decoration"
+      },
+      {
+        "num": 15,
+        "clue": "Wild"
+      },
+      {
+        "num": 16,
+        "clue": "Reply to an invite, briefly"
+      },
+      {
+        "num": 17,
+        "clue": "Boo-boo"
+      },
+      {
+        "num": 18,
+        "clue": "Made a basket, say"
+      },
+      {
+        "num": 19,
+        "clue": "Sledding spot"
+      },
+      {
+        "num": 20,
+        "clue": "Nobel Peace Prize city"
+      },
+      {
+        "num": 21,
+        "clue": "Spring melt"
+      },
+      {
+        "num": 23,
+        "clue": "Valentine's mo."
+      }
+    ]
+  },
+  "theme": "Things that have scales",
+  "publishedAt": "2026-10-29T20:22:48.846Z"
+}
