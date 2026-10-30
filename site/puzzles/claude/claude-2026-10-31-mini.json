@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-31-mini",
+  "date": "2026-10-31",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Last Bite",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:ZDTJVduk4MdNkyiEGoWlRWZCFmaOezSa9g==",
+  "checksum": "b453e622",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "\"Hey, over here!\""
+      },
+      {
+        "num": 5,
+        "clue": "Plates for a knight?"
+      },
+      {
+        "num": 6,
+        "clue": "\"Blue ___ Shoes\""
+      },
+      {
+        "num": 7,
+        "clue": "Decorative tile work, maybe"
+      },
+      {
+        "num": 8,
+        "clue": "Puts down"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Trim, as a hedge"
+      },
+      {
+        "num": 2,
+        "clue": "Little fish whose last four letters make a diner sandwich"
+      },
+      {
+        "num": 3,
+        "clue": "Fountain drinks"
+      },
+      {
+        "num": 4,
+        "clue": "Three, in cards"
+      },
+      {
+        "num": 5,
+        "clue": "Sold without a warranty"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in a kind of sandwich",
+  "publishedAt": "2026-10-30T20:15:21.631Z"
+}

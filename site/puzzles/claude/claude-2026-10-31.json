@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-31",
+  "date": "2026-10-31",
+  "series": "claude",
+  "title": "Deli Counter",
+  "author": "Claude",
+  "note": "Hint: look at how the three longest answers end.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....##....#...",
+    "......#....#...",
+    "...........#...",
+    "###....##......",
+    ".....#....#....",
+    "...##....#.....",
+    "......#.....###",
+    "#.............#",
+    "###.....#......",
+    ".....#....##...",
+    "....#....#.....",
+    "......##....###",
+    "...#...........",
+    "...#....#......",
+    "...#....##....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:IOUNc8wdW0kD/v0UDpjl0huMWDuww2ZaOG0XpQTwWhz4jzyWJwto5OOu+DssAQjZbjCcFaIvfgbDvU2nqnGkVAHLYXHeThJwWUsOrqRat99ka4b94OvkHo5XhrAo/+/QVRMLrGC28R8mkomMIjuI8pgHMSJq8vohfEFr2rbNJke6kW7demQHx/WWHz/m6xC24OQzPZbyW1qtXawQ2PMXcggU4j34RTaQ80w/b8XisrWlhaJzTSO3h9Rp2bn3lYtUqwhSZafSDeTAuMMwrxrLfukXxCIcPuFylYms2Ax2Q8H8",
+  "checksum": "0445b50c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Surprise ending"
+      },
+      {
+        "num": 6,
+        "clue": "\"Monster ___\" (Halloween party staple)"
+      },
+      {
+        "num": 10,
+        "clue": "Cry from a frustrated Frau"
+      },
+      {
+        "num": 13,
+        "clue": "Aristotle's school"
+      },
+      {
+        "num": 15,
+        "clue": "Sax type"
+      },
+      {
+        "num": 16,
+        "clue": "Author for a dark and dreary night"
+      },
+      {
+        "num": 17,
+        "clue": "Exclusive spot with a pro shop"
+      },
+      {
+        "num": 19,
+        "clue": "Org. with a Ryder Cup team"
+      },
+      {
+        "num": 20,
+        "clue": "Fair to middling"
+      },
+      {
+        "num": 21,
+        "clue": "More high-minded"
+      },
+      {
+        "num": 23,
+        "clue": "\"When pigs fly!\""
+      },
+      {
+        "num": 26,
+        "clue": "Bowline, for one"
+      },
+      {
+        "num": 29,
+        "clue": "Fronted, as cash"
+      },
+      {
+        "num": 30,
+        "clue": "Casual day, often: Abbr."
+      },
+      {
+        "num": 31,
+        "clue": "Property paper"
+      },
+      {
+        "num": 32,
+        "clue": "Runs, price-wise"
+      },
+      {
+        "num": 33,
+        "clue": "Not branching, as a story"
+      },
+      {
+        "num": 36,
+        "clue": "Hawkeye, e.g."
+      },
+      {
+        "num": 38,
+        "clue": "Morning machine that works the bean beat?"
+      },
+      {
+        "num": 42,
+        "clue": "George Michael hit of 1987"
+      },
+      {
+        "num": 43,
+        "clue": "Was staggered"
+      },
+      {
+        "num": 45,
+        "clue": "Can't stand"
+      },
+      {
+        "num": 48,
+        "clue": "Pixar rat with a palate"
+      },
+      {
+        "num": 50,
+        "clue": "Frodo's loyal gardener"
+      },
+      {
+        "num": 51,
+        "clue": "Pricey, to a Brit"
+      },
+      {
+        "num": 52,
+        "clue": "Hand over"
+      },
+      {
+        "num": 53,
+        "clue": "Range that splits Russia"
+      },
+      {
+        "num": 55,
+        "clue": "Patience, it's said"
+      },
+      {
+        "num": 57,
+        "clue": "River through Florence"
+      },
+      {
+        "num": 59,
+        "clue": "Get under the skin of"
+      },
+      {
+        "num": 60,
+        "clue": "Clingy leftovers cover"
+      },
+      {
+        "num": 66,
+        "clue": "Seek damages from"
+      },
+      {
+        "num": 67,
+        "clue": "Poker player's giveaway"
+      },
+      {
+        "num": 68,
+        "clue": "Make pale"
+      },
+      {
+        "num": 69,
+        "clue": "Gate info: Abbr."
+      },
+      {
+        "num": 70,
+        "clue": "Do as told"
+      },
+      {
+        "num": 71,
+        "clue": "Won narrowly"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Pampering, for short"
+      },
+      {
+        "num": 2,
+        "clue": "Cheyenne's state: Abbr."
+      },
+      {
+        "num": 3,
+        "clue": "Hospital area, briefly"
+      },
+      {
+        "num": 4,
+        "clue": "Feel"
+      },
+      {
+        "num": 5,
+        "clue": "One giving private lessons"
+      },
+      {
+        "num": 6,
+        "clue": "Raincoat, in Britain"
+      },
+      {
+        "num": 7,
+        "clue": "Every last bit"
+      },
+      {
+        "num": 8,
+        "clue": "Hinder, as growth"
+      },
+      {
+        "num": 9,
+        "clue": "Rail rider of old"
+      },
+      {
+        "num": 10,
+        "clue": "Fruit for bobbing"
+      },
+      {
+        "num": 11,
+        "clue": "Convincing"
+      },
+      {
+        "num": 12,
+        "clue": "Game where you might shoot the moon"
+      },
+      {
+        "num": 14,
+        "clue": "Doubtfire's honorific"
+      },
+      {
+        "num": 18,
+        "clue": "Join, as oxen"
+      },
+      {
+        "num": 22,
+        "clue": "Like a towhead"
+      },
+      {
+        "num": 23,
+        "clue": "Org. with a draft"
+      },
+      {
+        "num": 24,
+        "clue": "Clapton who sang \"Layla\""
+      },
+      {
+        "num": 25,
+        "clue": "Rosso or bianco"
+      },
+      {
+        "num": 27,
+        "clue": "Whinnied"
+      },
+      {
+        "num": 28,
+        "clue": "Something a bloodhound picks up"
+      },
+      {
+        "num": 31,
+        "clue": "Eins + zwei"
+      },
+      {
+        "num": 32,
+        "clue": "Candy ___"
+      },
+      {
+        "num": 34,
+        "clue": "Elbow grease"
+      },
+      {
+        "num": 35,
+        "clue": "From a long way off"
+      },
+      {
+        "num": 37,
+        "clue": "Lean and sinewy"
+      },
+      {
+        "num": 39,
+        "clue": "Raison d'___"
+      },
+      {
+        "num": 40,
+        "clue": "Queen who let it go"
+      },
+      {
+        "num": 41,
+        "clue": "Not fake"
+      },
+      {
+        "num": 44,
+        "clue": "Inbox notes on Instagram, briefly"
+      },
+      {
+        "num": 45,
+        "clue": "Counsel"
+      },
+      {
+        "num": 46,
+        "clue": "Lebanon's capital"
+      },
+      {
+        "num": 47,
+        "clue": "Listened, old-style"
+      },
+      {
+        "num": 49,
+        "clue": "Substance of an argument"
+      },
+      {
+        "num": 52,
+        "clue": "A-lister"
+      },
+      {
+        "num": 53,
+        "clue": "\"I give!\""
+      },
+      {
+        "num": 54,
+        "clue": "Pulled oars"
+      },
+      {
+        "num": 56,
+        "clue": "Capable of"
+      },
+      {
+        "num": 58,
+        "clue": "Tease"
+      },
+      {
+        "num": 61,
+        "clue": "Pub pour"
+      },
+      {
+        "num": 62,
+        "clue": "Foxy"
+      },
+      {
+        "num": 63,
+        "clue": "Tabloid, disparagingly"
+      },
+      {
+        "num": 64,
+        "clue": "Hole in one"
+      },
+      {
+        "num": 65,
+        "clue": "Doctoral deg."
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in a kind of sandwich",
+  "publishedAt": "2026-10-30T20:15:21.904Z"
+}

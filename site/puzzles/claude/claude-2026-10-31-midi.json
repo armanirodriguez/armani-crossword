@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-10-31-midi",
+  "date": "2026-10-31",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Lunch Specials",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:/pHq0xROxasQG/Awm1pNMaC8PmHAsDhbKq++TdGIbUj5aI3SFFV0M7G/sjOy0nQcFSeWG4ZrlcawH/oRN+UIciUQro1u5MAGLUvCDu44jCEp",
+  "checksum": "682f2956",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Long, long story"
+      },
+      {
+        "num": 5,
+        "clue": "Pretends"
+      },
+      {
+        "num": 9,
+        "clue": "Bearded bloom"
+      },
+      {
+        "num": 10,
+        "clue": "Manhattan area south of Houston Street"
+      },
+      {
+        "num": 11,
+        "clue": "Place with a velvet rope and a bouncer"
+      },
+      {
+        "num": 13,
+        "clue": "Pedal on the right"
+      },
+      {
+        "num": 14,
+        "clue": "Sweatshirt features"
+      },
+      {
+        "num": 15,
+        "clue": "Put money on"
+      },
+      {
+        "num": 16,
+        "clue": "Pong maker"
+      },
+      {
+        "num": 19,
+        "clue": "Beesly of \"The Office\""
+      },
+      {
+        "num": 22,
+        "clue": "One with a secret identity"
+      },
+      {
+        "num": 24,
+        "clue": "From scratch"
+      },
+      {
+        "num": 25,
+        "clue": "Hydrox rival"
+      },
+      {
+        "num": 26,
+        "clue": "Apartments, slangily"
+      },
+      {
+        "num": 27,
+        "clue": "Sudden blast"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Spill the beans, informally"
+      },
+      {
+        "num": 2,
+        "clue": "Diva's showpiece"
+      },
+      {
+        "num": 3,
+        "clue": "Bookings for a band"
+      },
+      {
+        "num": 4,
+        "clue": "Fireplace residue"
+      },
+      {
+        "num": 5,
+        "clue": "Cravat cousin"
+      },
+      {
+        "num": 6,
+        "clue": "Aspen's st."
+      },
+      {
+        "num": 7,
+        "clue": "Dull sound of a fall"
+      },
+      {
+        "num": 8,
+        "clue": "Cries hard"
+      },
+      {
+        "num": 12,
+        "clue": "Not our"
+      },
+      {
+        "num": 15,
+        "clue": "Steeps"
+      },
+      {
+        "num": 16,
+        "clue": "Pronto"
+      },
+      {
+        "num": 17,
+        "clue": "Ahi, e.g."
+      },
+      {
+        "num": 18,
+        "clue": "Mimicked"
+      },
+      {
+        "num": 19,
+        "clue": "Machu Picchu's land"
+      },
+      {
+        "num": 20,
+        "clue": "Greek god of war"
+      },
+      {
+        "num": 21,
+        "clue": "Academic, so to speak"
+      },
+      {
+        "num": 23,
+        "clue": "Bogart, as the remote"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in a kind of sandwich",
+  "publishedAt": "2026-10-30T20:15:21.744Z"
+}
