@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-01-midi",
+  "date": "2026-11-01",
+  "kind": "midi",
+  "series": "claude",
+  "title": "In Your Feed",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:H+H8rJCtsBwaTjVkjgvHUPcnTFiylL6hmCFhE27OdKnygeyPfWf0exzhTX69d6m2i7nUXaE8VR4R78k/751Scmc3no7fbtrqEs6g7BlsVVmW",
+  "checksum": "53cc4c56",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Farm measure"
+      },
+      {
+        "num": 5,
+        "clue": "Big piece of marble"
+      },
+      {
+        "num": 9,
+        "clue": "Pasture sounds"
+      },
+      {
+        "num": 10,
+        "clue": "Undercover agent"
+      },
+      {
+        "num": 11,
+        "clue": "At once, old-style"
+      },
+      {
+        "num": 13,
+        "clue": "It's the limit, so they say"
+      },
+      {
+        "num": 14,
+        "clue": "Black-and-white snacks"
+      },
+      {
+        "num": 15,
+        "clue": "Preschooler"
+      },
+      {
+        "num": 16,
+        "clue": "Strong point"
+      },
+      {
+        "num": 19,
+        "clue": "Greek T"
+      },
+      {
+        "num": 22,
+        "clue": "Pics in a family album"
+      },
+      {
+        "num": 24,
+        "clue": "Busy place in a meadow"
+      },
+      {
+        "num": 25,
+        "clue": "Picnic crashers"
+      },
+      {
+        "num": 26,
+        "clue": "Fencing blade"
+      },
+      {
+        "num": 27,
+        "clue": "Close by"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Gear at a rock concert"
+      },
+      {
+        "num": 2,
+        "clue": "One in the kitchen"
+      },
+      {
+        "num": 3,
+        "clue": "Optimistic"
+      },
+      {
+        "num": 4,
+        "clue": "Winter clock setting in N.Y.: Abbr."
+      },
+      {
+        "num": 5,
+        "clue": "Sting"
+      },
+      {
+        "num": 6,
+        "clue": "Misplace"
+      },
+      {
+        "num": 7,
+        "clue": "Choir voice"
+      },
+      {
+        "num": 8,
+        "clue": "Spelling contests"
+      },
+      {
+        "num": 12,
+        "clue": "Owl calls"
+      },
+      {
+        "num": 15,
+        "clue": "Cone-shaped tent"
+      },
+      {
+        "num": 16,
+        "clue": "Arthur of tennis fame"
+      },
+      {
+        "num": 17,
+        "clue": "Cut with shears"
+      },
+      {
+        "num": 18,
+        "clue": "Goalie's highlight"
+      },
+      {
+        "num": 19,
+        "clue": "Attitude in one's speech"
+      },
+      {
+        "num": 20,
+        "clue": "\"___ girl!\""
+      },
+      {
+        "num": 21,
+        "clue": "Cold War superpower, for short"
+      },
+      {
+        "num": 23,
+        "clue": "Solo in a galaxy far, far away"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with a social media action",
+  "publishedAt": "2026-10-31T20:07:24.691Z"
+}

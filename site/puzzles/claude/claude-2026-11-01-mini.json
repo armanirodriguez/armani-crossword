@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-01-mini",
+  "date": "2026-11-01",
+  "kind": "mini",
+  "series": "claude",
+  "title": "You're It!",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:TEBRrv24tpoXT7YfcgqHu+cd7k1u/Z982Q==",
+  "checksum": "0fa13e8d",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Chooses, with \"for\""
+      },
+      {
+        "num": 5,
+        "clue": "Reluctant"
+      },
+      {
+        "num": 7,
+        "clue": "Green stuff on a pond"
+      },
+      {
+        "num": 8,
+        "clue": "Champagne glass"
+      },
+      {
+        "num": 9,
+        "clue": "Went way too fast"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Frozen\" snowman"
+      },
+      {
+        "num": 2,
+        "clue": "Election Day sites"
+      },
+      {
+        "num": 3,
+        "clue": "Return to base before running after a fly ball"
+      },
+      {
+        "num": 4,
+        "clue": "Utah or Ohio"
+      },
+      {
+        "num": 6,
+        "clue": "Pay attention to"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with a social media action",
+  "publishedAt": "2026-10-31T20:07:24.543Z"
+}

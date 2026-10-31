@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-01",
+  "date": "2026-11-01",
+  "series": "claude",
+  "title": "Status Updates",
+  "author": "Claude",
+  "note": "Handy hint: look at how the three longest answers begin — then hit like.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......#...#....",
+    "......#...#....",
+    "......#........",
+    "###......#.....",
+    "...#.....#...##",
+    ".....#.....#...",
+    "....#...#......",
+    "....#.....#....",
+    "......#...#....",
+    "...#.....#.....",
+    "##...#.....#...",
+    ".....#......###",
+    "........#......",
+    "....#...#......",
+    "....#...#......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:VXfboGAq+wGD62VlaPeuBqJv8vQ6KAG/Ld3wMeei/y122x4VcVWpyloAwUheMJCbv62C2YqHv56kg2qsg3imyFROuQuWA7mSsPlwuTsAvKjj1MOQqVYX5m/W5hfFpFilb+G8z8Oi/1mjFFfJ3/zc4mlisy2Q/9rvQhV50LeGCtpU0PS9AQjvncHiF32bmeNOGCMDNQs+hgdJM7F2N4KumEm937UFzD3A8NNf3CmXnzkg8aEn2bz1U7H4f2JoaLJ+/oSoLYVC7l/7rD9Xhfbu4uYoerV1iR90EfU7IjBXT+Qv",
+  "checksum": "1006a255",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Tear off along the perforation"
+      },
+      {
+        "num": 7,
+        "clue": "Mink's coat"
+      },
+      {
+        "num": 10,
+        "clue": "Fundamentals"
+      },
+      {
+        "num": 14,
+        "clue": "Delphi figure with all the answers"
+      },
+      {
+        "num": 15,
+        "clue": "Yoko who married a Beatle"
+      },
+      {
+        "num": 16,
+        "clue": "Gel source after a day at the beach"
+      },
+      {
+        "num": 17,
+        "clue": "Olive ___ (Italian chain)"
+      },
+      {
+        "num": 18,
+        "clue": "\"Time to hit the road!\""
+      },
+      {
+        "num": 20,
+        "clue": "Oil in many a kitchen"
+      },
+      {
+        "num": 22,
+        "clue": "Train that makes every stop"
+      },
+      {
+        "num": 23,
+        "clue": "Message in a bottle, maybe"
+      },
+      {
+        "num": 26,
+        "clue": "Shell game?"
+      },
+      {
+        "num": 27,
+        "clue": "Tattoo, slangily"
+      },
+      {
+        "num": 28,
+        "clue": "Day-after-the-gym complaints"
+      },
+      {
+        "num": 30,
+        "clue": "Professor's jacket fabric"
+      },
+      {
+        "num": 32,
+        "clue": "Put the kibosh on"
+      },
+      {
+        "num": 35,
+        "clue": "Happy ___"
+      },
+      {
+        "num": 36,
+        "clue": "Gulfstream, e.g."
+      },
+      {
+        "num": 37,
+        "clue": "Lentil or chickpea"
+      },
+      {
+        "num": 39,
+        "clue": "Things in a crew's hands"
+      },
+      {
+        "num": 40,
+        "clue": "Guiding spirit"
+      },
+      {
+        "num": 42,
+        "clue": "Org. with a Forever stamp"
+      },
+      {
+        "num": 43,
+        "clue": "Moves like a cat burglar"
+      },
+      {
+        "num": 45,
+        "clue": "Ram's mate"
+      },
+      {
+        "num": 46,
+        "clue": "\"Never mind that correction\""
+      },
+      {
+        "num": 47,
+        "clue": "Baseball bat wood"
+      },
+      {
+        "num": 48,
+        "clue": "\"Not ___!\""
+      },
+      {
+        "num": 50,
+        "clue": "Waldo question"
+      },
+      {
+        "num": 51,
+        "clue": "Bobby of the Bruins"
+      },
+      {
+        "num": 53,
+        "clue": "\"Later!\""
+      },
+      {
+        "num": 55,
+        "clue": "Color of a fire engine"
+      },
+      {
+        "num": 56,
+        "clue": "Faith observed during Ramadan"
+      },
+      {
+        "num": 58,
+        "clue": "Recently"
+      },
+      {
+        "num": 60,
+        "clue": "Settled as a go-between"
+      },
+      {
+        "num": 62,
+        "clue": "Homecoming crowd"
+      },
+      {
+        "num": 66,
+        "clue": "Eons"
+      },
+      {
+        "num": 67,
+        "clue": "Spelling contest"
+      },
+      {
+        "num": 68,
+        "clue": "It may be lost or kept"
+      },
+      {
+        "num": 69,
+        "clue": "Foal's mother"
+      },
+      {
+        "num": 70,
+        "clue": "Credit card fig."
+      },
+      {
+        "num": 71,
+        "clue": "Puts on, as a musical"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Tail, as a suspect"
+      },
+      {
+        "num": 2,
+        "clue": "Pitcher's stat"
+      },
+      {
+        "num": 3,
+        "clue": "Blacktop goo"
+      },
+      {
+        "num": 4,
+        "clue": "\"Back in Black\" band"
+      },
+      {
+        "num": 5,
+        "clue": "Spiked shoes"
+      },
+      {
+        "num": 6,
+        "clue": "Reddish hair dye"
+      },
+      {
+        "num": 7,
+        "clue": "Recess activity in which everyone copies the kid up front"
+      },
+      {
+        "num": 8,
+        "clue": "Jitteriness"
+      },
+      {
+        "num": 9,
+        "clue": "Go bad"
+      },
+      {
+        "num": 10,
+        "clue": "Hank with 755 homers"
+      },
+      {
+        "num": 11,
+        "clue": "Summer smash at the box office"
+      },
+      {
+        "num": 12,
+        "clue": "Fizzy drink"
+      },
+      {
+        "num": 13,
+        "clue": "Pitch successfully"
+      },
+      {
+        "num": 19,
+        "clue": "Water park attraction"
+      },
+      {
+        "num": 21,
+        "clue": "Group of eight musicians"
+      },
+      {
+        "num": 23,
+        "clue": "Fried Indian appetizer"
+      },
+      {
+        "num": 24,
+        "clue": "\"___ Eleven\" (Clooney heist film)"
+      },
+      {
+        "num": 25,
+        "clue": "One with a stake in the company"
+      },
+      {
+        "num": 29,
+        "clue": "Anna's sister in \"Frozen\""
+      },
+      {
+        "num": 31,
+        "clue": "\"Or ___!\""
+      },
+      {
+        "num": 33,
+        "clue": "Current unit"
+      },
+      {
+        "num": 34,
+        "clue": "Like matryoshka dolls"
+      },
+      {
+        "num": 36,
+        "clue": "Josh"
+      },
+      {
+        "num": 38,
+        "clue": "Rave"
+      },
+      {
+        "num": 41,
+        "clue": "Young hooter"
+      },
+      {
+        "num": 44,
+        "clue": "What goes around comes around, so they say"
+      },
+      {
+        "num": 49,
+        "clue": "Out like a light"
+      },
+      {
+        "num": 50,
+        "clue": "Billfold"
+      },
+      {
+        "num": 52,
+        "clue": "Poker bet increase"
+      },
+      {
+        "num": 54,
+        "clue": "Irish poet William Butler ___"
+      },
+      {
+        "num": 56,
+        "clue": "Mosque prayer guide"
+      },
+      {
+        "num": 57,
+        "clue": "Sonic's publisher"
+      },
+      {
+        "num": 59,
+        "clue": "\"3:10 to ___\" (western)"
+      },
+      {
+        "num": 61,
+        "clue": "Schedule letters, for now"
+      },
+      {
+        "num": 63,
+        "clue": "Hybrid's bragging point, briefly"
+      },
+      {
+        "num": 64,
+        "clue": "Born, on a wedding announcement"
+      },
+      {
+        "num": 65,
+        "clue": "W-2 collector"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with a social media action",
+  "publishedAt": "2026-10-31T20:07:24.854Z"
+}
