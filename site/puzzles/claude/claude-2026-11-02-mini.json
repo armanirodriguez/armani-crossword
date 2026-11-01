@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-02-mini",
+  "date": "2026-11-02",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Prime Time",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    "#....",
+    ".....",
+    "....#",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:pdDzufWc+OofPVUnpiUd2R6C6ZECH3no3w==",
+  "checksum": "16a2e44b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Close with a bang"
+      },
+      {
+        "num": 5,
+        "clue": "Classic sitcom set at a New York cab company"
+      },
+      {
+        "num": 6,
+        "clue": "Reasoning"
+      },
+      {
+        "num": 7,
+        "clue": "Cookie with a creme filling"
+      },
+      {
+        "num": 8,
+        "clue": "School semester"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Shop"
+      },
+      {
+        "num": 2,
+        "clue": "Light beer"
+      },
+      {
+        "num": 3,
+        "clue": "Self-evident truth"
+      },
+      {
+        "num": 4,
+        "clue": "Singer's amplifier, for short"
+      },
+      {
+        "num": 6,
+        "clue": "Parking area"
+      }
+    ]
+  },
+  "theme": "Popular TV sitcoms",
+  "publishedAt": "2026-11-01T20:15:45.196Z"
+}

@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-02",
+  "date": "2026-11-02",
+  "series": "claude",
+  "title": "Laugh Track",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#......#....",
+    "...#......#....",
+    "...#...........",
+    ".....###....###",
+    "....#......#...",
+    "....#...###....",
+    "###......#.....",
+    "...............",
+    ".....#......###",
+    "....###...#....",
+    "...#......#....",
+    "###....###.....",
+    "...........#...",
+    "....#......#...",
+    "....#......#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:eNseBKlD8dlYaHXUjUfVSGBNZsb2A4Vvm9rNfQ6fUPxIcyUtbUa5g1VB4SP/q0+kTGKEcwHQrfKCbJLsViRv2Z931+fFDZPrBoHF4ZtTsDFQ1o0xuSnQceMRiIFxHtEdKayYBiHJBE/6YmvbIH4AvheYnDf3tzfQwT8xrgJk2u6rUypE6QC3tKgxFdF97qodwjA9VrM8JdEayZsLR2/UF80i9/93TFqgYnYRpq8mxP1iSzqqYrtdsAxe6xYLUFujmJOnMZVlJs97+sso574qsJtqtCXjWjZuTTl0xSI0f+3A",
+  "checksum": "65088cd2",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "___ and outs (details)"
+      },
+      {
+        "num": 4,
+        "clue": "Transfer by contact, as a good habit (2 wds.)"
+      },
+      {
+        "num": 10,
+        "clue": "Indian flatbread"
+      },
+      {
+        "num": 14,
+        "clue": "Was introduced to"
+      },
+      {
+        "num": 15,
+        "clue": "Tel Aviv's country"
+      },
+      {
+        "num": 16,
+        "clue": "Greasy"
+      },
+      {
+        "num": 17,
+        "clue": "Golf score standard"
+      },
+      {
+        "num": 18,
+        "clue": "Pawnee-set NBC comedy starring Amy Poehler, familiarly"
+      },
+      {
+        "num": 20,
+        "clue": "Get up"
+      },
+      {
+        "num": 22,
+        "clue": "Not false"
+      },
+      {
+        "num": 23,
+        "clue": "Strauss of blue jeans fame"
+      },
+      {
+        "num": 24,
+        "clue": "Place to hang clothes"
+      },
+      {
+        "num": 27,
+        "clue": "Write quickly, as a note"
+      },
+      {
+        "num": 30,
+        "clue": "Greek god of war"
+      },
+      {
+        "num": 31,
+        "clue": "Edge of a cup"
+      },
+      {
+        "num": 32,
+        "clue": "John or Jane, for example"
+      },
+      {
+        "num": 33,
+        "clue": "River through London"
+      },
+      {
+        "num": 36,
+        "clue": "Guys"
+      },
+      {
+        "num": 37,
+        "clue": "Tim Allen sitcom about the host of a handyman TV show"
+      },
+      {
+        "num": 41,
+        "clue": "Out in the open"
+      },
+      {
+        "num": 42,
+        "clue": "Salty solution"
+      },
+      {
+        "num": 43,
+        "clue": "Camera part"
+      },
+      {
+        "num": 44,
+        "clue": "Summit"
+      },
+      {
+        "num": 45,
+        "clue": "Wander"
+      },
+      {
+        "num": 49,
+        "clue": "Plus"
+      },
+      {
+        "num": 50,
+        "clue": "Tension"
+      },
+      {
+        "num": 53,
+        "clue": "Car"
+      },
+      {
+        "num": 54,
+        "clue": "Swedish furniture store"
+      },
+      {
+        "num": 55,
+        "clue": "Change"
+      },
+      {
+        "num": 56,
+        "clue": "Long-running animated series about Homer, Marge, Bart, Lisa and Maggie"
+      },
+      {
+        "num": 62,
+        "clue": "One trip around the track"
+      },
+      {
+        "num": 63,
+        "clue": "Determination"
+      },
+      {
+        "num": 64,
+        "clue": "Instruments with 88 keys"
+      },
+      {
+        "num": 65,
+        "clue": "Fireplace residue"
+      },
+      {
+        "num": 66,
+        "clue": "Garfield's canine pal"
+      },
+      {
+        "num": 67,
+        "clue": "Most unusual"
+      },
+      {
+        "num": 68,
+        "clue": "Opposite of no"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Graceful African antelope"
+      },
+      {
+        "num": 2,
+        "clue": "Closer"
+      },
+      {
+        "num": 3,
+        "clue": "Try hard"
+      },
+      {
+        "num": 4,
+        "clue": "Ready to eat, as fruit"
+      },
+      {
+        "num": 5,
+        "clue": "Stars and Stripes land: Abbr."
+      },
+      {
+        "num": 6,
+        "clue": "\"It's cold!\""
+      },
+      {
+        "num": 7,
+        "clue": "Tree that grows from an acorn"
+      },
+      {
+        "num": 8,
+        "clue": "Celebrations, informally"
+      },
+      {
+        "num": 9,
+        "clue": "Roadside emergency light"
+      },
+      {
+        "num": 10,
+        "clue": "Point where lines meet"
+      },
+      {
+        "num": 11,
+        "clue": "What we breathe"
+      },
+      {
+        "num": 12,
+        "clue": "Pub drink"
+      },
+      {
+        "num": 13,
+        "clue": "The Big Apple: Abbr."
+      },
+      {
+        "num": 19,
+        "clue": "Squirrel's snack"
+      },
+      {
+        "num": 21,
+        "clue": "Female siblings"
+      },
+      {
+        "num": 24,
+        "clue": "Shellfish in chowder"
+      },
+      {
+        "num": 25,
+        "clue": "Walks unevenly"
+      },
+      {
+        "num": 26,
+        "clue": "Run, as a machine"
+      },
+      {
+        "num": 27,
+        "clue": "Green gemstone"
+      },
+      {
+        "num": 28,
+        "clue": "Sign of things to come"
+      },
+      {
+        "num": 29,
+        "clue": "Quiz"
+      },
+      {
+        "num": 32,
+        "clue": "Roman ___ (X or V, e.g.)"
+      },
+      {
+        "num": 34,
+        "clue": "Smash song"
+      },
+      {
+        "num": 35,
+        "clue": "Performances for one"
+      },
+      {
+        "num": 36,
+        "clue": "Lion's lair"
+      },
+      {
+        "num": 37,
+        "clue": "\"Hello,\" in Spanish"
+      },
+      {
+        "num": 38,
+        "clue": "Kitchen appliance for baking"
+      },
+      {
+        "num": 39,
+        "clue": "Repair"
+      },
+      {
+        "num": 40,
+        "clue": "Important guests, for short"
+      },
+      {
+        "num": 46,
+        "clue": "Money spent"
+      },
+      {
+        "num": 47,
+        "clue": "Soldier's \"Relax!\" command (2 wds.)"
+      },
+      {
+        "num": 48,
+        "clue": "Transforms"
+      },
+      {
+        "num": 50,
+        "clue": "Glide down a slope"
+      },
+      {
+        "num": 51,
+        "clue": "Speed of a piece of music"
+      },
+      {
+        "num": 52,
+        "clue": "Very fast"
+      },
+      {
+        "num": 54,
+        "clue": "Tropical getaway spot, often"
+      },
+      {
+        "num": 55,
+        "clue": "Helper: Abbr."
+      },
+      {
+        "num": 56,
+        "clue": "Number of socks in a pair"
+      },
+      {
+        "num": 57,
+        "clue": "Kept out of sight"
+      },
+      {
+        "num": 58,
+        "clue": "Manning who quarterbacked the Giants"
+      },
+      {
+        "num": 59,
+        "clue": "Unhappy"
+      },
+      {
+        "num": 60,
+        "clue": "Single"
+      },
+      {
+        "num": 61,
+        "clue": "Refusals"
+      }
+    ]
+  },
+  "theme": "Popular TV sitcoms",
+  "publishedAt": "2026-11-01T20:15:45.716Z"
+}

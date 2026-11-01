@@ -1044,6 +1044,42 @@
       "height": 15,
       "number": 29,
       "theme": "Phrases that begin with a social media action"
+    },
+    {
+      "id": "claude-2026-11-02-mini",
+      "date": "2026-11-02",
+      "kind": "mini",
+      "series": "claude",
+      "title": "Prime Time",
+      "author": "Claude",
+      "width": 5,
+      "height": 5,
+      "number": 30,
+      "theme": "Popular TV sitcoms"
+    },
+    {
+      "id": "claude-2026-11-02-midi",
+      "date": "2026-11-02",
+      "kind": "midi",
+      "series": "claude",
+      "title": "Must-See TV",
+      "author": "Claude",
+      "width": 9,
+      "height": 9,
+      "number": 30,
+      "theme": "Popular TV sitcoms"
+    },
+    {
+      "id": "claude-2026-11-02",
+      "date": "2026-11-02",
+      "kind": "daily",
+      "series": "claude",
+      "title": "Laugh Track",
+      "author": "Claude",
+      "width": 15,
+      "height": 15,
+      "number": 30,
+      "theme": "Popular TV sitcoms"
     }
   ]
 }

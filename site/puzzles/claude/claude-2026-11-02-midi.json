@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-02-midi",
+  "date": "2026-11-02",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Must-See TV",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:gIfVt0XS9+8DMQgNvGN1kVStT8SKs5mD6drVd2+tIuH4MhUO4ukxTQzKuMGfSyla8mZ0Uz3H8O36ta3Bn2SZS6Rn39EKZZ+VMiXIk/R9ryTW",
+  "checksum": "30e4a4d4",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Chances"
+      },
+      {
+        "num": 5,
+        "clue": "Votes in favor"
+      },
+      {
+        "num": 9,
+        "clue": "Length times width"
+      },
+      {
+        "num": 10,
+        "clue": "Soccer score"
+      },
+      {
+        "num": 11,
+        "clue": "Sitcom about the Tanner family of San Francisco"
+      },
+      {
+        "num": 13,
+        "clue": "Grin"
+      },
+      {
+        "num": 14,
+        "clue": "Color of a stop sign"
+      },
+      {
+        "num": 15,
+        "clue": "Sweet potato"
+      },
+      {
+        "num": 17,
+        "clue": "Discs in old jewel cases"
+      },
+      {
+        "num": 20,
+        "clue": "Fancy vacation home"
+      },
+      {
+        "num": 24,
+        "clue": "Classic TV comedy starring the Fonz and Richie Cunningham"
+      },
+      {
+        "num": 26,
+        "clue": "Opera solo"
+      },
+      {
+        "num": 27,
+        "clue": "Apple's voice assistant"
+      },
+      {
+        "num": 28,
+        "clue": "Look after"
+      },
+      {
+        "num": 29,
+        "clue": "Three, in Spanish"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Clumsy people"
+      },
+      {
+        "num": 2,
+        "clue": "Instrument you beat with sticks"
+      },
+      {
+        "num": 3,
+        "clue": "Sandwich shop"
+      },
+      {
+        "num": 4,
+        "clue": "Astronaut ___ Ride"
+      },
+      {
+        "num": 5,
+        "clue": "In the past"
+      },
+      {
+        "num": 6,
+        "clue": "Belonging to you"
+      },
+      {
+        "num": 7,
+        "clue": "Comfort"
+      },
+      {
+        "num": 8,
+        "clue": "Snow day toy"
+      },
+      {
+        "num": 12,
+        "clue": "Hard to lift"
+      },
+      {
+        "num": 16,
+        "clue": "Middle"
+      },
+      {
+        "num": 17,
+        "clue": "Talk casually"
+      },
+      {
+        "num": 18,
+        "clue": "Truth or ___"
+      },
+      {
+        "num": 19,
+        "clue": "Twirl"
+      },
+      {
+        "num": 21,
+        "clue": "Dragon's den"
+      },
+      {
+        "num": 22,
+        "clue": "Small harp of ancient Greece"
+      },
+      {
+        "num": 23,
+        "clue": "Sold ___ (with no guarantees)"
+      },
+      {
+        "num": 25,
+        "clue": "Writing tablet"
+      }
+    ]
+  },
+  "theme": "Popular TV sitcoms",
+  "publishedAt": "2026-11-01T20:15:45.408Z"
+}
