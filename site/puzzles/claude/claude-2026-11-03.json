@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-03",
+  "date": "2026-11-03",
+  "series": "claude",
+  "title": "Deep Pockets",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......##.......",
+    "......#........",
+    "......#........",
+    "...#....#...###",
+    "##...#.....#...",
+    "#....#...#.....",
+    "......#...#....",
+    "....#.....#....",
+    "....#...#......",
+    ".....#...#....#",
+    "...#.....#...##",
+    "###...#....#...",
+    "........#......",
+    "........#......",
+    ".......##......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:BNeusWJsjZ32gd6FxwJO1LqFazcVYHLUggZGpPwQ4watvGPq7IqMaNSxUdMQ+gJ/UgiKeck8zD1DF0Sg8Y9tH/ZvprGWlE6JjGQFpWnVGmbl2/W0PmqsKR+mjVFsRFcN4/cDaz+XoVpVCi23Gn5jjUNT4aK0dU3j4T97dILRDmaL4F4pX1bhc05pgn+VwvlvX+w08CS+N7/icQxjbEwXJ2yi0+fzehFdvB41ELat8V2BtsYcLtLQbhE+DjQxDYnx/c428JtTlbPAq43oS9B+i3jcG2JvoVUYTJZ2OSJnDvyU",
+  "checksum": "3729c0ca",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Walk like a duck"
+      },
+      {
+        "num": 7,
+        "clue": "Soaks up, like a sponge"
+      },
+      {
+        "num": 14,
+        "clue": "Concert venues for big tours"
+      },
+      {
+        "num": 15,
+        "clue": "Happening every two years"
+      },
+      {
+        "num": 16,
+        "clue": "Apartment renter"
+      },
+      {
+        "num": 17,
+        "clue": "Set of guiding beliefs"
+      },
+      {
+        "num": 18,
+        "clue": "Mai ___ (tiki bar cocktail)"
+      },
+      {
+        "num": 19,
+        "clue": "Holler"
+      },
+      {
+        "num": 21,
+        "clue": "Lever up, as a lid"
+      },
+      {
+        "num": 22,
+        "clue": "Business school deg."
+      },
+      {
+        "num": 24,
+        "clue": "Shut, as a door"
+      },
+      {
+        "num": 26,
+        "clue": "Purring pet"
+      },
+      {
+        "num": 29,
+        "clue": "Open a crack"
+      },
+      {
+        "num": 30,
+        "clue": "Insult, slangily"
+      },
+      {
+        "num": 31,
+        "clue": "Backup tire in the trunk"
+      },
+      {
+        "num": 33,
+        "clue": "Bleachers"
+      },
+      {
+        "num": 35,
+        "clue": "Pub pint"
+      },
+      {
+        "num": 37,
+        "clue": "Spheres"
+      },
+      {
+        "num": 38,
+        "clue": "\"What the ___?\""
+      },
+      {
+        "num": 39,
+        "clue": "Mistake"
+      },
+      {
+        "num": 41,
+        "clue": "Rare showbiz grand slam, for short"
+      },
+      {
+        "num": 42,
+        "clue": "Leaf-gathering tool"
+      },
+      {
+        "num": 43,
+        "clue": "Pea holder"
+      },
+      {
+        "num": 44,
+        "clue": "Cast members"
+      },
+      {
+        "num": 46,
+        "clue": "App audience"
+      },
+      {
+        "num": 48,
+        "clue": "Had dinner"
+      },
+      {
+        "num": 50,
+        "clue": "Snake's sound"
+      },
+      {
+        "num": 51,
+        "clue": "Obtain"
+      },
+      {
+        "num": 52,
+        "clue": "This very day"
+      },
+      {
+        "num": 54,
+        "clue": "German \"oh!\""
+      },
+      {
+        "num": 55,
+        "clue": "April 15 org."
+      },
+      {
+        "num": 56,
+        "clue": "Rhythm a drummer keeps"
+      },
+      {
+        "num": 58,
+        "clue": "Text message gasp"
+      },
+      {
+        "num": 61,
+        "clue": "Relating to strategy and maneuvers"
+      },
+      {
+        "num": 65,
+        "clue": "Hi-fi system"
+      },
+      {
+        "num": 67,
+        "clue": "Naval barrier at a port"
+      },
+      {
+        "num": 68,
+        "clue": "Shown to a restaurant booth, say"
+      },
+      {
+        "num": 69,
+        "clue": "Can't make up one's mind"
+      },
+      {
+        "num": 70,
+        "clue": "Relies on"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Light bulb unit"
+      },
+      {
+        "num": 2,
+        "clue": "Square footage, e.g."
+      },
+      {
+        "num": 3,
+        "clue": "Trucker-style blue outerwear"
+      },
+      {
+        "num": 4,
+        "clue": "Double helix stuff, briefly"
+      },
+      {
+        "num": 5,
+        "clue": "Cord worn around the neck to hold an ID badge"
+      },
+      {
+        "num": 6,
+        "clue": "East, in Spanish"
+      },
+      {
+        "num": 7,
+        "clue": "First ___ kit"
+      },
+      {
+        "num": 8,
+        "clue": "Microwave alerts"
+      },
+      {
+        "num": 9,
+        "clue": "Sleeper's noises"
+      },
+      {
+        "num": 10,
+        "clue": "Merely"
+      },
+      {
+        "num": 11,
+        "clue": "Copacabana's city, for short"
+      },
+      {
+        "num": 12,
+        "clue": "Grocery sack"
+      },
+      {
+        "num": 13,
+        "clue": "Crafty"
+      },
+      {
+        "num": 15,
+        "clue": "Six-pocket game room fixture"
+      },
+      {
+        "num": 20,
+        "clue": "Flat-screen type, briefly"
+      },
+      {
+        "num": 23,
+        "clue": "Monopoly money handler"
+      },
+      {
+        "num": 25,
+        "clue": "Norway's capital"
+      },
+      {
+        "num": 26,
+        "clue": "Knee-length bottoms with extra storage on the sides"
+      },
+      {
+        "num": 27,
+        "clue": "Vine-covered garden trellises"
+      },
+      {
+        "num": 28,
+        "clue": "Exams"
+      },
+      {
+        "num": 29,
+        "clue": "\"Relax, soldier!\""
+      },
+      {
+        "num": 32,
+        "clue": "___ justice"
+      },
+      {
+        "num": 33,
+        "clue": "\"Who knows?\" gesture"
+      },
+      {
+        "num": 34,
+        "clue": "Mo. after Aug."
+      },
+      {
+        "num": 36,
+        "clue": "Historical period"
+      },
+      {
+        "num": 40,
+        "clue": "___ trip"
+      },
+      {
+        "num": 45,
+        "clue": "Small talk"
+      },
+      {
+        "num": 47,
+        "clue": "Bowler's ten-pin knockdown on one ball"
+      },
+      {
+        "num": 49,
+        "clue": "Organ of sight"
+      },
+      {
+        "num": 53,
+        "clue": "Sesame Street grouch"
+      },
+      {
+        "num": 55,
+        "clue": "Mosquito bite result"
+      },
+      {
+        "num": 57,
+        "clue": "Helper: Abbr."
+      },
+      {
+        "num": 59,
+        "clue": "Track event"
+      },
+      {
+        "num": 60,
+        "clue": "Zeus and Apollo, for two"
+      },
+      {
+        "num": 61,
+        "clue": "Still up in the air, on a schedule"
+      },
+      {
+        "num": 62,
+        "clue": "Boxer who could \"float like a butterfly\""
+      },
+      {
+        "num": 63,
+        "clue": "Camp bed"
+      },
+      {
+        "num": 64,
+        "clue": "Commercials"
+      },
+      {
+        "num": 66,
+        "clue": "Water, in Paris"
+      }
+    ]
+  },
+  "theme": "Things that have pockets",
+  "publishedAt": "2026-11-02T20:12:43.598Z"
+}

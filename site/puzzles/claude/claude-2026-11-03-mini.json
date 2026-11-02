@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-03-mini",
+  "date": "2026-11-03",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Pocket-Sized",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:NIrxgRYEjVW5DwINpmp2ed+D5NFFx8WJLw==",
+  "checksum": "8724464c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Out of danger"
+      },
+      {
+        "num": 5,
+        "clue": "Button-down top that may hold a pen in its breast pocket"
+      },
+      {
+        "num": 6,
+        "clue": "Garden watering tubes"
+      },
+      {
+        "num": 7,
+        "clue": "Decorative wood or stone set into a surface"
+      },
+      {
+        "num": 8,
+        "clue": "Quick look"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Glowed brightly"
+      },
+      {
+        "num": 2,
+        "clue": "Grocery store walkway"
+      },
+      {
+        "num": 3,
+        "clue": "Neat ___ (very tidy person)"
+      },
+      {
+        "num": 4,
+        "clue": "Online marketplace for handmade crafts"
+      },
+      {
+        "num": 5,
+        "clue": "Ocean liner, e.g."
+      }
+    ]
+  },
+  "theme": "Things that have pockets",
+  "publishedAt": "2026-11-02T20:12:43.221Z"
+}
