@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-04",
+  "date": "2026-11-04",
+  "series": "claude",
+  "title": "End Zone",
+  "author": "Claude",
+  "note": "Huddle up: check how the three longest answers end.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....#....##....",
+    "....#....#.....",
+    "....#....#.....",
+    "##............#",
+    ".......#...#...",
+    ".....#....#....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....#....#.....",
+    "...#...#.......",
+    "#............##",
+    ".....#....#....",
+    ".....#....#....",
+    "....##....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:F+CkQ020rh4Kk021GE/qVxJ9FitZnz9MRauvI89t/2V6j8w9hKk0QdhHoNxOIgT9HDS/XLHCDZ3FH89rsPvAJgjVyF+EVelCvER1u+T96fDf0eaH6FF76B+aUA7XzR1PsyUVZHkiB4NGMHsSCQSA8nih2yZzefLQ1Hjw1MdERrYTIwzxuv4RtEvO40dupC70Ux3DfP4ZEqWPVr9RGQ++3tDkhMu8RxGn8hxlWOYmRbeLUhL7HFc5aUHbDkems+9Uac+MobavBspZiUYGHaC0o8xLQ6/mKfiU3RRiWBw1NbsS",
+  "checksum": "4a792fb3",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Gives a one-star review"
+      },
+      {
+        "num": 5,
+        "clue": "Recipe amt. bigger than a tsp."
+      },
+      {
+        "num": 9,
+        "clue": "It may be parted or curled"
+      },
+      {
+        "num": 13,
+        "clue": "Grad, informally"
+      },
+      {
+        "num": 14,
+        "clue": "Fall yard tool"
+      },
+      {
+        "num": 15,
+        "clue": "Mediterranean island nation"
+      },
+      {
+        "num": 16,
+        "clue": "Key ___ pie"
+      },
+      {
+        "num": 17,
+        "clue": "Lemon juice, chemically"
+      },
+      {
+        "num": 18,
+        "clue": "Speck of land in a lake"
+      },
+      {
+        "num": 19,
+        "clue": "Marvel hero from Wakanda (NFC South)"
+      },
+      {
+        "num": 22,
+        "clue": "Knack"
+      },
+      {
+        "num": 24,
+        "clue": "Spike who directed \"Do the Right Thing\""
+      },
+      {
+        "num": 25,
+        "clue": "Chat idly"
+      },
+      {
+        "num": 27,
+        "clue": "Broadway's big awards"
+      },
+      {
+        "num": 28,
+        "clue": "Office helper: Abbr."
+      },
+      {
+        "num": 30,
+        "clue": "Test version of an app"
+      },
+      {
+        "num": 31,
+        "clue": "It gets beaten before breakfast?"
+      },
+      {
+        "num": 32,
+        "clue": "Early bird?"
+      },
+      {
+        "num": 34,
+        "clue": "Pot, cups and saucers, as a group"
+      },
+      {
+        "num": 36,
+        "clue": "Cuddly toy named for a president (NFC North)"
+      },
+      {
+        "num": 38,
+        "clue": "Loud, as a Hawaiian shirt"
+      },
+      {
+        "num": 41,
+        "clue": "Quarterback's shoulder protection"
+      },
+      {
+        "num": 42,
+        "clue": "Sushi topping that pops"
+      },
+      {
+        "num": 45,
+        "clue": "Garfield's canine housemate"
+      },
+      {
+        "num": 46,
+        "clue": "Tied, as a score"
+      },
+      {
+        "num": 48,
+        "clue": "All thumbs"
+      },
+      {
+        "num": 50,
+        "clue": "Snow White's bespectacled dwarf"
+      },
+      {
+        "num": 51,
+        "clue": "Wrath"
+      },
+      {
+        "num": 52,
+        "clue": "Cozy eating nook"
+      },
+      {
+        "num": 54,
+        "clue": "Cord you can never find at 2% battery (AFC West)"
+      },
+      {
+        "num": 57,
+        "clue": "Filet mignon, for one"
+      },
+      {
+        "num": 58,
+        "clue": "How takeout is ordered"
+      },
+      {
+        "num": 59,
+        "clue": "Like the end of the pool you dive into"
+      },
+      {
+        "num": 62,
+        "clue": "Annoying, like a mosquito"
+      },
+      {
+        "num": 63,
+        "clue": "Ladder you walk under, superstitiously"
+      },
+      {
+        "num": 64,
+        "clue": "Totally uncool"
+      },
+      {
+        "num": 65,
+        "clue": "Liberal ___"
+      },
+      {
+        "num": 66,
+        "clue": "Cincinnati nine"
+      },
+      {
+        "num": 67,
+        "clue": "Singer James of \"At Last\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Buddy"
+      },
+      {
+        "num": 2,
+        "clue": "Boxer who could \"float like a butterfly\""
+      },
+      {
+        "num": 3,
+        "clue": "Like a dentist's shot"
+      },
+      {
+        "num": 4,
+        "clue": "Like old gym socks"
+      },
+      {
+        "num": 5,
+        "clue": "Expanse of real estate"
+      },
+      {
+        "num": 6,
+        "clue": "Spot for a barbecue or swing set"
+      },
+      {
+        "num": 7,
+        "clue": "Pass on"
+      },
+      {
+        "num": 8,
+        "clue": "Things pushed on a bike"
+      },
+      {
+        "num": 9,
+        "clue": "___ browns"
+      },
+      {
+        "num": 10,
+        "clue": "Claims without proof"
+      },
+      {
+        "num": 11,
+        "clue": "Repeat, in coding"
+      },
+      {
+        "num": 12,
+        "clue": "Snitch"
+      },
+      {
+        "num": 15,
+        "clue": "Tiny arachnid"
+      },
+      {
+        "num": 20,
+        "clue": "Grocery store lanes"
+      },
+      {
+        "num": 21,
+        "clue": "Caught, as a fish"
+      },
+      {
+        "num": 22,
+        "clue": "Had dinner"
+      },
+      {
+        "num": 23,
+        "clue": "Cranberry-growing site"
+      },
+      {
+        "num": 26,
+        "clue": "Halloween flier"
+      },
+      {
+        "num": 29,
+        "clue": "Video-call app"
+      },
+      {
+        "num": 30,
+        "clue": "Gold ___ (bullion piece)"
+      },
+      {
+        "num": 33,
+        "clue": "Stick (to)"
+      },
+      {
+        "num": 35,
+        "clue": "Letting up"
+      },
+      {
+        "num": 36,
+        "clue": "Draw"
+      },
+      {
+        "num": 37,
+        "clue": "Wrapped up, as a scraped knee"
+      },
+      {
+        "num": 38,
+        "clue": "Zeus or Thor"
+      },
+      {
+        "num": 39,
+        "clue": "New pet owner from a shelter"
+      },
+      {
+        "num": 40,
+        "clue": "Most loaded"
+      },
+      {
+        "num": 42,
+        "clue": "Back off"
+      },
+      {
+        "num": 43,
+        "clue": "Choose (to)"
+      },
+      {
+        "num": 44,
+        "clue": "Summer in Paris"
+      },
+      {
+        "num": 47,
+        "clue": "Arrow on a physics diagram"
+      },
+      {
+        "num": 49,
+        "clue": "Bit of a pine tree"
+      },
+      {
+        "num": 51,
+        "clue": "Very dark"
+      },
+      {
+        "num": 53,
+        "clue": "Golf clubs with numbers"
+      },
+      {
+        "num": 55,
+        "clue": "Acorn producers"
+      },
+      {
+        "num": 56,
+        "clue": "Where the heart is"
+      },
+      {
+        "num": 57,
+        "clue": "Place for a facial"
+      },
+      {
+        "num": 60,
+        "clue": "Ambulance worker, briefly"
+      },
+      {
+        "num": 61,
+        "clue": "Pod item"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end with an NFL team name, minus the S",
+  "publishedAt": "2026-11-03T20:10:49.515Z"
+}

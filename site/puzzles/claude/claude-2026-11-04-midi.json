@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-04-midi",
+  "date": "2026-11-04",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Final Drive",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....##...",
+    ".........",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    ".........",
+    "...##...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:fsW0l20mkHc7wcZqbt2b4E/LtU9N4/FgCCKNN0oF63iqof9tSIDs3p6XNVOOmMetT1C5zaXasoWl/orutUHbIHdu4M89WFv+Kyf4sLOjPdSv",
+  "checksum": "874a119b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "End-of-week cheer"
+      },
+      {
+        "num": 5,
+        "clue": "Day before Fri."
+      },
+      {
+        "num": 8,
+        "clue": "Experiences, as surgery"
+      },
+      {
+        "num": 11,
+        "clue": "National bird on the Great Seal (NFC East)"
+      },
+      {
+        "num": 12,
+        "clue": "Jaw-dropping wonder"
+      },
+      {
+        "num": 13,
+        "clue": "Envelope closers"
+      },
+      {
+        "num": 14,
+        "clue": "Dr. with Beats headphones"
+      },
+      {
+        "num": 15,
+        "clue": "Home of the Taj Mahal"
+      },
+      {
+        "num": 18,
+        "clue": "Date-pending letters"
+      },
+      {
+        "num": 21,
+        "clue": "Head of the station with the Dalmatian (AFC West)"
+      },
+      {
+        "num": 23,
+        "clue": "Compliment machine"
+      },
+      {
+        "num": 24,
+        "clue": "So far"
+      },
+      {
+        "num": 25,
+        "clue": "Emperor said to have fiddled while Rome burned"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Big brass instrument"
+      },
+      {
+        "num": 2,
+        "clue": "Chew on, like a puppy with a shoe"
+      },
+      {
+        "num": 3,
+        "clue": "Not working"
+      },
+      {
+        "num": 4,
+        "clue": "Gave dinner to"
+      },
+      {
+        "num": 5,
+        "clue": "Frat party costume"
+      },
+      {
+        "num": 6,
+        "clue": "Beatles hit with an exclamation point"
+      },
+      {
+        "num": 7,
+        "clue": "Purposes"
+      },
+      {
+        "num": 9,
+        "clue": "Bend, as light in a prism"
+      },
+      {
+        "num": 10,
+        "clue": "Strong wind"
+      },
+      {
+        "num": 14,
+        "clue": "Keto or paleo"
+      },
+      {
+        "num": 15,
+        "clue": "Uncertain"
+      },
+      {
+        "num": 16,
+        "clue": "River of Cairo"
+      },
+      {
+        "num": 17,
+        "clue": "\"Darn it!\""
+      },
+      {
+        "num": 18,
+        "clue": "Flat one may need changing"
+      },
+      {
+        "num": 19,
+        "clue": "Tailgate cooler contents, often"
+      },
+      {
+        "num": 20,
+        "clue": "Big, round hairdo"
+      },
+      {
+        "num": 22,
+        "clue": "Egg layer"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end with an NFL team name, minus the S",
+  "publishedAt": "2026-11-03T20:10:49.346Z"
+}

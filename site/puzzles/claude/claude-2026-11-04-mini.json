@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-04-mini",
+  "date": "2026-11-04",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Last Down",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:B3FU6NOq0nBdwz5tYqwySZcZy1ujQJgBLQ==",
+  "checksum": "0b9c110e",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "House, in Spanish"
+      },
+      {
+        "num": 5,
+        "clue": "Texas hold'em, for one"
+      },
+      {
+        "num": 6,
+        "clue": "\"Get lost!\" (NFC West)"
+      },
+      {
+        "num": 7,
+        "clue": "Covered in chimney dust"
+      },
+      {
+        "num": 8,
+        "clue": "Beach souvenirs on the skin"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Hot drink with marshmallows"
+      },
+      {
+        "num": 2,
+        "clue": "Ohio city, LeBron's hometown"
+      },
+      {
+        "num": 3,
+        "clue": "Stadium rows are full of them"
+      },
+      {
+        "num": 4,
+        "clue": "Navy's rival in an annual football game"
+      },
+      {
+        "num": 5,
+        "clue": "\"Hey, over here!\""
+      }
+    ]
+  },
+  "theme": "Words and phrases that end with an NFL team name, minus the S",
+  "publishedAt": "2026-11-03T20:10:49.119Z"
+}
