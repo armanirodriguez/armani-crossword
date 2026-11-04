@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-05-mini",
+  "date": "2026-11-05",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Mental Math",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:0PGhickMLe53gVZKt0ByTc2jGCn7bsAjlQ==",
+  "checksum": "e714a4d5",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Serves that go untouched"
+      },
+      {
+        "num": 5,
+        "clue": "Cowboy's leather leggings"
+      },
+      {
+        "num": 7,
+        "clue": "Finger or toe, to an anatomist"
+      },
+      {
+        "num": 8,
+        "clue": "Largest Greek island"
+      },
+      {
+        "num": 9,
+        "clue": "Chop veggies ahead of time, say"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Back in Black\" band"
+      },
+      {
+        "num": 2,
+        "clue": "Cricket's sound"
+      },
+      {
+        "num": 3,
+        "clue": "Raring to go"
+      },
+      {
+        "num": 4,
+        "clue": "Ill will"
+      },
+      {
+        "num": 6,
+        "clue": "Dance move"
+      }
+    ]
+  },
+  "theme": "Math terms used in a non-math sense",
+  "publishedAt": "2026-11-04T20:14:02.563Z"
+}

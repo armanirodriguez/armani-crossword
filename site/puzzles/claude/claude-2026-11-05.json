@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-05",
+  "date": "2026-11-05",
+  "series": "claude",
+  "title": "Doing the Math",
+  "author": "Claude",
+  "note": "Do the math: look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....###....#...",
+    "......#....#...",
+    "......#....#...",
+    "##............#",
+    ".......#.......",
+    "....##...##....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....##...##....",
+    ".......#.......",
+    "#............##",
+    "...#....#......",
+    "...#....#......",
+    "...#....###...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:x5Nr8l/fBcIdgdfnwpKoHRUVqJNW++AxOXMovKVqo7P4WvR+jfNpFJRDoMxbB7YyKlyEPOjnX8ZmFQjXgBqRQ2HA0otTa164oLaG9Y6PGb1OcjPAd37+SxbtVph9uu0uHVHsHGzDS1DbLk4msnV+Wk8U3KoNJpbYuzTymqMFGf6xBhkJ892fy5s8Y53Rp/UgIPVX4b5wphPeqYla/hCPQSpX++p9MoPPsgWjMFOBaDj2AqE43ECgJOupCL+f0IViJnkFBxaWn1/6bObviQPWntZFAfbTgPVUCxtvp/F4Nq/V",
+  "checksum": "9607b948",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Risotto grain"
+      },
+      {
+        "num": 5,
+        "clue": "Juicy gossip"
+      },
+      {
+        "num": 9,
+        "clue": "Craft"
+      },
+      {
+        "num": 12,
+        "clue": "Punctual"
+      },
+      {
+        "num": 15,
+        "clue": "Machu Picchu builder"
+      },
+      {
+        "num": 16,
+        "clue": "Cow's comment"
+      },
+      {
+        "num": 17,
+        "clue": "Club card holder"
+      },
+      {
+        "num": 18,
+        "clue": "Ajar"
+      },
+      {
+        "num": 19,
+        "clue": "Have a bite"
+      },
+      {
+        "num": 20,
+        "clue": "Mighty Morphin teen heroes of '90s TV"
+      },
+      {
+        "num": 23,
+        "clue": "Super-salty lake where swimmers float easily"
+      },
+      {
+        "num": 25,
+        "clue": "Breather"
+      },
+      {
+        "num": 27,
+        "clue": "Lots of"
+      },
+      {
+        "num": 28,
+        "clue": "Animal doc"
+      },
+      {
+        "num": 30,
+        "clue": "Rapper-turned-\"Law & Order: SVU\" actor"
+      },
+      {
+        "num": 31,
+        "clue": "Shed tears"
+      },
+      {
+        "num": 32,
+        "clue": "Earnest appeal"
+      },
+      {
+        "num": 34,
+        "clue": "False front"
+      },
+      {
+        "num": 36,
+        "clue": "2004 Lindsay Lohan comedy about the Plastics"
+      },
+      {
+        "num": 38,
+        "clue": "Butter or jam"
+      },
+      {
+        "num": 41,
+        "clue": "Roller coaster feature"
+      },
+      {
+        "num": 42,
+        "clue": "Website help section, briefly"
+      },
+      {
+        "num": 45,
+        "clue": "Mine finds"
+      },
+      {
+        "num": 46,
+        "clue": "Goldfish or gerbil, e.g."
+      },
+      {
+        "num": 47,
+        "clue": "Unit of electrical potential"
+      },
+      {
+        "num": 48,
+        "clue": "Where boardwalks are found"
+      },
+      {
+        "num": 51,
+        "clue": "Has lofty goals"
+      },
+      {
+        "num": 54,
+        "clue": "Detective's top person of interest"
+      },
+      {
+        "num": 56,
+        "clue": "Mai ___ (tiki drink)"
+      },
+      {
+        "num": 57,
+        "clue": "Circus segments"
+      },
+      {
+        "num": 58,
+        "clue": "Sharp-witted"
+      },
+      {
+        "num": 61,
+        "clue": "Coffee dispenser at a big event"
+      },
+      {
+        "num": 62,
+        "clue": "Strong wind"
+      },
+      {
+        "num": 63,
+        "clue": "Pebbles and boulders"
+      },
+      {
+        "num": 64,
+        "clue": "Sit up for a treat, as a dog"
+      },
+      {
+        "num": 65,
+        "clue": "Checked out"
+      },
+      {
+        "num": 66,
+        "clue": "Broadway musical with \"Seasons of Love\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Record speed letters"
+      },
+      {
+        "num": 2,
+        "clue": "Anger"
+      },
+      {
+        "num": 3,
+        "clue": "Three's ___"
+      },
+      {
+        "num": 4,
+        "clue": "Personify"
+      },
+      {
+        "num": 5,
+        "clue": "French fashion house"
+      },
+      {
+        "num": 6,
+        "clue": "Somewhat"
+      },
+      {
+        "num": 7,
+        "clue": "Make a ___ (throw a fit)"
+      },
+      {
+        "num": 8,
+        "clue": "Chills with friends, slangily"
+      },
+      {
+        "num": 9,
+        "clue": "\"___ the Beautiful\""
+      },
+      {
+        "num": 10,
+        "clue": "Mocked at a celebrity dinner"
+      },
+      {
+        "num": 11,
+        "clue": "Little one"
+      },
+      {
+        "num": 13,
+        "clue": "Church seats"
+      },
+      {
+        "num": 14,
+        "clue": "Something to bark up?"
+      },
+      {
+        "num": 21,
+        "clue": "Bird in a Poe poem"
+      },
+      {
+        "num": 22,
+        "clue": "Long heroic tales"
+      },
+      {
+        "num": 23,
+        "clue": "Run-___ (hip-hop trio)"
+      },
+      {
+        "num": 24,
+        "clue": "Something to lend"
+      },
+      {
+        "num": 26,
+        "clue": "Summer, in Paris"
+      },
+      {
+        "num": 29,
+        "clue": "Two under par"
+      },
+      {
+        "num": 32,
+        "clue": "Princess's mattress problem"
+      },
+      {
+        "num": 33,
+        "clue": "Young fellow"
+      },
+      {
+        "num": 34,
+        "clue": "To and ___"
+      },
+      {
+        "num": 35,
+        "clue": "Swiss peak"
+      },
+      {
+        "num": 36,
+        "clue": "Argentine soccer great Lionel"
+      },
+      {
+        "num": 37,
+        "clue": "Tiny bits"
+      },
+      {
+        "num": 38,
+        "clue": "Distress call"
+      },
+      {
+        "num": 39,
+        "clue": "Get ready"
+      },
+      {
+        "num": 40,
+        "clue": "Raising, as children"
+      },
+      {
+        "num": 42,
+        "clue": "Cookie content?"
+      },
+      {
+        "num": 43,
+        "clue": "Pub pour"
+      },
+      {
+        "num": 44,
+        "clue": "Gal. parts"
+      },
+      {
+        "num": 46,
+        "clue": "Mortar's partner"
+      },
+      {
+        "num": 47,
+        "clue": "Winner"
+      },
+      {
+        "num": 49,
+        "clue": "Picture"
+      },
+      {
+        "num": 50,
+        "clue": "Rot"
+      },
+      {
+        "num": 52,
+        "clue": "Places for massages"
+      },
+      {
+        "num": 53,
+        "clue": "Nuisance"
+      },
+      {
+        "num": 55,
+        "clue": "Secondhand"
+      },
+      {
+        "num": 56,
+        "clue": "Bath"
+      },
+      {
+        "num": 59,
+        "clue": "Perfect score for a gymnast, once"
+      },
+      {
+        "num": 60,
+        "clue": "N.Y. clock setting in winter"
+      }
+    ]
+  },
+  "theme": "Math terms used in a non-math sense",
+  "publishedAt": "2026-11-04T20:14:02.911Z"
+}

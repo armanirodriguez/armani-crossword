@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-05-midi",
+  "date": "2026-11-05",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Word Problems",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:SRu566I0dhoBb44tZkJbz6Btvk4s0dHCdMlp1dcXC4lCaoj8cF7w7Nr6cuwikNdZvzl0gRwx1Poyi8r2yrYK2dKxJNRKoCuw6FP7df8gYAJT",
+  "checksum": "98ab47a3",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Apartments, in slang"
+      },
+      {
+        "num": 5,
+        "clue": "Tons"
+      },
+      {
+        "num": 9,
+        "clue": "Not taped"
+      },
+      {
+        "num": 10,
+        "clue": "Indie mag, often photocopied"
+      },
+      {
+        "num": 11,
+        "clue": "Felix and Oscar, in a Neil Simon play"
+      },
+      {
+        "num": 13,
+        "clue": "\"Absolutely!\""
+      },
+      {
+        "num": 14,
+        "clue": "Says grace"
+      },
+      {
+        "num": 15,
+        "clue": "Had dinner"
+      },
+      {
+        "num": 16,
+        "clue": "Cook-off dish, often with beans"
+      },
+      {
+        "num": 19,
+        "clue": "Friendly retriever, for short"
+      },
+      {
+        "num": 22,
+        "clue": "What an investigator digs for, fittingly?"
+      },
+      {
+        "num": 24,
+        "clue": "Poker pot starter"
+      },
+      {
+        "num": 25,
+        "clue": "Slide on ice"
+      },
+      {
+        "num": 26,
+        "clue": "Put up with"
+      },
+      {
+        "num": 27,
+        "clue": "Pod contents"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Cunning tactic"
+      },
+      {
+        "num": 2,
+        "clue": "Right-hand person"
+      },
+      {
+        "num": 3,
+        "clue": "Discs in an old movie collection"
+      },
+      {
+        "num": 4,
+        "clue": "Moment, briefly"
+      },
+      {
+        "num": 5,
+        "clue": "Sky blue"
+      },
+      {
+        "num": 6,
+        "clue": "\"Levitating\" singer Dua ___"
+      },
+      {
+        "num": 7,
+        "clue": "Sole"
+      },
+      {
+        "num": 8,
+        "clue": "Casual shirts"
+      },
+      {
+        "num": 12,
+        "clue": "___ nerve"
+      },
+      {
+        "num": 15,
+        "clue": "Take in, as pants"
+      },
+      {
+        "num": 16,
+        "clue": "Grouch"
+      },
+      {
+        "num": 17,
+        "clue": "Sharpen"
+      },
+      {
+        "num": 18,
+        "clue": "Tiny bit"
+      },
+      {
+        "num": 19,
+        "clue": "Skywalker of \"Star Wars\""
+      },
+      {
+        "num": 20,
+        "clue": "Most populous continent"
+      },
+      {
+        "num": 21,
+        "clue": "Twins and queens, e.g.?"
+      },
+      {
+        "num": 23,
+        "clue": "Cleopatra's snake"
+      }
+    ]
+  },
+  "theme": "Math terms used in a non-math sense",
+  "publishedAt": "2026-11-04T20:14:02.720Z"
+}
