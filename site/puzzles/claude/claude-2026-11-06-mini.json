@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-06-mini",
+  "date": "2026-11-06",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Knock on Wood",
+  "author": "Claude",
+  "note": "Look closely at SPEAR: something's growing in it.",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:CGY++THX2wlc30fIP4Ayfw0SGRdsZubKxw==",
+  "checksum": "5bc54b30",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Skip meals on purpose"
+      },
+      {
+        "num": 5,
+        "clue": "Extreme, as a marathon"
+      },
+      {
+        "num": 7,
+        "clue": "Fork over, as a pickle?"
+      },
+      {
+        "num": 8,
+        "clue": "What a big oak casts"
+      },
+      {
+        "num": 9,
+        "clue": "Pub pints"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "To-do"
+      },
+      {
+        "num": 2,
+        "clue": "Leader of the pack"
+      },
+      {
+        "num": 3,
+        "clue": "Bargain-bin find"
+      },
+      {
+        "num": 4,
+        "clue": "Deal before the deadline"
+      },
+      {
+        "num": 6,
+        "clue": "Greek god of war"
+      }
+    ]
+  },
+  "theme": "Trees hidden in words and phrases",
+  "publishedAt": "2026-11-05T20:10:48.315Z"
+}

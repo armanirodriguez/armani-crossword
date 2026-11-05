@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-06",
+  "date": "2026-11-06",
+  "series": "claude",
+  "title": "Can't See the Forest",
+  "author": "Claude",
+  "note": "Look closely at the three longest answers: something's growing inside each one.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#.....",
+    "#............##",
+    "......##...#...",
+    ".....#....#....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....#....#.....",
+    "...#...##......",
+    "##............#",
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:YPCmgkKuuCiH65uU1b56+VgyN2t8cYxkBAXb1kNR4WpbUxxF6nCf7zg4kmJZjL1TN8dYnrC7f25cz7BxGRAzNUHdcqObYLbkz+Q7+VJLPvxFxbhGDMstH0nFOkbLM/QC6RQD1ESd3qQmcIN2ai+Qe9AZmmCea2Swn+2zyjPCKkegXOtykUovuYF+cNBMTBgPe2sQME83B/3MnQJvT9JPtqPWqlCekNDGTCKpCAwfVsp6JUdyvFh7/bqrgxBEjOoGXduJvm6KFbvzk/7nQ/2rGKBSk3OgFcccatKA/mI7+Mfp",
+  "checksum": "aa148ed7",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Things turned up at gigs"
+      },
+      {
+        "num": 5,
+        "clue": "Do a little horse trading"
+      },
+      {
+        "num": 9,
+        "clue": "Brought on board"
+      },
+      {
+        "num": 14,
+        "clue": "Witnessed"
+      },
+      {
+        "num": 15,
+        "clue": "Fey of \"30 Rock\""
+      },
+      {
+        "num": 16,
+        "clue": "Something wafting from a bakery"
+      },
+      {
+        "num": 17,
+        "clue": "Where a pad might go"
+      },
+      {
+        "num": 18,
+        "clue": "Madrid-to-Valencia direction"
+      },
+      {
+        "num": 19,
+        "clue": "Rounds of fighting"
+      },
+      {
+        "num": 20,
+        "clue": "Like a landslide victory"
+      },
+      {
+        "num": 23,
+        "clue": "Values dearly"
+      },
+      {
+        "num": 24,
+        "clue": "Destiny"
+      },
+      {
+        "num": 25,
+        "clue": "With it"
+      },
+      {
+        "num": 28,
+        "clue": "Headquartered"
+      },
+      {
+        "num": 29,
+        "clue": "Biblical brother who sold his birthright"
+      },
+      {
+        "num": 31,
+        "clue": "Rough cut for a record label"
+      },
+      {
+        "num": 32,
+        "clue": "Librarian's request"
+      },
+      {
+        "num": 33,
+        "clue": "Ended in a tie"
+      },
+      {
+        "num": 35,
+        "clue": "Like a close shave"
+      },
+      {
+        "num": 37,
+        "clue": "Whistler in the kitchen"
+      },
+      {
+        "num": 39,
+        "clue": "Insist on"
+      },
+      {
+        "num": 42,
+        "clue": "Unable to find one's way"
+      },
+      {
+        "num": 43,
+        "clue": "Pigpen coating"
+      },
+      {
+        "num": 46,
+        "clue": "Apple tablet"
+      },
+      {
+        "num": 47,
+        "clue": "Bit of land in the sea"
+      },
+      {
+        "num": 49,
+        "clue": "Field of endeavor"
+      },
+      {
+        "num": 51,
+        "clue": "Savage, as a critic might"
+      },
+      {
+        "num": 52,
+        "clue": "Cleopatra's serpent"
+      },
+      {
+        "num": 53,
+        "clue": "Fairly"
+      },
+      {
+        "num": 54,
+        "clue": "Ringer at the checkout"
+      },
+      {
+        "num": 58,
+        "clue": "Rips"
+      },
+      {
+        "num": 60,
+        "clue": "Farm measure"
+      },
+      {
+        "num": 61,
+        "clue": "Colorful eye ring"
+      },
+      {
+        "num": 63,
+        "clue": "Barrier against a rising river"
+      },
+      {
+        "num": 64,
+        "clue": "Fan noise"
+      },
+      {
+        "num": 65,
+        "clue": "Stagger"
+      },
+      {
+        "num": 66,
+        "clue": "Spiked shoe"
+      },
+      {
+        "num": 67,
+        "clue": "Cuts off, as limbs"
+      },
+      {
+        "num": 68,
+        "clue": "Swirl in a stream"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Want to know"
+      },
+      {
+        "num": 2,
+        "clue": "Candelabrum lit at Hanukkah"
+      },
+      {
+        "num": 3,
+        "clue": "Out of sorts"
+      },
+      {
+        "num": 4,
+        "clue": "\"Gesundheit\" prompter"
+      },
+      {
+        "num": 5,
+        "clue": "Frets"
+      },
+      {
+        "num": 6,
+        "clue": "It may be made on a star"
+      },
+      {
+        "num": 7,
+        "clue": "Pot starter"
+      },
+      {
+        "num": 8,
+        "clue": "Saffron-scented Spanish dish"
+      },
+      {
+        "num": 9,
+        "clue": "Nun's attire"
+      },
+      {
+        "num": 10,
+        "clue": "Club in a golf bag"
+      },
+      {
+        "num": 11,
+        "clue": "Less polished"
+      },
+      {
+        "num": 12,
+        "clue": "First responder, for short"
+      },
+      {
+        "num": 13,
+        "clue": "\"___ Boot\" (1981 submarine film)"
+      },
+      {
+        "num": 21,
+        "clue": "Blush"
+      },
+      {
+        "num": 22,
+        "clue": "Steeds"
+      },
+      {
+        "num": 23,
+        "clue": "\"Sesame Street\" channel"
+      },
+      {
+        "num": 26,
+        "clue": "\"In my view,\" in a text"
+      },
+      {
+        "num": 27,
+        "clue": "Comic-book punch sound"
+      },
+      {
+        "num": 29,
+        "clue": "Squeal at the sight of a mouse"
+      },
+      {
+        "num": 30,
+        "clue": "Peachy"
+      },
+      {
+        "num": 31,
+        "clue": "Rap mogul with Beats headphones"
+      },
+      {
+        "num": 34,
+        "clue": "Peppery salad slice"
+      },
+      {
+        "num": 36,
+        "clue": "Places to say \"I do\""
+      },
+      {
+        "num": 37,
+        "clue": "Smidgen"
+      },
+      {
+        "num": 38,
+        "clue": "Sock end that may wear through"
+      },
+      {
+        "num": 39,
+        "clue": "Chip's partner"
+      },
+      {
+        "num": 40,
+        "clue": "Clean Air Act enforcer: Abbr."
+      },
+      {
+        "num": 41,
+        "clue": "Den with a big TV and a recliner, perhaps"
+      },
+      {
+        "num": 43,
+        "clue": "Like some downtown parking"
+      },
+      {
+        "num": 44,
+        "clue": "Never put to the test"
+      },
+      {
+        "num": 45,
+        "clue": "Mon. or Tue."
+      },
+      {
+        "num": 48,
+        "clue": "Suburban spread"
+      },
+      {
+        "num": 50,
+        "clue": "Hit the hay"
+      },
+      {
+        "num": 52,
+        "clue": "Plus on a balance sheet"
+      },
+      {
+        "num": 53,
+        "clue": "Jetties"
+      },
+      {
+        "num": 55,
+        "clue": "Length times width"
+      },
+      {
+        "num": 56,
+        "clue": "Canyon comeback"
+      },
+      {
+        "num": 57,
+        "clue": "Handle"
+      },
+      {
+        "num": 58,
+        "clue": "Gentle handling, for short"
+      },
+      {
+        "num": 59,
+        "clue": "Slippery swimmer"
+      },
+      {
+        "num": 62,
+        "clue": "Foxy"
+      }
+    ]
+  },
+  "theme": "Trees hidden in words and phrases",
+  "publishedAt": "2026-11-05T20:10:48.573Z"
+}

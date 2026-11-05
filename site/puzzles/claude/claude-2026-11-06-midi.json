@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-06-midi",
+  "date": "2026-11-06",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Branching Out",
+  "author": "Claude",
+  "note": "The two longest answers each have something growing inside them.",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...###...",
+    "....#....",
+    "....#....",
+    ".........",
+    "###...###",
+    ".........",
+    "....#....",
+    "....#....",
+    "...###..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:g2RAI1mwH8XLqoSHqlBx6SRk89JQZeMqwEGSGwnSomj+JDk+7BjE8Eb5VHajN0PoRe5OsaFkJ/Pmo7Zs23w8UEFyQ9qZU5V/s+zl92jt0b3U",
+  "checksum": "bc6f647f",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Food-label regulator: Abbr."
+      },
+      {
+        "num": 4,
+        "clue": "Video call annoyance"
+      },
+      {
+        "num": 7,
+        "clue": "Smallest bit"
+      },
+      {
+        "num": 9,
+        "clue": "Performer who stays silent"
+      },
+      {
+        "num": 10,
+        "clue": "Hit the mall"
+      },
+      {
+        "num": 11,
+        "clue": "Couple in the gossip columns"
+      },
+      {
+        "num": 12,
+        "clue": "What money supposedly can't buy"
+      },
+      {
+        "num": 14,
+        "clue": "Pitcher's stat"
+      },
+      {
+        "num": 15,
+        "clue": "Coat check spot"
+      },
+      {
+        "num": 21,
+        "clue": "Lane in the Daily Planet newsroom"
+      },
+      {
+        "num": 22,
+        "clue": "Advantage"
+      },
+      {
+        "num": 23,
+        "clue": "Up to the task"
+      },
+      {
+        "num": 24,
+        "clue": "Of two minds"
+      },
+      {
+        "num": 25,
+        "clue": "\"You got it\""
+      },
+      {
+        "num": 26,
+        "clue": "Like a stop sign"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Angle (for)"
+      },
+      {
+        "num": 2,
+        "clue": "Qatar's capital"
+      },
+      {
+        "num": 3,
+        "clue": "Crowning"
+      },
+      {
+        "num": 4,
+        "clue": "Low-cal, as some snacks"
+      },
+      {
+        "num": 5,
+        "clue": "Iowa State's city"
+      },
+      {
+        "num": 6,
+        "clue": "Real finds"
+      },
+      {
+        "num": 8,
+        "clue": "Placate"
+      },
+      {
+        "num": 9,
+        "clue": "Tall tower beside a mosque"
+      },
+      {
+        "num": 13,
+        "clue": "Rub the wrong way"
+      },
+      {
+        "num": 15,
+        "clue": "Potter's medium"
+      },
+      {
+        "num": 16,
+        "clue": "Earring site"
+      },
+      {
+        "num": 17,
+        "clue": "Some gallery canvases"
+      },
+      {
+        "num": 18,
+        "clue": "Whiff"
+      },
+      {
+        "num": 19,
+        "clue": "Shrek, for one"
+      },
+      {
+        "num": 20,
+        "clue": "Patch up"
+      }
+    ]
+  },
+  "theme": "Trees hidden in words and phrases",
+  "publishedAt": "2026-11-05T20:10:48.444Z"
+}
