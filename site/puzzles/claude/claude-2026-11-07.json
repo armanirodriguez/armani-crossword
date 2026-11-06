@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-07",
+  "date": "2026-11-07",
+  "series": "claude",
+  "title": "Garden Variety",
+  "author": "Claude",
+  "note": "Garden hint: look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....###....#...",
+    ".....#.....#...",
+    "...........#...",
+    "###.....##.....",
+    "#......#.......",
+    "...##.....#....",
+    ".....##.....###",
+    "...............",
+    "###.....##.....",
+    "....#.....##...",
+    ".......#......#",
+    ".....##.....###",
+    "...#...........",
+    "...#.....#.....",
+    "...#....###...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:B9LWiqmKbHhHppcQj5OAKYaRJFlFU9n5w+qjzOCC03V55XSanOfrxaGmJpx1FQ35aZ7tH3MbSRIRvhvxxM7851gB+EQBdlIO3hgvjzlbDTV6LtxkhO2zVNiISTVPGOWF6SzrWrujZ7AJUSRXlM+/NwXGw25erFAgVYWdji/HDfcWeIG6GNtemVSB9WeCibEFPNX9Zv6K26MQTFbloQs6yrAh5E1/RUOkLMCaLQXXv7QGUPSi3evCp+qlMMgBtAam9Ak8kFVTokzAxWrgq1o+3jjOG/lgY1FVghM5onywWQBi",
+  "checksum": "92e1a3c8",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Goes out with"
+      },
+      {
+        "num": 5,
+        "clue": "It gets split in a reactor"
+      },
+      {
+        "num": 9,
+        "clue": "Card fig. you'd rather keep low"
+      },
+      {
+        "num": 12,
+        "clue": "Tennis star Naomi"
+      },
+      {
+        "num": 14,
+        "clue": "Pong pioneer"
+      },
+      {
+        "num": 15,
+        "clue": "Kanga's joey"
+      },
+      {
+        "num": 16,
+        "clue": "Walled room where rackets are raised"
+      },
+      {
+        "num": 18,
+        "clue": "Something to cut on the dance floor"
+      },
+      {
+        "num": 19,
+        "clue": "Traffic snarl"
+      },
+      {
+        "num": 20,
+        "clue": "Ham it up"
+      },
+      {
+        "num": 22,
+        "clue": "Salad named for a Tijuana restaurateur"
+      },
+      {
+        "num": 24,
+        "clue": "Gold rush evaluator"
+      },
+      {
+        "num": 26,
+        "clue": "Course standard"
+      },
+      {
+        "num": 27,
+        "clue": "It takes two, they say"
+      },
+      {
+        "num": 29,
+        "clue": "Curtain hangers"
+      },
+      {
+        "num": 30,
+        "clue": "Newton or Asimov"
+      },
+      {
+        "num": 33,
+        "clue": "Vibes"
+      },
+      {
+        "num": 35,
+        "clue": "Doll that sparked a 1983 shopping frenzy"
+      },
+      {
+        "num": 41,
+        "clue": "Tire in the trunk"
+      },
+      {
+        "num": 42,
+        "clue": "Scavenger known for its cackle"
+      },
+      {
+        "num": 43,
+        "clue": "Arthur with a stadium in Queens"
+      },
+      {
+        "num": 46,
+        "clue": "Sat for a portrait"
+      },
+      {
+        "num": 49,
+        "clue": "Tight ___"
+      },
+      {
+        "num": 50,
+        "clue": "Throws out of the club"
+      },
+      {
+        "num": 52,
+        "clue": "They're plucked in \"He loves me, he loves me not\""
+      },
+      {
+        "num": 55,
+        "clue": "Main line from the heart"
+      },
+      {
+        "num": 56,
+        "clue": "Leader in a classic kids' game"
+      },
+      {
+        "num": 57,
+        "clue": "Explosive initials"
+      },
+      {
+        "num": 58,
+        "clue": "Number cruncher, dismissively"
+      },
+      {
+        "num": 64,
+        "clue": "Moray, for one"
+      },
+      {
+        "num": 65,
+        "clue": "Solos at the Met"
+      },
+      {
+        "num": 66,
+        "clue": "Gin's kin"
+      },
+      {
+        "num": 67,
+        "clue": "Dr. behind Beats"
+      },
+      {
+        "num": 68,
+        "clue": "Genie's lodging"
+      },
+      {
+        "num": 69,
+        "clue": "Low-cal, on a label"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "ABBA hit that's also a plea"
+      },
+      {
+        "num": 2,
+        "clue": "Attorney's title, briefly"
+      },
+      {
+        "num": 3,
+        "clue": "___ de toilette"
+      },
+      {
+        "num": 4,
+        "clue": "Coast, with \"by\""
+      },
+      {
+        "num": 5,
+        "clue": "Crowning"
+      },
+      {
+        "num": 6,
+        "clue": "Letter before upsilon"
+      },
+      {
+        "num": 7,
+        "clue": "Bruins legend Bobby"
+      },
+      {
+        "num": 8,
+        "clue": "Tiny arachnids"
+      },
+      {
+        "num": 9,
+        "clue": "Gulch that's dry most of the year"
+      },
+      {
+        "num": 10,
+        "clue": "Showed some lip"
+      },
+      {
+        "num": 11,
+        "clue": "Mister of neighborhood fame"
+      },
+      {
+        "num": 13,
+        "clue": "Like a sale with no returns, maybe"
+      },
+      {
+        "num": 14,
+        "clue": "Integra maker"
+      },
+      {
+        "num": 17,
+        "clue": "Pressure, so to speak"
+      },
+      {
+        "num": 21,
+        "clue": "Like a bayou"
+      },
+      {
+        "num": 22,
+        "clue": "Home in Havana"
+      },
+      {
+        "num": 23,
+        "clue": "Horse breed with a dished face"
+      },
+      {
+        "num": 24,
+        "clue": "What a Spanish waiter pours"
+      },
+      {
+        "num": 25,
+        "clue": "Kind"
+      },
+      {
+        "num": 26,
+        "clue": "Insta upload"
+      },
+      {
+        "num": 28,
+        "clue": "Scruffs"
+      },
+      {
+        "num": 31,
+        "clue": "Off in another world"
+      },
+      {
+        "num": 32,
+        "clue": "Ceiling"
+      },
+      {
+        "num": 34,
+        "clue": "German \"oh!\""
+      },
+      {
+        "num": 36,
+        "clue": "Stare slack-jawed"
+      },
+      {
+        "num": 37,
+        "clue": "Cupid, to the Greeks"
+      },
+      {
+        "num": 38,
+        "clue": "Even ___"
+      },
+      {
+        "num": 39,
+        "clue": "B&Bs"
+      },
+      {
+        "num": 40,
+        "clue": "Pop"
+      },
+      {
+        "num": 43,
+        "clue": "Let up"
+      },
+      {
+        "num": 44,
+        "clue": "Oklahoman"
+      },
+      {
+        "num": 45,
+        "clue": "Barrel along"
+      },
+      {
+        "num": 47,
+        "clue": "Long tales"
+      },
+      {
+        "num": 48,
+        "clue": "Trial version"
+      },
+      {
+        "num": 51,
+        "clue": "Secret circle"
+      },
+      {
+        "num": 53,
+        "clue": "Band's road trip"
+      },
+      {
+        "num": 54,
+        "clue": "Void"
+      },
+      {
+        "num": 56,
+        "clue": "Piece of cake"
+      },
+      {
+        "num": 59,
+        "clue": "Pitcher's stat"
+      },
+      {
+        "num": 60,
+        "clue": "Goal"
+      },
+      {
+        "num": 61,
+        "clue": "\"Oversharing!\""
+      },
+      {
+        "num": 62,
+        "clue": "Ambulance worker, for short"
+      },
+      {
+        "num": 63,
+        "clue": "Deli bread"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a vegetable",
+  "publishedAt": "2026-11-06T20:09:37.298Z"
+}

@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-07-mini",
+  "date": "2026-11-07",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Seedling",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:Oauw4TBKOrM5qf43bdE1u04oL/Y4c1aExQ==",
+  "checksum": "c2aab155",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Stride rate"
+      },
+      {
+        "num": 5,
+        "clue": "Twenty"
+      },
+      {
+        "num": 7,
+        "clue": "The last one breaks a camel's back"
+      },
+      {
+        "num": 8,
+        "clue": "On edge"
+      },
+      {
+        "num": 9,
+        "clue": "Colors, as hair"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Hey, over here!\""
+      },
+      {
+        "num": 2,
+        "clue": "Played a part"
+      },
+      {
+        "num": 3,
+        "clue": "Like most dad jokes"
+      },
+      {
+        "num": 4,
+        "clue": "Wipe clean"
+      },
+      {
+        "num": 6,
+        "clue": "Flock females"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a vegetable",
+  "publishedAt": "2026-11-06T20:09:37.000Z"
+}

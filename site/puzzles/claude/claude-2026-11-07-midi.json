@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-07-midi",
+  "date": "2026-11-07",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Veg Out",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:HUwJqyFsi6TfZ9/KfNzxd9Ch+0Ha5T5jNmYq9cPQMQ9t2e3IRui9HQmboPPnyQd628cpA8GRZBN8NKuXVKPknAtFMG2/Y4xk6HWyxqcQoKMC",
+  "checksum": "f6cfd21d",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "League of the Aces and the Liberty"
+      },
+      {
+        "num": 5,
+        "clue": "Ernie's roommate"
+      },
+      {
+        "num": 9,
+        "clue": "Berry in a smoothie bowl"
+      },
+      {
+        "num": 10,
+        "clue": "Home to most of humanity"
+      },
+      {
+        "num": 11,
+        "clue": "Redhead, playfully"
+      },
+      {
+        "num": 13,
+        "clue": "Wine barrel wood"
+      },
+      {
+        "num": 14,
+        "clue": "Shoots the breeze"
+      },
+      {
+        "num": 15,
+        "clue": "Bishop's domain"
+      },
+      {
+        "num": 16,
+        "clue": "Swan of \"Twilight\""
+      },
+      {
+        "num": 19,
+        "clue": "Game that needs no equipment"
+      },
+      {
+        "num": 22,
+        "clue": "Bulb atop a Russian cathedral"
+      },
+      {
+        "num": 24,
+        "clue": "Kremlin refusal"
+      },
+      {
+        "num": 25,
+        "clue": "Press, in a way"
+      },
+      {
+        "num": 26,
+        "clue": "Morse bit"
+      },
+      {
+        "num": 27,
+        "clue": "Study closely, with \"over\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Texas city on the Brazos"
+      },
+      {
+        "num": 2,
+        "clue": "March Madness org."
+      },
+      {
+        "num": 3,
+        "clue": "Something a dog and a tree both have"
+      },
+      {
+        "num": 4,
+        "clue": "Broadcast"
+      },
+      {
+        "num": 5,
+        "clue": "Soak"
+      },
+      {
+        "num": 6,
+        "clue": "___ noche (tonight, in Spanish)"
+      },
+      {
+        "num": 7,
+        "clue": "Real card"
+      },
+      {
+        "num": 8,
+        "clue": "Bugle call at dusk"
+      },
+      {
+        "num": 12,
+        "clue": "Atlantic, e.g."
+      },
+      {
+        "num": 15,
+        "clue": "Slowpoke of the canopy"
+      },
+      {
+        "num": 16,
+        "clue": "Agent known by his number"
+      },
+      {
+        "num": 17,
+        "clue": "\"Orinoco Flow\" singer"
+      },
+      {
+        "num": 18,
+        "clue": "Fibs"
+      },
+      {
+        "num": 19,
+        "clue": "Bull, in Barcelona"
+      },
+      {
+        "num": 20,
+        "clue": "Love, in Lima"
+      },
+      {
+        "num": 21,
+        "clue": "Inherited unit"
+      },
+      {
+        "num": 23,
+        "clue": "Salsa, say"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a vegetable",
+  "publishedAt": "2026-11-06T20:09:37.158Z"
+}
