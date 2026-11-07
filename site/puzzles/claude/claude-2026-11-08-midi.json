@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-08-midi",
+  "date": "2026-11-08",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Toon Twins",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:vWWZyFdVutJs/PrteiwQCiHvMckc+SvH9g2fmEhKEVM/N3xDVMJRek7Zra49tdiizbbq+7teEjo1AuxjUrtz+y+2TxPrHBe2mNY09Qwaswg7",
+  "checksum": "2c42a328",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Glossy fashion magazine"
+      },
+      {
+        "num": 5,
+        "clue": "Apartment, to a Brit"
+      },
+      {
+        "num": 9,
+        "clue": "Pirate's haul"
+      },
+      {
+        "num": 10,
+        "clue": "Fallon's \"Tonight Show\" predecessor"
+      },
+      {
+        "num": 11,
+        "clue": "\"Eh, what's up, Doc?\" speaker"
+      },
+      {
+        "num": 13,
+        "clue": "They pay for podcasts, often"
+      },
+      {
+        "num": 14,
+        "clue": "Coasters and carousels"
+      },
+      {
+        "num": 15,
+        "clue": "Michael Jackson's 1987 album"
+      },
+      {
+        "num": 16,
+        "clue": "In the lead"
+      },
+      {
+        "num": 19,
+        "clue": "Wedding hires with turntables"
+      },
+      {
+        "num": 22,
+        "clue": "Jazz Age cartoon flapper with big eyes and spit curls"
+      },
+      {
+        "num": 24,
+        "clue": "Penny"
+      },
+      {
+        "num": 25,
+        "clue": "Streaming device brand"
+      },
+      {
+        "num": 26,
+        "clue": "Totally crush it, in Gen Z slang"
+      },
+      {
+        "num": 27,
+        "clue": "Raised, as racehorses"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Napoleon's first island of exile"
+      },
+      {
+        "num": 2,
+        "clue": "Turned up to eleven"
+      },
+      {
+        "num": 3,
+        "clue": "Fireplace fuel"
+      },
+      {
+        "num": 4,
+        "clue": "Saucer passengers, briefly"
+      },
+      {
+        "num": 5,
+        "clue": "Graceful and smooth"
+      },
+      {
+        "num": 6,
+        "clue": "Give for a while"
+      },
+      {
+        "num": 7,
+        "clue": "Green Gables girl"
+      },
+      {
+        "num": 8,
+        "clue": "Playroom stock"
+      },
+      {
+        "num": 12,
+        "clue": "Tom with seven Super Bowl rings"
+      },
+      {
+        "num": 15,
+        "clue": "Off one's rocker"
+      },
+      {
+        "num": 16,
+        "clue": "Basics"
+      },
+      {
+        "num": 17,
+        "clue": "Command at obedience school"
+      },
+      {
+        "num": 18,
+        "clue": "Sicilian smoker?"
+      },
+      {
+        "num": 19,
+        "clue": "It may be revolving"
+      },
+      {
+        "num": 20,
+        "clue": "Something you might not get"
+      },
+      {
+        "num": 21,
+        "clue": "Tater"
+      },
+      {
+        "num": 23,
+        "clue": "\"Back in a sec,\" in texts"
+      }
+    ]
+  },
+  "theme": "Famous names with matching initials",
+  "publishedAt": "2026-11-07T20:12:59.212Z"
+}

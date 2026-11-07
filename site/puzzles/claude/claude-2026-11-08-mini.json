@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-08-mini",
+  "date": "2026-11-08",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Double Dose",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:6pHXpQFo+pnBq5dPpY+//O1Nva68p8i8iA==",
+  "checksum": "178487be",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Superhero's flowing accessory"
+      },
+      {
+        "num": 5,
+        "clue": "Was broadcast"
+      },
+      {
+        "num": 6,
+        "clue": "Rapper-producer who co-founded Beats headphones"
+      },
+      {
+        "num": 7,
+        "clue": "Item in a squirrel's stash"
+      },
+      {
+        "num": 8,
+        "clue": "\"___ Poppins\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Around, before a date"
+      },
+      {
+        "num": 2,
+        "clue": "Passion"
+      },
+      {
+        "num": 3,
+        "clue": "Katy with the hit \"Roar\""
+      },
+      {
+        "num": 4,
+        "clue": "Garden in Genesis"
+      },
+      {
+        "num": 5,
+        "clue": "Sandler of \"Happy Gilmore\""
+      }
+    ]
+  },
+  "theme": "Famous names with matching initials",
+  "publishedAt": "2026-11-07T20:12:59.111Z"
+}

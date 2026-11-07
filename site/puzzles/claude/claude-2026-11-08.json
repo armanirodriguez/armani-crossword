@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-08",
+  "date": "2026-11-08",
+  "series": "claude",
+  "title": "Initial Impressions",
+  "author": "Claude",
+  "note": "Initial hint: say the three longest answers out loud.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#......#....",
+    "...#......#....",
+    "...#...........",
+    ".......##...###",
+    "....###....#...",
+    "#.....#...#....",
+    "###......#.....",
+    "...............",
+    ".....#......###",
+    "....#...#.....#",
+    "...#....###....",
+    "###...##.......",
+    "...........#...",
+    "....#......#...",
+    "....#......#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:07ExiDzu9iZyhg+ArrQCeuPhTR9s2ZG++G2rGl+ZlCdvG/93Feijqm7Hmg3QV473w4NDM0bbOTzU09CcadL2NPdd2ap77rKMeX5fviZ6Z5h4ZBjkyrUri2w012wpRTKgpPJaSvFTkdDNHN3HQLVyUGvRrQvOCFj2mxpq53vbs3iqatiKnqSzjFw8vRxACeddbcINkZP48P6hmvl6QE2BxhByztkxzYlLaChvT1lxar3wG8U4fS0dPP7veDKo5FH6DNoNBE1jfvGyiAUZoJWIjPZ9Th0VkJGNsYTfpd3kUC4s",
+  "checksum": "273b0c28",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Velvet-rope type, for short"
+      },
+      {
+        "num": 4,
+        "clue": "Royal father in a 1994 Disney film"
+      },
+      {
+        "num": 10,
+        "clue": "It hovers over a saint"
+      },
+      {
+        "num": 14,
+        "clue": "Text preface to a hot take"
+      },
+      {
+        "num": 15,
+        "clue": "Egyptian god of the underworld"
+      },
+      {
+        "num": 16,
+        "clue": "Where the Gobi Desert lies"
+      },
+      {
+        "num": 17,
+        "clue": "Decide (to)"
+      },
+      {
+        "num": 18,
+        "clue": "Daily Bugle photographer with a tingling sense"
+      },
+      {
+        "num": 20,
+        "clue": "Suds up"
+      },
+      {
+        "num": 22,
+        "clue": "Freddy Krueger's street"
+      },
+      {
+        "num": 23,
+        "clue": "Length times width, for a rectangle"
+      },
+      {
+        "num": 24,
+        "clue": "Machu Picchu builder"
+      },
+      {
+        "num": 26,
+        "clue": "Brain ___"
+      },
+      {
+        "num": 29,
+        "clue": "Tot's ride with pedals"
+      },
+      {
+        "num": 32,
+        "clue": "Bring home, after deductions"
+      },
+      {
+        "num": 33,
+        "clue": "Old Venetian leader"
+      },
+      {
+        "num": 34,
+        "clue": "Update the electrical system of"
+      },
+      {
+        "num": 36,
+        "clue": "Swan of \"Twilight\""
+      },
+      {
+        "num": 37,
+        "clue": "Red-crested cartoon bird with a famous laugh"
+      },
+      {
+        "num": 41,
+        "clue": "Guiding spirit"
+      },
+      {
+        "num": 42,
+        "clue": "Appliance with a spin cycle"
+      },
+      {
+        "num": 43,
+        "clue": "Withdrawal spots, for short"
+      },
+      {
+        "num": 44,
+        "clue": "Teller of groan-worthy jokes, stereotypically"
+      },
+      {
+        "num": 45,
+        "clue": "Couples in the gossip columns"
+      },
+      {
+        "num": 48,
+        "clue": "Logan of \"Succession\""
+      },
+      {
+        "num": 49,
+        "clue": "W's"
+      },
+      {
+        "num": 50,
+        "clue": "Diner grub, slangily"
+      },
+      {
+        "num": 52,
+        "clue": "Thumbs-downs"
+      },
+      {
+        "num": 53,
+        "clue": "Half of an Arnold Palmer"
+      },
+      {
+        "num": 56,
+        "clue": "Scientist you wouldn't like when he's angry"
+      },
+      {
+        "num": 61,
+        "clue": "Letter after sigma"
+      },
+      {
+        "num": 62,
+        "clue": "\"3:10 to ___\""
+      },
+      {
+        "num": 63,
+        "clue": "Meeting outline"
+      },
+      {
+        "num": 64,
+        "clue": "Ambulance pro, for short"
+      },
+      {
+        "num": 65,
+        "clue": "Stone with two Best Actress Oscars"
+      },
+      {
+        "num": 66,
+        "clue": "Brand of peanut butter cups"
+      },
+      {
+        "num": 67,
+        "clue": "Bread for a Reuben"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Instrument a bit bigger than a violin"
+      },
+      {
+        "num": 2,
+        "clue": "Pass along, as wisdom"
+      },
+      {
+        "num": 3,
+        "clue": "One working at the wheel?"
+      },
+      {
+        "num": 4,
+        "clue": "Sulk around"
+      },
+      {
+        "num": 5,
+        "clue": "One with a login"
+      },
+      {
+        "num": 6,
+        "clue": "Tantrums"
+      },
+      {
+        "num": 7,
+        "clue": "\"You ___ here\""
+      },
+      {
+        "num": 8,
+        "clue": "Knight's title"
+      },
+      {
+        "num": 9,
+        "clue": "Facet"
+      },
+      {
+        "num": 10,
+        "clue": "Damage"
+      },
+      {
+        "num": 11,
+        "clue": "Request"
+      },
+      {
+        "num": 12,
+        "clue": "Little white thing?"
+      },
+      {
+        "num": 13,
+        "clue": "It's pulled on a crew"
+      },
+      {
+        "num": 19,
+        "clue": "Miss. neighbor"
+      },
+      {
+        "num": 21,
+        "clue": "Bobs and beehives"
+      },
+      {
+        "num": 24,
+        "clue": "Advances"
+      },
+      {
+        "num": 25,
+        "clue": "Can't do without"
+      },
+      {
+        "num": 26,
+        "clue": "Joni Mitchell's genre"
+      },
+      {
+        "num": 27,
+        "clue": "Stare at rudely"
+      },
+      {
+        "num": 28,
+        "clue": "Camping equipment"
+      },
+      {
+        "num": 30,
+        "clue": "Islands off Florida's southern tip"
+      },
+      {
+        "num": 31,
+        "clue": "\"Gross!\""
+      },
+      {
+        "num": 33,
+        "clue": "Ordered officially"
+      },
+      {
+        "num": 35,
+        "clue": "Hawkeye State native"
+      },
+      {
+        "num": 36,
+        "clue": "Borscht base"
+      },
+      {
+        "num": 37,
+        "clue": "Sport, as a jersey"
+      },
+      {
+        "num": 38,
+        "clue": "Bus driver on \"The Simpsons\""
+      },
+      {
+        "num": 39,
+        "clue": "George Takei's catchphrase"
+      },
+      {
+        "num": 40,
+        "clue": "___ Beta Kappa"
+      },
+      {
+        "num": 44,
+        "clue": "Kick out of the legal profession"
+      },
+      {
+        "num": 46,
+        "clue": "Be important"
+      },
+      {
+        "num": 47,
+        "clue": "Like a sauna"
+      },
+      {
+        "num": 49,
+        "clue": "Grief"
+      },
+      {
+        "num": 51,
+        "clue": "Cook quickly in a pan"
+      },
+      {
+        "num": 52,
+        "clue": "March Madness org."
+      },
+      {
+        "num": 53,
+        "clue": "Roadside stops"
+      },
+      {
+        "num": 54,
+        "clue": "Hand over"
+      },
+      {
+        "num": 55,
+        "clue": "Taylor Swift's record-breaking ___ Tour"
+      },
+      {
+        "num": 56,
+        "clue": "Week off for an NFL team"
+      },
+      {
+        "num": 57,
+        "clue": "Pirate's drink"
+      },
+      {
+        "num": 58,
+        "clue": "\"Let me think...\""
+      },
+      {
+        "num": 59,
+        "clue": "Number of candles on a birthday cake, often"
+      },
+      {
+        "num": 60,
+        "clue": "Born, in some bios"
+      }
+    ]
+  },
+  "theme": "Famous names with matching initials",
+  "publishedAt": "2026-11-07T20:12:59.316Z"
+}
