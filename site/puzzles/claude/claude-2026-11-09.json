@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-09",
+  "date": "2026-11-09",
+  "series": "claude",
+  "title": "Now Boarding",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#....#......",
+    "........#......",
+    "........#......",
+    "#............##",
+    ".....###...#...",
+    "....#.....#....",
+    "...#.....#.....",
+    "###.........###",
+    ".....#.....#...",
+    "....#.....#....",
+    "...#...###.....",
+    "##............#",
+    "......#........",
+    "......#........",
+    "......#....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:L7USXlmsqp8CK1cuYMRpWV6aSswOBcjEj0Rj8YHK7YSY6zGYOODhbWephQT8y1I7jR4o10XMkMYoY5pFJ3mL+8V6Gugk4Hzzk0VNcp2w5EaLM5MTa0RbvNTUtkZogeMkwuv+Ya5UcJ/PrW4NHhXLIC1NNam/I35ed+4w36fpD7bXodJtR4nMf1bC2nawKVXivYjGLiDWGh/dTmPwfPe3/8LgfG4kA3h2WJfN4mmw9YGFx2QRFAocHuRe0G/03CIm4cybizsGM3BdmkR0WT6RwOuSvBmPuH6QuTNv7kJJTg35",
+  "checksum": "da104336",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Place for a massage and a facial"
+      },
+      {
+        "num": 4,
+        "clue": "Sudden breath of surprise"
+      },
+      {
+        "num": 8,
+        "clue": "Chips topped with melted cheese"
+      },
+      {
+        "num": 14,
+        "clue": "Up in the sky, like a kite"
+      },
+      {
+        "num": 16,
+        "clue": "Greek goddess of wisdom"
+      },
+      {
+        "num": 17,
+        "clue": "Monument honoring the past"
+      },
+      {
+        "num": 18,
+        "clue": "Rang, as church bells"
+      },
+      {
+        "num": 19,
+        "clue": "Airport area with luggage carousels"
+      },
+      {
+        "num": 21,
+        "clue": "Police officer's shield"
+      },
+      {
+        "num": 22,
+        "clue": "Bottom edge of a skirt"
+      },
+      {
+        "num": 23,
+        "clue": "Quarterback Manning who won two Super Bowls"
+      },
+      {
+        "num": 26,
+        "clue": "Skin care brand"
+      },
+      {
+        "num": 27,
+        "clue": "Fuzzy brown fruits with green insides"
+      },
+      {
+        "num": 30,
+        "clue": "Mix with a spoon"
+      },
+      {
+        "num": 31,
+        "clue": "TV commercials, for short"
+      },
+      {
+        "num": 32,
+        "clue": "Last exam of the semester"
+      },
+      {
+        "num": 33,
+        "clue": "Annoying insects or little brothers"
+      },
+      {
+        "num": 34,
+        "clue": "Walkway from the gate into the plane"
+      },
+      {
+        "num": 36,
+        "clue": "Lake on the California-Nevada border"
+      },
+      {
+        "num": 39,
+        "clue": "\"Carmen\" or \"La Boheme\""
+      },
+      {
+        "num": 40,
+        "clue": "\"Mr. Blue Sky\" band, for short"
+      },
+      {
+        "num": 43,
+        "clue": "Slimy garden creature"
+      },
+      {
+        "num": 44,
+        "clue": "Hard to please"
+      },
+      {
+        "num": 45,
+        "clue": "Corn or wheat, on a farm"
+      },
+      {
+        "num": 46,
+        "clue": "Beesly of \"The Office\""
+      },
+      {
+        "num": 47,
+        "clue": "Put on, as a coat"
+      },
+      {
+        "num": 48,
+        "clue": "Take a photo of"
+      },
+      {
+        "num": 49,
+        "clue": "Ticket you show before getting on a flight"
+      },
+      {
+        "num": 54,
+        "clue": "Hawaii's Maui, for one"
+      },
+      {
+        "num": 56,
+        "clue": "Units on a nutrition label"
+      },
+      {
+        "num": 58,
+        "clue": "Wild and ferocious"
+      },
+      {
+        "num": 59,
+        "clue": "Cooked too long"
+      },
+      {
+        "num": 60,
+        "clue": "Talked back to"
+      },
+      {
+        "num": 61,
+        "clue": "\"No,\" in Russian"
+      },
+      {
+        "num": 62,
+        "clue": "U.S. spy org."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Uncle ___ (symbol of the U.S.)"
+      },
+      {
+        "num": 2,
+        "clue": "Spotted black and white, as a horse"
+      },
+      {
+        "num": 3,
+        "clue": "Large fleets of warships"
+      },
+      {
+        "num": 4,
+        "clue": "Deep, narrow canyon"
+      },
+      {
+        "num": 5,
+        "clue": "Solo song for a soprano"
+      },
+      {
+        "num": 6,
+        "clue": "Unexpected problem"
+      },
+      {
+        "num": 7,
+        "clue": "Brazilian soccer legend"
+      },
+      {
+        "num": 8,
+        "clue": "Italian city near Mount Vesuvius"
+      },
+      {
+        "num": 9,
+        "clue": "Best group of workers"
+      },
+      {
+        "num": 10,
+        "clue": "Spiced tea from India"
+      },
+      {
+        "num": 11,
+        "clue": "Football players' headgear"
+      },
+      {
+        "num": 12,
+        "clue": "Number after zero"
+      },
+      {
+        "num": 13,
+        "clue": "Unhappy"
+      },
+      {
+        "num": 15,
+        "clue": "Wet and marshy"
+      },
+      {
+        "num": 20,
+        "clue": "Hot peppers"
+      },
+      {
+        "num": 21,
+        "clue": "Big snake that squeezes its prey"
+      },
+      {
+        "num": 24,
+        "clue": "Turned on, as a lamp"
+      },
+      {
+        "num": 25,
+        "clue": "Tax agency, for short"
+      },
+      {
+        "num": 27,
+        "clue": "First-aid ___"
+      },
+      {
+        "num": 28,
+        "clue": "Arriving, as a train"
+      },
+      {
+        "num": 29,
+        "clue": "Bends out of shape"
+      },
+      {
+        "num": 30,
+        "clue": "Look at"
+      },
+      {
+        "num": 32,
+        "clue": "Charge for a service"
+      },
+      {
+        "num": 33,
+        "clue": "Golf org. for Tiger Woods"
+      },
+      {
+        "num": 34,
+        "clue": "Run at an easy pace"
+      },
+      {
+        "num": 35,
+        "clue": "Not wet"
+      },
+      {
+        "num": 36,
+        "clue": "Recipe amount: Abbr."
+      },
+      {
+        "num": 37,
+        "clue": "Pie ___ mode"
+      },
+      {
+        "num": 38,
+        "clue": "Brings down a peg"
+      },
+      {
+        "num": 40,
+        "clue": "Wearing away of soil by wind and water"
+      },
+      {
+        "num": 41,
+        "clue": "Makes less tight"
+      },
+      {
+        "num": 42,
+        "clue": "Choose (to)"
+      },
+      {
+        "num": 44,
+        "clue": "Crossed, as a stream on foot"
+      },
+      {
+        "num": 45,
+        "clue": "Leafy vegetable related to beets"
+      },
+      {
+        "num": 47,
+        "clue": "Waltz or tango"
+      },
+      {
+        "num": 48,
+        "clue": "Baseball or basketball"
+      },
+      {
+        "num": 50,
+        "clue": "Rowboat paddles"
+      },
+      {
+        "num": 51,
+        "clue": "Small picture on a phone screen"
+      },
+      {
+        "num": 52,
+        "clue": "Dark shade for a blazer"
+      },
+      {
+        "num": 53,
+        "clue": "Great joy"
+      },
+      {
+        "num": 54,
+        "clue": "No ___, ands or buts"
+      },
+      {
+        "num": 55,
+        "clue": "\"Chandelier\" singer"
+      },
+      {
+        "num": 57,
+        "clue": "Ocean"
+      }
+    ]
+  },
+  "theme": "Things you find at the airport",
+  "publishedAt": "2026-11-08T20:06:52.049Z"
+}

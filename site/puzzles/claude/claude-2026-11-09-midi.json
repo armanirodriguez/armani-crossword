@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-09-midi",
+  "date": "2026-11-09",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Terminal Velocity",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:t8+gl5lXEvPgfEW6Isb4dJFQaFBycJ3dThrs4GNASuplKBhc/F6EUWUkbR9KpBD6exBG6PUNGSqz+9TGm4CyjV99NFonYpEcJ8y4k8MVbU8/",
+  "checksum": "cf3dc449",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Big heads' inflated self-images"
+      },
+      {
+        "num": 5,
+        "clue": "Quiet pause"
+      },
+      {
+        "num": 9,
+        "clue": "Gooey, sticky stuff"
+      },
+      {
+        "num": 10,
+        "clue": "Jacob's twin in the Bible"
+      },
+      {
+        "num": 11,
+        "clue": "Airline worker who scans tickets before takeoff"
+      },
+      {
+        "num": 13,
+        "clue": "Angry frown"
+      },
+      {
+        "num": 14,
+        "clue": "Notice with the eyes"
+      },
+      {
+        "num": 15,
+        "clue": "Samwise of \"The Lord of the Rings,\" for short"
+      },
+      {
+        "num": 17,
+        "clue": "Pose a question"
+      },
+      {
+        "num": 20,
+        "clue": "Polite word for a woman"
+      },
+      {
+        "num": 24,
+        "clue": "Long hallway lined with airport gates"
+      },
+      {
+        "num": 26,
+        "clue": "Garden in Genesis"
+      },
+      {
+        "num": 27,
+        "clue": "Princess in \"Star Wars\""
+      },
+      {
+        "num": 28,
+        "clue": "Sunrise"
+      },
+      {
+        "num": 29,
+        "clue": "Hit, as a fly"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Breakfast food you can scramble"
+      },
+      {
+        "num": 2,
+        "clue": "Avocado dip, for short"
+      },
+      {
+        "num": 3,
+        "clue": "Wise to, as a scheme"
+      },
+      {
+        "num": 4,
+        "clue": "Slants"
+      },
+      {
+        "num": 5,
+        "clue": "Part of a table"
+      },
+      {
+        "num": 6,
+        "clue": "Puts to work"
+      },
+      {
+        "num": 7,
+        "clue": "Bowling alley strip"
+      },
+      {
+        "num": 8,
+        "clue": "Old stringed instrument"
+      },
+      {
+        "num": 12,
+        "clue": "Texas fort to \"remember\""
+      },
+      {
+        "num": 16,
+        "clue": "Handles roughly"
+      },
+      {
+        "num": 17,
+        "clue": "Got an A on"
+      },
+      {
+        "num": 18,
+        "clue": "Cola or root beer"
+      },
+      {
+        "num": 19,
+        "clue": "Was sure of"
+      },
+      {
+        "num": 21,
+        "clue": "Sketched"
+      },
+      {
+        "num": 22,
+        "clue": "Largest continent"
+      },
+      {
+        "num": 23,
+        "clue": "Beef or pork"
+      },
+      {
+        "num": 25,
+        "clue": "Cable news channel"
+      }
+    ]
+  },
+  "theme": "Things you find at the airport",
+  "publishedAt": "2026-11-08T20:06:51.898Z"
+}

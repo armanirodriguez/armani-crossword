@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-09-mini",
+  "date": "2026-11-09",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Check In",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:TZX6ib+iNoikNDcMtHX8Ct5ZK8QwhHrAoQ==",
+  "checksum": "8d68ea41",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Read quickly"
+      },
+      {
+        "num": 5,
+        "clue": "Tour leader"
+      },
+      {
+        "num": 6,
+        "clue": "Smells"
+      },
+      {
+        "num": 7,
+        "clue": "Foundation"
+      },
+      {
+        "num": 8,
+        "clue": "Pen fillers"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "African country south of Egypt"
+      },
+      {
+        "num": 2,
+        "clue": "Airport self-check-in machine"
+      },
+      {
+        "num": 3,
+        "clue": "Actor Elba"
+      },
+      {
+        "num": 4,
+        "clue": "Untidy state"
+      },
+      {
+        "num": 5,
+        "clue": "Desert in Mongolia"
+      }
+    ]
+  },
+  "theme": "Things you find at the airport",
+  "publishedAt": "2026-11-08T20:06:51.760Z"
+}
