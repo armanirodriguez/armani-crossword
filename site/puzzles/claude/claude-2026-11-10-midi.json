@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-10-midi",
+  "date": "2026-11-10",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Last Call",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:3clZInPb0iXlJTn+CT6yIbkH72myDEXz5FwUJoH2r7qSlWiqa3u9XCcX5mboD+HAsELb6O6U8FHO/zx9+DuwOOXVyisxEnQckma6nvQtOXzA",
+  "checksum": "fa9ca63c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Wanders (about)"
+      },
+      {
+        "num": 5,
+        "clue": "Serene"
+      },
+      {
+        "num": 9,
+        "clue": "Brainstorm result"
+      },
+      {
+        "num": 10,
+        "clue": "Off-Broadway theater award"
+      },
+      {
+        "num": 11,
+        "clue": "Pretty eyes, in slang"
+      },
+      {
+        "num": 13,
+        "clue": "Ambulance worker, for short"
+      },
+      {
+        "num": 14,
+        "clue": "Yoga position with crossed legs"
+      },
+      {
+        "num": 15,
+        "clue": "Victory"
+      },
+      {
+        "num": 16,
+        "clue": "Zones"
+      },
+      {
+        "num": 19,
+        "clue": "Garden weeding tool"
+      },
+      {
+        "num": 22,
+        "clue": "Motion practiced at a driving range"
+      },
+      {
+        "num": 24,
+        "clue": "\"Anything ___?\""
+      },
+      {
+        "num": 25,
+        "clue": "Twist-apart cookie"
+      },
+      {
+        "num": 26,
+        "clue": "Letter opener?"
+      },
+      {
+        "num": 27,
+        "clue": "Where the sun sets"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Taunt"
+      },
+      {
+        "num": 2,
+        "clue": "First man in Genesis"
+      },
+      {
+        "num": 3,
+        "clue": "What a loan creates"
+      },
+      {
+        "num": 4,
+        "clue": "Speak"
+      },
+      {
+        "num": 5,
+        "clue": "Punctuation mark before a list"
+      },
+      {
+        "num": 6,
+        "clue": "Border on"
+      },
+      {
+        "num": 7,
+        "clue": "\"In ___ of\" (instead of)"
+      },
+      {
+        "num": 8,
+        "clue": "Teen's bedroom, often"
+      },
+      {
+        "num": 12,
+        "clue": "Pure happiness"
+      },
+      {
+        "num": 15,
+        "clue": "Crisp layer in a Kit Kat bar"
+      },
+      {
+        "num": 16,
+        "clue": "Like fine cheddar"
+      },
+      {
+        "num": 17,
+        "clue": "Part in a play"
+      },
+      {
+        "num": 18,
+        "clue": "\"Frozen\" queen"
+      },
+      {
+        "num": 19,
+        "clue": "Take on, as staff"
+      },
+      {
+        "num": 20,
+        "clue": "Singles in a tip jar"
+      },
+      {
+        "num": 21,
+        "clue": "Emmy-Grammy-Oscar-Tony feat"
+      },
+      {
+        "num": 23,
+        "clue": "\"Amazing!\""
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in a music genre",
+  "publishedAt": "2026-11-09T20:14:40.762Z"
+}

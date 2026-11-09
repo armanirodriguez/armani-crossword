@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-10",
+  "date": "2026-11-10",
+  "series": "claude",
+  "title": "Closing Tracks",
+  "author": "Claude",
+  "note": "Encore hint: listen to how the three longest answers end.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....###....#...",
+    "......#....#...",
+    "......#....#...",
+    "##............#",
+    ".......#.......",
+    "....##...##....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....##...##....",
+    ".......#.......",
+    "#............##",
+    "...#....#......",
+    "...#....#......",
+    "...#....###...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:6XUH+VOxOiFo5TM9W5ZBKg38D7lbS9l4+eF/2as4wARB78sNUHvmespMMCTzB9EejMZmHwLxDM2mUZZLyFnUt51YRQCKWo/+nlgMmKr8WFGdEguyPLocWhI21qAN92I2tJvcYaeuQVLuMUxKxHdePb8epeVe+rOIr4h0iyro0FgPUl47GGr11mq1xv7zI9LbeGVcNjmHE6rDn5QzdfwG/VUJrunWU5SrTjpfJQPovcMTuB+NXvxpVjRegeIkN1jmeM0BbN+rfjj0UyrHCO8IhRb5rcT1Sx7iDCWzhUAyA58H",
+  "checksum": "a39de6d9",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Stitches up a hem"
+      },
+      {
+        "num": 5,
+        "clue": "One run of a scene on a film set"
+      },
+      {
+        "num": 9,
+        "clue": "Place for a facial and a massage"
+      },
+      {
+        "num": 12,
+        "clue": "Locations"
+      },
+      {
+        "num": 15,
+        "clue": "Not closed"
+      },
+      {
+        "num": 16,
+        "clue": "Skillet"
+      },
+      {
+        "num": 17,
+        "clue": "As an example"
+      },
+      {
+        "num": 18,
+        "clue": "Speedy"
+      },
+      {
+        "num": 19,
+        "clue": "Like a slick winter sidewalk"
+      },
+      {
+        "num": 20,
+        "clue": "Massachusetts landmark tied to the Pilgrims"
+      },
+      {
+        "num": 23,
+        "clue": "Awkward silence on a radio broadcast"
+      },
+      {
+        "num": 25,
+        "clue": "Out of control, as a gadget"
+      },
+      {
+        "num": 27,
+        "clue": "Big tubs at a brewery"
+      },
+      {
+        "num": 28,
+        "clue": "Comic Poehler"
+      },
+      {
+        "num": 30,
+        "clue": "Tidy"
+      },
+      {
+        "num": 31,
+        "clue": "\"Obviously!\""
+      },
+      {
+        "num": 32,
+        "clue": "Opposed to"
+      },
+      {
+        "num": 34,
+        "clue": "Says without thinking"
+      },
+      {
+        "num": 36,
+        "clue": "Stretch of road where a radar gun may be waiting"
+      },
+      {
+        "num": 38,
+        "clue": "Pass on, as wisdom"
+      },
+      {
+        "num": 41,
+        "clue": "Clothing"
+      },
+      {
+        "num": 42,
+        "clue": "Small untruth"
+      },
+      {
+        "num": 45,
+        "clue": "Day, in Latin"
+      },
+      {
+        "num": 46,
+        "clue": "Ruby or emerald"
+      },
+      {
+        "num": 47,
+        "clue": "Walking stick"
+      },
+      {
+        "num": 48,
+        "clue": "Month before November"
+      },
+      {
+        "num": 51,
+        "clue": "Hoop or stud"
+      },
+      {
+        "num": 54,
+        "clue": "Total devotion, or a piano duet kids love to bang out"
+      },
+      {
+        "num": 56,
+        "clue": "Sedan or coupe"
+      },
+      {
+        "num": 57,
+        "clue": "Anise-flavored Greek drink"
+      },
+      {
+        "num": 58,
+        "clue": "Promise confidently"
+      },
+      {
+        "num": 61,
+        "clue": "Charge for a service"
+      },
+      {
+        "num": 62,
+        "clue": "Poems of praise"
+      },
+      {
+        "num": 63,
+        "clue": "Gasoline, to a Brit"
+      },
+      {
+        "num": 64,
+        "clue": "Not new"
+      },
+      {
+        "num": 65,
+        "clue": "Netlike fabric"
+      },
+      {
+        "num": 66,
+        "clue": "Look for"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Sunscreen number, for short"
+      },
+      {
+        "num": 2,
+        "clue": "\"Mr. Blue Sky\" band, for short"
+      },
+      {
+        "num": 3,
+        "clue": "Angry mood, after \"on the\""
+      },
+      {
+        "num": 4,
+        "clue": "Tells off"
+      },
+      {
+        "num": 5,
+        "clue": "Bean curd"
+      },
+      {
+        "num": 6,
+        "clue": "Lack of interest"
+      },
+      {
+        "num": 7,
+        "clue": "Singer of the 2009 hit \"TiK ToK\""
+      },
+      {
+        "num": 8,
+        "clue": "Contest submission"
+      },
+      {
+        "num": 9,
+        "clue": "Hotter, as salsa"
+      },
+      {
+        "num": 10,
+        "clue": "Person who never throws anything away"
+      },
+      {
+        "num": 11,
+        "clue": "\"___ questions?\""
+      },
+      {
+        "num": 13,
+        "clue": "\"Orinoco Flow\" artist"
+      },
+      {
+        "num": 14,
+        "clue": "Big rig"
+      },
+      {
+        "num": 21,
+        "clue": "Give a speech"
+      },
+      {
+        "num": 22,
+        "clue": "Confess"
+      },
+      {
+        "num": 23,
+        "clue": "Disc in a Blu-ray player, maybe"
+      },
+      {
+        "num": 24,
+        "clue": "Water, in Paris"
+      },
+      {
+        "num": 26,
+        "clue": "Little green men, for short"
+      },
+      {
+        "num": 29,
+        "clue": "Tiny biting fly"
+      },
+      {
+        "num": 32,
+        "clue": "Spring mo."
+      },
+      {
+        "num": 33,
+        "clue": "Tennis court divider"
+      },
+      {
+        "num": 34,
+        "clue": "\"It's freezing!\""
+      },
+      {
+        "num": 35,
+        "clue": "Science class room"
+      },
+      {
+        "num": 36,
+        "clue": "Girl Scout cookie with caramel and coconut"
+      },
+      {
+        "num": 37,
+        "clue": "Made gentle, as a wild horse"
+      },
+      {
+        "num": 38,
+        "clue": "Wedding vow words"
+      },
+      {
+        "num": 39,
+        "clue": "Jordan of the Chicago Bulls"
+      },
+      {
+        "num": 40,
+        "clue": "Fizzled, with \"out\""
+      },
+      {
+        "num": 42,
+        "clue": "Flop"
+      },
+      {
+        "num": 43,
+        "clue": "Bed-and-breakfast"
+      },
+      {
+        "num": 44,
+        "clue": "Plead"
+      },
+      {
+        "num": 46,
+        "clue": "Eats grass in a pasture"
+      },
+      {
+        "num": 47,
+        "clue": "Bread edges some toddlers refuse to eat"
+      },
+      {
+        "num": 49,
+        "clue": "Sweeping tool"
+      },
+      {
+        "num": 50,
+        "clue": "Practice composition"
+      },
+      {
+        "num": 52,
+        "clue": "Pronto, in a memo"
+      },
+      {
+        "num": 53,
+        "clue": "Red flower on Valentine's Day"
+      },
+      {
+        "num": 55,
+        "clue": "Snack"
+      },
+      {
+        "num": 56,
+        "clue": "Company money boss, for short"
+      },
+      {
+        "num": 59,
+        "clue": "Fish eggs"
+      },
+      {
+        "num": 60,
+        "clue": "Antlered animal"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in a music genre",
+  "publishedAt": "2026-11-09T20:14:40.886Z"
+}

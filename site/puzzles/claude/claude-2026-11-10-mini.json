@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-10-mini",
+  "date": "2026-11-10",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Outro",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:tStrqR/8V7sfKPNJuBrZIjceBhL+gGXXGA==",
+  "checksum": "51be3865",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Programs on a smartphone"
+      },
+      {
+        "num": 5,
+        "clue": "Smooth-barked tree"
+      },
+      {
+        "num": 7,
+        "clue": "Hold and take along"
+      },
+      {
+        "num": 8,
+        "clue": "Leftover bit of paper"
+      },
+      {
+        "num": 9,
+        "clue": "Where the heart is, they say"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Alphabet basics"
+      },
+      {
+        "num": 2,
+        "clue": "Fuzzy fruit from Georgia"
+      },
+      {
+        "num": 3,
+        "clue": "Dog, in Spanish"
+      },
+      {
+        "num": 4,
+        "clue": "\"Get out of here!\""
+      },
+      {
+        "num": 6,
+        "clue": "Excited buzz before a big release"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end in a music genre",
+  "publishedAt": "2026-11-09T20:14:40.637Z"
+}
