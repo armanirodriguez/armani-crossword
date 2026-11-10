@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-11-midi",
+  "date": "2026-11-11",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Double Take",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:3E9qDID7hEfO8SUL5e6uSKlL/9LWlHz3fgUW6ekOykEL5pZjoG0Q/0V1EZoH1e1JfipId5UyS1E3jFU4cWoHzY+zbLrcztzLyhT6LoJaRjot",
+  "checksum": "1bc422a6",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Big, rounded hairdo"
+      },
+      {
+        "num": 5,
+        "clue": "Citation abbr. meaning \"and others\""
+      },
+      {
+        "num": 9,
+        "clue": "Washing machine fill"
+      },
+      {
+        "num": 10,
+        "clue": "Behind schedule"
+      },
+      {
+        "num": 11,
+        "clue": "Ruthlessly competitive"
+      },
+      {
+        "num": 13,
+        "clue": "Commercials"
+      },
+      {
+        "num": 14,
+        "clue": "Wanders"
+      },
+      {
+        "num": 15,
+        "clue": "\"___ voyage!\""
+      },
+      {
+        "num": 16,
+        "clue": "Bees on the move"
+      },
+      {
+        "num": 19,
+        "clue": "\"Back to the Future\" inventor"
+      },
+      {
+        "num": 22,
+        "clue": "One-on-one, as a showdown"
+      },
+      {
+        "num": 24,
+        "clue": "Wise to"
+      },
+      {
+        "num": 25,
+        "clue": "Shameless promo"
+      },
+      {
+        "num": 26,
+        "clue": "Tech enthusiast"
+      },
+      {
+        "num": 27,
+        "clue": "Snake's sound"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Alan of \"M*A*S*H\""
+      },
+      {
+        "num": 2,
+        "clue": "Grub"
+      },
+      {
+        "num": 3,
+        "clue": "___-to-riches story"
+      },
+      {
+        "num": 4,
+        "clue": "Keats poem"
+      },
+      {
+        "num": 5,
+        "clue": "\"Rocket Man\" singer John"
+      },
+      {
+        "num": 6,
+        "clue": "\"Voila!\""
+      },
+      {
+        "num": 7,
+        "clue": "Tiny building block"
+      },
+      {
+        "num": 8,
+        "clue": "Relay race segments"
+      },
+      {
+        "num": 12,
+        "clue": "Coffee shop scent"
+      },
+      {
+        "num": 15,
+        "clue": "Babbling stream"
+      },
+      {
+        "num": 16,
+        "clue": "Haze over L.A."
+      },
+      {
+        "num": 17,
+        "clue": "Shrink, as the moon"
+      },
+      {
+        "num": 18,
+        "clue": "Poker pot starter"
+      },
+      {
+        "num": 19,
+        "clue": "Melting-clocks painter"
+      },
+      {
+        "num": 20,
+        "clue": "Burden of responsibility"
+      },
+      {
+        "num": 21,
+        "clue": "Gear teeth"
+      },
+      {
+        "num": 23,
+        "clue": "Speedometer abbr."
+      }
+    ]
+  },
+  "theme": "Phrases that say the same word twice",
+  "publishedAt": "2026-11-10T20:08:19.733Z"
+}

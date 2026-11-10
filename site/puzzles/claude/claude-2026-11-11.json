@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-11",
+  "date": "2026-11-11",
+  "series": "claude",
+  "title": "Say It Again",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "##....###......",
+    "#.......#......",
+    "........#......",
+    "....##......###",
+    ".....#.....#...",
+    "...#.....#.....",
+    "##....#...#....",
+    "....#.....#....",
+    "....#...#....##",
+    ".....#.....#...",
+    "...#.....#.....",
+    "###......##....",
+    "......#........",
+    "......#.......#",
+    "......###....##"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:/RTzbUS7WcAvizu7ixyv8JDUM8s61owuTPYZ04QVibYWsHD7wkOOhegOijl0GT17fv8IaITvVpSOCe3NAfWIB1zuSwxmsBrHDKLACBKaSScg9kv2EDMOzuGzYH8Ik6gtmvT+0ork5TBiFp6O0PFGNQU+15eV0FXQEgFmJYMyPNXcGr7ekLtLQjQbS6KoBFUtgRoj34j8oyYN1B8TYzBmQLwqJF7wfr8jmB6i7pMCk7v3m48quFee76pxAGFlIsi88XT+AQ49boEM6lLGKL6E6iWG0rH2FeGGJpsKV6HfvEab",
+  "checksum": "1b82ba60",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Thick rolls of bills"
+      },
+      {
+        "num": 5,
+        "clue": "Sore after leg day"
+      },
+      {
+        "num": 11,
+        "clue": "Most sacred"
+      },
+      {
+        "num": 14,
+        "clue": "Cut into small pieces"
+      },
+      {
+        "num": 15,
+        "clue": "Strolling band at a Mexican restaurant"
+      },
+      {
+        "num": 16,
+        "clue": "Eagle's grippers"
+      },
+      {
+        "num": 17,
+        "clue": "Wraps up"
+      },
+      {
+        "num": 18,
+        "clue": "Force (on)"
+      },
+      {
+        "num": 20,
+        "clue": "Converted warehouse apartments"
+      },
+      {
+        "num": 22,
+        "clue": "Restock the arsenal"
+      },
+      {
+        "num": 23,
+        "clue": "Code-cracking org."
+      },
+      {
+        "num": 26,
+        "clue": "Uncle, in Uruguay"
+      },
+      {
+        "num": 27,
+        "clue": "Spot to say \"I do\""
+      },
+      {
+        "num": 29,
+        "clue": "Lipstick mishap"
+      },
+      {
+        "num": 31,
+        "clue": "Road ___"
+      },
+      {
+        "num": 33,
+        "clue": "Little white lie"
+      },
+      {
+        "num": 35,
+        "clue": "Farm measure"
+      },
+      {
+        "num": 36,
+        "clue": "Chess piece that can be promoted"
+      },
+      {
+        "num": 38,
+        "clue": "Like a gallery-opening crowd, maybe"
+      },
+      {
+        "num": 40,
+        "clue": "Downhill racers?"
+      },
+      {
+        "num": 41,
+        "clue": "Pressing need?"
+      },
+      {
+        "num": 42,
+        "clue": "\"The Raven\" poet"
+      },
+      {
+        "num": 43,
+        "clue": "This, in Tijuana"
+      },
+      {
+        "num": 45,
+        "clue": "Gets weary"
+      },
+      {
+        "num": 47,
+        "clue": "Get up"
+      },
+      {
+        "num": 49,
+        "clue": "League of the Lakers and Knicks"
+      },
+      {
+        "num": 52,
+        "clue": "Smidge"
+      },
+      {
+        "num": 53,
+        "clue": "Fruit-filled pastries"
+      },
+      {
+        "num": 55,
+        "clue": "Optional extra"
+      },
+      {
+        "num": 57,
+        "clue": "Find at a dig site"
+      },
+      {
+        "num": 58,
+        "clue": "Inch or ounce"
+      },
+      {
+        "num": 59,
+        "clue": "Hitchcock's walk-ons"
+      },
+      {
+        "num": 62,
+        "clue": "Lack of kindness"
+      },
+      {
+        "num": 65,
+        "clue": "Claim without proof"
+      },
+      {
+        "num": 66,
+        "clue": "Core nature"
+      },
+      {
+        "num": 67,
+        "clue": "iPad, for one"
+      },
+      {
+        "num": 68,
+        "clue": "Oddball"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Verbatim"
+      },
+      {
+        "num": 2,
+        "clue": "Top tier, in Hollywood"
+      },
+      {
+        "num": 3,
+        "clue": "Day, in Durango"
+      },
+      {
+        "num": 4,
+        "clue": "\"Hold on a ___!\""
+      },
+      {
+        "num": 5,
+        "clue": "Oscar nominee, often"
+      },
+      {
+        "num": 6,
+        "clue": "Deep gorges"
+      },
+      {
+        "num": 7,
+        "clue": "Golfer's target"
+      },
+      {
+        "num": 8,
+        "clue": "Wall St. debut"
+      },
+      {
+        "num": 9,
+        "clue": "Sister in a habit"
+      },
+      {
+        "num": 10,
+        "clue": "Dashboard navigator, for short"
+      },
+      {
+        "num": 11,
+        "clue": "Capital of Vietnam"
+      },
+      {
+        "num": 12,
+        "clue": "Tee, e.g."
+      },
+      {
+        "num": 13,
+        "clue": "Again and again (or a 1984 Cyndi Lauper ballad)"
+      },
+      {
+        "num": 15,
+        "clue": "Tuna ___ (diner sandwich)"
+      },
+      {
+        "num": 19,
+        "clue": "City of Light"
+      },
+      {
+        "num": 21,
+        "clue": "Droop"
+      },
+      {
+        "num": 23,
+        "clue": "All even down the stretch"
+      },
+      {
+        "num": 24,
+        "clue": "Draped Indian garment"
+      },
+      {
+        "num": 25,
+        "clue": "Greek god of war"
+      },
+      {
+        "num": 28,
+        "clue": "___ year"
+      },
+      {
+        "num": 30,
+        "clue": "Sail supporter"
+      },
+      {
+        "num": 32,
+        "clue": "Green Gables girl"
+      },
+      {
+        "num": 34,
+        "clue": "Free passes in a tournament bracket"
+      },
+      {
+        "num": 36,
+        "clue": "Brad of \"Moneyball\""
+      },
+      {
+        "num": 37,
+        "clue": "Opera solo"
+      },
+      {
+        "num": 39,
+        "clue": "Lion sounds"
+      },
+      {
+        "num": 44,
+        "clue": "Caribbean, e.g."
+      },
+      {
+        "num": 46,
+        "clue": "Larry, Moe or Curly"
+      },
+      {
+        "num": 48,
+        "clue": "British ___"
+      },
+      {
+        "num": 50,
+        "clue": "Idaho home of a famous blue football field"
+      },
+      {
+        "num": 51,
+        "clue": "Picnic crashers"
+      },
+      {
+        "num": 54,
+        "clue": "Valuable quality"
+      },
+      {
+        "num": 56,
+        "clue": "\"Beats me\""
+      },
+      {
+        "num": 57,
+        "clue": "Touch"
+      },
+      {
+        "num": 59,
+        "clue": "Pet that purrs"
+      },
+      {
+        "num": 60,
+        "clue": "Pie ___ mode"
+      },
+      {
+        "num": 61,
+        "clue": "Org. with the World Series"
+      },
+      {
+        "num": 63,
+        "clue": "Make a request"
+      },
+      {
+        "num": 64,
+        "clue": "Keanu's \"Matrix\" role"
+      }
+    ]
+  },
+  "theme": "Phrases that say the same word twice",
+  "publishedAt": "2026-11-10T20:08:19.851Z"
+}

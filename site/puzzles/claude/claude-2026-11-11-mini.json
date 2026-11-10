@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-11-mini",
+  "date": "2026-11-11",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Encore",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:uNnkX3xgGtiVauFlFfoBJtSrgoY9s5l+Iw==",
+  "checksum": "fe0c41c3",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Male sheep"
+      },
+      {
+        "num": 5,
+        "clue": "Twist-apart cookies"
+      },
+      {
+        "num": 7,
+        "clue": "___-Detoo (R2-D2)"
+      },
+      {
+        "num": 8,
+        "clue": "Pub game with a bullseye"
+      },
+      {
+        "num": 9,
+        "clue": "Toy on a string"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Highway"
+      },
+      {
+        "num": 2,
+        "clue": "Impressive display"
+      },
+      {
+        "num": 3,
+        "clue": "Paris subway"
+      },
+      {
+        "num": 4,
+        "clue": "Covered in chimney dust"
+      },
+      {
+        "num": 6,
+        "clue": "Just okay"
+      }
+    ]
+  },
+  "theme": "Phrases that say the same word twice",
+  "publishedAt": "2026-11-10T20:08:19.633Z"
+}
