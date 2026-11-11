@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-12",
+  "date": "2026-11-12",
+  "series": "claude",
+  "title": "Room for Seconds",
+  "author": "Claude",
+  "note": "Just in time for Thanksgiving: every theme answer is something that gets stuffed.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#.....#...",
+    ".....#.....#...",
+    "...........#...",
+    "#...#.....#....",
+    "......##.......",
+    "...#.....#.....",
+    "...#....##....#",
+    "###.........###",
+    "#....##....#...",
+    ".....#.....#...",
+    ".......##......",
+    "....#.....#...#",
+    "...#...........",
+    "...#.....#.....",
+    "...#.....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:2rf7cMKa6I1PGu2b7lTd+z7MAUVGSu9aNi/ugdtaDyvZeGNTVMZqyPSK5PbcDyQoaDLRFhv8dovpLRG4LYo4H/5wMco1P1tqd9QthPaDfjH7B+mN96st8Rd3zXk4JhfSHRvgwOkwXTWZjnL2LcB5ulUzinrWO6CrlbduofhdZmObBNXEAdMGz8STn7+JGOSBUpOzdDYE04SgTgBVnutpi2h3GHBaiKe6I95gps+slOLfBLsTYB29YLYxe/hJ8oJyOQGMDn+eQKiIsnE1HWOFU5gTHCjD8u4N4sH3GgWzSxza",
+  "checksum": "bb5c0be9",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Hogwash"
+      },
+      {
+        "num": 6,
+        "clue": "Voices below sopranos"
+      },
+      {
+        "num": 11,
+        "clue": "Rerouting device, for short"
+      },
+      {
+        "num": 14,
+        "clue": "Divas' showpieces"
+      },
+      {
+        "num": 15,
+        "clue": "Pink-fleshed tropical fruit"
+      },
+      {
+        "num": 16,
+        "clue": "Mesozoic, e.g."
+      },
+      {
+        "num": 17,
+        "clue": "Thanksgiving centerpiece that's full of itself?"
+      },
+      {
+        "num": 19,
+        "clue": "Habit wearer"
+      },
+      {
+        "num": 20,
+        "clue": "Hint of frost in the air"
+      },
+      {
+        "num": 21,
+        "clue": "Like some wine barrels"
+      },
+      {
+        "num": 22,
+        "clue": "Relinquish"
+      },
+      {
+        "num": 23,
+        "clue": "Capital of the Bahamas"
+      },
+      {
+        "num": 25,
+        "clue": "Effortless way to learn, figuratively"
+      },
+      {
+        "num": 27,
+        "clue": "In years past"
+      },
+      {
+        "num": 28,
+        "clue": "Bridal gown's tail"
+      },
+      {
+        "num": 31,
+        "clue": "Top tier of celebrities"
+      },
+      {
+        "num": 32,
+        "clue": "Pig's place"
+      },
+      {
+        "num": 33,
+        "clue": "Give, as a hand"
+      },
+      {
+        "num": 34,
+        "clue": "Snack"
+      },
+      {
+        "num": 35,
+        "clue": "Cuddly companion packed with fluff"
+      },
+      {
+        "num": 38,
+        "clue": "Length times width, for a rectangle"
+      },
+      {
+        "num": 40,
+        "clue": "Pine"
+      },
+      {
+        "num": 41,
+        "clue": "Golf org. with a Championship"
+      },
+      {
+        "num": 44,
+        "clue": "Things a Fitbit counts"
+      },
+      {
+        "num": 45,
+        "clue": "Neck and neck"
+      },
+      {
+        "num": 46,
+        "clue": "Striped official"
+      },
+      {
+        "num": 47,
+        "clue": "Spotted sprinter"
+      },
+      {
+        "num": 49,
+        "clue": "Like a red-flagged email"
+      },
+      {
+        "num": 51,
+        "clue": "Woods of \"Legally Blonde\""
+      },
+      {
+        "num": 52,
+        "clue": "Academic strictness"
+      },
+      {
+        "num": 55,
+        "clue": "Wolfed down"
+      },
+      {
+        "num": 56,
+        "clue": "Born, on a wedding announcement"
+      },
+      {
+        "num": 57,
+        "clue": "Veggies hollowed out and filled with rice and ground beef"
+      },
+      {
+        "num": 60,
+        "clue": "List-ending abbr."
+      },
+      {
+        "num": 61,
+        "clue": "Small bay"
+      },
+      {
+        "num": 62,
+        "clue": "Kidney-related"
+      },
+      {
+        "num": 63,
+        "clue": "Tennis unit"
+      },
+      {
+        "num": 64,
+        "clue": "Neon and argon"
+      },
+      {
+        "num": 65,
+        "clue": "Strangely enough"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Lawyers' group, with \"the\""
+      },
+      {
+        "num": 2,
+        "clue": "Period after bronze went out of style?"
+      },
+      {
+        "num": 3,
+        "clue": "Go-between"
+      },
+      {
+        "num": 4,
+        "clue": "Shocked reactions"
+      },
+      {
+        "num": 5,
+        "clue": "N.Y. winter clock setting"
+      },
+      {
+        "num": 6,
+        "clue": "Cancún water"
+      },
+      {
+        "num": 7,
+        "clue": "Read a forum without posting"
+      },
+      {
+        "num": 8,
+        "clue": "Accept, as a challenge"
+      },
+      {
+        "num": 9,
+        "clue": "Things that get preheated"
+      },
+      {
+        "num": 10,
+        "clue": "For instance"
+      },
+      {
+        "num": 11,
+        "clue": "Origin"
+      },
+      {
+        "num": 12,
+        "clue": "Easily scandalized"
+      },
+      {
+        "num": 13,
+        "clue": "Most levelheaded"
+      },
+      {
+        "num": 18,
+        "clue": "Hit the road, as a band"
+      },
+      {
+        "num": 22,
+        "clue": "Crayon choice"
+      },
+      {
+        "num": 23,
+        "clue": "Afternoon recharge"
+      },
+      {
+        "num": 24,
+        "clue": "If nothing else"
+      },
+      {
+        "num": 26,
+        "clue": "Dugout boss"
+      },
+      {
+        "num": 29,
+        "clue": "Rock ___ roll"
+      },
+      {
+        "num": 30,
+        "clue": "Peaceful pastoral scene"
+      },
+      {
+        "num": 35,
+        "clue": "Plains dwelling"
+      },
+      {
+        "num": 36,
+        "clue": "Bae, by another name"
+      },
+      {
+        "num": 37,
+        "clue": "Make certain"
+      },
+      {
+        "num": 38,
+        "clue": "Olympian"
+      },
+      {
+        "num": 39,
+        "clue": "Send back to office"
+      },
+      {
+        "num": 41,
+        "clue": "Make believe"
+      },
+      {
+        "num": 42,
+        "clue": "Not specific"
+      },
+      {
+        "num": 43,
+        "clue": "Toward the stern"
+      },
+      {
+        "num": 44,
+        "clue": "Parts of acts"
+      },
+      {
+        "num": 45,
+        "clue": "Relaxes, informally"
+      },
+      {
+        "num": 48,
+        "clue": "Concert venue"
+      },
+      {
+        "num": 50,
+        "clue": "Stared openmouthed"
+      },
+      {
+        "num": 53,
+        "clue": "Delight"
+      },
+      {
+        "num": 54,
+        "clue": "Chooses (to)"
+      },
+      {
+        "num": 57,
+        "clue": "Major"
+      },
+      {
+        "num": 58,
+        "clue": "Not an amateur"
+      },
+      {
+        "num": 59,
+        "clue": "Foxy"
+      }
+    ]
+  },
+  "theme": "Things that get stuffed",
+  "publishedAt": "2026-11-11T20:13:14.428Z"
+}

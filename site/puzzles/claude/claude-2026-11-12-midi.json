@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-12-midi",
+  "date": "2026-11-12",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Full House",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...###...",
+    "...#.....",
+    ".........",
+    "......###",
+    "....#....",
+    "###......",
+    ".........",
+    ".....#...",
+    "...###..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:0tNaisJq/2HlfvP17i7nJzModq4kK9kBMdP+Lu8EV1YzEBKDFUDUXxjDbcQq5cde87BEBpNhCU3+u2Pig0nNwXwUqX2FrAKwNZ1v8Vkw7pLq",
+  "checksum": "f2464b9f",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Big name at the multiplex"
+      },
+      {
+        "num": 4,
+        "clue": "\"Mr. Blue Sky\" band, briefly"
+      },
+      {
+        "num": 7,
+        "clue": "Business card abbr."
+      },
+      {
+        "num": 8,
+        "clue": "Kindle download"
+      },
+      {
+        "num": 10,
+        "clue": "They're hung by the chimney with care, waiting for Santa"
+      },
+      {
+        "num": 12,
+        "clue": "Two-under-par scores"
+      },
+      {
+        "num": 13,
+        "clue": "Too"
+      },
+      {
+        "num": 14,
+        "clue": "Start to flag"
+      },
+      {
+        "num": 18,
+        "clue": "Wispy cloud type"
+      },
+      {
+        "num": 20,
+        "clue": "Caps that might be filled with sausage and breadcrumbs"
+      },
+      {
+        "num": 23,
+        "clue": "First sign of spring?"
+      },
+      {
+        "num": 24,
+        "clue": "Org. for Celtics and Lakers"
+      },
+      {
+        "num": 25,
+        "clue": "Genetic info"
+      },
+      {
+        "num": 26,
+        "clue": "\"Woo-hoo!\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Bewildered"
+      },
+      {
+        "num": 2,
+        "clue": "Heavy ___"
+      },
+      {
+        "num": 3,
+        "clue": "Gums up"
+      },
+      {
+        "num": 4,
+        "clue": "Forever and a day"
+      },
+      {
+        "num": 5,
+        "clue": "Captain's record"
+      },
+      {
+        "num": 6,
+        "clue": "Green-lights"
+      },
+      {
+        "num": 8,
+        "clue": "Squeeze (out)"
+      },
+      {
+        "num": 9,
+        "clue": "Cozy French eatery"
+      },
+      {
+        "num": 11,
+        "clue": "Snug, bell-shaped hat of the 1920s"
+      },
+      {
+        "num": 15,
+        "clue": "Twist in many an O. Henry story"
+      },
+      {
+        "num": 16,
+        "clue": "Ballroom dance with Cuban roots"
+      },
+      {
+        "num": 17,
+        "clue": "College application component"
+      },
+      {
+        "num": 19,
+        "clue": "April 15 org."
+      },
+      {
+        "num": 20,
+        "clue": "Steamed"
+      },
+      {
+        "num": 21,
+        "clue": "Coffee server at a big event"
+      },
+      {
+        "num": 22,
+        "clue": "\"Chandelier\" singer"
+      }
+    ]
+  },
+  "theme": "Things that get stuffed",
+  "publishedAt": "2026-11-11T20:13:14.293Z"
+}

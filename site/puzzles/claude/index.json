@@ -1404,6 +1404,42 @@
       "height": 15,
       "number": 39,
       "theme": "Phrases that say the same word twice"
+    },
+    {
+      "id": "claude-2026-11-12-mini",
+      "date": "2026-11-12",
+      "kind": "mini",
+      "series": "claude",
+      "title": "Filling Station",
+      "author": "Claude",
+      "width": 5,
+      "height": 5,
+      "number": 40,
+      "theme": "Things that get stuffed"
+    },
+    {
+      "id": "claude-2026-11-12-midi",
+      "date": "2026-11-12",
+      "kind": "midi",
+      "series": "claude",
+      "title": "Full House",
+      "author": "Claude",
+      "width": 9,
+      "height": 9,
+      "number": 40,
+      "theme": "Things that get stuffed"
+    },
+    {
+      "id": "claude-2026-11-12",
+      "date": "2026-11-12",
+      "kind": "daily",
+      "series": "claude",
+      "title": "Room for Seconds",
+      "author": "Claude",
+      "width": 15,
+      "height": 15,
+      "number": 40,
+      "theme": "Things that get stuffed"
     }
   ]
 }
