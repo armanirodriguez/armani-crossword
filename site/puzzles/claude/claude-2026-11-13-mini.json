@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-13-mini",
+  "date": "2026-11-13",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Three Wishes",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:QhCZdMJSvyOJp5V9TsVhDJvTnrukue8dYA==",
+  "checksum": "014ae905",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Riches' opposite, in a story arc"
+      },
+      {
+        "num": 5,
+        "clue": "Picture-perfect"
+      },
+      {
+        "num": 7,
+        "clue": "Fruit in a lassi"
+      },
+      {
+        "num": 8,
+        "clue": "Bond and Bourne"
+      },
+      {
+        "num": 9,
+        "clue": "Midterm, e.g."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Hoops' edges"
+      },
+      {
+        "num": 2,
+        "clue": "Roll with the changes"
+      },
+      {
+        "num": 3,
+        "clue": "Granter of three, famously"
+      },
+      {
+        "num": 4,
+        "clue": "Wise ones"
+      },
+      {
+        "num": 6,
+        "clue": "Hard-to-follow island drama"
+      }
+    ]
+  },
+  "theme": "Making a wish",
+  "publishedAt": "2026-11-12T20:06:58.780Z"
+}

@@ -1440,6 +1440,42 @@
       "height": 15,
       "number": 40,
       "theme": "Things that get stuffed"
+    },
+    {
+      "id": "claude-2026-11-13-mini",
+      "date": "2026-11-13",
+      "kind": "mini",
+      "series": "claude",
+      "title": "Three Wishes",
+      "author": "Claude",
+      "width": 5,
+      "height": 5,
+      "number": 41,
+      "theme": "Making a wish"
+    },
+    {
+      "id": "claude-2026-11-13-midi",
+      "date": "2026-11-13",
+      "kind": "midi",
+      "series": "claude",
+      "title": "Blow Me Away",
+      "author": "Claude",
+      "width": 9,
+      "height": 9,
+      "number": 41,
+      "theme": "Making a wish"
+    },
+    {
+      "id": "claude-2026-11-13",
+      "date": "2026-11-13",
+      "kind": "daily",
+      "series": "claude",
+      "title": "Wishful Thinking",
+      "author": "Claude",
+      "width": 15,
+      "height": 15,
+      "number": 41,
+      "theme": "Making a wish"
     }
   ]
 }

@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-13",
+  "date": "2026-11-13",
+  "series": "claude",
+  "title": "Wishful Thinking",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "##............#",
+    ".......#...#...",
+    "....#....#.....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    ".....#....#....",
+    "...#...#.......",
+    "#............##",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:eY44U+HUNSj7G9djZy7naym3Wscva3Gafp/M/itswyGmIPf1IcwP3W5a0KXbtF7kwUqZ8DRD8PNbaIXTTbEgKJRJJoekKffXrBpmgJYyaQdcmw4KP5HTfERvdNshbksoMJqxA6Xsn3/oeme7AdFn5GbidVODbIPXSDmXcrewHvTkTgToydcviqO0U1Wn8PkFZSugnxJ1BLBizX8oq6YikVTKaAl0UawnlVEXhnz3EwQ47sdXkxaDj6ucLE0NAPUKUcMSwOB5EMCi7fBk9eCvsxUJ+K8SBit0g7Cp2zlflvQw",
+  "checksum": "4bea0137",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Walks nervously"
+      },
+      {
+        "num": 6,
+        "clue": "Release, as a new album"
+      },
+      {
+        "num": 10,
+        "clue": "Grocer where you rent your cart for a quarter"
+      },
+      {
+        "num": 14,
+        "clue": "Skate edge"
+      },
+      {
+        "num": 15,
+        "clue": "Grey area?"
+      },
+      {
+        "num": 16,
+        "clue": "Beep's cousin"
+      },
+      {
+        "num": 17,
+        "clue": "Barracks bigwig, informally"
+      },
+      {
+        "num": 18,
+        "clue": "Fey who wrote \"Bossypants\""
+      },
+      {
+        "num": 19,
+        "clue": "Things kids are told to put away"
+      },
+      {
+        "num": 20,
+        "clue": "Candles go on it before the big moment"
+      },
+      {
+        "num": 23,
+        "clue": "Name on a jersey, often"
+      },
+      {
+        "num": 25,
+        "clue": "Letter after sigma"
+      },
+      {
+        "num": 26,
+        "clue": "Loneliest number, in a song"
+      },
+      {
+        "num": 28,
+        "clue": "Monarch in a deck"
+      },
+      {
+        "num": 29,
+        "clue": "Strike, as for a selfie"
+      },
+      {
+        "num": 31,
+        "clue": "Trash talk"
+      },
+      {
+        "num": 33,
+        "clue": "Answer to a proposal, hopefully"
+      },
+      {
+        "num": 34,
+        "clue": "Big top, e.g."
+      },
+      {
+        "num": 35,
+        "clue": "Tried out"
+      },
+      {
+        "num": 36,
+        "clue": "Revealer for what you might do at 20- and 53-Across"
+      },
+      {
+        "num": 38,
+        "clue": "Rock layers"
+      },
+      {
+        "num": 41,
+        "clue": "Like many a November day"
+      },
+      {
+        "num": 42,
+        "clue": "\"Kill Bill\" singer"
+      },
+      {
+        "num": 45,
+        "clue": "Make a hard copy"
+      },
+      {
+        "num": 46,
+        "clue": "Go like the wind"
+      },
+      {
+        "num": 47,
+        "clue": "Recipe unit"
+      },
+      {
+        "num": 48,
+        "clue": "Summer mo."
+      },
+      {
+        "num": 49,
+        "clue": "Rowing stick"
+      },
+      {
+        "num": 51,
+        "clue": "Just getting started"
+      },
+      {
+        "num": 53,
+        "clue": "Night streak worth closing your eyes for"
+      },
+      {
+        "num": 56,
+        "clue": "James of \"At Last\""
+      },
+      {
+        "num": 57,
+        "clue": "Shape of a famous D.C. office"
+      },
+      {
+        "num": 58,
+        "clue": "Golf great Palmer, to his army"
+      },
+      {
+        "num": 61,
+        "clue": "Feud, in rap slang"
+      },
+      {
+        "num": 62,
+        "clue": "Like some beers"
+      },
+      {
+        "num": 63,
+        "clue": "What a bloodhound follows"
+      },
+      {
+        "num": 64,
+        "clue": "Rose sites in a garden"
+      },
+      {
+        "num": 65,
+        "clue": "Neighbor of Vietnam"
+      },
+      {
+        "num": 66,
+        "clue": "Moves, as cattle"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Home of \"Antiques Roadshow\""
+      },
+      {
+        "num": 2,
+        "clue": "Montgomery's st."
+      },
+      {
+        "num": 3,
+        "clue": "Copies made with a typewriter"
+      },
+      {
+        "num": 4,
+        "clue": "Lawn trim job"
+      },
+      {
+        "num": 5,
+        "clue": "Crystal ball gazers"
+      },
+      {
+        "num": 6,
+        "clue": "Knock off the top"
+      },
+      {
+        "num": 7,
+        "clue": "Fridge visit at midnight"
+      },
+      {
+        "num": 8,
+        "clue": "Rococo"
+      },
+      {
+        "num": 9,
+        "clue": "Beach in Cancun"
+      },
+      {
+        "num": 10,
+        "clue": "\"___ girl!\""
+      },
+      {
+        "num": 11,
+        "clue": "Crow's nest occupant"
+      },
+      {
+        "num": 12,
+        "clue": "Grande dame of a field"
+      },
+      {
+        "num": 13,
+        "clue": "\"___ a Wonderful Life\""
+      },
+      {
+        "num": 21,
+        "clue": "Capital on the Kansas River"
+      },
+      {
+        "num": 22,
+        "clue": "Sickly sweet"
+      },
+      {
+        "num": 23,
+        "clue": "Limit, in a saying"
+      },
+      {
+        "num": 24,
+        "clue": "Chart that's sliced"
+      },
+      {
+        "num": 27,
+        "clue": "Terminal fig."
+      },
+      {
+        "num": 30,
+        "clue": "Phase"
+      },
+      {
+        "num": 32,
+        "clue": "Bat wood"
+      },
+      {
+        "num": 34,
+        "clue": "Ink job"
+      },
+      {
+        "num": 35,
+        "clue": "Royal headbands?"
+      },
+      {
+        "num": 36,
+        "clue": "Chess piece, generically"
+      },
+      {
+        "num": 37,
+        "clue": "Lassoes and corrals"
+      },
+      {
+        "num": 38,
+        "clue": "Place for a mud bath"
+      },
+      {
+        "num": 39,
+        "clue": "University overseer"
+      },
+      {
+        "num": 40,
+        "clue": "Set straight"
+      },
+      {
+        "num": 42,
+        "clue": "Less lenient"
+      },
+      {
+        "num": 43,
+        "clue": "Calm and collected"
+      },
+      {
+        "num": 44,
+        "clue": "Fitting"
+      },
+      {
+        "num": 46,
+        "clue": "Pub quiz fodder"
+      },
+      {
+        "num": 47,
+        "clue": "Few and far between"
+      },
+      {
+        "num": 50,
+        "clue": "Coral ring"
+      },
+      {
+        "num": 52,
+        "clue": "Secret supply"
+      },
+      {
+        "num": 54,
+        "clue": "Clumsy sorts"
+      },
+      {
+        "num": 55,
+        "clue": "Brussels-based alliance"
+      },
+      {
+        "num": 56,
+        "clue": "Go out with the tide"
+      },
+      {
+        "num": 59,
+        "clue": "Hoosier St."
+      },
+      {
+        "num": 60,
+        "clue": "Saucer passengers, briefly"
+      }
+    ]
+  },
+  "theme": "Making a wish",
+  "publishedAt": "2026-11-12T20:06:59.046Z"
+}

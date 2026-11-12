@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-13-midi",
+  "date": "2026-11-13",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Blow Me Away",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:tcSOmgbKhC/jWgAPuGmFdJrj4qkUDM+lgTTGD0kFtyt6FWe/js2Xi1l3moOSboxJ3sEBWGt47uWONkQ0zbmhvcQjuichogOUZKWLeZ1Lysk8",
+  "checksum": "45e1942d",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Muscat is its capital"
+      },
+      {
+        "num": 5,
+        "clue": "Vatican VIP"
+      },
+      {
+        "num": 9,
+        "clue": "Like a Crayola"
+      },
+      {
+        "num": 10,
+        "clue": "Fountain choice"
+      },
+      {
+        "num": 11,
+        "clue": "Lucky ones may land on your cheek, ready to be blown away"
+      },
+      {
+        "num": 13,
+        "clue": "Birds that are famously gone"
+      },
+      {
+        "num": 14,
+        "clue": "\"Let's ___ you're right ...\""
+      },
+      {
+        "num": 15,
+        "clue": "Tiny quibble"
+      },
+      {
+        "num": 17,
+        "clue": "Squeak at a mouse"
+      },
+      {
+        "num": 20,
+        "clue": "Frisbees, e.g."
+      },
+      {
+        "num": 24,
+        "clue": "Puffball you blow on with your eyes shut"
+      },
+      {
+        "num": 26,
+        "clue": "Cheshire Cat's lingering feature"
+      },
+      {
+        "num": 27,
+        "clue": "Furry red tickle target"
+      },
+      {
+        "num": 28,
+        "clue": "\"___ noche\" (tonight, in Spanish)"
+      },
+      {
+        "num": 29,
+        "clue": "Distort, as data"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Had an IOU out"
+      },
+      {
+        "num": 2,
+        "clue": "Aioli base"
+      },
+      {
+        "num": 3,
+        "clue": "Let go"
+      },
+      {
+        "num": 4,
+        "clue": "Stocking material"
+      },
+      {
+        "num": 5,
+        "clue": "Some desktops, briefly"
+      },
+      {
+        "num": 6,
+        "clue": "Fireworks reactions"
+      },
+      {
+        "num": 7,
+        "clue": "Guilty or not guilty, e.g."
+      },
+      {
+        "num": 8,
+        "clue": "\"Take it ___\""
+      },
+      {
+        "num": 12,
+        "clue": "Stage whisper"
+      },
+      {
+        "num": 16,
+        "clue": "Scrabble pieces"
+      },
+      {
+        "num": 17,
+        "clue": "Advantage"
+      },
+      {
+        "num": 18,
+        "clue": "They may be pierced or shucked"
+      },
+      {
+        "num": 19,
+        "clue": "Make a scarf, perhaps"
+      },
+      {
+        "num": 21,
+        "clue": "Worm's work"
+      },
+      {
+        "num": 22,
+        "clue": "\"___ again?\""
+      },
+      {
+        "num": 23,
+        "clue": "Cause of a school's day off"
+      },
+      {
+        "num": 25,
+        "clue": "Double helix stuff"
+      }
+    ]
+  },
+  "theme": "Making a wish",
+  "publishedAt": "2026-11-12T20:06:58.912Z"
+}
