@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-14",
+  "date": "2026-11-14",
+  "series": "claude",
+  "title": "Good Boy!",
+  "author": "Claude",
+  "note": "Trainer's tip: check how the three longest answers end.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......#...#....",
+    "......#........",
+    "......#........",
+    "##............#",
+    "...#....###....",
+    ".......#...#...",
+    "....###....#...",
+    "###.........###",
+    "...#....###....",
+    "...#...#.......",
+    "....###....#...",
+    "#............##",
+    "........#......",
+    "........#......",
+    "....#...#......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:YIhZb9YVW+H8TCijHlHJhKr1XAbLXrFUgRErg6qco9gE1DLwBlCa2DhZqQhSwyOt0CsHzIBE03qcYrN7HJI/oDN5h1mc7qavGyRyAdQrMKINytfM7R7GYNpj6cGEuKcCFSuUJA5+aDoWdbo6gKac0RhmS+Z/xutxYIJWA6Hs0XBeg3BhjtO+0udqOH/uNXvv+FdhwszSMkUU8TxdeiHkaT/Ev6QfcVup6WF9Arr/TkDp8a58iOUY50CpTxYiWdcGbBkt//q8JAIDSXB4ngVRk3lAvmPeLetpsnZzD2AJCWKF",
+  "checksum": "20414cc5",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Like the acid in an ant's sting"
+      },
+      {
+        "num": 7,
+        "clue": "Character development path"
+      },
+      {
+        "num": 10,
+        "clue": "Olympian with a jealous streak"
+      },
+      {
+        "num": 14,
+        "clue": "Singer who played Glinda in 2024's \"Wicked\""
+      },
+      {
+        "num": 15,
+        "clue": "Not at all rash"
+      },
+      {
+        "num": 17,
+        "clue": "Pho bases"
+      },
+      {
+        "num": 18,
+        "clue": "Sloth, say"
+      },
+      {
+        "num": 19,
+        "clue": "Gretchen's would-be catchphrase in \"Mean Girls\""
+      },
+      {
+        "num": 21,
+        "clue": "Langley-based org."
+      },
+      {
+        "num": 23,
+        "clue": "Allows"
+      },
+      {
+        "num": 24,
+        "clue": "Headliner"
+      },
+      {
+        "num": 26,
+        "clue": "Sport in which quivers are standard equipment"
+      },
+      {
+        "num": 28,
+        "clue": "Clear, as tables"
+      },
+      {
+        "num": 31,
+        "clue": "Eco-minded fed. agency"
+      },
+      {
+        "num": 32,
+        "clue": "Still being tested, in software lingo"
+      },
+      {
+        "num": 33,
+        "clue": "Six-second video app of the 2010s"
+      },
+      {
+        "num": 34,
+        "clue": "Lawn's morning coat?"
+      },
+      {
+        "num": 35,
+        "clue": "Moment the landing gear meets the runway"
+      },
+      {
+        "num": 40,
+        "clue": "Hectare's hundredth"
+      },
+      {
+        "num": 43,
+        "clue": "Org. with carriers and routes"
+      },
+      {
+        "num": 44,
+        "clue": "Toe the line"
+      },
+      {
+        "num": 48,
+        "clue": "Wk. opener, for many"
+      },
+      {
+        "num": 49,
+        "clue": "Old salt"
+      },
+      {
+        "num": 50,
+        "clue": "Link in a breakfast chain?"
+      },
+      {
+        "num": 53,
+        "clue": "Apple product since 1998"
+      },
+      {
+        "num": 55,
+        "clue": "What a rolling stone gathers none of"
+      },
+      {
+        "num": 56,
+        "clue": "Destiny"
+      },
+      {
+        "num": 57,
+        "clue": "Kryptonite, so to speak"
+      },
+      {
+        "num": 62,
+        "clue": "2011 David Guetta hit featuring Sia"
+      },
+      {
+        "num": 63,
+        "clue": "Recently"
+      },
+      {
+        "num": 66,
+        "clue": "Like some meetings with the boss"
+      },
+      {
+        "num": 67,
+        "clue": "Spud with a brown jacket"
+      },
+      {
+        "num": 68,
+        "clue": "Gets hitched"
+      },
+      {
+        "num": 69,
+        "clue": "\"Illmatic\" rapper"
+      },
+      {
+        "num": 70,
+        "clue": "Over the moon"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Super, in '60s slang"
+      },
+      {
+        "num": 2,
+        "clue": "Bruins great Bobby"
+      },
+      {
+        "num": 3,
+        "clue": "What a scolder reads"
+      },
+      {
+        "num": 4,
+        "clue": "Subject with many problems?"
+      },
+      {
+        "num": 5,
+        "clue": "Devour"
+      },
+      {
+        "num": 6,
+        "clue": "Swivel wheel"
+      },
+      {
+        "num": 7,
+        "clue": "Out of whack"
+      },
+      {
+        "num": 8,
+        "clue": "Mulligan"
+      },
+      {
+        "num": 9,
+        "clue": "Muscle worked by raises"
+      },
+      {
+        "num": 10,
+        "clue": "Looks high and low"
+      },
+      {
+        "num": 11,
+        "clue": "Put up"
+      },
+      {
+        "num": 12,
+        "clue": "Remold"
+      },
+      {
+        "num": 13,
+        "clue": "Spots on TV"
+      },
+      {
+        "num": 16,
+        "clue": "Call, in poker"
+      },
+      {
+        "num": 20,
+        "clue": "Messy bedroom, metaphorically"
+      },
+      {
+        "num": 21,
+        "clue": "Yellow vehicle, often"
+      },
+      {
+        "num": 22,
+        "clue": "Dander"
+      },
+      {
+        "num": 25,
+        "clue": "Unedited, as footage"
+      },
+      {
+        "num": 27,
+        "clue": "Fedora or fez"
+      },
+      {
+        "num": 28,
+        "clue": "eBay action"
+      },
+      {
+        "num": 29,
+        "clue": "Game with Draw Four cards"
+      },
+      {
+        "num": 30,
+        "clue": "Do some tailoring"
+      },
+      {
+        "num": 33,
+        "clue": "Blockbuster's old stock: Abbr."
+      },
+      {
+        "num": 36,
+        "clue": "Like a tagged runner"
+      },
+      {
+        "num": 37,
+        "clue": "Olympic chant"
+      },
+      {
+        "num": 38,
+        "clue": "Lifeguard's skill, for short"
+      },
+      {
+        "num": 39,
+        "clue": "Rejections"
+      },
+      {
+        "num": 40,
+        "clue": "Paris pal"
+      },
+      {
+        "num": 41,
+        "clue": "Caesar's green"
+      },
+      {
+        "num": 42,
+        "clue": "Signed into law"
+      },
+      {
+        "num": 45,
+        "clue": "Stabilizing weight in a hull"
+      },
+      {
+        "num": 46,
+        "clue": "Swelled head"
+      },
+      {
+        "num": 47,
+        "clue": "As of now"
+      },
+      {
+        "num": 50,
+        "clue": "Message in a bottle, maybe"
+      },
+      {
+        "num": 51,
+        "clue": "On terra firma"
+      },
+      {
+        "num": 52,
+        "clue": "Handy"
+      },
+      {
+        "num": 54,
+        "clue": "Pandemonium"
+      },
+      {
+        "num": 55,
+        "clue": "Viral posts"
+      },
+      {
+        "num": 58,
+        "clue": "Overnight stop for travelers"
+      },
+      {
+        "num": 59,
+        "clue": "Pride member"
+      },
+      {
+        "num": 60,
+        "clue": "Lovegood of Hogwarts"
+      },
+      {
+        "num": 61,
+        "clue": "Arendelle royal"
+      },
+      {
+        "num": 62,
+        "clue": "Pull"
+      },
+      {
+        "num": 64,
+        "clue": "Driving range peg"
+      },
+      {
+        "num": 65,
+        "clue": "Flight board abbr."
+      }
+    ]
+  },
+  "theme": "Words and phrases that end with a dog command",
+  "publishedAt": "2026-11-13T20:16:44.657Z"
+}

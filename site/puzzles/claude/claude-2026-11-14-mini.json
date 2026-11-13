@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-14-mini",
+  "date": "2026-11-14",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Paws for Effect",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:Cdlvgm72I/zoCvqe4l4WanUpbb24fdLOjg==",
+  "checksum": "e6413e5b",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Glowing review"
+      },
+      {
+        "num": 5,
+        "clue": "Nimble"
+      },
+      {
+        "num": 7,
+        "clue": "Detectives' workloads"
+      },
+      {
+        "num": 8,
+        "clue": "Show the door, as a tenant"
+      },
+      {
+        "num": 9,
+        "clue": "Jazz great James"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Dash, e.g."
+      },
+      {
+        "num": 2,
+        "clue": "Tequila source"
+      },
+      {
+        "num": 3,
+        "clue": "Pay a call on"
+      },
+      {
+        "num": 4,
+        "clue": "Choose by ballot"
+      },
+      {
+        "num": 6,
+        "clue": "This, in Toledo"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end with a dog command",
+  "publishedAt": "2026-11-13T20:16:44.341Z"
+}

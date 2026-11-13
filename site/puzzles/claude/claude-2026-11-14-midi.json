@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-14-midi",
+  "date": "2026-11-14",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Obedience School",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    ".........",
+    ".........",
+    "#....#...",
+    "###...###",
+    "...#....#",
+    ".........",
+    ".........",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:ToVgMD/7fB7moDrqrJmrrEfZnfnBRODrlYz98t8dhU3nG+Qfmlj8GZh2YHh6DVvPWB43ushqfznuK4ufmkw/vc4jYjJiZ/StTAqA+kDadCHX",
+  "checksum": "9ee23e12",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "\"Woe is me!\""
+      },
+      {
+        "num": 5,
+        "clue": "Mary-Kate, to Ashley"
+      },
+      {
+        "num": 9,
+        "clue": "Kelis's 2003 hit that brings all the boys to the yard"
+      },
+      {
+        "num": 11,
+        "clue": "Spa services that may end with polish"
+      },
+      {
+        "num": 12,
+        "clue": "Spreadsheet contents"
+      },
+      {
+        "num": 13,
+        "clue": "Downward dog spot?"
+      },
+      {
+        "num": 14,
+        "clue": "Foxy"
+      },
+      {
+        "num": 16,
+        "clue": "Lose its spring, as a mattress"
+      },
+      {
+        "num": 19,
+        "clue": "Word on a door"
+      },
+      {
+        "num": 22,
+        "clue": "Guardian"
+      },
+      {
+        "num": 25,
+        "clue": "Like a party crasher"
+      },
+      {
+        "num": 26,
+        "clue": "Ready to be taken off the grill"
+      },
+      {
+        "num": 27,
+        "clue": "Floored"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Piece of a guitarist's stack"
+      },
+      {
+        "num": 2,
+        "clue": "Fibbed"
+      },
+      {
+        "num": 3,
+        "clue": "Hawkeye portrayer Alan"
+      },
+      {
+        "num": 4,
+        "clue": "\"SNL\" segments"
+      },
+      {
+        "num": 5,
+        "clue": "Fri. preceder"
+      },
+      {
+        "num": 6,
+        "clue": "Close, in a guessing game"
+      },
+      {
+        "num": 7,
+        "clue": "Flat-pack furniture giant"
+      },
+      {
+        "num": 8,
+        "clue": "It's left empty when the kids move out"
+      },
+      {
+        "num": 10,
+        "clue": "Cutting-edge instrument?"
+      },
+      {
+        "num": 15,
+        "clue": "Desert plant with sword-shaped leaves"
+      },
+      {
+        "num": 16,
+        "clue": "Tater"
+      },
+      {
+        "num": 17,
+        "clue": "River through Florence"
+      },
+      {
+        "num": 18,
+        "clue": "Prom attire"
+      },
+      {
+        "num": 20,
+        "clue": "Put in the overhead bin"
+      },
+      {
+        "num": 21,
+        "clue": "Plate at the end of the base path"
+      },
+      {
+        "num": 23,
+        "clue": "Graphic ___"
+      },
+      {
+        "num": 24,
+        "clue": "Stop-sign color"
+      }
+    ]
+  },
+  "theme": "Words and phrases that end with a dog command",
+  "publishedAt": "2026-11-13T20:16:51.701Z"
+}
