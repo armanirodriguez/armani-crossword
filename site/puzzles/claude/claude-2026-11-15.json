@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-15",
+  "date": "2026-11-15",
+  "series": "claude",
+  "title": "Name Dropping",
+  "author": "Claude",
+  "note": "Every theme answer is named for a real person.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "...#...........",
+    "......##...#...",
+    "....#....#.....",
+    "....#...#...###",
+    "#.............#",
+    "###...#...#....",
+    ".....#....#....",
+    "...#...##......",
+    "...........#...",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:vyCycrsx0qHiokmWmonpuqXojvmk7B9m1AwbwxnBhvqO9GiOWdJHwlG+6t8pJsnOOCrObmvdNULXenr436BTL5hpW+ZI4MYxPX8HQpmkFl4WTM8t+4xfgV5DYpvVsd7ZCEH2EW1tVVZwafCR7VncudtcfVfcSNmrZX6A07GVsVQRjylk6WPsN5P9aQ/qeKq/o20Hl/h9M67DEXr4ioR1MyfamXiCgZAfa0ik37d1oLVdBrbS2xXEYtZWqRMTeBBWCzaZEthKu86yEZZJzMKhHzSPmCbOwwy8rzvqdW657MKP",
+  "checksum": "ebfe6423",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Get the gist of"
+      },
+      {
+        "num": 6,
+        "clue": "Composer whose surname means \"brook\" in German"
+      },
+      {
+        "num": 10,
+        "clue": "Wile E. Coyote's go-to supplier"
+      },
+      {
+        "num": 14,
+        "clue": "Fit for a king"
+      },
+      {
+        "num": 15,
+        "clue": "Not playing at home"
+      },
+      {
+        "num": 16,
+        "clue": "Band's string of dates"
+      },
+      {
+        "num": 17,
+        "clue": "Gal pal, in Guadalajara"
+      },
+      {
+        "num": 18,
+        "clue": "Brainy sort"
+      },
+      {
+        "num": 19,
+        "clue": "Dorothy's little dog"
+      },
+      {
+        "num": 20,
+        "clue": "Polka ___"
+      },
+      {
+        "num": 21,
+        "clue": "Romaine dish honoring Tijuana restaurateur Cardini"
+      },
+      {
+        "num": 24,
+        "clue": "Ducked"
+      },
+      {
+        "num": 26,
+        "clue": "Letter after sigma"
+      },
+      {
+        "num": 27,
+        "clue": "Summer, in Saint-Tropez"
+      },
+      {
+        "num": 28,
+        "clue": "Coming-of-age ceremony, e.g."
+      },
+      {
+        "num": 29,
+        "clue": "Mischief-makers"
+      },
+      {
+        "num": 32,
+        "clue": "Some stable mothers"
+      },
+      {
+        "num": 34,
+        "clue": "Nose-in-the-air type"
+      },
+      {
+        "num": 35,
+        "clue": "Jane ___ (anonymous woman)"
+      },
+      {
+        "num": 36,
+        "clue": "Moving company vehicle"
+      },
+      {
+        "num": 37,
+        "clue": "S'mores layer that owes its name to preacher Sylvester"
+      },
+      {
+        "num": 42,
+        "clue": "Bro's sibling"
+      },
+      {
+        "num": 43,
+        "clue": "\"You've got mail\" co."
+      },
+      {
+        "num": 44,
+        "clue": "X and Y, on a graph"
+      },
+      {
+        "num": 46,
+        "clue": "Number of continents"
+      },
+      {
+        "num": 49,
+        "clue": "On the con side"
+      },
+      {
+        "num": 50,
+        "clue": "Got out of bed"
+      },
+      {
+        "num": 51,
+        "clue": "Fifth or Park: Abbr."
+      },
+      {
+        "num": 52,
+        "clue": "Throw shade at"
+      },
+      {
+        "num": 54,
+        "clue": "Leonidas's city-state"
+      },
+      {
+        "num": 56,
+        "clue": "1893 Chicago World's Fair debut named for its engineer"
+      },
+      {
+        "num": 60,
+        "clue": "Corn core"
+      },
+      {
+        "num": 61,
+        "clue": "Green Gables orphan"
+      },
+      {
+        "num": 62,
+        "clue": "Brown quickly"
+      },
+      {
+        "num": 63,
+        "clue": "Blazing"
+      },
+      {
+        "num": 65,
+        "clue": "Not fake"
+      },
+      {
+        "num": 66,
+        "clue": "Bone in the forearm"
+      },
+      {
+        "num": 67,
+        "clue": "Edged (out)"
+      },
+      {
+        "num": 68,
+        "clue": "Without much purpose"
+      },
+      {
+        "num": 69,
+        "clue": "Big antlered grazers"
+      },
+      {
+        "num": 70,
+        "clue": "Bracket rankings"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Teachers wielding red pens, at times"
+      },
+      {
+        "num": 2,
+        "clue": "Taking off"
+      },
+      {
+        "num": 3,
+        "clue": "Swishing part of a washing machine"
+      },
+      {
+        "num": 4,
+        "clue": "Droop"
+      },
+      {
+        "num": 5,
+        "clue": "Finish second, at the track"
+      },
+      {
+        "num": 6,
+        "clue": "Constant source of misery"
+      },
+      {
+        "num": 7,
+        "clue": "Bowls over"
+      },
+      {
+        "num": 8,
+        "clue": "Diamond measures"
+      },
+      {
+        "num": 9,
+        "clue": "Monster that grew two heads for each one lost"
+      },
+      {
+        "num": 10,
+        "clue": "\"___ girl!\""
+      },
+      {
+        "num": 11,
+        "clue": "Tailgate essential"
+      },
+      {
+        "num": 12,
+        "clue": "Change, genetically"
+      },
+      {
+        "num": 13,
+        "clue": "Wears down"
+      },
+      {
+        "num": 22,
+        "clue": "Brand with three stripes"
+      },
+      {
+        "num": 23,
+        "clue": "Tangy spice in za'atar"
+      },
+      {
+        "num": 25,
+        "clue": "Cheapen"
+      },
+      {
+        "num": 30,
+        "clue": "One who might say \"Because I said so\""
+      },
+      {
+        "num": 31,
+        "clue": "Pie nut"
+      },
+      {
+        "num": 33,
+        "clue": "Turkey's capital"
+      },
+      {
+        "num": 36,
+        "clue": "Small suitcase"
+      },
+      {
+        "num": 38,
+        "clue": "Bollywood's main language"
+      },
+      {
+        "num": 39,
+        "clue": "Nonsense, to a Brit"
+      },
+      {
+        "num": 40,
+        "clue": "Drive out, as demons"
+      },
+      {
+        "num": 41,
+        "clue": "Brought back to its former glory"
+      },
+      {
+        "num": 45,
+        "clue": "Ocean floors"
+      },
+      {
+        "num": 46,
+        "clue": "Browser on a Mac"
+      },
+      {
+        "num": 47,
+        "clue": "Tied (up), as a score"
+      },
+      {
+        "num": 48,
+        "clue": "Springlike"
+      },
+      {
+        "num": 49,
+        "clue": "In addition"
+      },
+      {
+        "num": 53,
+        "clue": "Magazine edition"
+      },
+      {
+        "num": 55,
+        "clue": "Has in mind"
+      },
+      {
+        "num": 57,
+        "clue": "Count (on)"
+      },
+      {
+        "num": 58,
+        "clue": "Baseball great Aaron"
+      },
+      {
+        "num": 59,
+        "clue": "Long stretches of history"
+      },
+      {
+        "num": 64,
+        "clue": "Nemesis"
+      }
+    ]
+  },
+  "theme": "Things named after real people",
+  "publishedAt": "2026-11-14T20:11:31.865Z"
+}

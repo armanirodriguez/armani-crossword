@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-15-midi",
+  "date": "2026-11-15",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Namesakes",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:BP5RNibKAKtiYn4vbPihk68L/zReKYtSJJdOHy1G65zet8Rizrb4vNQRuCb+KkZ7mY3PZJRHU2I5eAQ8iyovebNDDf5NmMBDZtP2qQa04Igg",
+  "checksum": "227f89e9",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Like a good pillow"
+      },
+      {
+        "num": 5,
+        "clue": "Alan of \"M*A*S*H\""
+      },
+      {
+        "num": 9,
+        "clue": "Swear to"
+      },
+      {
+        "num": 10,
+        "clue": "Office betting setup"
+      },
+      {
+        "num": 11,
+        "clue": "Jazz horn named for Belgian inventor Adolphe"
+      },
+      {
+        "num": 13,
+        "clue": "Crafty"
+      },
+      {
+        "num": 14,
+        "clue": "Trail outings"
+      },
+      {
+        "num": 15,
+        "clue": "Classic British takeaway fish"
+      },
+      {
+        "num": 16,
+        "clue": "Cuddle, in a way"
+      },
+      {
+        "num": 19,
+        "clue": "In high demand"
+      },
+      {
+        "num": 22,
+        "clue": "Cuddly toy inspired by a 1902 Theodore Roosevelt hunting story"
+      },
+      {
+        "num": 24,
+        "clue": "Lake that borders Cleveland"
+      },
+      {
+        "num": 25,
+        "clue": "Chips put in before the deal"
+      },
+      {
+        "num": 26,
+        "clue": "Ballpoints"
+      },
+      {
+        "num": 27,
+        "clue": "Arthur of tennis"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Lip"
+      },
+      {
+        "num": 2,
+        "clue": "Racetrack shape"
+      },
+      {
+        "num": 3,
+        "clue": "Attractive, in '70s slang"
+      },
+      {
+        "num": 4,
+        "clue": "Number for a tango"
+      },
+      {
+        "num": 5,
+        "clue": "Ladybug's lunch"
+      },
+      {
+        "num": 6,
+        "clue": "\"Check it out!\""
+      },
+      {
+        "num": 7,
+        "clue": "Ready to come out of the oven"
+      },
+      {
+        "num": 8,
+        "clue": "Pub pours"
+      },
+      {
+        "num": 12,
+        "clue": "Not genuine"
+      },
+      {
+        "num": 15,
+        "clue": "Morse and others"
+      },
+      {
+        "num": 16,
+        "clue": "Dance move"
+      },
+      {
+        "num": 17,
+        "clue": "Father, in France"
+      },
+      {
+        "num": 18,
+        "clue": "Thor's dad"
+      },
+      {
+        "num": 19,
+        "clue": "Egg producers"
+      },
+      {
+        "num": 20,
+        "clue": "Witness-stand vow"
+      },
+      {
+        "num": 21,
+        "clue": "Family ___"
+      },
+      {
+        "num": 23,
+        "clue": "Pasture sound"
+      }
+    ]
+  },
+  "theme": "Things named after real people",
+  "publishedAt": "2026-11-14T20:11:31.736Z"
+}

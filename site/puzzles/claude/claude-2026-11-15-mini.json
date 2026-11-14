@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-15-mini",
+  "date": "2026-11-15",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Claim to Fame",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:YJ/Bsj3/cdr0TbAxS6a2EdaVLAkgnliANg==",
+  "checksum": "3f15c320",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Purple berry in a smoothie bowl"
+      },
+      {
+        "num": 5,
+        "clue": "Like a fresh apple"
+      },
+      {
+        "num": 7,
+        "clue": "Electric car brand named for inventor Nikola"
+      },
+      {
+        "num": 8,
+        "clue": "Black Friday attractions"
+      },
+      {
+        "num": 9,
+        "clue": "Queens ballclub"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Plays a part"
+      },
+      {
+        "num": 2,
+        "clue": "Coffee lightener"
+      },
+      {
+        "num": 3,
+        "clue": "Grocery store row"
+      },
+      {
+        "num": 4,
+        "clue": "Tiny bit of land in a lake"
+      },
+      {
+        "num": 6,
+        "clue": "Football throw"
+      }
+    ]
+  },
+  "theme": "Things named after real people",
+  "publishedAt": "2026-11-14T20:11:31.595Z"
+}
