@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-16-midi",
+  "date": "2026-11-16",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Layer Cake",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...##....",
+    "....#....",
+    ".........",
+    "#....#...",
+    "###...###",
+    "...#....#",
+    ".........",
+    "....#....",
+    "....##..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:rRYeKlv/Vbz9Qu3clWmDA+15ArCYmnaT/WblUtQhHzJ7VBovn443w+NlVoSVED82bgexW3Zl/zqOPs6AYWfDrkAGgRIKxSqpOv3AaQhQB3W9",
+  "checksum": "6de174b8",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Airport board abbr."
+      },
+      {
+        "num": 4,
+        "clue": "Wish"
+      },
+      {
+        "num": 8,
+        "clue": "Great Lake next to Ohio"
+      },
+      {
+        "num": 10,
+        "clue": "Heat water until it bubbles"
+      },
+      {
+        "num": 11,
+        "clue": "Thermal underwear for cold days"
+      },
+      {
+        "num": 13,
+        "clue": "Exercise with poses on a mat"
+      },
+      {
+        "num": 14,
+        "clue": "Ocean"
+      },
+      {
+        "num": 15,
+        "clue": "Month before Nov."
+      },
+      {
+        "num": 17,
+        "clue": "Farm animal that oinks"
+      },
+      {
+        "num": 20,
+        "clue": "Birds that hoot"
+      },
+      {
+        "num": 23,
+        "clue": "Waterproof footwear for winter"
+      },
+      {
+        "num": 26,
+        "clue": "Remain"
+      },
+      {
+        "num": 27,
+        "clue": "Bar in the shower"
+      },
+      {
+        "num": 28,
+        "clue": "___ list (chores to finish)"
+      },
+      {
+        "num": 29,
+        "clue": "Attempt"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Slippery fish"
+      },
+      {
+        "num": 2,
+        "clue": "City of the wooden horse"
+      },
+      {
+        "num": 3,
+        "clue": "Flintstones pet"
+      },
+      {
+        "num": 4,
+        "clue": "Cable channel of \"Game of Thrones\""
+      },
+      {
+        "num": 5,
+        "clue": "Sounds at a fireworks show"
+      },
+      {
+        "num": 6,
+        "clue": "Christmas tree type"
+      },
+      {
+        "num": 7,
+        "clue": "Queen in \"Frozen\""
+      },
+      {
+        "num": 9,
+        "clue": "Toaster waffle brand"
+      },
+      {
+        "num": 12,
+        "clue": "Popular boy's name"
+      },
+      {
+        "num": 16,
+        "clue": "Deuces"
+      },
+      {
+        "num": 17,
+        "clue": "\"Hey, over here!\""
+      },
+      {
+        "num": 18,
+        "clue": "Enjoying, as a hobby"
+      },
+      {
+        "num": 19,
+        "clue": "Urge on"
+      },
+      {
+        "num": 21,
+        "clue": "Pirate treasure"
+      },
+      {
+        "num": 22,
+        "clue": "Twinkler in the night sky"
+      },
+      {
+        "num": 24,
+        "clue": "Neighbor of Mont."
+      },
+      {
+        "num": 25,
+        "clue": "Secret agent"
+      }
+    ]
+  },
+  "theme": "Cold-weather clothing",
+  "publishedAt": "2026-11-15T20:12:29.006Z"
+}

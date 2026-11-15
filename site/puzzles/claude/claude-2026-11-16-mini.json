@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-16-mini",
+  "date": "2026-11-16",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Cold Snap",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:2acbXvUcGJ83i4EQWWgsaLpOTnKvpo3Ajg==",
+  "checksum": "59c902e1",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Skateboard slope"
+      },
+      {
+        "num": 5,
+        "clue": "Look forward to"
+      },
+      {
+        "num": 7,
+        "clue": "Hooded winter coat"
+      },
+      {
+        "num": 8,
+        "clue": "Person on the slopes"
+      },
+      {
+        "num": 9,
+        "clue": "Direction of the sunrise"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Knocks on a door"
+      },
+      {
+        "num": 2,
+        "clue": "Not asleep"
+      },
+      {
+        "num": 3,
+        "clue": "Nun in \"The Sound of Music\""
+      },
+      {
+        "num": 4,
+        "clue": "Long medieval spears"
+      },
+      {
+        "num": 6,
+        "clue": "Sour"
+      }
+    ]
+  },
+  "theme": "Cold-weather clothing",
+  "publishedAt": "2026-11-15T20:12:28.893Z"
+}

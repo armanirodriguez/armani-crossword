@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-16",
+  "date": "2026-11-16",
+  "series": "claude",
+  "title": "Bundle Up",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....###......#",
+    ".......#.......",
+    ".......#.......",
+    "....#...###....",
+    "###............",
+    "......#.....###",
+    ".....##....#...",
+    "...#...#...#...",
+    "...#....##.....",
+    "###.....#......",
+    "............###",
+    "....###...#....",
+    ".......#.......",
+    ".......#.......",
+    "#......###....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:5+77uZ/XO6TT4+us6KgCXLTSt+No8GfuFPSA8mVsUbbaeLyPZV6nD85cNBvxaBeNXqpYCVhKCsx+X+NYOz4SnQMZh62bdNo2YTrYAwNpaCHyT8mM4x2IpwQ4qlwC39SeaW/L0UQBgbxBgNMRKvW1vKeTW8T3/3M7YUIXY1Iln+J/TMak0O4/jqIlZ7ugErlnDv2Q/90oGq85QDWMMN8p061mTV9Pqi2UE03Fidw6+hXGwMzTmVOwkPs9ofWmMRWsMWGojPbdAlrN5S2fef3NztbYkxIzVxM0fIHAZ5BR8Vks",
+  "checksum": "f8544456",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Sound of a perfect basketball shot"
+      },
+      {
+        "num": 6,
+        "clue": "Give counsel to"
+      },
+      {
+        "num": 12,
+        "clue": "President on the penny"
+      },
+      {
+        "num": 15,
+        "clue": "Like a finished canvas"
+      },
+      {
+        "num": 17,
+        "clue": "One who got away from a zoo, say"
+      },
+      {
+        "num": 18,
+        "clue": "Ugly sight"
+      },
+      {
+        "num": 19,
+        "clue": "Pass out a poker hand"
+      },
+      {
+        "num": 20,
+        "clue": "Paintings and sculptures"
+      },
+      {
+        "num": 22,
+        "clue": "Ireland, poetically"
+      },
+      {
+        "num": 23,
+        "clue": "Quilted, puffy coat for frigid days"
+      },
+      {
+        "num": 28,
+        "clue": "Dwarf who is always yawning"
+      },
+      {
+        "num": 31,
+        "clue": "Get on a horse"
+      },
+      {
+        "num": 32,
+        "clue": "Bodies of ships"
+      },
+      {
+        "num": 33,
+        "clue": "Weak and tiny"
+      },
+      {
+        "num": 34,
+        "clue": "High, soft tennis hit"
+      },
+      {
+        "num": 37,
+        "clue": "Web address, for short"
+      },
+      {
+        "num": 38,
+        "clue": "Playground chasing game"
+      },
+      {
+        "num": 41,
+        "clue": "Toddler"
+      },
+      {
+        "num": 42,
+        "clue": "In the past"
+      },
+      {
+        "num": 43,
+        "clue": "Born with the name"
+      },
+      {
+        "num": 44,
+        "clue": "Run ___ (go wild)"
+      },
+      {
+        "num": 46,
+        "clue": "Hint at"
+      },
+      {
+        "num": 48,
+        "clue": "Pebble or rock"
+      },
+      {
+        "num": 49,
+        "clue": "Tickles, as a funny joke does"
+      },
+      {
+        "num": 50,
+        "clue": "Warm handwear for snowy weather"
+      },
+      {
+        "num": 54,
+        "clue": "Smell"
+      },
+      {
+        "num": 55,
+        "clue": "Greek letter after upsilon"
+      },
+      {
+        "num": 56,
+        "clue": "Apple desktop computer"
+      },
+      {
+        "num": 60,
+        "clue": "Online seminar"
+      },
+      {
+        "num": 64,
+        "clue": "Cosmetic for eyelashes"
+      },
+      {
+        "num": 66,
+        "clue": "Save from a wreck"
+      },
+      {
+        "num": 67,
+        "clue": "Running shoe"
+      },
+      {
+        "num": 68,
+        "clue": "Leaked slowly"
+      },
+      {
+        "num": 69,
+        "clue": "Beg"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Snow toy you ride downhill"
+      },
+      {
+        "num": 2,
+        "clue": "Smart and thoughtful"
+      },
+      {
+        "num": 3,
+        "clue": "Ancient Peruvian"
+      },
+      {
+        "num": 4,
+        "clue": "Surgeon's knife"
+      },
+      {
+        "num": 5,
+        "clue": "Jump on one foot"
+      },
+      {
+        "num": 6,
+        "clue": "Gorilla or chimp"
+      },
+      {
+        "num": 7,
+        "clue": "24 hours"
+      },
+      {
+        "num": 8,
+        "clue": "Compete"
+      },
+      {
+        "num": 9,
+        "clue": "Ant or bee"
+      },
+      {
+        "num": 10,
+        "clue": "Long-legged flier said to deliver babies"
+      },
+      {
+        "num": 11,
+        "clue": "Spooky"
+      },
+      {
+        "num": 13,
+        "clue": "Like a salad of greens"
+      },
+      {
+        "num": 14,
+        "clue": "Foam ball brand"
+      },
+      {
+        "num": 16,
+        "clue": "Small dip in a car door"
+      },
+      {
+        "num": 21,
+        "clue": "Short-term office worker"
+      },
+      {
+        "num": 24,
+        "clue": "Northern part of New York, to locals"
+      },
+      {
+        "num": 25,
+        "clue": "Lopsided win"
+      },
+      {
+        "num": 26,
+        "clue": "2007 film starring Elliot Page"
+      },
+      {
+        "num": 27,
+        "clue": "\"You're welcome, come back ___!\""
+      },
+      {
+        "num": 28,
+        "clue": "Avoid"
+      },
+      {
+        "num": 29,
+        "clue": "Fishing bait"
+      },
+      {
+        "num": 30,
+        "clue": "Fashion magazine"
+      },
+      {
+        "num": 34,
+        "clue": "Trips around a track"
+      },
+      {
+        "num": 35,
+        "clue": "Stare at"
+      },
+      {
+        "num": 36,
+        "clue": "Sons"
+      },
+      {
+        "num": 39,
+        "clue": "Love, in Spanish"
+      },
+      {
+        "num": 40,
+        "clue": "Big metal disk you bang"
+      },
+      {
+        "num": 45,
+        "clue": "Seaweed"
+      },
+      {
+        "num": 47,
+        "clue": "\"Hamilton\" or \"Wicked\""
+      },
+      {
+        "num": 48,
+        "clue": "Try hard"
+      },
+      {
+        "num": 49,
+        "clue": "Having to do with birds"
+      },
+      {
+        "num": 50,
+        "clue": "Impresses"
+      },
+      {
+        "num": 51,
+        "clue": "Bright thoughts"
+      },
+      {
+        "num": 52,
+        "clue": "Like a duke or duchess"
+      },
+      {
+        "num": 53,
+        "clue": "Units of electrical resistance"
+      },
+      {
+        "num": 57,
+        "clue": "Build"
+      },
+      {
+        "num": 58,
+        "clue": "Length times width"
+      },
+      {
+        "num": 59,
+        "clue": "Greeting sent on a special day"
+      },
+      {
+        "num": 61,
+        "clue": "Short sleep"
+      },
+      {
+        "num": 62,
+        "clue": "Number of birthdays"
+      },
+      {
+        "num": 63,
+        "clue": "Shade of a stop sign"
+      },
+      {
+        "num": 65,
+        "clue": "Month after Aug."
+      }
+    ]
+  },
+  "theme": "Cold-weather clothing",
+  "publishedAt": "2026-11-15T20:12:29.133Z"
+}
