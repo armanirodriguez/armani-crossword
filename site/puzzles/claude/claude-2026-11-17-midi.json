@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-17-midi",
+  "date": "2026-11-17",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Heads Up",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:mwzMp3IV806xSAkOjhm2w7bbyQKUu+bCLhx19QYzCsSYGb1sKGALK3EwKoW5LBWaHub0RkOc4SZqv2GPnB+0ex1k6r1j6550YatHGYn/CM4i",
+  "checksum": "fa230f30",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Owl's call"
+      },
+      {
+        "num": 5,
+        "clue": "\"___ deal!\""
+      },
+      {
+        "num": 9,
+        "clue": "Ron Howard's role on \"The Andy Griffith Show\""
+      },
+      {
+        "num": 10,
+        "clue": "Close by"
+      },
+      {
+        "num": 11,
+        "clue": "Beatles song about a street in Liverpool"
+      },
+      {
+        "num": 13,
+        "clue": "Tattoo artist's supply"
+      },
+      {
+        "num": 14,
+        "clue": "Relieves"
+      },
+      {
+        "num": 15,
+        "clue": "German car brand"
+      },
+      {
+        "num": 16,
+        "clue": "In the know"
+      },
+      {
+        "num": 19,
+        "clue": "Mimic"
+      },
+      {
+        "num": 22,
+        "clue": "Cheap paperback thriller of yore"
+      },
+      {
+        "num": 24,
+        "clue": "Opera solo"
+      },
+      {
+        "num": 25,
+        "clue": "Robin Williams's alien from Ork"
+      },
+      {
+        "num": 26,
+        "clue": "Timid"
+      },
+      {
+        "num": 27,
+        "clue": "Wildebeests"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Arizona tribe"
+      },
+      {
+        "num": 2,
+        "clue": "Unlock"
+      },
+      {
+        "num": 3,
+        "clue": "Pig's sound"
+      },
+      {
+        "num": 4,
+        "clue": "Number of fingers"
+      },
+      {
+        "num": 5,
+        "clue": "Spouse's relative"
+      },
+      {
+        "num": 6,
+        "clue": "Chamomile and Earl Grey"
+      },
+      {
+        "num": 7,
+        "clue": "Rational"
+      },
+      {
+        "num": 8,
+        "clue": "Greek god of war"
+      },
+      {
+        "num": 12,
+        "clue": "Country on the Arabian Peninsula"
+      },
+      {
+        "num": 15,
+        "clue": "Recess"
+      },
+      {
+        "num": 16,
+        "clue": "Eve's partner"
+      },
+      {
+        "num": 17,
+        "clue": "Electric cable"
+      },
+      {
+        "num": 18,
+        "clue": "Female friend, in Paris"
+      },
+      {
+        "num": 19,
+        "clue": "River through Stratford"
+      },
+      {
+        "num": 20,
+        "clue": "Home of Machu Picchu"
+      },
+      {
+        "num": 21,
+        "clue": "Antlered animals"
+      },
+      {
+        "num": 23,
+        "clue": "Texting gasp"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a U.S. coin",
+  "publishedAt": "2026-11-16T20:12:20.245Z"
+}

@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-17-mini",
+  "date": "2026-11-17",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Lucky Find",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:0/26cqptsQ3I7ZVcmkYCnc7Tk+n7kaRY3w==",
+  "checksum": "6c36f191",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Work on a piece of gum"
+      },
+      {
+        "num": 5,
+        "clue": "Eagle's nest"
+      },
+      {
+        "num": 7,
+        "clue": "One-cent coin"
+      },
+      {
+        "num": 8,
+        "clue": "Pizza portion"
+      },
+      {
+        "num": 9,
+        "clue": "Something planted in a garden"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Baseball hats"
+      },
+      {
+        "num": 2,
+        "clue": "Fancy shoes with a lift"
+      },
+      {
+        "num": 3,
+        "clue": "Bert's \"Sesame Street\" pal"
+      },
+      {
+        "num": 4,
+        "clue": "Flinch in pain"
+      },
+      {
+        "num": 6,
+        "clue": "Looked at"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a U.S. coin",
+  "publishedAt": "2026-11-16T20:12:20.108Z"
+}

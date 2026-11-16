@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-17",
+  "date": "2026-11-17",
+  "series": "claude",
+  "title": "Spare Change",
+  "author": "Claude",
+  "note": "Heads or tails? Look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "#....##...#....",
+    "#.....#...#....",
+    "#.....#...#....",
+    "...#...........",
+    ".......#...#...",
+    ".....#...#.....",
+    "....#...#.....#",
+    "###.........###",
+    "#.....#...#....",
+    ".....#...#.....",
+    "...#...#.......",
+    "...........#...",
+    "....#...#.....#",
+    "....#...#.....#",
+    "....#...##....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:4XAIZYY2yow01w0Eiixg6woJlKsiHtY3HzImkArrxKTwRbaRnI+pmHfvLneO7zEuEpO/HurSBhv5MVbWaOR2+gyp03xf3gHpryN2WjKrr93k29NZfphvzBbvPrCXW5gmt4NUK0CNImYbzpmzsBRWdZEYFfPO4JArz7us4uxZnma1f+QCuqKeuFuKlUOYDzDOlxkZV8CaDrdGFnSjIJ4j7ziSkI96a8hfzUkwchhKKe4mVOnRxJTRHYYO3KjU7d1Eu/zOp41fqMdFuzRsXd+xxLfL8KKt1wSrQ7o9My0BH2Nn",
+  "checksum": "c62aa0cf",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Ticklish \"Sesame Street\" Muppet"
+      },
+      {
+        "num": 5,
+        "clue": "Cash dispenser, for short"
+      },
+      {
+        "num": 8,
+        "clue": "Tacks on"
+      },
+      {
+        "num": 12,
+        "clue": "Daytime dramas"
+      },
+      {
+        "num": 14,
+        "clue": "Barnyard sound"
+      },
+      {
+        "num": 15,
+        "clue": "Basketball rim"
+      },
+      {
+        "num": 16,
+        "clue": "Bean behind chocolate"
+      },
+      {
+        "num": 17,
+        "clue": "Not at home"
+      },
+      {
+        "num": 18,
+        "clue": "Opposed to"
+      },
+      {
+        "num": 19,
+        "clue": "Skillet"
+      },
+      {
+        "num": 20,
+        "clue": "Player who calls signals in the huddle"
+      },
+      {
+        "num": 23,
+        "clue": "Gourmet"
+      },
+      {
+        "num": 25,
+        "clue": "Peyton Manning's younger brother"
+      },
+      {
+        "num": 26,
+        "clue": "Part of a foot"
+      },
+      {
+        "num": 27,
+        "clue": "Mystery or sci-fi, e.g."
+      },
+      {
+        "num": 28,
+        "clue": "Color of a stop sign"
+      },
+      {
+        "num": 30,
+        "clue": "Flower stalks"
+      },
+      {
+        "num": 32,
+        "clue": "Sonic the Hedgehog's company"
+      },
+      {
+        "num": 33,
+        "clue": "Day, in Spanish"
+      },
+      {
+        "num": 34,
+        "clue": "Groups of cattle"
+      },
+      {
+        "num": 35,
+        "clue": "Old-fashioned five-and-ten"
+      },
+      {
+        "num": 38,
+        "clue": "Seasons, as fries"
+      },
+      {
+        "num": 40,
+        "clue": "Have dinner"
+      },
+      {
+        "num": 41,
+        "clue": "West African nation whose capital is Bamako"
+      },
+      {
+        "num": 45,
+        "clue": "Plunges into the pool"
+      },
+      {
+        "num": 46,
+        "clue": "U.S. soccer league, for short"
+      },
+      {
+        "num": 47,
+        "clue": "Tiny openings in the skin"
+      },
+      {
+        "num": 48,
+        "clue": "\"Mr. Blue Sky\" band, briefly"
+      },
+      {
+        "num": 49,
+        "clue": "Month after April"
+      },
+      {
+        "num": 51,
+        "clue": "Kind of long underwear for cold weather"
+      },
+      {
+        "num": 53,
+        "clue": "Kids' TV channel famous for green slime"
+      },
+      {
+        "num": 56,
+        "clue": "Keats poem, e.g."
+      },
+      {
+        "num": 57,
+        "clue": "\"___ do it!\""
+      },
+      {
+        "num": 58,
+        "clue": "Gorilla or chimp"
+      },
+      {
+        "num": 59,
+        "clue": "Frighten"
+      },
+      {
+        "num": 61,
+        "clue": "Airplane ___ (phone setting)"
+      },
+      {
+        "num": 62,
+        "clue": "Tear"
+      },
+      {
+        "num": 63,
+        "clue": "Kitchen gadget that dings"
+      },
+      {
+        "num": 64,
+        "clue": "Winter flakes"
+      },
+      {
+        "num": 65,
+        "clue": "Yoga class need"
+      },
+      {
+        "num": 66,
+        "clue": "Jar tops"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Runaway from the zoo, say"
+      },
+      {
+        "num": 2,
+        "clue": "Lending"
+      },
+      {
+        "num": 3,
+        "clue": "Apple computer"
+      },
+      {
+        "num": 4,
+        "clue": "Not see-through"
+      },
+      {
+        "num": 5,
+        "clue": "Love, in Latin"
+      },
+      {
+        "num": 6,
+        "clue": "Talked up"
+      },
+      {
+        "num": 7,
+        "clue": "Roadside lodging"
+      },
+      {
+        "num": 8,
+        "clue": "Melville's whale-obsessed captain"
+      },
+      {
+        "num": 9,
+        "clue": "Gave to charity"
+      },
+      {
+        "num": 10,
+        "clue": "Internet start-ups of the late '90s"
+      },
+      {
+        "num": 11,
+        "clue": "Volleyball kills"
+      },
+      {
+        "num": 13,
+        "clue": "Tart"
+      },
+      {
+        "num": 19,
+        "clue": "Coat hooks"
+      },
+      {
+        "num": 21,
+        "clue": "Eagle's nest"
+      },
+      {
+        "num": 22,
+        "clue": "Early ___ (morning person)"
+      },
+      {
+        "num": 24,
+        "clue": "Baby's bed"
+      },
+      {
+        "num": 29,
+        "clue": "Painter's stand"
+      },
+      {
+        "num": 31,
+        "clue": "Small earthquake"
+      },
+      {
+        "num": 33,
+        "clue": "Private messages on social media, briefly"
+      },
+      {
+        "num": 34,
+        "clue": "Sweltering"
+      },
+      {
+        "num": 36,
+        "clue": "Reply to \"Who's there?\""
+      },
+      {
+        "num": 37,
+        "clue": "Sample"
+      },
+      {
+        "num": 38,
+        "clue": "___ Valley"
+      },
+      {
+        "num": 39,
+        "clue": "Guacamole base"
+      },
+      {
+        "num": 42,
+        "clue": "Like a tank"
+      },
+      {
+        "num": 43,
+        "clue": "Front-runners"
+      },
+      {
+        "num": 44,
+        "clue": "Caribbean getaway, maybe"
+      },
+      {
+        "num": 45,
+        "clue": "Jeans"
+      },
+      {
+        "num": 46,
+        "clue": "Nearsightedness"
+      },
+      {
+        "num": 47,
+        "clue": "No. 2 school supply"
+      },
+      {
+        "num": 50,
+        "clue": "Clock radio feature"
+      },
+      {
+        "num": 52,
+        "clue": "Party thrower"
+      },
+      {
+        "num": 54,
+        "clue": "Was aware of"
+      },
+      {
+        "num": 55,
+        "clue": "Office division: Abbr."
+      },
+      {
+        "num": 60,
+        "clue": "Friend, in French"
+      }
+    ]
+  },
+  "theme": "Phrases that start with a U.S. coin",
+  "publishedAt": "2026-11-16T20:12:20.377Z"
+}
