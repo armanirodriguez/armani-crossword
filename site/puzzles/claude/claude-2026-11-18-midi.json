@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-18-midi",
+  "date": "2026-11-18",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Strength in Numbers",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....##...",
+    "....#....",
+    ".........",
+    "...#....#",
+    "###...###",
+    "#....#...",
+    ".........",
+    "....#....",
+    "...##...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:nlZiOHDqwsz119f+amkUHm1gVySq/EvIaUAQWuonlXBQVy0Y4nsGo1a27sOBqEQoEzk2G76WQzH3y86VIHMpPgGZm37luaYT4gRSXAN9ntte",
+  "checksum": "7bca577c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Leap into the pool"
+      },
+      {
+        "num": 5,
+        "clue": "Toast topper"
+      },
+      {
+        "num": 8,
+        "clue": "Iowa State's city"
+      },
+      {
+        "num": 9,
+        "clue": "Indonesian island getaway"
+      },
+      {
+        "num": 10,
+        "clue": "Puppy gathering that a cat actually uses?"
+      },
+      {
+        "num": 12,
+        "clue": "Connections, so to speak"
+      },
+      {
+        "num": 13,
+        "clue": "Workbench clamp"
+      },
+      {
+        "num": 14,
+        "clue": "Stroke gently"
+      },
+      {
+        "num": 15,
+        "clue": "Rain hard"
+      },
+      {
+        "num": 17,
+        "clue": "Nintendo console with motion controls"
+      },
+      {
+        "num": 20,
+        "clue": "Wolf group you wear around your waist?"
+      },
+      {
+        "num": 22,
+        "clue": "Mimics"
+      },
+      {
+        "num": 23,
+        "clue": "Delight"
+      },
+      {
+        "num": 24,
+        "clue": "German article"
+      },
+      {
+        "num": 25,
+        "clue": "Hawkeye portrayer Alan"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Surrealist with a famous mustache"
+      },
+      {
+        "num": 2,
+        "clue": "\"Count me in!\""
+      },
+      {
+        "num": 3,
+        "clue": "Old hands"
+      },
+      {
+        "num": 4,
+        "clue": "Suffix with small or large"
+      },
+      {
+        "num": 5,
+        "clue": "Quick punches"
+      },
+      {
+        "num": 6,
+        "clue": "Sunburn soother"
+      },
+      {
+        "num": 7,
+        "clue": "Stir together"
+      },
+      {
+        "num": 9,
+        "clue": "Londoner, for one"
+      },
+      {
+        "num": 11,
+        "clue": "Each and ___"
+      },
+      {
+        "num": 14,
+        "clue": "Groan-worthy jokes"
+      },
+      {
+        "num": 15,
+        "clue": "\"___ Don't Preach\" (Madonna hit)"
+      },
+      {
+        "num": 16,
+        "clue": "Washington bills"
+      },
+      {
+        "num": 17,
+        "clue": "Fence alternative"
+      },
+      {
+        "num": 18,
+        "clue": "Like many summer coffees"
+      },
+      {
+        "num": 19,
+        "clue": "Swedish furniture giant"
+      },
+      {
+        "num": 20,
+        "clue": "Passing craze"
+      },
+      {
+        "num": 21,
+        "clue": "Golf org."
+      }
+    ]
+  },
+  "theme": "Animal group names used in other senses",
+  "publishedAt": "2026-11-17T20:17:39.945Z"
+}

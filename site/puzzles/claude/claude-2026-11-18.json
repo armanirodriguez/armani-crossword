@@ -1,0 +1,368 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-18",
+  "date": "2026-11-18",
+  "series": "claude",
+  "title": "Herd Mentality",
+  "author": "Claude",
+  "note": "Wild hint: think about what lions, fish and rhinos gather in.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......#....#...",
+    "......#....#...",
+    "......#........",
+    "###.......#....",
+    "...#....#....##",
+    ".....#...#.....",
+    "......#....#...",
+    "....#.....#....",
+    "...#....#......",
+    ".....#...#.....",
+    "##....#....#...",
+    "....#.......###",
+    "........#......",
+    "...#....#......",
+    "...#....#......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:bOqpzh5Bgp9uGp09b+Frigquf8X6DLQXxJVAO6F5w8+Y3g3w1wFp8cApnqOlPPbYXOAswodaIS/zrRFGzNDg152BUcmHNDJ4ywm3ZZ+O/L4lUEHwATvTc5yGnXpPERCRn1vPWaMCZmRpCVy6NqVKHRuepxU8ElMD65jjcGTXCsB4Hh4udfJkmoF1lHBaPZdy+XhHiUC4v4aSemiNNwnMsHnxBFJNYosLMZd5FuT89YxlWZroKZcBEtAIdGRadjo0xix1Hifp6leBH5lbPMCoycR9oPlFlmpV9nKQrQm+rENj",
+  "checksum": "a1072567",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Fluffy Andean grazer"
+      },
+      {
+        "num": 7,
+        "clue": "Comedy bit"
+      },
+      {
+        "num": 11,
+        "clue": "Tax preparer, for short"
+      },
+      {
+        "num": 14,
+        "clue": "Let"
+      },
+      {
+        "num": 15,
+        "clue": "What programmers write"
+      },
+      {
+        "num": 16,
+        "clue": "Angler's gear"
+      },
+      {
+        "num": 17,
+        "clue": "Camry maker"
+      },
+      {
+        "num": 18,
+        "clue": "Hidden holding in stud poker"
+      },
+      {
+        "num": 20,
+        "clue": "Mic activity at a bar"
+      },
+      {
+        "num": 22,
+        "clue": "Poses, as a question"
+      },
+      {
+        "num": 23,
+        "clue": "Something to download"
+      },
+      {
+        "num": 26,
+        "clue": "Pet of the Flintstones"
+      },
+      {
+        "num": 27,
+        "clue": "Member of a faith founded by Guru Nanak"
+      },
+      {
+        "num": 29,
+        "clue": "Sacher ___ (Viennese dessert)"
+      },
+      {
+        "num": 31,
+        "clue": "\"Waterfalls\" trio"
+      },
+      {
+        "num": 33,
+        "clue": "Hot spot for fans, figuratively"
+      },
+      {
+        "num": 36,
+        "clue": "Spins like a baton"
+      },
+      {
+        "num": 38,
+        "clue": "Buckeye State"
+      },
+      {
+        "num": 40,
+        "clue": "Yes, in Paris"
+      },
+      {
+        "num": 41,
+        "clue": "Little whirlpool"
+      },
+      {
+        "num": 42,
+        "clue": "Pixieish"
+      },
+      {
+        "num": 44,
+        "clue": "Places"
+      },
+      {
+        "num": 45,
+        "clue": "Born, on a wedding page"
+      },
+      {
+        "num": 46,
+        "clue": "\"Shoo!\""
+      },
+      {
+        "num": 47,
+        "clue": "Reddish-brown horse"
+      },
+      {
+        "num": 49,
+        "clue": "Pictured in pencil"
+      },
+      {
+        "num": 51,
+        "clue": "Dissertation reward, briefly"
+      },
+      {
+        "num": 53,
+        "clue": "Sheriff's crew"
+      },
+      {
+        "num": 54,
+        "clue": "Simba's queen"
+      },
+      {
+        "num": 56,
+        "clue": "Seep slowly"
+      },
+      {
+        "num": 58,
+        "clue": "UFO riders, briefly"
+      },
+      {
+        "num": 59,
+        "clue": "\"Back in Black\" band"
+      },
+      {
+        "num": 61,
+        "clue": "Things under teacups"
+      },
+      {
+        "num": 64,
+        "clue": "Sweet-talking"
+      },
+      {
+        "num": 66,
+        "clue": "Brought up"
+      },
+      {
+        "num": 70,
+        "clue": "Angsty rock genre"
+      },
+      {
+        "num": 71,
+        "clue": "Rubber duck's setting"
+      },
+      {
+        "num": 72,
+        "clue": "Capital on the Rideau Canal"
+      },
+      {
+        "num": 73,
+        "clue": "Agent in the field"
+      },
+      {
+        "num": 74,
+        "clue": "Fit of pique"
+      },
+      {
+        "num": 75,
+        "clue": "Ranked in a bracket"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Fitting"
+      },
+      {
+        "num": 2,
+        "clue": "August sign"
+      },
+      {
+        "num": 3,
+        "clue": "Snoop"
+      },
+      {
+        "num": 4,
+        "clue": "Run ___ (go wild)"
+      },
+      {
+        "num": 5,
+        "clue": "Fortress on a hill"
+      },
+      {
+        "num": 6,
+        "clue": "Pong company"
+      },
+      {
+        "num": 7,
+        "clue": "Fish gathering for philosophers?"
+      },
+      {
+        "num": 8,
+        "clue": "Oddball"
+      },
+      {
+        "num": 9,
+        "clue": "Runs in neutral"
+      },
+      {
+        "num": 10,
+        "clue": "Driver's launch pad"
+      },
+      {
+        "num": 11,
+        "clue": "Rhino gathering the night before a final?"
+      },
+      {
+        "num": 12,
+        "clue": "Chop meat"
+      },
+      {
+        "num": 13,
+        "clue": "Tacks on"
+      },
+      {
+        "num": 19,
+        "clue": "Piece of ___"
+      },
+      {
+        "num": 21,
+        "clue": "Picnic crasher"
+      },
+      {
+        "num": 23,
+        "clue": "Be present at"
+      },
+      {
+        "num": 24,
+        "clue": "Fresh snow, to skiers"
+      },
+      {
+        "num": 25,
+        "clue": "Lion gathering that makes a parent beam?"
+      },
+      {
+        "num": 28,
+        "clue": "Texter's \"I think\""
+      },
+      {
+        "num": 30,
+        "clue": "Rugby score"
+      },
+      {
+        "num": 32,
+        "clue": "Tai ___"
+      },
+      {
+        "num": 34,
+        "clue": "Most adorable"
+      },
+      {
+        "num": 35,
+        "clue": "Supermarket walkways"
+      },
+      {
+        "num": 37,
+        "clue": "\"Just a ___!\""
+      },
+      {
+        "num": 39,
+        "clue": "___ and outs"
+      },
+      {
+        "num": 43,
+        "clue": "Circuit on a track"
+      },
+      {
+        "num": 44,
+        "clue": "Seasoned expert"
+      },
+      {
+        "num": 46,
+        "clue": "Sketch program since 1975, for short"
+      },
+      {
+        "num": 48,
+        "clue": "Run, as machinery"
+      },
+      {
+        "num": 50,
+        "clue": "Baylor's city"
+      },
+      {
+        "num": 52,
+        "clue": "\"What's up, ___?\""
+      },
+      {
+        "num": 55,
+        "clue": "Like Thai or Korean cuisine"
+      },
+      {
+        "num": 57,
+        "clue": "Goose eggs"
+      },
+      {
+        "num": 59,
+        "clue": "Unreturnable serves"
+      },
+      {
+        "num": 60,
+        "clue": "Summer getaway for kids"
+      },
+      {
+        "num": 62,
+        "clue": "Opposed"
+      },
+      {
+        "num": 63,
+        "clue": "Web destination"
+      },
+      {
+        "num": 65,
+        "clue": "Scale readings: Abbr."
+      },
+      {
+        "num": 67,
+        "clue": "Blue"
+      },
+      {
+        "num": 68,
+        "clue": "Lamb's mother"
+      },
+      {
+        "num": 69,
+        "clue": "Pop"
+      }
+    ]
+  },
+  "theme": "Animal group names used in other senses",
+  "publishedAt": "2026-11-17T20:17:40.061Z"
+}

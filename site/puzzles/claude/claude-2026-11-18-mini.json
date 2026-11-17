@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-18-mini",
+  "date": "2026-11-18",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Group Chat",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:KShJkjATp1MxlN8Nl4j+P8iTsJV+fWZ3zw==",
+  "checksum": "34ea51bd",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Long, angry tirade"
+      },
+      {
+        "num": 5,
+        "clue": "Hawaiian hello"
+      },
+      {
+        "num": 7,
+        "clue": "Giraffe group that's really a truck for stalled cars?"
+      },
+      {
+        "num": 8,
+        "clue": "Drum in a marching band"
+      },
+      {
+        "num": 9,
+        "clue": "Pair under the eyebrows"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Darn it!\""
+      },
+      {
+        "num": 2,
+        "clue": "Solo"
+      },
+      {
+        "num": 3,
+        "clue": "\"You're kidding me!\""
+      },
+      {
+        "num": 4,
+        "clue": "\"Over ___!\""
+      },
+      {
+        "num": 6,
+        "clue": "Greek god of war"
+      }
+    ]
+  },
+  "theme": "Animal group names used in other senses",
+  "publishedAt": "2026-11-17T20:17:39.825Z"
+}
