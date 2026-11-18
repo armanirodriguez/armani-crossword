@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-19",
+  "date": "2026-11-19",
+  "series": "claude",
+  "title": "On Pins and Needles",
+  "author": "Claude",
+  "note": "Sharp-eyed solvers: look at what the three longest answers have in common.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#.....#....#",
+    "...#.....#.....",
+    "...#...........",
+    "....#......#...",
+    "......##.......",
+    ".....#....#....",
+    "...#....#.....#",
+    "###.........###",
+    "#.....#....#...",
+    "....#....#.....",
+    ".......##......",
+    "...#......#....",
+    "...........#...",
+    ".....#.....#...",
+    "#....#.....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:/17quoE4rcDLEnDmrwO/eiwuvnT6dyIKo1b5nS0xcJYd9gCx7bD2O41tbWhkgJzqUsNB0dl+O5+9ucP1vQdHq4m2Slnr8eWqOhW6GGbflf+fY4P4MJQHBcYcLt1uoIPtd/knemGHzavCIVRJfpdThpfYBFLRtVG1z66aY7jzdTuxI2SS41qXKBg6ZhpXL2Tf9ng6K5iZpCp4KbljsYntEKioHBFtSwQitHuaf22UOiZXDnBz82mCwEgO7NvKh3Buyxt/rCQL3XnSvaDTf+dydN6eIHBE0aDu+POk+woUDJZs",
+  "checksum": "c77fef56",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "\"Illmatic\" artist"
+      },
+      {
+        "num": 4,
+        "clue": "Hoard of treasure"
+      },
+      {
+        "num": 9,
+        "clue": "Short-term office hire"
+      },
+      {
+        "num": 13,
+        "clue": "List-ending abbr."
+      },
+      {
+        "num": 14,
+        "clue": "One of Santa's team"
+      },
+      {
+        "num": 15,
+        "clue": "Pong pioneer"
+      },
+      {
+        "num": 17,
+        "clue": "Pub pour"
+      },
+      {
+        "num": 18,
+        "clue": "Dashboard dial watched closely near radar traps"
+      },
+      {
+        "num": 20,
+        "clue": "South African currency"
+      },
+      {
+        "num": 22,
+        "clue": "Not ready for picking"
+      },
+      {
+        "num": 23,
+        "clue": "Disapproving click"
+      },
+      {
+        "num": 24,
+        "clue": "Catch in a snare"
+      },
+      {
+        "num": 26,
+        "clue": "Long-winded"
+      },
+      {
+        "num": 28,
+        "clue": "Knight's ride"
+      },
+      {
+        "num": 29,
+        "clue": "Spotted"
+      },
+      {
+        "num": 31,
+        "clue": "Nailed, as an exam"
+      },
+      {
+        "num": 32,
+        "clue": "Smidge"
+      },
+      {
+        "num": 33,
+        "clue": "Alpine goat with curved horns"
+      },
+      {
+        "num": 35,
+        "clue": "Masquerade wear"
+      },
+      {
+        "num": 37,
+        "clue": "Prickly critter best admired from a distance"
+      },
+      {
+        "num": 39,
+        "clue": "Tibetan capital"
+      },
+      {
+        "num": 41,
+        "clue": "Sidestep, as a question"
+      },
+      {
+        "num": 42,
+        "clue": "Toward the stern"
+      },
+      {
+        "num": 45,
+        "clue": "Weeded, in a way"
+      },
+      {
+        "num": 46,
+        "clue": "Selina Meyer's job, informally"
+      },
+      {
+        "num": 48,
+        "clue": "\"See ya!\""
+      },
+      {
+        "num": 50,
+        "clue": "Crew member"
+      },
+      {
+        "num": 52,
+        "clue": "Resolve out of court"
+      },
+      {
+        "num": 53,
+        "clue": "Flying saucer, briefly"
+      },
+      {
+        "num": 54,
+        "clue": "Safe to eat"
+      },
+      {
+        "num": 57,
+        "clue": "Great Lake bordering Ohio"
+      },
+      {
+        "num": 58,
+        "clue": "It gets all shook up during a quake?"
+      },
+      {
+        "num": 61,
+        "clue": "Picnic crasher"
+      },
+      {
+        "num": 62,
+        "clue": "Bert's roommate"
+      },
+      {
+        "num": 63,
+        "clue": "Craze"
+      },
+      {
+        "num": 64,
+        "clue": "Top banana, briefly"
+      },
+      {
+        "num": 65,
+        "clue": "The Seven ___"
+      },
+      {
+        "num": 66,
+        "clue": "Mr. T's TV squad, with \"The\""
+      },
+      {
+        "num": 67,
+        "clue": "Recipe amt."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Closest"
+      },
+      {
+        "num": 2,
+        "clue": "Coca-Cola's hometown"
+      },
+      {
+        "num": 3,
+        "clue": "Like many candles"
+      },
+      {
+        "num": 4,
+        "clue": "Flat-screens, e.g."
+      },
+      {
+        "num": 5,
+        "clue": "Tear into pieces"
+      },
+      {
+        "num": 6,
+        "clue": "Yoked pair"
+      },
+      {
+        "num": 7,
+        "clue": "Swerve"
+      },
+      {
+        "num": 8,
+        "clue": "Bitter salad leaf"
+      },
+      {
+        "num": 9,
+        "clue": "Less wild"
+      },
+      {
+        "num": 10,
+        "clue": "Summer, in Paris"
+      },
+      {
+        "num": 11,
+        "clue": "Digging tool like a pickax"
+      },
+      {
+        "num": 12,
+        "clue": "Irons"
+      },
+      {
+        "num": 16,
+        "clue": "Bugged"
+      },
+      {
+        "num": 19,
+        "clue": "Comedy club night for newbies"
+      },
+      {
+        "num": 21,
+        "clue": "Dr. ___ (Beats co-founder)"
+      },
+      {
+        "num": 25,
+        "clue": "Goodbye, in Guadalajara"
+      },
+      {
+        "num": 27,
+        "clue": "Second, for one"
+      },
+      {
+        "num": 29,
+        "clue": "Moment, for short"
+      },
+      {
+        "num": 30,
+        "clue": "Give off, as confidence"
+      },
+      {
+        "num": 34,
+        "clue": "Swagger"
+      },
+      {
+        "num": 36,
+        "clue": "Joint above the foot"
+      },
+      {
+        "num": 37,
+        "clue": "Cribs?"
+      },
+      {
+        "num": 38,
+        "clue": "Young seal"
+      },
+      {
+        "num": 39,
+        "clue": "Slip-on shoes"
+      },
+      {
+        "num": 40,
+        "clue": "Female lead in a novel"
+      },
+      {
+        "num": 42,
+        "clue": "Draw in"
+      },
+      {
+        "num": 43,
+        "clue": "Cats"
+      },
+      {
+        "num": 44,
+        "clue": "Where a nest might perch"
+      },
+      {
+        "num": 45,
+        "clue": "Hugh Laurie TV role"
+      },
+      {
+        "num": 47,
+        "clue": "Puzzle"
+      },
+      {
+        "num": 49,
+        "clue": "Had dinner"
+      },
+      {
+        "num": 51,
+        "clue": "Viral images"
+      },
+      {
+        "num": 52,
+        "clue": "Old-photo tint"
+      },
+      {
+        "num": 55,
+        "clue": "Spoiled kid"
+      },
+      {
+        "num": 56,
+        "clue": "Bowling alley strip"
+      },
+      {
+        "num": 59,
+        "clue": "\"Chandelier\" singer"
+      },
+      {
+        "num": 60,
+        "clue": "Scenery chewer"
+      }
+    ]
+  },
+  "theme": "Things that have needles",
+  "publishedAt": "2026-11-18T20:13:32.496Z"
+}

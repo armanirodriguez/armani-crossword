@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-19-mini",
+  "date": "2026-11-19",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Sharp Looks",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:RIhem00e+YMBTXDat4bn6qezGmJUysWWlw==",
+  "checksum": "b8f34882",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Applaud"
+      },
+      {
+        "num": 5,
+        "clue": "Hindu deity often shown dancing"
+      },
+      {
+        "num": 6,
+        "clue": "Evergreens on a Christmas tree lot"
+      },
+      {
+        "num": 7,
+        "clue": "Phone notification"
+      },
+      {
+        "num": 8,
+        "clue": "Campsite shelter"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Long, skinny South American country"
+      },
+      {
+        "num": 2,
+        "clue": "Bedsheet fabric"
+      },
+      {
+        "num": 3,
+        "clue": "Head off"
+      },
+      {
+        "num": 4,
+        "clue": "Bygone"
+      },
+      {
+        "num": 5,
+        "clue": "Little quarrel"
+      }
+    ]
+  },
+  "theme": "Things that have needles",
+  "publishedAt": "2026-11-18T20:13:32.281Z"
+}

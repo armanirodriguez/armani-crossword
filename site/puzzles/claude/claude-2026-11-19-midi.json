@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-19-midi",
+  "date": "2026-11-19",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Point Taken",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:PWzfZnlhtBJS1lAYu4LUZXvLmGS+voGgIlOVVoq6B01WB53dEVrM9Zs8MpvmX9H35GM33fJKdOMXzMkkppF/OsL3AsBng5uxUH1oorXW2IwE",
+  "checksum": "504c2e16",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "With skill"
+      },
+      {
+        "num": 5,
+        "clue": "Guitar neck ridge"
+      },
+      {
+        "num": 9,
+        "clue": "What you're reading right now?"
+      },
+      {
+        "num": 10,
+        "clue": "Creepy look"
+      },
+      {
+        "num": 11,
+        "clue": "DJ's spinning platform"
+      },
+      {
+        "num": 13,
+        "clue": "Get it"
+      },
+      {
+        "num": 14,
+        "clue": "Pile up"
+      },
+      {
+        "num": 15,
+        "clue": "\"I Like ___\" (1950s slogan)"
+      },
+      {
+        "num": 16,
+        "clue": "Love to pieces"
+      },
+      {
+        "num": 19,
+        "clue": "Bullring cheer"
+      },
+      {
+        "num": 22,
+        "clue": "Hotel freebie for a loose button"
+      },
+      {
+        "num": 24,
+        "clue": "Cyclones' college town"
+      },
+      {
+        "num": 25,
+        "clue": "Charity"
+      },
+      {
+        "num": 26,
+        "clue": "Swanky"
+      },
+      {
+        "num": 27,
+        "clue": "Youngest of the family"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Play parts?"
+      },
+      {
+        "num": 2,
+        "clue": "Down in the dumps"
+      },
+      {
+        "num": 3,
+        "clue": "Tackle box item"
+      },
+      {
+        "num": 4,
+        "clue": "Craving"
+      },
+      {
+        "num": 5,
+        "clue": "Old ___ (former sweetheart)"
+      },
+      {
+        "num": 6,
+        "clue": "Country star McEntire"
+      },
+      {
+        "num": 7,
+        "clue": "Slippery swimmers"
+      },
+      {
+        "num": 8,
+        "clue": "Uno + dos"
+      },
+      {
+        "num": 12,
+        "clue": "Spoken for"
+      },
+      {
+        "num": 15,
+        "clue": "Like Dubliners"
+      },
+      {
+        "num": 16,
+        "clue": "Pronto, on a memo"
+      },
+      {
+        "num": 17,
+        "clue": "Band's tryout recording"
+      },
+      {
+        "num": 18,
+        "clue": "Is in the red"
+      },
+      {
+        "num": 19,
+        "clue": "Tulsa's state: Abbr."
+      },
+      {
+        "num": 20,
+        "clue": "Out on a ___"
+      },
+      {
+        "num": 21,
+        "clue": "Online crafts marketplace"
+      },
+      {
+        "num": 23,
+        "clue": "Chitchat"
+      }
+    ]
+  },
+  "theme": "Things that have needles",
+  "publishedAt": "2026-11-18T20:13:32.383Z"
+}
