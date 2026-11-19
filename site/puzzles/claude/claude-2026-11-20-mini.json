@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-20-mini",
+  "date": "2026-11-20",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Off to Work",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:5Dq4DzNSZHEjxMkd3XH7kQMeB19QBgElmA==",
+  "checksum": "a7defada",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Eden resident"
+      },
+      {
+        "num": 5,
+        "clue": "Orange orchard"
+      },
+      {
+        "num": 6,
+        "clue": "Fend off"
+      },
+      {
+        "num": 7,
+        "clue": "Not reactive, as a noble gas"
+      },
+      {
+        "num": 8,
+        "clue": "Week components"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Where the home team takes the court"
+      },
+      {
+        "num": 2,
+        "clue": "Beardless member of a Disney septet"
+      },
+      {
+        "num": 3,
+        "clue": "States firmly"
+      },
+      {
+        "num": 4,
+        "clue": "Turn to mush"
+      },
+      {
+        "num": 5,
+        "clue": "What this puzzle is drawn on"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with the name of one of Snow White's seven dwarfs",
+  "publishedAt": "2026-11-19T20:15:46.724Z"
+}

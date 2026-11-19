@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-20-midi",
+  "date": "2026-11-20",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Heigh-Ho!",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:vMMdkJlukGebLnriz+HQoSy9BIK3f3+4Nc1N6taQOSVbMejBLFl2pVzQvA36Y97WEAjF9Ok5FQPEHFuB9n7J9fpw+cPHQtyb8OLN+5Bu6vG7",
+  "checksum": "2789b49c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Sits up for a treat, say"
+      },
+      {
+        "num": 5,
+        "clue": "Bangers and ___"
+      },
+      {
+        "num": 9,
+        "clue": "Vibe"
+      },
+      {
+        "num": 10,
+        "clue": "Square footage"
+      },
+      {
+        "num": 11,
+        "clue": "Frowning feline who became an internet sensation"
+      },
+      {
+        "num": 13,
+        "clue": "Cry one's eyes out"
+      },
+      {
+        "num": 14,
+        "clue": "It makes waste, per a proverb"
+      },
+      {
+        "num": 15,
+        "clue": "Pro's opposite"
+      },
+      {
+        "num": 16,
+        "clue": "Sing like Sinatra"
+      },
+      {
+        "num": 19,
+        "clue": "Scale units: Abbr."
+      },
+      {
+        "num": 22,
+        "clue": "Kid's order that comes with a toy"
+      },
+      {
+        "num": 24,
+        "clue": "Great Lake that names a canal"
+      },
+      {
+        "num": 25,
+        "clue": "Taj Mahal's city"
+      },
+      {
+        "num": 26,
+        "clue": "Endless scroll on Instagram"
+      },
+      {
+        "num": 27,
+        "clue": "Small bouquet"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Carry-ons, e.g."
+      },
+      {
+        "num": 2,
+        "clue": "Coin in Rome"
+      },
+      {
+        "num": 3,
+        "clue": "Chow"
+      },
+      {
+        "num": 4,
+        "clue": "Uncle ___"
+      },
+      {
+        "num": 5,
+        "clue": "Like Chichen Itza's builders"
+      },
+      {
+        "num": 6,
+        "clue": "Story trajectories"
+      },
+      {
+        "num": 7,
+        "clue": "Aisle or window"
+      },
+      {
+        "num": 8,
+        "clue": "Can't stand"
+      },
+      {
+        "num": 12,
+        "clue": "Fake"
+      },
+      {
+        "num": 15,
+        "clue": "Managed"
+      },
+      {
+        "num": 16,
+        "clue": "One who's always whisking?"
+      },
+      {
+        "num": 17,
+        "clue": "Hard to find, or pink in the middle"
+      },
+      {
+        "num": 18,
+        "clue": "Andy Griffith's TV son"
+      },
+      {
+        "num": 19,
+        "clue": "Brick brand"
+      },
+      {
+        "num": 20,
+        "clue": "Cell signal indicators"
+      },
+      {
+        "num": 21,
+        "clue": "Totally crush it, in slang"
+      },
+      {
+        "num": 23,
+        "clue": "Atlas page"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with the name of one of Snow White's seven dwarfs",
+  "publishedAt": "2026-11-19T20:15:46.822Z"
+}

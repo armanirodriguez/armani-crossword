@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-20",
+  "date": "2026-11-20",
+  "series": "claude",
+  "title": "Whistle While You Work",
+  "author": "Claude",
+  "note": "Hi-ho! Look at how each long answer begins.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......#....#...",
+    "......#....#...",
+    "......#....#...",
+    "##............#",
+    ".......#.......",
+    "....##...##....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....##...##....",
+    ".......#.......",
+    "#............##",
+    "...#....#......",
+    "...#....#......",
+    "...#....#......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:vigtqdABy/Ai11uWRn0sUDfoBzn5heNN4Jn4Eqglwn87NUFyh6wV+PbMGTQ32MHjgDQLf3QY4Oc3uhmYB0Xy/ue8tuWNM3meA42HDG0yWH5QpFYUEZVBBPLGKB0Ut2DSr1kZp04GazGRGIenD9VBZQd4WcOuZxBc1D+GZGP2tgdLOG8ALjGL1UUSwbNDeWLrm1tzT9rlihEQmlGl8mpWY1gPGyMzrDlWRrTwEURnVe+1OY9k7o69mZSIB9tJqnenSulwQM+q5l9C3LHgZcYHn/rqR+gbSx2/u+sRE6DbCMup",
+  "checksum": "8eae315f",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "One taking the floor?"
+      },
+      {
+        "num": 7,
+        "clue": "Mope"
+      },
+      {
+        "num": 11,
+        "clue": "Christmas tree option"
+      },
+      {
+        "num": 14,
+        "clue": "Kathmandu native"
+      },
+      {
+        "num": 15,
+        "clue": "Small brown songbird"
+      },
+      {
+        "num": 16,
+        "clue": "\"Mr. Blue Sky\" band, briefly"
+      },
+      {
+        "num": 17,
+        "clue": "Egg shapes"
+      },
+      {
+        "num": 18,
+        "clue": "Peak; also, Wile E. Coyote's supplier"
+      },
+      {
+        "num": 19,
+        "clue": "Org. with a World Series"
+      },
+      {
+        "num": 20,
+        "clue": "Headless Horseman's haunt"
+      },
+      {
+        "num": 23,
+        "clue": "Bug's feeler"
+      },
+      {
+        "num": 25,
+        "clue": "Stopgap, as a manager"
+      },
+      {
+        "num": 27,
+        "clue": "It's first on the podium"
+      },
+      {
+        "num": 28,
+        "clue": "Thumbs-down review"
+      },
+      {
+        "num": 30,
+        "clue": "Black-tie affair"
+      },
+      {
+        "num": 31,
+        "clue": "Keats poem"
+      },
+      {
+        "num": 32,
+        "clue": "Proceeds"
+      },
+      {
+        "num": 34,
+        "clue": "Without a hint of warmth"
+      },
+      {
+        "num": 36,
+        "clue": "Coach who led the 2008 Celtics to an NBA title"
+      },
+      {
+        "num": 38,
+        "clue": "Stick's partner, in motivation"
+      },
+      {
+        "num": 41,
+        "clue": "Fashion house behind the \"New Look\""
+      },
+      {
+        "num": 42,
+        "clue": "Big Apple, initially"
+      },
+      {
+        "num": 45,
+        "clue": "Target in the wild"
+      },
+      {
+        "num": 46,
+        "clue": "\"You ___!\""
+      },
+      {
+        "num": 47,
+        "clue": "Even on the scoreboard"
+      },
+      {
+        "num": 48,
+        "clue": "Set in motion"
+      },
+      {
+        "num": 51,
+        "clue": "Hands out, as homework"
+      },
+      {
+        "num": 54,
+        "clue": "1996 Adam Sandler comedy about a hockey player turned golfer"
+      },
+      {
+        "num": 56,
+        "clue": "___ chi"
+      },
+      {
+        "num": 57,
+        "clue": "Bone-dry"
+      },
+      {
+        "num": 58,
+        "clue": "They go off in the morning"
+      },
+      {
+        "num": 61,
+        "clue": "Painter's medium"
+      },
+      {
+        "num": 62,
+        "clue": "Orange marker on the highway"
+      },
+      {
+        "num": 63,
+        "clue": "Type of tire"
+      },
+      {
+        "num": 64,
+        "clue": "Macs' rivals"
+      },
+      {
+        "num": 65,
+        "clue": "\"Frozen\" queen"
+      },
+      {
+        "num": 66,
+        "clue": "Signed pact"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Yoko of art and music"
+      },
+      {
+        "num": 2,
+        "clue": "Gun the engine"
+      },
+      {
+        "num": 3,
+        "clue": "One of twelve in the Gospels"
+      },
+      {
+        "num": 4,
+        "clue": "Followed closely"
+      },
+      {
+        "num": 5,
+        "clue": "Bygone"
+      },
+      {
+        "num": 6,
+        "clue": "Up, as dough"
+      },
+      {
+        "num": 7,
+        "clue": "Influence"
+      },
+      {
+        "num": 8,
+        "clue": "Spiny sea creature"
+      },
+      {
+        "num": 9,
+        "clue": "Dud of a car"
+      },
+      {
+        "num": 10,
+        "clue": "Popped the question, maybe"
+      },
+      {
+        "num": 11,
+        "clue": "Relating to the thighbone"
+      },
+      {
+        "num": 12,
+        "clue": "Animosity"
+      },
+      {
+        "num": 13,
+        "clue": "Reiner who directed \"The Princess Bride\""
+      },
+      {
+        "num": 21,
+        "clue": "Traditional gift for year one"
+      },
+      {
+        "num": 22,
+        "clue": "Painful things to step on, informally"
+      },
+      {
+        "num": 23,
+        "clue": "Back"
+      },
+      {
+        "num": 24,
+        "clue": "Silent yes"
+      },
+      {
+        "num": 26,
+        "clue": "Memorial Day's month"
+      },
+      {
+        "num": 29,
+        "clue": "Stage whisper"
+      },
+      {
+        "num": 32,
+        "clue": "Slime"
+      },
+      {
+        "num": 33,
+        "clue": "Halloween mo."
+      },
+      {
+        "num": 34,
+        "clue": "Corner office occupant, for short"
+      },
+      {
+        "num": 35,
+        "clue": "Bruins great Bobby"
+      },
+      {
+        "num": 36,
+        "clue": "Run out, as funds"
+      },
+      {
+        "num": 37,
+        "clue": "Essential"
+      },
+      {
+        "num": 38,
+        "clue": "Tax pro: Abbr."
+      },
+      {
+        "num": 39,
+        "clue": "Out of date"
+      },
+      {
+        "num": 40,
+        "clue": "Sells for"
+      },
+      {
+        "num": 42,
+        "clue": "Lagos's country"
+      },
+      {
+        "num": 43,
+        "clue": "Craving"
+      },
+      {
+        "num": 44,
+        "clue": "Discs in old jewel cases"
+      },
+      {
+        "num": 46,
+        "clue": "Kicks off"
+      },
+      {
+        "num": 47,
+        "clue": "Rant"
+      },
+      {
+        "num": 49,
+        "clue": "Swiftly"
+      },
+      {
+        "num": 50,
+        "clue": "Austrian Alpine region"
+      },
+      {
+        "num": 52,
+        "clue": "Clever"
+      },
+      {
+        "num": 53,
+        "clue": "Like some rooftop panels"
+      },
+      {
+        "num": 55,
+        "clue": "Brainstorm"
+      },
+      {
+        "num": 56,
+        "clue": "Spinning toy"
+      },
+      {
+        "num": 59,
+        "clue": "Yoga accessory"
+      },
+      {
+        "num": 60,
+        "clue": "Crafty"
+      }
+    ]
+  },
+  "theme": "Phrases that begin with the name of one of Snow White's seven dwarfs",
+  "publishedAt": "2026-11-19T20:15:46.905Z"
+}
