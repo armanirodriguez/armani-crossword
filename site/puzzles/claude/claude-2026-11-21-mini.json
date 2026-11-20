@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-21-mini",
+  "date": "2026-11-21",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Small Plates",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:ciZB2Nn3Lp95rYcaELX7TLGv9Lq8gvCeXg==",
+  "checksum": "152cfb3a",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Running jokes, perhaps"
+      },
+      {
+        "num": 5,
+        "clue": "Like tabloid headlines"
+      },
+      {
+        "num": 7,
+        "clue": "Pong maker"
+      },
+      {
+        "num": 8,
+        "clue": "Peace symbols"
+      },
+      {
+        "num": 9,
+        "clue": "Get the phone and laptop on the same page"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Tickled"
+      },
+      {
+        "num": 2,
+        "clue": "Lot holdings"
+      },
+      {
+        "num": 3,
+        "clue": "Easy money ... or what's in the boat on Turkey Day"
+      },
+      {
+        "num": 4,
+        "clue": "Wail on the road"
+      },
+      {
+        "num": 6,
+        "clue": "Frisbee, essentially"
+      }
+    ]
+  },
+  "theme": "Thanksgiving dinner foods in everyday expressions",
+  "publishedAt": "2026-11-20T20:14:01.536Z"
+}

@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-21",
+  "date": "2026-11-21",
+  "series": "claude",
+  "title": "Talking Turkey",
+  "author": "Claude",
+  "note": "Save",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#...##......",
+    "...#....#......",
+    "........#......",
+    ".....#......###",
+    "##...#...#.....",
+    "...#.......#...",
+    "......#...#....",
+    "....#.....#....",
+    "....#...#......",
+    "...#.......#...",
+    ".....#...#...##",
+    "###......#.....",
+    "......#........",
+    "......#....#...",
+    "......##...#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:r6ubOVlDPjWnWeBuBcObjj9vbOCa5uByZXvu+o5RylyimBGdIb9bDrZqldexiFF3wMdU14jv78Fby98bB8Xv/NPOGFPjubJfWDsphjg8pkVvEp3/i6MZ8tWMDoa5vKXp9bxpO7676gxMpbIZdWxzVOQ1i522ARmooGKd/1uEpegtcCEgUGdgClHDP7ETr1WiD+F34mdkxHI6MW705uevooX/cgG/d+fg1zCEy5zUbtEZu1Oh/cHP9AICqQ9qYsFz9dAm4bg8f6/4tQ9nQay7P/9INooiOvBh0xPuXogigLrX",
+  "checksum": "4522a847",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "It might be pushing notifications"
+      },
+      {
+        "num": 4,
+        "clue": "Rummy variety"
+      },
+      {
+        "num": 7,
+        "clue": "Hollow in a hillside"
+      },
+      {
+        "num": 13,
+        "clue": "\"Who, me?\" in Paris"
+      },
+      {
+        "num": 14,
+        "clue": "Times just before big days"
+      },
+      {
+        "num": 16,
+        "clue": "Settled up"
+      },
+      {
+        "num": 17,
+        "clue": "Spruce, in a way"
+      },
+      {
+        "num": 19,
+        "clue": "Went first, in a way"
+      },
+      {
+        "num": 20,
+        "clue": "Hit some runs?"
+      },
+      {
+        "num": 21,
+        "clue": "Offshore platform worker"
+      },
+      {
+        "num": 23,
+        "clue": "Reeves role who took the red pill"
+      },
+      {
+        "num": 24,
+        "clue": "___ ears (attentive)"
+      },
+      {
+        "num": 25,
+        "clue": "Spiked"
+      },
+      {
+        "num": 29,
+        "clue": "Drummer's setup"
+      },
+      {
+        "num": 31,
+        "clue": "Lands a haymaker on"
+      },
+      {
+        "num": 34,
+        "clue": "Scull piece"
+      },
+      {
+        "num": 35,
+        "clue": "Ready to go"
+      },
+      {
+        "num": 37,
+        "clue": "Placeholder on a schedule, briefly"
+      },
+      {
+        "num": 38,
+        "clue": "Calliope, for one"
+      },
+      {
+        "num": 39,
+        "clue": "Like good cheddar"
+      },
+      {
+        "num": 40,
+        "clue": "Remaining one"
+      },
+      {
+        "num": 42,
+        "clue": "Some are opening"
+      },
+      {
+        "num": 43,
+        "clue": "Minus"
+      },
+      {
+        "num": 44,
+        "clue": "Event where you might be spelled out?"
+      },
+      {
+        "num": 45,
+        "clue": "Engraves"
+      },
+      {
+        "num": 47,
+        "clue": "Put out feelers"
+      },
+      {
+        "num": 48,
+        "clue": "Never using one word where ten will do"
+      },
+      {
+        "num": 50,
+        "clue": "Get nosy"
+      },
+      {
+        "num": 51,
+        "clue": "It may be cramped"
+      },
+      {
+        "num": 53,
+        "clue": "It's over after six games, usually"
+      },
+      {
+        "num": 54,
+        "clue": "Earlier"
+      },
+      {
+        "num": 56,
+        "clue": "Oust from office"
+      },
+      {
+        "num": 58,
+        "clue": "Saturn's largest moon"
+      },
+      {
+        "num": 61,
+        "clue": "Lasik target"
+      },
+      {
+        "num": 64,
+        "clue": "Find one's way through"
+      },
+      {
+        "num": 66,
+        "clue": "Saws"
+      },
+      {
+        "num": 67,
+        "clue": "Did the crawl"
+      },
+      {
+        "num": 68,
+        "clue": "Haul off the shoulder"
+      },
+      {
+        "num": 69,
+        "clue": "Feeding grounds for quarters?"
+      },
+      {
+        "num": 70,
+        "clue": "Had"
+      },
+      {
+        "num": 71,
+        "clue": "Choose, with \"for\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Things that go up to eleven, famously"
+      },
+      {
+        "num": 2,
+        "clue": "Barbecue staple"
+      },
+      {
+        "num": 3,
+        "clue": "Like a fanciful plan"
+      },
+      {
+        "num": 4,
+        "clue": "Boogie"
+      },
+      {
+        "num": 5,
+        "clue": "League name"
+      },
+      {
+        "num": 6,
+        "clue": "Kind of network"
+      },
+      {
+        "num": 7,
+        "clue": "Tot in the Royal Navy"
+      },
+      {
+        "num": 8,
+        "clue": "Fends off"
+      },
+      {
+        "num": 9,
+        "clue": "Soap or horse follower"
+      },
+      {
+        "num": 10,
+        "clue": "Summer souvenir"
+      },
+      {
+        "num": 11,
+        "clue": "Overtime cause"
+      },
+      {
+        "num": 12,
+        "clue": "Like 1, 3 or 5"
+      },
+      {
+        "num": 15,
+        "clue": "Let the cat out of the bag"
+      },
+      {
+        "num": 18,
+        "clue": "Driver's spot"
+      },
+      {
+        "num": 22,
+        "clue": "Something that may be spun in a classroom"
+      },
+      {
+        "num": 26,
+        "clue": "One who's always streaming"
+      },
+      {
+        "num": 27,
+        "clue": "Sunday in spring with a hunt"
+      },
+      {
+        "num": 28,
+        "clue": "Not casual"
+      },
+      {
+        "num": 29,
+        "clue": "Marsupials that sleep most of the day"
+      },
+      {
+        "num": 30,
+        "clue": "Take in"
+      },
+      {
+        "num": 32,
+        "clue": "Pueblo material"
+      },
+      {
+        "num": 33,
+        "clue": "Peels"
+      },
+      {
+        "num": 36,
+        "clue": "They may be skipped after five seconds"
+      },
+      {
+        "num": 38,
+        "clue": "Big ___ (burger)"
+      },
+      {
+        "num": 41,
+        "clue": "Short"
+      },
+      {
+        "num": 46,
+        "clue": "When scones come out"
+      },
+      {
+        "num": 48,
+        "clue": "Surface show"
+      },
+      {
+        "num": 49,
+        "clue": "Capital on the Rideau Canal"
+      },
+      {
+        "num": 52,
+        "clue": "Leg-day exercise"
+      },
+      {
+        "num": 55,
+        "clue": "Booking"
+      },
+      {
+        "num": 57,
+        "clue": "Lip"
+      },
+      {
+        "num": 59,
+        "clue": "Over"
+      },
+      {
+        "num": 60,
+        "clue": "Eft, eventually"
+      },
+      {
+        "num": 61,
+        "clue": "Dash ___"
+      },
+      {
+        "num": 62,
+        "clue": "Keats work"
+      },
+      {
+        "num": 63,
+        "clue": "Fink"
+      },
+      {
+        "num": 65,
+        "clue": "Winery tank"
+      }
+    ]
+  },
+  "theme": "Thanksgiving dinner foods in everyday expressions",
+  "publishedAt": "2026-11-20T20:14:01.767Z"
+}

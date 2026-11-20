@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-21-midi",
+  "date": "2026-11-21",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Food for Thought",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:K1ier6INoxoz+6cWCLV4psGqlXI7OHdFRy9pfDMQMpOSTl1yzqMVDDmlIxfspWAS1rCoRwaBMsTxLVe8xdRrWrk5QDGK+s7q5LOOJHSusniK",
+  "checksum": "dffbddae",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Some X's' partners"
+      },
+      {
+        "num": 5,
+        "clue": "Partnership, perhaps"
+      },
+      {
+        "num": 9,
+        "clue": "\"___ Good Men\""
+      },
+      {
+        "num": 10,
+        "clue": "Solo that may stop the show"
+      },
+      {
+        "num": 11,
+        "clue": "List that's at the head of the class?"
+      },
+      {
+        "num": 13,
+        "clue": "Houston pro"
+      },
+      {
+        "num": 14,
+        "clue": "Born, on a wedding page"
+      },
+      {
+        "num": 15,
+        "clue": "Big Apple, on a map: Abbr."
+      },
+      {
+        "num": 17,
+        "clue": "Corner-office occupant, often"
+      },
+      {
+        "num": 20,
+        "clue": "Up"
+      },
+      {
+        "num": 24,
+        "clue": "What you eat when you were dead wrong"
+      },
+      {
+        "num": 26,
+        "clue": "Length times width"
+      },
+      {
+        "num": 27,
+        "clue": "Penalty that may be paid"
+      },
+      {
+        "num": 28,
+        "clue": "Cooked through"
+      },
+      {
+        "num": 29,
+        "clue": "Nashville's state: Abbr."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Very funny\""
+      },
+      {
+        "num": 2,
+        "clue": "Close encounters of the first kind"
+      },
+      {
+        "num": 3,
+        "clue": "Chap"
+      },
+      {
+        "num": 4,
+        "clue": "Like some testimony"
+      },
+      {
+        "num": 5,
+        "clue": "Way off"
+      },
+      {
+        "num": 6,
+        "clue": "Club that's often numbered"
+      },
+      {
+        "num": 7,
+        "clue": "Get under the skin of"
+      },
+      {
+        "num": 8,
+        "clue": "Like a drone bee"
+      },
+      {
+        "num": 12,
+        "clue": "Purple shade"
+      },
+      {
+        "num": 16,
+        "clue": "Chin feature, sometimes"
+      },
+      {
+        "num": 17,
+        "clue": "Lake ___, shrinking African body of water"
+      },
+      {
+        "num": 18,
+        "clue": "Coin bearing Leonardo's Vitruvian Man, in Italy"
+      },
+      {
+        "num": 19,
+        "clue": "Writing on the wall"
+      },
+      {
+        "num": 21,
+        "clue": "Mayberry boy"
+      },
+      {
+        "num": 22,
+        "clue": "Huck of fiction"
+      },
+      {
+        "num": 23,
+        "clue": "Many a driver's ed student"
+      },
+      {
+        "num": 25,
+        "clue": "Sweetie, in texts"
+      }
+    ]
+  },
+  "theme": "Thanksgiving dinner foods in everyday expressions",
+  "publishedAt": "2026-11-20T20:14:01.643Z"
+}
