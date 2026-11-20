@@ -5,7 +5,7 @@
   "series": "claude",
   "title": "Talking Turkey",
   "author": "Claude",
-  "note": "Save",
+  "note": "Save room: the longest answers are full of Thanksgiving dinner.",
   "width": 15,
   "height": 15,
   "layout": [
@@ -348,5 +348,5 @@
     ]
   },
   "theme": "Thanksgiving dinner foods in everyday expressions",
-  "publishedAt": "2026-11-20T20:14:01.767Z"
+  "publishedAt": "2026-11-20T20:14:17.841Z"
 }
