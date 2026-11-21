@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-22-mini",
+  "date": "2026-11-22",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Fourth and Short",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:d/bYjMjRgUYqxBnQHbW/Eq+f30iEtTVqJg==",
+  "checksum": "83263a7f",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Chicken house"
+      },
+      {
+        "num": 5,
+        "clue": "Hot room for a good sweat"
+      },
+      {
+        "num": 6,
+        "clue": "Puts off a decision, in office-speak (or kicks away on fourth down)"
+      },
+      {
+        "num": 7,
+        "clue": "Fancy neckwear"
+      },
+      {
+        "num": 8,
+        "clue": "Ooze"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Reason"
+      },
+      {
+        "num": 2,
+        "clue": "Fraction of a pound"
+      },
+      {
+        "num": 3,
+        "clue": "In the lead"
+      },
+      {
+        "num": 4,
+        "clue": "Bygone days"
+      },
+      {
+        "num": 5,
+        "clue": "Resorts for pampering"
+      }
+    ]
+  },
+  "theme": "Football terms used in everyday speech",
+  "publishedAt": "2026-11-21T20:26:14.605Z"
+}

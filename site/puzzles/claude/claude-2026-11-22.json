@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-22",
+  "date": "2026-11-22",
+  "series": "claude",
+  "title": "Sunday Talk",
+  "author": "Claude",
+  "note": "It's NFL Sunday: the three longest answers come straight from the gridiron.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....#....",
+    ".....#....#....",
+    ".....#....#....",
+    "............###",
+    "...##...##....#",
+    "###....#...#...",
+    "......#....#...",
+    "...............",
+    "...#....#......",
+    "...#...#....###",
+    "#....##...##...",
+    "###............",
+    "....#....#.....",
+    "....#....#.....",
+    "....#....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:1c75yT7lteYfXeTALN2Auc73k2bqqqFA7fIsVjLD8gbuIrc6dPvCED/L5DdctaZd36NL3tr89graj1WQ8gxW7fpdCsu1rIX6i5nT/B9fGG4xKwDbzmiTjnDYHYGmeqoq6L5C81p3cM97XsWczLFCCStI26C9gmO0pWQrenVXE2WheznQyigPv8FlaBDIw4r4SCZ6NOQ3d56oPFzeL7tXvZ1aUz2o3l1kJzn0aHNtUYEn7n9pa66pNnpOcftOAhv9alB/UwoGahg6jkxsqlC/yuyq6dBUclvk647mnDXb6owh",
+  "checksum": "ff721406",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Like last week's bagels"
+      },
+      {
+        "num": 6,
+        "clue": "Tousle"
+      },
+      {
+        "num": 10,
+        "clue": "Closed"
+      },
+      {
+        "num": 14,
+        "clue": "Yearned (for)"
+      },
+      {
+        "num": 15,
+        "clue": "Green Gables girl"
+      },
+      {
+        "num": 16,
+        "clue": "Detective's assignment"
+      },
+      {
+        "num": 17,
+        "clue": "Won by a nose"
+      },
+      {
+        "num": 18,
+        "clue": "Insufferably pleased with oneself"
+      },
+      {
+        "num": 19,
+        "clue": "Visa rival, for short"
+      },
+      {
+        "num": 20,
+        "clue": "Shoulder the main load, in gridiron lingo"
+      },
+      {
+        "num": 23,
+        "clue": "Foxy"
+      },
+      {
+        "num": 24,
+        "clue": "Like a freshly mopped floor"
+      },
+      {
+        "num": 25,
+        "clue": "Fateful March date for Caesar"
+      },
+      {
+        "num": 28,
+        "clue": "In the thick of"
+      },
+      {
+        "num": 30,
+        "clue": "Choose (to)"
+      },
+      {
+        "num": 32,
+        "clue": "Mimic"
+      },
+      {
+        "num": 34,
+        "clue": "Prestige TV offerings"
+      },
+      {
+        "num": 37,
+        "clue": "Yawn inducer"
+      },
+      {
+        "num": 38,
+        "clue": "Manta, for one"
+      },
+      {
+        "num": 39,
+        "clue": "Clear a path for someone, as a lead blocker would"
+      },
+      {
+        "num": 42,
+        "clue": "Pose a question"
+      },
+      {
+        "num": 43,
+        "clue": "Letter opener?"
+      },
+      {
+        "num": 44,
+        "clue": "The general public, with \"the\""
+      },
+      {
+        "num": 45,
+        "clue": "Hair goop"
+      },
+      {
+        "num": 46,
+        "clue": "Gallery display"
+      },
+      {
+        "num": 47,
+        "clue": "Gold-covered"
+      },
+      {
+        "num": 48,
+        "clue": "Hawk"
+      },
+      {
+        "num": 50,
+        "clue": "Exist"
+      },
+      {
+        "num": 51,
+        "clue": "Barnyard bleat"
+      },
+      {
+        "num": 54,
+        "clue": "Desperate, low-odds attempt at the very end"
+      },
+      {
+        "num": 59,
+        "clue": "Papa's partner"
+      },
+      {
+        "num": 62,
+        "clue": "Jeers from the stands"
+      },
+      {
+        "num": 63,
+        "clue": "\"Wonderwall\" band"
+      },
+      {
+        "num": 64,
+        "clue": "\"Sadly ...\""
+      },
+      {
+        "num": 65,
+        "clue": "Paper promises"
+      },
+      {
+        "num": 66,
+        "clue": "A-minus, e.g."
+      },
+      {
+        "num": 67,
+        "clue": "Pocket bread"
+      },
+      {
+        "num": 68,
+        "clue": "Nimble for one's age"
+      },
+      {
+        "num": 69,
+        "clue": "Tiny key?"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Glasses, informally"
+      },
+      {
+        "num": 2,
+        "clue": "Like some waves"
+      },
+      {
+        "num": 3,
+        "clue": "Steamed"
+      },
+      {
+        "num": 4,
+        "clue": "Creepy look"
+      },
+      {
+        "num": 5,
+        "clue": "Swirl in a stream"
+      },
+      {
+        "num": 6,
+        "clue": "Like some potatoes"
+      },
+      {
+        "num": 7,
+        "clue": "Still unfulfilled, as goals"
+      },
+      {
+        "num": 8,
+        "clue": "Pointed brush-off"
+      },
+      {
+        "num": 9,
+        "clue": "Sonic's company"
+      },
+      {
+        "num": 10,
+        "clue": "Burn with hot liquid"
+      },
+      {
+        "num": 11,
+        "clue": "Scenery chewer"
+      },
+      {
+        "num": 12,
+        "clue": "Utilize"
+      },
+      {
+        "num": 13,
+        "clue": "___-Mex"
+      },
+      {
+        "num": 21,
+        "clue": "Party game with a spinner and colored circles"
+      },
+      {
+        "num": 22,
+        "clue": "Word-for-word"
+      },
+      {
+        "num": 26,
+        "clue": "Brings home"
+      },
+      {
+        "num": 27,
+        "clue": "Kirk's \"frontier\""
+      },
+      {
+        "num": 28,
+        "clue": "Pal of Pierre"
+      },
+      {
+        "num": 29,
+        "clue": "Circular Buddhist design"
+      },
+      {
+        "num": 30,
+        "clue": "\"Yikes, that hurt!\""
+      },
+      {
+        "num": 31,
+        "clue": "Foremost"
+      },
+      {
+        "num": 33,
+        "clue": "Peepers"
+      },
+      {
+        "num": 34,
+        "clue": "Total buzzkill"
+      },
+      {
+        "num": 35,
+        "clue": "Ploys"
+      },
+      {
+        "num": 36,
+        "clue": "Common sprain site"
+      },
+      {
+        "num": 37,
+        "clue": "\"It's freezing!\""
+      },
+      {
+        "num": 40,
+        "clue": "Dine"
+      },
+      {
+        "num": 41,
+        "clue": "N.Y.C. winter clock setting: Abbr."
+      },
+      {
+        "num": 47,
+        "clue": "Like a meadow"
+      },
+      {
+        "num": 49,
+        "clue": "Tibetan capital"
+      },
+      {
+        "num": 50,
+        "clue": "Romance, to Renee"
+      },
+      {
+        "num": 51,
+        "clue": "___ metabolic rate"
+      },
+      {
+        "num": 52,
+        "clue": "Stage whisper"
+      },
+      {
+        "num": 53,
+        "clue": "Plus"
+      },
+      {
+        "num": 55,
+        "clue": "Wading bird with a curved bill"
+      },
+      {
+        "num": 56,
+        "clue": "Roller coaster feature"
+      },
+      {
+        "num": 57,
+        "clue": "Berra known for his quips"
+      },
+      {
+        "num": 58,
+        "clue": "Hole scores"
+      },
+      {
+        "num": 59,
+        "clue": "Atlas page"
+      },
+      {
+        "num": 60,
+        "clue": "\"Float like a butterfly\" boxer"
+      },
+      {
+        "num": 61,
+        "clue": "Yoga need"
+      }
+    ]
+  },
+  "theme": "Football terms used in everyday speech",
+  "publishedAt": "2026-11-21T20:26:14.871Z"
+}
