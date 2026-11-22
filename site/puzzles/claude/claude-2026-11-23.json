@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-23",
+  "date": "2026-11-23",
+  "series": "claude",
+  "title": "Player One",
+  "author": "Claude",
+  "note": "Grab a controller: the longest answers are all video games.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "......#...#....",
+    "......#...#....",
+    "......#........",
+    "##............#",
+    ".......#...#...",
+    "....##...##....",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "....##...##....",
+    "...#...#.......",
+    "#............##",
+    "........#......",
+    "....#...#......",
+    "....#...#......"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:tuv8f38CaO5Qw8uJM2nTrc7gL465Gr8FnRZgz+NWhHUiL74kv17fV0LfViUvwI0vSwBH1t1U1FeagynDnncGM/5BgLY1mGve0kHCRCkrrijmtJ0RidEpWLby1SreRXJsqt9gBJyrNCyAnCGbrhtc7LPJ4Om9gxBiWuVr8bd2qrMk+Q+JmvUBgAPcup7KIUxEBFCd2gbBDgXUAOOveRomqqhjvab19V38pvoLSq0DqsYWAnFSxD8KRlEY7q7uJ1yPiICFG/33W8Eu88lNv3y16RnkFP8Esv5s1b3Sqa/IuU/9",
+  "checksum": "3db81696",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Coated with silver or gold"
+      },
+      {
+        "num": 7,
+        "clue": "Sixth sense, for short"
+      },
+      {
+        "num": 10,
+        "clue": "Overly dramatic actors"
+      },
+      {
+        "num": 14,
+        "clue": "Buzzing insect heard in July"
+      },
+      {
+        "num": 15,
+        "clue": "Friend, in French"
+      },
+      {
+        "num": 16,
+        "clue": "Hard ___ (busily working)"
+      },
+      {
+        "num": 17,
+        "clue": "Intervene"
+      },
+      {
+        "num": 18,
+        "clue": "Without a sound"
+      },
+      {
+        "num": 20,
+        "clue": "Hit where cars with boosters play soccer"
+      },
+      {
+        "num": 22,
+        "clue": "Premiered"
+      },
+      {
+        "num": 24,
+        "clue": "Founded: Abbr."
+      },
+      {
+        "num": 25,
+        "clue": "Catch in the act"
+      },
+      {
+        "num": 27,
+        "clue": "Leave out"
+      },
+      {
+        "num": 28,
+        "clue": "Covered in frost"
+      },
+      {
+        "num": 30,
+        "clue": "Prefix meaning million"
+      },
+      {
+        "num": 31,
+        "clue": "And so on: Abbr."
+      },
+      {
+        "num": 32,
+        "clue": "This, in Spanish"
+      },
+      {
+        "num": 34,
+        "clue": "Rounded up, as cattle"
+      },
+      {
+        "num": 36,
+        "clue": "Nintendo release with bowling and tennis"
+      },
+      {
+        "num": 38,
+        "clue": "Present but hidden"
+      },
+      {
+        "num": 41,
+        "clue": "Otherwise"
+      },
+      {
+        "num": 42,
+        "clue": "Greek letter after phi"
+      },
+      {
+        "num": 45,
+        "clue": "Ireland, to the Irish"
+      },
+      {
+        "num": 46,
+        "clue": "Not even"
+      },
+      {
+        "num": 47,
+        "clue": "Number of quarters in a dollar"
+      },
+      {
+        "num": 48,
+        "clue": "Historical period"
+      },
+      {
+        "num": 49,
+        "clue": "Guys"
+      },
+      {
+        "num": 51,
+        "clue": "Breaks free"
+      },
+      {
+        "num": 54,
+        "clue": "Square Enix RPG series with chocobos"
+      },
+      {
+        "num": 57,
+        "clue": "Relating to the Milky Way"
+      },
+      {
+        "num": 58,
+        "clue": "Provoke"
+      },
+      {
+        "num": 61,
+        "clue": "Length multiplied by width"
+      },
+      {
+        "num": 62,
+        "clue": "Bobby of hockey fame"
+      },
+      {
+        "num": 63,
+        "clue": "Dried grape"
+      },
+      {
+        "num": 64,
+        "clue": "Capital of Switzerland"
+      },
+      {
+        "num": 65,
+        "clue": "Born as, on a wedding announcement"
+      },
+      {
+        "num": 66,
+        "clue": "Scheduled"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Desktops and laptops, for short"
+      },
+      {
+        "num": 2,
+        "clue": "Turned on, as a lamp"
+      },
+      {
+        "num": 3,
+        "clue": "Sharp-tongued"
+      },
+      {
+        "num": 4,
+        "clue": "Give up in a wrestling match, informally"
+      },
+      {
+        "num": 5,
+        "clue": "Official order"
+      },
+      {
+        "num": 6,
+        "clue": "Thank you, in German"
+      },
+      {
+        "num": 7,
+        "clue": "Direction of the sunrise"
+      },
+      {
+        "num": 8,
+        "clue": "Happy-face emoticon"
+      },
+      {
+        "num": 9,
+        "clue": "Heaps"
+      },
+      {
+        "num": 10,
+        "clue": "Put up, as a picture"
+      },
+      {
+        "num": 11,
+        "clue": "Responsive (to)"
+      },
+      {
+        "num": 12,
+        "clue": "Distance on an odometer"
+      },
+      {
+        "num": 13,
+        "clue": "Pig's pen"
+      },
+      {
+        "num": 19,
+        "clue": "Have dinner"
+      },
+      {
+        "num": 21,
+        "clue": "Revises"
+      },
+      {
+        "num": 22,
+        "clue": "Female deer"
+      },
+      {
+        "num": 23,
+        "clue": "Ambulance worker, for short"
+      },
+      {
+        "num": 26,
+        "clue": "Not good"
+      },
+      {
+        "num": 29,
+        "clue": "Cloaked, like Superman"
+      },
+      {
+        "num": 30,
+        "clue": "Title for a married woman: Abbr."
+      },
+      {
+        "num": 32,
+        "clue": "One, in Berlin"
+      },
+      {
+        "num": 33,
+        "clue": "Take a seat"
+      },
+      {
+        "num": 34,
+        "clue": "Opening ___ (store info): Abbr."
+      },
+      {
+        "num": 35,
+        "clue": "Season, to Parisians"
+      },
+      {
+        "num": 36,
+        "clue": "Tiny"
+      },
+      {
+        "num": 37,
+        "clue": "Bygone, as days"
+      },
+      {
+        "num": 38,
+        "clue": "Spike who directed \"Do the Right Thing\""
+      },
+      {
+        "num": 39,
+        "clue": "Cost of a plane ticket"
+      },
+      {
+        "num": 40,
+        "clue": "Movie preview"
+      },
+      {
+        "num": 42,
+        "clue": "Person who transcribes documents"
+      },
+      {
+        "num": 43,
+        "clue": "Color or shade"
+      },
+      {
+        "num": 44,
+        "clue": "Tax-collecting agency, for short"
+      },
+      {
+        "num": 46,
+        "clue": "Ablaze"
+      },
+      {
+        "num": 47,
+        "clue": "Board along a roof's edge"
+      },
+      {
+        "num": 49,
+        "clue": "Apple computer"
+      },
+      {
+        "num": 50,
+        "clue": "Singer John"
+      },
+      {
+        "num": 52,
+        "clue": "Mixes with a spoon"
+      },
+      {
+        "num": 53,
+        "clue": "Panama or Suez waterway"
+      },
+      {
+        "num": 55,
+        "clue": "Indian flatbread"
+      },
+      {
+        "num": 56,
+        "clue": "Unit of farmland"
+      },
+      {
+        "num": 57,
+        "clue": "Chat idly"
+      },
+      {
+        "num": 59,
+        "clue": "Score of 3-3, e.g."
+      },
+      {
+        "num": 60,
+        "clue": "Finish"
+      }
+    ]
+  },
+  "theme": "Classic video games",
+  "publishedAt": "2026-11-22T20:16:12.648Z"
+}

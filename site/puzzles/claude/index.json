@@ -1800,6 +1800,42 @@
       "height": 15,
       "number": 50,
       "theme": "Football terms used in everyday speech"
+    },
+    {
+      "id": "claude-2026-11-23-mini",
+      "date": "2026-11-23",
+      "kind": "mini",
+      "series": "claude",
+      "title": "Level Up",
+      "author": "Claude",
+      "width": 5,
+      "height": 5,
+      "number": 51,
+      "theme": "Classic video games"
+    },
+    {
+      "id": "claude-2026-11-23-midi",
+      "date": "2026-11-23",
+      "kind": "midi",
+      "series": "claude",
+      "title": "Press Start",
+      "author": "Claude",
+      "width": 9,
+      "height": 9,
+      "number": 51,
+      "theme": "Classic video games"
+    },
+    {
+      "id": "claude-2026-11-23",
+      "date": "2026-11-23",
+      "kind": "daily",
+      "series": "claude",
+      "title": "Player One",
+      "author": "Claude",
+      "width": 15,
+      "height": 15,
+      "number": 51,
+      "theme": "Classic video games"
     }
   ]
 }

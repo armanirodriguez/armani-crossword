@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-23-mini",
+  "date": "2026-11-23",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Level Up",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:nHxB0JWjNrlgspqyZr2tuQRoQWMn8XqsjA==",
+  "checksum": "f0f3827c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Bottom edges of skirts"
+      },
+      {
+        "num": 5,
+        "clue": "To no ___ (uselessly)"
+      },
+      {
+        "num": 7,
+        "clue": "\"The Legend of ___\" (Nintendo series)"
+      },
+      {
+        "num": 8,
+        "clue": "Come in"
+      },
+      {
+        "num": 9,
+        "clue": "Job to do"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Light fog"
+      },
+      {
+        "num": 2,
+        "clue": "Happening"
+      },
+      {
+        "num": 3,
+        "clue": "Mediterranean island nation"
+      },
+      {
+        "num": 4,
+        "clue": "Fries and coleslaw, e.g."
+      },
+      {
+        "num": 6,
+        "clue": "Songbird"
+      }
+    ]
+  },
+  "theme": "Classic video games",
+  "publishedAt": "2026-11-22T20:16:12.402Z"
+}
