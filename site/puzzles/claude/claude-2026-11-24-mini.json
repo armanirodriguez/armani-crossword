@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-24-mini",
+  "date": "2026-11-24",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Lab Rat",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:gbg5i538qMwZaLQgJ8M8uPVMYhgmDTPg2Q==",
+  "checksum": "f2497042",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Tortoise's racing rival"
+      },
+      {
+        "num": 5,
+        "clue": "Breakfast roll with a hole"
+      },
+      {
+        "num": 6,
+        "clue": "Glass container with a narrow neck in chemistry class"
+      },
+      {
+        "num": 7,
+        "clue": "Darts about like a butterfly"
+      },
+      {
+        "num": 8,
+        "clue": "Capitol Hill lawmakers: Abbr."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Actress Berry"
+      },
+      {
+        "num": 2,
+        "clue": "One more time"
+      },
+      {
+        "num": 3,
+        "clue": "Takes a break"
+      },
+      {
+        "num": 4,
+        "clue": "Large deer"
+      },
+      {
+        "num": 5,
+        "clue": "Closest pals, in texts"
+      }
+    ]
+  },
+  "theme": "Gear in a school science lab",
+  "publishedAt": "2026-11-23T20:06:24.809Z"
+}

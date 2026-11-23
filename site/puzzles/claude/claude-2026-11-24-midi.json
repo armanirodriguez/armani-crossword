@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-24-midi",
+  "date": "2026-11-24",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Lab Partners",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:Lj1VP95KalVsd/mDrirPKRi+U09MFlwwW5BajDBRtAeB203kEvokpGc3zepTJ1tAy3OzAPMC1ts0yVv7h02UOYisXMi7VVjqizKzAp93ahfv",
+  "checksum": "656148c3",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Cleaning cloths"
+      },
+      {
+        "num": 5,
+        "clue": "Apple player that held 1,000 songs"
+      },
+      {
+        "num": 9,
+        "clue": "Mystique"
+      },
+      {
+        "num": 10,
+        "clue": "Nevada city"
+      },
+      {
+        "num": 11,
+        "clue": "Timer for a reaction experiment"
+      },
+      {
+        "num": 13,
+        "clue": "\"___ are you?\""
+      },
+      {
+        "num": 14,
+        "clue": "Sailing far from shore"
+      },
+      {
+        "num": 15,
+        "clue": "Pub pour"
+      },
+      {
+        "num": 16,
+        "clue": "Jet"
+      },
+      {
+        "num": 19,
+        "clue": "Upbeat Jamaican music"
+      },
+      {
+        "num": 22,
+        "clue": "Metal support for clamping flasks over a flame"
+      },
+      {
+        "num": 24,
+        "clue": "Chooses"
+      },
+      {
+        "num": 25,
+        "clue": "Ran, as colors in the wash"
+      },
+      {
+        "num": 26,
+        "clue": "\"Hey, over here!\""
+      },
+      {
+        "num": 27,
+        "clue": "Chops with an ax"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Hasty"
+      },
+      {
+        "num": 2,
+        "clue": "Car"
+      },
+      {
+        "num": 3,
+        "clue": "Get bigger"
+      },
+      {
+        "num": 4,
+        "clue": "Maple tree fluid"
+      },
+      {
+        "num": 5,
+        "clue": "Furious"
+      },
+      {
+        "num": 6,
+        "clue": "Dogs and cats"
+      },
+      {
+        "num": 7,
+        "clue": "One time"
+      },
+      {
+        "num": 8,
+        "clue": "Qatar's capital"
+      },
+      {
+        "num": 12,
+        "clue": "Land of Cardiff"
+      },
+      {
+        "num": 15,
+        "clue": "Teen anxiety"
+      },
+      {
+        "num": 16,
+        "clue": "Stage item"
+      },
+      {
+        "num": 17,
+        "clue": "They're read by some"
+      },
+      {
+        "num": 18,
+        "clue": "Picnic pests"
+      },
+      {
+        "num": 19,
+        "clue": "Clearance event"
+      },
+      {
+        "num": 20,
+        "clue": "Was aware"
+      },
+      {
+        "num": 21,
+        "clue": "Tacks on"
+      },
+      {
+        "num": 23,
+        "clue": "\"Honestly,\" in a text"
+      }
+    ]
+  },
+  "theme": "Gear in a school science lab",
+  "publishedAt": "2026-11-23T20:06:24.659Z"
+}

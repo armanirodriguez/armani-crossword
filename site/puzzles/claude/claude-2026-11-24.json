@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-24",
+  "date": "2026-11-24",
+  "series": "claude",
+  "title": "Chemistry Class",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "...#.....#.....",
+    "...#.....#.....",
+    "...#.....#.....",
+    "#............##",
+    "....###...##...",
+    ".......##......",
+    "...#....#......",
+    "###.........###",
+    "......#....#...",
+    "......##.......",
+    "...##...###....",
+    "##............#",
+    ".....#.....#...",
+    ".....#.....#...",
+    ".....#.....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:cDS+udojgngteiL6kFXwvPHNXyFarj3BVYieiYaxFW3KdRkFZ0vcyQs6irTYgyXc6RcfuNW8/LJTMO2lU8WK3iTTTKLXBezZ1hPQWeGFrr+wTmwdJwA5ACKleWh9ghQf3whhNz8glhfxvOEhnaZwybDaMmNanyx05xLZb/hMAG1GDZUZfzWEuMYUyPkfEJYVXz8Ztx5NDlcdtNisAFW/5LH9bNAveNJYp+u2Vvh9049QuOQskQgTEDjKDw/EYAsGDd4szT4WhlYf5batUhEN9jVzw7paP2NwnaNdZQ6sH/Mf",
+  "checksum": "33f3ad0c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "April 15 org."
+      },
+      {
+        "num": 4,
+        "clue": "Oven gloves"
+      },
+      {
+        "num": 9,
+        "clue": "Margarita garnishes"
+      },
+      {
+        "num": 14,
+        "clue": "Female deer"
+      },
+      {
+        "num": 15,
+        "clue": "Honda's luxury brand"
+      },
+      {
+        "num": 16,
+        "clue": "Picture on a screen"
+      },
+      {
+        "num": 17,
+        "clue": "Family vehicle with lots of cargo room, for short"
+      },
+      {
+        "num": 18,
+        "clue": "Admitted at the door"
+      },
+      {
+        "num": 19,
+        "clue": "Homer Simpson's wife"
+      },
+      {
+        "num": 20,
+        "clue": "Holder for slender cylinders in chemistry"
+      },
+      {
+        "num": 23,
+        "clue": "Luxurious fur"
+      },
+      {
+        "num": 24,
+        "clue": "Period of history"
+      },
+      {
+        "num": 25,
+        "clue": "Little green men, for short"
+      },
+      {
+        "num": 28,
+        "clue": "Give a right to"
+      },
+      {
+        "num": 32,
+        "clue": "Au ___ (baked with a cheesy crust)"
+      },
+      {
+        "num": 35,
+        "clue": "\"Hi there!\""
+      },
+      {
+        "num": 36,
+        "clue": "Department leader"
+      },
+      {
+        "num": 38,
+        "clue": "Graduation cap dangler"
+      },
+      {
+        "num": 39,
+        "clue": "Shallow glass plate for growing bacteria cultures"
+      },
+      {
+        "num": 41,
+        "clue": "Command, as in \"at his ___\""
+      },
+      {
+        "num": 44,
+        "clue": "Slightly wet"
+      },
+      {
+        "num": 45,
+        "clue": "Gave dinner to"
+      },
+      {
+        "num": 48,
+        "clue": "Highest point of an orbit"
+      },
+      {
+        "num": 49,
+        "clue": "Fate"
+      },
+      {
+        "num": 51,
+        "clue": "Bar bill"
+      },
+      {
+        "num": 52,
+        "clue": "Deli bread choice"
+      },
+      {
+        "num": 55,
+        "clue": "Poker pot starter"
+      },
+      {
+        "num": 56,
+        "clue": "Gas-powered flame source on a lab bench"
+      },
+      {
+        "num": 62,
+        "clue": "___ acid (protein building block)"
+      },
+      {
+        "num": 64,
+        "clue": "Love to pieces"
+      },
+      {
+        "num": 65,
+        "clue": "Mediterranean, for one"
+      },
+      {
+        "num": 67,
+        "clue": "Sleep late, in British slang"
+      },
+      {
+        "num": 68,
+        "clue": "Pacific island kingdom"
+      },
+      {
+        "num": 69,
+        "clue": "Feeling blue"
+      },
+      {
+        "num": 70,
+        "clue": "Glue for a school project"
+      },
+      {
+        "num": 71,
+        "clue": "Win every game of a series"
+      },
+      {
+        "num": 72,
+        "clue": "Airport board info, briefly"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Wallet cards, for short"
+      },
+      {
+        "num": 2,
+        "clue": "Daily grind"
+      },
+      {
+        "num": 3,
+        "clue": "Number of years in a platinum anniversary"
+      },
+      {
+        "num": 4,
+        "clue": "Shake made with a special powder"
+      },
+      {
+        "num": 5,
+        "clue": "Rapper who co-starred on \"Law & Order: SVU\""
+      },
+      {
+        "num": 6,
+        "clue": "Ballerina's skirt"
+      },
+      {
+        "num": 7,
+        "clue": "Clan"
+      },
+      {
+        "num": 8,
+        "clue": "More levelheaded"
+      },
+      {
+        "num": 9,
+        "clue": "Capital of Peru"
+      },
+      {
+        "num": 10,
+        "clue": "Apple desktop"
+      },
+      {
+        "num": 11,
+        "clue": "Farmers' ___ (weekend shopping spots)"
+      },
+      {
+        "num": 12,
+        "clue": "Omelet ingredient"
+      },
+      {
+        "num": 13,
+        "clue": "Understand"
+      },
+      {
+        "num": 21,
+        "clue": "Go down a slope"
+      },
+      {
+        "num": 22,
+        "clue": "Scott Joplin's music style"
+      },
+      {
+        "num": 23,
+        "clue": "\"So-so\""
+      },
+      {
+        "num": 26,
+        "clue": "Draw"
+      },
+      {
+        "num": 27,
+        "clue": "NBC sketch show since 1975, for short"
+      },
+      {
+        "num": 29,
+        "clue": "\"___ boots are made for walkin'\""
+      },
+      {
+        "num": 30,
+        "clue": "Alphabet members"
+      },
+      {
+        "num": 31,
+        "clue": "Cob of corn"
+      },
+      {
+        "num": 33,
+        "clue": "Speaks hoarsely"
+      },
+      {
+        "num": 34,
+        "clue": "Fireplace residue"
+      },
+      {
+        "num": 37,
+        "clue": "Carried out"
+      },
+      {
+        "num": 39,
+        "clue": "Coat hook"
+      },
+      {
+        "num": 40,
+        "clue": "Pop"
+      },
+      {
+        "num": 41,
+        "clue": "Slugger's stick"
+      },
+      {
+        "num": 42,
+        "clue": "Clean-air agcy."
+      },
+      {
+        "num": 43,
+        "clue": "Knitting and stamp collecting, for two"
+      },
+      {
+        "num": 45,
+        "clue": "Delicate skill"
+      },
+      {
+        "num": 46,
+        "clue": "Beg"
+      },
+      {
+        "num": 47,
+        "clue": "Hair color product"
+      },
+      {
+        "num": 50,
+        "clue": "Beach souvenir"
+      },
+      {
+        "num": 53,
+        "clue": "Irish poet William Butler ___"
+      },
+      {
+        "num": 54,
+        "clue": "Fund, as a university chair"
+      },
+      {
+        "num": 57,
+        "clue": "Inch or ounce"
+      },
+      {
+        "num": 58,
+        "clue": "Zero"
+      },
+      {
+        "num": 59,
+        "clue": "Dog's chew toy"
+      },
+      {
+        "num": 60,
+        "clue": "Strong desire"
+      },
+      {
+        "num": 61,
+        "clue": "Harvest"
+      },
+      {
+        "num": 62,
+        "clue": "Swiss peak"
+      },
+      {
+        "num": 63,
+        "clue": "Soccer star Hamm"
+      },
+      {
+        "num": 66,
+        "clue": "Total up"
+      }
+    ]
+  },
+  "theme": "Gear in a school science lab",
+  "publishedAt": "2026-11-23T20:06:24.519Z"
+}
