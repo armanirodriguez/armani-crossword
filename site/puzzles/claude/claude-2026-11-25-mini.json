@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-25-mini",
+  "date": "2026-11-25",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Wrong Turn",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:bcVVHQ52bRPszF/OjvD89dohUXqCFe8x5g==",
+  "checksum": "46896317",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Concern"
+      },
+      {
+        "num": 5,
+        "clue": "\"Impossible!\""
+      },
+      {
+        "num": 6,
+        "clue": "Give a big speech"
+      },
+      {
+        "num": 7,
+        "clue": "Shrek and his kind"
+      },
+      {
+        "num": 8,
+        "clue": "Auction offers"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Short-legged Welsh dog"
+      },
+      {
+        "num": 2,
+        "clue": "Trophy or medal"
+      },
+      {
+        "num": 3,
+        "clue": "Prices"
+      },
+      {
+        "num": 4,
+        "clue": "Peepers"
+      },
+      {
+        "num": 5,
+        "clue": "Gaming newbie"
+      }
+    ]
+  },
+  "theme": "Phrases that end with a word for a street",
+  "publishedAt": "2026-11-24T20:10:13.736Z"
+}

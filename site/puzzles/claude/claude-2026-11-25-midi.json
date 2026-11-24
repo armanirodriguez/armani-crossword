@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-25-midi",
+  "date": "2026-11-25",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Magical Mystery Tour",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...#.....",
+    "...#.....",
+    "...#.....",
+    "......###",
+    ".........",
+    "###......",
+    ".....#...",
+    ".....#...",
+    ".....#..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:JOfNqduRBVj+4OYMlbLXyA8dqZbQduYLNs6ukKz1lE3slu390/idMxL9ripy2CZZUxaBWNR8eTntH4y3tH+EMcd7nyvFzka4qttyATeT2d/g",
+  "checksum": "c315826f",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Car navigation aid, briefly"
+      },
+      {
+        "num": 4,
+        "clue": "Capital of Jordan"
+      },
+      {
+        "num": 9,
+        "clue": "Boring routine"
+      },
+      {
+        "num": 10,
+        "clue": "Small pack donkey"
+      },
+      {
+        "num": 11,
+        "clue": "\"How ___ you?\""
+      },
+      {
+        "num": 12,
+        "clue": "Outdoes"
+      },
+      {
+        "num": 13,
+        "clue": "Netflix binge, maybe"
+      },
+      {
+        "num": 15,
+        "clue": "Liverpool street immortalized in a 1967 Beatles single"
+      },
+      {
+        "num": 19,
+        "clue": "Pub quiz fodder"
+      },
+      {
+        "num": 20,
+        "clue": "Nintendo plumber"
+      },
+      {
+        "num": 23,
+        "clue": "Connections, so to speak"
+      },
+      {
+        "num": 24,
+        "clue": "Woolly Andean animal"
+      },
+      {
+        "num": 25,
+        "clue": "Had dinner"
+      },
+      {
+        "num": 26,
+        "clue": "Howled at the moon"
+      },
+      {
+        "num": 27,
+        "clue": "Stanley Cup org."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Understand"
+      },
+      {
+        "num": 2,
+        "clue": "Blend smoothly"
+      },
+      {
+        "num": 3,
+        "clue": "Back of a boat"
+      },
+      {
+        "num": 4,
+        "clue": "1969 Fab Four album with a famous crosswalk cover"
+      },
+      {
+        "num": 5,
+        "clue": "Swiss breakfast mix"
+      },
+      {
+        "num": 6,
+        "clue": "___ Doubtfire"
+      },
+      {
+        "num": 7,
+        "clue": "Museum display"
+      },
+      {
+        "num": 8,
+        "clue": "Thumbs-down votes"
+      },
+      {
+        "num": 14,
+        "clue": "Eventually"
+      },
+      {
+        "num": 16,
+        "clue": "Of birds"
+      },
+      {
+        "num": 17,
+        "clue": "Final inning, usually"
+      },
+      {
+        "num": 18,
+        "clue": "Painter's stand"
+      },
+      {
+        "num": 20,
+        "clue": "Big-league baseball org."
+      },
+      {
+        "num": 21,
+        "clue": "Montgomery's state: Abbr."
+      },
+      {
+        "num": 22,
+        "clue": "Manta, e.g."
+      }
+    ]
+  },
+  "theme": "Phrases that end with a word for a street",
+  "publishedAt": "2026-11-24T20:10:13.850Z"
+}

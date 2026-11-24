@@ -1,0 +1,360 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-25",
+  "date": "2026-11-25",
+  "series": "claude",
+  "title": "Street Smarts",
+  "author": "Claude",
+  "note": "Hitting the road for Thanksgiving? Notice where each long answer ends up.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....#.....#....",
+    "....#.....#....",
+    "....#..........",
+    "......#........",
+    "###....#...#...",
+    "...#....#...###",
+    ".....#....#...#",
+    "...............",
+    "#...#....#.....",
+    "###...#....#...",
+    "...#...#....###",
+    "........#......",
+    "..........#....",
+    "....#.....#....",
+    "....#.....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:dOPH+4cw8ME+DMSLb6pP6RE7IFWysXbRqUAm3ni44iqdStXD7IncLmZ5XYGkMP5A9w7Ju7k72KN3kuA8LRVX8cSQDmagQKc5bXBTpNH2aJOIJBHjTdy9J3j9rf5LlragRa6+R+3IUNTUc4epDRHuVYEsAGtB8cjQouzjLARO6RpxUNX4shTPf4CPVy/6QGivYMrTDFNPFM4wNpT+vSDY3GuZxXID3f3GgLelkpvkMYdzRFui2Mhbg+c7AYye8PF+fpKGNIK6CYz3nCu5XUgSj7AZs6iztAx5uHMl8VSnCUaW",
+  "checksum": "55091033",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "The ___ of Avon (Shakespeare)"
+      },
+      {
+        "num": 5,
+        "clue": "Brag"
+      },
+      {
+        "num": 10,
+        "clue": "Comedians' routines"
+      },
+      {
+        "num": 14,
+        "clue": "Boo-boo, to a tot"
+      },
+      {
+        "num": 15,
+        "clue": "Come together"
+      },
+      {
+        "num": 16,
+        "clue": "From the top"
+      },
+      {
+        "num": 17,
+        "clue": "Frat party getup"
+      },
+      {
+        "num": 18,
+        "clue": "Where reminiscers go for a nostalgic stroll"
+      },
+      {
+        "num": 20,
+        "clue": "Zigzag ski race"
+      },
+      {
+        "num": 22,
+        "clue": "Twisted, as an ankle"
+      },
+      {
+        "num": 23,
+        "clue": "Day after Mon."
+      },
+      {
+        "num": 25,
+        "clue": "Knight's title"
+      },
+      {
+        "num": 26,
+        "clue": "Summer, in Quebec"
+      },
+      {
+        "num": 27,
+        "clue": "Polka ___"
+      },
+      {
+        "num": 30,
+        "clue": "Have a fall?"
+      },
+      {
+        "num": 32,
+        "clue": "Food-label org."
+      },
+      {
+        "num": 34,
+        "clue": "Like many old campus halls"
+      },
+      {
+        "num": 36,
+        "clue": "Timbuktu's country"
+      },
+      {
+        "num": 38,
+        "clue": "Web address, for short"
+      },
+      {
+        "num": 41,
+        "clue": "Dorothy's route to the Emerald City"
+      },
+      {
+        "num": 45,
+        "clue": "Omaha's state: Abbr."
+      },
+      {
+        "num": 46,
+        "clue": "Wave over, as a cab"
+      },
+      {
+        "num": 47,
+        "clue": "Model Campbell"
+      },
+      {
+        "num": 48,
+        "clue": "Boxer who could \"float like a butterfly\""
+      },
+      {
+        "num": 50,
+        "clue": "Thanksgiving stuffing herb"
+      },
+      {
+        "num": 52,
+        "clue": "Fuel economy stat"
+      },
+      {
+        "num": 53,
+        "clue": "Network of \"Good Morning America\""
+      },
+      {
+        "num": 56,
+        "clue": "Chowed down"
+      },
+      {
+        "num": 58,
+        "clue": "Grouch"
+      },
+      {
+        "num": 60,
+        "clue": "Freeloader"
+      },
+      {
+        "num": 63,
+        "clue": "Lofty principles"
+      },
+      {
+        "num": 67,
+        "clue": "Comfortable financial situation, figuratively"
+      },
+      {
+        "num": 69,
+        "clue": "Largest continent"
+      },
+      {
+        "num": 70,
+        "clue": "Renaissance string instrument"
+      },
+      {
+        "num": 71,
+        "clue": "All thumbs"
+      },
+      {
+        "num": 72,
+        "clue": "Spiced tea"
+      },
+      {
+        "num": 73,
+        "clue": "Old flames"
+      },
+      {
+        "num": 74,
+        "clue": "College application requirement"
+      },
+      {
+        "num": 75,
+        "clue": "Group that's always moo-ving?"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Automated online accounts"
+      },
+      {
+        "num": 2,
+        "clue": "Missing from base, briefly"
+      },
+      {
+        "num": 3,
+        "clue": "Latvian port on the Baltic"
+      },
+      {
+        "num": 4,
+        "clue": "Handed out, as cards"
+      },
+      {
+        "num": 5,
+        "clue": "\"That's a drag!\""
+      },
+      {
+        "num": 6,
+        "clue": "Single"
+      },
+      {
+        "num": 7,
+        "clue": "Goals"
+      },
+      {
+        "num": 8,
+        "clue": "Halts"
+      },
+      {
+        "num": 9,
+        "clue": "Super"
+      },
+      {
+        "num": 10,
+        "clue": "Indonesian vacation spot"
+      },
+      {
+        "num": 11,
+        "clue": "Silly"
+      },
+      {
+        "num": 12,
+        "clue": "Core belief"
+      },
+      {
+        "num": 13,
+        "clue": "Stockholm native"
+      },
+      {
+        "num": 19,
+        "clue": "Three feet"
+      },
+      {
+        "num": 21,
+        "clue": "Top"
+      },
+      {
+        "num": 24,
+        "clue": "Mufasa's son"
+      },
+      {
+        "num": 27,
+        "clue": "Fix-it-yourself, briefly"
+      },
+      {
+        "num": 28,
+        "clue": "Turkey roaster"
+      },
+      {
+        "num": 29,
+        "clue": "Scrabble piece"
+      },
+      {
+        "num": 31,
+        "clue": "Capital on the Seine"
+      },
+      {
+        "num": 33,
+        "clue": "Vibe"
+      },
+      {
+        "num": 35,
+        "clue": "Napoleon's island of exile"
+      },
+      {
+        "num": 37,
+        "clue": "Pale purple"
+      },
+      {
+        "num": 39,
+        "clue": "Space"
+      },
+      {
+        "num": 40,
+        "clue": "Genie's home"
+      },
+      {
+        "num": 42,
+        "clue": "Most formal dress code"
+      },
+      {
+        "num": 43,
+        "clue": "Work, as dough"
+      },
+      {
+        "num": 44,
+        "clue": "Archaeological site"
+      },
+      {
+        "num": 49,
+        "clue": "Popular retrievers, informally"
+      },
+      {
+        "num": 51,
+        "clue": "Tough and determined"
+      },
+      {
+        "num": 53,
+        "clue": "\"Hello\" singer"
+      },
+      {
+        "num": 54,
+        "clue": "Suitors, old-style"
+      },
+      {
+        "num": 55,
+        "clue": "Social rank"
+      },
+      {
+        "num": 57,
+        "clue": "Makes, as a salary"
+      },
+      {
+        "num": 59,
+        "clue": "Sandy shore"
+      },
+      {
+        "num": 61,
+        "clue": "Tints"
+      },
+      {
+        "num": 62,
+        "clue": "Golf pegs"
+      },
+      {
+        "num": 64,
+        "clue": "Tennis great Arthur"
+      },
+      {
+        "num": 65,
+        "clue": "Pinocchio, notably"
+      },
+      {
+        "num": 66,
+        "clue": "Spoke"
+      },
+      {
+        "num": 68,
+        "clue": "Clean-air org."
+      }
+    ]
+  },
+  "theme": "Phrases that end with a word for a street",
+  "publishedAt": "2026-11-24T20:10:22.856Z"
+}
