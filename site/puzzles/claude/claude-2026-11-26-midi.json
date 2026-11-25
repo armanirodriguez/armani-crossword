@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-26-midi",
+  "date": "2026-11-26",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Global Gratitude",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...##....",
+    "...#.....",
+    "...#.....",
+    "......###",
+    "....#....",
+    "###......",
+    ".....#...",
+    ".....#...",
+    "....##..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:cqJ1YmkRbHEydla+D7C/aKt/k8z0Lge8i93k1qzULrnVdPtn/8LsITMlzMFzVij/DBQsO22IY+/1Ea/mAP5G2xCEc/f5XVlvgeLzE0vJ7NNW",
+  "checksum": "14a6fd12",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Messy room, metaphorically"
+      },
+      {
+        "num": 4,
+        "clue": "Abel's brother"
+      },
+      {
+        "num": 8,
+        "clue": "Court"
+      },
+      {
+        "num": 9,
+        "clue": "Expression of appreciation in Munich"
+      },
+      {
+        "num": 10,
+        "clue": "April 15 org."
+      },
+      {
+        "num": 11,
+        "clue": "Wrapped up"
+      },
+      {
+        "num": 12,
+        "clue": "Gratitude on Oahu"
+      },
+      {
+        "num": 14,
+        "clue": "Soccer guard's spot"
+      },
+      {
+        "num": 15,
+        "clue": "Back muscles, for short"
+      },
+      {
+        "num": 19,
+        "clue": "Response to a Roman's favor"
+      },
+      {
+        "num": 21,
+        "clue": "Plenty"
+      },
+      {
+        "num": 24,
+        "clue": "Smidgen"
+      },
+      {
+        "num": 25,
+        "clue": "Talked baby talk"
+      },
+      {
+        "num": 26,
+        "clue": "Disco ___"
+      },
+      {
+        "num": 27,
+        "clue": "Ambulance crew, briefly"
+      },
+      {
+        "num": 28,
+        "clue": "Garbage holder"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Does laps, perhaps"
+      },
+      {
+        "num": 2,
+        "clue": "Scroll read in a synagogue"
+      },
+      {
+        "num": 3,
+        "clue": "Mario's dinosaur pal"
+      },
+      {
+        "num": 4,
+        "clue": "Cooking oil option"
+      },
+      {
+        "num": 5,
+        "clue": "Plus"
+      },
+      {
+        "num": 6,
+        "clue": "'50s president, familiarly"
+      },
+      {
+        "num": 7,
+        "clue": "Flanders of Springfield"
+      },
+      {
+        "num": 9,
+        "clue": "Taco Bell rival ___ Taco"
+      },
+      {
+        "num": 13,
+        "clue": "Perspectives"
+      },
+      {
+        "num": 16,
+        "clue": "Montezuma, for one"
+      },
+      {
+        "num": 17,
+        "clue": "Pageant winner's headpiece"
+      },
+      {
+        "num": 18,
+        "clue": "Four-door car"
+      },
+      {
+        "num": 20,
+        "clue": "Stop sign color"
+      },
+      {
+        "num": 21,
+        "clue": "Nail, as a test"
+      },
+      {
+        "num": 22,
+        "clue": "Thanksgiving host, often"
+      },
+      {
+        "num": 23,
+        "clue": "Poker prize"
+      }
+    ]
+  },
+  "theme": "Ways to say thank you",
+  "publishedAt": "2026-11-25T20:16:13.953Z"
+}

@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-26",
+  "date": "2026-11-26",
+  "series": "claude",
+  "title": "Giving Thanks",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    ".....#....##...",
+    ".....#....#....",
+    "..........#....",
+    "...#....#......",
+    ".......#.....##",
+    "....#....#.....",
+    "###...#....#...",
+    "...............",
+    "...#....#...###",
+    ".....#....#....",
+    "##.....#.......",
+    "......#....#...",
+    "....#..........",
+    "....#....#.....",
+    "...##....#....."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:sSB34a0RorfUfuqLml66W/PWufUp5hQnMNA/+oZaSp5g4njJ3SHjKxKbc87I0WjVgqRddKulyPMbiUNs5VhYfmrTSyYXXweyzXJicBw09DGgGKgDEYwzfzQ0qi+sVHi3aV/Mlkg9lSUbj/FVtvGHqCGHl4vnNqnTnLkYvAKdf/JeJDGZ6d71Vx+gjNRL0nTEh3/RrlZm64sGpLADC+C9MQk4wDhaFEN4e5gCeaPzY71xOd4mMM3LTYq/aMu4a2XVOlLu0EmN9gYJ1O5PsbZyjTMAjS3r+VJHSSfFRkzZc0MB",
+  "checksum": "b5a8f88e",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Number of tentacles on an octopus"
+      },
+      {
+        "num": 6,
+        "clue": "Beehive State"
+      },
+      {
+        "num": 10,
+        "clue": "Like milk past its date"
+      },
+      {
+        "num": 13,
+        "clue": "Spread out, as fingers"
+      },
+      {
+        "num": 14,
+        "clue": "Lady with many Grammys"
+      },
+      {
+        "num": 15,
+        "clue": "Where a flight boards"
+      },
+      {
+        "num": 16,
+        "clue": "Heavyweight expression of gratitude?"
+      },
+      {
+        "num": 18,
+        "clue": "Invitation request"
+      },
+      {
+        "num": 19,
+        "clue": "Very long stretch"
+      },
+      {
+        "num": 20,
+        "clue": "Sicilian smoker"
+      },
+      {
+        "num": 21,
+        "clue": "Double-reed player"
+      },
+      {
+        "num": 23,
+        "clue": "Sealed in, as a museum relic"
+      },
+      {
+        "num": 25,
+        "clue": "Like a video everyone's sharing"
+      },
+      {
+        "num": 26,
+        "clue": "Track event"
+      },
+      {
+        "num": 27,
+        "clue": "Score, as a film"
+      },
+      {
+        "num": 29,
+        "clue": "Licorice-like flavoring"
+      },
+      {
+        "num": 32,
+        "clue": "Bartender at Springfield's tavern"
+      },
+      {
+        "num": 34,
+        "clue": "Apartment, to a landlord"
+      },
+      {
+        "num": 36,
+        "clue": "Director's shout"
+      },
+      {
+        "num": 37,
+        "clue": "Polite reply when unwrapping a gift (that you secretly love)"
+      },
+      {
+        "num": 42,
+        "clue": "One, in Berlin"
+      },
+      {
+        "num": 43,
+        "clue": "Doctrines, informally"
+      },
+      {
+        "num": 44,
+        "clue": "Easter egg coloring"
+      },
+      {
+        "num": 45,
+        "clue": "\"Remember the ___!\""
+      },
+      {
+        "num": 47,
+        "clue": "Trim, as an apple"
+      },
+      {
+        "num": 49,
+        "clue": "McEntire of Nashville"
+      },
+      {
+        "num": 53,
+        "clue": "Young ones in a stable"
+      },
+      {
+        "num": 55,
+        "clue": "Brings to light"
+      },
+      {
+        "num": 57,
+        "clue": "Spot for slips"
+      },
+      {
+        "num": 59,
+        "clue": "Guilty or not guilty, e.g."
+      },
+      {
+        "num": 60,
+        "clue": "Recipe amount: Abbr."
+      },
+      {
+        "num": 61,
+        "clue": "\"Sadly ...\""
+      },
+      {
+        "num": 62,
+        "clue": "Words of appreciation from a Brit or an Aussie"
+      },
+      {
+        "num": 65,
+        "clue": "\"___ just me, or ...?\""
+      },
+      {
+        "num": 66,
+        "clue": "Pottery oven"
+      },
+      {
+        "num": 67,
+        "clue": "Smooth fabric for a gown"
+      },
+      {
+        "num": 68,
+        "clue": "Silent yes"
+      },
+      {
+        "num": 69,
+        "clue": "Editor's \"leave it in\""
+      },
+      {
+        "num": 70,
+        "clue": "Fencing blades"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "High regard"
+      },
+      {
+        "num": 2,
+        "clue": "Device with a Dynamic Island"
+      },
+      {
+        "num": 3,
+        "clue": "Quick look"
+      },
+      {
+        "num": 4,
+        "clue": "Solo of a galaxy far, far away"
+      },
+      {
+        "num": 5,
+        "clue": "Little ones"
+      },
+      {
+        "num": 6,
+        "clue": "Kampala's nation"
+      },
+      {
+        "num": 7,
+        "clue": "\"Toodle-oo!\""
+      },
+      {
+        "num": 8,
+        "clue": "Back, timewise"
+      },
+      {
+        "num": 9,
+        "clue": "Vietnamese capital"
+      },
+      {
+        "num": 10,
+        "clue": "St. Peter's, for one"
+      },
+      {
+        "num": 11,
+        "clue": "Off-roaders, briefly"
+      },
+      {
+        "num": 12,
+        "clue": "Store sect."
+      },
+      {
+        "num": 15,
+        "clue": "Response to a lame pun"
+      },
+      {
+        "num": 17,
+        "clue": "Hi-fi systems"
+      },
+      {
+        "num": 22,
+        "clue": "Like a spoiled kid"
+      },
+      {
+        "num": 24,
+        "clue": "Cash dispensers, for short"
+      },
+      {
+        "num": 25,
+        "clue": "Sell from a machine"
+      },
+      {
+        "num": 28,
+        "clue": "Oklahoma's second-largest city"
+      },
+      {
+        "num": 30,
+        "clue": "Minivan alternative"
+      },
+      {
+        "num": 31,
+        "clue": "Summer in Paris"
+      },
+      {
+        "num": 33,
+        "clue": "Columbus native"
+      },
+      {
+        "num": 35,
+        "clue": "One compiling a book's last pages"
+      },
+      {
+        "num": 37,
+        "clue": "Vote in favor"
+      },
+      {
+        "num": 38,
+        "clue": "Painter's medium"
+      },
+      {
+        "num": 39,
+        "clue": "Fearless"
+      },
+      {
+        "num": 40,
+        "clue": "Calls the plays at home?"
+      },
+      {
+        "num": 41,
+        "clue": "Sub sandwich"
+      },
+      {
+        "num": 46,
+        "clue": "Like a good cake"
+      },
+      {
+        "num": 48,
+        "clue": "Give in"
+      },
+      {
+        "num": 50,
+        "clue": "Sale site, sometimes"
+      },
+      {
+        "num": 51,
+        "clue": "Ride-or-die friend"
+      },
+      {
+        "num": 52,
+        "clue": "Trees that quake"
+      },
+      {
+        "num": 54,
+        "clue": "Is short on"
+      },
+      {
+        "num": 56,
+        "clue": "No longer in vogue"
+      },
+      {
+        "num": 57,
+        "clue": "Course before dessert"
+      },
+      {
+        "num": 58,
+        "clue": "Too"
+      },
+      {
+        "num": 59,
+        "clue": "Brazilian soccer legend"
+      },
+      {
+        "num": 63,
+        "clue": "Chart-topper"
+      },
+      {
+        "num": 64,
+        "clue": "Road trip aid"
+      }
+    ]
+  },
+  "theme": "Ways to say thank you",
+  "publishedAt": "2026-11-25T20:16:14.102Z"
+}
