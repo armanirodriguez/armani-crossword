@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-27-mini",
+  "date": "2026-11-27",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Rock Candy",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:SGTNSrLpL2bxY6ROCDbiPxoyvqhwtu1qFw==",
+  "checksum": "d1f47f38",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Wolf group"
+      },
+      {
+        "num": 5,
+        "clue": "Sharp, like smoke"
+      },
+      {
+        "num": 7,
+        "clue": "Napped leather"
+      },
+      {
+        "num": 8,
+        "clue": "Swap"
+      },
+      {
+        "num": 9,
+        "clue": "Love, in Lima"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Over and done with"
+      },
+      {
+        "num": 2,
+        "clue": "Honda's luxury line"
+      },
+      {
+        "num": 3,
+        "clue": "Clapton's '60s supergroup, or something to whip"
+      },
+      {
+        "num": 4,
+        "clue": "Youngster, affectionately"
+      },
+      {
+        "num": 6,
+        "clue": "Bucks and does"
+      }
+    ]
+  },
+  "theme": "Music acts with a food in their names",
+  "publishedAt": "2026-11-26T20:11:41.570Z"
+}

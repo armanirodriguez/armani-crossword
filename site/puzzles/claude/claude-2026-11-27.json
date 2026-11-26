@@ -1,0 +1,352 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-27",
+  "date": "2026-11-27",
+  "series": "claude",
+  "title": "Jam Session",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....#....#.....",
+    "....#....#.....",
+    "....#..........",
+    ".....###....###",
+    ".......#.......",
+    "...#......##...",
+    "###.....##.....",
+    "#.............#",
+    ".....##.....###",
+    "...##......#...",
+    ".......#.......",
+    "###....###.....",
+    "..........#....",
+    ".....#....#....",
+    ".....#....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:khKzv5XGHXUAJB5f558MohnayJZsXKY5Jd1NmITgLRat94XXELUEJexPpUngZMzoIPrlKm8Gk7TKKdZwZbYYWbDLtDS5k5BXjJfnL7+u0+jmyEW31w//ZjryvBmB6oJ3nutbDaUkqSO9nIJbc0TqKzAZVgBgH5wTiINWT1Gezlg8l9ZfPyKdJ6WLkZIDruyM9xGT875RUKF9U1JjcXfLTGyPu5hEyBHszEeYJIhoryb7HrmkBUhG41HNLeyL+9dDz0spNNCQhJKX1kwUqT7MKIBKY0lqDBz+ZR02cW9XKx/N",
+  "checksum": "752a96ac",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "To some degree"
+      },
+      {
+        "num": 5,
+        "clue": "Sulk visibly"
+      },
+      {
+        "num": 9,
+        "clue": "Picked out from afar"
+      },
+      {
+        "num": 14,
+        "clue": "Lovegood of Hogwarts"
+      },
+      {
+        "num": 15,
+        "clue": "Frank Herbert saga turned into Timothée Chalamet films"
+      },
+      {
+        "num": 16,
+        "clue": "Stan Lee specialty"
+      },
+      {
+        "num": 17,
+        "clue": "Minus"
+      },
+      {
+        "num": 18,
+        "clue": "\"Fetch the Bolt Cutters\" artist with a fruity surname"
+      },
+      {
+        "num": 20,
+        "clue": "Come together"
+      },
+      {
+        "num": 22,
+        "clue": "Radius neighbor"
+      },
+      {
+        "num": 23,
+        "clue": "Prize pinned on a show pony, perhaps"
+      },
+      {
+        "num": 26,
+        "clue": "Idaho spuds"
+      },
+      {
+        "num": 30,
+        "clue": "Winter clock setting in N.Y.C."
+      },
+      {
+        "num": 31,
+        "clue": "Apollo Theater's neighborhood"
+      },
+      {
+        "num": 33,
+        "clue": "Madrid relative"
+      },
+      {
+        "num": 34,
+        "clue": "Tiny hairs on a cell"
+      },
+      {
+        "num": 35,
+        "clue": "Put in chips before the deal"
+      },
+      {
+        "num": 37,
+        "clue": "\"I Gotta Feeling\" group, or a legume on New Year's Day"
+      },
+      {
+        "num": 41,
+        "clue": "Hen houses"
+      },
+      {
+        "num": 42,
+        "clue": "Skip the big wedding, maybe"
+      },
+      {
+        "num": 43,
+        "clue": "Genetic blueprint, briefly"
+      },
+      {
+        "num": 44,
+        "clue": "Mix up, as a message"
+      },
+      {
+        "num": 46,
+        "clue": "Swarm around, as a celebrity"
+      },
+      {
+        "num": 49,
+        "clue": "Beethoven's \"Moonlight\" and \"Pathétique\""
+      },
+      {
+        "num": 52,
+        "clue": "Crimson Tide's home"
+      },
+      {
+        "num": 54,
+        "clue": "Zamboni's domain"
+      },
+      {
+        "num": 55,
+        "clue": "Queen Mary 2, for one"
+      },
+      {
+        "num": 56,
+        "clue": "\"Wannabe\" quintet with a seasoning up front"
+      },
+      {
+        "num": 62,
+        "clue": "Stitch's best friend"
+      },
+      {
+        "num": 63,
+        "clue": "What a server takes"
+      },
+      {
+        "num": 64,
+        "clue": "When shadows are shortest"
+      },
+      {
+        "num": 65,
+        "clue": "Highland valley"
+      },
+      {
+        "num": 66,
+        "clue": "Some golf clubs"
+      },
+      {
+        "num": 67,
+        "clue": "Fish feature"
+      },
+      {
+        "num": 68,
+        "clue": "Grub"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Magnetism"
+      },
+      {
+        "num": 2,
+        "clue": "___ Aires"
+      },
+      {
+        "num": 3,
+        "clue": "Refuse to back down"
+      },
+      {
+        "num": 4,
+        "clue": "Good judgment, in fashion"
+      },
+      {
+        "num": 5,
+        "clue": "Format for many e-tickets"
+      },
+      {
+        "num": 6,
+        "clue": "Yes, in Lyon"
+      },
+      {
+        "num": 7,
+        "clue": "Game in which you shout its name"
+      },
+      {
+        "num": 8,
+        "clue": "Professor's job security"
+      },
+      {
+        "num": 9,
+        "clue": "Reads quickly"
+      },
+      {
+        "num": 10,
+        "clue": "Pops"
+      },
+      {
+        "num": 11,
+        "clue": "Little rascal"
+      },
+      {
+        "num": 12,
+        "clue": "Unagi, at a sushi bar"
+      },
+      {
+        "num": 13,
+        "clue": "Jane ___ (unnamed woman)"
+      },
+      {
+        "num": 19,
+        "clue": "Reunion attendee, informally"
+      },
+      {
+        "num": 21,
+        "clue": "Moral principles"
+      },
+      {
+        "num": 24,
+        "clue": "Spill the beans"
+      },
+      {
+        "num": 25,
+        "clue": "Lake that borders Ohio"
+      },
+      {
+        "num": 27,
+        "clue": "\"At Last\" singer James"
+      },
+      {
+        "num": 28,
+        "clue": "Draws"
+      },
+      {
+        "num": 29,
+        "clue": "Blue"
+      },
+      {
+        "num": 32,
+        "clue": "Hen, at times"
+      },
+      {
+        "num": 34,
+        "clue": "Bottle top"
+      },
+      {
+        "num": 35,
+        "clue": "Contest a verdict"
+      },
+      {
+        "num": 36,
+        "clue": "Born, in a society column"
+      },
+      {
+        "num": 37,
+        "clue": "U2 frontman"
+      },
+      {
+        "num": 38,
+        "clue": "Something a bank may approve"
+      },
+      {
+        "num": 39,
+        "clue": "Napoleon's exile island"
+      },
+      {
+        "num": 40,
+        "clue": "Barbie, e.g."
+      },
+      {
+        "num": 41,
+        "clue": "Old car stereo discs"
+      },
+      {
+        "num": 44,
+        "clue": "Bunch of pals"
+      },
+      {
+        "num": 45,
+        "clue": "___ price (real estate figure)"
+      },
+      {
+        "num": 46,
+        "clue": "Kind of envelope"
+      },
+      {
+        "num": 47,
+        "clue": "Denver breakfast staple"
+      },
+      {
+        "num": 48,
+        "clue": "Industry titans"
+      },
+      {
+        "num": 50,
+        "clue": "Curved"
+      },
+      {
+        "num": 51,
+        "clue": "Stadium levels"
+      },
+      {
+        "num": 53,
+        "clue": "Hogwash"
+      },
+      {
+        "num": 56,
+        "clue": "Plant, as seeds"
+      },
+      {
+        "num": 57,
+        "clue": "Not an amateur"
+      },
+      {
+        "num": 58,
+        "clue": "Altar words"
+      },
+      {
+        "num": 59,
+        "clue": "King, in Paris"
+      },
+      {
+        "num": 60,
+        "clue": "Texted laugh"
+      },
+      {
+        "num": 61,
+        "clue": "Late-night institution since 1975, briefly"
+      }
+    ]
+  },
+  "theme": "Music acts with a food in their names",
+  "publishedAt": "2026-11-26T20:11:41.797Z"
+}

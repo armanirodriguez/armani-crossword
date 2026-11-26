@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-27-midi",
+  "date": "2026-11-27",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Sound Bites",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    ".....#...",
+    "###...###",
+    "...#.....",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:jTPX1zsW+mb9VZFemlmVNHe9zFtpJtBSnXYqSJfjEnBCBLATOqWQgP8+AnIK4GHQsRD151Q+okpMdU5ibGSkQk/Iu6I7+wsOmXKlQnIhwP7x",
+  "checksum": "63fe6b71",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Break up with, abruptly"
+      },
+      {
+        "num": 5,
+        "clue": "Manage"
+      },
+      {
+        "num": 9,
+        "clue": "Twin who sold his birthright"
+      },
+      {
+        "num": 10,
+        "clue": "Second son of Adam"
+      },
+      {
+        "num": 11,
+        "clue": "\"Need a Favor\" singer whose stage name is a jam-filled cake"
+      },
+      {
+        "num": 13,
+        "clue": "\"Hello\" hitmaker"
+      },
+      {
+        "num": 14,
+        "clue": "Season in Cannes"
+      },
+      {
+        "num": 15,
+        "clue": "Sucker"
+      },
+      {
+        "num": 17,
+        "clue": "List-ending abbr."
+      },
+      {
+        "num": 20,
+        "clue": "Concert contract add-on"
+      },
+      {
+        "num": 24,
+        "clue": "\"Push It\" hip-hop act named like a pair of shakers"
+      },
+      {
+        "num": 26,
+        "clue": "Blueprint"
+      },
+      {
+        "num": 27,
+        "clue": "Give off"
+      },
+      {
+        "num": 28,
+        "clue": "Small salamander"
+      },
+      {
+        "num": 29,
+        "clue": "M.D.s"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "___ vu"
+      },
+      {
+        "num": 2,
+        "clue": "Secondhand"
+      },
+      {
+        "num": 3,
+        "clue": "Like a rooster"
+      },
+      {
+        "num": 4,
+        "clue": "Tugs"
+      },
+      {
+        "num": 5,
+        "clue": "Uber request"
+      },
+      {
+        "num": 6,
+        "clue": "Double-reed woodwind"
+      },
+      {
+        "num": 7,
+        "clue": "Bombard, as with snowballs"
+      },
+      {
+        "num": 8,
+        "clue": "Woods of \"Legally Blonde\""
+      },
+      {
+        "num": 12,
+        "clue": "Pine"
+      },
+      {
+        "num": 16,
+        "clue": "Played a flute, say"
+      },
+      {
+        "num": 17,
+        "clue": "\"SportsCenter\" channel"
+      },
+      {
+        "num": 18,
+        "clue": "Yarn"
+      },
+      {
+        "num": 19,
+        "clue": "Arcade grabber"
+      },
+      {
+        "num": 21,
+        "clue": "Rough recording"
+      },
+      {
+        "num": 22,
+        "clue": "Totally awesome, in slang"
+      },
+      {
+        "num": 23,
+        "clue": "\"Darn it!\""
+      },
+      {
+        "num": 25,
+        "clue": "Cartoon explosive"
+      }
+    ]
+  },
+  "theme": "Music acts with a food in their names",
+  "publishedAt": "2026-11-26T20:11:41.685Z"
+}
