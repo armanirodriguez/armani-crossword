@@ -1,0 +1,155 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-28-midi",
+  "date": "2026-11-28",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Chris-mas Party",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "...###...",
+    "...#.....",
+    "...#.....",
+    ".........",
+    "###...###",
+    ".........",
+    ".....#...",
+    ".....#...",
+    "...###..."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:fXpDdJp5PuYD1LWRN8cCukzMLV2n1ZTidKGjUa3l7BG5VRLqnQrlMLgAQXR+nzWU/+VoMHkTxJNuIOsEwkVHSppTD7z2kdUzRHTO03RBidwt",
+  "checksum": "47cd5fd1",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Flightless bird of the outback"
+      },
+      {
+        "num": 4,
+        "clue": "Recline"
+      },
+      {
+        "num": 7,
+        "clue": "Local, in London"
+      },
+      {
+        "num": 8,
+        "clue": "Head off"
+      },
+      {
+        "num": 10,
+        "clue": "Rink surface"
+      },
+      {
+        "num": 11,
+        "clue": "Relish"
+      },
+      {
+        "num": 12,
+        "clue": "He took the captain's chair as Kirk in the 2009 'Star Trek'"
+      },
+      {
+        "num": 14,
+        "clue": "Carnival city, informally"
+      },
+      {
+        "num": 15,
+        "clue": "Comedian who hosted the Oscars in 2005 and 2016"
+      },
+      {
+        "num": 21,
+        "clue": "Minimum"
+      },
+      {
+        "num": 22,
+        "clue": "'The Raven' poet"
+      },
+      {
+        "num": 23,
+        "clue": "Words said with a raised right hand"
+      },
+      {
+        "num": 24,
+        "clue": "IPA, for one"
+      },
+      {
+        "num": 25,
+        "clue": "Lost driver's aid, for short"
+      },
+      {
+        "num": 26,
+        "clue": "Place for a napkin"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "The 'Odyssey', for one"
+      },
+      {
+        "num": 2,
+        "clue": "A lot"
+      },
+      {
+        "num": 3,
+        "clue": "Lyft rival"
+      },
+      {
+        "num": 4,
+        "clue": "Denim pioneer Strauss"
+      },
+      {
+        "num": 5,
+        "clue": "Press, in a way"
+      },
+      {
+        "num": 6,
+        "clue": "To be, in Paris"
+      },
+      {
+        "num": 8,
+        "clue": "Point guard's stat"
+      },
+      {
+        "num": 9,
+        "clue": "Steam, e.g."
+      },
+      {
+        "num": 13,
+        "clue": "Like Dublin natives"
+      },
+      {
+        "num": 15,
+        "clue": "Wooden shoe"
+      },
+      {
+        "num": 16,
+        "clue": "Pile"
+      },
+      {
+        "num": 17,
+        "clue": "\"Darn it!\""
+      },
+      {
+        "num": 18,
+        "clue": "October birthstone"
+      },
+      {
+        "num": 19,
+        "clue": "Fizzy drink"
+      },
+      {
+        "num": 20,
+        "clue": "Castle stronghold"
+      }
+    ]
+  },
+  "theme": "Famous Hollywood Chrises",
+  "publishedAt": "2026-11-27T20:20:13.424Z"
+}

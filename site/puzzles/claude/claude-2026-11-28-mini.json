@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-28-mini",
+  "date": "2026-11-28",
+  "kind": "mini",
+  "series": "claude",
+  "title": "First-Name Basis",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "....#",
+    ".....",
+    ".....",
+    ".....",
+    "#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:b1Q0I0bCHzSY6fW0Dw3TWx/DKZxQD5CbaA==",
+  "checksum": "6b807e02",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Air passage in an HVAC system"
+      },
+      {
+        "num": 5,
+        "clue": "Pale as a ghost"
+      },
+      {
+        "num": 7,
+        "clue": "Sip slowly, as a drink"
+      },
+      {
+        "num": 8,
+        "clue": "Southern breakfast side"
+      },
+      {
+        "num": 9,
+        "clue": "\"Hey, over here!\""
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "\"Darn!\""
+      },
+      {
+        "num": 2,
+        "clue": "Seize, as a throne"
+      },
+      {
+        "num": 3,
+        "clue": "First name shared by Pratt, Pine, Evans and Hemsworth"
+      },
+      {
+        "num": 4,
+        "clue": "Puts through its paces"
+      },
+      {
+        "num": 6,
+        "clue": "Empty ___ (home once the kids move out)"
+      }
+    ]
+  },
+  "theme": "Famous Hollywood Chrises",
+  "publishedAt": "2026-11-27T20:20:13.334Z"
+}

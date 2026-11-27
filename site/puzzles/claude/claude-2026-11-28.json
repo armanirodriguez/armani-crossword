@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-28",
+  "date": "2026-11-28",
+  "series": "claude",
+  "title": "Chris-Crossed",
+  "author": "Claude",
+  "note": "",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "#.....##.......",
+    "......#........",
+    "......#........",
+    "...#....#...###",
+    ".....#.....#...",
+    "##.......#.....",
+    "......#...#....",
+    "....#.....#....",
+    "....#...#......",
+    ".....#.......##",
+    "...#.....#.....",
+    "###...#....#...",
+    "........#......",
+    "........#......",
+    ".......##.....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:ZHoaTXMwhZ1GVesiFDFt01Apyvm5GtMoA1XDsCvEHOTa53gCiRDzJFX2/eVFrGQGe6EabAwhAiR3daIUkFwSDL/BUlP1sR6YbiWAvDr11KLlkB4nBGgxM7p/dVA9EBBNZywQmfV57F3zXnZoNki5R08a0lcUhxvVjisgFnPYaobqdG3OEzHjdTyzObNtQZlDSKrpbIfPWatyVwE+sQQut4s5Py0z/6bBvjrTar6AueOkd2SKg8arurlV2IKLRLeYoVHWCOnwJDADsBw6m00OGTNrQ6Pg9nHszgTZ/13jGzbW",
+  "checksum": "3f039e9c",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Twenty, to Lincoln"
+      },
+      {
+        "num": 6,
+        "clue": "Overwhelming wave, figuratively"
+      },
+      {
+        "num": 13,
+        "clue": "Group that swims together?"
+      },
+      {
+        "num": 14,
+        "clue": "Red mineral that's a source of mercury"
+      },
+      {
+        "num": 15,
+        "clue": "Long scolding"
+      },
+      {
+        "num": 16,
+        "clue": "Buoys"
+      },
+      {
+        "num": 17,
+        "clue": "He said he could float like a butterfly"
+      },
+      {
+        "num": 18,
+        "clue": "Give a crust to"
+      },
+      {
+        "num": 20,
+        "clue": "Top suit, briefly"
+      },
+      {
+        "num": 21,
+        "clue": "Argentine soccer icon nicknamed La Pulga"
+      },
+      {
+        "num": 23,
+        "clue": "Puts on the line"
+      },
+      {
+        "num": 25,
+        "clue": "Bank offerings with fixed terms, for short"
+      },
+      {
+        "num": 28,
+        "clue": "Most enjoyable, informally"
+      },
+      {
+        "num": 30,
+        "clue": "Sierra Nevada lake popular with skiers"
+      },
+      {
+        "num": 32,
+        "clue": "What a cashier might count out"
+      },
+      {
+        "num": 34,
+        "clue": "Trophy, often"
+      },
+      {
+        "num": 36,
+        "clue": "Faithful"
+      },
+      {
+        "num": 37,
+        "clue": "Drive along, as cattle"
+      },
+      {
+        "num": 38,
+        "clue": "Pueblo building material"
+      },
+      {
+        "num": 40,
+        "clue": "Sylvester's speech quirk"
+      },
+      {
+        "num": 41,
+        "clue": "First lady of jazz"
+      },
+      {
+        "num": 42,
+        "clue": "___ Aviv"
+      },
+      {
+        "num": 43,
+        "clue": "Wipes clean"
+      },
+      {
+        "num": 45,
+        "clue": "Mode for a laptop at rest"
+      },
+      {
+        "num": 47,
+        "clue": "Live life to the ___"
+      },
+      {
+        "num": 49,
+        "clue": "Bean used to make tofu"
+      },
+      {
+        "num": 50,
+        "clue": "Moon and June, e.g."
+      },
+      {
+        "num": 52,
+        "clue": "In a rut"
+      },
+      {
+        "num": 55,
+        "clue": "Langley org."
+      },
+      {
+        "num": 56,
+        "clue": "Get the better of"
+      },
+      {
+        "num": 58,
+        "clue": "Greek X"
+      },
+      {
+        "num": 59,
+        "clue": "Espresso-soaked Italian dessert"
+      },
+      {
+        "num": 63,
+        "clue": "Regard"
+      },
+      {
+        "num": 65,
+        "clue": "Comes forth"
+      },
+      {
+        "num": 66,
+        "clue": "What a waiter takes"
+      },
+      {
+        "num": 67,
+        "clue": "Like a good bath mat"
+      },
+      {
+        "num": 68,
+        "clue": "Rounds at the bar, perhaps"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Do-re-mi sequence"
+      },
+      {
+        "num": 2,
+        "clue": "'Tommy Boy' star who lived 'in a van down by the river' on 'SNL'"
+      },
+      {
+        "num": 3,
+        "clue": "\"That's gotta hurt!\""
+      },
+      {
+        "num": 4,
+        "clue": "Stirring"
+      },
+      {
+        "num": 5,
+        "clue": "Fashion monthly whose title means 'she'"
+      },
+      {
+        "num": 6,
+        "clue": "Draw"
+      },
+      {
+        "num": 7,
+        "clue": "Something to munch between meals"
+      },
+      {
+        "num": 8,
+        "clue": "Agitation"
+      },
+      {
+        "num": 9,
+        "clue": "Brussels-based alliance"
+      },
+      {
+        "num": 10,
+        "clue": "Honest one on a penny"
+      },
+      {
+        "num": 11,
+        "clue": "Isle of ___"
+      },
+      {
+        "num": 12,
+        "clue": "April 15 org."
+      },
+      {
+        "num": 13,
+        "clue": "Where two pieces meet"
+      },
+      {
+        "num": 14,
+        "clue": "'Home Alone' director whose name sails back to 1492?"
+      },
+      {
+        "num": 19,
+        "clue": "Exist"
+      },
+      {
+        "num": 22,
+        "clue": "Treat that may have a cherry on top"
+      },
+      {
+        "num": 24,
+        "clue": "Ticket remnant"
+      },
+      {
+        "num": 25,
+        "clue": "Jackie Chan's motormouthed 'Rush Hour' partner"
+      },
+      {
+        "num": 26,
+        "clue": "Put out with water"
+      },
+      {
+        "num": 27,
+        "clue": "Oozes"
+      },
+      {
+        "num": 29,
+        "clue": "Without ice"
+      },
+      {
+        "num": 31,
+        "clue": "\"Finally!\""
+      },
+      {
+        "num": 32,
+        "clue": "Game in which a king is never actually captured"
+      },
+      {
+        "num": 33,
+        "clue": "Adele's 2015 comeback hit"
+      },
+      {
+        "num": 35,
+        "clue": "Banana's jacket"
+      },
+      {
+        "num": 39,
+        "clue": "Stand up to"
+      },
+      {
+        "num": 44,
+        "clue": "Return to former glory"
+      },
+      {
+        "num": 46,
+        "clue": "Instinctive"
+      },
+      {
+        "num": 48,
+        "clue": "Spike who directed 'Do the Right Thing'"
+      },
+      {
+        "num": 51,
+        "clue": "Nation sharing Hispaniola"
+      },
+      {
+        "num": 53,
+        "clue": "Blackens on the grill"
+      },
+      {
+        "num": 54,
+        "clue": "Model builders' purchases"
+      },
+      {
+        "num": 55,
+        "clue": "Headphones, slangily"
+      },
+      {
+        "num": 57,
+        "clue": "Oscar Madison, famously"
+      },
+      {
+        "num": 59,
+        "clue": "Top mark, once, in gymnastics"
+      },
+      {
+        "num": 60,
+        "clue": "Humble opinion intro, in texts"
+      },
+      {
+        "num": 61,
+        "clue": "Managed"
+      },
+      {
+        "num": 62,
+        "clue": "Fall mo."
+      },
+      {
+        "num": 64,
+        "clue": "Keats's 'To Autumn', for one"
+      }
+    ]
+  },
+  "theme": "Famous Hollywood Chrises",
+  "publishedAt": "2026-11-27T20:20:13.511Z"
+}
