@@ -1,0 +1,344 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-29",
+  "date": "2026-11-29",
+  "series": "claude",
+  "title": "Making Waves",
+  "author": "Claude",
+  "note": "Dive in: look at how the three longest answers begin.",
+  "width": 15,
+  "height": 15,
+  "layout": [
+    "....#...##.....",
+    "....#...#......",
+    "........#......",
+    "#............##",
+    "...#...#.......",
+    ".....#....#....",
+    "......#....#...",
+    "###.........###",
+    "...#....#......",
+    "....#....#.....",
+    ".......#...#...",
+    "##............#",
+    "......#........",
+    "......#...#....",
+    ".....##...#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:rFu05sV7ZSaXQy0D22dCVF/8mw0Qjlcb3FnCmutRY4qhgi18OTBaRdpnTbY6eaf/BmDMMuovgeKB2VIRBbldSbk1hlvio+h2+vgWhIlzu/2s/JL5WXllC69o80LnRcTBbABQJiTiavAoiJu7uVW9E6dny1cGOd8UgRFSeROmfvMf0nKB1ZHE3hNkCq9L15CFnx50cqiqBN8fc4kHX9UWZcMp2F/lTmV94gfZ7sC7MugkAOIFib6/H0FymlNz1Ws2eRPJ6FPNzRjv6iucJzlI5yLcgMtpzi7EzAWmWRJImmq9",
+  "checksum": "041acb08",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Número after siete"
+      },
+      {
+        "num": 5,
+        "clue": "Florida island, or a piano part"
+      },
+      {
+        "num": 8,
+        "clue": "Argentina's 2022 World Cup captain"
+      },
+      {
+        "num": 13,
+        "clue": "Cool ___ (dessert topping)"
+      },
+      {
+        "num": 14,
+        "clue": "Pitcher's stat, briefly"
+      },
+      {
+        "num": 15,
+        "clue": "Spoil rotten"
+      },
+      {
+        "num": 16,
+        "clue": "Theoretical rather than actual"
+      },
+      {
+        "num": 18,
+        "clue": "July birthstones"
+      },
+      {
+        "num": 19,
+        "clue": "2001 heist film whose sequel added one more crook?"
+      },
+      {
+        "num": 21,
+        "clue": "Volcanic fallout"
+      },
+      {
+        "num": 22,
+        "clue": "Bread for a Reuben"
+      },
+      {
+        "num": 23,
+        "clue": "Never-ending"
+      },
+      {
+        "num": 26,
+        "clue": "Holds on to"
+      },
+      {
+        "num": 28,
+        "clue": "Give stars to"
+      },
+      {
+        "num": 30,
+        "clue": "Sonic the Hedgehog's publisher"
+      },
+      {
+        "num": 31,
+        "clue": "Take for granted"
+      },
+      {
+        "num": 33,
+        "clue": "Make money, literally?"
+      },
+      {
+        "num": 35,
+        "clue": "Theater line"
+      },
+      {
+        "num": 36,
+        "clue": "Projecting nook with a cushioned perch, often"
+      },
+      {
+        "num": 39,
+        "clue": "Spider's creation"
+      },
+      {
+        "num": 42,
+        "clue": "Gas in many a diner sign"
+      },
+      {
+        "num": 43,
+        "clue": "Checks out, as a bloodhound might"
+      },
+      {
+        "num": 47,
+        "clue": "\"Thanks ___!\""
+      },
+      {
+        "num": 49,
+        "clue": "Hover menacingly"
+      },
+      {
+        "num": 51,
+        "clue": "Even now"
+      },
+      {
+        "num": 52,
+        "clue": "Make-or-break"
+      },
+      {
+        "num": 54,
+        "clue": "___ de toilette"
+      },
+      {
+        "num": 56,
+        "clue": "Logan ___ (\"Succession\" patriarch)"
+      },
+      {
+        "num": 57,
+        "clue": "It's broken with a boom"
+      },
+      {
+        "num": 60,
+        "clue": "Bring into harmony"
+      },
+      {
+        "num": 62,
+        "clue": "Like a skinny stray"
+      },
+      {
+        "num": 64,
+        "clue": "Less shallow"
+      },
+      {
+        "num": 65,
+        "clue": "Many an August baby"
+      },
+      {
+        "num": 66,
+        "clue": "Voice between soprano and tenor"
+      },
+      {
+        "num": 67,
+        "clue": "Challenges to prove it"
+      },
+      {
+        "num": 68,
+        "clue": "\"It's freezing!\""
+      },
+      {
+        "num": 69,
+        "clue": "Wall St. trading hub"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Possess"
+      },
+      {
+        "num": 2,
+        "clue": "Picks"
+      },
+      {
+        "num": 3,
+        "clue": "Snags"
+      },
+      {
+        "num": 4,
+        "clue": "Ron Howard's Mayberry role"
+      },
+      {
+        "num": 5,
+        "clue": "\"South Park\" kid in an orange parka"
+      },
+      {
+        "num": 6,
+        "clue": "Pencil topper"
+      },
+      {
+        "num": 7,
+        "clue": "New Haven Ivy"
+      },
+      {
+        "num": 8,
+        "clue": "Pale purple"
+      },
+      {
+        "num": 9,
+        "clue": "Campfire leftovers"
+      },
+      {
+        "num": 10,
+        "clue": "Fidget ___ (2017 fad)"
+      },
+      {
+        "num": 11,
+        "clue": "Catch sight of"
+      },
+      {
+        "num": 12,
+        "clue": "Apr. 15 collector"
+      },
+      {
+        "num": 15,
+        "clue": "Plays make-believe"
+      },
+      {
+        "num": 17,
+        "clue": "Crew member"
+      },
+      {
+        "num": 20,
+        "clue": "Admit"
+      },
+      {
+        "num": 21,
+        "clue": "Alias letters"
+      },
+      {
+        "num": 24,
+        "clue": "Years ___"
+      },
+      {
+        "num": 25,
+        "clue": "Murphy's ___"
+      },
+      {
+        "num": 27,
+        "clue": "Place for a pint"
+      },
+      {
+        "num": 29,
+        "clue": "___ acid"
+      },
+      {
+        "num": 32,
+        "clue": "Makeup for a winged look"
+      },
+      {
+        "num": 34,
+        "clue": "Monk's shaved crown"
+      },
+      {
+        "num": 37,
+        "clue": "Courted"
+      },
+      {
+        "num": 38,
+        "clue": "Quick humor"
+      },
+      {
+        "num": 39,
+        "clue": "Bundle of bills"
+      },
+      {
+        "num": 40,
+        "clue": "\"Mr. Blue Sky\" band, briefly"
+      },
+      {
+        "num": 41,
+        "clue": "Rocket's first stage"
+      },
+      {
+        "num": 44,
+        "clue": "Backyard blinker on June nights"
+      },
+      {
+        "num": 45,
+        "clue": "Bits of broccoli"
+      },
+      {
+        "num": 46,
+        "clue": "Crafty"
+      },
+      {
+        "num": 48,
+        "clue": "Acting company"
+      },
+      {
+        "num": 50,
+        "clue": "Not as nice"
+      },
+      {
+        "num": 53,
+        "clue": "Sahara features"
+      },
+      {
+        "num": 55,
+        "clue": "Passion"
+      },
+      {
+        "num": 58,
+        "clue": "Tulip starter"
+      },
+      {
+        "num": 59,
+        "clue": "Tehran's country"
+      },
+      {
+        "num": 60,
+        "clue": "Tack on"
+      },
+      {
+        "num": 61,
+        "clue": "Earl Grey, e.g."
+      },
+      {
+        "num": 63,
+        "clue": "\"Do-Re-Mi\" deer"
+      }
+    ]
+  },
+  "theme": "Words and phrases that begin with a body of water",
+  "publishedAt": "2026-11-28T20:19:36.061Z"
+}

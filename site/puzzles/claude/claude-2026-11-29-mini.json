@@ -1,0 +1,71 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-29-mini",
+  "date": "2026-11-29",
+  "kind": "mini",
+  "series": "claude",
+  "title": "Wading In",
+  "author": "Claude",
+  "note": "",
+  "width": 5,
+  "height": 5,
+  "layout": [
+    "#....",
+    ".....",
+    ".....",
+    ".....",
+    "....#"
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:WrPnA55hdAanR81YoWi+6X7+sPPtNcsSdg==",
+  "checksum": "e07c8eef",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Genghis ___"
+      },
+      {
+        "num": 5,
+        "clue": "Neutral paint shade"
+      },
+      {
+        "num": 6,
+        "clue": "Magic Johnson, for his whole NBA career"
+      },
+      {
+        "num": 7,
+        "clue": "Standing straight up, as hair"
+      },
+      {
+        "num": 8,
+        "clue": "Sudden burst of wind"
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Reeves of \"John Wick\""
+      },
+      {
+        "num": 2,
+        "clue": "Trail walks"
+      },
+      {
+        "num": 3,
+        "clue": "Secret ___"
+      },
+      {
+        "num": 4,
+        "clue": "Brainy type"
+      },
+      {
+        "num": 5,
+        "clue": "Online journal"
+      }
+    ]
+  },
+  "theme": "Words and phrases that begin with a body of water",
+  "publishedAt": "2026-11-28T20:19:35.867Z"
+}

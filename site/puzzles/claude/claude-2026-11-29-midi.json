@@ -1,0 +1,163 @@
+{
+  "format": "crossword/1",
+  "id": "claude-2026-11-29-midi",
+  "date": "2026-11-29",
+  "kind": "midi",
+  "series": "claude",
+  "title": "Shallow End",
+  "author": "Claude",
+  "note": "",
+  "width": 9,
+  "height": 9,
+  "layout": [
+    "....#....",
+    "....#....",
+    ".........",
+    "...#.....",
+    "###...###",
+    ".....#...",
+    ".........",
+    "....#....",
+    "....#...."
+  ],
+  "circles": [],
+  "shaded": [],
+  "solution": "x1:PcsA721nFAhBSFE6KynpLiUYSa60XCTcLEf/WvP5bOGYSUnZ4Q+5HfKDLluDjZG+Ey49pFlNuPIBbU138GGl80CQJN9iD+8SRx90UGWlZ+n0",
+  "checksum": "654446c8",
+  "clues": {
+    "across": [
+      {
+        "num": 1,
+        "clue": "Get up"
+      },
+      {
+        "num": 5,
+        "clue": "German grocery chain"
+      },
+      {
+        "num": 9,
+        "clue": "Yearn"
+      },
+      {
+        "num": 10,
+        "clue": "Letter opener?"
+      },
+      {
+        "num": 11,
+        "clue": "Hustler at the billiards hall"
+      },
+      {
+        "num": 13,
+        "clue": "Explosive stuff, for short"
+      },
+      {
+        "num": 14,
+        "clue": "Goose sounds"
+      },
+      {
+        "num": 15,
+        "clue": "Moment, informally"
+      },
+      {
+        "num": 16,
+        "clue": "Dolly the sheep, famously"
+      },
+      {
+        "num": 19,
+        "clue": "Dashboard navigator, for short"
+      },
+      {
+        "num": 22,
+        "clue": "CW teen drama set in Archie's hometown"
+      },
+      {
+        "num": 24,
+        "clue": "Length times width"
+      },
+      {
+        "num": 25,
+        "clue": "Rickman who played Snape"
+      },
+      {
+        "num": 26,
+        "clue": "Target for a con artist"
+      },
+      {
+        "num": 27,
+        "clue": "Wedding ring, e.g."
+      }
+    ],
+    "down": [
+      {
+        "num": 1,
+        "clue": "Totally absorbed"
+      },
+      {
+        "num": 2,
+        "clue": "Desktop clickable"
+      },
+      {
+        "num": 3,
+        "clue": "Espresso unit"
+      },
+      {
+        "num": 4,
+        "clue": "Slippery swimmer"
+      },
+      {
+        "num": 5,
+        "clue": "Improvised, as a committee"
+      },
+      {
+        "num": 6,
+        "clue": "Tilt"
+      },
+      {
+        "num": 7,
+        "clue": "Unlit"
+      },
+      {
+        "num": 8,
+        "clue": "Bugs"
+      },
+      {
+        "num": 12,
+        "clue": "Steep, as a cliff"
+      },
+      {
+        "num": 15,
+        "clue": "Tiptoe"
+      },
+      {
+        "num": 16,
+        "clue": "Study all night"
+      },
+      {
+        "num": 17,
+        "clue": "Turkish currency"
+      },
+      {
+        "num": 18,
+        "clue": "Done with"
+      },
+      {
+        "num": 19,
+        "clue": "Black-tie event"
+      },
+      {
+        "num": 20,
+        "clue": "Blueprint"
+      },
+      {
+        "num": 21,
+        "clue": "Email button"
+      },
+      {
+        "num": 23,
+        "clue": "Small amount, as of paint"
+      }
+    ]
+  },
+  "theme": "Words and phrases that begin with a body of water",
+  "publishedAt": "2026-11-28T20:19:35.964Z"
+}
